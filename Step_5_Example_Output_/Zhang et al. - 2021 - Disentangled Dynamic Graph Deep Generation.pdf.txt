@@ -1,0 +1,57 @@
+Extracted Keywords:
+Dynamic Graph, Graph, graphs, graph generation, generative models, models, Dynamic, inference model, model, deep generative
+
+Main Topics:
+Abstract
+Deepgenerativemodelsforgraphshaveexhibitedpromis-, ever-increasing domains, de-
+sign, structure
+prediction, i.e., graph, amino acids, ing work, static rather than dynamic
+graphs, the ap-
+plications, protein folding, molecule reactions, human mobility, existing deep generative
+models, dynamic graphs, a challenging
+task, the factorization, static
+and dynamic characteristics, mutual interac-
+tions, node and edge patterns, this paper, a novel framework, factorized deep gener-
+ative models, interpretable dynamic graph
+generation, Various generative models, conditional independence, dynamic factors, variational optimiza-
+tion strategies, dynamic graph decoders, newly designed factorized variational
+autoencoders, recurrent graph deconvolutions, Ex-
+tensive experiments, multiple datasets, the eﬀectiveness, the proposed models, 1 Introduction
+Graphs, ubiquitous data structures, connec-
+t
+
+Methodologies:
+One central
+problem in data mining and machine learning for graphs
+is the gap between the discrete graph topological infor-
+mation and continuous numerical vectors preferred by
+mathematical models [ 1]. Such methods usually ﬁt well towards the properties
+that the predeﬁned principles are tailored for, but usu-
+ally cannot do well for the others [ 7]. Inrecentyears, thesuccessofdeepgenerativemodels
+in image and text generation [ 8,9] has been extended
+to graph data applications such as molecule design [10]
+and protein structure prediction [ 11]. [12] and Generative Adversarial Nets (GAN) [ 13],
+which rely on highly expressive deep architectures to
+map high-dimensional graph-structured data into latent
+low-dimensional space, where the latent data points just
+follow simple distributions. A plethora of approaches,
+including randomized reference models [ 21], stochastic
+block models [ 6] and 
+
+Research Outcomes:
+One central
+problem in data mining and machine learning for graphs
+is the gap between the discrete graph topological infor-
+mation and continuous numerical vectors preferred by
+mathematical models [ 1]. Such methods usually ﬁt well towards the properties
+that the predeﬁned principles are tailored for, but usu-
+ally cannot do well for the others [ 7]. Inrecentyears, thesuccessofdeepgenerativemodels
+in image and text generation [ 8,9] has been extended
+to graph data applications such as molecule design [10]
+and protein structure prediction [ 11]. [12] and Generative Adversarial Nets (GAN) [ 13],
+which rely on highly expressive deep architectures to
+map high-dimensional graph-structured data into latent
+low-dimensional space, where the latent data points just
+follow simple distributions. A plethora of approaches,
+including randomized reference models [ 21], stochastic
+block models [ 6] and 

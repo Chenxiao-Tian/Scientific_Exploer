@@ -1,0 +1,641 @@
+References:
+References nitureshapewithtexture. arXivpreprintarXiv:2009.09633,
+2020. 2,4,5,6
+[1] Panos Achlioptas, Olga Diamanti, Ioannis Mitliagkas, and
+[15] Qiang Fu, Xiaowu Chen, Xiaotian Wang, Sijia Wen, Bin
+Leonidas Guibas. Learning representations and generative
+Zhou,andHongboFu. Adaptivesynthesisofindoorscenes
+modelsfor3dpointclouds. InInternationalconferenceon
+viaactivity-associatedobjectrelationgraphs.ACMTransac-
+machinelearning,pages40–49.PMLR,2018. 7
+tionsonGraphics(TOG),36(6):1–13,2017. 7
+[2] IroArmeni,Zhi-YangHe,JunYoungGwak,AmirRZamir,
+[16] Lin Gao, Tong Wu, Yu-Jie Yuan, Ming-Xian Lin, Yu-Kun
+MartinFischer,JitendraMalik,andSilvioSavarese.3dscene
+Lai,andHaoZhang. Tm-net: Deepgenerativenetworksfor
+graph:Astructureforunifiedsemantics,3dspace,andcam-
+texturedmeshes. arXivpreprintarXiv:2010.06217,2020. 8
+era. InProceedingsoftheIEEE/CVFInternationalConfer-
+[17] Alberto Garcia-Garcia, Pablo Martinez-Gonzalez, Sergiu
+enceonComputerVision,pages5664–5673,2019. 3
+Oprea,JohnAlejandroCastro-Vargas,SergioOrts-Escolano,
+[3] IroArmeni,SashaSax,AmirRZamir,andSilvioSavarese.
+Jose Garcia-Rodriguez, and Alvaro Jover-Alvarez. The
+Joint 2d-3d-semantic data for indoor scene understanding.
+robotrix: An extremely photorealistic and very-large-scale
+arXivpreprintarXiv:1702.01105,2017. 3
+indoor dataset of sequences with robot trajectories and in-
+[4] IroArmeni,OzanSener,AmirRZamir,HelenJiang,Ioannis
+teractions. In2018 IEEE/RSJ International Conference on
+Brilakis, Martin Fischer, and Silvio Savarese. 3d semantic
+Intelligent Robots and Systems (IROS), pages 6790–6797.
+parsingoflarge-scaleindoorspaces. InProceedingsofthe
+IEEE,2018. 3
+IEEEConferenceonComputerVisionandPatternRecogni-
+[18] AnkurHanda,VioricaPatraucean,VijayBadrinarayanan,Si-
+tion,pages1534–1543,2016. 1,2,3
+monStent,andRobertoCipolla. Understandingrealworld
+[5] Armen Avetisyan, Manuel Dahnert, Angela Dai, Manolis
+indoor scenes with synthetic data. In Proceedings of the
+Savva,AngelXChang,andMatthiasNießner. Scan2CAD:
+IEEE Conference on Computer Vision and Pattern Recog-
+LearningCADmodelalignmentinRGB-Dscans. InCVPR,
+nition,pages4077–4085,2016. 1,2,3
+pages2614–2623,2019. 2
+[19] Binh-Son Hua, Quang-Hieu Pham, Duc Thanh Nguyen,
+[6] Angel Chang, Angela Dai, Thomas Funkhouser, Maciej
+Minh-KhoiTran,Lap-FaiYu,andSai-KitYeung.SceneNN:
+Halber, Matthias Niessner, Manolis Savva, Shuran Song,
+Ascenemeshesdatasetwithannotations.In3DV,pages92–
+Andy Zeng, and Yinda Zhang. Matterport3d: Learning
+101,2016. 1,2,3
+from rgb-d data in indoor environments. arXiv preprint
+arXiv:1709.06158,2017. 1,2,3 [20] ThomasNKipfandMaxWelling. Semi-supervisedclassi-
+ficationwithgraphconvolutionalnetworks. arXivpreprint
+[7] Angel X Chang, Thomas Funkhouser, Leonidas Guibas,
+arXiv:1609.02907,2016. 4
+Pat Hanrahan, Qixing Huang, Zimo Li, Silvio Savarese,
+Manolis Savva, Shuran Song, Hao Su, et al. ShapeNet: [21] HemaSKoppula,AbhishekAnand,ThorstenJoachims,and
+An information-rich 3d model repository. arXiv preprint AshutoshSaxena. Semanticlabelingof3dpointcloudsfor
+arXiv:1512.03012,2015. 2,8 indoorscenes.InAdvancesinneuralinformationprocessing
+[8] Guillem Cucurull, Perouz Taslakian, and David Vazquez. systems,pages244–252,2011. 3
+Context-awarevisualcompatibilityprediction. InProceed- [22] ManyiLi,AkshayGadiPatil,KaiXu,SiddharthaChaudhuri,
+ingsoftheIEEEConferenceonComputerVisionandPattern Owais Khan, Ariel Shamir, Changhe Tu, Baoquan Chen,
+Recognition,pages12617–12626,2019. 4,5,6 Daniel Cohen-Or, and Hao Zhang. Grains: Generative re-
+[9] Angela Dai, Angel X Chang, Manolis Savva, Maciej Hal- cursiveautoencodersforindoorscenes. ACMTransactions
+ber,ThomasFunkhouser,andMatthiasNießner. ScanNET: onGraphics(TOG),38(2):1–16,2019. 7
+Richly-annotated 3d reconstructions of indoor scenes. In [23] Wenbin Li, Sajad Saeedi, John McCormac, Ronald Clark,
+CVPR,pages5828–5839,2017. 1,2,3 DimosTzoumanikas, QingYe, YuzhongHuang, RuiTang,
+[10] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina and Stefan Leutenegger. Interiornet: Mega-scale multi-
+Toutanova. Bert: Pre-training of deep bidirectional sensorphoto-realisticindoorscenesdataset. arXivpreprint
+transformers for language understanding. arXiv preprint arXiv:1809.00716,2018. 1,2,3
+arXiv:1810.04805,2018. 4 [24] Zhengqin Li, Ting-Wei Yu, Shen Sang, Sarah Wang, Sai
+[11] Matthew Fisher, Daniel Ritchie, Manolis Savva, Thomas Bi, Zexiang Xu, Hong-Xing Yu, Kalyan Sunkavalli, Milosˇ
+Funkhouser, and Pat Hanrahan. Example-based synthesis Hasˇan, Ravi Ramamoorthi, et al. Openrooms: An end-to-
+of3dobjectarrangements. ACMTransactionsonGraphics endopenframeworkforphotorealisticindoorscenedatasets.
+(TOG),31(6):1–11,2012. 3 arXivpreprintarXiv:2007.12868,2020. 1,2,3
+[12] James Fogarty, Ryan S Baker, and Scott E Hudson. Case [25] Ricardo Martin-Brualla, Rohit Pandey, Sofien Bouaziz,
+studiesintheuseofroccurveanalysisforsensor-basedes- Matthew Brown, and Dan B Goldman. GeLaTO: Genera-
+timates in human computer interaction. In Proceedings of tive Latent Textured Objects. In European Conference on
+GraphicsInterface2005,pages129–136,2005. 5 ComputerVision,2020. 8
+[13] JeromeHFriedman. Greedyfunctionapproximation:agra- [26] John McCormac, Ankur Handa, Stefan Leutenegger, and
+dient boosting machine. Annals of statistics, pages 1189– AndrewJDavison. Scenenetrgb-d: Can5msyntheticim-
+1232,2001. 4 agesbeatgenericimagenetpre-trainingonindoorsegmenta-
+[14] HuanFu,RongfeiJia,LinGao,MingmingGong,Binqiang tion? InProceedingsoftheIEEEInternationalConference
+Zhao,SteveMaybank,andDachengTao. 3d-future: 3dfur- onComputerVision,pages2678–2687,2017. 3
+10921
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+
+Annexes/Appendices:
+
+Body Text:
+2021 IEEE/CVF International Conference on Computer Vision (ICCV)
+3D-FRONT: 3D Furnished Rooms with layOuts and semaNTics
+HuanFu1 BowenCai1 LinGao2 Ling-XiaoZhang2 JiamingWang1
+CaoLi1 QixunZeng1 ChengyueSun1 RongfeiJia1 BinqiangZhao1 HaoZhang3
+1TaoTechnologyDepartment,AlibabaGroup
+2InstituteofComputingTechnology,ChineseAcademyofSciences
+3 GrUVi(GraphicsUVision)Lab,SimonFraserUniversity
+{fuhuan.fh, kevin.cbw, rongfei.jrf, binqiang.zhao}@alibaba-inc.com
+{gaolin, zhanglingxiao}@ict.ac.cn haoz@sfu.ca
+Figure1:3D-FRONTisanew,large-scale,andcomprehensiverepositoryofsyntheticindoorsceneswithprofessionallyand
+distinctively designed layouts, a large number (18,968) of rooms populated with 3D furniture objects that are stylistically
+compatibleandendowedwithhigh-qualitytextures. Allfreelyavailabletotheacademiccommunityandbeyond.
+Abstract develop to attain consistent styles as expert designs. Fur-
+thermore, we release Trescope, a light-weight rendering
+We introduce 3D-FRONT (3D Furnished Rooms with
+tool, to support benchmark rendering of 2D images and
+layOuts and semaNTics), a new, large-scale, and compre-
+annotations from 3D-FRONT. We demonstrate two appli-
+hensive repository of synthetic indoor scenes highlighted
+cations,interiorscenesynthesisandtexturesynthesis,that
+by professionally designed layouts and a large number of
+areespeciallytailoredtothestrengthsofournewdataset.
+rooms populated by high-quality textured 3D models with
+stylecompatibility. Fromlayoutsemanticsdowntotexture
+detailsofindividualobjects,ourdatasetisfreelyavailable 1.Introduction
+to the academic community and beyond. Currently, 3D-
+FRONT contains 6,813 CAD houses, where 18,968 rooms The computer vision community has invested much ef-
+diversely furnished by 3D objects, far surpassing all pub- fortintothestudyof3Dindoorscenes,from3Dreconstruc-
+liclyavailablescenedatasets. The13,151furnitureobjects tion,visualSLAM,andnavigation,tosceneunderstanding,
+all come with high-quality textures. While the floorplans affordance analysis, and generative modeling. With data-
+and layout designs (i.e., furniture arrangements) are di- driven and learning-based approaches receiving more and
+rectlysourcedfromprofessionalcreations, theinteriorde- more attention in recent years, there has been a steady ac-
+signs in terms of furniture styles, color, and textures have cumulationofindoorscenedatasets[27,36,43,4,19,6,9,
+beencarefullycuratedbasedonarecommendersystemwe 18,23,49,24]todrivethedeeplearningrevolutionthathas
+1
+978-1-6654-2812-5/21/$31.00 ©2021 IEEE 10913
+DOI 10.1109/ICCV48922.2021.01075
+57010.1202.22984VCCI/9011.01
+:IOD
+|
+EEEI
+1202©
+00.13$/12/5-2182-4566-1-879
+|
+)VCCI(
+noisiV
+retupmoC
+no
+ecnerefnoC
+lanoitanretnI
+FVC/EEEI
+1202
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+Dataset LayoutDesign #3DFRs #CADmodels ModelTextures 3DAnnotation
+NYU-Depthv2[27] Realscan N/A N/A Notexture RawRGB-D
+TUM[36] Realscan N/A N/A Notexture RawRGB-D
+SUN3D[43] Realscan 254 N/A Notexture RawPCD
+S3DIS[4] Realscan 270 N/A Notexture RawPCD
+3DSSG[38] Realscan 478 N/A Rec. fromScan RawMesh
+SceneNN[19] Realscan 100 N/R Rec.fromScan RawMesh
+Matterport3D[6] Realscan 2,056 N/A Rec. fromScan RawMesh
+ScanNet[9] Realscan 1,506 296 Rec.fromScan RawMesh
+Scan2CAD[5] Realscan 1,506 3,049 Notexture Mesh
+OpenRooms[24] Realscan 1,068 2,500 Amateur Mesh
+SceneNet[18] Professional 57 N/R Notexture Mesh
+InteriorNet[23] Professional N/A N/A Notexture N/A
+Hypersim[30] Professional N/A N/A Per-pixelcolor RGB-D
+Structured3D[49] Professional N/A N/A Notexture 3Dstructures
+3D-FRONT Professional 18,968 13,151 Professional Mesh
+Table1: Comparisonbetweenprominent3Dindoorscenedatasets,where“#3DFRs”representsthenumberofroomsor
+scenespopulatedwith3Dfurnitureobjects,“N/A”=“notavailable”,“N/R”=“notreported”,“RawMesh”denotesmachine
+reconstructed meshes, and “Raw PCD” refers to reconstructed point clouds. For model textures, “Rec. from Scan” is the
+resultofreconstructionfromrawRGB-Ddata,while“Amateur”and“Professional”refertowhodesignedthetextures. The
+“3Dstructures”annotatdbyStructured3D[49]containinformationonprimitivesincluding3Dboxesandtheirrelations.
+redefinedthelandscapeofindoorsceneprocessing. and comprehensive repository of synthetic 3D indoor
+Existing3Dscenedatasetsallfallintotwobroadlycat- scenes.Itcontainsprofessionallyanddistinctivelydesigned
+egories: acquired(viascanningandreconstruction)vs.de- layouts spanning 31 scene categories (or room types), ob-
+signed(i.e.,syntheticscenescreatedbyhumans). Interms ject semantics (e.g., category, style, and material labels),
+ofdatavolume,thelargestrepositoryisScanNet[9]which and a large number (18,968) of rooms populated with 3D
+consists of 2.5M RGB-D images from 1,513 scanned real furnitureobjects. Mostimportantly,these3Dfurnitureob-
+scenes acquired by commodity sensors, in 707 distinct jects are all endowed with high-quality textures, thanks to
+spaces. The3Dscenes,includingtextured3Dobjects,were 3D-FUTURE[14],arecentlyreleaseddatasetofquality3D
+recovered by state-of-the-art 3D reconstruction techniques furniture used in industrial productions. Furthermore, the
+from the raw scans, which are typically noisy and incom- selection of furniture objects from 3D-FUTURE to popu-
+plete. Asaresult,thereconstructedmeshesareoftenoflow late the scenes in 3D-FRONT has been inpired by expert
+quality,bothingeometricfidelityandtexturequality. interior designs. Specifically, the selection is based on a
+In the world of synthetic 3D indoor scene datasets, the recommendersystemlearnedfromtheexpertdesigns,while
+recentexitbySUNCG[34]hasleftanapparentvoidinthe taking into account of furniture styles both in terms of ge-
+community. Most recently, Structured3D [49] and Open- ometryandtexture. Asaresult,thefurnishedroomsin3D-
+Room [24] have emerged as promising alternatives. In FRONTconsistofstylisticallycompatibleobjectsadhering
+addition to providing professionally designed room lay- tothedesigninspirations.
+outs, Structured3D[49]aimstoprovidelarge-scalephoto- InTable1,wepresentessentialinformationforthecur-
+realistic scene images with rich 3D structure annotations. rent public release of 3D-FRONT and compare to other
+However, the actual 3D furniture objects populating the prominent indoor scene datasets. As we can see, the most
+scenes are not included in the dataset. OpenRoom [24] compelling feature of our dataset is the large number of
+replaces detected objects in a set of 1,068 scanned scenes 3Dfurnishedrooms,whichfarsurpassesalltheotherpub-
+fromScanNet[9]withCADmodelsfromShapeNet[7]. A licly available datasets. Style compatibility, as well as the
+majorcontributionofthisdatasetistoprovideground-truth high texture quality, of the furniture objects in each scene
+annotations of complex material parameters for the CAD (seemiddleofFigure1)isanotheruniqueattributeof3D-
+objects. However, thedatasethasnotbeenreleasedatthis FRONT.Ontopofallthese,thetotalnumberofroomswith
+pointandaccordingtotheauthors’account,only2.5KCAD professionallydesignedlayoutsis45,000,inwhich18,968
+modelswereannotatedwithmaterialproperties. rooms are fully populated with 3D furniture shapes. Last
+In this paper, we introduce 3D-FRONT (3D Furnished but not least, we share Trescope, a light-weight rendering
+Rooms with layOuts and semaNTics), a new, large-scale, tool, with the community so that the users of 3D-FRONT
+10914
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+can easily capture their desired 2D renderings and annota- data. Besides, some of the 3D annotations may be unreli-
+tions to guide their image-driven learning tasks. We will able or imprecise due to the reconstruction error, such as
+continuously improve 3D-FRONT by providing much en- cameraposeand2D-3Dalignment.
+richedtextureand3Dgeometrycontents.
+Designed Scenes. Another type of scene dataset is from
+Weanticipatethat3D-FRONT,beingascomprehensive
+the human creation with professional design software as
+as it is, will enable and further drive a whole suite of AI-
+this 3D-FRONT. In addition to 3D-FRONT, there is one
+powered and data-driven scene analysis and modeling ap-
+synthetic(designed)datasetthatsharesboththelayoutand
+plications. Wedemonstratetwoapplicationswhichcannot
+thewell-posited3DCADmeshmodels,i.e.,SceneNet[18]
+be well supported by other publicly available datasets —
+with providing 59 scenes. Several other synthetic bench-
+these applications are best served by having a large num-
+marksshare2Dand2.5Dcontentsbasedondesignedsyn-
+berofhigh-qualitytexturedmeshmodelswithstyleconsis-
+thetic scenes. For example, InteriorNet [23] released 15k
+tency, a unique feature of 3D-FRONT. One such applica-
+sequences and 5M images, which are rendered from their
+tion is learning to texture 3D objects in indoor scenes. In
+large-scalescenepackages. Further,Structure3D[49]pro-
+another,bylearningthelayoutof3Dfurnitureineachroom
+vided 21,835 panoramic images with the corresponding
+with[40],wecancoherentlypredictandarrangefunctional
+structure annotations, such as panoramic layouts, depth,
+furnitureforanemptyroom.
+surface normal. Recently, Li et al. [24] built OpenRooms,
+a synthetic benchmark based on ScanNet, and planned to
+2.RelatedWork sharerenderedimageswiththeirhigh-qualitySVBRDFand
+spatially-varyinglighting. Also,Hypersim[30]presenteda
+Over the past years, a large number of RGB-D bench-
+photorealisticsyntheticdatasetforholisticindoorsceneun-
+marks have been constructed and made publicly available
+derstanding,focusingonprovidingper-pixeldepthanddis-
+[21, 3, 27, 36, 43, 33, 19, 6, 9, 18, 26, 23, 49, 24, 4, 32,
+entangledilluminanceandreflectancepropertiesoverscene
+35, 42, 11, 17, 47, 38, 2]. Current 3D scene datasets are
+imagesdesignedbyprofessionalartists.
+mainly collected based on scanning and reconstruction or
+These large-scale synthetic datasets have not made the
+human creation. These datasets thus fall into two broadly
+completedscenepackages,includingthefloorplans’mesh,
+categories: Acquiredvs.Designed.
+the large amount of involved CAD models with fine geo-
+Acquired Scenes. To construct “Acquired” datasets, re- metricandtexturedetails,andthelayoutwithdesignideas,
+searchers capture RGB-D videos, reconstruct the scene publicly available. In contrast, 3D-FRONT shares every-
+meshes,andmanuallylabeltheframesorthereconstructed thing that is used to construct houses, from real layouts
+scenes. For example, NYU-Depth v2 [27] gathered 464 to interior design ideas and involved objects. The holis-
+short RGB-D sequences from different rooms via Kinect, tic repository of indoor scene packages enables a robot to
+where 1,449 images are selected and labeled with pixel- navigate in them. It also allows the researchers to render
+level annotations. SUN RGB-D [33] collected 10,335 whateverinformationtheyneedfornewsubjectsstudying.
+RGB-Dimagesandprovidedmore2.5Dannotations, such
+as 2D polygons and 3D bounding boxes correspondences, 3.Building3D-FRONT
+room layouts, and scene categories. These datasets may
+Creating a large-scale 3D scene repository is a non-
+lack the physical relationship between the frames and
+trivial task. Our 3D-FRONT project has been built on a
+the scene space’s real 3D structure. To address the is-
+largevolume(about60K)ofprofessionallydesignedhouses
+sue, SUN3D [43] developed an interactive reconstruction
+and1M3DCADmeshes. Whileweareunabletopublish
+pipelinetorecoverthe3Dscenestructuresfor254different
+allthesemeshes,duetocopyrightrestrictions,allthemod-
+spacesin41buildings,inwhich8scenesareprovidedwith
+els and learning algorithms employed during the data col-
+semanticlabelsfor3Dpointcloudsandcameraposes. Sce-
+lectionprogresshavebeentrainedonthelargedatabase.As
+neNN [19] improved the pipeline by recovering mesh sur-
+shown in Figures 2, we start from some house collections,
+facesinsteadofpointcloudsfor100scans. Further,oneof
+the largest “Scanned” datasets, i.e., ScanNet [9], has been create room suites, optimize the layout, verify the created
+interiordesigns.Inthefollowing,wewilldetailthepipeline
+established. It reconstructed 1,513 rooms based on 2.5M
+aswellasthetechniquesinvolved.
+RGB-D views, and labeled rich 3D annotations, including
+estimated3Dcameraposes,surfacereconstructions,seman-
+3.1.RoomSuiteCreation
+ticsegmentation,and2D-3Dalignments.
+Since 3D scene reconstruction with fine geometric and Given a CAD house and its professional design ideas,
+texturesdetailsisstillachallengingproblemwiththedepth weautomaticallycreateroomsuitesforthescenes. Here,a
+cameras on the shelf such as Kinect, the mesh qualities in roomconsistofthecategorylabelsofobjectsthataresug-
+thesescenedatasetareusuallynotasgoodasthesynthetic gestedtoputin, andtheirpositions,orientations,sizes,and
+10915
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+Figure2: Pipelineofbuilding3D-FRONT.Westartfromanemptyhousewithprofessionaldesignideas,createtheroom
+suites, optimize the layouts (e.g., to resolve artifacts highlighed in the red boxes), and finally verify the furnished rooms.
+Here, the design ideas for a room consist of the category labels of objects that are suggested to put in, and their positions,
+orientations,sizes,andstyles.
+styles. Takingabedroomasanexample,wefirstrandomly is represented with a feature vector extracted from VEN.
+selectaseedobject, e.g., abed, froma3Dmodelpoolac- Each edge’s weight is equal to 1 if the two objects are vi-
+cordingtothesuggestedsizeandstyleofthedesignideas. suallyappealing,and0otherwise. Withthegraph,wefirst
+Wethenrecurrentlyidentifythevisuallymatchedfurniture learn a graph convolutional network (GCN) [20] as an en-
+accordingtotheroomsuitethusfaruntiltheroomisfilled. codertopropagateneighborhoodinformationtoobtainnew
+representations, depending on the connections. Then, we
+We mainly rely on the Furnishing Suite Composition
+adopt a fully connected layer as a decoder to reconstruct
+(FSC) approach in 3D-FUTURE [14] to create visually
+theweightmatrix. Whenbuilding3D-FRONT,weusethe
+compatible suites. Specifically, leveraging on the large-
+trainedmodelstoperformrecommendationfromthefurni-
+scaleexpertscenedesigns,wecarryouttwotasks,i.e.,mask
+tureshapessharedby3D-FUTURE[14].
+prediction and suite compatibility scoring, to model visual
+compatibility. Thefirsttaskpredictsthemasked(removed)
+3.2.LayoutOptimizationandVerification
+furnituregivenotherobjectsinasuite. Andthesecondtask
+evaluatesthecompatibilityscoreoftheinputsuite. Weuti-
+We observed that with the room suites constructed us-
+lizeatexturedimagetorepresenteachobject(furniture),as
+ingthetechniquesdescribedsofar,placingobjectsintothe
+shown in Figure 2 (Room Suite Creation). The two tasks
+correspondingroomsaccordingtotheirsuggestedpositions
+optimizeavisualembeddingnetwork(VEN)[31]andtwo
+andorientations,variouslayoutartifactsstillremained. For
+transformerarchitectures[37,10],sothatthetrainedVEN
+example, a bed may overlap with its nearby nightstand in
+canextractinformativevisualfeatureforeachobject. With
+the3Dspace. Otherexamplesarehighlightedinredboxes
+the learned visual representation and the given attributes,
+inFigure2. Oneofthemainreasonsisthatitisdifficultto
+includingcategory,style,color,material,andsize,foreach
+findavisuallymatchedfurniturebasedonconcurrentroom
+object. FSCtrainsgradientboostingdecisiontrees(GBDT)
+suite that, at the same time, has the same size required by
+[13]toinferdecisionrulesbasedontheseinformation,and
+thedesignideas—thereispotentialconflictbetweenstyle
+postalogisticregression(LR)layertoestimatethecompa-
+and size compatibilities. To this end, we apply the layout
+rabilityscoresoftheroomsuites. Thesetwotechniquesare
+optimizationalgorithmproposedin[41].
+integratedastheGBDT-LRmodel.
+Specifically, we start from the initially created designs,
+FSC first adopts the visual embedding extracted from andslightly modifythe objectpositionsin theroom suites
+VEN to perform a primary ranking, then employs the inordertosatisfyseverallayoutconstraintsin[41],includ-
+trainedGBDT-LRmodeltore-ranktheselectedcandidates ingpairwisedistance,focalpointdistance,distancetowall,
+foronlinerecommendation. Weimprovetheprimaryrank- accessibility, and collision. These constraints were con-
+ingstagebyconsideringgraphauto-encodertechniques[8]. structedbasedonstatisticsofthedesignrulesfromoursyn-
+In detail, we define an undirected graph G = {V,E}, and thetichousedatabase. Sincetheintiallayoutsoftenprovide
+learn a graph auto-encoder (GAE) for visual compatibility agoodstartingpoint, weonlyoptimizethedefinedenergy
+prediction following [8]. The graph nodes are all the in- functioninupto50iterations.Onaverage,theoptimization
+volved objects in the designed house database. Each node onlytakes10sforeachroom.
+10916
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+Figure3: HouseExamplesin3D-FRONT.Theleftcolumnshowsthetop-downviewsofthreehouses. Themiddlecolumn
+presentsseveralroomscontainedinthesehouses,includingbedrooms,livingrooms,diningrooms,etc. Theinteriordesign
+ideasattherightcolumnsummarizethetexturedobjectsinvolvedintheroomsandtheirhigh-quality3DCADmodels.
+We further manually verify the created designs and re- suite (Bed, Nightstand, Chair) ⇔ (A, B, C) as an exam-
+movetheunsatisfiedonestoensuredatasetquality.Tofacil- ple, where a designer chooses the objects A, B, and C in
+itatethereviewingstep,wedevelopalight-weightrenderer order. 1-N Avg Rank means that we recurrently perform
+Trescopethatenablesthereviewerstobrowsethesynthetic recommendations (A) → Nightstand and (A, B) → Chair,
+housesonlineinaninteractivemanner. Notethat,Trescope respectively,andcomputetheaveragerank(BandC).Here,
+supportsofflinebenchmarkrenderingonlocalmachinesfor NightstandandChairaretherequiredcategories,andBand
+3D-FRONT. The renderer will be shared so that users of Carethespecificobjects. N-1denotesthatwerecommend
+3D-FRONTcancapturetheirdesiredrenderingssuchasim- eachobjectgiventheothertwo.Hit@KcalculatestheTopK
+ages,depth,normal,andsegmentation. recallaccuracy. For(A, B)→Chair, acorrectrecommen-
+dationinTopKmeansthatCrankslessthanK.Wereferto
+4.ValidationandAssessment the supplementary material for more details about the rec-
+ommendationprocessandthesemetrics.
+Inthissection,weofferseveralmeanstovalidateandas-
+ThequalitativescoresarereportedinTable2. Generally,
+sessthewayourdatasetwasbuiltandthequalityandutility
+incorporating GAE [8] with the original FSC [14] would
+ofthedata. ApplicationsarediscussedinSection5.
+yield improvements on all metrics. We point out that both
+FSC and its improved version (FSC+GAE) can generate
+Evaluation of recommender system. We collected 8K
+high-quality room suites, though it seems that the perfor-
+room designs and their design logs from the online deign
+platform1 of Alibaba Topping Homestyler for our evalua- mance numbers of 1-N Hit@10 (33.6%∼36.1%) and 1-N
+Avg Rank (41.6∼37.3) are not significant. But it should
+tion. Wediscussseveralmetrics,includingAreaUnderThe
+notethatour3Dpoolcontainsmorethan1Mmodels. The
+Curve(AUC)[12],1-NAverageRank(1-NAvgRank),N-
+vastcollectionmakesthevisualcompatibilityinspiredrec-
+1 Average Rank (N-1 Avg Rank), 1-N Hit@10, and 1-N
+ommendation task extremely challenging, though we have
+Hit@20.Thesemetricsarecalculatedbasedonexperts’on-
+filteredoutinvaliditemsintheretrievalsequencesaccord-
+line logs. To explain these measurements, we take a room
+ing to the fine-grained category labels. It’s also worth to
+1https://www.shejijia.com/ mentionthat,afterlayoutoptimizationandverification,our
+10917
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+Figure 5: Distribution of the room scenes available in
+3D-FRONT, organized by type. There are 44,427 rooms
+Figure 4: Statistics of room numbers per house. 3D-
+in total. A large percentage of rooms (indicated by dark
+FRONT contains 6,813 distinct houses constructed by
+color)inthetoppartarediverselyfurnished(18,968).These
+44,427rooms. Thereare6.5roomsperhouseonaverage.
+rooms,suchasbedrooms,livingrooms,dingingrooms,and
+study rooms, are the activity spaces where people tend to
+Metrics FSC[14] FSC+GAE[8]
+spendmostoftheirtimeslivingindoors.
+AUC 0.766 0.772
+↑ 1-NHit@10 33.6% 36.1%
+Questions 3D-FRONT
+1-NHit@20 61.3% 64.3%
+PlausibleLayout 62.5%
+1-NAvgRank 41.6 37.3
+↓ DesignQuality 69.2%
+N-1AvgRank 26.7 24.1 Scene
+RicherTexture 70.0%
+Table 2: Evaluating the Pipeline. ↑: higher is better. ↓: StyleCompatibility 65.4%
+lower is better. We perform recommendation based on a RicherTexture 65.4%
+3DModel
+extremelylarge3Dpool(about1Mmodels). Whencalcu- Preferable 61.5%
+latingthesescores, invaliditemsintheretrievalsequences
+havebeenfilteredoutbasedonfine-grainedcategorylabels. Table 3: User studies on data quality: 3D-FRONT
+vs. SUNCG. The reported percentages indicate how many
+AIcreateddesigns(roomsuites+professionaldesignideas) usersonAMTchosescenes/modelsfrom3D-FRONTwhen
+havebeenusedforVRshoppingbyeCommercemerchants. presentedquestionsregardingthequalitycriteria.
+Therateofourhigh-qualitydesigns(orcustomerpreferred
+designs) is 88%, while it is only 71% for designs from ju- FromthescoresreportedinTable3,weseethatforeach
+niordesigners. Thecomparisonmaynotfairforjuniorde- qualitycriterionassessed,themajorityofTurkers(between
+signers since we reuse expert design ideas. It shows the 60%and70%),preferreddatapresentedby3D-FRONT.We
+goodqualityofthescenedesignsin3D-FRONT. believe that higher-quality datasets would not only lead to
+improved performance of algorithms which are trained on
+Userstudy. Weconductaseriesofuserstudies,onAma-
+these datasets, but also enable new applications. It should
+zon Mechanical Turk (AMT), to assess the quality of the
+alsobeevidentthatmost,ifnotall,applicationsinthecom-
+dataprovidedby3D-FRONT,incomparisonwithSUNCG
+puter vision and graphics community which had utilized
+[34]. The quality criteria considered include those related
+SUNCG,wouldalsobewellsupportedby3D-FRONT.
+toscenelayouts(intermsofplausibility,designquality,and
+richnessoftexture)andindividualobjects(intermsoftex- Propertiesof3D-FRONT. Oneofthemostdesirablefea-
+turequalityandpreferability),aswellasstylecompatibility. tures of our dataset is that it publically shares all the es-
+Werefertothesupplementarymaterialformoredetailson sentialdatathatwouldenablethemodelingofhigh-quality
+eachstudy. Asfortheuserstudysetting,werandomlysam- indoor scene, from layout semantics down to stylistic and
+pled90pairsofscenesand30pairsof3Dmodelsfrom3D- texturedetailsofindividualobjects. Whilethelayoutideas
+FRONTandSUNCGbasedonscenetypeandmodelcate- aredirectlysourcedfromprofessionaldesigns, theinterior
+gory. Each pair was labeled by 20 master-level annotators designsaretransferredfromexpertcreationsfollowedbya
+in AMT. Thus, the scene and model scores are calculated post verification process. Figure 3 shows some additional
+using1,800and600feedback,respectively. houseexamplesfromourdataset.
+10918
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+MMD- MMD- COV- COV-
+CD↓ EMD↓ CD↑ EMD↑
+SUNCG[34] 0.3642 1.1490 45.65 46.72
+3D-FRONT 0.3371 1.1049 50.01 52.91
+Table 4: Evaluting diversity of scenes synthesized by
+modelstrainedon3D-FRONTvs.SUNCG.
+5.Applications
+Wepresenttwoapplications,interiorscenesynthesisand
+object texturing in scene contexts, to demonstrate the util-
+ity of our dataset. This only represents a small sampler of
+applicationsthatcanbenefitfrom3D-FRONT.
+5.1.InteriorSceneSynthesis
+The past several years have seen an explosion of inter-
+est in studying interior scene synthesis. As demonstrated
+in [40, 29, 22, 39, 48, 15, 45, 46], automatically synthe-
+sizing plausible rooms would benefits various applications
+like virtual reality and augmented reality. The main goal
+ofcurrentscenesynthesismethodsistocoherentlypredict
+andarrangefunctionalfurnitureshapes. Theextensivepro-
+fessional layout designs provided by 3D-FRONT may be
+immenselyvaluabletosupportthedevelopmentoflearning-
+basedmethodsforthissynthesistask.
+Ourdemonstrationusesthestate-of-the-artneuralscene
+Figure 6: Interior Scene Synthesis. Several scenes pro-
+synthesismethodofWangetal. [40],whereeach3Dscene
+ducedbyastate-of-the-artnetworktrainedonSUNCG(a)
+is represented in an orthographic top-down view, which
+and 3D-FRONT (b), respectively. The results were syn-
+constitutesdepth,roommask,wallmask,objectmask,and
+thesized from randomly chosen empty rooms. In each set,
+orientation. Theirmethodtrainsadeepconvolutionalneu-
+thefirstrowisforbedroomsandthesecondrowforliving
+ral network to iteratively capture scene priors, so as to de-
+rooms.The3D-FRONTresultstendtoshowarichervariety
+cide whether to add a next object, what category of ob-
+ofobjectsandmoreplausiblescenelayouts.Auserstudyon
+ject to add and where, and finally insert an instance of
+AMTshowsthemajorityofTurkers(64.8%)prefersscenes
+thatobjectcategorywithestimatedrotationintothescene.
+synthesizedbythe3D-FRONTmodel.
+Following [40], we conduct our experiment on two scene
+3D-FRONT enables a variety of AI-powered tasks re- types,i.e.,bedroom(Bedroom,MasterBedRoom,andSec-
+lated to 3D scenes, including data-driven designing stud- ondBedRoom) and living room (LivingRoom and Living-
+ies, such as floorplan synthesis, interior scene synthesis, DiningRoom),andremovetheroomswhosewidthorlength
+and scene suites compatibility prediction, that other scene is larger than 6 meters. As a result, we obtain 6,230 bed-
+datasetsdonotsupportadequately.Italsobenefitsthestudy rooms and 645 living rooms, with 6,070 / 485 rooms for
+of 3D scene understanding subjects, such as SLAM, 3D training and 160 / 160 rooms for evaluation. We refer to
+scenereconstruction,and3Dscenesegmentation. [40]formoredetailsontrainingandtestsettings.
+Figures4and5revealsomestatisticsofourdataset,with We evaluate diversity of the synthesized results us-
+morethatcanbefoundinthesupplementarymaterial. Fur- ing converge (COV) and minimum matching distance
+ther, we assign camera viewpoints to furnished the scenes (MMD)[1]measuredbyChamferDistance(CD)orEarth-
+and release Trescope, a light-weight rendering tool com- Mover Distance (EMD) between scenes synthesized by
+patible with 3D-FRONT. These would allow users of 3D- models trained on 3D-FRONT and on SUNCG, respec-
+FRONTtoeasilyrenderimagesandannotationstosupport tively. The results were generated from empty rooms in
+their2Dvisionstudies.Werefertothesupplementarymate- thecombinedtestsetof3D-FRONTandSUNCG.Foreach
+rialforhowwegeneratecameraviewpointsforrooms.Last synthesized scene, we randomly sample 100K points and
+butnotleast,wewillcontinuouslyimprove3D-FRONTby calculatethesemetricsagainstthegroundtruth. Recallthat
+adding more features. A certain plan is to share more en- lowerMMDandhigherCOVindicatebettersynthesisabil-
+richedtextureand3Dgeometrycontents. ityofamethod. QuantitativecomparisonsinTable4show
+10919
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+thedatasetadvantageof3D-FRONToverSUNCG.Aqual-
+itativecomparisonisshowninFigure6.
+In addition, we conduct a user study on AMT where
+Turkers were asked to choose scenes synthesized by [40],
+from randomly choosen empty rooms, that are deemed to
+bemore“plausible”;seesupplementarymaterialfordetails.
+From the user feedback, we find that layouts synthesized
+bythemodeltrainedon3D-FRONTwerechosen64.8%of
+thetime(vs.35.2%forSUNCG).Alltheseresultsstrongly
+demonstratetheutilityofournewdataset,overotheralter-
+natives,fortheimportantscenesynthesistask.
+5.2.Texturing3DModelsinIndoorScenes
+The quality, richness, and compatibility of object tex-
+turesinanindoorscenecangreatlyenhanceitsrealism.The
+textured3Dmodelsavailablefrom3D-FRONTfulfillthese
+Figure7: Texturing3Dmodelsinindoorscenes. Thede-
+verycharacteristics,andweexpectourdatasettobenefitthe
+faulttextures(b)wereprovidedbythe3D-FRONTdataset.
+development of many data-driven scene texture synthesis
+In(c)and(d),weshowchairtexturesgeneratedbyTM-Net,
+algorithms. In comparison to texturing a single 3D object
+conditioned on given textures for the table. The network
+[28, 16, 25], doing the same to an object in the context of
+wastrainedonShapeNet(c)or3D-FRONT(d).
+anindoorscenemusttakeintoaccountthatscenecontextto
+ensurebothqualityandvisualcompatibility.
+6.Conclusionandfuturework
+We extend a recent generative model for textured
+meshes,TM-Net[16],tothe3Dscenetexturingtask. TM- Wepresent3D-FRONT,anewlarge-scaledatasetofsyn-
+Net represents 3D shape parts with their structural de- thetic3Dindoorscenes. Uptonow,therehavebeenavari-
+formable boxes, thus enables to generate part-level struc- etyof3Dscenedatasetsestablishedtoservedifferentpur-
+tural texture atlases for the given untextured 3D shapes. poses. Some focus on photorealistic renderings of artist-
+When applying it to the 3D scene configuration, we en- created scenes, possibly with instance segmentations and
+force the texture coherence between 3D objects by ran- per-pixelmaterialandilluminationgroundtruthdata,while
+domlychoosingashapeinthescene,extractingitstexture’s others acquire large volumes of raw scans of the world to
+VGGfeature,andfinallyusingthefeaturetoguidethegen- drive research in 3D scene reconstruction and modeling.
+erationofotherobjects’texturesinthetrainingsetting. Af- Compared to these efforts, 3D-FRONT offers the largest
+tertrainingthegenerativemodels,wesynthesizetexturefor publiclyavailablecollectionofprofessionaldesignedroom
+arandomshape,anduseitasaconditionforotherobjects’ layoutsinstancedwithhigh-qualitytexturedCADmeshes.
+texturegenerationtokeeptheconsistency.
+One of our intentions was to fill a void in the vision
+We conduct a simple experiment to validate the advan- andgraphicscommunityafterSUNCGbecameunavailable.
+tage of 3D-FRONT, as training data for TM-Net, for the Yet,ourdatasetsurpassesSUNCGinthreeaspects: profes-
+generationofchairtexturesgiventabletexturesasacondi- sionalvs.amateurlayoutdesigns,CADmodelquality,and
+tion or guidance. Comparisons are made to ShapeNet [7], style compatibility. We demonstrate that these distinctive
+which also contains textured 3D models and can serve as featuresenableseveraldata-drivenapplicationswhichwere
+thetrainingdata. Figure7presentssomequalitativeresults notwellsupportedbyotherdatasets. Inthefuture,wewill
+where the table-chair settings were sampled from dining continuously improve 3D-FRONT by releasing an indus-
+rooms. TM-Net trained on 3D-FRONT tends to generate trialrenderengine(AceRay)andprovidingmuchenriched
+richerandmorediversetextures,ascanbeverifiedbyboth textureand3Dgeometrycontents.
+aquantitativetestandauserstudy. Specifically,themodel
+trainedon3D-FRONTyieldsaLPIPS[44]scoreof0.289, Acknowledgment
+which outperforms its ShapeNet counterpart, which has a
+scoreof0.215,wherewerecallthatLPIPSisameasureof We would like to thank our colleges Yiyun Fei, Yu
+thediversityofgeneratedtextures. OuruserstudyonAMT, Zheng, Ying Li, Yi Liu, Peng Liu, Lin Ma, Le Weng, Xin
+where users were asked to select which generated textures Ma, XiaohangHu, andQianQianfortheirgreathelpwith
+were“richer”,alsoshowsthatresultsbyTM-Nettrainedon thedatapreparationandimagerendering. Wealsoappreci-
+3D-FRONTwereselected61.1%ofthetime(vs.38.9%for ateAlibabaTianchiformanagingthedatasetsothatitcan
+ShapeNet);seesupplementarymaterialformoredetails. beeasilyrequestedanddownloaded.
+10920
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+[27] Pushmeet Kohli Nathan Silberman, Derek Hoiem and Rob [40] Kai Wang, Manolis Savva, Angel X Chang, and Daniel
+Fergus. Indoor segmentation and support inference from Ritchie. Deep convolutional priors for indoor scene syn-
+rgbdimages. InECCV,2012. 1,2,3 thesis. ACMTransactionsonGraphics(TOG),37(4):1–14,
+[28] Amit Raj, Cusuh Ham, Connelly Barnes, Vladimir Kim, 2018. 3,7,8
+JingwanLu,andJamesHays. Learningtogeneratetextures [41] Tomer Weiss, Alan Litteneker, Noah Duncan, Masaki
+on 3d meshes. In Proceedings of the IEEE Conference on Nakada, Chenfanfu Jiang, Lap-Fai Yu, and Demetri Ter-
+ComputerVisionandPatternRecognitionWorkshops,pages zopoulos. Fastandscalableposition-basedlayoutsynthesis.
+32–38,2019. 8 IEEE Transactions on Visualization and Computer Graph-
+[29] Daniel Ritchie, Kai Wang, and Yu-an Lin. Fast and flexi- ics,25(12):3231–3243,2018. 4
+bleindoorscenesynthesisviadeepconvolutionalgenerative [42] FeiXia,AmirRZamir,ZhiyangHe,AlexanderSax,Jitendra
+models. In Proceedings of the IEEE Conference on Com- Malik,andSilvioSavarese. Gibsonenv:Real-worldpercep-
+puter Vision and Pattern Recognition, pages 6182–6190, tionforembodiedagents. InProceedingsoftheIEEECon-
+2019. 7 ferenceonComputerVisionandPatternRecognition,pages
+[30] MikeRobertsandNathanPaczan.Hypersim:Aphotorealis- 9068–9079,2018. 3
+ticsyntheticdatasetforholisticindoorsceneunderstanding, [43] Jianxiong Xiao, Andrew Owens, and Antonio Torralba.
+2020. 2,3 Sun3d: A database of big spaces reconstructed using sfm
+[31] MarkSandler,AndrewHoward,MenglongZhu,AndreyZh- andobjectlabels. InProceedingsoftheIEEEinternational
+moginov, and Liang-Chieh Chen. Mobilenetv2: Inverted conferenceoncomputervision,pages1625–1632,2013. 1,
+residuals and linear bottlenecks. In Proceedings of the 2,3
+IEEE conference on computer vision and pattern recogni- [44] RichardZhang,PhillipIsola,AlexeiAEfros,EliShechtman,
+tion,pages4510–4520,2018. 4 and Oliver Wang. The unreasonable effectiveness of deep
+[32] Manolis Savva, Angel X. Chang, Pat Hanrahan, Matthew featuresasaperceptualmetric. InCVPR,2018. 8
+Fisher, andMatthiasNießner. PiGraphs: LearningInterac-
+[45] Song-Hai Zhang, Shao-Kui Zhang, Wei-Yu Xie, Cheng-
+tion Snapshots from Observations. ACM Transactions on
+YangLuo,YongliangYang,andHongboFu. Fast3dindoor
+Graphics(TOG),35(4),2016. 3
+scenesynthesisbylearningspatialrelationpriorsofobjects.
+[33] Shuran Song, Samuel P Lichtenberg, and Jianxiong Xiao. IEEE Transactions on Visualization and Computer Graph-
+Sunrgb-d:Argb-dsceneunderstandingbenchmarksuite.In ics,2021. 7
+ProceedingsoftheIEEEconferenceoncomputervisionand
+[46] Shao-Kui Zhang, Wei-Yu Xie, and Song-Hai Zhang.
+patternrecognition,pages567–576,2015. 3
+Geometry-based layout generation with hyper-relations
+[34] ShuranSong,FisherYu,AndyZeng,AngelXChang,Mano-
+amongobjects. GraphicalModels,page101104,2021. 7
+lis Savva, and Thomas Funkhouser. Semantic scene com-
+[47] Yinda Zhang, Shuran Song, Ersin Yumer, Manolis Savva,
+pletion from a single depth image. In Proceedings of 30th
+Joon-Young Lee, Hailin Jin, and Thomas Funkhouser.
+IEEEConferenceonComputerVisionandPatternRecogni-
+Physically-based rendering for indoor scene understanding
+tion,2017. 2,6,7
+usingconvolutionalneuralnetworks. InProceedingsofthe
+[35] JulianStraub,ThomasWhelan,LingniMa,YufanChen,Erik
+IEEEConferenceonComputerVisionandPatternRecogni-
+Wijmans,SimonGreen,JakobJEngel,RaulMur-Artal,Carl
+tion,pages5287–5295,2017. 3
+Ren, Shobhit Verma, et al. The replica dataset: A digital
+[48] Zaiwei Zhang, Zhenpei Yang, Chongyang Ma, Linjie Luo,
+replicaofindoorspaces. arXivpreprintarXiv:1906.05797,
+AlexanderHuth, EtienneVouga, andQixingHuang. Deep
+2019. 3
+generativemodelingforscenesynthesisviahybridrepresen-
+[36] Ju¨rgen Sturm, Nikolas Engelhard, Felix Endres, Wolfram
+tations. ACMTransactionsonGraphics(TOG),39(2):1–21,
+Burgard, and Daniel Cremers. A benchmark for the eval-
+2020. 7
+uation of rgb-d slam systems. In 2012 IEEE/RSJ Interna-
+[49] Jia Zheng, Junfei Zhang, Jing Li, Rui Tang, Shenghua
+tionalConferenceonIntelligentRobotsandSystems,pages
+Gao, and Zihan Zhou. Structured3d: A large photo-
+573–580.IEEE,2012. 1,2,3
+realisticdatasetforstructured3dmodeling. arXivpreprint
+[37] AshishVaswani,NoamShazeer,NikiParmar,JakobUszko-
+arXiv:1908.00222,2019. 1,2,3
+reit,LlionJones,AidanNGomez,ŁukaszKaiser,andIllia
+Polosukhin.Attentionisallyouneed.InAdvancesinneural
+informationprocessingsystems,pages5998–6008,2017. 4
+[38] Johanna Wald, Helisa Dhamo, Nassir Navab, and Federico
+Tombari. Learning 3d semantic scene graphs from 3d in-
+doorreconstructions. InProceedingsoftheIEEE/CVFCon-
+ferenceonComputerVisionandPatternRecognition,pages
+3961–3970,2020. 2,3
+[39] KaiWang,Yu-AnLin,BenWeissmann,ManolisSavva,An-
+gelXChang, andDanielRitchie. Planit: Planningandin-
+stantiatingindoorsceneswithrelationgraphandspatialprior
+networks. ACMTransactionsonGraphics(TOG),38(4):1–
+15,2019. 7
+10922
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:24:26 UTC from IEEE Xplore. Restrictions apply.
+

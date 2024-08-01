@@ -1,0 +1,637 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+Spatiotemporal Periodical Pattern Mining in Traffic Data
+Tanvi Jindal, Prasanna Giridhar, Lu-An Tang, Jun Li, Jiawei Han
+Department of Computer Science
+University of Illinois at Urbana-Champaign
+{tjindal2, giridha2, tang18, junli87, hanj}@illinois.edu
+ABSTRACT other moving objects. Traffic sensors have been installed at a
+large number of monitoring stations on different highways,
+The widespread use of road sensors has generated huge
+expressways, freeways and road intersections to monitor the flow
+amount of traffic data, which can be mined and put to various
+of traffic through them. Such stations usually monitor the speed
+different uses. Finding frequent trajectories from the road
+of the vehicles crossing through them, and keep a track of the
+network of a big city helps in summarizing the way the traffic
+average speeds and flow of the traffic they monitor over small
+behaves in the city. It can be very useful in city planning and
+periods of time, generating huge amounts of data that needs to be
+traffic routing mechanisms, and may be used to suggest the best
+analyzed. The main aim of this paper is to find periodic behaviors
+routes given the region, road, time of day, day of week, season,
+from the speed data of traffic in the California region, and use
+weather, and events etc. Other than the frequent patterns, even
+them to cluster the stations in the road network that have similar
+the events that are not so frequent, such as those observed when
+behaviors to be able to summarize the huge road network.
+there is heavy snowfall, other extreme weather conditions, long
+There are two major different types of mobility data –
+traffic jams, accidents, etc. might actually follow a periodic
+individual and aggregate. In the individual or object-based
+occurrence, and hence might be useful to mine. This problem of
+mobility data, the identity of each object can be traced and the
+mining the frequent patterns from road traffic data has been
+movement trajectories of each of the objects are analyzed
+addressed in previous works using the context knowledge of the
+separately to find patterns. In the aggregate or sensor-based
+road network of the city. In this paper, we have developed a
+mobility data, the identity of each object cannot be traced and the
+method to mine spatiotemporal periodic patterns in the traffic
+analysis is done on the collective behavior of the moving objects.
+data and use these periodic behaviors to summarize the huge
+The data from traffic sensors falls into the second category,
+road network. The first step is to find periodic patterns from the
+where we have only averages over a large number of individual
+speed data of individual road sensor stations, and use their
+moving objects.
+periods to represent the station's periodic behavior using
+probability distribution matrices. Then, we use density-based There are a number of different applications of mining road
+clustering to cluster the sensors on the road network based on traffic data. It can help us in better management of traffic in a city
+the similarities between their periodic behavior as well as their and can help in identifying where new roads need to be
+geographical distance, thus combining similar nodes to form a developed. Another very important application is to be able to
+road network with larger but fewer nodes. summarize the huge, and complex traffic data into actionable
+knowledge, which can even be used to discover best routes
+Categories and Subject Descriptors between any two points on the map. In addition to the basic route
+discovery, we can even use this knowledge to develop
+H.2.8 [Database Applications] – Data Mining, Spatial comprehensive methods that take into account the frequently
+Databases and GIS traveled roads, the weather conditions, the traffic conditions, and
+so on. There are many challenges in being able to extract such
+General Terms
+information from the raw data. Firstly, the data is very huge, with
+speed values being collected every few minutes, and complex,
+Algorithms, Experimentation
+owing to the large number of factors that can affect the behavior
+Keywords of traffic on the roads, introducing large variable noises in the
+data. Secondly, apart from the data, the patterns in the real world
+Periodic Patterns, Spatiotemporal data, Traffic Data, KL-
+data are also complex as there are many patterns that are
+Divergence, Density-based clustering, Road network,
+interacting with each other, making it very difficult to identify
+Probability Distribution Matrices
+and model them.
+1. INTRODUCTION One of the most important and frequently occurring patterns
+in moving object data is periodicity. Finding periodic behaviors is
+With the developments in technology, there are different very important in understanding the object movements and in
+ways in which moving objects are being monitored, generating summarizing those movements. These periodic behaviors can
+huge amounts of mobility data. We have movement data for very effectively describe the entire motion of the object, and
+individuals, with the help of GPS systems; for animals and birds, hence, it is possible to store only these behaviors rather than
+with animal scientists studying their movement patterns; and storing the entire data. The main challenges in identifying periods
+is that with traffic data, the patterns may not repeat at the exact
+Permission to make digital or hard copies of all or part of this work for
+same times every time, or the speed that is repeating may not be
+personal or classroom use is granted without fee provided that copies are
+the exact same. Also, there may be multiple different periods in
+not made or distributed for profit or commercial advantage and that
+copies bear this notice and the full citation on the first page. Copyrights the same series and the overlay and interaction of them makes
+for components of this work owned by others than ACM must be them difficult to identify. For example, let us consider a station
+honored. Abstracting with credit is permitted. To copy otherwise, or that is located near the San Jose exit on highway 101. Every
+republish, to post on servers or to redistribute to lists, requires prior morning, a large number of vehicles will take that exit to go to
+specific permission and/or a fee. Request permissions work to their offices located in San Jose. Now, there will be
+from permissions@acm.org.
+periodic patterns in the speeds of vehicles, but the actual speed at
+UrbComp’13, August 11–14, 2013, Chicago, Illinois, USA.
+Copyright © 2013 ACM 978-1-4503-2331-4/13/08…$15.00
+a given time may vary on different cycles of the period, as the makes available these data entries averaged over five minute
+traffic at a given time on the exit might vary given the fact that intervals. For the purposes of this paper, we reduce the scope to
+the drivers may be running a little late or early. Also, there will considering only the stations that are on one single highway over
+be daily patterns and weekly patterns in the speed values, as the time span of only one month at a time. Even then, the data
+people do not go to work on weekends, but there may be other remains huge and has too fine granularity, and thus, we further
+vehicles entering San Jose on weekends for other purposes. But average these readings over periods of one hour.
+both these patterns are intertwined in the speed data, making it Fig. 1 shows a plot of the original speed data for a station for
+more difficult to mine them. the time period of one month, that is, 720 hours, where x-axis
+There have been many works ([4], [5], [13], [15]) that have shows the time in hours. The increments on x-axis are multiples
+tried to identify the periodic patterns from moving object data. of 24 to show the progression of the data with days.
+Fourier transform and autocorrelation have been used for period
+detection in signal processing field for period detection but it is
+not feasible to use them directly for the traffic data because of the 80
+75
+challenges mentioned above. We have modified the period
+70
+detection approach from the KDD’10 paper to fit the needs of our
+65
+dataset, to find the multiple periods in the traffic data. 60
+Apart from periodicity finding methods, there have been efforts 55
+to develop much more comprehensive systems to summarize 50
+traffic data and use them for various applications. One such 45
+system proposed by Xiaolei Li et al [1], is FlowScan, which uses 40
+traffic-density based approach to find hot routes in traffic data. 35
+They use a hybrid between object-based and sensor-based 30
+analyses of mobility data and try to cluster road segments based
+on the density of traffic they share. Another work by Hector
+Gonzales et al [2], adaptively computes the fastest path between
+two points, based on the frequent traffic patterns mined from the
+Figure 1. Original data for one station
+traffic data. They use the hierarchy of roads to partition the road
+network into areas, and different path pre-computation strategies Our algorithm takes this data as its input and analyzes it to find
+can be used at the area level. It also incorporates knowledge spatiotemporal periodic patterns from the data and summarize
+from driving patterns and speed patterns to take care of the the road network. Figure 2 gives an overall flow of the algorithm
+weather conditions and the knowledge of the local people. and gives an idea about how the algorithm progresses. The
+Most of these works require an understanding of the underlying whole algorithm works in two major stages:
+road network, to be able to identify the traffic patterns from the 1. Detection of periodic behaviors – In this stage, the
+huge collection of data. In this paper, we try to come up with a algorithm analyses the speed data for an individual station
+method to summarize the road traffic data with a minimal to find the periodic behavior of the station. This in itself
+amount of knowledge about the road network. involves first finding the periods from the data and then
+The main contributions of this paper are: (1) identifying the constructing the categorical distribution matrices for the
+periodic behavior in the speed data of an individual station, station.
+which can tell us the distribution of speeds at different times of 2. Clustering the stations – Once we have constructed the
+days, and on different days of week; (2) developing a method to categorical distribution matrices for all the stations, we use
+find similarities between the periodic behaviors of different the similarity between these matrices, i.e., the periodic
+stations, and making clusters of stations on a particular route behavior of the stations, and the physical distance between
+based on this similarity and the geographical distance between the stations to form clusters.
+the stations.
+The rest of the paper is organized as follows: Section 2 gives an
+overview of the problem that the paper is trying to solve, the
+data that is used and a high-level description of how the
+algorithm works. Section 3 discusses in detail the technique used
+to detect the periods and periodic behaviors from the traffic data.
+Section 4 discusses the clustering of stations to form nodes using
+the periodic behaviors discovered in the previous step. The
+subsequent sections then describe the experimental results, and
+conclusions.
+2. OVERVIEW
+To be able to understand the methods developed in this paper, it
+is first important to understand the data that has been used for
+conducting the various experiments. We use the well-established Figure 2. The flow of the whole algorithm
+Performance Management System (PeMS) [8] to obtain the
+speed and flow data for the traffic on a large number of roads in The next two sections discuss both these steps in much more
+the state of California. PeMS collects and stores data from detail along with appropriate examples.
+California loop detectors, which record the occupancy and flow
+of vehicles on a freeway section. Each detector makes a 3. PERIODICITY DETECTION
+recording every thirty seconds, where the data values are the
+3.1 Finding periods
+average speeds across all the vehicles that cross the detector in
+that time span. The entire data is huge, given that it collects this The first step in our approach is to find periods in the traffic data
+data every 30 seconds over years for a large number of stations. from a single station so as to be able to represent the station
+To make it much more feasible to use the data effectively, PeMS using its periodicity. The speed data obtained from PeMS has
+seulaV
+deepS
+1 52 94 37 79 121 541 961 391 712 142 562 982 313 733 163 583 904 334 754 184 505 925 355 775 106 526 946 376 796
+Time (Hours)
+continuous values of speed, and has multiple periods interleaved complement each other. On one hand, Fourier transform often
+and is very noisy. Hence, typical period detection methods like suffers from the low resolution problem in the low frequency
+Fourier transform cannot be directly used on this speed data. To region, hence provides poor estimation of large periods. Also, it
+be able to find the periods, we first discretize the speed data into tends to generate a lot of false positives in the periodogram due
+four discrete levels. To find the speed limits that will divide the to its spectral leakage problem. On the other hand,
+entire possible speed range into four different discrete levels, we autocorrelation offers accurate estimation for both short and
+perform k-means clustering on the set of all possible speeds for large periods, but is more difficult to set the significance
+all the stations under consideration. Setting the value of k to 4, threshold for important periods. To overcome these
+the following speed ranges were obtained, <38, 38-57, 57-67, shortcomings of both the methods, they proposed to combine
+and >67, and we used 0, 1, 2, and 3 to represent these speed them to find periods from time series. In our paper, we use a
+ranges in the discretized version of the data. Fig. 3 shows the similar approach that is a modification of the periodicity
+same data after it has been discretized into 4 levels; 1, 2, 3, and detection technique used by Zhenhui et al in [4].
+4, using the speed ranges.
+The first step is to take the Discrete Fourier Transform (DFT) of
+the Boolean sequence B = b1, b2, . . ., bn (bi is the Boolean speed
+4 value for the present analysis at the ith time interval), to
+transform it into the sequence of n complex numbers X1, X2, . . .
+3.5
+,Xn. A periodogram is then constructed for the series, which is a
+3 plot of the power spectral density of each of these complex
+numbers. The periodogram helps in identifying the possible 2.5
+periods in the frequency domain, which is done by setting a
+2 threshold and taking all the frequencies that have power
+densities above a threshold as period hints.
+1.5
+1 The threshold is determined using the idea that any random
+permutation B′ of B should not exhibit any periodicities, and
+hence even the maximum power in B’ will not indicate the
+period in the sequence. Therefore, the threshold is set as the
+Figure 3 Discretized Data for the station maximum power for B’, and to get a 99% confidence level on
+what frequencies are important, we repeat the above random
+permutation experiment 100 times and record the maximum
+It can be seen clearly from these figures that there is some
+power of each permutated sequence. The 99-th largest value of
+periodicity in the data, but it is not feasible to apply periodicity
+these maximum powers is then taken as the threshold.
+detection methods directly even on the discretized data, because
+of the presence of multiple periods. Thus to effectively detect The frequencies thus identified might still not indicate the true
+the periods, we try to find the periodicities of the different speed period of the data, as a single value k in frequency domain
+levels individually. To do so, we convert the discretized speed corresponds to a range of periods [n/k, n/k−1) in time domain.
+time series into Boolean time series from the reference point of The next step is thus to use circular auto-correlation to identify
+each of the speed levels. This simply entails the following step: the true periods from among the period hints provided by the
+Fourier Transform. The intuition is that only if the candidate
+If the series is of the form 112344232133212…
+period from the periodogram lies on a hill of the auto-correlation
+Then we convert it to the following Boolean series by taking all function, then we can consider it as a valid period, otherwise it is
+the 3’s as 1’s and the rest of the labels as 0’s a false alarm.
+000100010011000…
+Thus, for each period range [l, r) given by the periodogram, we
+This is when we are trying to find the periods in the occurrences test whether there is a peak in {R(l), R(l+1), . . . , R(r−1)} by
+of speed level 3. fitting the data with a quadratic function. We return the point in
+this range which has the maximum value in case the function is
+concave, as that indicates the presence of a peak.
+Figure 4 Station Data in Boolean form
+Fig. 4 shows how the time series looks after it has been
+Figure 5. Periodogram of the Boolean series
+converted to a Boolean time series. Once we have this Boolean
+series, we find periods in it using Fourier Transform followed by
+circular autocorrelation. Vlachos et al [13] discuss how the two To illustrate this technique of finding the periods of the
+most common periodicity detection methods in the signal datamore clearly, we will work on the Boolean series obtained
+processing area, Fourier transform and auto-correlation, from the speed data of one of the stations for the month of June
+sdeepS
+dezitercsiD
+1 52 94 37 79 121 541 961 391 712 142 562 982 313 733 163 583 904 334 754 184 505 925 355 775 106 526 946 376 796
+Time (Hours)
+1
+0.5
+0
+sleveL
+deepS
+naelooB
+1 52 94 37 79 121 541 961 391 712 142 562 982 313 733 163 583 904 334 754 184 505 925 355 775 106 526 946 376 796
+Time (Hours)
+2009. Figures 1, 3 and 4 show how the plots of the original, Then, the probability that S is generated using P is given by:
+discretized, and the Boolean data look for any station for one
+𝑛 𝑇
+m obo tn ait nh e. dF ao fr
+t
+eo rn te
+a
+ko if
+n
+gth te hs ee Fs ota uti ro ien rs t, rF anig s.
+f
+o5
+r
+msh oo fw ts
+h
+eth Be
+o
+p oe leri ao nd o seg rr ia em
+s.
+𝑃(𝑆|𝑃)= ∏∏𝑃(𝑥
+𝑘
+= 𝑆 𝑖𝑗)
+The x-axis shows the frequencies and the y-axis is a measure of 𝑖=0 𝑗=0
+the power spectral density. For a given frequency, higher power
+Where Sij is the speed level at jth timestamp in ith segment.
+spectral density indicates a stronger sense of periodicity with
+According to maximum likelihood estimation (MLE), to find the
+that frequency in the data. The red dashed line shows the
+best generative model, the following log likelihood
+threshold identified using the method described above. We can
+maximization problem needs to be solved.
+see that there are many frequencies which pass the threshold
+test, but not all of them are true periods of the data. Fig. 6 then
+𝑚𝑎𝑥 𝑝{𝐿(𝑃|𝑆)=log𝑃(𝑆|𝑃)}
+shows the auto-correlation function for all the candidate periods,
+where and we can easily see that only one of those lies on a The well-known solution to this problem is given by:
+𝑛
+peak, and hence, is the true period of the Boolean series.
+𝑝(𝑥
+𝑘
+= 𝑚)= ∑(𝐼𝑛(𝑆 𝑖𝑘 ==𝑚))/𝑛
+𝑖=0
+where, In(b) is an indicator function which returns 1 if b
+evaluates to true, and 0 otherwise. In words, we say that p (xk =
+m) is the ratio of the number of times the speed level is m at
+relative timestamp tk with the total number of intervals, n.
+To avoid the probabilities from being zero, in case, a particular
+relative timestamp never sees a particular speed level, we use a
+background prior probability u, and add it to p(xk=i).
+𝑝(𝑥
+𝑘
+=𝑖)=(1−𝜆)𝑝(𝑥
+𝑘
+=𝑖)+ 𝜆𝜇
+where, λ is a small smoothing parameter 0 < λ <1.
+In this way, the categorical distribution matrix is constructed for
+each station, representing the periodic behavior of the station.
+4. CLUSTERING OF STATIONS
+Figure 6 Autocorrelation function fitted to a quadratic
+The main motivation for this paper is the need to be able to
+summarize the entire road network and the way traffic behaves
+In this way, we do period analysis for each station individually
+in a city. The type of road, that is, if it is an inter-state highway,
+and we limited our work to one route at a time, and considered
+state highway, or a local road greatly affects the speeds of the
+only the stations on that highway. For each station, we generate
+vehicles travelling on that road. Apart from the road type and
+four different Boolean series from the perspectives of the four
+size, there are many other factors that affect the behavior of
+speed levels, and then find out the periods for all these four
+traffic. One of the major factors is the time of day at which the
+series, giving us up to four different periods for each station.
+vehicle is traversing the road. For example, in the early hours of
+For each station, the set of observed periods contained periods
+morning, there are very few vehicles on the road, and hence the
+corresponding to approximately one day, i.e., 24 hours, or
+traffic moves smoothly, with high average speeds. Whereas,
+multiples of 24 hours. Thus, we identified the principal period
+during peak rush hours, around 9-10 am in the morning or 4-6
+for each station and associated each station to a single period.
+pm in the evenings, the average speeds are much lower and the
+This also accommodates noises, treating periods of 23 or 25
+possibility of occurrences of traffic jams becomes much higher.
+hours as roughly daily periods, and if a station has both 24 hours
+In addition for a given road at a given time, the speed at which
+and 24*k as its periods, then 24 hours is identified as its
+vehicles move also depends on the position of the vehicles on
+principal period.
+the road. The speeds might be much lower on those segments of
+3.2 Periodic Behavior of Stations the road where the traffic from other roads merges, or other
+temporary factors, like construction work, or an accident.
+The main aim behind finding the periods for the stations was to To be able to effectively represent the traffic behavior on the
+determine a better way to represent the station data. Now, once road network, the roads have to be divided into smaller segments
+we have the periods of the stations, we can use the periods to rather than being used as individual edges. In the scope of this
+summarize the speed distribution at a station. This is done by paper, where we collect data from a large number of stations that
+constructing a categorical distribution matrix for each station. are present along the highways, an obvious choice is to use each
+DEFINITION 1 (Categorical Distribution Matrix) station as a node and the road segments between them as the
+edges in the network.
+Let T = {t1, t2, . . . , tT } be a set of relative timestamps, and xk be
+The problem with doing this is that this creates a very huge
+the categorical random variable indicating the speed level at the
+network, and also due to the proximity of the stations to each
+station at timestamp tk. A categorical distribution matrix M for
+other, sometimes, it is not necessary to consider them as separate
+the station is a size s*T matrix where T is the period and s is the
+nodes. For example, let us consider two stations that are close to
+number of possible speed levels. Here, M(i,j) is the probability
+each other on the same road, then there is a possibility that the
+that the speed level at timestamp j is i.
+behavior of traffic at each of these stations is very similar, as
+In other words, M = [p1, . . . , pT ], where each column pk = [p(xk
+there are no major changes that take place in the average speeds
+=0), p(xk = 1), . . . , p(xk = s)]T is an independent categorical
+of vehicles in moving from one station to the other. Thus, it is
+distribution vector with ∑s i=0p(x k=s)=1. more efficient and less redundant to combine these stations into
+Now, suppose that the time series for a station is generated by one node, to reduce the size of the road network. The periodic
+some distribution matrix P. To estimate P, we use the maximum behavior of the node then can be defined as the average of the
+likelihood estimation method. Let the whole series be denoted periodic behaviors of all the stations that are a part of the node.
+by S. We divide the series into T-sized intervals to get T= {T1,
+T2, …,Tn} , where n = floor(length(S)⁄T). In this part of this paper, we develop a method to identify such
+stations and combine them into one node. An intuitive approach
+to do so is to cluster the stations that are close to each other 𝑇 𝑑
+1
+based on a similarity measure for their periodic behavior = 2(∑∑𝑝 𝑖.log𝑝 𝑖+ 𝑞 𝑖.log𝑞 𝑖−(𝑝 𝑖+𝑞 𝑖)log𝑚 𝑖)
+representations. The main challenges in the clustering process 𝑘=1𝑖=1
+are: (1) finding a similarity measure that can effectively identify 1
+= (−𝐻(𝑃)−𝐻(𝑄)+2𝐻(𝑀))
+the stations that should be put together in a node, and (2) finding 2
+an appropriate clustering algorithm for the stations. Since the KL divergence, KL(P,Q) can be interpreted as the
+inefficiency of assuming that the true distribution is Q when it
+4.1 Similarity Measures
+really is P, JS divergence, JS(P,Q) could be seen as a minimum
+For any clustering algorithm, it is very important to select the inefficiency distance. Thus, we can see that this is an efficient
+correct similarity measure. For our system, we have very limited and appropriate measure to find the distance between the periodic
+information about each of the stations. The two major pieces of behaviors of two stations.
+information we have are (1) the geographical location of the
+4.2 Clustering Algorithm
+station and, (2) the categorical distribution matrix representing
+the periodic behavior of the speeds of vehicles crossing the After the similarity measures have been finalized, an appropriate
+station. clustering algorithm needs to be developed which can effectively
+use both the distance measures to put similar stations into one
+4.1.1 Physical Distance
+node and non-similar stations into separate nodes. Another
+For this work, since we are limited to analyzing only one important thing is that the algorithm should not require the
+highway at a time, we use the Manhattan distance between two system to pre-specify a number of clusters in the clustering result.
+stations along the road as the physical distance between them. In this paper, we used an adaptation of density-based clustering to
+PeMS system makes available details about all the stations as cluster the stations.
+metadata. The metadata has the location of a station in the form The main idea is that for each station, the algorithm first finds out
+of latitude and longitude coordinates, but it also has the mile the stations that are in physical proximity to the station. This set
+position of the station on the highway it is located on. In this of stations is called the neighborhood of the station.
+paper, we directly use the absolute value of the difference
+DEFINITION 2 (Neighborhood of a station)
+between the mile positions of two stations as the physical
+distance between them. The neighborhood of a station s N(s) is defined as: N(s) = {t|
+4.1.2 Similarity between the periodic behaviors
+d(s,t) < d0}, where d(s,t) is the physical distance between stations
+s and t and d0 is a user-defined distance threshold that controls the
+Since the periodic behaviors are represented using probability
+size of the clusters formed.
+distribution matrices, a similarity measure between the two must
+be such that two stations similar to each other will have a high From the neighborhood of a station, we then isolate those stations
+chance to be generated from the same periodic behavior. One of that have JS divergence less than a threshold, and put them
+the most popular distance measures is Kullback-Leibler together in a cluster. The threshold for JS divergence is set locally
+divergence (KL divergence), which is defined as follows: relative to the neighbor set. Consider a neighborhood set N(s) for
+a station s. To set the threshold, we take all possible pairs in the
+𝑇 𝑑
+𝐾𝐿(𝑃,𝑄)=∑∑𝑝(𝑥
+𝑘
+=𝑖).log (𝑝 𝑞( (𝑥 𝑥𝑘 = =𝑖 𝑖) )) s ise t than end c so em
+t
+p tou t (e
+m
+th eae nJ S
++
+d 0iv .5e rg ste an nc de
+a
+b rde tw dee ve in
+a
+tt ih oe nm
+)
+.
+f
+oT rh e
+th
+t ih sr e ss eh
+t
+o old
+f
+𝑘
+𝑘=1𝑖=1 distances. Setting the threshold locally is more effective than
+Where T is the time period and d is the number of possible speed
+setting a global threshold as it helps to discover clusters from
+levels. KL divergence might become infinite if the probability
+neighborhoods depending on the average divergence between the
+values become 0, and hence, we already added a smoothened
+neighborhood stations. If the average divergence is very high in
+background variable u to p(xk=i) to avoid this.
+one neighborhood, setting a small global threshold will never be
+Although KL divergence is a good measure of similarity between
+able to cluster them. Similarly, if the average divergence in a
+two probability distribution matrices, it is not a metric as it is not
+neighborhood is very small, and the global threshold is set to a
+symmetric with KL(P,Q) ≠ KL(Q,P). Dominik Endres et al
+large value, the algorithm will always put them in the same
+suggested a metric which is derived from KL divergence, called
+cluster.
+the Jersen-Shannon divergence (JS divergence) defined as
+follows: The algorithm iterates over all the stations and tries to form a
+1 cluster from the neighborhood of that station. It maintains a
+𝐽𝑆(𝑃,𝑄)= (𝐾𝐿(𝑃,𝑀)+𝐾𝐿(𝑄,𝑀))
+2 visited flag for each station and sets it when a station becomes a
+Where M =1/2 (P+Q) is the mid-point between the two matrices. part of a cluster, to ensure that no station is part of two clusters.
+JS divergence is a metric as it is both symmetric and bounded, The algorithm is described in detail in Fig. 7.
+and hence, it is a better similarity measure as compared to KL
+divergence.
+5 EXPERIMENTAL RESULTS
+Clearly,
+For this study, we used stations on a single route only to form
+𝐽𝑆(𝑃,𝑄) = 𝐽𝑆(𝑄,𝑃)
+clusters to form the clusters in the target road network. We have
+Also, 0≤𝐽𝑆(𝑃,𝑄)≤1, if we take logarithms on base 2.
+included the results from the intermediate steps like periodicity
+If we examine JS divergence from a statistical point of view, we detection along with the description of those steps. Fig. 8 shows
+can see that the results from the final step when the algorithm is run on the
+𝐽𝑆(𝑃,𝑄)=𝐻(𝑀)−1 𝐻(𝑃)−1
+𝐻(𝑄)
+highway I-405. It is clear from the image that the stations put in
+2 2 the same cluster are close to each other. The size of the clusters
+Let us use pi to denote p(xk=i), qi to denote q(xk=i) and mi to can be easily adjusted by adjusting the distance threshold
+denote m(xk=i). Then, parameter, d0. In Fig. 8, d0 was set to 2 miles, and in Fig. 9, d0 was
+𝑇 𝑑
+1 𝑝 𝑞 set to 1 mile. We can see clearly the difference in the clusters that
+𝐽𝑆(𝑃,𝑄)= 2(∑∑𝑝 𝑖.log( 𝑚𝑖 )+ 𝑞 𝑖.log ( 𝑚𝑖 )) are obtained.
+𝑖 𝑖
+𝑘=1𝑖=1
+6 RELATED WORK discovering the most representative trend that repeats itself every
+T timestamps. However, they can only discover one trend for a
+A lot of different types of work have been done on different given period T and such trend covers the whole time span.
+spatiotemporal data in the past. Finding the periods from time Vlachos et al. [13] proposed a method to use a combination of
+series data is a very important part of the work done in this paper. Fourier transform and auto-correlation to find periods without
+A number of periodic pattern mining techniques have been having to face the problems of finding false periods along with
+proposed in data mining literature. Han et al. [15, 16] propose the the true periods.
+algorithms for mining frequent partial periodic patterns. There
+have been a number of works that are based on
+Figure 9. Clusters on I-405 with a smaller distance threshold
+Zhenhui et al. [4] proposed an adaptation of this method so that it
+can be effectively used to find multiple periods from spatio-
+temporal data. The main intuition in this work is to separate the
+series into many Boolean series from different reference spots
+and then find periods. Another work by Zhenhui et al. [5]
+proposed a probabilistic method to find periods from incomplete
+observations.
+Apart from work in finding periodicities, another set of works
+related to this paper includes work that try to summarize traffic
+data, finding frequent trajectories from moving object data,
+clustering trajectories, or route discovery from traffic data. Also,
+there is a large spectrum of works in this area, ranging from
+study of trajectories of individual objects to a collective study of
+the average behaviors of a large number of moving objects.
+Moving object clustering [18] discovers groups of objects that
+move together. Trajectory clustering [19] discovers groups of
+similar sub-trajectories from the whole trajectories of moving
+Figure 7. Density-based clustering of stations objects. Xiaolei Li et al. [1] proposes a method that is a hybrid
+of both these general techniques. The proposed method,
+FlowScan, that uses a density-based approach to discover hot
+routes from the trajectories of vehicular data. They try to cluster
+road segments based on the density of traffic that share, and
+hence even though they don’t consider individual moving
+objects, they use the identities of the objects to find how much
+of the traffic is really shared between two road segments. In
+another work, Hector Gonzales et al. [2] propose a method that
+tries to incorporate a large number of factors into the traffic
+analysis to find fastest paths between two points in an adaptive
+manner. The three main contributions of this work are to
+partition the road network into regions based on the hierarchy of
+roads, use of driving patterns and speed to incorporate the
+wisdom of the local people about the peculiar things that may
+affect the traffic. This work is closely related to the methods
+proposed in this work as the authors also strive to come up with
+an effective representation of the road network and
+consequently, to be able to discover edges between those nodes,
+based on speed patterns.
+Figure 8. Clusters discovered on I-405
+Another related area to our work is the work done in defining
+the definition of frequent periodic pattern mining with a strict similarity measures between large time series. Felix Iglesias et
+minimum support threshold. They tend to output a large set of al. [12] analyze the various different types of similarity measures
+patterns, most of which are slightly different. Besides, frequent that can be used while clustering time series. The unique thing
+periodic patterns cannot capture the statistical information as the about time series is that the shape of the input vectors entails
+periodic behaviors. Indyk et al. [9] studies the problem of features that are arranged in time, and hence, correlation
+becomes an important factor to consider. There are usually two be able to find models that can predict how such abnormal
+types of methods used for clustering time series data: (a) feature- activity on a road segment propagates to other segments.
+based or model-based, where raw data is pre- summarized or
+transformed by means of feature extraction or parametric Once these basic extensions are made to the system, we can
+models, e.g., dynamic regression, ARIMA, neural networks think of using the system to solve many real-life problems, such
+[20]; and, (b) raw-data-based, where clustering is directly as discovery of the fastest routes between two given points. We
+applied over time series vectors without any space- could also think of using Data cubes to effectively store all these
+transformation previous to the clustering phase. Several works patterns and make it easier to manage them for real-time
+concerning each kind of time series clustering are referred to in problem solving.
+detail in [21]. The distance measures like simple Euclidian
+distance do not take into account the correlation between the 8 REFERENCES
+different points in the time series. In this work, we first
+[1] Xiaolei Li, Jiawei Han, Jae-Gil Lee, and Hector Gonzalez.
+transform the time series into a probability distribution matrix
+"Traffic density-based discovery of hot routes in road
+and then try to find the distance between them. Kullback-Leibler
+networks." Advances in Spatial and Temporal
+divergence is the most popular similarity measures for
+Databases (2007): 441-459.
+probability distributions. Jersen-Shannon divergence [14] is
+based on KL-divergence and converts it into a metric, making it [2] Hector Gonzales, Jiawei Han, Xiaolei Li, Margaret
+a more suitable similarity measure for clustering. Myslinska, and John Paul Sondag. "Adaptive fastest path
+We would also like to briefly mention the works related to computation on a road network: A traffic mining
+various different types of clustering methods. Xu Rui et al. [22] approach." In Proceedings of the 33rd international
+is a good compilation of all the clustering algorithms that are conference on Very large data bases, pp. 794-805. VLDB
+used to cluster different types of data. There are partitioning- Endowment, 2007.
+based clustering algorithms like k-means and k-medoids that [3] Hector Gonzalez, Jiawei Han, Hong Cheng, Xiaolei Li,
+require the users to pre-specify the number of clusters that the Diego Klabjan, and Tianyi Wu. "Modeling massive RFID
+objects should be divided into. Another set of clustering data sets: a gateway-based movement graph
+algorithms are those that do not require the user to pre-specify approach." Knowledge and Data Engineering, IEEE
+the number of clusters. Hierarchical clustering and density based Transactions on 22, no. 1 (2010): 90-104.
+clustering approaches are examples of clustering algorithms that
+[4] Zhenhui Li, Bolin Ding, Jiawei Han, Roland Kays and P.
+aim to automatically discover the optimum number of clusters
+Nye. Mining Periodic Behaviours for Moving Objects.
+given the set of objects to be clustered.
+KDD ’10, 2010.
+7 CONCLUSIONS AND FUTURE WORK
+[5] Zhenhui Li, Jingjing Wang, & Jiawei Han (2012, August).
+Mining event periodicity from incomplete observations.
+In this paper, we were able to develop an effective method to
+In Proceedings of the 18th ACM SIGKDD international
+cluster stations on a road to effectively reduce the size of an
+conference on Knowledge discovery and data mining (pp.
+otherwise huge road network. This is only the creation of nodes,
+444-452). ACM.
+and work still has to be done on defining the edges between
+these nodes. The main intuitions behind constructing the edges [6] Lu-An Tang, Yu Zheng, Jing Yuan, Jiawei Han, Alice
+between these nodes would be (1) there can be many edges Leung, Chih-Chieh Hung, and Wen-Chih Peng. "On
+between two nodes, and (2) the edge weights will be based on discovery of traveling companions from streaming
+the travel times between the nodes. trajectories." In Data Engineering (ICDE), 2012 IEEE 28th
+International Conference on, pp. 186-197. IEEE, 2012.
+Let us consider two nodes A and B that are next to each other on
+[7] Robert L. Bertini, and A. Myton. "Using PeMS data to
+a highway. If the edge between them were to be constructed
+empirically diagnose freeway bottleneck locations in
+based on the time that a vehicle takes to travel from A to B, it is
+Orange County, California." Transportation Research
+evident that we cannot have a unique edge between A and B.
+Record: Journal of the Transportation Research Board 1925
+This is because the behavior of traffic depends on a large
+(2005): 48-57.
+number of factors, including and not limited to time of day, day
+of week, whether it’s a weekday or weekend and weather [8] PeMS technology transfer overview
+conditions. For example, during winters, if it snows, the time http://www.techtransfer.berkeley.edu/newsletter/02-
+taken to go from one point to another can increase by manifolds 4/pems.php
+as compared to the time taken during a warm summer day. Thus, [9] Gaffney, S., Smyth, P.: Trajectory clustering with mixtures
+construction of edges will entail defining many possible edges of regression models. In KDD’99 (1999)
+between any two nodes, and an edge would be a tuple of form
+[10] J. Lee, Jiawei Han, K. Whang.: Trajectory clustering: A
+<n1, n2, c1, c2,…, cm> , where n1 is the starting node, n2 is the end
+partition-and-group framework. In: SIGMOD’07 (2007)
+node, and c1, c2,…, cm are the different factors that could
+possibly affect the vehicle speeds. One possible approach to [11] Lu-An Tang, Xiao Yu, Sangkyum Kim, Jiawei Han, Wen-
+discover edges can be to mine frequent patterns of traffic, and Chih Peng, Yizhou Sun, Hector Gonzalez, and Sebastian
+the defining of nodes beforehand will make mining such patterns Seith. "Multidimensional analysis of atypical events in
+much easier and more feasible. cyber-physical data." In Data Engineering (ICDE), 2012
+IEEE 28th International Conference on, pp. 1025-1036.
+Apart from the construction of edges, another important IEEE, 2012.
+direction in which we are planning to work in the future is to [12] Félix Iglesias, and Wolfgang Kastner. "Analysis of
+find causal relationship patterns in the traffic propagation. To Similarity Measures in Times Series Clustering for the
+explain this, let us take the example of propagation of traffic Discovery of Building Energy Patterns." Energies 6, no. 2
+jams. It is easy to observe that if there is a traffic jam on a road (2013): 579-597
+segment, it tends to propagate backwards, and the road segment
+[13] M. Vlachos, P. S. Yu, and V. Castelli. On periodicity
+just before the jammed segment also gets jammed in some time.
+detection and structural periodic similarity. In SDM, 2005.
+The aim of discovering causal relationships between nodes is to
+[14] Endres, Dominik M., and Johannes E. Schindelin. "A new [19] Lee, J., Han, J., Whang, K.: Trajectory clustering: A
+metric for probability distributions." Information Theory, partition-and-group framework. In: SIGMOD’07 (2007)
+IEEE Transactions on 49.7 (2003): 1858-1860.
+[20] Hong, Y.Y.; Wu, C.P. Day-ahead electricity price
+[15] J. Han, G. Dong, and Y. Yin. Efficient mining of partial forecasting using a hybrid principal component analysis
+periodic patterns in time series database. In ICDE, 1999. network. Energies 2012, 5, 4711–4725.
+[16] J. Han, W. Gong, and Y. Yin. Mining segment-wise [21] Liao, T.W. Clustering of time series data—A survey.
+periodic patterns in time-related databases. In KDD, 1998. Pattern Recognit. 2005, 38, 1857–1874.
+[17] P. Indyk, N. Koudas, and S. Muthukrishnan. Identifying [22] Xu, Rui, and Donald Wunsch. "Survey of clustering
+representative trends in massive time series data sets using algorithms." Neural Networks, IEEE Transactions on 16,
+sketches. In VLDB, 2000. no. 3 (2005): 645-678.
+[18] Gaffney, S., Smyth, P.: Trajectory clustering with mixtures
+of regression models. In: KDD’99 (1999)
+

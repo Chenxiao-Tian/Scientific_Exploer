@@ -1,0 +1,508 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+SIAM J. COMPUT. 983SocietyforIndustrialandAppliedMathematics
+Vol.12,No.4,November1983 0097-5397/83/1204-0013$01.25/0
+THE COMPLEXITY OF COUNTING CUTS AND OF COMPUTING THE
+PROBABILITY THAT A GRAPH IS CONNECTED*
+J. SCOTT PROVAN+ AND MICHAEL O. BALLS
+Abstract. Severalenumerationandreliabilityproblemsareshowntobe P-complete, andhence, at
+least as hard as NP-complete problems. Included are importantproblems in network reliability analysis,
+namely,computingtheprobabilitythatagraphisconnectedandcountingthenumberofminimumcardinality
+(s,t)-cutsordirectednetworkcuts.Alsoshowntobe P-completearecountingvertexcoversinabipartite
+graph,countingantichainsinapartialorder, and approximatingtheprobabilitythatagraphisconnected
+andtheprobabilitythatapairofverticesisconnected.
+Keywords, complexity, P-complete,graphs,reliability,networkreliability
+1. Introduction. The inherent intractability of certain counting and reliability
+problems has been studied by Ball [1], Rosenthal [11], and Valiant [12]. Valiant
+defines the notion of the #P-complete class of counting problems, and shows that
+problems in this class are at least as hard as NP-complete problems. He then goes on
+to show that several important counting and reliability problems are #P-complete,
+amongthem, countingperfectmatchingsinbipartitegraphsandevaluatingtheproba-
+bility that two given nodes in a probabilistic graph are connected. Three important
+problems are mentioned by Ball and Valiant, for which the complexity is not known,
+namely:
+(1) evaluatingthe probability that aprobabilisticgraph is connected,
+(2) approximatingthe probability that aprobabilistic graphis connected,
+(3) approximating the probability that two vertices of a probabilistic graph are
+connected.
+In view of results by the authors in [2], the probability measure associated with
+problems (1) and (2) seems to have considerably more structure than that associated
+with (3). In [3] they also show the power of the structure in providing good upper
+and lower bounds for this measure. We show in this paper, however, that all three
+of these problems are NP-hard, in particular, #P-complete. In the process, we show
+that several counting problems are also #P-complete, among them" counting the
+number of node covers in a bipartite graph, counting antichains in a partial order,
+and countingminimumcardinality directednetwork cuts.
+We now fix some terminology. Let G (V,E) be a graph with vertex set V and
+vI IEI.
+edge set E and let rn and n When specified, G directed.implies that the
+edgesaretakentobeorderedpairs,andG undirectedimpliesthepairsareunordered.
+When not specified, G is allowed to be either. We allow loops (edges whose two end
+points are the same) and multiple edges (edges with the same pair of end points),
+although these are not strictly required for the results of this paper. Let s and be
+two vertices in the graph G (directed or undirected). An (s, t)-path in G is any
+sequence s =v0, el, vl,..., Vk-1, ,ek, Vk =t of vertices Vo, v,.., and edges e,
+e2, withej (vj-1, vi)for/" 1, k.An(s, t)-cutinG isanyminimalsetofedges
+that intersects every (s, t)-path. A network cut (with respect to s) is any minimal set
+of edges that is an (s, t)-cut for some vertex in G. A spanning tree (rooted ats) is a
+*ReceivedbytheeditorsJanuary23, 1981,andinfinalrevisedformOctober26, 1982.
+"
+Curriculum in Operations Research and Systems Analysis, University of North Carolina, Chapel
+Hill,NorthCarolina, 27514. Thisworkwasperformedwhilethis authorwas anNRC/NASpostdoctoral
+associateattheNationalBureauofStandards.
+CollegeofBusinessandManagement,UniversityofMaryland,CollegePark,Maryland20742.
+777
+778 J. SCOTT PROVAN AND MICHAEL O. BALL
+minimal set of edges that contains paths from s to all other vertices in G. Note that
+if G is undirected, a network cut comprises any minimal set of edges whose removal
+disconnects G and a spanning tree is any minimal set of edges that connects all
+vertices; in both cases the definition is independent of the choice of s.
+We now define our reliability measures. Given any real p, 0<_-p-<_1, we impose
+the stochastic structure on G in which the edges of G are subject to random failure,
+independently and each with equal probabilityp. Edges that have not failed are said
+to be operative. We are concerned with two composite reliability measures on this
+stochastic model, which we will denote as functions of p. The first is the (s, t)
+connectedness measure" given verticess and t in G,
+f(G,s,t;p) Pr{thereisapathofoperativeedgesfromstot}
+Pr{thefailededgesofGdonotcontainan(s,t)-cut}.
+The second is the connectedness measure" given vertexs in G,
+g(G,s;p) Pr{there is a path of operative edges from s to everyother vertex in G}
+Pr{the failed edges of G do not contain a network cut}.
+Thesemeasuresaredefinedforbothdirectedandundirectedgraphs.IfGisundirected,
+thenf(G,s;p)istheprobabilitythattheoperativeedgesin G formaconnectedgraph
+on V, and is independent of the vertex s. The combinatorial significance of these
+reliability measures can be seenbyexpandingfand g"
+f(G,s, t;p) Z fipi(1_p),-i,
+,
+j=0
+g(G,s;p)
+gip
+(1_p)--i,
+i=0
+where
+f. number of sets of edges of cardinality/" whose complement admits a path
+from s to t,
+number of sets ofedges of cardinalityf that do not contain an (s, t)-cut;
+g. number of sets ofedges of cardinality/" whose complement admits apath
+from s to every vertex in G,
+number ofsets of edges of cardinality/" that do notcontain a network cut
+with respect to s.
+The use ofthisformofthepolynomialmightseemslightlyunnaturalsincecoefficients
+aredefined intermsofcomplements. However, itisconsistentwiththe independence
+system interpretation of the reliability analysis problem used in otherpapers [2], [3].
+Thus, the evaluation of f and g depend on the counting problems associated with
+(s, t)-cuts and network cuts in away thatwillbe shown preciselybelow.
+We explore the computational complexity of counting and reliability problems
+in the manner proposed by Valiant [12]. The study of the complexity of feasibility
+and optimization problems has been pursued in the setting of recognition problems
+[5]. An important class is NP, which consists of those recognition problems accepted
+by a nondeterministicTuring machine of polynomial time complexity. The "hardest"
+problems in NP are called NP-complete; it is generally considered unlikely that
+polynomial algorithms exist for solving problems in this class. Valiant defines #P to
+be the set of integer-valued functions that can be computed by counting the number
+COMPLEXITY OF COUNTING CUTS 779
+of accepting computations of some nondeterministic Turing machine of polynomial
+timecomplexity.WeextendValiant’sdefinitionslightlytoincluderationalandmultiple
+valuedfunctions that can be evaluated usingfunctionsofthe above type. Wesaythat
+afunctionfispolynomiallyreducible toafunctiong(focg)isthereexistsanalgorithm
+which, for any input z, evaluates f(z) with a number of elementary operations and
+evaluationsofgthatispolynomialinthelengthofz.Afunction iscalled 4#P-complete
+if (a)f is in 4#P and (b) every function g in 4P can be reduced to by a polynomial
+timereduction.Theclasses 4#Pand 4#P-completeprovideanaturalsettingforstudying
+the complexity of counting and reliability problems. We remark that the counting
+problem associated with a given recognition problem is at least as hard as the
+recognition problem. In particular, the counting versions of NP-complete problems
+are NP-hard, i.e. at least as hard as NP-complete problems. To illustrate this point,
+note that a polynomial algorithm to determine the number of Hamiltonian circuits in
+a graph would imme_diately give a polynomial algorithm to determine if a graph
+contained at least one Hamiltonian circuit. In fact, the counting versions of most
+NP-complete problemscanbeeasilyshowntobe 4#P-complete. See [5]foradetailed
+_
+treatment ofNP-completeness and its relationship to 4#P-completeness.
+With these definitionsin mindwe state ourmain result:
+THEOREM. Thefollowingfunctions are 4#P-complete:
+1. BIPARTITE_ VERTEX COVER
+Input" bipartite graph G (V,E)
+Output: I{S V:foreach e (u, w)
+2. BIPARTITE INDEPENDENT SET
+Input" bipartite graph G (V,E)
+Output: I{S V: forallu, w
+3. ANTICHAIN
+Input: partialorder (X, <-_)
+Output: I{S X: there are nox,y S withx <-Y}I;
+4. MINIMUM CARDINALITY BIPARTITE VERTEX COVER
+(MAXIMUM CARDINALITY BIPARTITE INDEPENDENT SET,
+MAXIMUM CARDINALITY ANTICHAIN, RESPECTIVELY)
+Input: same as 1 (2, 3, resp.)
+Output: the number of minimum cardinality (maximum cardinality, resp.)
+elementsofthe outputset;
+5. BIPARTITE 2-SAT WITH NO NEGATIO ,NS, , , form
+Input" Boolean expressionBin the variables Xk, y yofthe
+B (XilvY]l)A A(Xin Vy]n
+Output: [{x, ",x, y," ’,y) thatsatisfyB}[;
+6. MINIMUM CARDINALITY (s, t)-CUT
+Input: graph G V,E), s,t V
+Output: I{C_E: Cisa minimum cardinality (s, t)-cutin G}I;
+7. MINIMUM CARDINALITY DIRECTED NETWORK CUT
+Input: directedgraph G (V,E), s V
+Output: [{C_E: Cis a minimum cardinality network cut with respect to s}l;
+8. CONNECTEDNESS RELIABILITY
+Input: graph G (V,E), s V, rationalp, O<-_p<-1
+Output: g G,s;p);
+9. CONNECTEDNESS RELIABILITY e-APPROXIMATION
+Input: graph G V,E), s V, e <=O, rationalp, 0<-p<-1
+Output: rationalr with r-e <g(G,s;p)<r+e;
+780 J. SCOTT PROVAN AND MICHAEL O. BALL
+10. (s,t) CONNECTEDNESS RELIABILITY e-APPROXIMATION
+Input: graph G V,E), s, t V, e >O, rationalp, 0<-p<-1
+Output: rationalrwith r-e <f(G,s, t;p)<r+e;
+Before going on to the proof of the theorem, we illustrate how our results fit in
+with previous results concerning reliability and important related counting problems.
+Computation of the functions f and g are considered the two most important and
+well-studied network reliability problems. The theorem settles the complexity of
+computing g exactly and the e-approximation problem for f and g. In terms of
+computingor approximatingf, two important quantities are the number of minimum
+cardinality (s, t)-cuts and the number of minimum cardinality (s, t)-paths. These
+correspond, respectively, tothe firstfi<(7) andthe lastfi>0. The two corresponding
+quantities for g are the number ofminimumcardinalitynetworkcuts andthe number
+of minimum cardinality connected sets, i.e. spanning trees, and these correspond,
+respectively, to the first gg<(,".) and the last g>0. Table 1 describes the known
+TABLE
+Min.card. Min.card.
+pathset cutset Rel.poly. Rel.approx.
+undirectedanddirectedtwo-terminal(f) *[3] !TH ![12] !TH
+undirectednetwork(g) *[10] *[3] rTH !TH
+’
+directednetwork(g) *[10]t !TH !TH !TH
+EithertheappropriatereferenceisgivenorTHwhichindicatestheresultiscontainedinthetheorems
+giveninthispaper;*impliespolynomial; !implies P-complete.
+"I"Reference 10]reducestheproblemtocomputingthedeterminantofamatrix.Itis(now)wellknown
+thatdeterminantscanbecomputedinpolynomialtime.
+TheseresultshaverecentlybeenprovenindependentlybyJerrum[9].
+ThisresulthasrecentlybeenprovenindependentlybyHagstrom[6].
+complexityresults for all of these problems. It uses the generictermpathsets to refer
+tobothspanningtrees and (s, t)-pathsandcutsetsrefertoboth (s, t)-cuts andnetwork
+cuts. Columns 1 and 2 refer to the problems of determiningthe number of minimum
+cardinalitypathsets and cutsets respectively, column 3 to the problem of determining
+the polynomialf or g, and column 4 to the approximation problem defined in parts
+9 and 10 of the theorem.
+2. Proofotthetheorem. Theformatforestablishingafunctionfas P-complete
+is as follows. We first establish thatfis in 4P byshowing that, for any input z, there
+exists a polynomial algorithm for recognizing structures associated with the input z
+whose number is f(z). In the context of the functions given in the theorem this is a
+trivial matter, since virtually all thefunctions count easily=recognizable objects in the
+graph G a =ssociated with the input z. To show that f is P-complete, we start with
+a known P-complete function g, andshowthat there exists an algorithmwhich, for
+any z, evaluates g(z) using a polynomial number of evaluations off. In many cases
+this simply involves altering the input z (here the graph G) in polynomial time to a
+new input z’ (here a new graph G’) for which g(,z)=f(z’). In some cases, however,
+,
+we must evaluatef for a number of inputs z z,, that number beingpolynomial
+in the size of z. We then relate the values f(z), 1,..., n to the value of g by
+COMPLEXITY OF COUNTING CUTS 781
+equationsof the form
+k
+(1) =/(z)= Y. aob 1,..., k
+vi j,
+where the aj a,re known and g(z) is some simple function of the b. If we can show
+that the k k matrix of the coefficients a for (1) is nonsingular, we can perform k
+evaluationsof andthensolvethelinear system toobtain the values ofb, andhence
+the value of g(z).
+Valiant, in[12], hasmadeuseofaspecialclassofmatricestoproducethedesired
+nonsingular systems discussed above. A Vandermonde matrix is an (n +1)(n +1)
+matrixoftheform
+1 o tZo tZo
+1. 2
+A= /.LI /.tl
+1 2
+/z, /z,,
+(or its transpose), where to,""’,tzn are arbitrary real numbers. A well-known fact
+about these matrices (see, for example [7, 5.1]) is detA=l-I>i (tz-/z). We have
+immediatelyfrom the previous discussion" ,
+LEMMA. Suppose we have vandb, 1, n +1, relatedby theequation
+n+l
+v Y aibi, 1,..., n +1.
+j=l
+Further,, suppose that the matrix ofcoefficient (ai) is Vande,rmonde, with parameters
+tZo," w, which are distinct. Then, given valuesfor Vl, V,+l, we can obtain the
+valuesb, b,+x in timepolynomialin n.
+We will make repeated use of this lemma throughout the proof of the theorem.
+It is easy to see that the problems 1-10 of the theorem are in #P. To show that
+-
+they are #P-complete, we establish a sequence of reductions, starting with the
+followingcountingproblem.
+CARDINALITY VERTEX COVER
+Input: graph G (V,E), integerk
+Output: I{$ V: Sis a vertexcoverforGand Is k}[.
+This problem is kn-own to be #P-complete (see [5, p. 169]). We also define one
+intermediateproblemforpurposes ofthe proof, namely,
+0. VERTEX COVER
+Input: graph G V,E)
+Output: I{S V:foreach e (u,v)
+We nowgive the reductions.
+0. CARDINA.L,ITY VERTEX COVER oc VERTEX COVER. Given G
+(V,E), for 1,. rn [VI, constructgraph G’(l)withvertexset V’(l)={v: v V,
+1,..., t} and ed-,g.e set E’(1)={(ui, vi,)".(u, v)E, 1,..., l, ] 1,..., l}. This
+construction isillustrat.ed,inFig. 1. Nowever.y,cover C’ of G’(l) has thepropertythat
+if (u, v) E then {u u}_C’ or {v v}_C’. Therefore, for each cover C
+of G there corresponds a class f(C) of covers of G’(l) with elements of the form
+UvS’o, where S’ ={v’l-I"V}c if vC and S,${v,...,v} if vC. The class
+f(C) consists of (2 1)"- covers, and the classes {fI(C):C a cover of G} partition
+782 J. SCOTT PROVAN AND MICHAEL O. BALL
+G:
+G’ (3)
+FIG. 1. Exampleoftransformationusedinreduction O.
+the covers of G’(1). The number of covers of G’(l) is therefore
+m--1
+(2) F(/) Y A,(2t-1)i,
+i=0
+where Ai is the number of covers of G of cardinality m-i, 0,..., m-1. Now
+the m m matrix B (bit) with entries bit (2t-1,)i-1 j 1,..., m, 1,..., m, is
+Vandermonde with /,l 2t-1 distinct for 1, m. Therefore, by the lemma we
+can solve (2) to obtain eachAi, andhence solve the cardinalityvertex coverproblem.
+1. VERTEX C ,OVER ec BIPARTITE VERTEX COVER. Given G=
+(V,E), for 0, N (’2) 1 construct bipartite graph G’(l) by replacing
+,
+each edge (u,v) in G by the subgraph shown in Fig. 2. (Note that when 0, the
+graph F’(I) has no edges at all.) This subgraph has the property that the number of
+vertex covers containing neither u nor v is 2 the number of covers containing a
+particular one of u or v is 3 and the number of covers containing both u and v is
+t.
+5 Thus, the number of covers of G’(l) is
+(3) F’(I) Aiik(21)i(3t)i(51)k Aqk(2i3i5k)t,
+i+j+k i+j+k
+i,hk-O i,Lk-O
+COMPLEXITY OF COUNTING CUTS 783
+FIG.2
+whereAiik isthenumberofsetsS ofverticesin G forwhich edgesofG haveneither
+vertex in S,/" edges have exactly one vertex in S, and k edges have both vertices in
+S. TheN x N matrixB (bq) defined
+, ,
+b,t (2iq3J"5k")l, q 1, N, O, N-1,
+where(iq,I", kq)arealltriplessummington,isVandermonde.Further,tzo 2iq3i5k"
+2i’3i’5k’ =/zr ifand onlyif i, ir,]q =], and kq k. Therefore, the/xq aredistinct and
+by the lemma we can solve (3) to obtain eachAiik, for +/’+k =n, >=0,/">-0, k>=0.
+In particular, we can obtain ___
+Y. Ao,
+_
+i+k
+i,k>--O
+which is the number of sets of vertices of G for which no edge of G is uncovered,
+that is, the numberofcovers of G.
+2. BIPARTITE VERTEX COVER oc BIPARTITE INDEPENDENT SET.
+Given G (V,E) we note that C V is a cover for G if and only if V-C is an
+independentset in G. The reductionfollows.
+3. BIPARTITE INDEPENDENT SET oc ANTICHAIN. Given bipartite
+graph G (V,E) with V VxLI V2 andE V1XV2, define partial order (X, =< with
+X Vandorderdefinedforx #y X:x _-<y ifandonlyifx V,y__. V2,and(x,y) E.
+(X, -<) is trivially transitive and antisymmetric. Further, a set S X is an antichain
+in (X, -< ifand onlyifit isindependent in G. The reductionfollows.
+4. BIPARTITE VERTEX COVER oc MINIMUM CARDINALITY
+BIPARTITE VERTEX COVER (MAXIMUM CARDINALITY BIPARTITE
+INDEPENDENT SET, MAXIMUM CARDINALITY ANTICHAIN, RESPEC-
+TIVELY). Given bipartite graph G (V,E), construct bipartite graph G’=(V’,E’)
+by adding vertices {v’:v V} to V and pendant edges M {(v, v’):v V} to E. Now
+sinceM consists of m disjointedgesthatcoverallverticesof G (aperfect matching),
+it follows that a minimum cardinality vertex cover of G’ is of cardinality m. Further-
+more, there is a 1-1 correspondence between vertex covers of G and minimum
+cardinalityvertexcoversofG’obtainedbyassociatingwithcoverCofGthecardinality
+m cover
+C’ {v v c}t.J{v"v C}.
+In view of the discussion in reductions 2 and 3, it follows easily that the bipartite
+vertex cover problem reduces to any of the three given minimum or maximum
+cardinalityproblems.
+5. BIPARTITE VERTEX COVER oc BIPARTITE 2-SAT WITH..,NO
+NEGATIONS. GivenbipartitegraphG (V,E)with V V1.3 V2Va={u, Uk},
+784 J. SCOTT PROVAN AND MICHAEL O. BALL
+V2-(/31,""", Uldefine Boolean expression inxl,’’’,Xk, yl, Yl by
+f(Xl, yt)= / (xi vYi).
+,Xlc, yl,
+=(ui.yi)EE
+Then f(xl,..., Xk, Y l, ", Yt) is true if and only if {ui:xi T}LI{vj yj T} forms a
+coverof G. The reduction follows.
+6. BIPARTITE INDEPENDENT SET c MINIMUM CARDINALITY
+(s, t)-CUT. Given abipartite graph G (V,E), V V1LI V2, E V1x V2, construct
+the graph G’ with vertices VLI{s, t} and edges consisting ofE along with setsM’o of
+multiple edges of the type (s, v), v e V1 or (v, t), v V2 with multiplicity equal to the
+degree of v in G. An example of this construction is given in Fig. 3. Now a minimum
+FIG.3. Exampleoftransformationusedinreduction 6.
+cardinality (s, t)-cut in G’ is of cardinality [El, since (a) E is an (s, t)-cut and (b) an
+IEI
+(s, t)-flow of size can be obtained by directing all edges from s to and giving
+each a flow of 1. It is clear that if a minimum cardinality (s, t)-cut C’ of G’ contains
+one edge of a set M’o then it must contain every edge in M’o. Further, if the edges
+(s, v) and (w, t) are in C’, then (v, w) cannot be an edge, since we can obtain a cut
+with one less edge by replacingM’o andM’w with all edges in E adjacent to either v
+or w. Thus, the sets M’o of C’ have ends in G which are independent in G and the
+remaining edges in C’ must be all those edges in E which do not have a vertex in
+commonwiththese sets. Conversely, anysetofedgesofthistype mustbe aminimum
+cardinality (s, t)-cut in G’. Thus, there is a one to one correspondence between
+minimum cardinality (s, t)-cutsin G’ andindependentsetsin G. Thereduction is now
+complete. Note that this reduction applies in both the directed and undirected cases.
+COMPLEXITY OF COUNTING CUTS 785
+The use of multiple edges could have been avoided butwe omit the argumentfor the
+sake ofsimplicity.
+7. DIRECTED MINIMUM CARDINALITY (s,t)-CUT oc MINIMUM
+CARDINALITY DIRECTED NETWORK CUT. Given directed graph G=
+(V,E), s, t V, let k be the cardinality of a minimum cardinality (s, t)-cut. (It is well
+known that k can be calculated in polynomial time using a network flow algorithm.)
+Construct directed graph G’ from G by adding multiple edges of the form (t, v) with
+multiplicity k+1 for each v V-{s,t}. Fig.4 illustrates this transformation. Now any
+G
+FIG.4. Exampleoftransformationusedinreduction 7.
+minimumcardinality (s, t)-cut in G remains anetworkcutin G’ since all ofthe added
+edges point out of t. Thus, the size of a minimum cardinality network cut in G’ is at
+most k. Butsince removal of anyset$ of atmost k edgesfromE’ mustleave at least
+one edge from to every vertex x s in V, then $ is a network cut in G’ if and only
+if $ is an (s, t)-cut in G. Therefore, the minimum cardinality network cuts for G’ are
+of cardinality k, and they consist precisely of sets of edges which are (s, t)-cuts for G.
+This completes the reduction. As in the previous argument, the use of multiple edges
+could have been avoided.
+8A. MINIMUM CARDINALITY DIRECTED NETWORK oc DIRECTED
+CONNECTEDNESS RELIABILITY. Given G (V,E), we write, as in 1,
+(4) g(G,s ;p)= gp p
+=0 =o
+where gj is the number of sets of edges of cardinality/" whose complement admits a
+pathfroms toeveryothervertexinG.Thus,j (7)-g isthenumberofsetsofedges
+of cardinality/" that contain a directed network cut. Further, the matrixB (b) with
+bi (p/(1-pi)) for =0,..., m,/"=0,..., n is Vandermonde for any choice 0<
+po"" <p,<1. Therefore, by evaluating g(G,s;p)/(1-p)" for i=0, ,n, and
+786 J. SCOTT PROVAN AND MICHAEL O. BALL
+solving (4) we can obtain gi, and hence gi for/" 0,..., n. The value of the first
+nonzero gi then solves the minimum cardinalitydirected network cutproblem.
+8B. MINIMUM CARDINALITY UNIDIRECTED (s,t)-CUT c UNI-
+DIRECTED CONNECTEDNESS RELIABILITY. Given undirected graph G,
+vertices s,t, write the network reliability polynomial of G with respect to s as above
+g(G,s ;p)=(1-p)/1 g,
+1-p
+i=o
+where gi is the number of sets of cardinality whose complement admits a path from
+every vertex to s. Consider now the graph G’ obtained from G by replacing the
+verticess and withthevertex v ineveryedgeinwhicheitherappears.Thenetwork
+st
+reliabilitypolynomial of G’ withrespectto v is
+st
+,
+n-i
+g(G’, l)st;p)- gp’(1-p)"-’ (l-p)/1 g,
+i=0 i=0
+Nowg isthe numberofsetsofedgesin G’ ofcardinality whosecomplementadmits
+a path from every vertex of G to v or equivalently, the number of sets of edges in
+t,
+G of cardinality whose complement admits a path from everyvertex of G to either
+g-
+s or t. Therefore, g is the number of sets of edges in G of cardinality whose
+complement admits apathfromeveryvertex to s or butdoes notadmit apathfrom
+every vertex to both s and t. Such a set in particular contains an (s, t)-cut. Let k be
+the cardinality of a minimum cardinality (s,t)-cut. Then the complement of any set
+of k edges that contains an (s, t)-cut must allow a path from every vertex to either s
+or t (otherwise, an edge could be added to the component containing a vertex not
+connected to either s or and still not allow a path from s or t). Thus g’k--gk is the
+number of minimum cardinality (s, t)-cuts in G. As in problem 8A, by evaluating
+g
+g(G,.s,;pi) and g(G’,vt;p) for 0<p0<’" <pn, we can obtain gi and for i=
+0, n, and in particular, the value g’k- gk. This completes the reduction.
+9. MINIMUM CARDINALITY NETWORK CUT c CONNECTEDNESS
+RELIABILITY APPROXIMATION. Suppose we are given G (V,E) and s V.
+We pro,duce this reduction by showing how to compute the g successively for
+0, 1, usingas asubroutine an algorithmfortheconnectedn,essreliabilityapproxi-
+mation problem. Suppose we.have co ,mputed gi for 0, 1, k 1; define
+k-1
+gipi(1-p)/1-i;
+a
+1--0
+then for 0<p<1 we have
+g(G,s ;p)-a Z giPi(1
+=pk(1--P)n-k P
+gkd- gi
+1-p 1-p
+i=k+l
+,
+Usingthe fact that 0_-<g-<_(.) for k+1, n, we obtain the inequalities
+g(G,s;p)-a
+pk(1 p)n-k
+COMPLEXITY OF COUNTING CUTS 787
+and
+Now ifr is an e-approximation to g, itfollowsfor 0<p<1 that
+r+e-a (r-e)-a +2e g(G,s ;p)-a +2e
+gk<- pk(1--p)n-k= pk(1--p)n-k <-- pk(1--p)"-k
+n ) p)._ 2
+gk+ +
+k+l (1-p pk(l-p)n-k
+=gk+
+(1_p)n-k k+1
+p+
+so that, ifwe choose
+I l ( n )-x
+p min 1 2-a/"-k) 2-
+k+l
+and e =pk/4, then
+1),,_t[( n )p+2e]< 1 [( n )1( n )-1+P /21
+(1-p k+l 1 k+l k+l j 1.
+Hence,
+J
+r+e-a
+gk pk(l--p)k
+The proofis now complete.
+10. MINIMUM CARDINALITY (s,t)-CUT oc (s, t)-CONNECTEDNESS
+RELIABILITY APPROXIMATION. The reduction here is identical to that in
+problem9. Thiscompletesthe proofofthetheorem.
+3. Further discussion. We remark that problems 9 and 10 easily show the
+6P-completeness of the a-approximationproblem (see [11], called thepointestimate
+problem in [1] for the functions g andf. This problem is: given c <1, 0_-<p_-<1, find
+a number r such that ar<g(G,s ;p) (respectivelyf(G,s, ;p))<r/c. We should note
+that a seemingly more difficult unsolved problem involves the case where c (or e) is
+constant, i.e. is not allowedtovary as partofthe inputlist.
+We complete our discussion by considering the complexity of certain reliability
+and countingproblems for two special classes of graphs. One class is that ofdirected
+788 J. SCOTT PROVAN AND MICHAEL.O. BALL
+acyclic graphs, that is, graphs that have no closed (directed) paths. For these graphs
+:
+the minimum cardinality (s, t)-cut problem (6) still remains P-complete since the
+networkconstructedintheproofofthetheoremisacyclic;hence,the (s, t)-connected-
+nessproblem (10) foracyclicgraphsremains P-complete. Thedirectednetworkcut
+problem (7), however, is polynomial, and, in fact, the connectedness reliability prob-
+lems (8 and 9) are also polynomial (see [3]). The second class of graphs is that of
+planargraphs (directedandundirected). Here,boththeminimumcardinalitynetwork
+cut problem and the minimum cardinality (s, t)-cut problem are polynomial (see also
+[3]). The complexity of the reliability problems, however, are open questions. Table
+2 summarizes known results forthese classes ofgraphs.
+TABLE2
+Min.card. Min.card
+pathset cutset Rel.poly. Rel.approx.
+directedacyclictwoterminal *[3] !TH !TH !TH
+directedacyclicnetwork *[3] *[3] *[3] *[3]
+undirectedanddirectedplanartwo
+terminal *[3] *[3]
+undirectedanddirectedplanarnetwork *[10] *[3]
+ThetableentrieshavethesameinterpretationasthoseinTable 1.
+REFERENCES
+[1] M. O. BALI_., Thecomplexity ofnetworkreliabilitycomputations, Networks, 10 (1980), pp. 153-165.
+[2] M. O. BALL AND J. S. PROVAN, Bounds on the reliability polynomial]’or shellable independence
+systems,SIAMJ.Alg.Discr.Meth.,3 (1982),pp. 166-181.
+,
+[3] Calculating bounds on teachability and connectedness in stochastic networks, Networks, 13
+(1983),pp. 253-278.
+[4] Z. GALIL,OnsomedirectencodingsofnondeterministicTuringmachinesoperatinginpolynomialtime
+into P-completeproblems,SIGACTNews,6, (1974),pp. 19-24.
+[5] M. R. GAREY AND D. S. JOHNSON, Computers and Intractability" A Guide to the Theory of
+NP-Completeness,W. H.Freeman,SanFrancisco, 1979.
+[6] J. N. HAGSTROM, Computingrootedcommunication reliability is P-complete, unpublished manu-
+script, 1981.
+[7] G.H.HARDY,J.E.LITTLEWOODANDG.POLYA,Inequalities,CambridgeUniv.Press,Cambridge,
+1952.
+[8] A.S.HOUSEHOLDER,PrinciplesofNumericalAnalysis,McGraw-Hill,NewYork, 1953.
+[9] M. JERRUM, On the complexity ofevaluating, multivariate polynomials, Ph.D. thesis, Tech. Rep.
+CST-11-81,Dept.ComputerScience,Univ.Edinburgh, 1981.
+[10] G. KIRCHHOFF, Uber die Auflosung der Gleichungen, auf welche man sei der Untersuchung der
+linearen VerteilungGalvanischerStromegerfuhrtwird,Poggendorf’sAnn.Phy.Chem.,72 (1847),
+pp.497-508"Englishtranslation,IRETrans.CircuitTheory,5 (1958),pp.4-8.
+[11] A. ROSENTHAL, Computingthe reliabilityofcomplex networks, SIAMJ. Applied Math, 32 (1977),
+pp.384-393.
+[12] L. G.VALIANT, The complexity of enumeration and reliability problems, this Journal, 8 (1979),
+pp.410-421.
+Reproducedwithpermissionofthecopyrightowner.Furtherreproductionprohibitedwithoutpermission.
+

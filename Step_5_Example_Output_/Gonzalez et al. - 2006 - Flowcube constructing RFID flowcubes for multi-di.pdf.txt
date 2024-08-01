@@ -1,0 +1,54 @@
+Extracted Keywords:
+path, path database, abstraction level, frequent path, level, RFID data, item, frequent, path abstraction, data
+
+Main Topics:
+RFID FlowCubes, Multi-Dimensional Analysis, Commodity Flows¤
+Hector Gonzalez Jiawei Han Xiaolei Li
+University, USA
+fhagonzal, the advent, Radio Frequency Identi¯cation, the movement, individual objects, the supply chain, The volume, a typical
+RFID application, each item, a complete history, all the individual locations, every point, a speci¯c
+production line, a given factory, multiple
+warehouses, all the way, a particular checkout, a store, The movement trails, such RFID data form, gantic commodity, the locations, the path stages, each item, This
+commodity, rich multi-dimensional information, the characteristics, com-
+modity movements, this paper, a method, a warehouse, standard OLAP, the model, a given abstraction level, The °owcube di®ers, the traditional data cube, two major ways, the
+measure, each cell, a scalar aggregate, a
+commodity, the major movement
+trends, signi¯cant deviations
+
+Methodologies:
+In this paper, we propose a method to construct a warehouse
+of commodity °ows, called °owcube . The °owcube di®ers from
+the traditional data cube in two major ways. In this paper, we motivate the importance of
+the model, and present an e±cient method to compute it
+by (1) performing simultaneous aggregation of paths to all
+interesting abstraction levels, (2) pruning low support path
+segments along the item and path stage abstraction lattices,
+and (3) compressing the cube by removing rarely occurring
+cells, and cells whose commodity °ows can be inferred from
+higher level cells.
+ This is a view much
+closer to traditional data cubes. Figure 2: Item view: A product can be seen at dif-
+ferent levels of abstraction
+The key challenge in constructing a data cube for a database
+of RFID paths is to devise an e±cient method to compute
+summaries of commodity °ows for those item views and path
+views t
+
+Research Outcomes:
+In this paper, we propose a method to construct a warehouse
+of commodity °ows, called °owcube . The °owcube di®ers from
+the traditional data cube in two major ways. In this paper, we motivate the importance of
+the model, and present an e±cient method to compute it
+by (1) performing simultaneous aggregation of paths to all
+interesting abstraction levels, (2) pruning low support path
+segments along the item and path stage abstraction lattices,
+and (3) compressing the cube by removing rarely occurring
+cells, and cells whose commodity °ows can be inferred from
+higher level cells.
+ This is a view much
+closer to traditional data cubes. Figure 2: Item view: A product can be seen at dif-
+ferent levels of abstraction
+The key challenge in constructing a data cube for a database
+of RFID paths is to devise an e±cient method to compute
+summaries of commodity °ows for those item views and path
+views t

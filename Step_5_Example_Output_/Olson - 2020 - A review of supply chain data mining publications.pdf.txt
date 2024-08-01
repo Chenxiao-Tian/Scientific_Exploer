@@ -1,0 +1,39 @@
+Extracted Keywords:
+Supply Chain, Chain Management, Data Mining, Data, Chain, International Journal, Supply, Management, Mining, Journal
+
+Main Topics:
+Supply Chain Management, No 1-2 (2020)   
+Journal, Supply Chain Management, Science  
+https://journals.open.tudelft.nl/jscms  
+https://doi.org/10.18757/jscms.2020.955, A Review, Supply Chain Data Mining Publications, David L. Olson, Business Administration, 30-06-2020  
+Abstract, The use, data mining, upply chains, c overs, almost all aspects, supply chain 
+management, A framework, supply chain analytics, data mining publications, supply chain 
+management academic literature, Scholarly articles, SCOPUS and EBSCO Busin ess search engines, supply chain function, Additional papers, RFID use, text 
+analysis, The paper, potential r esearch issues, future 
+development, * Corresponding author, Email address, Data mining, Suppl y Chain Management, Review paper, Introduction  
+Supply Chain Analytics, the use, quantitative tools, operational performance, et al, supply chain 
+management, a new idea
+
+Methodologies:
+Keywords: Data mining ; Suppl y Chain Management ; Review paper  
+1. Introduction  
+Supply Chain Analytics (SCA) refers to the use of data and quantitative tools and techniques to 
+improve operational performance (Ha ndfield 2006, Davis -Sramek et al. 2010). Analytics in supply chain 
+management (SCM) is not necessarily a new idea (Davenport and O'Dwyer 2011), since various 
+quantitative techniques and modeling methods have long been used in manufacturing firms. Analytics in supply chain 
+management (SCM) is not necessarily a new idea (Davenport and O'Dwyer 2011), since various 
+quantitative techniques and modeling methods have long been used in manufacturing firms. These challenges include issues arising from managing large 
+amounts of data (e.g., data availability, data quality)  and dealing with environmenta l uncertainties 
+(Handfield and Nichols 2004, Liberatore and Luo 2010, Lavall
+
+Research Outcomes:
+Keywords: Data mining ; Suppl y Chain Management ; Review paper  
+1. Introduction  
+Supply Chain Analytics (SCA) refers to the use of data and quantitative tools and techniques to 
+improve operational performance (Ha ndfield 2006, Davis -Sramek et al. 2010). Analytics in supply chain 
+management (SCM) is not necessarily a new idea (Davenport and O'Dwyer 2011), since various 
+quantitative techniques and modeling methods have long been used in manufacturing firms. Analytics in supply chain 
+management (SCM) is not necessarily a new idea (Davenport and O'Dwyer 2011), since various 
+quantitative techniques and modeling methods have long been used in manufacturing firms. These challenges include issues arising from managing large 
+amounts of data (e.g., data availability, data quality)  and dealing with environmenta l uncertainties 
+(Handfield and Nichols 2004, Liberatore and Luo 2010, Lavall

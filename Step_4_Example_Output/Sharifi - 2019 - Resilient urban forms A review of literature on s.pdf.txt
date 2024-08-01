@@ -1,0 +1,1103 @@
+References:
+A.Sharifi Building and Environment 147 (2019) 171–187
+Fig.6.Ageneraltaxonomyofstreetpatterns(adaptedfromMarshall[16]).
+availability of computational tools (e.g. the DeCodingSpaces resilience:aliteraturereview,Renew.Sustain.EnergyRev.60(2016)1654–1677.
+Toolbox9)andopenaccess(big)data(e.g.,throughplatformssuch [5] UNDESA,WorldUrbanizationProspects:the2014Revision,United
+astheOpenStreetMap10)providesanunprecedentedopportunityto Nations,DepartmentofEconomicandSocialAffairs,2014.
+[6] C.Fang,S.Wang,G.Li,Changingurbanformsandcarbondioxideemissionsin
+do more context-based analyses of street networks and to also China:acasestudyof30provincialcapitalcities,Appl.Energy158(2015)
+conduct analyses at larger scales (e.g., see Ref. [22]). These capa- 519–531.
+[7] Y.-H.Tsai,Quantifyingurbanform:compactnessversus'sprawl',UrbanStud.42
+citiesshouldbefurtherexploredinthefutureresearch.
+(1)(2005)141–161.
+- Finally,itshouldbementionedthatthisstudyonlyfocusesonsome [8] T.A.Clark,Metropolitandensity,energyefficiencyandcarbonemissions:multi-
+urban form elements. There are many other urban form elements attributetradeoffsandtheirpolicyimplications,EnergyPol.53(2013)413–428.
+[9] A.Sharifi,Y.Yamagata,Resilienturbanform:aconceptualframework,in:
+thatinfluenceresilienceofcities.Implicationsofthoseelementsfor
+Y.Yamagata,A.Sharifi(Eds.),Resilience-orientedUrbanPlanning:Theoretical
+urbanresilienceshouldalsobestudiedinthefuture. andEmpiricalInsights,SpringerInternationalPublishing,Cham,2018,pp.
+167–179.
+Acknowledgements [10] J.Buhl,J.Gautrais,N.Reeves,R.V.Solé,S.Valverde,P.Kuntz,G.Theraulaz,
+Topologicalpatternsinstreetnetworksofself-organizedurbansettlements,Eur.
+Phys.J.B49(4)(2006)513–522.
+I would like to thank four anonymous reviewers for their con- [11] D.Jaroszweski,E.Hooper,L.Chapman,Theimpactofclimatechangeonurban
+structivecommentsonthefirstdraftofthiswork. transportresilienceinachangingworld,Prog.Phys.Geogr.38(4)(2014)
+448–463.
+[12] S.Davoudi,K.Shaw,L.J.Haider,A.E.Quinlan,G.D.Peterson,C.Wilkinson,
+AppendixA. Supplementarydata H.Fünfgeld,D.McEvoy,L.Porter,S.Davoudi,Resilience:abridgingconceptora
+deadend?“Reframing”resilience:challengesforplanningtheoryandpractice
+interactingtraps:resilienceassessmentofapasturemanagementsystemin
+Supplementary data to this article can be foundonline at https://
+northernAfghanistanurbanresilience:whatdoesitmeaninplanningpractice?
+doi.org/10.1016/j.buildenv.2018.09.040. Resilienceasausefulconceptforclimatechangeadaptation?Thepoliticsofre-
+silienceforplanning:acautionaryNote,Plann.Theor.Pract.13(2)(2012)
+299–333.
+References
+[13] R.Leichenko,Climatechangeandurbanresilience,Curr.Opin.Environ.Sustain.3
+(3)(2011)164–168.
+[1] A.Sharifi,Y.Yamagata,Resilience-orientedurbanplanning,in:Y.Yamagata, [14] P.Allan,M.Bryant,C.Wirsching,D.Garcia,M.TeresaRodriguez,Theinfluenceof
+A.Sharifi(Eds.),Resilience-orientedUrbanPlanning:TheoreticalandEmpirical urbanmorphologyontheresilienceofcitiesfollowinganearthquake,J.Urban
+Insights,SpringerInternationalPublishing,Cham,2018,pp.3–27. Des.18(2)(2013)242–262.
+[2] A.Sharifi,Acriticalreviewofselectedtoolsforassessingcommunityresilience, [15] TNA,DisasterResilience:aNationalImperative,NationalAcademiesPress,2012.
+Ecol.Indicat.69(2016)629–647. [16] S.Marshall,StreetsandPatterns,Routledge,2004.
+[3] NIST,CommunityResiliencePlanningGuideforBuildingsandInfrastructure [17] M.Cavallaro,D.Asprone,V.Latora,G.Manfredi,V.Nicosia,Assessmentofurban
+Systemsvol.II,NationalInstituteofStandardsandTechnology,2016. ecosystemresiliencethroughhybridsocial-physicalcomplexnetworks,Comput.
+[4] A.Sharifi,Y.Yamagata,Principlesandcriteriaforassessingurbanenergy AidedCiv.Infrastruct.Eng.29(8)(2014)608–625.
+[18] N.Mohajeri,A.Gudmundsson,J.R.French,CO2emissionsinrelationtostreet-
+networkconfigurationandcitysize,Transport.Res.TransportEnviron.35(2015)
+116–129.
+9https://decodingspaces-toolbox.org/.
+[19] B.Jiang,C.Claramunt,Astructuralapproachtothemodelgeneralizationofan
+10https://www.openstreetmap.org.
+185
+
+Annexes/Appendices:
+A.Sharifi Building and Environment 147 (2019) 171–187
+andcanstayinplacefordecadesandevencenturies.Therefore,their while conventional planning mainly focuses on robustness of street
+designandstructureislikelytolockurbansystemsintoeithernegative networks and their effectiveness for vehicular movement, paying at-
+or positive pathways. Lock-in into negative pathways undermines the tention to other issues such as flexibility, efficiency, redundant capa-
+capacity of cities to adapt to changing conditions that may arise be- city, and social vibrancy is needed for redefining streets and street
+cause of adverse events or social and technological transformations. networks from a resilience perspective [14]. However, as discussed
+Further, as components that bind different constituent elements of earlier,urbanformresilienceisstillanunder-exploredbranchofurban
+urban structure into a coherent functional whole, streets have sig- resilience[9,14].Whileform-basedphysicalcomponentsmayseemto
+nificant implications for proper functioning of existing infrastructure be rigid and in contrast with resilience characteristics, their implica-
+and forfuturedevelopmentandoperation ofother typesofurbanin- tions for achieving urban resilience may be significant. Therefore, in
+frastructure (e.g., energy grid or communication networks). Indeed, applyingtheresilienceconcepttothestudyofurbanform(withfocus
+undesirable street patterns will constrain future development of such on streets and street networks in this paper) it can be assumed that
+infrastructure[10]. physical design of cities can support maintaining urban integrity and
+Disastersandadverseeventsarelikelytohavesignificantimpacts functionality under constantly changing conditions and can influence
+ontheperformanceofstreetsandstreetnetworks[11].Therefore,itis capacity of cities to plan and prepare for, absorb, recover from, and
+criticaltostructurestreetsinawaythatfacilitatesresiliencetochan- more successfully adapt to shocks and adverse events [14,15]. Such
+ging conditions with minimum need for making major structural shocksandadverseeventsmayhavediverseoriginsandmayberelated
+changes.Againstthisbackground,themainobjectiveofthispaperisto tosub-categoriessuchasnaturaldisasters,environmentalandclimatic
+contribute to filling the gap in research on the role of urban form in shocksandstressors,socialshocksandstressors,economicshocksand
+achieving urban resilience by examining how design and structure of stressors,technology-relatedshocksandfailures,andshocksrelatedto
+streetsandstreetnetworksrelatestourbanresilience.Tothatend,this deliberateactionssuchassabotageandterrorism.
+paper discusses how network topology factors such as centrality and Basedonthesediscussionsaframeworkcanbedevelopedtoanalyze
+connectivity, along with design-related factors such as street width, resilienceofphysicalcomponentsrelatedtostreetsandstreetnetworks
+design of street edges, and street layout and orientation can play a (Fig.1).Theframeworkisguidedbythesefourquestions:‘resilienceof
+significant role in enabling cities to deal with adverse events and what?’(physicalcomponentsofstreetsandstreetnetworks),‘resilience
+changingconditions. to what?’ (different categories of shocks), ‘resilience at what stage?’
+Thepaperisstructuredasfollows:researchmethodsandmaterials (planning, absorption, recovery, and adaptation), and ‘resilience for
+areexplainedinSection2.Section3explorestheimplicationsofnet- what?’(resiliencecharacteristicssuchasdiversity,redundancy,etc.).It
+worktopologyandstreetdesignforachievingurbanresilience.Inthe is worth noting that this study does not intend to cover all the com-
+finalsection,asynthesisofthediscussionsisprovidedandsomeideas ponents of this framework. The objective is to discuss related theore-
+forfutureresearcharesuggested. ticalandempiricalevidencethatisreportedinthereviewedliterature.
+However,theframeworkcanbeusedtocollectfurtherevidenceinthe
+2. Methodsandmaterials futureandprovideamorecomprehensiveanalysis.
+Thisresearchreliesontheoreticalandempiricalevidencefoundin
+Resilience is a relatively new, but increasingly popular concept in theliteraturetoelaborateonthekeyconceptsandtypologiesrelatedto
+the field of urban studies [12,13]. Three commonly recognized ap- resilience of urban streets and street networks. For this purpose, it is
+proaches towards defining resilience are: engineering resilience, eco- neededtoretrieveliteraturepublishedonthistopic.Therefore,abroad-
+logical resilience, and evolutionary resilience [4,12,13]. Engineering based search strategy was developed that was mainly guided by the
+resiliencefocusesonthestability,resistance,androbustnesscapacities following three fundamental questions pertinent to the study of resi-
+of the system and entails a rapid return to an equilibrium state after lience:‘resilienceofwhat?’and‘resiliencetowhat?’,and‘resilienceat
+experiencingshocksand/orstresses.Thisisacommonlyusedapproach what stage?’. In response to the first question, major components of
+inmanyconventionalplanningpoliciesandpracticesthatassumedis- streetsandstreetnetworks[16]wereincludedinthesearchquery.To
+astersarepredictableandblueprintstrategiescanbeusedtodealwith addressthesecondquestion,thesearchquerywasstructuredinaway
+them [4,12,14]. In contrast, ecological resilience focuses on the per- to cover a broad range of disasters and adversities that can threaten
+sistenceofthesystemanditscapacitytoretainitsmainstructureand currentandfuturefunctionalityofurbansystems.Thethirdquestionis
+functions when facing adverse conditions. According to this con- addressed by including terms related to different stages of resilience
+ceptualization, the system may shift to a new equilibrium state (s) planning. The final search query, which is a combination of strings
+duringtherecoveryprocess[4,12].Thethirdandmostrecentapproach pertinenttothesethreequestions,andtermsrelatedtotheconceptof
+is in stark contrast with the conventional planning approaches. It re- resiliencecanbefoundintheSupplementaryAppendix.
+cognizes the non-linearity, complexity, and dynamism of the system The‘advancedsearch’functionoftheWebofSciencewasusedto
+and acknowledges the insufficiency of static approaches for dealing retrievealltypesofEnglish-languagedocumentsthatmatchthesearch
+withuncertainties.Basedonthisapproach,aresilientsystemconstantly criteria. The search was done for an unrestricted time period and
+undergoestransformationandthisenablesittomaintaintheessential yielded 207 papers. 176 papers remained in the database after ex-
+functionswhendealingwithshocks.Furthermore,duringtherecovery cludingcategoriesthatwerenotrelatedtotheresearchquestion(e.g.,
+phase,thesystemmaytransformintoanewandmoredesirableregime mining, biology, biodiversity conservation, etc.). Abstracts of the re-
+(instead of returning to equilibrium state(s)) [4,12]. Sometimes re- mainingarticleswerereviewedtodetermineiftheyarerelevantforthe
+ferred to as socio-ecological or adaptive resilience, evolutionary resi- studyofurbanstreetresilience.Papersthatweredirectlyrelatedtothe
+liencerecognizestheimportanceofpayingattentiontootheressential mainobjectivesofthestudywereselectedforindepthcontentanalysis.
+resilience characteristics such as adaptability, flexibility, foresight ca- Since onlysearching‘title,abstracts,andkeywords’ mayresultinthe
+pacity, self-organization, collaboration, diversity, redundancy, effi- exclusion of some relevant documents, while analyzing these papers,
+ciency, modularity, and innovation (see the cited references for the relevantresearchcitedbythemwasalsodownloadedandaddedtothe
+definitionofthesecharacteristics)[1,4,12,14]. review database (see Table 1 of the supplementary appendix for an
+Duetoitsholisticapproachtowardsresiliencecharacteristicswhich overview of the core studies). To analyze the contents, theoretical
+makes it more suitable for addressing the conventional planning discussions and empirical evidence related to each of the street ele-
+shortcomings, the evolutionary approach is more suitable for guiding mentswereextractedfromthereviewedliterature.Inthispaper,em-
+effortstowardsimprovingresilienceofstreetsandstreetnetworks(as pirical evidence refers to any evidence reported based on real-world
+essential components of urban form). This is because, for instance, observations and/or simulation results. The extracted evidence was
+172
+
+Body Text:
+Building and Environment 147 (2019) 171–187
+ContentslistsavailableatScienceDirect
+Building and Environment
+journal homepage: www.elsevier.com/locate/buildenv
+Resilient urban forms: A review of literature on streets and street networks
+T
+Ayyoob Sharifi
+HiroshimaUniversity,1-3-1Kagamiyama,Higashi-HiroshimaCity,Hiroshima,739–8530,Japan
+ARTICLE INFO ABSTRACT
+Keywords: Citiesneedtobuildontheirresiliencetodealwiththecombinedeffectsofurbanization,changinggeopolitical
+Urbanform contexts,andclimatechange.Thephysicalformofcitieshassignificantimplicationsfortheircapacitytodeal
+Urbanresilience withadverseeventsandchangingconditions.Thispaperfocusesonstreetsasmajorconstituentelementsof
+Urbanstreets urbanform.Itoffersareviewofthetheoreticaldiscussionsandempiricalevidenceonhowdesignandcon-
+Centralityandconnectivity
+figurationofurbanstreetsandstreetnetworkscancontributeto/detractfromurbanresilience.Forthepurpose
+Streetdesign
+ofthisstudy,measuresrelatedtourbanstreetsaredividedintotwobroadcategories:networktopologyand
+Streetorientation
+designandorientation.Networktopologyisusedtorepresenturbanstreetnetworkasacombinationofnodes
+andlinks.Relationshipsbetweenurbanresilienceanddifferentcentralityandconnectivitymeasuresrelatedto
+networktopologyarediscussed.Thedesignandorientationcategoryexploresthepossibleeffectsofstreetwidth,
+streetedges,streetcanyongeometry,andstreetlayoutandorientationonresilienceofcities.Itisdiscussedthat
+alltopologyanddesignmeasureshaveimplicationsforurbanresilience.Appropriatephysicalformofurban
+streetscancontributetourbanresilienceby,amongotherthings,amelioratingurbanmicroclimate,reducing
+energyconsumptionanditsassociatedGreenhouseGas(GHG)emissions,enhancingsocialcapital,improving
+communityhealthandwell-being,andfacilitatingrapidandeffectiveemergencyresponseintheaftermathof
+disasters.Overall,resultsprovideinsightsaboutphysicalpropertiesthatarerequiredtodesignresilientstreets
+andstreetnetworks.
+1. Introduction people will be added to the urban population and majority of this
+growth will occur in urban areas of African and Asian developing
+The convergence of urbanization, changing geopolitical contexts countries [5]. This means that the physical stock of cities is likely to
+and climate change is considered as a critical challenge confronting expandsignificantlyinthenextthreedecades.Asthephysicalstructure
+urbanareasaroundtheworld,wherethemajorityoftheworldpopu- of cities is long lived, it can introduce inertia into planning efforts
+lation lives. The impacts of this convergence can have a significant aimedatcreatingresilientcities.
+bearingonappropriatefunctioningofurbanareasasprimaryenginesof Research on urban form aims at understanding the dynamics and
+innovationandeconomicgrowth. complexitiesofthephysicalstructureofcities.Urbanfromcanbede-
+In view of these potential threats, cities around the world are in- finedasthephysicalandspatialrepresentationofhumanactivitiesin
+creasingly recognizing thesignificanceof buildingon their resilience. cities that involve complex interactions between various socio-eco-
+Meanwhile, planning efforts aimed at enhancing urban resilience are nomic,technological,andenvironmentalfactors[6–9].Theconstituent
+informedbyavastbodyofresearchthatdealswithmultipledimensions elements of urban form can be classified into different categories re-
+of urban resilience [1]. Focus has been primarily on non-physical as- latedtodifferentscales.Forinstance,macro-levelelementsarerelated
+pects, particularly related to environmental, social, institutional, and to the overall structure and size of the city, development type, dis-
+economicdimensionsofresilience[2].Researchonphysicalaspectsis tribution pattern of population and employment, and degree of clus-
+mainly related to infrastructure resilience (including building, trans- tering [9].Micro/meso level elementsareconcerned with designand
+portation,water,andenergysystems)[3,4].Incomparison,arelatively arrangementofotherelementssuchasbuildings,openspaces,blocks,
+under-exploredareaishowthephysicalformofcitiescancontribute/ neighborhoods,andstreets[9].InthisstudyIonlyfocusonelements
+detractfromurbanresilience. relatedtostreetsandstreetnetworks.
+United Nations projections show that about 66% of the world's Streets and road networks are the backbones of cities. They are
+populationwillliveincitiesby2050(anincreaseofnearly12%relative fundamental for emergence of cities and guide their growth and evo-
+to the 2014 baseline proportion). In other words, about 2.5 billion lution.Theyareamongthemostlong-livedcomponentsofurbanform
+E-mailaddresses:sharifi@hiroshima-u.ac.jp,sharifigeomatic@gmail.com.
+https://doi.org/10.1016/j.buildenv.2018.09.040
+Received12July2018;Receivedinrevisedform21September2018;Accepted21September2018
+Available online 22 September 2018
+0360-1323/ © 2018 Elsevier Ltd. All rights reserved.
+A.Sharifi Building and Environment 147 (2019) 171–187
+Fig.1.Theproposedanalysisframework.
+Table1
+Majorcentralityandconnectivitymeasures.
+Measure Expression Note Reference(s)
+Centralitymeasures
+Degreecentrality (1)CiD= j= N1,N 1aij = Nki
+1
+T grh ae pl ha ,rg the ert hh ie ghn eu rm itb ser imo pf oco rtn an ne cc eti io nn ts eb rmet sw oe fen dea gn reo ede cea nn td rao lt ih tye .rnodesinthe [29,34,35]
+Closenesscentrality (2)CiC=
+N
+j=N 1;j1
+idij
+I inn td ei rc sa et ce ts ioh no sw inn te ha er ca in tyin alt oe nrs gec thti eon sh( on ro ted se t) pi as tt ho sa ol fl to ht eh ner etr wea oc rkh .a Cb il Ce
+ofnodei
+[23,27,34,36]
+istheinverseaveragedistancefromittoallothernodesinthenetwork.
+Betweennesscentrality (3)CiB=
+(N
+1)1
+(N 2)
+N
+j=1;k=1;j k
+inj nk jk(i) N pao id rses ofth na ot da er se it nra tv he ers ne ed twb oy rka ela xr hg ie br itfr ha ic gt hio en rbo ef ts wh eo er nte ns et sspa ct eh ns trb ae lt itw ye .1enall [23,27,31,34,36,38]
+Streetnetworkefficiency (4)E= N(N1
+1) i,j N,i
+jdi de ju ijcl I nt ei ts wt oh re ka .veragenormalizedefficiencyofallpossiblecouplesofnodesinthe [17]
+Straightnesscentrality (5)CiE= N1
+1 j=1;j
+idiE dj iu jcl T lih nkis sm bee ta wsu er ee nis neu ts wed ort ko nu on dd ee sr .standtheextentofstraightnessoftheshortest [28]
+Informationcentrality (6)CiI= EE= E[S] E[SE ][S] I tt oc aan spb ee ciu fit cili nz oe dd et (o s)u an ffd ee cr ts sta tn hd efh uo nw cte iox nc alu lis ti yon ano dfa effilin ck ie( ns) cyth oa ft ti hs eco stn rn ee ec tted [27–29,34]
+network.
+Connectivitymeasures
+Characteristicpathlength (7)L= N(N1
+1) i,j N,i
+jdij I nt oi ds et she ina tv he era ng ee twle on rg kt .hoftheshortestpathsbetweenallpossiblecouplesof [17]
+Cyclomaticnumber (8)µ=K N+1 Representingthenumberofcircuitsinthenetwork,itisanindicationofthe [39–41]
+numberofpossibleroutesbetweentwodifferentpointsinthenetwork.
+Alphaindex(alsocalled (9) = µ RelatedtotheCyclomaticnumber,itisdefinedastheratioofnumberof [10,39]
+2N 5
+‘meshednesscoefficient’) circuits(loops)tothemaximumpossiblenumberofcircuitsinagraphwith
+thesamenumberofnodes.2
+Betaindex (10) = NL I nt ui msa bem re oa fs lu inre kso tf ofr te hq eu ne un mcy beo rf oc fon nn oe dc et sio (in ns tea rn sd eci ts iod ne sfi )n ie nd tha est sh tre eera tt nio eto wf ot rh ke
+.
+[39]
+Gammaindex (11) = L Itisanothermeasureofthefrequencyoflinksandisdefinedastheratio [39]
+3(N 2) betweenthenumberoflinksandthemaximumpossiblenumberoflinks.
+Note:C iD-degreecentrality,C iC-closenesscentrality,C iB-betweennesscentrality,E-streetnetworkefficiency,C iI-theinformationcentralityofnodei,aij-indicates
+presenceorabsenceofalinkbetweennodesiandj(1whenthereisalinkand0otherwise),dij-theshortestdistancebetweennodesiandj,d ie jucl-theEuclidian
+distancebetweennodesiandj,N-isthetotalnumberofnodes,ki-isthenumberofnodesadjacenttoi,njk-thetotalnumberofshortestpathsbetweennodes/linksj
+andk,njk(i)-thenumberofthoseshortestpathsthattraversenode/linki,E[S]-theefficiencyofthestreetnetworkwithNnodesandKlinksthatcanbeobtained
+fromEquation4,S-thestreetnetworkwithNnodesandK-kilinks(followingthelinkremoval).
+173
+A.Sharifi Building and Environment 147 (2019) 171–187
+labelledandcategorizedfortherespectivestreetelements.Additional withhighcentralityvaluesindicateapolarizationofaccessibilityinthe
+categories were designed for any evidence that is related to inter- system.Thismeansthatincasesuchstreetsareobstructed,otherstreets
+linkages and trade-offs. After reviewing all relevant documents, the in the network may not be capable of appropriately distributing the
+collected evidence was analyzed to determine whether relationships traffic volume. Thus, due to the high dependency of cities on highly
+existbetweenresilienceandtheselectedstreetelements.Resultsofthe centralstreets,significantcareisneededtomaintainthecontinuityof
+contentanalysisareprovidedinthenextsection. their functionality [32]. Since this high dependence undermines the
+resilience of the whole system, it is critical to ensure that there is no
+3. Streetsandstreetnetworks glaring dominance of highly central nodes/links in the network. To
+avoidsuchapolarization,itissuggestedthattheextentofcentralityis
+Designandtopologicalandmorphologicalpropertiesofstreetnet- determined using a hierarchic approach that follows power law dis-
+workshavesignificantimplicationsforcontinuous,efficient,andreli- tribution. This implies having small, medium, and large numbers of
+ablefunctioningofurbaninfrastructure[17,18].Twomajorapproaches high-, moderate-, and low-centrality nodes/links in the system, re-
+foranalysisofstreetnetworkresiliencecanbedistinguished:analysis spectively.
+using the network topology and analysis based on layout and design
+features.Theseareexploredinthefollowingsub-sections. 3.1.1.1. Measuresofcentrality. Therelativeimportanceofanode/link
+in the street network can be measured using different centrality
+3.1. Networktopologyandresilienceofstreetnetworks measures. Some of the most common measures are degree centrality,
+closeness centrality, spinality, betweenness centrality, information
+Resilience of street networks can be examined using the graph centrality (network efficiency), and straightness centrality. These
+theorythatrepresentsthenetworktopologyinasimplemanner[19].A measuresaredefinedinTable1.
+graphisanabstractrepresentationofpairwiserelationsbetweenaset Degreecentralityisthesimplestcentralitymeasurethatshowshow
+ofelementsinanetwork.Theseelementsarecallednodes(alsovertices manyconnectionsanodehas(Table1,Eq.1).Streetnetworksinmany
+or points) and the connections between them are called links (also citiesarecharacterizedbymanynodeswithlowandmoderatedegree
+edges,arcs,orlines)[20].Thegraphtheoryhasbeenextensivelyused centrality and few with very high degree centrality. Disruption in
+tounderstandthecomplexstructureofstreetnetworks[19].While,in nodes/links with high degree centrality can affect reliability of the
+many cases, street networks are not planar (i.e., overpasses, under- street network and bring a large part of it to collapse [10,33]. This
+passes, tunnels exist in the network), the existing literature is highly indicates the importance of having preparatory measures in place to
+dominated by the two-dimensional (2-D) representation of the street appropriately deal with any disruptions in nodes with high degree
+networks [20–22]. Acknowledging that the 3-D representation is centrality.
+neededtoavoidoversimplification,thisreviewonlyfocusesonplanar Toaugmentresilienceofurbanformintermsofaccessibility,itis
+representationduetothelimitedavailabilityofstudiesthattakeanon- essentialtoconsiderclosenesscentralitywhenmakingdecisionsabout
+planarapproach.Further,streetnetworkscanbeanalyzedusingeither thelocationofservicesandamenities(Table1,Eq.2).Closenesscen-
+primalordualgraphs.Inprimalgraphs,nodesandlinksrepresentstreet trality is an indicator of the ability to reach a location (from other
+intersectionsandstreetsegments,respectively[23,24].Conversely,ina placesinthenetwork)withinareasonabletimeanddistance[23,28].It
+dualgraphnodesandlinksrepresentstreetsegmentsandstreetinter- is critical to place evacuation areas and emergency service facilities
+sections, respectively. Dual graphs are extensively used as a basis for suchashospitals,firestations,andpolicedepartmentsinthevicinityof
+spacesyntaxanalysis[19,20,25].However,asBoeing[20]argues,dual nodes with high closeness centrality values to improve their accessi-
+graphsoverlookimportantstreetnetworkspatialcharacteristicssuchas bility in the time of disaster [42]. In relation to the placement of
+length,shape,circuity,andwidthand,therefore,arenotdesirablefor emergency service facilities, Novak and Sullivan [42] introduce the
+analyzingperformanceandfunctionalityofstreetnetworks.Aswillbe conceptof‘criticalclosenessaccessibility’.Itisarguedthatsignificance
+discussedlater,suchcharacteristicsaffecttheabilityofstreetnetworks ofeachlink(anditsassociatednodes)inthegraphisdependentonthe
+to reduce the impacts of adverse conditions. Therefore, this review relativeimportanceofthenodes(determinedbyfactorssuchaspopu-
+mainlyfocusesontheprimalgraphs. lation around the node, market share, availability of critical infra-
+Optimal functioning of street networks hinges on the number of structureetc.),thenumberofshortest-distanceconnectionsfacilitated
+nodesandlinks,theircapacity,andhowtheyarelocatedwithrespect by the link, and whether the link is an ‘isolating link’ or not (deacti-
+toeachother.Differenttopologicalcombinationscanbeobtainedde- vationofanisolatinglinkasaconsequenceofadverseeventswillresult
+pending on how nodes and links are arranged with respect to each inthecompleteisolationofpartsofthenetworkfromthecity)[42].To
+other.Centralityandconnectivityaremajorintertwinedmeasures,re- enhance resilience, it is advised to minimize the number of isolating
+lated to network topology, that are commonly used for examining linksandavoidplacementofcriticalservicesnearthem.
+performanceofstreetnetwork systems.Comprehensivereviewofstu- In addition to its utility for emergency response, considering clo-
+diesthatusethesemeasuresforstreetnetworkanalysisisbeyondthe senesscentralityforplacementofservicesandfunctionswillalsopro-
+scopeofthesepaper.Interestedreadersmayrefertocitedreferencesfor vide other benefits in terms of travel demand management through
+moredetailedinformation(e.g.,seeRefs.[26–28]). reducingspatialdisconnectionbetweenlocations[23].
+Spinalityisameasurethatiscloselyrelatedtoclosenesscentrality.
+3.1.1. Centrality It indicates the extent of alignment of the built environment with a
+Notallnodes/linksinastreetnetworkhavethesamelevelofim- transportaxisandcanbemeasuredusingthefollowingindicators:the
+portance. Centrality measures are, generally, used to measure the de- bufferratio,andtheroutelengthratio.Theformeristhefractionofthe
+greeofimportanceofspecificnodes/linksinastreetnetwork[29,30]. built-upareawithinacertaindistanceofmajorroads.Thelatteristhe
+InmethodssuchasMultipleCentralityAssessment,streetnetworksare ratioofthemajorroadlengthtothetotalroadlengthinthearea[43].
+presented as primal graphs where intersections and paths represent Effective maintenance efforts are needed to avoid perturbations in
+nodesandlinks,respectively[23].Centralityhasmajorimplicationsfor roadswithhighspinalityvalues.However,whilesuchroadsmakethe
+resilienceofurbanform.Makingurbanservicesandfacilitiesreachable urbansystempronetodisruption,itcanbearguedthatconcentrationof
+isthemainfunctionofstreetnetworks.Streetnetworksshouldbede- (mixed-use) development along the spine (major transport axis) may
+signedinawaythatpotentialdisruptionsinsomenodes/linksdonot improveaccessibilitytoservicesandenabledevelopingefficientpublic
+resultinsignificantlossofreachabilityinthesystemingeneralandin transportationsystems.
+completedisconnectbetweentwolocationsinparticular[31].Streets Betweenness centrality is another measure used to measure the
+174
+A.Sharifi Building and Environment 147 (2019) 171–187
+relativeimportanceofanode/linkinthestreetnetwork(Table1,Eq. facilitatingamoreefficientinteractionbetweenthenodes[23,27].
+3). As locations with high betweenness centrality values lie between The last centrality measure to be discussed here is, arguably, the
+many other locations, their role in maintaining functionality of the mostrelevantonetourbanformresilience.Informationcentralityisa
+streetnetworkiscritical.Anydisruptionsinsuchnodes/linkswillhave measureoftheimportanceofaspecificnodeinthenetwork(Table1,
+major ramifications across system [37,44]. For instance, in the New Eq.6).Whenadisasteroccurs,deactivationandobstructionofanode
+York City the surrounding highways that have high link betweenness (s) and/or link(s) is likely to be experienced. Obstruction of high in-
+centralitiesarelocatedinfloodplains[44].Simulationstudyshowsthat formation centrality nodes is not desirable, because if such nodes be-
+anextremefloodingeventwillresultintheremovalofthosehighways come bottlenecks when disasters occur, the ramifications will be sig-
+from the road network, thereby significantly affecting its resilience nificant. The properties of all centrality measures are reflected in the
+[44].Definingresilience(adaptivecapacity)ofastreetnetworkasthe information centrality and it has correlations with other centrality
+ratioofmargins(differencebetweencapacityandflowofnodesinthe measures such as degree, closeness, and betweenness [28]. The high
+street network) that remain following a perturbation to the original positive correlation between information and betweenness centrality
+margins (before perturbation), Akbarzadeh, Memarmontazerin, Der- has been demonstrated in a study of urban structure in several self-
+rible and Salehi Reihani [37] argue that a resilient street network organizedandplannedcities[29].
+shouldbeabletoaccommodatetheextraflowgeneratedbytheremoval
+of oneormore nodes.Resultsof their simulationmodel indicate that
+the adaptive capacity is significantly reduced if a certain fraction of 3.1.1.2. Centralityanditsassociationwithresilience. Empiricalevidence
+nodeswithhighbetweennesscentralityvaluesaredamaged.Therefore, ontheassociationbetweencentralitymeasuresandresilienceisscarce.
+street network configurations with high maximum betweenness cen- Wang [36] used measures such as ‘betweenness centrality’, ‘closeness
+tralityvaluesaremorevulnerabletodisruptions.Inotherwords,those centrality’and‘networkefficiency’ tocomparetheresilienceofstreet
+networks that only have one (or few) dominant central node are not networks of London and Beijing. He also examined how random and
+desirable in termsofresilience.Dominantnodescan,for example,be intentional attack scenarios that disrupt normal functioning of nodes
+seen in wheel (star)- shaped street networks, where the focal node andlinksaffecttheperformancereliabilityofstreetnetworksystemsin
+measures high in terms of betweenness centrality [45]. Drawing on thesetwocities.ItwasfoundthatthestreetnetworksysteminBeijing
+three cases from Portland, Oregon (Fig. 2), Boeing [20] shows how (dominatedbyagridpattern)ismoreresilientcomparedwithLondon
+streetnetworktypecanresultinsignificantchangesinthedistribution (where street network tends to be more dendritic). Due to these
+pattern of between centrality. The street pattern of the selected cases structural differences, spatial distribution of centrality measures is
+canbecategorizedasorthogonalgrid,mixtureofcurvilinearandrec- different in these two cities. For instance, in London motorways and
+tilinear grid, and hybrid curvilinear configuration (cellular and tree- arterials radiating from city center to its periphery have higher
+like),forDowntown,Laurelhurst,andNorthwestHeights,respectively. betweenness centrality values. However, in Beijing roads with higher
+ThemostimportantnodeinNorthwestHeightsistraversedby43%of betweenness centrality are ring roads and grid-shaped roads (see
+shortest paths. However, for the Downtown case this fraction is only Fig. 3). In Beijing, ring roads and grid-like arterials provide better
+15%.Therefore,thepresenceofnodeswithhighbetweennesscentrality connectivitytominorstreetsandcollectors;therebyfacilitatingabetter
+intheformermakesitfarmorevulnerabletodisruptiveeventsthatmay distributionoftrafficthroughoutthecity(comparedwithLondon).To
+resultinthefailureofimportantnodes. compare these two cities in terms of network efficiency, Wang [36]
+As efficiency is a central characteristic of resilient systems, im- examinedhowremovinglinks(streetsegments)affectsthecapacityto
+provingstreetnetworkefficiencycontributestotheadaptiveresilience handle traffic. Simulation results showed that the traffic handling
+of urban form. Closely related to closeness centrality [28], the effi- efficiency ofthegrid-like structureofBeijing dropsmore slowlythan
+ciencyofastreetnetworkisanindicationoftheextentofdirectnessof thedendriticstructureofLondon.Therefore,itisarguedthatthestreet
+linksbetweennetworknodes(Table1,Eq.4). networkofBeijingismoreresilient.
+Efficiencyofthestreetnetworkismaximized(approaching1),when Whilestudiescitedearlierwarnaboutthepotentialnegativeeffects
+theaverageshortestdistancebetweenallpairsofnodesiscomparable of high centrality, the utility of centrality for economic resilience
+totheir average Euclideandistance[17]. .Straightness centralityisa should not be overlooked. As centrality can contribute to economic
+variant of network efficiency and can be calculated using Equation 5 resilience, commercial and service activities tend to have a higher
+(see Table1) [28].Higherstraightness centralityindicates lessdevia- concentrationaroundnodes/linkswithhigherbetweennessandclose-
+tionoftheshortestlinkconnectingtwonodesfromtheEuclideanline ness centrality values [46]. For instance, strong positive correlations
+between them [23,27] and it is argued to increase resilience by betweenstreetcentralityandeconomicactivityhavebeenreportedfor
+Bologna(Italy)[23],Barcelona(Spain)[47],andWuhan(China)[48].
+Fig.2.DistributionpatternofbetweennesscentralityinthreeareasofPortland,Oregon.Thedarkerthecolor,thelowerthebetweennesscentrality(Adaptedfrom
+Ref.[20]).(Forinterpretationofthereferencestocolorinthisfigurelegend,thereaderisreferredtotheWebversionofthisarticle.)
+175
+A.Sharifi Building and Environment 147 (2019) 171–187
+Fig.3.SpatialdistributionofbetweennesscentralityinLondon(left)andBeijing(right)(AdaptedfromRef.[36]).
+Areasthathavehigherbetweennesscentralityvaluesareuniqueloca- destination connections, but also include comparison of maximum
+tions in the built environment that have a higher potential of being throughputattainablebeforeandaftertheevent[39].
+traversedbypeopleandfreighttripstootherlocationsinthecity.This
+high potential to attract through traffic increases the possibility of
+3.1.2.1. Measuresofconnectivity. Theintersectiondensity,theaverage
+generating business opportunities in areas with high betweenness
+distance between intersections, the average node connectivity, the
+centrality[23].
+characteristic path length, the Cyclomatic number, and the alpha,
+Scale hierarchy and power law distribution are underlying char-
+beta and gamma indices are commonly used connectivity measures.
+acteristicsofcomplexandself-organizingsystemsandareessentialfor
+Thesimplestmeasure,intersectiondensity,isdefinedasthenumberof
+achievingadaptiveresilience.Aninversepowerlawfortherelationship
+intersections (nodes) per unit area. Higher intersection density is
+betweensizeandfrequencyofconstituentelementscanbeobservedin
+associated with higher connectivity. Similarly, shorter average
+scale-hierarchicsystems.Inotherwords,thefrequencyofanelementis
+distance between intersections can be an indicator of high
+proportional to the inverse of its size [49]. Accordingly, one way to
+connectivity [41]. The average node connectivity is “the mean
+strikeabalancebetweenpositiveandnegativeeffectsistoensurethat
+number of internally node-disjoint paths between each pair of nodes
+centralitydistributioninthebuiltenvironmentcloselyfollowsapower
+inthegraph”.It“representstheexpectednumberofnodesthatmustbe
+law[23].
+removedtodisconnectarandomlyselectedpairofnon-adjacentnodes”
+[20] (p.128). High value of the average node connectivity indicates
+3.1.2. Connectivity better connectivityandcontributes toresilience of thestreetnetwork
+Connectivity measures are commonly used to examine the func- [20]. The characteristic path length (L) is a measure of separation
+tionality of the urban system under normal and/or emergency condi- between intersections and lower values indicate better connectivity
+tions. Connectivitycanbe discussedintermsofthemovementofhu- [17] (Table 1, Eq. 7). However, lower values may not always be
+mans/vehicles,aswellasthemovementofspecies.Thelatterisbeyond desirable. For instance, evidence from Montreal, Canada shows that
+thescopeofthisstudy. longer streetsegments arepositively associatedwithstreet treecover
+Connectivitymeasuresareintertwinedwithothermeasuressuchas [53]. Street tree cover enhances adaptive urban resilience through
+centralityandaccessibility.Undernormalconditions,awell-connected providingmultipleecosystemservices.
+streetnetworkisexpectedtofacilitatesmoothorigin-destinationflow, AdrawbackofusingLformeasuringresilienceofstreetnetworksis
+reduce travel distance, and improve accessibility to services, employ- thatitsvaluebecomesinfiniteassoonastwodisconnectednodesexist
+ment,andutilitiesinatimely,efficient,equitable,andenvironmental inthenetwork.Thisisaconditionwithhighlikelihoodofoccurrencein
+friendlymanner.Inconjunctionwithotherfeaturessuchasrelatively theaftermathofadverseeventssuchasfloodsorearthquakes[17].
+high density and high levels of mixed-use development, the extent of TheCyclomaticnumberisameasureofredundancyinthenetwork
+connectivitycanplayadefiningroleinthetriplengthandmodechoice connectivity(Table1,Eq.8).Redundancy ofpossibleroutesprevents
+ofpeople[50,51].Peopleoftenhaveaperceptionofcertaintriplength thestreetnetworkfrommajorcollapseasaresultofsubtractinganode/
+thresholdswhenmakingdecisionstowalkorbike.Smallchangesinthe link[40].HigherCyclomaticnumberindicatesbetterconnectivity.For
+lengthofthetripcansignificantlyaffecttheirmodechoice[50].This thepurposeofcomparisonbetweencities,Cyclomaticnumbershould
+makesenhancedconnectivityessentialformanagingtransportdemand becalculatedpersquarekilometer[40].InaplanargraphwithNnodes
+and for reducing transport-related GHG emissions. High connectivity the maximum number ofcircuits will be 2N-5 [10]. Other commonly
+can also provide social and health-related resilience benefits by fos- usedmeasuresofconnectivityarethealpha,beta,andgammaindices
+teringactivetransportationandfacilitatingamoreequitableaccessto (Table1,Equations9,10,and11,respectively).
+servicesandutilities. Itcanbeunderstoodfromtheconnectivitymeasuresthatincreasing
+Understressfulcircumstancescausedbychangingconditions(e.g., thenumberofintersections andstreetsegments(links)contributesto
+duetodisastersorincreasedtraveldemand),redundantconnectionsare enhancedconnectivityandporosity.Achievinghighstreetconnectivity
+needed to maintain system functionality and accessibility of services depends,toalargeextent,onthesizeofblocksandthestreetpattern
+[39,52]. Under such conditions, assessing the resilience of street net- type.Superblocksdetractfromconnectivitybyincreasingthedistance
+works should not only involve exploring availability of origin- betweenintersections.
+176
+A.Sharifi Building and Environment 147 (2019) 171–187
+Streetpattern hassignificantbearingonhow connectedthestreet areeffectiveforpreventingrapiddispersalofcatastrophicfluctuations.
+networkis.Griddednetworks,withsmallblocks,arecharacterizedby As explained in the following section, such networks have few major
+route directness, route continuity, and permeability. Due to these long-rangelinksthatareweaklyconnectedandmanyshort-rangelinks
+characteristics, they are capable of promoting short pedestrian trips, that are strongly connected. The weakness of long-range connections
+encouraging active transportation (walking, cycling, etc.), and im- helpsabsorbtheintensityofcatastrophicfluctuationsandreducetheir
+provingpedestrianserviceandtransitaccessibility[43,54]. speedofdispersal[62].
+3.1.2.2. Connectivity and its association with resilience. Street 3.1.3. Resilienceoftwocommonstreetnetworkpatterns
+connectivity influences pedestrian accessibility. Pedestrian route 3.1.3.1. Griddednetworks. Griddednetworksthatarecharacterizedby
+distance would be greater in less-connected streets. It is therefore short street segments and frequent intersections, provide better
+advised to pay attention to the importance of connecting minor and capacities to adapt to adverse events and changing conditions by
+major routes in the pedestrian hierarchy. Appropriate connection integrating flexibility and redundancy features into the network
+between minor and pedestrian routes to major transit streets is (higherCyclomaticnumber comparedtootherstreetpatternssuchas
+critical for facilitating effective and efficient access to public transit dendriticlayouts)[63].Suchaconfigurationenhancesconnectivityand
+[16]. wouldmakeadaptationtofuturechangeseasierasitwouldbepossible
+Streetconnectivityaugmentspermeabilityoftheurbanfabric.This tocloseonestreetsegment(formaintenanceorotherpurposes)without
+can contribute to reducing Vehicle Kilometers Travelled (VKT) and having significant impacts on the flow of people and vehicles. Under
+enhancingurbanwalkability.Thereisextensiveevidenceshowingthat such circumstances, the redundant connectivity of the grid pattern
+increased intersection density is strongly associated with lower VKT providesotheralternativeoptionsforcirculationofpeopleandvehicles
+[51,55,56].Forinstance,simulatingtheeffectofincreasingintersection [63].Ascasesinpoint,theredundantconnectivityofthegridnetwork
+density on the VKT (for a prototype mixed-use neighborhood in Cal- contributedtobetterperformanceduringtheabsorptionandrecovery
+gary),itwasfoundthatthereisanegativecorrelationbetweeninter- phases following the 2010 and 2011 earthquakes in Concepción and
+sectiondensityandfrequencyoftripsbyprivatevehiclesperday.Itwas Christchurch,respectively[14,64].Asitwasneededtocordonoffsome
+estimatedthata50%increaseinthenumberofintersectionsperstreet street segments, the redundancy of the gird network proved essential
+km can result in a 5% reduction in the VKT (thereby reducing GHG formaintainingtrafficflowthroughalternativeroutes[64].
+emissions)[57].Walkabilitycanimprovepropertyvaluesandenhance Giventhemoreevendistributionofnode/linkcentralityvaluesin
+vibrancyandeconomicviabilityofcities[58].Usingeconomicdataand thegriddednetworks (asmallerfractionofshortestpathstraversean
+datafromseveralsocialmediatoolstoexplorethelinksbetweenurban averagenode/linkinthegriddednetworkscomparedtootherpatterns
+formindicators,economicvitality,andhousingprice;itwasfoundthat suchasdendritic),theyarelesspronetodisruptionduetofailureinone
+intersectiondensityhasthemostsignificantandpositiveimpact[58]. or few nodes/links [20]. The gridded networks’ higher resilience to
+Intersection density contributes to adaptive urban resilience by disruptionisfurtherstrengthenedbytheirhigherlevelofconnectivity.
+fosteringnetworkingactivitiesandsocialencounter.Thiswasdemon- Mostintersectionsinthegriddednetworkare4-way(unlikedendritic
+strated in a study on resilience of communities along the Gulf Coast. networks where many 3-way intersections and dead ends exist). This
+Investigating the impact of different urban form variables, including implies better connectivity as more streets emanate from each node
+land use mix, residential density, presence of parks, and intersection [20].Thedominanceof4-wayintersectionscontributestotheresilience
+density, it was found that intersection density has the greatest effect ofgriddednetworks (toobstructionofsome streetsegments)through
+(followedbynetresidentialdensity,historicsitedensity,thedensityof providingredundantconnectivity.Sincetheaveragenodeconnectivity
+socialnetworkingorganizations,andlandusemix)[59]. isrelativelyhighinbi-directionalgriddednetworks,alargernumberof
+Connectivity at the micro-level can also provide benefits for en- nodes must fail for two randomly selected nodes to be disconnected
+vironmental resilience. For instance,integrating greenery into a well- [20].
+connectedstreetnetworkhasmeritsforreducingtheheatislandeffect. The higher connectivity of gridded networks has also been de-
+Other benefits can also be accrued; Brody, Kim and Gunn [60] argue monstrated using other connectivity measures. In a modelling study
+that higher connectivity results in smaller total area of impervious conductedbyZhang,Miller-HooksandDenny[39],numericalexperi-
+surface in neighborhoods and therefore reduces the risk of flooding mentswereconducted,usingmeasuressuchasorigin-destinationcon-
+causedbystormwaterrunoff. nectivity (before and after disaster) and the ratio of maximum
+Itisworthnotingthattheoptimalstructureofstreetnetworksvaries throughput3attainablepost-disastertothethroughputachievablepre-
+dependingonwhattheirmainpurposeandfunctionis.Increasingre- disaster, to evaluate resilience of different transportation network
+dundancy (in terms of connectivity) to the maximum level could be topologies. It was found that higher cyclicity improves resilience by
+desirablefortransportdemandmanagementandsmoothevacuationin building more redundancies into the network. More circuits indicate
+theaftermathofdisasters.However,Bourdic,SalatandNowacki[40] higher redundancy and this helps maintain adequate levels of con-
+raisetheconcernthatmaximizingthenumberofintersectionsmayturn nectivityandaccessibilityincaseone(ormore)linksaredamagedand
+thecityintoamazeandleavelimitedspaceforotheruses(e.g.,parks, subtractedfromthestreetnetwork.Itwasfoundthat,overall,thefol-
+open space, buildings, etc.). As shown by Kevin Lynch in his seminal lowingstreetnetworktypologiesprovidebetterperformanceinterms
+work,TheImageofTheCity,providingasatisfyingurbanfromhinges ofresilience(descendingorderofperformance):‘complete’,‘matching
+on proper arrangement of different constituent elements (i.e., paths, pairs’, ‘completegrid’, ‘diamond’, ‘grid’. Weakly connected typologies
+edges, districts, nodes, and landmarks) [61]. Therefore, to enhance
+legibilityandavoid“turningthecityintoamaze”,theinterrelationsof
+intersectionswithotherelementsshouldbeconsidered. 1Linkweights(e.g. traveltime,congestion,linklength) canbetakeninto
+Maximumconnectivitymayalsoincreasethemaintenancecostsand accountincalculatingbetweennesscentrality[37]M.Akbarzadeh,S.Memar-
+montazerin, S. Derrible, S.F. Salehi Reihani, The role of travel demand and
+intensifyundesiredeffectsbycausingproblemssuchasswiftspreadof
+networkcentralityontheconnectivityandresilienceofanurbanstreetsystem,
+epidemics [33]. Maintenance costs may increase due to the possible
+Transportation (2017). However, it is demonstrated that the traditional be-
+increase in vehicular and pedestrian surface area. Maximum con-
+tweennesscentrality(alllinkweightsequalunity)isbestsuitedforanalyzing
+nectivity, that results in crowded pedestrian environments, can also
+resilienceofurbanstreetsystem[37]ibid.
+exacerbate the spread ofdiseases and epidemics.Accordingly, adding 2Zerofortree-likedpatternsand1forcompletegraphs.
+redundantlinksshouldbedoneinacarefulmanner.Itissuggestedthat 3The amount of goods and materials that can be transported through the
+leaf-like street networks that are governed by power law distribution streetnetwork.
+177
+A.Sharifi Building and Environment 147 (2019) 171–187
+humanmindhasalimitedcapacitytocomprehendandprocessthefull
+complexities of the urban system and has the tendency to use the
+dendritic pattern to simplify such complexities. For instance, many
+electricity transmission networks in cities have a dendritic structure.
+Thetransmissionsystemincludeslargescaleremotepowerplants,and
+highandlowvoltagetransmissionlines[62].Asimilarstructurecanbe
+observedinsomestreetnetworks.Inadendritichierarchy,streetsare
+arrangedinawaythatresemblesthestructureofatree.Theresilience
+of dendritic patterns has been discussed in many studies. Batty [33]
+uses the tree as a metaphor to explain the importance of appropriate
+design of urban networks to maintain robustness and redundancy of
+cities. Disruption in some parts of a tree (e.g., broken upstream
+branches) can result in a loss of functionality in other parts. Such a
+significantlossoffunctionalitycanoccurwhenthenumberofcircuits
+in the network is limited (related to the Cyclomatic number and the
+alpha index). Enhancing connectivity through having circuits in a
+networkiscriticalforaddressingthisshortcoming[33,62].
+Thedendritichierarchyofurbanstreetsresultsinthehighdepen-
+dence of components at the lower-scale (e.g., blocks and neighbor-
+hoods)toprocessesandinputsthatoriginatefrompointsupperinthe
+hierarchy. This diminishes modularity of the system, increases the
+possibilityofknock-oneffectsandchainedreactions,andundermines
+the flexibility and self-organization capacities at the lower scale (i.e.
+blocksandneighborhoods)[70].Suchahierarchycanbeobservedin
+Fig. 4.Resilience of different types of transportation networks analyzed by sprawlingcities.Infact,itisarguedthatdendriticroadnetworkscan
+Zhang,Miller-HooksandDenny[39]. resultinthedispersalofurbanactivitiesandinadvertentlycontributeto
+suburban sprawl [67]. Urban sprawl, in turn, detracts from resilience
+such as ‘small-world’ and highly linear typologies such as ‘diverging [71].
+tails’ and ‘crossing path’ performed comparatively worse [39] (See Thetree-likepatternisnotofitselfundesirableandcriticizingitdue
+Fig.4foraschematicpresentationofthesenetworktypes). to its lack of connectivity and access constraints should not be inter-
+TheChristchurchandConcepcióncasesexplainedearlieralsoshow preted as the complete dismissal of its potentials and qualities. The
+thatgriddednetworksofcontinuousandwidestreetsreducetheriskof hierarchy found in the tree-like patterns (relations between truck,
+streetclosureandprovidelegibleandunobstructedevacuationroutes branches,twigs)followsthepowerlawdistribution.Suchahierarchy,
+[14,64]. The utility of grid pattern for emergency response and eva- called “natural hierarchy” by Marshall (2004) is a desirable quality
+cuation purpose is already shown in the literature [14,65,66]. The commonlyfoundintraditionalsettlements.Cul-de-sacs,footpathsand
+Concepcioncaseshowsthatthegriddednetworkofwidestreetsismore narrow roads in tree-liked patterns provide semi-private community
+permeable and navigable compared with the non-gridded network of spacesthatmaybeusedforcommunalactivities[72].Suchcommunal
+narrowandwindingstreetsandisthereforefavorableforachievinga activitieswill,inturn,contributetourbanresiliencebyenhancingso-
+rapidandeffectiveevacuation[14].Arguingthatopenspacesthatare cial capital. The semi-private space facilitated by tree-like patterns is
+heterogeneous in size (heterogeneity of the urban form is critical for specificallydesirableinsomecontextswhereprivacyconcernsaremore
+spreading out risk and dealing with uncertainties [67]), and homo- important.Insuchcontexts,theremightbeatendencyforcul-de-sacs,
+geneously distributed across the city are more suitable for enhancing narrowstreets,andlimitedvisualconnectionbetweentheindoorand
+the capacity of cities to provide access to facilities and emergency outdoor spaces. Under such circumstances, openness and high street
+services, Villagra, Rojas, Ohno, Xue and Gomez [65] found that the connectivity may be in conflict with privacy as a local value [46]. A
+regulargridpatternwhichisbetterimplementedinConcepcionismore diversesetofstreetlayouts(ofvaryingdepth)canbefoundinnon-grid
+suitableforprovidingopenspacesinahomogenousfashionacrossthe andtree-likepatterns(includingfootpaths,narrowroads,accessroads,
+city.Itisworthaddingthatheterogeneity(sizeandfunctional)ofopen local distributors, and arterialroads)[16]. Such diverse patternspro-
+spaces will also contribute to resilience because it allows people and videmeritsintermsofhumanscaleandaestheticsandcanbeusedto
+communities with different sheltering and recovery needs to choose create vibrant walkable environments that contribute to socio-eco-
+appropriatesitesforaddressingtheirspecificneeds[14]. nomicresilienceatthemicro-scale.
+Finally,inconjunctionwithotherdesignmeasuressuchasmixed- The tree-like pattern can be reformed and improved by design
+usedevelopment,betterconnectivityprovidedbygriddednetworkscan strategies that improve connectivity and accessibility by facilitating
+improveaccesstotransit,reducewalkingdistances,andimproveurban interconnection of the branches [16]. Such interconnections help de-
+walkability [68]. Thereby, gridded networks may reduce the risk of signerstoavoidcreatingdisjointgroupsofurbanformelements(e.g.,
+pedestrian exposure to extreme weather conditions (e.g., exposure to streets, lots, buildings, and neighborhoods) by restricting strict se-
+extreme heat in the case of Los Angeles) [68]. However, arguments paration of elements and creating some overlaps between them [69].
+aboutthepotentialofgriddednetworksforreducingtransportdemand Onereformsolutioncanbeconnectingcul-de-sacroadstootherroads
+andimprovingwalkabilityassumethatpeopleinrelativelydenseand inthenetworkusingasetofwalking/cyclingpaths.Thisway,safetyof
+highly-connectedareastendtowalkmore.Thismaynotbealwaysthe thepedestrianspaceintheneighborhoodismaintainedbykeepingthe
+caseashighconnectivityprovidedbygriddednetworkscanalsogen- area away from pass-through traffic and at the same time,the neigh-
+erate more short automobile trips and intensify externalities such as borhood will be well-connected to the surrounding environment. The
+congestionandGHGemissions[43,54]. availabilityofpedestrianroutesatthemicroscaleisameritduringthe
+absorption and recovery phases of disaster management. It is argued
+thatpedestrianroutesaremoresuitablethanvehicular-basedroutesfor
+3.1.3.2. Dendritic networks. Dendritic patterns are common in urban evacuation purposes, as they help avoid traffic accidents and traffic
+systems [69]. As argued by Alexander [69], this is mainly because congestion associated with vehicular-based routes (likely to occur
+178
+A.Sharifi Building and Environment 147 (2019) 171–187
+Fig.5.Connectivityasrepresentedinthestructureoftreebranches(left)andleaves(right).
+during the evacuation process). Pedestrian routes should follow uni- vehicular movement and their other essential functions are not suffi-
+versaldesignrulestohaveenhancedaccessibilityanditisalsodesirable ciently considered. In addition, by taking blueprint approaches, con-
+to widen them (considering the height of the adjacent buildings) and ventional planning fails to take account of future uncertainties.
+keep them distant from potentially obstructing objects (that may fall Therefore, streets may be designed in a way that does not support
+and block the routes) [52]. Reforming tree-like patterns will also in- adaptation to changing conditions and adverse events [14]. Through
+creasetheefficiencyofthestreetnetwork.Thereisevidencesuggesting exploring the evidence reported in the literature, here, I discuss the
+that increasing the alpha index of the street network (by introducing possibleimplicationsofstreetwidth,thedesignofstreetedges,andthe
+newcircuits)increasesefficiencysignificantly[10].Theoptimallevel streetlayoutandorientationforurbanresilience.
+of efficiency can be found somewhere between tree-liked networks
+(alpha index=0) and networks that follow the characteristics of a
+3.2.1. Streetwidth
+complete graph (alpha index=1). This is because efficiency will sa-
+The optimal width of streets for enhancing urban resilience may
+turate before the number of circuits reaches that of a complete grid
+varydependingonthecontext,thegeometryofthestreetcanyon,the
+[10].
+land use intensity of the area, the type of disaster, and the stage of
+The modifieddendritic structure resembles thestructure ofaleaf.
+disasterriskmanagement.Intheaftermathofrapid-onsetdisasterssuch
+The leaf structure is characterized by a well-connected network of
+as earthquakes, that are likely to block parts of the street network,
+veins, the spatial arrangement of which conforms to the power law
+reachingdamagedareasisthemainpriorityofrescueteams.According
+distributionandthefrequentlowerscaleveinsinthehierarchyconnect
+to the literature, wide streets provide better evacuation capacities
+upsequentially(ordirectly)totherelativelylessfrequenthigherscale
+[14,65]andfacilitatefasteraccessofemergencyresponseserviceand
+veins(seeFig.5).
+medical aid to the injured people. Evidence of safe evacuation after
+Connectivity as represented in a leaf is more suitable than con-
+disasters,that canbe attributedtowide streets, hasbeen providedin
+nectivity observed in tree branches. Characterized by the presence of
+theliterature[14,65,73].Thesestudies,however,ignorethefactthat
+frequentloops,thecyclicityofvenationpatternsismuchhigherthan
+the heightof thebuildings adjacentto thestreet isalso animportant
+that of a tree structure. The interconnected circuits of a leaf provide
+factor determining the extent of street blockage and should be con-
+redundantconnectivity.Cuttingabiggerbranchinatreewillresultin
+sidered[74].Therefore,whenexaminingtheassociationbetweenstreet
+losingallthesmallerbranchesdownthehierarchy.However,thisisnot
+width and evacuation capacity, it is also essential to take the aspect
+the case for a leaf. Each small vein in a leaf is connected to several
+ratio (H/W)4 into account. An optimally wide street in a moderately
+biggerveinsandthereforecuttingonebigveinwouldcauselessharm
+denseareamaynotbeoptimalindenserlocations(whereaspectratios
+tothewholestructureandtheleafcontinuestosurviveassapflowwill
+are higher), becauseit islikely tobe obstructed ifhigh-rise buildings
+becompensatedbyotherveinsintheleafsystem(throughfunctioning
+collapsefollowingamajorearthquake.However,itcanbearguedthat
+loops that substitute for mal-functioned ones) [49,62]. Furthermore,
+undercircumstanceswherethereisnomajorcollapse/obstructionand
+thehierarchicalstructureofaleafandtheinterconnectionsbetweenthe
+streetsarecordonedoff,thewiderthestreet,themoreeffectivewillbe
+veins result in a structure similar to that of a semi-lattice that as
+theevacuationprocess.Accordingtotheliterature,widestreetsarealso
+Alexander [69]argues is much more suitable for grasping the com-
+morefavorableformeetingtheadhocneedsofpeopleduringthere-
+plexities of the urban system. The hierarchical structure of a leaf can
+coveryprocess.EvidencefromConcepciónshowshowthestreetspace
+inspirethedesignofurbanstreetnetworks(aswellasothernetworks
+canbeusedforsettinguptemporarysheltersnearthedamagedhomes
+such as transport, energy, water, etc.), so that the city features many
+[14].Thisallowstheneighborstocreatesmallcommunitiesandbenefit
+small connections, fewer medium-sized connections and yet fewer
+from mutual support. Such community activities can expedite the re-
+large-sizeconnections[62].Aclearandconsistenthierarchy(inspired
+coveryprocess.Furthermore,proximitytohomegivespeopleacertain
+by leaf structure) also improves connectivity and continuity of the
+levelofprivacyandprotectstheirpropertiesagainstlooting[14].
+streetnetwork,therebyenhancingthelegibilityandeaseofmovement
+Asmentionedearlier,adaptabilityisanimportantcharacteristicof
+intheeventofemergencyevacuation[16].
+resilient systems. Adaptability to technological transformations and
+changing conditions is another potential merit of wider streets. It is
+3.2. Streetdesignandorientation
+easiertomodifythestreetlayout(e.g.,changinggeometry,integrating
+Goodstreetdesignplaysakeyroleinenhancingreachability,per-
+meability,vibrancy,walkability,andsafetyoftheurbanenvironment. 4Theratioofthecanyonheight(H)tothecanyonwidth(W)iscalledthe
+Despitethis,inconventionalplanning,streetsaremainlydesignedfor AspectRatioandisthemostcommonlyusedmeasureofcanyongeometry.
+179
+A.Sharifi Building and Environment 147 (2019) 171–187
+greeninfrastructure,etc.)ofsuchstreets.Integrationofvariousmodes Theshortercrossingdistanceofnarrowstreetsmakestheenvironment
+oftransportation(e.g.,busorbikelanes,sidewalks,etc.)isalsoeasier saferforpeoplewithmobilitylimitations.Theseobservationsarecon-
+when streets are wider [75]. Such an integration provides multiple firmed in a study by Ewing and Hamidi [83]. They found that high-
+benefitsintermsofreducingexternalitiesofurbantransportation.For densitydevelopments,characterizedbynarrowerstreets,aremoreef-
+instance, sidewalks along wide streets can be widened for better pla- fective in providing traffic safety and in reducing fatal motorist-pe-
+cementoftreesthatprovidemultipleecosystemservices(e.g.,treescan destrian accidents. These features of narrow streets also make them
+amelioratemicroclimateandreducecoolingenergydemand)[76,77]. safer for children to play withtheir parents and peers. This can have
+Green infrastructure such as bioswales, and water retaining and significantimpactsontheirdevelopmentandlearning.
+permeable pavements can also be integrated for flooding control and
+stormwater management [78–80]. Evidence from Montreal, Canada 3.2.2. Streetedges
+shows that wide sidewalks (achieved through large setbacks) have Street edges are the interfaces between streets and the abutting
+strongpositiveassociationwithstreettreecover[53].Thesimulation buildings and lots (including their assigned land uses). Appropriate
+study conducted for a prototype neighborhood in Calgary, Canada design of street edges is needed to maintain permeability of the built
+shows that the inclusion of bike lanes in all the streets can reduce environment andstrengthen theconnectivitybetween theindoor and
+transportGHGemissionby8%comparedtoascenariowhereonly5% outdoor space [9,63]. Streets that bound neighborhoods, blocks, and
+ofthestreetshavebikelanes.Resultsalsoindicatethattheinclusionof sanctuaryareasshouldnotfunctionasphysicalbarriersthatseverthe
+bike lanes may reduce the number of vehicles per household [57]. urbanfabricbyseparatingthesecomponentsofurbanform.Modifying
+Therefore,dependingonthecontextandconsideringotherfactorssuch streetedges(throughstreetscapeimprovementmeasuressuchasactive
+as density and street canyon geometry, designers should provide ap- frontagesandsidewalks,tree-linedstreets,trafficcalmingofthestreets,
+propriatestreetwidthtopromotemultimodalstreetswhereauto-traffic mixeduse,allocatingappropriatelevelsofdensity,etc.)canturnstreets
+speedisreducedandasafeenvironmentforpedestriansandbikeusers into active boundaries that facilitate permeability and transversal
+iscreatedbyprovidingabufferspacebetweendifferentmodes[50]. connectivity across the city [70]. Further, coupled with connectivity
+Wideningstreetsmay,however,causetrade-offsintermsofwalk- measuresdiscussedearlier,modifiedstreetedgescanfacilitateasemi-
+ability. Lower amounts of walking activity are expected along wide latticeurbanfabricthat,asAlexander[69]argues,improvesintegration
+arterialroadsthatprioritizevehiclemovementanddonotfeatureap- betweendifferenturbanformcomponents.
+propriatestreettreecover[53].Itmayalsoinfluenceindoorandout- To contribute to urban resilience, streets should provide both
+doorclimatecomfortandmayhaveimplicationsforenergyresilience. movementandaccessibilityfunctions.Developingvibrantstreetedges
+Streetwidthandthedegreetowhichbuildingsshadeeachother(and couldbeaneffectivestrategyforachievingthesefunctions.Influenced
+thestreet)aredeterminingfactorsrelatedtoenergyloadinbuildings by planning movements such as the “Neighborhood Unit”, in many
+and thermalcomfort and heat island effect in the urban environment cities developed after WWII, accessibility is reduced to the scale of
+[50]. Determining street width is a context-sensitive task and wider collector and local streets and other thoroughfares are mainly devel-
+streets may not be desirable under certain climatic conditions. Wider oped with the purpose of providing maximum speed (movement and
+streets in shallow street canyons have higher global radiation yield accessibility are decoupled) [70]. Consequently, this separates streets
+[81].Thiscausesproblemsinseasonalclimateswhereabsoluteradia- from street edges and other built environment components and un-
+tionisverylowduringwintertimeandwideningstreetsresultsinonly derminessocio-economicfunctionsthatstreetscanprovide.Therefore,
+asmallamountofextraheatgain.However,thisextraheatgainwillbe enhancing street vibrancy is critical to ensure streets provide both
+significant in summer and will affect thermal comfort indoors and in movementandaccessibilityfunctions.
+the street canyon. Therefore, in shallow canyons, designing narrower Streetvibrancyhasasignificantbearingonthesocio-economicas-
+streetsisrecommendedtolimitindoorandoutdooroverheatinginthe pects of urban resilience. It contributes to social capital by fostering
+summer[81].Thisissueshouldbecarefullyconsideredinhotclimates socialencounters,asastreetwillhavemorefunctionsthanjustbeinga
+where cooling demand is dominant. However, in temperate climates, pathtoreachdestinations[46].Vibrantstreetsarealsoexpectedtobe
+such as the Netherlands, where heating demand is dominant, wider safer due to the likelihood of stronger social control. Such streets in
+streets (especially east-north) are preferable as they maximize the relatively dense and mixed-use areas (especially at the ground level)
+amountofsolarheatgain. encourage retail and commercial activities, thereby attracting visitors
+Regardlessoftheclimaticconditions,uniformstreetwidthdoesnot fromwithinandbeyondtheneighborhoodandstrengtheningeconomic
+lenditselftourbanresilience.Ahierarchyofstreetnetworkswherein vitalityandresilience.Insuchstreets,thevisualandphysicalopenness
+narrowerstreetsprogressivelyconnectuptowiderstreetsismorede- (andcontinuity)betweeninnerandouterspacesandtheavailabilityof
+sirable.Multipleresilience-relatedbenefitscanbeaccruedfrompaying socialinteractionsimprovewalkabilityandreducecar-dependencyby
+attentiontoscalehierarchyindeterminingwidthofstreets.Structuring makingwalkingamoreattractiveandenjoyableactivity[46].Fostering
+streetsinascale-hierarchicmannerincreasescomplexityofcitiesand walkability through better design of street edges and sidewalks con-
+equips them with a higher capacity to evolve and adapt to changing tributestoclimateresiliencybyreducingvehiculartraveldemand.This
+conditions[82].Hierarchicalurbanstreetnetworksthatdisplayfractal observation is confirmed in a study showing negative correlation be-
+features(manynarrowstreetsandrelativelyfewmedium-sizeandwide tweenwell-designedsidewalksandVKT[43].
+streets)arearguedtobemoreefficient[62].Identicalwidthacrossthe Various factors contribute to building frontage vibrancy. For in-
+streetnetworkimplieshigherconstructionmaterialrequirements[62] stance, visual perception has impacts on people's emotions and may
+and higher maintenance costs. Further, such a monotonous network influence the willingness to walk. In this regard, Gordon Cullen in-
+mayleadtohighertraveldemand,therebyreducingefficiencyinterms troduced the concept of Serial Vision to explain how the design of
+oftravelpatterns. streets and street edges can affect the experience of a moving person
+Having narrow streets, irrespective of the density levels, in the andinfluencetheiremotionalreactions.HedefinesSerialVisionasthe
+hierarchy contributes to creating human-scale environments. Narrow sequential appearance of contrasting views and explains how, when
+streetscanfunctionassemi-privateurbanspacesthatprovideindoor- walkingthroughastreet,theinstantaneousrevelationofnewviewsis
+outdoorconnectivityanddistanceresidentsfromthenoiseandbustleof likely to have positive impacts on human emotions [84]. Therefore,
+urban life. Such streets located in a moderately dense neighborhood appropriatedesignofstreetedgesandenrichingandmaintainingaes-
+provide higher opportunities for people to interact with each other. theticqualitiesofpedestrianspaceandstreetedges(i.e.,façadestruc-
+High-speedvehiclemovementisnotallowedonnarrow-streetsandthis tures,materials,architecturaldesignanddetails,etc.)isessential[46].
+slowerpaceoftrafficreducesthefrequencyandintensityofaccidents. An important urban form measure that can be used to contribute to
+180
+A.Sharifi Building and Environment 147 (2019) 171–187
+streetfrontvibrancyistoincreasethefractionofstreet-facingplotsand windflowdistributionandtheamountofsolarradiationreceivedinthe
+to improve permeability of street edges by having a high number of streetcanyonanditsflankingbuildings[91–93].Aswillbeexplainedin
+buildingentrancesalongthestreet[46,63].Toincreasethenumberof thenextparagraphs,streetscanbeorientedinawaythatcontributesto
+entrances that are primarily accessible from the street edge, it is re- reducing building energy use and improving outdoor pedestrian
+quired to have relatively small zoning lots. Conversely, large lots (in thermalcomfort.Thiswillenhancetheresiliencetoheatstressunder
+super blocks) often result in blank walls with few entrances (longer hotsummerconditionsandfacilitatesolarheatingduringcoldwinter
+distancebetweenentrances).Moreover,increasingthenumberofunits days.Notethatthereismixedevidenceregardingtheoptimumstreet
+alongthestreetsisanimportantdesignstrategytoincreasethe“eyeson orientation and the examples provided in the rest of this section are
+thestreet”andmakethebuiltenvironmentmoreresilientagainstcrime highly context-specific and should not be generalized without con-
+[85]. sidering thegeometry ofthestreetcanyon,thelocalcontext,andthe
+Designing streets asshared spacesis anothereffective strategyfor local climatic conditionsand parameters (e.g., parameters such as re-
+enhancing street vibrancy. Design concepts such as living streets and lative humidity, solar radiation, wind direction, and wind velocity).
+Woonerfs are proposed to minimize segregation between different Therefore,thedesirableorientationmayvaryfromonecontexttoan-
+travelmodes[16].Boundariesbetweenroadwayandsidewalkareasare other[94–96].
+fadedinsuchstreetdesigns.Sidewalksareloweredtoalevelcloseto TherearestudiesshowingthattheEast-West(E-W)orientationcan
+the adjacent roadway. In other words, curb height is minimized. De- be desirable in hot-arid, temperate, Mediterranean, and cold climates
+signing streets as shared spaces contributes to reclaiming streets as for reducing building energy use [43,97–99]. This is because in such
+public spaces. As shared spaces, streets are more likely to enhance climates, depending on the aspect ratio, alignment of buildings along
+community resilience by facilitating socialization and community in- the E-W axis maximizes south-facing buildings and increases winter
+teraction. Through lowering traffic speed, they will also reduce the solarheatgain.Duetothepositionofsuninthesky,summersolarheat
+occurrenceoftrafficaccidents.Whendesigningsharedspaces,itises- gainisalsorelativelylowercomparedtootherdirections[43,97–99].
+sentialtopay attentiontouniversal designprinciples,inorder notto EvidencefromSacramento,Californiashowsthatthesummercooling
+underminethemobilityofpedestrianswithmobilitychallenges. demand of buildings aligned with E-W streets is lower than those
+Protecting pedestrians against undesirable weather effects is im- aligned with (North-South) N-S, (Northwest-Southeast) NW-SE, and
+portant for creating vibrant street edges. This could be achieved by (Northeast-Southwest) NE-SW streets [99]. However, depending on
+measures such as appropriate design of street canyons, providing other factorssuchthedepthofthestreetcanyonand localclimatolo-
+shelter spaces within certain intervals, or integrating arcades in the gicalconditions,streetsorientedtowardsotherdirectionsmayprovide
+streetscape[86].Streetlayoutandorientationareimportantfactorsto bettermicroclimaticconditions[93,95].
+beconsideredinthisregard. Intermsofprovidingoutdoorthermalcomfort,vanEsch,Looman
+and de Bruin-Hordijk [81] did a simulation study for the temperate
+climateofDeBilt,TheNetherlandsandfoundthat,for10,15,20,and
+3.2.3. Streetlayoutandorientation
+25m wide streets, N-S streets receive a certain amount of sunshine
+The implications of street layout and orientation (direction of the
+throughout the year. Although this is beneficial in the winter, spring
+streetaxis)aremainlyrelatedtoenergyandclimateresilienceofcities
+andautumn,itmightcauseproblemsinthesummer(unlessappropriate
+[87].Thelayoutofstreetsandpedestrianpathways,alongwithother
+shadingmeasuresareconsidered;forinstance,theN-Sstreetswithhigh
+factors such as the setting and the dimensions of buildings and land-
+aspect ratios will get less sunshine during hot summer days). In
+marks,mayinfluencepeople'ssenseoftimeandtheirwillingnessand
+summer, E-W direction is preferable as it provides shading during
+abilitytowalk[86].Forinstance,orthogonalandsymmetricalstreets
+hottesthoursoftheday.However,theE-Wstreetsreceivednosunshine
+maybemorenavigablecomparedtolinearandmonotonousstreetsthat
+during the shortest day of year (Dec 21). Similar results were found
+continueforalongdistance[16].Inaddition,visualqualityandcom-
+underthehumidsubtropicalclimaticconditionsofThessaloniki,where
+plexityofthestreetlayouthasmajorimplicationsforpeoples'evalua-
+the deep E-W canyon was the most favorable in terms of providing
+tiveimageofthecity[88]andmayaffecttheirtriplengthandmode
+outdoorthermalcomfortduringthehottesthours[93].However,evi-
+choice[89].Forinstance,meanderingandorganicstreetpatternscan
+dencefromTelAviv(Israel)contradictsthesefindingsandshowsthat
+stretchtheimaginationofpedestriansandinstigateasenseofdiscovery
+theN-Sdirectionismoredesirablefordifferentcanyonconfigurations
+in them [84]. This will make it easier for pedestrians to walk long
+[100]. It is worth noting that, as the experiments in cities such as
+distances.
+Thessaloniki (Greece) and Ghardaia (Algeria) show, the favorable or-
+To understand the implications of street layout configuration for
+ientation for achieving outdoor thermal comfort may also vary de-
+indoor energy consumption, Hachem, Athienitis and Fazio [90] con-
+pendingonthetimeoftheday.However,thedifferencesaresmallin
+ductedaneighborhood-scalesimulationstudyinMontreal,Canada.The
+mostcasesandthehigherdifferencesareoftenobservedaroundmid-
+following site layouts were considered: straight East-West street with
+dayhours[93,101].
+south-facingfaçade(layoutI),layoutIcurvedtowardsthesouth(layout
+ThecaseofDeBiltshowsthatincreasingstreetwidthfrom15mto
+II),andlayoutIcurvedtowardsthenorth(layoutIII).Resultsshowthat
+25mresultsina11.8–12.9%increaseinthedwellingheatgainforthe
+units in areas with straight street configuration generally have lower
+E-W street canyon direction. By contrast, the same amount of street
+coolingandheatingdemandcomparedtounitsinareaswithirregular
+widthchangeresultedinamuchsmallerincreaseinheatgainfortheN-
+andcurved layouts.5Similarly, theheatingload ofboth attachedand
+Sdirection(2.0–2.8%)[81].Therefore,asE-Wstreetsarelesssensitive
+detached rectangular buildings was higher for the curved layout. In-
+to variations in aspect ratio (H/W) than N-S ones, in hot-arid and
+crease of energy loads in the curved layouts is explained by mutual
+temperateclimatesitissuggestedtohavewideE-Wstreets(lowaspect
+shadingeffectsofunits.Increasedcoolingloadforthecurvedlayouts
+ratio)toincreasewintersolargainandnarrowN-Sstreets(highaspect
+can be explained by higher transmitted radiation6 (through some
+ratio) to increase mutual shading benefits at summer [97,98]. Due to
+windowsthatareorientedtowardsthewestoreastincurvedsitelay-
+thepositionofsuninthesky,unobstructedE-Wfacades(north-south
+outs)inthemorningsandeveningsduringthesummertime[90].
+street)receivethehighestamountofradiationduringhotsummerdays.
+Streetorientationinfluencesurbanmicroclimatethrougheffectson
+Mutual shading by increasing the aspect ratio reduces the direct and
+diffuse solar radiation received by buildings and the ground surface
+5Note that, generally, heating load and cooling load are associated with [98]. The cooling benefits of N-S oriented street canyons, with high
+winterheatingdemandandsummercoolingdemand,respectively. aspectratios,hasbeendemonstratedunderthetemperateclimateofthe
+6Referstothepassageofsolarradiationthroughthewindows. Netherlands[102],semi-aridclimatesofConstantineCityandGhardaia
+181
+A.Sharifi Building and Environment 147 (2019) 171–187
+(Algeria) [101,103] and Sede-Boqer, Israel [98], sub-tropical and an initial effort to fill this gap, this literature review provides some
+humid climate ofTaiwan [91], and hot and humid climate of Dhaka, theoretical and empirical insights on how the design and structure of
+Bangladesh[104],andCuba[105]. these important components of urban form can contribute to/detract
+Under hot and dry climatic conditions, temperatures drop sig- fromurbanresilience.
+nificantly at night and nocturnal cooling is not a major concern.
+However,itshouldbenotedthatdeepnarrowcanyonsinotherclimates 4.1. Summaryandsomepolicy/designconsiderations
+(e.g.,sub-tropicalandhumid)canleadtonocturnalurbanheatisland
+(asthestreetlevelwindflowisrestrictedandthestoredheatistrapped This paper focuses on two broad categories of street network ele-
+in the deep street canyons) and necessitate intensive air conditioning ments:topologyanddesignandorientation.Inthetopologycategory,
+[98].Acaseofworstcomfortconditions(ofN-Sstreets)forhot-humid the paper draws on the graph theory to examine resilience of street
+climaticconditionshasbeenreportedforGuangzhou.But,theauthors networks using different centrality and connectivity measures.
+explainthiscontrastingevidencebythefactthatunlikeotherstudies, Regardingthecentralitymeasures,itwasdiscussedthatisrequiredto
+the buildings along the N-S street are facing south and a wide space havecertainlevelsofcentralityfortakingadvantageoftheeconomies
+existsbetweenthemthatmayresultinhighersunshinereception[92]. ofscaleandforappropriateplacementofurbanservicesandfacilities.
+Moreresearchontheimpactofstreetorientationonthermalcomfortin However, due to high dependency of cities on highly central streets,
+humidclimatesisneeded. there is need for significant care to sustain functionality of highly
+Prevailingwinddirectionsshouldalsobeconsidered,whenmaking centralstreetsunderdifferentconditions.Disruptionsinhighlycentral
+decisionsaboutstreetdirections,tobenefitfromventilationeffectsand nodes/linkscanbringalargepartoftheurbansystemtoahalt.This
+minimize potential damages from strong windstorms [93,106]. Deep papersuggestsdetermining theextentof centralityusing ahierarchic
+streetcanyonsthatareparallelwiththeprevailingwinddirectiontend approachthatfollowsthepowerlawdistribution.Thisimplieshaving
+toenhancestreet-levelthermalcomfortinthesummerbyaugmenting small, medium, and large numbers of high-, moderate-, and low-cen-
+windspeedthroughthewindchannelingeffect[91–93].Higherwind tralitynodes/linksinthesystem,respectively.Itisarguedthatsucha
+speedinthestreetcanyonmayalsoreduceindoorcoolingdemandby hierarchicdistributionofcentralitycancontributetoself-organization
+dissipatingheataccumulatedinthecanyonandfacilitatingconvective andadaptationcapacitiesoftheurbansystem.
+heat transfer7through building envelopes [91]. By contrast,the sum- Discussionsbasedonthegraphtheoryandnetworktopologymea-
+mertime thermal comfort conditions are likely to deteriorate in deep sures showed that connectivity is also critical for achieving urban re-
+street canyons perpendicular to the prevailing wind direction. High silience. If combined with other measures such as density and mixed
+buildings function as barriers to ventilation in such street canyon use,enhancedconnectivitycanimproveaccessibilitytourbanresources
+configurations [91]. In the winter, however, such street canyons are and facilities. It also provides opportunities for reducing automobile
+favorable for providing pedestrian thermal comfort [93]. Simulation dependenceandpromotingwalkability.These,inturn,leadtobenefits
+resultsinSede-BoqerandTelAviv(Israel),TheIslandofTinos(Greece), intermsofsocio-economicandenvironmentalresilience.
+and Taiwan indicate that the impacts of wind exposure are less sig- Based on the network topology measures, this paper analyses the
+nificant compared to the mutual shading/solar radiation impacts performance of gridded and dendritic networks as two broad street
+[91,96,98,100].Inotherwords,providingmutualshadingandlimiting network categories. Results of the analysis show that the desirable
+incoming solar radiation are more effective measures than wind ex- street pattern should exhibit the core features of both typologies. For
+posureforreducingcoolingenergydemandandshouldbeprioritized. instance, the hierarchic pattern of centrality distribution that can be
+However,coolingbenefitsachievedthroughconvectiveheatexchange observed in dendritic patterns is desirable for enhancing resilience.
+canstillbeconsiderable.InSede-Boqer,streetsparallelandperpendi- Regardingthedendriticpatterns,theanalysesshowthattheylackap-
+culartotheprevailingwinddirectionprovidedsomebenefitsinterms propriate levels of connectivity and this shortcoming should be ad-
+ofreducingindoorcoolingload.Coolingdemandwasslightlylowerfor dressedbyaddingpedestrianandcyclingroutes.Suchroutesarelikely
+facadesobliquetotheprevailingwinddirection(NW-SE)[98].Thiscan to be more useful in the aftermath of some disasters such as extreme
+beexplainedbythepossiblebenefitsachievedfromnaturalcrossven- events.Thisisbecausethesuddenflockofvehiclestothestreetswill
+tilation.8 Similar results were found from simulation models for the probablycausecongestionanddelayeffectiveevacuationinthecaseof
+subtropicalclimaticconditionsofTaiwan,wherethewindvelocitywas rapid-onsetdisasters.
+higherandcoolingenergydemandwasthelowestinSW-NE,followed The design and orientation category included elements related to
+bySE-NWstreets.CoolingenergydemandwashighestforshallowN-S street width, street edges, and street layout and orientation. It was
+streets that are perpendicular to the prevailing wind direction [91]. discussedthatcouplingtopologymeasureswithappropriatestreetde-
+Therefore,creatingadesirablewindenvironmentrequirescarefulde- sign and orientation is needed to maximize benefits that can be
+signofstreetcanyons[86,93].Detailedanalysisoftheimplicationsof achieved through optimizing centrality and connectivity measures.
+canyongeometryforurbanresilienceisbeyondthescopeofthispaper Streetwidthandconfigurationofstreetedgesarecriticalfactorstobe
+andshouldbeconductedinfutureresearch. considered for good street design. These are particularly relevant to
+socio-economic vibrancy, walkability, and safety of the built environ-
+ment. Street width is a significant factor that affects the abilities to
+4. Discussionsandconclusions
+absorb and recover from adverse events. It is suggested that a scale-
+hierarchicstreetnetwork,whereinnarrowerstreetsprogressivelycon-
+Streets and street networks are fundamental components of urban
+nectuptowiderstreetsismoredesirable.Implicationsofstreetlayout
+form,andgrowthandevolutionofurbansystemsishighlyinfluenced
+and the aspect ratio and orientation of the street canyon are mainly
+bytheirstructureandtypology.Inaddition,duetotheirlonglifespan,
+related to resilience in terms of energy consumption, indoor and out-
+design of streets and street networks has long-term implications for
+door thermal comfort, and heating/cooling demand management.
+urban resilience. Despite this, the resilience of streets and street net-
+Althoughstructuralfactorsanddesignandconfigurationofthebuilding
+worksisanunder-exploredareawithinthefieldofurbanresilience.As
+envelopearethemaindeterminantstobeconsidered,othermeasures
+suchaslayout,aspectratioandorientationcanalsoplayanimportant
+7Convectiveheattransferoccurswhentheheatedfluid,suchasairorali- roleinamelioratingmicroclimateandshouldbeconsidered.Itshould
+quid,movesawayfromtheheatsource,carryingheatenergywithit. be notedthat optimal design and orientation may vary depending on
+8Naturalcrossventilationreferstothenaturalcirculationofairwithinthe thelocalclimaticconditions.
+building,causedbypressuredifferencesbetweentwobuildingsides. Fourimportantpointscanbeinferredfromtheevidencereportedin
+182
+A.Sharifi Building and Environment 147 (2019) 171–187
+thisreview.First,thecharacteristicsandrequirementsthatdetermine cities. Further, it can be seen that some unexplored areas still exist
+theoptimalformofstreetsandstreetnetworksmayvarydependingon (shownasblankcells)andfutureworkshoulddealwiththesegaps.For
+the stage of resilience planning and disaster risk management. Under instance,thepotentialassociationsbetweennetworktopologyandre-
+normalcircumstances(pre-disaster),keyrequirementswouldbetofa- siliencetoextremeweatherconditionsshouldbestudied.
+cilitate rapid, affordable, and low-carbon origin-destination con-
+nectivity. Furthermore, the design of streets should contribute to - Thereisalsoalackofresearchcomparingtheresilienceofdifferent
+creating vibrant and convivial environments that strengthen commu- street patterns. Gridded and dendritic networks (as two broad ca-
+nityinteractionandsocialcapital.However,keyrequirementswillbe tegories)werediscussedinthispaper.However,streetnetworksare
+differentintheaftermathofadisaster,whentheprioritywouldbeto complex and multiple permutations of street patterns can be ob-
+facilitaterapidevacuationandtimelyaccesstoemergencyservicesand served in cities. Marshall [16] suggests that street patterns can be
+rescue teams. Depending on the risk profile, these may prove to be dividedintofivebroadcategories:linear,tree,radial,cellular,and
+conflictingrequirements.Itisessentialtofindabalancedsolutionthat hybrid(Fig.6).Variouspermutationscanbeidentifiedundereach
+does not affect the efficiency of urban management activities and of these categories. Analyzing these permutations using the mea-
+practices. suresdescribedinthispapermaybringnewinsightsregardingtheir
+Second,theresilience ofstreetsand streetnetworksis affectedby resilience.
+thedesign,form,andconfigurationoftheotherelementsofurbanform - Different centrality and connectivity measures were introduced in
+(suchaslotsandbuildings)andviceversa.Forinstance,development thispaper.Examiningpossiblecorrelationsbetweenthesemeasures
+of vibrant street edges hinges on paying attention to the form and iswarrantedtoseeifsomeofthemcanbeusedasproxymeasures.
+configurationofotherurbanformelementssuchasmixeduseandlot Forinstance,itcanbeexaminedifbetweennesscentralitycanbea
+size.Mixed-usedevelopment,characterizedbysmalllotscontributesto proxyvariableforothercentralityvariables.
+permeability of the built environment, and enhances walkability and - Regardingthemethodologicalissues,animportantissuetobenoted
+streetvibrancy.Theinterconnectivityamongthedifferenturbanform isthattypeandimportanceofthestreetsegmentsandstreetcanyon
+elementsshould,therefore,beconsideredwhendevelopingplansand (e.g., street width, canyon geometry) should be considered in
+policiesforbuildingurbanformresilience. computing centrality measures. There is evidence suggesting that
+Thethirdpoint(linkedwiththeprevioustwopoints)isrelatedto considering road width is essential for having a more precise de-
+potential trade-offs that may arise when making interventions to en- termination of the centrality values [48]. More work is needed to
+hancetheresilience-buildingcapacityofurbanformelements.Trade- examinetheimportanceofconsideringotherfeatures,suchasstreet
+offsmayoccurduetoconflictsinpurposesandpriorities,andvarying canyongeometry,incomputingcentralityvalues.Furtherresearch
+requirementsdependingonthetypeofstressor(disaster)andthestage is also needed to understand the association between street width
+ofdisasterriskmanagement.Forinstance,highcentralityisdesirable andcentrality.Thesetwomaynotnecessarilybeassociatedasthe
+foreconomicvitalityandfortheprovisionofefficienttransitservices. analysis of the street network of Buenos Aires shows [107]. How-
+However, it can create chokepoints in the network when disasters ever, there is evidence suggesting that centrality measures exhibit
+occur.Otherexampleswereintroducedinthepaper.Forinstance,short strongcorrelationwitheconomicactivityandlandusedensity(e.g.,
+street segments improve connectivity, but also, might hinder the in- floorarearatio,buildingcoverageratio,andtheratiobetweenopen
+corporation of street trees and therefore deprive the urban landscape spaceandtotalfloorarea)[48,108].Therefore,itcanbearguedthat
+fromtheirecosystemservices.Or,increasingconnectivitythroughre- planners should increase economic activities and building density
+dundantintersectionsfacilitatessmoothevacuationintheaftermathof near streets with higher centrality values in order to achieve effi-
+disasters,butcancauseunwantedimpactssuchashighermaintenance ciency improvements. Under such circumstances, centrality values
+costs,limitedspaceforotherservices,andincreasedprobabilityofthe maybeusedasabasisfordeterminingstreetwidthandaspectratio.
+rapid spread of risks (e.g., fire or flooding). Accordingly, appropriate However, in the real world it cannot be stated with certainty that
+strategiesshouldbeusedtominimizepotentialtrade-offsandmaximize density will be higher around high-centrality streets and intersec-
+synergies. tions. Other factors such as transportation and rent costs will also
+Fourth, while defining optimal design parameters and developing influence the decision of people and businesses to move to high
+specific planning/design guidelines is critical for informing resilience centralitylocations[109].Therefore,furtherresearchinthisareais
+planning, provision of detailed and highly specific guidelines without alsosuggested.
+considering context specificities can be problematic. Therefore, this - Existingresearchtendstosimplifystreetnetworkrepresentationby
+study only provides a certain number of recommendations that are takingaplanarapproach.Sinceinrealworldmanystreetnetworks
+applicable to any context (see Table 2). More specified guidelines arenon-planar[21],itiscriticaltoconductfurtherresearchusing
+shouldbedevelopedonacase-by-casebasis.Itshouldbereiteratedthat non-planar approaches to avoid oversimplification of the street
+desirableoverallperformancemaynotbeachievedbyonlyfocusingon networkrepresentation.
+single elements and, ideally, interlinkagesbetween different elements - Streetwidthshouldnotbestudiedinisolationfromthedepthofthe
+shouldbealsoconsidered. streetcanyon.Therefore,furtherworkisneededtoelaborateonthe
+implicationsofaspectratioforurbanresilience.
+4.2. Gapsandfutureresearchdirections - Theselectedelementsareoftenstudiedinanisolatedmannerand
+their interactions with each other and with other urban form ele-
+Thisresearchprovidesusefulinsightsonhowthephysicalformof ments are not examined. Further research is warranted to address
+streetsandstreetnetworksisrelatedtoresilience.However,muchwork this gap. For instance, the implications of the potential inter-
+remains to be done to acquire a more granular understanding. Major connections between centrality/connectivity and mixed-use devel-
+gapsandfutureresearchdirectionsareasfollows: opmentshouldbestudied.
+Table3indicateswhether,inthereviewedliterature,evidenceex- - The reviewed literature mainly focuses on natural and environ-
+ists on how design and configuration of different street elements can mental threats and addresses resilience dimensions related to in-
+contribute to resilience against different threats/stressors. City actors frastructureandenvironment.Othertypesofthreatsandalsosocio-
+may use this table to understand the potential associations between economicdimensionsofresilienceshouldbefurtherstudiedinthe
+streetnetworkelementsandresiliencetodifferentthreatsandstressors. future.Inaddition,non-physicalfactorsareessentialandshouldbe
+Theycanalsodevelopsimilarmatricestoexplorethelinkagesbetween consideredwhenmakingeffortstoenhanceurbanresilience.
+the physical form of streets/street networks and resilience in their - An important issue to be emphasized is that the increasing
+183
+A.Sharifi Building and Environment 147 (2019) 171–187
+Table2
+Importantplanning/designconsiderations.
+Element Recommendations
+Centrality -Avoidbuildinghigh-centralitylinks/nodesonrisk-proneareas(e.g.,floodplains)
+-Prioritizeandensuretheregularmaintenance,upgrading,andrepairofhigh-centralitylinks/nodes
+-Placeevacuationzones,emergencyservicefacilities,andamenitiesnearhigh-centralitynodes/links
+-Promotemixed-usedevelopmentaroundhigh-centralitynodes/links
+-Improveconsistencyoflink/nodecentralitydistributionwiththepower-lawdistribution
+Connectivity -Includeredundantconnectivityinthestreetnetworktomaintainserviceaccessibilityandtofacilitatesmoothevacuationintheimmediate
+aftermathofdisasters
+-Improveconnectivity(inconjunctionwithothermeasuressuchashighdensityandmixeduse)toenhanceaccessibilityandtoimprovewalkability
+-Indisaster-proneareas,griddednetworks,withsmallblocks,aremoredesirableforimprovingemergencyserviceaccessibilityandforfacilitating
+rapidevacuation.Griddednetworksarealsorecommendedforachievingbenefitsrelatedtotheotherdimensionsofresilience(environmental,social,
+economic)
+-Comparedwithdendriticnetworks,griddednetworksarelessvulnerabletopotentialdisruptionsinsomepartsofthestreetnetwork
+-Griddednetworksimproveaccessibilitytopublictransportation
+-Reformtree-likepatternstoimprovetheirconnectivity(e.g.,byaddingwalking/cyclingpathstoconnectcul-de-sacroadstootherroadsinthe
+network)
+-Locateamenitiessuchasparks,openspacesandcommunalplacesnearhighlyconnectedstreetsandintersections
+Width -Whendeterminingthestreetwidth,payattentiontothepointthatvehicularmovementisnotthesolefunctionofthestreetanditssocial,economic,
+andenvironmentalfunctionsshouldalsobeconsidered
+-Appropriatestreetwidthimprovesevacuationandrecoveryprocesses,facilitatescreatingmulti-modalstreets,andallowsadaptationtotechnological
+transformationsandchangingconditions
+-Considertypeofthethreat/stressor,streetcanyongeometry(aspectratio),andpopulationdensityoftheareafordeterminingtheoptimalwidth
+-Payattentiontothescalehierarchyandthepowerlawdistributionwhendeterminingthespatialarrangementanddistributionofthestreetwidth
+Edges -Modifystreetedges,throughstreetscapeimprovements,toensurethatstreetsprovidemobility,accessibility,andsocio-economicfunctions
+-Promotemixeduse,specificallyatthegroundlevel
+-Payattentiontotheconceptofserialvision
+-Payattentiontotheblocksizetoachievedesiredlevelsofpermeability
+-Payattentiontothesizeofzoninglotstoincreasethenumberofunitsalongthestreet
+-Enhancethevisualandphysicalopenness(andcontinuity)betweeninnerandouterspaces
+-Increasethefractionofstreet-facingplots
+-Whereverpossible,designstreetsassharedspaces(e.g.,byapplyingtraffic-calmingmeasuresandthroughconceptssuchastheWoonerfconcept)
+-Integrategreeneryandgreeninfrastructureintothedesignofedgesandsidewalks
+Layoutandorientation -Theoptimalorientationofstreets(forimprovingoutdoorthermalcomfortandforreducingbuildingenergyuse)ishighlydependentonfactorssuch
+astheaspectratio,localclimaticconditions,relativehumidity,solarradiation,prevailingwinddirection,andwindvelocity.Therefore,itshouldbe
+specifiedonacase-by-casebasis
+-Theincomingsolarradiation,followedbythewindexposurearetwoimportantfactorsthatshouldbeconsideredwhendeterminingstreetorientation
+anddesigningstreetcanyons
+-Inseasonalclimates,orientationandaspectratioofthestreetcanyonshouldbedesignedinawaytomaximizeshadingandwindflowinthesummer
+butmaximizesolarexposureandminimizewindexposureinthewinter.
+-Reformmonotonousstreetsthatcontinueforalongdistancebyimprovingtheirvisualqualitiesandbyenhancingtheirnavigability
+Table3
+Availabilityofevidenceinthereviewedliteratureontheresilienceoftheselectedstreetnetworkelementstovariousthreatsandstressors.
+184
+A.Sharifi Building and Environment 147 (2019) 171–187
+urbanstreetnetwork,GeoInformatica8(2)(2004)157–171. changingovertime?J.Plann.Educ.Res.34(4)(2014)394–408.
+[20] G.Boeing,OSMnx:newmethodsforacquiring,constructing,analyzing,andvi- [56] D.Milakis,R.Cervero,B.vanWee,Staylocalorgoregional?Urbanformeffects
+sualizingcomplexstreetnetworks,Comput.Environ.UrbanSyst.65(2017) onvehicleuseatdifferentspatialscales:atheoreticalconceptanditsapplication
+126–139. totheSanFranciscoBayArea,J.TransportLandUse8(2)(2015)59–86.
+[21] G.Boeing,PlanarityandStreetNetworkRepresentationinUrbanFormAnalysis, [57] C.Hachem,ImpactofneighborhooddesignonenergyperformanceandGHG
+(2018)arXivpreprintarXiv:1806.01805. emissions,Appl.Energy177(2016)422–434.
+[22] G.Boeing,Amulti-scaleanalysisof27,000urbanstreetnetworks:everyUScity, [58] Y.Long,C.C.Huang,Doesblocksizematter?Theimpactofurbandesignon
+town,urbanizedarea,andZillowneighborhood,Environ.Plann.B:UrbanAnal. economicvitalityforChinesecities,Environ.Plann.B:UrbanAnal.CitySci.
+CitySci.(2018)1–19,https://doi.org/10.1177/2399808318784595. (2017)1–17,https://doi.org/10.1177/2399808317715640.
+[23] S.Porta,E.Strano,V.Iacoviello,R.Messora,V.Latora,A.Cardillo,F.Wang, [59] A.Carpenter,Resilienceinthesocialandphysicalrealms:lessonsfromtheGulf
+S.Scellato,StreetcentralityanddensitiesofretailandservicesinBologna,Italy, coast,Int.J.DisasterRiskReduct.14(2015)290–301.
+Environ.Plann.Plann.Des.36(3)(2009)450–465. [60] S.Brody,H.Kim,J.Gunn,Examiningtheimpactsofdevelopmentpatternson
+[24] A.Telega,UrbanStreetNetworkAnalysisUsingSpaceSyntaxinGIS–cracowCase floodingontheGulfofMexicocoast,UrbanStud.50(4)(2013)789–806.
+Study,ArchivesofGeomatics2016-Abstracts,(2016),p.131. [61] K.Lynch,TheImageoftheCity,M.I.T.Press,Cambridge,Mass,1960.
+[25] B.Hillier,A.Leaman,P.Stansall,M.Bedford,Spacesyntax,Environ.Plann.Plann. [62] S.Salat,L.Bourdic,UrbanComplexity,EfficiencyandResilience,Energy
+Des.3(2)(1976)147–185. Efficiency-aBridgetoLowCarbonEconomy,InTech,2012.
+[26] J.Y.Lin,Y.F.Ban,Complexnetworktopologyoftransportationsystems,Transport [63] A.Feliciotti,O.Romice,S.Porta,Designforchange:fiveproxiesforresiliencein
+Rev.33(6)(2013)658–685. theurbanform,OpenHouseInt.41(4)(2017)23–30.
+[27] P.Crucitti,V.Latora,S.Porta,Centralitymeasuresinspatialnetworksofurban [64] D.Brand,H.Nicholson,Publicspaceandrecovery:learningfrompost-earthquake
+streets,Phys.Rev.E73(3)(2006)036125. Christchurch,J.UrbanDes.21(2)(2016)159–176.
+[28] S.Porta,P.Crucitti,V.Latora,Thenetworkanalysisofurbanstreets:aprimal [65] P.Villagra,C.Rojas,R.Ohno,M.Xue,K.Gomez,AGIS-baseexplorationofthe
+approach,Environ.Plann.Plann.Des.33(5)(2006)705–725. relationshipsbetweenopenspacesystemsandurbanformfortheadaptivecapa-
+[29] P.Crucitti,V.Latora,S.Porta,Centralityinnetworksofurbanstreets,Chaos: cityofcitiesafteranearthquake:thecasesoftwoChileancities,Appl.Geogr.48
+Interdiscipl.J.NonlinearSci.16(1)(2006)015113. (2014)64–78.
+[30] S.Caprì,M.Ignaccolo,G.Inturri,M.LePira,Greenwalkingnetworksforclimate [66] T.Bond,D.Mercer,Subdivisionpolicyandplanningforbushfiredefence:anatural
+changeadaptation,Transport.Res.TransportEnviron.45(2016)84–95. hazardMitigationstrategyforresidentialperi-urbanregionsinVictoria,Australia,
+[31] L.G.Mattsson,E.Jenelius,Vulnerabilityandresilienceoftransportsystems-a Geogr.Res.-Aust.52(1)(2014)6–22.
+discussionofrecentresearch,Transport.Res.Pol.81(2015)16–34. [67] T.K.Dhar,L.Khirfan,Amulti-scaleandmulti-dimensionalframeworkforen-
+[32] N.Y.Aydin,H.S.Duzgun,F.Wenzel,H.R.Heinimann,Integrationofstresstesting hancingtheresilienceofurbanformtoclimatechange,UrbanClim.19(2017)
+withgraphtheorytoassesstheresilienceofurbanroadnetworksunderseismic 72–91.
+hazards,Nat.Hazards91(1)(2018)37–68. [68] A.M.Fraser,M.V.Chester,Transitsystemdesignandvulnerabilityofridersto
+[33] M.Batty,Resilientcities,networks,anddisruption,Environ.Plann.Plann.Des.40 heat,J.TransportHealth4(2017)216–225.
+(4)(2013)571–573. [69] C.Alexander,ACityIsNotaTree:50thAnniversaryEdition,SustasisPress,2017.
+[34] S.Wasserman,K.Faust,SocialNetworkAnalysis:MethodsandApplications, [70] M.Mehaffy,S.Porta,Y.Rofe,N.Salingaros,Urbannucleiandthegeometryof
+CambridgeUniversityPress,Cambridge;NewYork,1994. streets:the‘emergentneighborhoods’model,UrbanDes.Int.15(1)(2010)22–46.
+[35] L.C.Freeman,Centralityinsocialnetworksconceptualclarification,Soc.Network. [71] S.H.Wang,S.L.Huang,W.W.Budd,Resilienceanalysisoftheinteractionofbe-
+1(3)(1979)215–239. tweentyphoonsandlandusechange,Landsc.UrbanPlann.106(4)(2012)
+[36] J.Q.Wang,Resilienceofself-organisedandtop-downplannedcities-Acasestudy 303–315.
+onLondonandbeijingstreetnetworks,PLoSOne10(12)(2015). [72] A.Sharifi,A.Murayama,Changesinthetraditionalurbanformandthesocial
+[37] M.Akbarzadeh,S.Memarmontazerin,S.Derrible,S.F.SalehiReihani,Theroleof sustainabilityofcontemporarycities:acasestudyofIraniancities,HabitatInt.38
+traveldemandandnetworkcentralityontheconnectivityandresilienceofan (2013)126–134.
+urbanstreetsystem,Transportation(2017)1–15,https://doi.org/10.1007/ [73] P.Allan,M.Bryant,Resilienceasaframeworkforurbanismandrecovery,J.
+s11116-017-9814-y. Landsc.Architect.6(2)(2011)34–45.
+[38] A.DeMontis,S.Caschili,M.Mulas,G.Modica,A.Ganciu,A.Bardi,A.Ledda, [74] S.Argyroudis,J.Selva,P.Gehl,K.Pitilakis,Systemicseismicriskassessmentof
+L.Dessena,L.Laudari,C.R.Fichera,Urban-ruralecologicalnetworksforlandscape roadnetworksconsideringinteractionswiththebuiltenvironment,Comput.
+planning,LandUsePol.50(2016)312–327. AidedCiv.Infrastruct.Eng.30(7)(2015)524–540.
+[39] X.Zhang,E.Miller-Hooks,K.Denny,Assessingtheroleofnetworktopologyin [75] J.Davis,S.Uffer,G.Trangoš,EvolvingCities:ExploringtheRelationsbetween
+transportationnetworkresilience,J.TransportGeogr.46(2015)35–45. UrbanFormResilienceandtheGovernanceofUrbanForm,LondonSchoolof
+[40] L.Bourdic,S.Salat,C.Nowacki,Assessingcities:anewsystemofcross-scale EconomicsandPoliticalScience,London,2013.
+spatialindicators,Build.Res.Inf.40(5)(2012)592–605. [76] E.C.Rantzoudi,J.N.Georgi,Correlationbetweenthegeometricalcharacteristicsof
+[41] S.Salat,D.Vialan,C.Nowacki,ACommonMetricsandSetofIndicatorsfor streetsandmorphologicalfeaturesoftreesfortheformationoftreelinesinthe
+AssessingBuildingsandUrbanFabricSustainabilityPerformance,Cesb10:Central urbandesignofthecityofOrestiada,Greece,UrbanEcosyst.20(5)(2017)
+EuropetowardsSustainableBuilding-fromTheorytoPractice,(2010),pp. 1081–1093.
+509–512. [77] R.Revelli,A.Porporato,Ecohydrologicalmodelforthequantificationofeco-
+[42] D.C.Novak,J.L.Sullivan,Alink-focusedmethodologyforevaluatingaccessibility systemservicesprovidedbyurbanstreettrees,UrbanEcosyst.21(3)(2018)
+toemergencyservices,Decis.SupportSyst.57(2014)309–319. 489–504.
+[43] M.Silva,V.Oliveira,V.Leal,Urbanformandenergydemand:areviewofenergy- [78] M.Radhakrishnan,A.Pathirana,R.M.Ashley,B.Gersonius,C.Zevenbergen,
+relevanturbanattributes,J.Plann.Lit.32(2017)346–365088541221770690. Flexibleadaptationplanningforwatersensitivecities,Cities78(2018)87–95.
+[44] A.Kermanshah,S.Derrible,Robustnessofroadsystemstoextremeflooding:using [79] H.Jayawardena,M.vanRoon,Watersensitiveplanninganddesignasanecolo-
+elementsofGIS,traveldemand,andnetworkscience,Nat.Hazards86(1)(2017) gicallyinspiredapproachtodeliveringfloodresilienturbanenvironmentinSri
+151–164. Lanka,WaterPract.Technol.12(4)(2017)964–977.
+[45] L.C.Freeman,Asetofmeasuresofcentralitybasedonbetweenness,Sociometry [80] M.Csete,A.Buzasi,Climate-orientedassessmentofmainstreetdesignandde-
+(1977)35–41. velopmentinbudapest,J.Environ.Eng.Landsc.Manag.24(4)(2016)258–268.
+[46] A.M.Remali,S.Porta,O.Romice,H.Abudib,Streetquality,streetlife,street [81] M.M.E.vanEsch,R.H.J.Looman,G.J.deBruin-Hordijk,Theeffectsofurbanand
+centrality,in:Vaughan(Ed.),SuburbanUrbanities–suburbsandtheLifeofthe buildingdesignparametersonsolaraccesstotheurbancanyonandthepotential
+HighStreet,vol.5,2015,pp.104–129. fordirectpassivesolarheatingstrategies,EnergyBuild.47(2012)189–200.
+[47] S.Porta,V.Latora,F.H.Wang,S.Rueda,E.Strano,S.Scellato,A.Cardillo,E.Belli, [82] S.Salat,L.Bourdic,Systemicresilienceofcomplexurbansystems,TeMA-
+F.Cardenas,B.Cormenzana,L.Latora,Streetcentralityandthelocationofeco- TrimestraledelLaboratorioTerritorioMobilitàeAmbiente-TeMALab5(2)(2012)
+nomicactivitiesinBarcelona,UrbanStud.49(7)(2012)1471–1488. 55–68.
+[48] Y.L.Liu,X.J.Wei,L.M.Jiao,H.M.Wang,Relationshipsbetweenstreetcentrality [83] R.Ewing,S.Hamidi,Compactnessversussprawl:areviewofrecentevidencefrom
+andlanduseintensityinWuhan,China,J.UrbanPlann.Dev.142(1)(2016). theUnitedStates,J.Plann.Lit.30(4)(2015)413–432.
+[49] S.Salat,Asystemicapproachofurbanresilience:powerlawsandurbangrowth [84] G.Cullen,TheConciseTownscape,VanNostrandReinholdCo.,NewYork,1971.
+patterns,Int.J.UrbanSustain.Dev.9(2)(2017)107–135. [85] J.Jacobs,TheDeathandLifeofGreatAmericanCities,Vintagebooks,NewYork,
+[50] N.Larco,Sustainableurbandesign–a(draft)framework,J.UrbanDes.(2015) 1961.
+1–29. [86] P.Bosselmann,RepresentationofPlaces:RealityandRealisminCityDesign,
+[51] R.Ewing,R.Cervero,Travelandthebuiltenvironment,J.Am.Plann.Assoc.76 UniversityofCaliforniaPress,Berkeley,1998.
+(3)(2010)265–294. [87] T.R.Oke,UrbanClimates,CambridgeUniversityPress,Cambridge,2017.
+[52] J.Leon,A.March,Urbanmorphologyasatoolforsupportingtsunamirapidre- [88] J.L.Nasar,Theevaluativeimageofthecity,J.Am.Plann.Assoc.56(1)(1990)
+silience:acasestudyofTalcahuano,ChileD,HabitatInt.43(2014)250–262. 41–53.
+[53] T.-T.-H.Pham,P.Apparicio,S.Landry,J.Lewnard,Disentanglingtheeffectsof [89] J.M.Massengale,V.Dover,StreetDesign:theSecrettoGreatCitiesandTowns,
+urbanformandsocio-demographiccontextonstreettreecover:amulti-level JohnWiley&Sons,Inc.,Hoboken,NewJersey,2014.
+analysisfromMontréal,Landsc.UrbanPlann.157(2017)422–433. [90] C.Hachem,A.Athienitis,P.Fazio,Evaluationofenergysupplyanddemandin
+[54] D.Stead,S.Marshall,Therelationshipsbetweenurbanformandtravelpatterns. solarneighborhood,EnergyBuild.49(2012)335–347.
+Aninternationalreviewandevaluation,Eur.J.TransportInfrastruct1(2)(2001) [91] K.T.Huang,Y.J.Li,Impactofstreetcanyontypologyonbuilding'speakcooling
+113–141. energydemand:aparametricanalysisusingorthogonalexperiment,EnergyBuild.
+[55] E.Guerra,ThebuiltenvironmentandcaruseinMexicocity:istherelationship 154(2017)448–464.
+186
+A.Sharifi Building and Environment 147 (2019) 171–187
+[92] Y.Zhang,X.Du,Y.Shi,Effectsofstreetcanyondesignonpedestrianthermal 302–318.
+comfortinthehot-humidareaofChina,Int.J.Biometeorol.61(8)(2017) [101] F.Ali-Toudert,H.Mayer,Numericalstudyontheeffectsofaspectratioandor-
+1421–1432. ientationofanurbanstreetcanyononoutdoorthermalcomfortinhotanddry
+[93] A.Chatzidimitriou,S.Yannas,Streetcanyondesignandimprovementpotentialfor climate,Build.Environ.41(2)(2006)94–108.
+urbanopenspaces;theinfluenceofcanyonaspectratioandorientationonmi- [102] M.Taleghani,L.Kleerekoper,M.Tenpierik,A.vandenDobbelsteen,Outdoor
+croclimateandoutdoorcomfort,Sustain.CitiesSoc.33(2017)85–101. thermalcomfortwithinfivedifferenturbanformsinTheNetherlands,Build.
+[94] A.S.Nouri,J.P.Costa,M.Santamouris,A.Matzarakis,Approachestooutdoor Environ.83(2015)65–78.
+thermalcomfortthresholdsthroughpublicspacedesign:areview,Atmosphere9 [103] F.Bourbia,F.Boucheriba,Impactofstreetdesignonurbanmicroclimateforsemi
+(3)(2018)48. aridclimate(Constantine),Renew.Energy35(2)(2010)343–347.
+[95] C.Ketterer,A.Matzarakis,Human-biometeorologicalassessmentofheatstress [104] T.Sharmin,K.Steemers,A.Matzarakis,Analysisofmicroclimaticdiversityand
+reductionbyreplanningmeasuresinStuttgart,Germany,Landsc.UrbanPlann. outdoorthermalcomfortperceptionsinthetropicalmegacityDhaka,Bangladesh,
+122(2014)78–88. Build.Environ.94(2015)734–750.
+[96] E.Andreou,Thermalcomfortinoutdoorspacesandurbancanyonmicroclimate, [105] J.A.RodríguezAlgeciras,L.GómezConsuegra,A.Matzarakis,Spatial-temporal
+Renew.Energy55(2013)182–188. studyontheeffectsofurbanstreetconfigurationsonhumanthermalcomfortin
+[97] A.Vartholomaios,Aparametricsensitivityanalysisoftheinfluenceofurbanform theworldheritagecityofCamagüey-Cuba,Build.Environ.101(2016)85–101.
+ondomesticenergyconsumptionforheatingandcoolinginaMediterraneancity, [106] S.Seelig,Amasterplanforlowcarbonandresilienthousing:the35haareain
+Sustain.CitiesSoc.28(2017)135–145. HashtgerdNewTown,Iran,Cities28(6)(2011)545–556.
+[98] E.Kruger,D.Pearlmutter,F.Rasia,Evaluatingtheimpactofcanyongeometryand [107] M.D.Scoppa,J.Peponis,Distributedattraction:theeffectsofstreetnetwork
+orientationoncoolingloadsinahigh-massbuildinginahotdryenvironment, connectivityuponthedistributionofretailfrontageinthecityofBuenosAires,
+Appl.Energy87(6)(2010)2068–2078. Environ.Plann.Plann.Des.42(2)(2015)354–378.
+[99] Y.K.Ko,J.D.Radke,Theeffectofurbanformandresidentialcoolingenergyusein [108] M.Bielik,B.Emo,S.Schneider,C.Hölscher,DoesUrbanDensityFollow
+Sacramento,California,Environ.Plann.Plann.Des.41(4)(2014)573–593. Centrality?.
+[100] Y.J.Balslev,O.Potchter,A.Matzarakis,Climaticandthermalcomfortanalysisof [109] M.Barthélemy,A.Flammini,Co-evolutionofdensityandtopologyinasimple
+theTel-AvivGeddesPlan:ahistoricalperspective,Build.Environ.93(2015) modelofcityformation,Network.SpatialEcon.9(3)(2009)401–425.
+187
+

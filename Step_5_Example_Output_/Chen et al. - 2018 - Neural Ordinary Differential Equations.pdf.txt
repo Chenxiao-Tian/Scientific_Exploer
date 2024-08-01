@@ -1,0 +1,42 @@
+Extracted Keywords:
+ODE, ODE solvers, neural networks, latent ODE, Neural, Machine Learning, time, learning, recurrent neural, latent
+
+Main Topics:
+Neural Ordinary Differential Equations
+Ricky T. Q. Chen, Yulia Rubanova, Jesse Bettencourt, David Duvenaud
+University, Vector Institute
+�, a new family, deep neural network models, a
+discrete sequence, hidden layers, the derivative, the hidden
+state, a neural network, The output, the network, a black-
+box differential equation, These continuous-depth models, constant
+memory cost, their evaluation strategy, each input, numerical precision, these properties, continuous-depth
+residual networks, continuous-time latent variable models, continuous normalizingﬂows, a generative model, maximum
+likelihood, the data dimensions, any ODE solver, its
+internal operations, larger models, 1 IntroductionResidual Network ODE Network, � �, �
+Figure, A Residual network, a
+discrete sequence, ofﬁnite transformations, A ODE network, a vector
+ﬁeld, the state, evaluation locations, residual networks, recurrent n
+
+Methodologies:
+Figure 1contrasts these two approaches.
+ Adaptive computation Euler’s method is perhaps the simplest method for solving ODEs. Adaptive computation Euler’s method is perhaps the simplest method for solving ODEs. In Section 4, we derive
+this result and use it to construct a new class of invertible density models that avoids the single-unit
+bottleneck of normalizingﬂows, and can be trained directly by maximum likelihood.
+ We treat the ODE solver as a black box, and compute gradients using theadjoint sensitivity
+method( Pontryagin et al. ,1962 ). This approach computes gradients by solving a second, aug-
+mented ODE backwards in time, and is applicable to all ODE solvers. This approach scales linearly
+with problem size, has low memory cost, and explicitly controls numerical error.
+ Consider optimizing a scalar-valued loss functionL(), whose input is the result of an ODE solver:
+L(z(t 1)) The 
+
+Research Outcomes:
+Figure 1contrasts these two approaches.
+ Adaptive computation Euler’s method is perhaps the simplest method for solving ODEs. Adaptive computation Euler’s method is perhaps the simplest method for solving ODEs. In Section 4, we derive
+this result and use it to construct a new class of invertible density models that avoids the single-unit
+bottleneck of normalizingﬂows, and can be trained directly by maximum likelihood.
+ We treat the ODE solver as a black box, and compute gradients using theadjoint sensitivity
+method( Pontryagin et al. ,1962 ). This approach computes gradients by solving a second, aug-
+mented ODE backwards in time, and is applicable to all ODE solvers. This approach scales linearly
+with problem size, has low memory cost, and explicitly controls numerical error.
+ Consider optimizing a scalar-valued loss functionL(), whose input is the result of an ODE solver:
+L(z(t 1)) The 

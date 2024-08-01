@@ -1,0 +1,41 @@
+Extracted Keywords:
+network reliability, Network, reliability, terminal reliability, reliability polynomial, infrastructure network, networks, terminal network, Haitao Liao, Hernandez Azucena
+
+Main Topics:
+Network Resilience, the 60th ESReDA 
+Seminar, the  University  
+Grenoble Alpes, 4-5 May, Remenytė -Prescott, EN ISSN, deep reinforcement learning, the  
+reliability, an infrastructure network, Jose Carlos Hernandez Azucena, Henley Wells, Haitao Liao, Kelly Sullivan, Edward A. 
+Pohl, Industrial Engineering, Abstract  
+Maximizing connectivity, the most critical requirements, an 
+infrastructure network, the goal, completin g, a 
+sequence, possible actions, This work, an infrastructure network, reliability improvement, all -terminal reliability, the initial structure, the 
+objective, the network's all -terminal reliability, several 
+practical constraints, the total budget, available types, each step, the complex optimization problem, the potential, Deep Reinforcement 
+Learning, this work, ick testing, the DRL m, a computational environment, Stable Baselines, a Proximal Policy Optimization (P
+
+Methodologies:
+To facilitate the implementation of  DRL in solving such problem s, different 
+methods are explored with the help of a permanent database that stores previously 
+observed network states without recalculating their polynomials. To calculate all -terminal 
+network reliability, numerous methods have been used. These methods provide either an 
+exact value or an estimate of the reliability. [ 3] summarizes exact methods for 
+calculating network reliability such as exponential time exact algorithms for general 
+networks and polynomial time exact algorithms for restricted classes of networks, as well 
+as other methods such as bounds on netwo rk reliability, and Monte Carlo simulation. [ 3] summarizes exact methods for 
+calculating network reliability such as exponential time exact algorithms for general 
+networks and polynomial time exact algorithms for restricted classes of networks, as well 
+
+
+Research Outcomes:
+To facilitate the implementation of  DRL in solving such problem s, different 
+methods are explored with the help of a permanent database that stores previously 
+observed network states without recalculating their polynomials. To calculate all -terminal 
+network reliability, numerous methods have been used. These methods provide either an 
+exact value or an estimate of the reliability. [ 3] summarizes exact methods for 
+calculating network reliability such as exponential time exact algorithms for general 
+networks and polynomial time exact algorithms for restricted classes of networks, as well 
+as other methods such as bounds on netwo rk reliability, and Monte Carlo simulation. [ 3] summarizes exact methods for 
+calculating network reliability such as exponential time exact algorithms for general 
+networks and polynomial time exact algorithms for restricted classes of networks, as well 
+

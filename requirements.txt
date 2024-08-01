@@ -1,0 +1,12 @@
+bibtexparser==1.2.0
+PyPDF2==1.26.0
+pdfplumber==0.5.28
+matplotlib==3.3.4
+networkx==2.5
+scikit-learn==0.24.1
+numpy==1.19.5
+scipy==1.6.0
+spacy==3.0.6
+yake==0.4.8
+community==1.0.0b1
+python-louvain==0.15

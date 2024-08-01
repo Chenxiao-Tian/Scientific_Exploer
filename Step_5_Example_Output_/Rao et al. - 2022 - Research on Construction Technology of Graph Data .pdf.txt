@@ -1,0 +1,42 @@
+Extracted Keywords:
+Data Model, Data, graph data, Model, Graph database, Graph, power grid, Power, CIM model, grid data
+
+Main Topics:
+Construction T echnology, Graph
+Data Model
+Wei Rao1(B, 310714175@qq.com
+2College, Nanjing University, Posts Telecommunications, China
+Abstract, the scale, the power grid, the traditional
+distribution network management model, the requirements, power
+grid development, the new situation, The current distribution network oper-
+ation inspection, data collection, aninformative and intelligent operation inspection management system, The upper-
+level production management system, the lack, operation inspection marketing data, the performance problem, topology data, the distribution network operation, inspec-
+tion, this paper, the graph data model, graphic
+elements, data migration, a topology map, the intelligent opera-tion, the distribution network, The research, the speciﬁc information, the power system equipment, the phys-
+ical relationship, the equipment, a data model, the griddiagram, Graph
+
+Methodologies:
+Aiming at the performance problem of thevisualization of topology data in the distribution network operation and inspec-
+tion, this paper uses the graph data model to build knowledge, designs graphic
+elements for data migration, and forms a topology map for the intelligent opera-tion and inspection of the distribution network. The research clearly and intuitively
+displays the speciﬁc information of the power system equipment and the phys-
+ical relationship between the equipment, thus forming a data model of the griddiagram.
+ Keywords: Graph database ·Topological graph ·Graph data model for power
+grid ·Distribution network inspection
+1 Introduction
+The distribution network is at the end of the power system and has the characteristics
+of wide area, large scale, many types, and multiple connections. This paper analyzes and studies the knowledge of graph data model
+construction, designs grap
+
+Research Outcomes:
+Aiming at the performance problem of thevisualization of topology data in the distribution network operation and inspec-
+tion, this paper uses the graph data model to build knowledge, designs graphic
+elements for data migration, and forms a topology map for the intelligent opera-tion and inspection of the distribution network. The research clearly and intuitively
+displays the speciﬁc information of the power system equipment and the phys-
+ical relationship between the equipment, thus forming a data model of the griddiagram.
+ Keywords: Graph database ·Topological graph ·Graph data model for power
+grid ·Distribution network inspection
+1 Introduction
+The distribution network is at the end of the power system and has the characteristics
+of wide area, large scale, many types, and multiple connections. This paper analyzes and studies the knowledge of graph data model
+construction, designs grap

@@ -1,0 +1,44 @@
+Extracted Keywords:
+Urban, Urban planning, Street networks, Urban Form, Urban Morphology, urban street, Smart Cities, street, Cities, Spatial Information
+
+Main Topics:
+1 Spatial Information, the Legibility, Urban Form, Big Data, Urban Morphology 
+ 
+Geoff Boeing1 
+University, Southern California, Urban planning, analytical cartography and 
+visual communication tools, spatial patterns, compare alternatives, the public, Classic urban form visualizations, Giambattista Nolli’s ichnographic maps, Allan Jacobs’s figure-ground diagrams, city streets, physical urban complexity, easily comprehensible 
+information artifacts, these traditional workflows, the Smart 
+Cities paradigm, user-generated content, harvested data, an information management context, New spatial technology platforms, big data, new lenses, urban form, This 
+paper, the theoretical framework, visual cultures, urban planning, computational data science processes, urban fabric patterns, spatial order, these workflows, OSMnx and 
+data, a collaborative spatial information system, mapping 
+platform, 
+
+Methodologies:
+Data-
+driven modeling and exploration of cities entail cycles of information management activities – 
+from data acquisition and transformation, to structuring and interpreting data to produce 
+useful information, to knowledge dissemination for planning and advocacy. Critical 
+approaches might identify sampling biases in user-generated content to adjust for over-
+representation of certain groups in these datasets and to foreground marginalized voices. 
+ Interpretative and narrative approaches can 
+enrich and contextualize data-driven urban morphology (Erin et al., 2017; Moudon, 1997). 
+ Interpretative and narrative approaches can 
+enrich and contextualize data-driven urban morphology (Erin et al., 2017; Moudon, 1997). 
+ In particular, it focuses 
+on a motivating question: how can user-contributed big data be collected, organized, and 
+modeled to explore the various spatial logics resultin
+
+Research Outcomes:
+Data-
+driven modeling and exploration of cities entail cycles of information management activities – 
+from data acquisition and transformation, to structuring and interpreting data to produce 
+useful information, to knowledge dissemination for planning and advocacy. Critical 
+approaches might identify sampling biases in user-generated content to adjust for over-
+representation of certain groups in these datasets and to foreground marginalized voices. 
+ Interpretative and narrative approaches can 
+enrich and contextualize data-driven urban morphology (Erin et al., 2017; Moudon, 1997). 
+ Interpretative and narrative approaches can 
+enrich and contextualize data-driven urban morphology (Erin et al., 2017; Moudon, 1997). 
+ In particular, it focuses 
+on a motivating question: how can user-contributed big data be collected, organized, and 
+modeled to explore the various spatial logics resultin

@@ -1,0 +1,446 @@
+References:
+www.nature.com/scientificreports/
+Figure 6. Service disruptions and network improvements. Top left: average time it takes to get to the city
+center between 08:30 and 09:00. Top right: difference with the original case when the tram is removed. Bottom
+left: difference when the 2 most used lines to get to the city center are removed (lines 22 and 35). Bottom
+right: difference if we add a new tram line. This pictures have being done using tiles from OpenStreetMap. The
+cartography in the openstreetmap map tiles is licensed under cc by-sa (www.openstreetmap.org/copyright). The
+license terms can be found on the following link: http://creativecommons.org/licenses/by-sa/2.0/ (Accesed: 1st
+june 2015). © OpenStreetMap contributors.
+References
+1. Kivelä, M. et al. Multilayer networks. Journal of Complex Networks 2, 203–271 (2014).
+2. Buldyrev, S. V., Parshani, R., Paul, G., Stanley, H. E. & Havlin, S. Catastrophic cascade of failures in interdependent networks. Nature
+464, 1025–1028 (2010).
+3. Cozzo, E., Arenas, A. & Moreno, Y. Stability of boolean multilevel networks. Phys. Rev. E 86, 036115 (2012).
+4. Cozzo, E., Baños, R. A., Meloni, S. & Moreno, Y. Contact-based social contagion in multiplex networks. Phys. Rev. E 88, 050801
+(2013).
+5. Gallotti, R. & Barthelemy, M. Anatomy and efficiency of urban multimodal mobility. Scientific reports 4 (2014).
+6. De Domenico, M., Solé-Ribalta, A., Gómez, S. & Arenas, A. Navigability of interconnected networks under random failures.
+Proceedings of the National Academy of Sciences 111, 8351–8356 (2014).
+7. Gallotti, R., Porter, M. A. & Barthelemy, M. Lost in transportation: Information measures and cognitive limits in multilayer
+navigation. Science Advances 2 (2016).
+8. Zhang, L., Yang, H., Wu, D. & Wang, D. Solving a discrete multimodal transportation network design problem. Transportation
+Research Part C: Emerging Technologies 49, 73–86 (2014).
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 8
+
+Annexes/Appendices:
+
+Body Text:
+www.nature.com/scientificreports
+OPEN A Multilayer perspective for the
+analysis of urban transportation
+systems
+received: 11 July 2016 Alberto Aleta1, Sandro Meloni1,2 & Yamir Moreno1,2,3
+Accepted: 08 February 2017
+Public urban mobility systems are composed by several transportation modes connected together.
+Published: 15 March 2017
+Most studies in urban mobility and planning often ignore the multi-layer nature of transportation
+systems considering only aggregated versions of this complex scenario. In this work we present a model
+for the representation of the transportation system of an entire city as a multiplex network. Using two
+different perspectives, one in which each line is a layer and one in which lines of the same transportation
+mode are grouped together, we study the interconnected structure of 9 different cities in Europe raging
+from small towns to mega-cities like London and Berlin highlighting their vulnerabilities and possible
+improvements. Finally, for the city of Zaragoza in Spain, we also consider data about service schedule
+and waiting times, which allow us to create a simple yet realistic model for urban mobility able to
+reproduce real-world facts and to test for network improvements.
+Multiplex networks1 are useful representations of systems in which the same set of nodes may be connected by
+different types of relationships. Examples of systems that can be modeled as multiplex networks include social
+networks, transportation systems with multiple transportation modes or biological systems in which different
+types of interactions are accounted for1. In a multiplex network, nodes and links are grouped in layers according
+to their nature. Layers can be interdependent and they contain information which would be lost if we only consid-
+ered the corresponding aggregated network. It has also been shown recently that different types of dynamics that
+are run on top of multilayer systems also provide new insights into the problems being modeled2–4.
+As discussed in previous papers5 most available studies on urban transportation consider either one single
+transportation mode or many modes but all merged in one aggregated network. Thus, the introduction of the
+new framework of multiplex networks for the analysis of urban transportation systems might allow to better
+understand complex issues like how to accurately account for the interplay between different transport modes.
+However, even though few works started to use a multiplex representation to study failures6 and efficiency5,7 in
+transportation systems, they still represent isolated cases. For instance, there are very recent studies that rely on
+a complex notation to incorporate multiple modes8 or time9, or that simply aggregate the whole network losing
+information regarding transfer times10. Very up-to-date reviews where the term multilayer is either not present or
+used in a completely different way11,12 can also be found in the specialized literature.
+The few previous studies on urban transportation systems as multiplex networks focus on addressing their
+multimodal nature, considering each layer as a transportation mode, to study their resilience6 or their coupling13.
+In this way, all the lines of the same mode (i.e. buses, metro and tram) are aggregated in a sort of superlayer. This
+representation is extremely compact –with only few layers– but it totally neglects transfer and waiting times
+between lines of the same mode that could eventually lead to a wrong estimation of shortest paths or travel times.
+Another solution is to consider each line of each mode as a single layer. While in this case we can preserve trans-
+fer times and synchronization between stops on different lines, it is not possible to quantify the importance of a
+transportation mode for the mobility in the system.
+To reconcile both approaches, in this paper we propose an urban transportation model based on multiplex
+networks where both representations are used to extract different information from the system. We show that
+superlayers are fundamental to study the interdependency and resilience of the system while to have a realistic
+model of human mobility the single line per layer perspective should be adopted. We test our model using 9
+1Department of Theoretical Physics, Universidad de Zaragoza, Zaragoza 50009, Spain. 2Institute for Biocomputation
+and Physics of Complex Systems (BIFI), Universidad de Zaragoza, 50018, Zaragoza, Spain. 3Institute for Scientific
+Interchange, ISI Foundation, Turin, Italy. Correspondence and requests for materials should be addressed to A.A. (email:
+albertoaleta@gmail.com) or S.M. (email: sandro.meloni@gmail.com) or Y.M. (email: yamir.moreno@gmail.com)
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 1
+www.nature.com/scientificreports/
+Layers
+City Bus Metro Tram Tot. Nodes Links
+London 541 11 3 555 19459 43614
+Berlin 151 22 10 183 2866 9079
+Madrid 177 16 3 196 4703 9176
+Barcelona 97 11 6 114 2512 5337
+Valencia 46 6 3 55 1228 2617
+Zaragoza 35 0 1 36 915 1550
+Malaga 41 2 0 43 1034 1876
+Bilbao 35 2 1 38 555 1212
+Vitoria 14 0 2 16 302 452
+Table 1. Principal characteristics of the networks under study, ordered by decreasing population29–37.
+different urban transportation networks raging from small cities of few hundred thousand inhabitants to meg-
+acities like London or Berlin. Finally, for a medium size city we will introduce detailed data about schedule and
+transfer times to create a more realistic dynamical scenario to test against real-world experimental data and facts.
+The remaining of the text is organized as follows. First, we give an overview of our multiplex representation in the
+Methods section and then use it to study the structure of 9 urban transportation networks in the first subsection
+of Results. Finally, in the second part of the Results section, we focus on one case study (city) for a deeper analysis.
+Specifically, we test if the model is able to reproduce experimental data and check for its possibilities regarding the
+study of service disruptions and network improvements.
+Methods
+We start considering each line of each mode of transport as a single layer. Each stop will be a node and there will
+be a weighted link between two nodes on a layer if the corresponding line passes through both of them, being
+the corresponding great-circle distance between them the weight. Although the same bus stop may be present in
+multiple layers, allowing transfers between them, this might not be the case between layers of different modes. To
+solve this problem, we will connect (with inter-layer links) each node of one mode to the closest one of each of the
+other modes as long as the distance between them is less than 100 m.
+In the second part of the results section, however, we will follow a slightly different scheme to add more real
+features to the model. In this case, we will add a new layer which represents the land to introduce the possibility of
+moving through the city by walking. To create this layer we first took the population density grid of the European
+Union14, which is composed of roughly 100 × 100 m cells, and extracted those inside the area of interest. Then, we
+took those cells which had a population density greater than zero and set a node in the middle of them. Finally, we
+linked together nodes belonging to neighboring cells and added the corresponding weight (distance in meters).
+To connect this layer with the rest of the system we simply determined which cell each stop belongs to and estab-
+lished a link between that stop and the corresponding node of the land layer. Once this was done we added, again,
+the distance between stops as a weight to their links. This distance is simply the geographical distance in the case
+of tram and metro, but for bus stops it was calculated taking into account street patterns using the Google Maps
+API15. In this way, the second model is much more powerful, allowing us not only to check the validity of the con-
+clusions extracted from the first analyses in a more realistic scenario but also to study more complex phenomena
+as service disruptions.
+Results
+Structure of urban transportation networks. In Table 1 we present the principal characteristics of the
+networks we are going to analyze. Data were obtained from a variety of sources, from each company’s website to
+city’s open data portals, and then arranged as described in the model discussed in Methods. As we can see they are
+very different in size and composition. For example, while Vitoria has a population of roughly 250,000 individuals
+and a small transportation network consisting of 302 nodes and 16 layers, London is one of the biggest cities in
+Europe with more than 8 · 106 inhabitants and a network consisting of 19,459 nodes and 555 layers.
+We start our analysis with one of the most basic measures of graph theory, the degree. In multiplex networks
+it can be defined in multiple ways. A straightforward approach is to consider the degree of node i as a vector k of
+i
+length M (the number of layers) where each element j represents the degree of node i in layer j. However, in this
+particular case this measure does not provide much information because, as each layer represents a single line, if
+a node is present in one layer it will have degree 2 in that layer (or 1 in special cases as the first/last stop of a line,
+although in our networks both stops are always the same one). What we can do is to examine the overlapping
+degree, o, which is simply the sum of the elements of k16 (Fig. 1).
+i i
+As we can see, although cities are very different from each other their overlapping degree distribution is quite
+similar: most of the nodes are only present in one layer (o = 2), some are present in two layers (o = 4) and only
+i i
+a few can be found in three or more layers. Given the nature of the system one could expect a low level of over-
+lapping between layers. However, what is really interesting is the fact that the maximum overlapping is quite
+similar in all the networks, even though their number of layers (and thus their theoretical maximum overlapping
+degree) differs a lot. Similar results are found if we look at the edge overlap distribution, where the edge overlap,
+o , is defined as the number of layers where a link between nodes i and j exists16. This kind of universal behavior
+ij
+can be understood if we take into consideration that these networks are embedded in city space and thus the real
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 2
+www.nature.com/scientificreports/
+Figure 1. Structural measures of the networks. Left: overlapping degree distribution of each network. Right:
+edge overlap distribution of each network. Despite these networks being quite different in composition and size
+they share some universal properties.
+Figure 2. Superlayer representation of the Madrid transportation system. The figure represents the three
+transportation modes considered: tram (yellow nodes, upper layer), metro (purple nodes, mid layer) and buses
+(white nodes, bottom layer). See Table 1 for statistics of these layers.
+theoretical maxima for both the overlapping degree and the edge overlap are not given by the number of layers
+but by either physical constraints or citizens’ interest.
+An interesting feature of multiplex networks is that the distribution of a quantity across the layers is, at least,
+as important as the overall value. For example, one node can have high overlapping degree either because it has
+a low value in all the layers or because it has a high value in just a few layers. However, in our model this does
+not apply due to the singularities of public transportation networks that we discussed before. Nevertheless, to get
+insights about the importance of a transportation mode over the others we can switch perspective and consider
+the superlayers representation, see Fig. 2. As in recent works6–7, we propose to group together lines belonging to
+the same transport mode ending up in most of the cases with three superlayers representing bus, tram and metro
+lines respectively. Except for this modification the other elements of the model remain untouched with interlayer
+links connecting nearby stops of different modes.
+To start this new analysis let us denote by C, C and C the subsets of layers corresponding to bus lines, tram
+b t m
+lines and metro lines respectively. Now we can redefine the overlapping degree as o =∑ ox where
+i x i
+o ix =∑ α∈Cxk i[α] with x = {b, t, m} and k i[α] representing the degree of node i in layer α. Then, instead of consid-
+e suri pn eg
+r
+lt ah ye
+e
+ra sc ,t Biv i′it =y d ∑is xtr (i 1bu −tio δn
+0,o
+a ixc ),r wos hs
+i
+cla hy e wr es 1 r7 e, pB ri e= sen∑
+t
+vα e( r1 su−
+s
+tδ h0 e,k i o[α v]) e, rw lae
+p
+c pa inn
+g
+s t du ed gy
+re
+t eh ie
+n
+a Fct igiv
+.
+i 3ty
+.
+distribution across
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 3
+www.nature.com/scientificreports/
+Figure 3. Superlayer activity versus overlapping degree for each network.
+At first one may think that nodes with the highest overlapping degree would also be those with the highest
+superlayer activity, but as we can see this is not the case. In fact, stops belonging to just one superlayer are the ones
+which tend to have the maximum overlapping degree. Those nodes despite being present in only one superlayer,
+surely have a major role for the mobility of the system. But, on the other hand, if we think in a disruption of the
+system it will be much easier to, for example, move temporarily a bus stop to a street nearby, even if it has a lot
+of lines, than cope with a disruption in a metro or tram stop. Thus, there is not a clear answer to the question of
+which node is the most important in these networks by just looking at the structure, as it depends on what we
+consider important.
+To end this structural study we will focus on another measure used in multiplex networks analyses: interde-
+pendence18. Interdependence of node i, λ, is defined as the sum over every other node j of the fraction of shortest
+i
+paths between node i and j which go through two or more layers over the total number of shortest paths between
+them. Hence, if λ is close to 0 it means that most of the paths go through just one layer while if it is close to 1
+i
+most of the paths go through 2 or more layers. The network interdependence is obtained as the average over all
+nodes. However, even though this measure is quite interesting as it provides some information which can not
+be obtained using the aggregated network alone, in our system it is not necessary because we already know that
+layers are interdependent. Indeed, if we look at Table 1 we can see that most of the networks have a number of
+nodes of the order of 1000, but a single bus line usually has around 50 stops, 100 at most, and lines of tram and
+metro have even less. This means that to reach every node of the network we will surely have to cross multiple
+layers regardless of our starting position. One possible solution would be to work with superlayers instead of
+single layers, as they would be denser. But then we would face a similar problem as the bus superlayer is much
+bigger than the other two.
+Therefore, we slightly modify this metric to take into account the specific nature of transportation networks.
+Let us denote by ψ the number of shortest paths between nodes i and j which go across two or more layers and by
+ij
+ψ (x) the number of shortest paths between nodes i and j which go across two or more layers with at least one of
+ij
+them belonging to superlayer x. Then, we can define the interdependency of superlayer x as:
+λ′=
+∑ i∑ i≠jψ ij(x)
+,
+x ∑ ∑ ψ
+i i≠j ij (1)
+that tells us how many shortest paths which go across two or more layers in the system have, at least, one link in
+superlayer x. Note that we normalize only over those shortest paths which use two or more layers because we are
+interested in figuring out which modes are used given the need to change to another line and not the need for
+change itself.
+Results of this measure are shown in Fig. 4a. Firstly, we note that almost all the shortest paths under consid-
+eration have at least one link in the bus superlayer, but this is quite logical given that the bus superlayer is much
+bigger than the others. Thus, most of the shortest paths will start or end in this superlayer. However, a closer look
+reveals an interesting result. Take the case of Madrid, for example. Even though its metro superlayer has only 16
+layers and 241 nodes, while its bus superlayer has 177 layers and 4590 nodes, more than 40% of the shortest paths
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 4
+www.nature.com/scientificreports/
+Figure 4. Superlayer interdependency of the networks. Left: Superlayer interpendency as defined in (1).
+Right: Superlayer interdependency divided by n which is the sum of the nodes inside superlayer x over the sum
+x
+of all the nodes in the system.
+have at least one link in it. Similar results are found in the rest of networks as, for example, in Zaragoza where
+20% of the shortest paths make use of the tram which has only 1 line and 50 nodes, with its bus superlayer being
+composed by 35 layers and 902 nodes.
+As it can be seen, to fully understand these results it is necessary to take into account the size of the superlay-
+ers, the problem is how to define it. In this case, as we are exploring paths from node to node, we will consider the
+fraction of all the nodes in each superlayer as a measure of size. This way, if n is the fraction of nodes in super-
+x
+layer x, we will divide λ′ by n to obtain the desired result. This procedure has it drawbacks as it is not upper
+x x
+bounded, but on the other hand it allows us to extract information on the importance of each layer in an easier
+way.
+From this modified measure (see Fig. 4b), we observe that the tram and the metro modes are of utmost impor-
+tance for the mobility of these systems, as they are part of much more shortest paths than it would correspond
+judging by their size. Note that we have not taken into account that they may have, on average, higher speed or
+greater carrying capacity than buses, and hence, the previous results are obtained only considering a topological
+point of view. The reason seems clear: metro and tram are usually used to connect distant points with straighter
+routes than bus lines. Another interesting conclusion that is a consequence of the previous one is that urban
+transportation is quite multimodal, although most of the networks examined rely mainly on two transportation
+modes. A good example of this is Madrid’s network where bus nodes cover most of the city and metro nodes con-
+nect distant locations with straighter paths throughout it. However, only one of the three tram lines overlaps with
+bus nodes, the others seem to go to locations that are not covered by bus. Thus, the tram mode is not used as a way
+to reach certain locations faster but to just connect distant locations at the periphery of the city.
+Case study: towards a data-driven modeling of an urban transportation system. In this section,
+we study a detailed model for urban transportation that includes not only the structure of the networks but also
+data about frequencies and traveling speeds. Our aim here is to realistically mimic a scenario that allows studying
+the efficiency of an urban transportation system and its response to malfunctioning or improvements. To do so,
+we also include the land layer, as discussed in Methods, allowing passengers to get to the stop which might be
+across the street even if there is not a direct link between different lines. In this way, we will be able to simulate
+paths starting/ending at any point of the city and not only at lines stops.
+We take the transportation network of the city of Zaragoza (Saragossa) in Spain as our case study, since we
+have data regarding average speed and frequency for each line19,20. This allows us to consider time, so that now
+the shortest path will be the one which takes less time, instead of the geographical distance. To this end, we divide
+the weight of the links by the average speed on their layer. Thus, the weight of a link will now represent time.
+Moreover, all weights are fixed throughout the simulation, as we consider that the speed is always the same, except
+for links connecting land nodes and stops. In the latter case, the weight of these ones will be the time at which
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 5
+www.nature.com/scientificreports/
+Place Zaragoza
+Universe People between 25 and 60 years old living in Zaragoza
+Interview System CATI (Computer-assisted telephone interviewing)
+Sample 300 people
+Sampling Stratified by gender, age and neighbourhood
+Sampling error ± 5.7%
+Quality control Complying with ISO 20252
+Date 9–19 of September, 2014
+Table 2. Survey methodology of the survey performed by the regional taxi association to assess the impact
+of the new tram line on the urban mobility.
+the next vehicle will arrive minus the current time: therefore, given a certain path, the sum of the weight of the
+links used that belong to the land layer, any other layer or to the inter-layer links set will give the total time spent
+walking, in a vehicle or waiting, respectively.
+Even more, due to the recent construction, in 2011, of the tramway, a survey was carried out to assess the
+impact of this new transportation mode in the mobility of the city21, see Table 2. Thus, we are able to test whether
+our model can provide similar (qualitative) results to passengers’ experience, namely: (i) mobility hinges on the
+tram, (ii) a lot of transfers are needed, (iii) if there is a disruption in the tram line the whole system is affected, (iv)
+bus stops are far from their destination and (v) bus frequencies are low. At the same time, although approximately,
+the previous effects can be quantified.
+As we do not have data regarding passengers flux we do not take into account the carrying capacity of the
+vehicles and thus we consider a free flow regime as well as two different scenarios: movement from any point of
+the city to the city center (coordinates 41.652, − 0.881) and vice versa and from any two points located at least
+2 km away from each other, which has been reported as the minimum distance a passenger has to go to consider
+using public transportation22.
+In Fig. 5 we show an overview of the results obtained considering 1.000 individuals per minute with random
+origin and destination between 08:30 am and 10:00 am with a walking speed 5 km/h23. In Fig. 5(a) the distribution
+of the number of transfers is shown, note that only 35% of the individuals have reached their destination without
+transfers, which agrees with (ii). In Fig. 5(b) we represent the distributions of the waiting times, total time and
+distance covered by walking. These results agree with (iv), as with a walking speed of 5 km/h 1 km is equivalent
+to 12 minutes and thus it represents approximately one third of the total time, but not with (v). Now, suppose that
+an individual needs to do one transfer to get to his location. If one of the two frequencies is too low, it might be
+faster to walk to get to the second line instead of getting there using another line or equivalently walking from the
+transfer point to his destination instead of waiting for the second vehicle. He would see two problems, he needs to
+walk a lot and the frequencies are low, but as he has not been waiting it will not be reflected on our model.
+To avoid this problem we introduced the parameter δ to modulate the walking speed v such as
+w
+v = (1 − δ) · 5 km/h. By tuning its value we can prevent individuals to avoid transfers but, at the same time, we
+w
+still allow them to do so if the distance is small enough. As we can see in Fig. 5(a) with δ = 0.5 the number of
+transfers increases greatly, which means that the system tended to avoid one transfer. If we look at time we see
+that, as expected, waiting time increases and the distance covered by walking reduces. The total time has been
+readjusted taking into account the decrease in walking speed so that if it varies is only because of the new transfer
+and, surprisingly, it almost does not change. This means that we have a duality in the system as we can choose
+between walking or waiting while keeping the total time constant, which indeed agrees with (iv) and (v). Note
+also that, although the waiting time distributions may not seem quite high if we compare them to the total time
+distributions, several studies have shown that waiting time perception is usually overestimated, specially if the real
+time has been quite low24–26. Besides, this increase in waiting time is in closer agreement with previous studies5.
+However, as they only took into account the walking time associated to transfers between modes, they did not
+observe this duality.
+Finally, picture Fig. 5(c) shows the fraction of individuals which make use of each line normalized over the
+total number of trips. In both scenarios almost half of the trips use the tram line which completely agrees with
+(i). Even more, it also agrees with what we saw when we studied the structure of the network in the previous
+subsection (Fig. 4b).
+The last item left to check is (iii). For simplicity, we will focus only on trips to the city center (Fig. 6). On the
+top left panel we show the average time it takes to get to the city center between 08:30 and 09:00 am. Now, our
+model allows us to easily test the behavior of the system during service disruptions by just removing the affected
+nodes or layers. In the top right panel of Fig. 6 we show the increase on the total time if we remove the tram line
+completely, result that agrees with (iii). Although the tram line is quite vulnerable as a disruption on a single node
+may cause the whole line to fail (as it follows a fixed path), it is important to note that this line has a couple of
+links which allows it to run in loops and thus, in this particular scenario, only the northern or the southern parts
+would be affected and not the whole line. Nevertheless, if we look at the bottom left panel of Fig. 6 we see that the
+situation is completely different if we remove the two most used bus lines in our model to get to the city center
+(lines 22 and 35). As the bus mode is more redundant, the effect is much lower, at least under free flow conditions.
+Besides, a disruption on a single bus node does not cause so many problems on the whole line as it can be easily
+moved to a location nearby. Thus, we can say that the bus network is much more resilient while tram lines speed
+up the complete network.
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 6
+www.nature.com/scientificreports/
+Figure 5. Overview of the mobility of the system with random origins and destinations: (a) number of transfers
+made by individuals to reach their destination; (b) time each individual has been waiting in any stop (left),
+distance covered by walking (center) and total time of the trip (right); (c) fraction of individuals who have used
+each line. Note that it is normalized over the number of trips thus, as a passenger may use more than one line,
+the total sum is not 1. The parameter δ denotes a penalization in the walking speed in order to force the use of
+transports.
+To conclude, our model can also be used to easily test network improvements as the addition of new lines. On
+the bottom right panel of Fig. 6 we show the differences on the average time to get to the city center if we add a
+new tram line from east to west as it has been recently proposed by the city council27. As we can see the west part
+of the city would be the most benefited by this addition as the decrease in time is higher than in the rest of the city,
+even more taking into account that, as shown in the top left panel of Fig. 6, that part of the city was further away
+from the city center. Note that we have not removed any bus line and thus this result shows us again how tram and
+metro lines naturally speed up the network.
+Discussion
+In this paper, we have proposed a method to model public transportation systems as multiplex networks, which
+allows to either get more insights into their network properties or extract new conclusions of practical value. We
+have analyzed the structure of 9 urban transportation networks and found some regularities among the systems
+studied that can be related to the underlying structure of the cities. We have also shown that both a per line and a
+per transportation mode representations are useful and complementary to extract information about the function-
+ing of transportation systems and to assess their vulnerabilities. Finally, using detailed data about service schedule
+and waiting times we created a realistic model for urban mobility. Despite its relative simplicity, we showed that
+our model not only reproduces real world facts, but that it can also be used to explore important issues like the
+impact of service disruptions and ways for network improvements, using information which, maybe with the
+exception of the average speed of each line, should be publicly available for most major cities. Needless to say, a
+deeper analysis would require to include the street network as the land layer and some information that might be
+harder to find -such as traffic light or mobility patterns- or specialized software like MATSim28, but that is beyond
+the scope of this study. Concluding, the proposed model can be used for a first diagnosis of the state of any urban
+transportation network using publicly available information and few computational resources.
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 7
+www.nature.com/scientificreports/
+9. Alessandretti, L., Márton, K. & Gauvin, L. User-based representation of time-resolved multimodal public transportation networks.
+R.Soc.opensci.3 3 (2016).
+10. Pang, J. Z. F., Bin Othman, N., Ng, K. M. & Monterola, C. Efficiency and robustness of different bus network designs. International
+Journal of Modern Physics C 26, 1550024 (2015).
+11. Lin, J. & Ban, Y. Complex network topology of transportation systems. Transport Reviews 33, 658–685 (2013).
+12. Ibarra-Rojas, O., Delgado, F., Giesen, R. & Muñoz, J. Planning, operation, and control of bus transport systems: A literature review.
+Transportation Research Part B: Methodological 77, 38–75 (2015).
+13. Strano, E., Shai, S., Dobson, S. & Barthelemy, M. Multiplex networks in metropolitan areas: generic features and local effects. Journal
+of The Royal Society Interface 12, 20150651 (2015).
+14. Gallego, F. J. A population density grid of the european union. Population and Environment 31, 460–473 (2010).
+15. developers.google.com/maps (accesed: 1st june 2015).
+16. Battiston, F., Nicosia, V. & Latora, V. Structural measures for multiplex networks. Physical Review E 89, 032804 (2014).
+17. Nicosia, V. & Latora, V. Measuring and modelling correlations in multiplex networks. arXiv preprint arXiv:1403.1546 (2014).
+18. Nicosia, V., Bianconi, G., Latora, V. & Barthelemy, M. Growing multiplex networks. Physical review letters 111, 058701 (2013).
+19. Average speed of each line (in spanish). Available at: http://www.heraldo.es/noticias/zaragoza/el_tranvia_superara_menos_la_
+velocidad_media_los_autobuses_urbanos.html (Accesed: 1st June 2015).
+20. Bus frequencies in the city of Zaragoza (in spanish). Available at: http://www.urbanosdezaragoza.es/ (Accesed: 1st June 2015).
+21. Survey: impact of tramway on mobility (in spanish). Available at: http://www.ainmer.es/_files/archivos/8477b10b-96a9-458a-87f6-
+2c8f51b5e387.pdf (Accesed: 1st June 2015).
+22. Guide on the public transport of Zaragoza (in spanish). Available at: http://www.observatoriomovilidad.es/images/stories/08_
+noticias/noticia_20150521_Guia_Transporte_Publico_ZGZ.pdf (Accesed: 1st June 2015).
+23. Browning, R. C., Baker, E. A., Herron, J. A. & Kram, R. Effects of obesity and sex on the energetic cost and preferred speed of
+walking. Journal of Applied Physiology 100, 390–398 (2006).
+24. Mishalani, R. G., McCord, M. M. & Wirtz, J. Passenger wait time perceptions at bus stops: Empirical results and impact on evaluating
+real-time bus arrival information. Journal of Public Transportation 9, 5 (2006).
+25. Watkins, K. E., Ferris, B., Borning, A., Rutherford, G. S. & Layton, D. Where is my bus? impact of mobile real-time information on
+the perceived and actual wait time of transit riders. Transportation Research Part A: Policy and Practice 45, 839–848 (2011).
+26. Lagune-Reutler, M., Guthrie, A., Fan, Y. & Levinson, D. Transit riders’ perception of waiting time and stops’ surrounding
+enviroments. TRANSIT 2, 3 (2015).
+27. Proposal of a new line for the tramway of Zaragoza (in spanish). Avaiable at: http://www.zaragoza.es/contenidos/movilidad/tranvia-
+linea2/general/memoria/memoria.pdf. (Accesed: 1st June 2015).
+28. Horni, A., Nagel, K. & Axhausen, K. The Multi-Agent Transport Simulation MATSim (Ubiquity Press, 2016).
+29. Barcelona http://opendata.bcn.cat/opendata/es/catalog/TRANSPORT, http://www.tmb.cat/es/linies-de-bus (Accesed: 1st June
+2015).
+30. Berlin http://transitfeeds.com/p/verkehrsverbund-berlin-brandenburg/213 (Accesed: 1st June 2015).
+31. Bilbao ftp://ftp.geo.euskadi.net/cartografia/Transporte/Moveuskadi/ (Accesed: 1st June 2015).
+32. London https://api-portal.tfl.gov.uk/docs (Accesed: 1st June 2015).
+33. Madrid http://datos.madrid.es/portal/site/egob, http://opendata.emtmadrid.es/ (Accesed: 1st June 2015).
+34. Malaga http://www.emtmalaga.es, http://metromalaga.es (Accesed: 1st June 2015).
+35. Valencia http://www.valencia.es/ayuntamiento/datosabiertos.nsf, http://www.metrovalencia.es/, https://www.emtvalencia.es/
+(Accesed: 1st June 2015).
+36. Vitoria ftp://ftp.geo.euskadi.net/cartografia/Transporte/Moveuskadi/ (Accesed: 1st June 2015).
+37. Zaragoza http://www.zaragoza.es/docs-api/#!/transporte-urbano (Accesed: 1st June 2015).
+Acknowledgements
+A. A was supported by an FPI doctoral fellowship. SM is supported by the MINECO through the Juan de la Cierva
+Program. This work has been partially supported by a grant to the group FENOL, by MINECO through grant
+FIS2014-55867-P and by the EC FET-Proactive Project Multiplex (grant 317532).
+Author Contributions
+A.A, S.M., and Y.M. designed the study, A.A. performed the analysis and the numerical simulations, A.A., S.M,
+and Y.M. analyzed the results. A.A, S.M. and Y.M. wrote the manuscript. All authors have reviewed and approved
+the final version.
+Additional Information
+Competing Interests: The authors declare no competing financial interests.
+How to cite this article: Aleta, A. et al. A Multilayer perspective for the analysis of urban transportation
+systems. Sci. Rep. 7, 44359; doi: 10.1038/srep44359 (2017).
+Publisher's note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and
+institutional affiliations.
+This work is licensed under a Creative Commons Attribution 4.0 International License. The images
+or other third party material in this article are included in the article’s Creative Commons license,
+unless indicated otherwise in the credit line; if the material is not included under the Creative Commons license,
+users will need to obtain permission from the license holder to reproduce the material. To view a copy of this
+license, visit http://creativecommons.org/licenses/by/4.0/
+© The Author(s) 2017
+ScIentIfIc RePoRtS | 7:44359 | DOI: 10.1038/srep44359 9
+

@@ -1,0 +1,42 @@
+Extracted Keywords:
+networks, network, complex networks, Phys, Social networks, nodes, Internet, scale-free networks, interaction networks, node
+
+Main Topics:
+Full Terms, https://www.tandfonline.com/action/journalInformation?journalCode=tadp20
+Advances, Physics
+ISSN, https://www.tandfonline.com/loi/tadp20
+Analyzing, real-world phenomena, complex networks, applications
+Luciano da Fontoura Costa, Osvaldo N. Oliveira Jr., Gonzalo Travieso, Francisco Aparecido Rodrigues, Paulino Ribeiro Villas Boas, Lucas
+Antiqueira, Matheus Palhares Viana, Luis Enrique Correa Rocha, this article, Luciano da Fontoura Costa, Osvaldo N. Oliveira Jr., Gonzalo Travieso, Francisco Aparecido Rodrigues, Paulino Ribeiro Villas Boas, Lucas Antiqueira, Matheus Palhares
+Viana, Luis Enrique Correa Rocha, real-world phenomena, complex networks, , DOI, this article, 12 May, your article, this journal 
+Article views, 8317
+View related articles, Citing articles, 94 View, articles 
+Advances, Physics
+V ol, real-world phenomena, complex networks, a survey, applications
+Luciano da Fo
+
+Methodologies:
+The success of new scientiﬁc areas can be assessed by their potential in contributing to new
+theoretical approaches and in applications to real-world problems. Conclusions and perspectives 385
+Acknowledgements 390
+Notes 390
+References 390
+Appendix 406
+1. Introduction
+The many achievements of physics over the last few centuries have been based on reductionist
+approaches, whereby the system of interest is reduced to a small, isolated portion of the world, withfull control of the parameters involved (e.g. temperature, pressure, electric ﬁeld). There is now a trend in science to extend the scientiﬁc method to become more integrationist
+and to deal explicitly with nonlinear phenomena. Despite the formalism and com-prehensiveness of the theoretical results obtained by Erd˝ os and collaborators, random networks
+ultimately proved not to be good models for natural structures and phenomena. In fac
+
+Research Outcomes:
+The success of new scientiﬁc areas can be assessed by their potential in contributing to new
+theoretical approaches and in applications to real-world problems. Conclusions and perspectives 385
+Acknowledgements 390
+Notes 390
+References 390
+Appendix 406
+1. Introduction
+The many achievements of physics over the last few centuries have been based on reductionist
+approaches, whereby the system of interest is reduced to a small, isolated portion of the world, withfull control of the parameters involved (e.g. temperature, pressure, electric ﬁeld). There is now a trend in science to extend the scientiﬁc method to become more integrationist
+and to deal explicitly with nonlinear phenomena. Despite the formalism and com-prehensiveness of the theoretical results obtained by Erd˝ os and collaborators, random networks
+ultimately proved not to be good models for natural structures and phenomena. In fac

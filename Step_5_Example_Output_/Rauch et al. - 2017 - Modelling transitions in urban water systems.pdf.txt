@@ -1,0 +1,48 @@
+Extracted Keywords:
+urban water, water, urban, Water Research, water infrastructure, urban development, water system, water management, model, Water Sci.
+
+Main Topics:
+Modelling transitions, urban water systems
+W. Raucha, C. Urichb, P.M. Bachb, B.C. Rogersc, F.J. de Haane, R.R. Brownf, M. Maira, D.T. McCarthyb, M. Kleidorfera, R. Sitzenfreia, A. Deleticb
+aUnit, Environmental Engineering, 13, 6020 Innsbruck, Austria
+bMonash Infrastructure, Civil Engineering Department, Monash University, Australia
+cCooperative Research Centre, Water Sensitive Cities, Australia
+dSchool, Social Sciences, Monash University, Australia
+eMelbourne School, Sustainable Society Institute, The University, Australia
+fMonash Sustainable Development Institute, Monash University, Australia
+article info
+Article history, revised form, Integrated modellingTransitionUrban drainageUrban water, managementExploratory modellingFlexible designabstract
+Long term planning, urban water infrastructure, the
+water system, the urban environment, societal dynamics, the complexity, these underlying pr
+
+Methodologies:
+This paper presents the ﬁrst step towards
+a new generation of integrated planning tools that take such an exploratory planning approach. For example, Rozos and
+Makropoulos (2013) and Willuweit and O'Sullivan (2013) use a
+common grid based approach, while Doglioni et al. Societal models
+frequently apply agent-based approaches to describe functional
+relationships. The link with physical reality is provided by cellular
+automata methods, with grid cells representing both the spatial
+representation of the system and the status of the water infra-
+structure. As such, the model aim is not detailed
+description of system dynamics but rather to provide a decision-
+support tool that enables stakeholders to test possible strategies
+and measures; this is known as exploratory modelling (e.g. Bankes,
+1993; Dessai et al., 2009; Lempert et al., 2003 ) and is becoming a
+standard approach to plan against u
+
+Research Outcomes:
+This paper presents the ﬁrst step towards
+a new generation of integrated planning tools that take such an exploratory planning approach. For example, Rozos and
+Makropoulos (2013) and Willuweit and O'Sullivan (2013) use a
+common grid based approach, while Doglioni et al. Societal models
+frequently apply agent-based approaches to describe functional
+relationships. The link with physical reality is provided by cellular
+automata methods, with grid cells representing both the spatial
+representation of the system and the status of the water infra-
+structure. As such, the model aim is not detailed
+description of system dynamics but rather to provide a decision-
+support tool that enables stakeholders to test possible strategies
+and measures; this is known as exploratory modelling (e.g. Bankes,
+1993; Dessai et al., 2009; Lempert et al., 2003 ) and is becoming a
+standard approach to plan against u

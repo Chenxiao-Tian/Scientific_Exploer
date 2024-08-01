@@ -1,0 +1,28 @@
+Extracted Keywords:
+networks, transportation, Multiplex networks, urban transportation, transportation systems, transportation networks, network, layers, line, nodes
+
+Main Topics:
+1
+ScIentIfIc  RePoRtS  |, | DOI, 10.1038/srep44359www.nature.com/scientificreportsA Multilayer perspective, the 
+analysis, urban transportation 
+systems, Alberto Aleta1, Moreno1,2,3
+Public urban mobility systems, several transportation modes, Most studies, urban mobility, the multi-layer nature, transportation systems, only aggregated versions, this complex scenario, this work, a model, the representation, the transportation system, an entire city, a multiplex network, two 
+different perspectives, each line, a layer, the same transportation mode, the interconnected structure, 9 different cities, small towns, their vulnerabilities, possible 
+improvements, the city, service schedule, waiting times, a simple yet realistic model, urban mobility, real-world facts, network improvements, Multiplex networks, useful representations, the same set, different types, multiplex networks, social 
+netwo
+
+Methodologies:
+To reconcile both approaches, in this paper we propose an urban transportation model based on multiplex 
+networks where both representations are used to extract different information from the system. First, we give an overview of our multiplex representation in the Methods section and then use it to study the structure of 9 urban transportation networks in the first subsection 
+of Results. Methods
+We start considering each line of each mode of transport as a single layer. In the second part of the results section, however, we will follow a slightly different scheme to add more real 
+features to the model. Results
+Structure of urban transportation networks.   Data were obtained from a variety of sources, from each company’s website to city’s open data portals, and then arranged as described in the model discussed in Methods. A straightforward approach is to consider the degree of node i a
+
+Research Outcomes:
+To reconcile both approaches, in this paper we propose an urban transportation model based on multiplex 
+networks where both representations are used to extract different information from the system. First, we give an overview of our multiplex representation in the Methods section and then use it to study the structure of 9 urban transportation networks in the first subsection 
+of Results. Methods
+We start considering each line of each mode of transport as a single layer. In the second part of the results section, however, we will follow a slightly different scheme to add more real 
+features to the model. Results
+Structure of urban transportation networks.   Data were obtained from a variety of sources, from each company’s website to city’s open data portals, and then arranged as described in the model discussed in Methods. A straightforward approach is to consider the degree of node i a

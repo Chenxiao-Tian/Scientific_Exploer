@@ -1,0 +1,915 @@
+References:
+Environ Sci Pollut Res (2021) 28:7929–7944 7943
+Consenttopublish Notapplicable JiaoJL,YangYF,BaiY(2018)Theimpactofinter-industryR&Dtech-
+nologyspilloveroncarbonemissioninChina.NatHazards91:913–
+929
+References Johnson JMF, Franzluebbers AJ, Weyers SL, Reicosky DC (2007)
+Agricultural opportunities to mitigate greenhouse gas emissions.
+EnvironPollut150(1):107–124
+Al-MansourF,JejcicV(2017)Amodelcalculationofthecarbonfoot- Kaya(1989)ImpactofcarbondioxideemissiononGNPgrowth:inter-
+printofagriculturalproducts:thecaseofSlovenia.Energy136:7–15
+pretationofproposedscenarios.Paris.
+ArevaloC,BhattiJ,ChangSetal(2011)Landusechangeeffectson LeiJ,KeranD,ChunmingSetal(2017)Theimpactoftechnological
+ecosystemcarbonbalance:Fromagriculturaltohybridpoplarplan- progress in the energy sector on carbon emissions: an empirical
+tation.AgricEcosystEnviron141(3-4):342–349
+analysisfromChina.IntJEnvironResPublicHealth14(12):1505
+AthanasiosB,BertB,SpyrosFetal(2017)Precisionagriculturetech- LiB,ZhangJB,LiHP(2011)Researchonspatial-temporalcharacteris-
+nologiespositivelycontributingtoGHGemissionsmitigation,farm ticsandaffectingfactorsdecompositionofagriculturalcarbonemis-
+productivity,andeconomics.Sustainability9:1339 sioninChina.ChinaPopulResourEnviron8:80–86
+BalsalobreLD,ShahbazM,TiwariAKetal(2018).Theapplicabilityof
+LiQP,LiCJ,XiaoXYetal(2015)Spatialeffectsofagriculturalcarbon
+the inflection point in the environmental correction process. emissionsinChina.AridLandResEnviron4:30–35
+ReferenceModuleMaterSciMaterEng.
+LiL,HongXF,TanDL(2016)GHGemissions,economicgrowthand
+ChenZD,DikgwatlheSB,XueJFetal(2015)Tillageimpactsonnet urbanization:aspatialapproach.Sustainability10:123–126
+carbonfluxinpaddysoiloftheSouthernChina.JCleanProd103:
+LiN,JiangY,YuZ,ShangL(2017)Analysisofagriculturetotal-factor
+70–76
+energyefficiencyinChinabasedonDEAandMalmquistindices.
+ChengLL,ZhangJB,TianY(2016)Thespatialvariationcharacteristics EnergyProcedia142:2397–2402
+and dependency of agricultural carbon productivity in China.
+ResourcesScience2:276–289 LiuLH,JiangJY,ZongLG(2011)Researchongreenhousegasemission
+inventory from agricultural residue combustion: a case study of
+ColeMA,ElliottRJR,OkuboTetal(2013)Thecarbondioxideemis- Jiangsuprovince.EnvironSci5:1242–1248
+sionsoffirms:aspatialanalysis.JEnvironEconManag65(2):290–
+LiuY,XiaoHW,PreciousZetal(2014)CarbonemissionsinChina:a
+309
+spatialeconometricanalysisattheregionallevel.Sustainability6:
+CommonerB(1992)MakingPeacewiththePlanet.NewYork.
+6005–6023
+DanielBL,OanaMD,FestusVBetal(2019)Doagriculturalactivities
+LiuWD,TangZP,HanMY(2018)The2012Chinamulti-regionalinput-
+induce carbon emissions? The BRICS experience. Environ Sci
+PollutRes26:25218–25234 outputtableof31provincialunits.Beijing.
+LuXH,KuangB,LiJ,HanJ,ZhangZ(2018)Dynamicevolutionof
+DanietBL,MuhammadS,CharbelJCetal(2019)Theroleofenergy
+regional discrepanciesin carbonemissions fromagricultural land
+innovationandcorruptionincarbonemissions:evidencebasedon
+utilization: evidence from Chinese provincial data. Sustainability
+theEKChypothesis.Energyandenvironmentalstrategiesintheera
+10:552
+ofglobalization.Springer,Switzerland
+LuN,WaW,WangMetal(2019)Breakthroughlow-carbontechnology
+DengRR,YangGH(2020)Hasinter-regionaltradeledtothetransferof
+innovationandcarbonemissions:directandspatialspillovereffect.
+inter-regionalcarbonemissions:anempiricalstudybasedoninter-
+ChinpopulResourEnviron29(05):30–39
+regional input-output model from 2002 to 2012. J Nanjing Univ
+FinanceEcon3:1–11 MaD(2018)Spatialheterogeneityandinfluencingfactorsofagricultural
+energycarbonemissionefficiencyinChina—Anempiricalresearch
+DongF,LongRY,LiZL,DaiY(2016)Analysisofcarbonemission
+ofspatialpaneldatamodel.ResourDevMark12:1693–1765
+intensity,urbanizationandenergymix:evidencefromChina.Nat
+Hazards82(2):1375–1391 MantoamEJ,RomanelliTL,GimenezLM(2016)Energydemandand
+DyerJA,KulshreshthaSN,McConkeyBGetal(2010)Anassessmentof greenhousegasesemissionsinthelifecycleoftractors.BiosystEng
+fossilfuelenergyuseandCO2emissionsfromfarmfieldoperations
+151:158–170
+usingaregionallevelcropandlandusedatabaseforCanada.Energy MaryOA,FestusVB(2019)Doesagriculturalvalueaddedinduceenvi-
+35(5):2261–2269 ronmentaldegradation?Empiricalevidencefromanagrariancoun-
+FeiR,LinB(2017)TechnologygapandCO2emissionreductionpoten-
+try.EnvironSciPollutRes7:27660–27676
+tialbytechnicalefficiencymeasures:Ameta-frontiermodelingfor
+MengB,XueJJ,FengKS,GuanD,FuX(2013)China’sinter-regional
+theChineseagriculturalsector.EcolIndic73:653–661 spillover ofcarbonemissionsand domestic supplychains. Energ
+FernándezFY,FernándezLMA,OlmedillasBB(2018)Innovationfor
+Policy61:1305–1321
+sustainability:theimpactofR&D spendingonCO2emissions.J MiaoJJ,HuaC,FengJC(2020)Upgradingeffectofindustrialcollabo-
+CleanProd172:3459–3467 rative agglomeration and carbon emission: an empirical analysis
+GeorgeM,FranklinA(2017)SpatialanalysisofemissionsinSweden.
+basedonspatialeconometricmodel.EcolEcon2:28–33
+EnergyEcon10:383–394 Min JS, Hu H (2012) Calculation ofgreenhouse gases emissionfrom
+GuanXL,ZhangJB,WuXRetal(2018)Theshadowpricesofcarbon agricultural productioninChina.China PopulResourEnviron 7:
+emissionsinChina’splantingindustry.Sustainability10:753 21–27
+Guo JX, Fan Y (2016) Optimal abatementtechnologyadoptionbased MohanadI,FathiS,MohamedAB(2018)Agriculturaltechnologiesand
+upon learning-by-doing with spillover effect. J Clean Prod 143: carbonemissions:evidencefromJordanianeconomy.EnvironSci
+539–548 PollutRes3:10867–10877
+HsiaoWL,YuFJ,LouisGetal(2012)Evaluatinggreenhousegasemis- PierluigiT,PierPM,GiovanniZetal(2017)Anon-parametricbootstrap-
+sionsinventoriesforagriculturalburningusingsatelliteobservations dataenvelopmentanalysisapproachforenvironmentalpolicyplan-
+ofactivefires.EcolAppl22(4):1345–1364 ning and management of agricultural efficiency in EU countries.
+IPCC (2007) Climate Change 2007: The Physical Science Basis: EcolIndic83:132–143
+WorkingGroupIContributiontotheFourthAssessmentReportof ReginaK,AlakukkuL(2010)Greenhousegas fluxesinvaryingsoils
+the Intergovernmental Panel on Climate Change. Cambridge typesunderconventionalandno-tillagepractices.SoilTillageRes
+UniversityPress,NewYork 109:144–152
+
+Annexes/Appendices:
+Environ Sci Pollut Res (2021) 28:7929–7944 7931
+carried between regions. At the same time, we started with activity data used in the agricultural GHG estimation are
+relational data and used non-parametric QAP regression to showninTable1.
+deeplyanalyzethereasonsfortheregionalassociationofag-
+ricultural GHGs. The results of this study not only lays a
+Measurementofthespatialcorrelationofagricultural
+foundationforChinatoachieveefficientemissionsreduction
+GHGemissions
+throughregionalcooperation,butalsoprovidesareferencefor
+othercountriestoestablishlong-termandsustainable,region-
+In 1989, the Japanese scholar Kaya proposed the following
+allycoordinatedemissionreductionmechanisms.
+formulatoanalyzetheinfluencingfactorsofGHGemissions
+(Kaya1989):
+CHG TOE GDP
+Method and data
+CHG¼ (cid:2) (cid:2) (cid:2)POP; ð2Þ
+TOE GDP POP
+where CHG represents the GHG emissions, TOE is the pri-
+MeasurementofagriculturalGHGemissions
+mary energy consumption, GDP is the gross domestic
+product, and POP is the size of the population. The model
+Five major categories of agricultural GHG emission sources
+assumes that the main factors affecting GHG emissions are
+wereconsidered,withatotalof31items:(1)CO producedby
+2 emissions per unit of energy consumed, units of energy
+energyconsumption,involvingagriculturalmachinery,farm-
+consumed, per capita GDP, and the size of the population.
+land irrigation, and household consumption; (2) CO pro-
+2 Subsequently, Commoner (1992) proposed the IPAT model
+duced by farmland utilization, involving the input of fertil-
+in1992toanalyzethefactorsthatinfluencetheenvironmental
+izers, pesticides, and plastic mulch; (3) CH produced by
+4 carryingcapacity:
+growing rice and N O produced from other crops; (4) CH
+2 4
+and N O producedbyruminantfeeding,involving intestinal I ¼P(cid:2)A(cid:2)T; ð3Þ
+2
+fermentation and fecal management; and (5) CO , CH , and
+2 4
+N Oproductionbystrawburning.Theemissionsofeachcat- whereIistheenvironmentalload,Pisthepopulationsize,Ais
+2
+egorycanbecalculatedas thepercapitaGDP,andTistheenvironmentalloadperunitof
+(cid:1) (cid:3) GDP.
+E ¼∑5 E ¼∑5 e (cid:2) f ; ð1Þ Fromthesetwoclassicenvironmentalmodels,itisappar-
+i i¼1 j i¼1 j j
+entthatthe emissionofpollutantsisaffectedbythree major
+factors: technology, the economy, and the population. The
+whereE isthetotalemissionsofacertaincategory;E isthe emissionsfromagricultureareaffectednotonlybythetech-
+i j
+emissions of source j belonging to this category; e and f nologyusedinagriculturalproduction,thelevelofagricultur-
+j j
+represent the activity data and emission factor of source j, aleconomicdevelopment,andtheagriculturalpopulation,but
+respectively. We list all the emission factors in Appendix also by agricultural input (such as land used, energy, fertil-
+Table8,9,10,11,12,13. izers,pesticides,andagriculturalfilm).Accordingtoeconom-
+To facilitate the analysis, the estimated GHG emissions icgrowththeory,thelevelofagriculturaleconomicdevelop-
+corresponding to N O and CH were converted into carbon mentisaffectedbyvariousinputfactors,withtheamountof
+2 4
+equivalents, as previously described (IPCC 2007), such that land used being the most important. Therefore, the factors
+the GHG effect caused by 1 t of N O and 1 t of CH were affectingagriculturalGHGemissionsaretheagriculturallabor
+2 4
+equivalenttothatcausedby298tofCO (81.2727tC)and25 force, the level of agricultural economic development, the
+2
+t of CO (6.8182 t C), respectively (Guan et al. 2018). The technology applied for agricultural production, and the
+2
+Table1 Introductionofactivitydata
+Category Indicator Source
+Energyconsumption Amountofcoal,coke,crudeoil,gasoline,kerosene,dieseloil, ChinaEnergyStatisticsYearbook
+fueloil,electricpower,andnaturalgasusedinagriculturalproduction
+Farmlandutilization Applicationamountoffertilizers,pesticides,andagricultural ChinaRuralStatisticalYearbook
+film,plowingarea
+Cropplanting Plantingareaofrice,wheat,corn,soybeans,andvegetable
+Ruminantfeeding Annualaveragestockofcattle,horses,donkeys,mules,pigs,goatsandsheep
+Strawburning Yieldofrice,wheat,corn,soybeans,cottonandcanola
+7932 Environ Sci Pollut Res (2021) 28:7929–7944
+amount of land used. Finally, the modified gravity model is prestige analysis were used in this study to find the most
+usedtomeasuretheregionalcorrelationofagriculturalGHG “important”provincesintheagriculturalGHGemissioncor-
+emissions.ThecorrelationmatrixofagriculturalGHGemis- relationnetwork.Centralityanalysissuggeststhataprovince
+sionsisasfollows: is important if it is widely involved in the regional links of
+2 3 agriculturalGHG,whethertheprovinceisaninfluencingnode
+y y y
+11 12 ⋯ 1n oranaffectednode.Prestigemeasurestheextenttowhichan
+6 y y y 7
+4 21 22 2n 5; ð4Þ area affects other areas. A province that broadly affects the
+⋮ ⋱ ⋮
+y y ⋯ y otherregionsinthenetworkisthereforeconsideredmoreim-
+n1 n2 nn portant. The indicators used in the importance analysis are
+wherey indicatesthecorrelationbetweentheagricultural giveninAppendixTable15.
+ij
+GHG produced in region i and region j, obtained from the
+followingequation: Blockmodelanalysis
+pffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffipffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+4PGT A 4 P G T A
+y ¼k i i i i j j j j; ð5Þ Tounderstandtheroleandstatusofparticipants,recognizethe
+ij D2
+ij combinedactionofparticipants,andsimplifytheagricultural
+GHGcorrelationnetwork,analysisofthecharacteristicsofthe
+whereP,G,T,A,P,G,T,andA representthesizeofthe
+i i i i j j j j regional correlations must be conducted. Therefore, the
+agriculturallaborforce,theagriculturalvalueaddedpercapita,
+iterativecorrelationconvergencemethodisusedtoconstruct
+theagriculturalGHGintensity,andthetotalareacultivatedini
+a block model that divides the provinces of China into
+and j. D2 is the square of the spherical distance between the
+ij different functional blocks. The classification criteria are
+capitalcitiesinregionsiandj,andkistheempiricalcoefficient.
+determinedwithreferencetoStanley(1994)andadjustedac-
+The empirical coefficient is used to adjust the degree of agri-
+cordingtotheactualsituationinChina(Table2).
+culturalGHGdependencebetweenregions,whichisbasedon
+Lonerswillnotbeparticularlyaffectedbyotherparticipants
+theamountofagriculturalGHGtransferredbetweenregions:
+in the network and will not affect others widely because their
+c agricultural GHG emissions are relatively independent.
+k ¼ ji ; ð6Þ
+ij c þc Dependentorsaremoreaffectedbymembersoutsidethanmem-
+ji ij
+bersinthesameblockwithinthenetwork,anditisnoteasyfor
+Here, k is the empirical coefficient of the agricultural
+ij theseparticipantstoaffectothermembersastheyrelyonagri-
+GHGdependenceofregionionregionj,c istheGHGemis-
+ji cultural GHG emissions from members outside the block.
+sionstransferredfromareaitoareajasaresultofagriculture,
+Intermediatorsactasbridgesinthenetworkwhoseagricultural
+andc istheGHGemissionstransferredfromareajtoareaias
+ij GHGemissionsareaffectedbyothermembers,whileaffecting
+aresultofagriculture.TheinterregionalGHGtransfer,c,can
+theemissionsofothermembers.Ajuniorhasanimpactonthe
+beobtainedbymultiplyingtheinterregionalagriculturalprod-
+agriculturalGHGemissionsofmemberswithinthesameblock,
+ucttransferbytheagriculturalGHGintensityineachregion.
+whilealsoaffectingtheemissionsofmembersoutsidetheblock.
+Socialnetworkanalysis
+Quadraticassignmentprocedure(QAPregression)
+Overallnetworkcharacteristics
+ThespatialcorrelationbetweenagriculturalGHGemissionsis
+related to the spatial correlation of agricultural input factors.
+Network density,degree ofnetwork correlation, network ef-
+TheQAPregression,whichisbasedon“relationship”data,is
+ficiency, and network level are used to analyze the overall
+used to analyze the reasons for the agricultural GHG spatial
+characteristicsofagricultural,GHGemissioncorrelationnet-
+work.Networkdensityanddegreeofnetworkcorrelationre-
+flecttheclosenessoftheagriculturalGHGlinksbetweenre- Table2 Internalrelationshipevaluationcriteria
+gions;networkefficiencyreflectstherobustnessandvulnera-
+Internalrelationshipproportion Receivedrelationshipproportion
+bilityofthenetwork;andnetworklevelreflectstheinequality
+innetworkmembership.Thecalculationoftheseindicatorsis ≈0 >0
+providedinAppendixTable14.
+》(g −1)(g−1) Ioner Junior
+k
+Theimportanceofeachnodeinthenetwork 《 (g k−1)(g−1) Dependentor Intermediator
+(g−1)/(g−1)representstheexpectedratioofthetotalrelationshipofa
+Due to the asymmetry of the agricultural GHG links in the k
+role;g representsthenumberofmembersintheblock,andgrepresents
+k
+various provinces of China, both centrality analysis and thetotalnumberofmembersinthenetwork
+
+Body Text:
+Environmental Science and Pollution Research (2021) 28:7929–7944
+https://doi.org/10.1007/s11356-020-10945-3
+RESEARCHARTICLE
+Analyzing the spatial network structure of agricultural greenhouse
+gases in China
+YanqiuHe1 &XiangLan2&ZuoangZhou2&FangWang1
+Received:30April2020/Accepted:21September2020/ Published online: 12 October 2020
+#Springer-VerlagGmbHGermany,partofSpringerNature2020
+Abstract
+Investigating the regional correlation and factors affecting agricultural greenhouse gas (GHG) emissions can help establish a
+regionalmechanismforthesynergisticreductionofemissionsandproducechain-likereductions.Differentfromthetraditional
+geographical relationship analysis framework, linear analysis ideas, we use social network analysis to discern the regional
+correlations in agricultural GHG emissions from a relational network viewpoint, clarify the network functions of each node,
+andexplainagriculturalGHGcorrelationfromaspatial,economic,andtechnologicalviewpointbynonparametricregression.
+Theresultsindicatethat(1)theemissionnetworkisstableandthereisarelationshipofcontrolbetweenregions,(2)CentralChina
+is the most important region in agricultural GHG networks; however, the importance of the northwest and southwest has
+increased; the northeast has remained relatively independent, (3) influencers are mainly concentrated in the middle of the
+Yangtze River and the northwest,whiledependentorsare concentratedinmunicipalitiessuchasBeijingand Tianjin, and the
+coastal regions in the southeast, and (4) the interprovincial agricultural GHG correlation can be enhanced by shortening the
+spatial distance, strengthening economic ties, and increasing the diffusion of technology. Implementing a “leader–follower”
+strategyaccordingtotheroleofeachregionandenhancingtheintermediator’s“conduit”rolewillultimatelyleadtotheformation
+ofaninterprovincialinteractiveandcooperativeemissionreductionmechanism.
+Keywords Sustainable agriculture . Agricultural greenhouse gas . Social network . Nonparametric regression . Synergistic
+emissionreductionmechanism
+Introduction
+emissionsshouldbereducedtozeroby2050,withatemper-
+ature increase not exceeding 1.5 °C to avert environmental
+Climatechangeisakeyissuerelatedtothesustainabledevel- disaster. Agriculture is one of the economic sectors that is
+opment of policy, economy, society, and ecology in various known to affect greenhouse gas (GHG) emissions, both di-
+countries. The United Nations Intergovernmental Panel on rectly and indirectly (Athanasios et al. 2017), and approxi-
+Climate Change (IPCC) proposed that net carbon dioxide mately20%ofglobalcarbondioxideisproducedbyfarming
+(Luetal.2018).Severalstudieshavepointedouttheadverse
+impactthatagriculture hasontheenvironment(Danieletal.
+ResponsibleEditor:PhilippeGarrigues 2019; Mary and Festus 2019). The reduction of agricultural
+Electronicsupplementarymaterial Theonlineversionofthisarticle emissionsisthereforeessential.AgriculturalGHGemissions
+(https://doi.org/10.1007/s11356-020-10945-3)containssupplementary inChinaaccount for 17% oftotal emissions (Li etal. 2011)
+material,whichisavailabletoauthorizedusers.
+andhavebeenincreasingsteadily(XuandLan2017).Ifleft
+uncontrolled,thissectorcouldpreventChinafromachieving
+* YanqiuHe
+its goals of reducing emissions and establishing an environ-
+linxiatingqiu@126.com
+mentallyfriendlysociety.
+* FangWang
+ThebasisforreducingGHGemissionsisacomprehensive
+11575503@qq.com
+and accurate calculation of agricultural GHG; however, to
+1 CollegeofManagement,SichuanAgriculturalUniversity, date,thereisnounifiedframeworkforthecalculationofag-
+Chengdu611130,China ricultural GHG emissions. The sources of agricultural emis-
+2 SichuanProvincialBureauofStatistics,Sichuan,China sions under the UN Framework Convention on Climate
+7930 Environ Sci Pollut Res (2021) 28:7929–7944
+Changearenotsufficient(Hsiaoetal.2012),andGHGemis- relyingontheunilateralactionsofindividualregions,implying
+sions from agricultural systems are still not well measured thatcooperativeregionallycoordinatedemissionreductionac-
+(Johnson et al. 2007). Scholars measured agricultural GHG tions are necessary. Therefore, many scholars have become
+emissions from different perspectives. Johnson et al. (2007) concernedwiththeassociationbetweentheGHGproducedin
+comprehensively measured agricultural GHG emissions in the differentcountriesorregions.ItisagreedthatGHGemissions
+USA and found that approximately half of the emissions are have significant spatial agglomeration and diffusion effects
+related to agricultural land use. Wisniewski and Kistowsk (Mengetal.2013;Sunetal.2016;Yangetal.2016),andthere
+(2018)foundthatthecarbonemissionsofthepolishagricultural may be complex association network structures (Wang et al.
+sector accounted for 14% of the country’s total carbon emis- 2018; Zhang 2017a). Regional correlations between GHG
+sions.Tianetal.(2012)andWuetal.(2014)comprehensively emissions are due to links in the economy, technology, and
+measuredChina’sagriculturalGHGemissionsbasedon16ma- policyaswellassimilarityintheenergyconsumptionbehavior
+joragriculturalsources.Min(2012)consideredthedifferencesin ofmicrosubjectsandtheirimitationofenvironmentalbehavior
+differentvarietiesandgrowthcyclesofplantingandaquaculture (Cole et al. 2013; Liu et al. 2014; Dong et al. 2016; Li et al.
+in China for more accurate calculations. Some scholars have 2016;GeorgeandFranklin2017).Otherwise,regionalcorrela-
+paid attention to land use emissions and found that emissions tionsmaybeduetothevariationincross-regionaloutputthat
+would be affected by seasonal factors, agricultural production results from changes in the final demand (Zhang 2017b; Jiao
+input, and the tillage system (Sovik and Klove 2007; Regina etal.2018).Somescholarshaveresearchedthespatialcorrela-
+and Alakukku 2010; Chen et al. 2015). Some scholars have tionbetweenagriculturalGHGemissionsandfoundthatthere
+estimatedthecarbonfootprintofagriculturalproductstoidentify isasignificantspatialspilloverintotalagriculturalGHGemis-
+whethertheywereproducedunderagreenproductionprocess sions, emission intensity, emission efficiency, and net emis-
+(Vergeetal.2013;Al-MansourandJejcic,2017). sions(Sunetal.2015;Wuetal.2015;Chengetal.2016;Wu
+InordertoeffectivelyreduceGHGemissions,alargenumber et al. 2019). Agricultural economic development, agricultural
+ofscholarshavestudiedthedrivingforceofGHG,andtechno- production, agricultural technological innovation, agricultural
+logicalinnovation has beenregarded asthekey to solving the labor force, and urbanization are all important factors in the
+contradiction between pollution and economic development spatial spillover of agricultural GHGs (Ma 2018; Wu and
+(Yangetal.2017).Technologicalprogresscanbeestimatedin Feng 2019; Xiong et al. 2016; Yao et al. 2019; Yang and Li
+termsofR&Dcapitalinvestment(Snyderetal.2016;Zhaoetal. 2017;Lietal.2015;Chengetal.2016).Therefore,toachieve
+2018), patent development (Lu et al. 2019), energy intensity more efficient emission reductions, regional cooperation for
+(Dyer et al. 2010), and total factor productivity (Tian and energyandenvironmentalgoalsisrequired(Danietetal.2019).
+Zhang 2017; Pierluigi et al. 2017; Yang et al. 2018; Li et al. Insummary,researchershaveagreedthatthespatialchar-
+2017;Xuetal.2019;Rybaczewskaetal.2018).Toavoidfalling acteristicsofGHGemissionsindicatethatpoliciesforreduc-
+intothestateoftechnicalobsolescence,measuresmustbetaken ing emissions must include regional links, and that regional
+toencouragetechnologicalinnovations(Balsalobreetal.2018). cooperationcanachievesuchreductions.However,thesepre-
+Vladimir et al. (2018) suggests that through the adoption of viousstudieshavetwoshortcomings.Ontheonehand,most
+renewable energy and the establishment of more energy-thrift previousstudiesonlyfocusedonspecificsourcesofagricul-
+technologies,thedecouplingofemissionsfromenergyusecan tural GHG emissions and did not comprehensively measure
+beachieved,therebyreducingthenegativeimpactoftheenergy agriculturalGHGemissions.Theywereunabletoanalyzethe
+sector on resource efficiency and the environment. However, regionaldifferencesinagriculturalGHGemissionsandthus,
+when economic systems interact with corruption, the positive could not clarify the key regions for agricultural emissions
+effects of energy innovation on environmental quality are re- reduction.Ontheotherhand,mostoftheliteraturediscussing
+duced (Daniel et al. 2019). Jin Lei et al. (2017) found that the regional associations of agricultural GHGs is based on
+R&DcontributestoareductioninGHGemissionsinChinain geographicaladjacencyordistancerelationships,butthespa-
+theenergysector;italsocontributespositivelytothereductionof tial relationship of agricultural GHG emissions may surpass
+GHGemissionsindevelopedcountries(Fernándezetal.2018). thisgeographicalrelationshipandthetraditionallinearmodel,
+In terms of agricultural emission reduction, Mohanad et al. and presents a complex network, where each region plays a
+(2018) found that technology is a key factor for suppressing differentroleinthenetwork.Therefore,inthisstudy,weused
+agriculturalGHGemissions,whilelowtechnicalefficiencyisa the IPCC estimation method to estimate agricultural GHG
+notablecontributortowardlowagriculturalcarbon-useefficien- emissionsin31provincesinChinafromfiveaspects:agricul-
+cy(FeiandLin2017).Thus,itisnecessarytoimproveagricul- turalenergyconsumption,agriculturallanduse,cropplanting,
+tural total factor productivity and promote the development of ruminant feeding, and straw burning. We also used social
+energy-enhancingtechnology(Weietal.2018). network analysis to construct a spatial network of China’s
+Duetothestrengtheningofexistingeconomictiesbetween agriculturalGHGemissions,discussedtheroleofvariousre-
+regions,ithasbecomedifficulttorealizeemissionreductionby gionsinthenetwork,andanalyzedhowagriculturalGHGsare
+Environ Sci Pollut Res (2021) 28:7929–7944 7933
+correlation. The dependent variable is the spatial correlation wheres representsthesimilaritybetweenthestructureof
+kl
+matrix describing agricultural GHG emissions, which is cal- the agricultural industry in region i and region j, which is
+culatedusingamodifiedgravitymodel.Theindependentvar- derivedusingthefollowingequation:
+iablesincludethespatialgeographicrelationmatrix,thetech-
+∑n S S
+nologygapmatrix,thematrixdescribingthesimilarityinthe S ¼ qffiffiffiffiffiffiffijffi¼ffiffi1ffiffiffiffiffikffijffiffiffiffilffijffiffiffiffiffiffiffiffi: ð10Þ
+kl
+agricultural industrial structure, the similarity matrix of the ∑n S2∑n S2
+j¼1 kj j¼1 lj
+agriculturalenergystructure,thematrixdescribingtheregion-
+altransferofagriculturalproducts,andthematrixdescribing Here,S andS representtheproportionofindustryjinthe
+kj lj
+thenumberofcross-regional,leadingagriculturalenterprises, agriculturaloutputofregionskandl,andnisthenumberof
+asfollows: sub-industriesincludedundertheheadingofagriculture.
+& Thespatialgeographicrelationmatrix(X):Thespherical & Similaritymatrixdescribingtheagriculturalenergystruc-
+distanceoftheprovincialcapitalcityisnotusedbecause ture(N):Theenergyproducedbyfossilfuelsisoneofthe
+traffic can better reflect the spatial distance between re- main causes of GHG emissions (Sarkodie and Strezov
+gions; therefore, the railway running time is adopted as 2019); whetherthe similarityofthe energyconsumption
+thespatialgeographicrelationship.Wehavethat structure in various regions will lead to a correlation in
+regionalemissionsisthereforeinvestigated.Inparticular,
+2 3
+x x x weconsider
+11 12 ⋯ 1n
+6 x x x 7
+4 21 22 2n 5; ð7Þ
+⋮ ⋱ ⋮
+x n1 x n2 ⋯ x nn 2 3
+n n n
+11 12 ⋯ 1n
+where x represents the running time of the railway be- 6 n n n 7
+ij 4 21 22 2n 5; ð11Þ
+⋮ ⋱ ⋮
+tweenregioniandregionj.
+n n ⋯ n
+n1 n2 nn
+& Technologygapmatrix(A):Duetothespatialspilloverof
+wheren representsthesimilarityoftheagriculturalener-
+technology(GuoandFan2016),thetechnologygapma- kl
+gystructureinregioniandregionj,obtainedfrom
+trixisusedasthesecondinfluencingfactortoanalyzethe
+impactoftechnologyspilloversontheregionalcorrelation ∑n N N
+ofGHG.Thetechnicallevelisrepresentedbyagricultural N kl ¼ qffiffiffiffiffiffiffijffi¼ffiffi1ffiffiffiffiffiffikffijffiffiffiffiffilffijffiffiffiffiffiffiffiffi: ð12Þ
+∑n N2∑n N2
+GHG productivity (agricultural added value/agricultural j¼1 kj j¼1 lj
+GHGemissions),forexample,
+Here N and N are the proportions of the j-th energy
+kj lj
+2 3 consumption in regions k and l, andn is the type of energy
+a a a
+11 12 ⋯ 1n consumedbyagriculture.
+6 a a a 7
+4 21 22 2n 5; ð8Þ
+⋮ ⋱ ⋮
+a a ⋯ a & Theregionalagriculturalproducttransfermatrix(E):The
+n1 n2 nn
+cross-regional flow of commodities leads to the cross-
+wherea representsthedifferencebetweenthetechnology regional inflow and outflow of GHG emissions (Deng
+ij
+usedforagriculturalproductioninregioniandregionj. andYang2020).Theinterregionaltransferofagricultural
+productsisthereforeconsideredanimportantinfluencing
+& Similarity matrix of the agricultural industrial structure factor.Wedefinethematrixby
+(S): Industrial aggregation has a significant impact on
+emissions,andthedegreeofdifferentiationintheregional
+industrialstructurewillaffectregionalcooperationforre- 2 3
+e e e
+ducing emissions (Miao et al. 2020). The similarity be- 11 12 ⋯ 1n
+6 e e e 7
+tween the regional agricultural industrial structures is 4 21 22 2n 5; ð13Þ
+⋮ ⋱ ⋮
+thereforeconsidered,andisrepresentedby e e ⋯ e
+n1 n2 nn
+2 3
+s s s where e represents the amount of agricultural product
+11 12 ⋯ 1n ij
+6 s s s 7 transferred between area i and area j. The data are from the
+4 21 22 2n 5; ð9Þ
+⋮ ⋱ ⋮
+Chinamulti-regionalinput-outputtableof31provincialunits
+s n1 s n2 ⋯ s nn (Liuetal.2018).
+& Thematrixdescribingthenumberofcross-regional,lead- Heilongjianginthenortheast,ShanxiandInnerMongoliain
+ingagriculturalenterprises(M):Toinvestigatetheroleof themiddle,andShanghaiontheeastcoasthavehigheragri-
+leading agricultural enterprises in the regional emissions cultural GHG emission intensity, while a large number of
+correlation and investigate whether a regional collabora- coastal areas such as Jiangsu, Zhejiang, Fujian, and
+tivereductioninemissionscanbeachievedthroughcoop- Guangdonghaveloweremissionintensity.Thetotalagricul-
+erationbetweenenterprises,thenumberofcross-regional tural GHG emission is high in the middle and low in the
+leading enterprises was also selected as an influencing surroundingarea.Theemissionintensityishighinthenorth
+factor.Wehavethat andlowinthesouth.
+2 3 Analysisofoverallnetworkcharacteristics
+m m m
+11 12 ⋯ 1n
+6 m m m 7
+4 21 22 2n 5; ð14Þ Theresults(Fig.2)indicatethatthenetworkdensityremained
+⋮ ⋱ ⋮
+m m ⋯ m above0.19,andthecohesionindexremainedabove0.42be-
+n1 n2 nn
+tween2006and2017.Thedegreeofnetworkcorrelationwas
+wherem indicateshowmanyofthesameleadingagricul- maintainedatapproximately0.57,indicatingthattherewasa
+ij
+turalenterprisesarepresentinbothregioniandregionj.The regional spillover of agricultural GHG emissions. The net-
+datawerecollectedmanually. work efficiency is approximately 0.53, indicating that there
+are more redundant connections in the associated network,
+and the overall network stability is increased. The network
+Empirical analysis level is approximately 0.97, indicating that the network is
+relativelyinequalintermsofstructure.Thespilloverofagri-
+culturalGHGemissionsbetweenregionsis“strictlygraded,”
+AgriculturalGHGemissions
+withsomeareasinapositionofdominance.
+It can be seen from Fig. 1 that Henan, Heilongjiang,
+Shandong,Sichuan,Hunan,andHebeiaretheprovinceswith Theimportanceofnetworknodes
+highertotalagriculturalGHGemissions.Theseregionsareall
+majoragriculturalprovinceswithlargeagriculturalproduction Centralityanalysis
+scaleandhighaddedvalue,whiledevelopedregionssuchas
+Shanghai,Beijing,and Tianjin,aswellasNingxia,Qinghai, Centrality analysis and prestige analysis were used to judge
+Hainan, and other places have lower total agricultural GHG the importance of each node (province) in the network of
+emissions. The five northwestern provinces, Jilin and agriculturalGHGemissions.
+15000.00 25.00
+12000.00 20.00
+9000.00 15.00
+6000.00 10.00
+3000.00 5.00
+0.00 0.00
+)t401(snoissimelatotegarevalaunnA )nauy401/t(ytisnetni
+noissime
+egareva
+launnA
+7934 Environ Sci Pollut Res (2021) 28:7929–7944
+Annual average total emissions Annual average emission intensity
+Fig1 AnnualaverageagriculturalGHGemissionsandintensityofeachprovince
+Environ Sci Pollut Res (2021) 28:7929–7944 7935
+0.45 0.204
+inthese areas are affectedbythose ofthe otherregions,and
+0.445 0.202
+theemissionsfromtheseareaswillalsoaffecttheemissionsin
+0.44 0.2
+0.435 0.198 other regions. The plain area in the middle reaches of the
+0.43 0.196 YangtzeRiverhasalwaysbeenimportantforagriculturalpro-
+0.425 0.194 ductioninChinaandactsasahubconnectingtheeasttothe
+0.42 0.192
+west;theyhavearelativelyhighlevelofparticipationinthe
+0.415 0.19
+network. However, the northeastern provinces, Jilin,
+0.41 0.188
+Liaoning, and Heilongjiang, have always been on the edge
+0.405 0.186
+200620072008200920102011201220132014201520162017 of the network, with relatively independent agricultural
+Network density Cohesion index
+GHGemissions.
+(a)
+Betweenness centralityisusedtomeasurethe abilityofa
+regiontocontrolthenetwork,andregionswithstrongnetwork
+1.20
+controlaremoreimportantinthenetwork.FromFig.4,Hebei,
+1.00 Hubei,Liaoning,andShaanxihavethestrongestcontrolover
+the agricultural GHG-associated networks. Their control of
+0.80
+the network results mainly from their intermediary roles.
+0.60
+Hebei is an important hub connecting the northern coastal
+0.40 areas with other regions. Liaoning is a central point
+connecting the three northeast provinces with the other re-
+0.20
+gions.ShaanxiandHubeiareimportantlinksforthecentral,
+0.00 eastern,andwesternpartsofChina.ThecontrolofHubeiand
+2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017
+Shaanxi has increased over time; however, Hebei’s control
+Degree of network correla(cid:2)on Network efficiency Network level
+has weakened, while the control of Shandong, Henan, and
+(b)
+Hunanhasgraduallybeguntostrengthen.
+Fig2 Overallnetworkcharacteristicsfrom2006to2017 Closenesscentralitymeasurestheindependenceofaregion
+inthenetwork;emissionsfromindependentregionswillnei-
+theraffectnorbeaffectedbyotherregions.FromFig.5,Jilin,
+From Table 3, it is apparent that the point degree central Liaoning, Heilongjiang, Xinjiang, Ningxia, Tianjin, Beijing,
+potentialhas increased from30.89 to32.84%between 2006 Shanghai, Zhejiang, Fujian, and Hainan are relatively inde-
+and 2017, demonstrating a close relationship between the pendent in the agricultural GHG network. As an important
+provincesinthenetworkintermsofagriculturalGHGemis- energybaseinChina,theindependenceofShanxihassignif-
+sions. The betweenness central potential was reduced from icantlyweakened.
+22.52to17.95%,indicatingthatthenumberofregionsserv- Insummary,theimportanceofeachChineseprovincedif-
+ing as intermediaries and bridges in the network decreased, fers in the agricultural GHG emission correlation network.
+andthedirectcorrelationintheemissionsbetweenprovinces ThemiddlereachesoftheYangtzeRiverarerelativelyactive
+increased alongside the continuous development of China’s inthenetworkandhaveextensiverelationshipswiththeother
+transportationandlogisticsnetwork. provinces. Some provinces that are geographically advanta-
+Pointdegreecentralityisusedtomeasuretheactivityofthe geousactasintermediariesthatconnecttheemissionsofvar-
+relationship between the agricultural GHG emissions in one ious other provinces in the network, and the three northeast
+provincewithotherprovinces.Themoreactiveprovincesin provincesarerelativelyindependent.
+thenetworkaremoreimportant.Hubei,Hunan,andJiangxi,
+inthemiddlereachesoftheYangtzeRiver,havealwaysbeen
+at the center of the network (see Fig. 3) and have the most Spatialdistributionoftheimportanceofnetworknodes
+activerelationshipwiththeagriculturalGHGemissionscom-
+paredtotheotherregionsinthenetwork.Thetotalemissions Prestige analysisiscombined with centrality analysistofur-
+theranalyzetheimportanceofChineseprovincesinagricul-
+tural GHG emission networks. To understand the regional
+Table3 Centralpotentialin2006and2017 distributionoftheimportanceofeachprovinceintheagricul-
+tural GHG correlation network, China is divided into eight
+Centralpotential 2006 2017 regions.Centralityandprestigeareintegratedintoan“impor-
+tanceindex”usingtheconceptofweightedaveragetoobtaina
+Pointdegreecentralpotential 30.89% 32.84%
+regionaldistributionmapoftheimportanceofeachprovince
+Betweennesscentralpotential 22.52% 17.95%
+inChina.
+7936 Environ Sci Pollut Res (2021) 28:7929–7944
+(a) 2006 (b) 2017
+Fig3 Networkstructurebasedondegreecentrality
+ThecentralregionofChina’sagriculturalGHGcorrela- Roleandstatusanalysis
+tionnetworkisthemostimportant(Fig.6).Theimportance
+indexofHunan,Hubei,Shaanxi,Hebei,Guizhou,Jiangxi, TodemonstratetheassociationmodeoftheagriculturalGHG
+and Henan provinces have always ranked in the top 25%. association network, the provinces are divided into different
+These provinces are important hubs and transit stations rolesbasedonthesocialrelationshipmatrixandaccordingto
+fromageographicalpointofview,connectingtheeastern, thestructuralequivalenceofeachregion;theentirenetworkis
+western, southern, and northern areas of China. From the thusregardedasaninterconnectedsystemofroles.Figure7
+perspective of agricultural development, Hebei, Henan, providesacleardemonstrationoftheoverallstructureofthe
+Hubei, and Hunan are all major grain provinces in China, agriculturalGHGemissioncorrelationnetwork.
+whichproducealargevarietyofagriculturalproductssold China’s agricultural GHG-related networks were divided
+throughout the country. The importance of Jilin, intoeightblocks(Fig.6).In2006,Block1includedBeijing,
+Heilongjiang, Qinghai, Ningxia, Tianjin, and Shanghai Tianjin,Hebei,Shandong,Shanxi,andInnerMongolia;Block
+has always been in the bottom 25% due to the remoteness 2 consisted of Henan and Shaanxi; Block 3 were
+of these locations and the lack of advantage agricultural Heilongjiang, Jilin, and Liaoning; Block 4 included
+development. Overall, the importance index of 74% of Xinjiang, Qinghai, and Ningxia; Block 5 were Zhejiang,
+the 31 provinces has increased, with a gradual increase in Jiangsu, Shanghai, and Fujian; Block 6 were Hunan,
+the importance of the northwest and southwest regions. Jiangxi, Hubei, and Anhui; Block 7 included Yunnan,
+(a) 2006 (b) 2017
+Fig4 Networkstructurebasedonbetweennesscentrality.MissingareadataincludeTaiwan,HongKong,andMacau
+Environ Sci Pollut Res (2021) 28:7929–7944 7937
+(a) 2006 (b) 2017
+Note: Missing area data include Taiwan, Hong Kong, and Macau
+Fig5 Networkstructurebasedonclosenesscentrality
+Chongqing, Guangxi, Guizhou, Sichuan, Guangdong, and Thisadjustmentofblocksisrelatedtotheagriculturallay-
+Hainan;andBlock8wereTibetandGansu. outandregionaleconomyofChina.Hebei,Shanxi,Shaanxi,
+By 2017, the provinces included in all of the blocks were andInnerMongoliaarekeyareasinwhichthedevelopmentof
+adjustedtoacertainextentexceptforBlocks5and6;thenum- agriculture and animalhusbandry has beenstaggered.These
+ber of provinces included in Blocks2 and 4increasedsignifi- provinces were integrated into Block 2 in 2017. Sichuan,
+cantly.MostprovincesinBlock1weretransferredintoBlock2, Tibet, Gansu, Qinghai, and Xinjiang are China’s grassland
+exceptforBeijingandTianjin.ManyMiddleYellowRiverand ecological regions, and the agricultural development model
+northern coastal provinces were transferred from Block 1 to isthe complementarity ofagriculture and animalhusbandry.
+Block2.Block3isstillconcentratedinthenortheast;Block4 ThecreationoftheChengdu-ChongqingEconomicZonehas
+covers a large area in the northwest, and Sichuan and connectedSichuanandChongqingeconomically,soSichuan
+ChongqingareremovedfromBlock7andaddedtoBlock8. andChongqingweremovedtoBlock8(Table4).
+Note: Missing area data include Taiwan, Hong Kong, and Macau
+(a) 2006 (b) 2017
+Fig.6 Distributionmapoftheimportanceindexof31provincesinChinain2006and2017
+7938 Environ Sci Pollut Res (2021) 28:7929–7944
+Note: Missing area data include Taiwan, Hong Kong, and Macau
+(a) 2006 (b) 2017
+Fig7 BlockdiagramofChina’sagriculturalGHGemissionsnetworkin2006and2017
+Focusing on 2017, the interblock and intrablock associa- internal relationship ratio, and a network density of 1.
+tions are examined to determine the role and status of each This shows that Block 3 was not easily affected by other
+blockinthenetwork,withthefollowingresults: blocks and did not affect other blocks, and the relation-
+Thetotalnumberofrelationshipsinthenetworkwas358. ships between the provinces within the block were more
+The number of interblock relationships was 204, while the active. Therefore, Block 3 was defined as a loner.
+numberofintrablockrelationshipswas154.Thetotalnumber ThetotalnumberofrelationshipsinBlocks1and8were22
+of interblock relationships was much greater than the total and 30, respectively, with more interblock relationships than
+numberofintrablockrelationships,indicatinganobviousre- intrablock ones. The actual internal relationship ratio was less
+gional correlation of agricultural GHG emissions. Provinces thanexpected,andtheintrablockdensityrankedlast,indicating
+in the network will have different roles and generate more thatagriculturalGHGdependencewasthemostactivebetween
+agriculturalGHGcorrelations. blocks. The number of relationships sent between blocks was
+Block 3 had a total of seven relationships, an actual more than the number of relationships accepted; therefore, the
+internal relationship ratio greater than the expected amount of emissions produced in these blocks was more
+Table4 Associationofnetworkblocksin2017
+Block Acceptedrelationship Sendedrelationship Numberofmembers Intra- Expectedinternal Actualinternal Role
+intheblock block relationshipratio relationshipratio
+Intra- Inter- Intra- Inter- density
+block block block block
+B1 2 4 2 14 3 0.33 0.07 0.04 Dependentor
+B2 24 14 24 25 6 0.8 0.17 0.27 Intermediator
+B3 2 2 2 1 2 1 0.03 0.07 Loner
+B4 11 14 11 1 4 0.92 0.10 0.18 Influencer
+B5 8 4 8 15 4 0.67 0.1 0.13 Dependentor
+B6 12 47 12 3 4 1 0.1 0.1 Influencer
+B7 16 12 16 22 5 0.8 0.13 0.21 Intermediator
+B8 2 5 2 21 3 0.33 0.07 0.04 Dependentor
+Total 77 102 77 102 31 - -- - -
+Environ Sci Pollut Res (2021) 28:7929–7944 7939
+susceptibletoanincreaseinemissionsfromotherparticipantsin
+thenetwork,butrarelyaffectedtheemissionsofothermembers.
+Blocks1and8werethereforedefinedasdependentors.
+TheactualnumberofinternalrelationshipsinBlocks2,4,
+5,6,and7wasgreaterthantheexpectednumberofinternal
+relationships, the relationships within these blocks were ac-
+tive,andtheinterblockrelationshipswerealsoactive.Tode-
+termine the role of these blocks in the network, we further
+classified them based on the number of relationships they
+received,andthenumberofrelationshipssent.
+Blocks4and6wereregardedasinfluencers.Thenumber
+of relationships accepted by these blocks was much greater
+thanthenumberofrelationshipssent.Thisindicatedthatthe
+agriculturalGHGemissionswithintheseblocksdependedon
+membersoutsidetheblock,buttheyalsoimpactedmembers
+outsidethesameblock.Thesetwoblocksincludedthemiddle
+reachesoftheYangtzeRiverandthenorthwesternregion.The
+Fig8 Figuresofeightblocks’rolesandrelationships
+middlereachesoftheYangtzeRiverareanimportantareaof
+agricultural production in China, which covers a large area
+and includes many varieties of agriculture. The northwest is southwest and Tibet in the northwest and affects the middle
+richinresources,andthetransferofproductionfactorscarried reaches oftheYangtzeRiver (Fig. 8).Thenetworkrelation-
+outbythisregionrendersitaninfluencer. ship of agricultural GHG emissions can be simplified in the
+The expected internal relationship ratio in Block 5 was followingdiagram:
+smaller than the actual internal relationship ratio, indicating Dependentors in the network are concentrated within de-
+that while the relationships were relatively active within the velopedcoastalareasandafewwesternregions.Influencers
+block itself, the relationship between Block 5 and the other aremainlyinthemiddlereachesoftheYangtzeRiverandthe
+blockswashigher.Thisresultindicatedastrongdependency northwestandarethemainagriculturalproductionareasand
+on members outside the block, and it was easilyaffected by resource-rich regions in China. The distribution of
+otherblocks.Therefore,itcanalsobedefinedasdependentor. intermediators is relatively scattered, playing a role in
+Blocks2and7areintermediators.Thereweremanyrela- connectingthenorthwiththesouthandrunningthroughthe
+tionshipsbetweensendingandreceivingGHGbetweenthese eastandwest.
+twoblocksandtheotherblocks.Thisresultindicatedthatthe
+twoblockshadsignificantcontrolovertheagriculturalGHG- ReasonsforregionalassociationofagriculturalGHG
+relatednetworkandactedasintermediaryhubsfortheentire
+network(Table5).Therelationshipbetweenthemembersin To analyze the reasons for the regional associations of agri-
+thisblockwasalsoactive.Theintermediaryroleofthesetwo cultural GHG,channelsfor regionalcooperation inreducing
+blockswasinvestigatedindetail,asfollows: emissions are explored. This study uses QAP regression to
+Block2coversthenortherncoastandthemiddlereachesof identify the impact of the economic correlation matrix, the
+the Yellow River, and is mainly affected by Beijing and spatial distance matrix, and the technical correlation matrix
+Tianjininthenortherncoastalarea,andLiaoninginthenorth. on the agricultural GHG correlation matrix (Table 6). The
+Thisblockalsoaffectsalargenumberoftheprovinceslocated resultsareasfollows:
+inthemiddlereachesoftheYangtzeRiverandthenorthwest. The influencing factors were found to explain approxi-
+Block7coversthesouthwest,andthecoastalprovinces.This mately 55% of the spatial correlation of agricultural GHG
+block is mainly affected by Sichuan and Chongqing in the emissions and passed the test with a significance of 1%,
+Table5 Intermediator’ssendingandreceivingrelationship
+Block Acceptingdirection Sendingdirection
+B2 Block1(12),Block8(2) Block1(3),Block4(6),Block5(2),Block6(12),Block7(1),Block8(1)
+B7 Block2(1),Block5(1) Block4(2),Block5(1),Block6(16),Block8(3)
+Block6(2),Block8(8)
+Thenumbersinparenthesesindicatethenumberofrelationships
+7940 Environ Sci Pollut Res (2021) 28:7929–7944
+Table6 FullsampleQAPregressionresults
+Year Spatialconnection Economicconnection Technicalconnection R2
+X M S E N T
+2006 −0.24*** 0.25*** 0.16*** 0.07** 0.05 −0.11*** 0.559***
+(0.00) (0.00) (0.313) (0.03) (0.32) (0.01) (0.00)
+2007 −0.24*** 0.24*** 0.06* 0.09** 0.04 −0.11*** 0.556***
+(0.00) (0.00) (0.08) (0.01) (0.37) (0.01) (0.00)
+2008 −0.24*** 0.25*** 0.15*** 0.08** 0.04 −0.10** 0.558***
+(0.00) (0.00) (0.00) (0.02) (0.31) (0.01) (0.00)
+2009 −0.24*** 0.25*** 0.15*** 0.07** 0.03 −0.09** 0.560***
+(0.00) (0.00) (0.00) (0.03) (0.11) (0.02) (0.00)
+2010 −0.25*** 0.25*** 0.14*** 0.07** 0.03 −0.08** 0.561***
+(0.00) (0.00) (0.00) (0.03) (0.12) (0.02) (0.00)
+2011 −0.24*** 0.25*** 0.07* 0.08** 0.03 −0.08* 0.555***
+(0.00) (0.00) (0.06) (0.02) (0.14) (0.02) (0.00)
+2012 −0.24*** 0.25*** 0.15*** 0.07** 0.03 −0.07* 0.557***
+(0.00) (0.00) (0.00) (0.03) (0.12) (0.01) (0.00)
+2013 −0.24*** 0.24*** 0.13*** 0.07** 0.03 −0.07* 0.553***
+(0.00) (0.00) (0.00) (0.03) (0.12) (0.01) (0.00)
+2014 −0.24*** 0.24*** 0.12*** 0.08** 0.04 −0.09** 0.546***
+(0.00) (0.00) (0.00) (0.03) (0.11) (0.02) (0.00)
+2015 −0.23*** 0.24*** 0.13*** 0.08** 0.03* −0.08** 0.550***
+(0.00) (0.00) (0.00) (0.03) (0.09) (0.02) (0.00)
+2016 −0.24*** 0.24*** 0.12*** 0.08** 0.03 −0.09** 0.548***
+(0.00) (0.00) (0.00) (0.03) (0.11) (0.02) (0.00)
+2017 −0.23*** 0.24*** 0.12*** 0.08** 0.03 −0.08** 0.551***
+(0.00) (0.00) (0.00) (0.03) (0.11) (0.02) (0.00)
+***,**,and*meanvariablesweresignificantat1%,5%,and10%statisticallevels,respectively.S,similaritymatrixofagriculturalindustrialstructure;
+T,thetechnologygapmatrix;N,thesimilaritymatrixofagriculturalenergystructure;E,theregionalagriculturalproducttransfermatrix
+indicating that the spatial correlation of agricultural GHG Thecoefficientofthetechnologicalleveldifferencematrix
+emissionsisaffectedbythespatial,economic,andtechnolog- is negative, indicating that the closer the agricultural tech-
+icallinksbetweenregions. nological level between regions is, the higher the correla-
+The spatial adjacency matrix is a geographical factor. tion in agricultural GHG emissions will be.
+Thecoefficientofthespatialadjacencyrelationshipmatrix Overall, the number of cross-regional leading companies
+is negative, indicating that as the time required for travel hasthegreatestimpactontheagriculturalGHGemissionre-
+by rail between two regions decreases, the correlation in gioncorrelation,followedbyspatialdistance,indicatingthat
+the agricultural GHG emissions will increase. Except for initiatingthecooperationbetweenagriculturalenterprisesmay
+theenergystructuresimilaritymatrix,theestimatedresults achieve better results for reducing emissions (Table 7). To
+of the remaining economic factors, such as the number of furtheranalyzethereasonsfortheassociationofagricultural
+cross-region agricultural leading companies, the similarity GHGs among the internal intermediators, dependentors, and
+intheagriculturalindustrialstructure,andthedegreeofthe influencers,groupedQAPregressionwasperformedwiththe
+regional transfer of agricultural products, are significantly followingresults:
+positive. This indicates that the more cross-region leading Railway running time and the number of cross-regional
+enterprises there are, the more similar the agricultural in- agriculturalleadingenterprisesarethereasonsfortheassoci-
+dustrial structure is, and the more frequent the transfer of ationofagriculturalGHGbetweenprovincesforallroles;the
+agriculturalproductsis,theclosertherelationshipbetween closerthegeographicaldistanceis,thegreaterthenumberof
+regional agricultural GHG emissions will be. The energy cross-regionalagriculturalleadingenterprisesis,andtheclos-
+structure similarity matrix is insignificant because of the er the emission relationship is. The correlation between
+relatively low emissions that result from the consumption influencers is mostly affected by geographical distance, and
+of agricultural energy. The average emissions result from the correlation between dependentors is most affected by
+energy accounted for only 14.3% of the total emissions. cross-regionalagriculturalleadingenterprises.
+Environ Sci Pollut Res (2021) 28:7929–7944 7941
+Table7 GroupedQAPregression
+Year Spatialassociation Economicassociation Technicalconnection R2
+X M S E N T
+Intermediator 2006 −0.38*** 0.21** −0.04 0.06** −0.008 0.12* 0.393
+2009 −0.36*** 0.20** −0.0004*** 0.05** −0.0004 0.12 0.381
+2012 −0.38*** 0.22** −0.0008*** 0.02** 0.16* 0.18* 0.321
+2015 −0.35*** 0.20** 0.004*** 0.02** 0.12 0.08 0.397
+2017 −0.30*** 0.20** 0.007*** 0.04** 0.007 0.06 0.380
+Dependentor 2006 −0.27*** 0.69*** 0.12** 0.06 0.06 −0.19** 0.671
+2009 −0.25*** 0.70*** 0.14** 0.05 0.06 −0.10** 0.665
+2012 −0.23*** 0.72*** 0.13** 0.05 0.06 −0.06** 0.658
+2015 −0.19*** 0.70*** 0.14** 0.06 0.03 −0.10* 0.625
+2017 −0.18*** 0.71*** 0.09** 0.05 0.06 −0.07* 0.628
+Influencer 2006 −0.46*** 0.30** 0.04 0.07 −0.06 0.001 0.605
+2009 −0.47*** 0.29* 0.03 0.09 −0.01 0.002 0.595
+2012 −0.42*** 0.37** 0.02 0.04 −0.004 0.002 0.571
+2015 −0.43*** 0.35** 0.02*** 0.08 −0.01 0.002 0.605
+2017 −0.47*** 0.31* 0.02*** 0.08 −0.001 0.02*** 0.589
+***,**,and*meanvariablesweresignificantat1%,5%,and10%statisticallevels,respectively
+The obvious reasons for the association of agricultural Arevaloetal.(2011)observedthatconvertingagricultural
+GHGamongintermediariesalsoincludetheregionaltransfer land to fast-growing, short-rotation woody crops has the
+ofagriculturalproductsandthesimilarityinindustrialstruc- potential for application in mitigating future climate
+ture.Thegreaterregionaltransferofagriculturalproducts,the change.Theemissionsfromlandusewillbeaffectedby
+closer the relationship between the agricultural GHG emis- seasonalfactors,agriculturalproductioninput,andthetill-
+sions of different regions will be. The influence of similar agesystem(SovikandKlove2007;ReginaandAlakukku
+industrial structures on the correlation of emissions changes 2010;Chenetal.2015).Somescholarshavefocusedon
+from negative to positive. Over time, the more similar the GHG emissions from agricultural machinery. Mantoam
+industrialstructureis,thehighertheagriculturalGHGcorre- et al. (2016) found that more powerful tractors would
+lationwillbe.Theobviousreasonsforthecorrelationofemis- requirelessenergyandemitlessGHGperfunctionalunit.
+sions among dependentorsare also a similarityinthe indus- Some scholars have also studied China’s agricultural
+trial structure and the difference in technological progress. GHGemissions.Min andHu(2012)consideredthedif-
+The more similar the industrial structure is, the smaller the ferencesindifferentvarietiesandgrowthcyclesofplant-
+technical difference will be, and the closer the relationship ing and aquaculture in China to obtain a more accurate
+betweentheagriculturalGHGemissionsbetweenregionswill approximation of GHG emissions from agriculture. We
+be.Theroleofindustrialstructureandtechnologyintheemis- focusedonthevarioussourcesofagriculturalGHGemis-
+sioncorrelationamonginfluencersisgraduallyemerging. sions,withtheobjectivetocomprehensivelyandaccurate-
+ly measure agricultural GHG emissions with respect to
+fivefactors:agriculturalenergy,farmlandutilization,crop
+Discussion planting,ruminantfeeding,andstrawburning.Itwasob-
+served that China’s agricultural GHG emissions varied
+Discussthecontributionofthepaperfromtwoaspects: greatly among provinces, with the total agricultural
+GHGemissionbeinghighinthecentralregion,theemis-
+(1) Becausethereisnounifiedframeworkforthecalculation sionintensitywashighinthenorthandlowinthesouth.
+of agricultural GHG emissions, scholars have different (2) Mostexistingliteraturehasinvestigatedtheregionalcorre-
+basesformeasuringagriculturalGHGemissions.Forex- lationofGHGemissionsbasedongeographicaldistance.
+ample, some scholars focus on GHG emissions by con- Liu et al. (2014) constructed a spatial Durbin model and
+sideringlanduse.SovikandKlove(2007)foundthatN O foundthatdemographic,economic,andtechnologicalfac-
+2
+andCH fromaconstructedwetlandhadanapproximate- tors all bring about the “spillover effect” and “feedback
+4
+ly equal potential to contribute to global warming. effect” of GHG emissions between regions. Dong et al.
+7942 Environ Sci Pollut Res (2021) 28:7929–7944
+(2016) determined that the correlation between industrialstructure,thehigherthedegreeofproducttransfer,
+urbanization and the energy consumption structure will the greater the number of cross-regional agricultural leading
+cause regional associations of GHG emissions, and enterprises, the smaller the difference in technological level,
+proposed that neighboring regions should cooperate to andtheclosertherelationshipofGHGemission.
+reduceemissions.GeorgeandFranklin(2017)considered Ourpolicyrecommendationsareasfollows.(1)Itisneces-
+SwedenasacasestudyandsuggestedthatGHGemissions sarytofurthershortenthespatial,economic,andtechnicaldis-
+inneighboringareasaremorerelevantduetosimilareco- tancebetweentheregions.Thiscanbeachievedbyconstructing
+nomicbehavior,strongerpolicyinteraction,andmorecon- a comprehensive transportation system, strengthening the re-
+venient transportation. However, with the continuous de- gional exchange and cooperation in terms of the agricultural
+velopmentoftheagriculturaleconomyandthetransforma- economy,andestablishingcross-regionalagriculturalindustrial
+tion of development models, the regional correlation of belts or industrial parks.In addition, while encouraging allre-
+agricultural GHGs will show nonlinear characteristics. gionstoincreasetheresearchanddevelopmentoftechnology,
+Therefore,inthisstudy,wewentbeyondtheconsideration preferential policies should also be introduced to promote the
+oftraditionalmethodsofinvestigatingregionalGHGasso- spatial spillover of technology. (2) According to the different
+ciationsbasedongeographicdistanceandlinearcharacter- rolesofeachregionintheemissionnetwork,differentiatedmea-
+istics, and used social network analysis to examine the sures for the reduction of emissions should be adopted.
+characteristicsofGHGassociationsfromaspatialnetwork Influencersshouldestablishagoodlong-terminteractionmech-
+perspective. We clarified the network functions of each anismwithdependentor.Throughcapitalinvestmentandtech-
+region,andestablishedanon-parametricregressionmodel nologytransfertodependentors,itnotonlyenhancestheleading
+toexplainthereasonsfortheagriculturalGHGcorrelation positionofinfluencersinreducingagriculturalGHGemissions,
+fromtheperspectiveofspatialcorrelation,economiccorre- but also improves the effectiveness of theemissionreductions
+lation, and technical correlation. The results of this study carried out by dependentors. Intermediaries should fulfill their
+canlaythefoundationfortheestablishmentofaregional “pipeline” role through guiding policy and agglomerating the
+coordinated emission reduction mechanism and exert the agriculturalindustry,thusoptimizingtherelationshipwithemis-
+chaineffectofemissionreduction. sions from other regions, and enhancing the Intermediaries’
+function as transmitter of emission reduction. Isolators should
+expand their links to agricultural GHGs in other regions, inte-
+gratingthemcloselyintothenetworkandcreatingachannelfor
+Conclusion
+theacceptanceofemissionreductionspillover.
+AgricultureisnotonlyanimportantsourceofGHGemis-
+Usingdatafrom2006to2017for31provincesinChina,this sions,butitalsoplaysaroleinGHGabsorptionviatwomajor
+study constructed China’s agricultural GHG emission corre- channels:cropcarbonsinksandforestcarbonsinks(Yingand
+lationnetwork,analyzedthestatusandroleofnetworknodes, Jing2016).Therefore,thedualcharacteristicsoftheagricul-
+andstudiedthereasonsforthe correlationofemissionusing turalindustrycanbeconsideredinfuturestudies.
+non-parametricQAPregression.Theconclusionsderivedare
+asfollows.(1)ThetotalagriculturalGHGemissionsishighin Authors’ contributions Yanqiu He, writing–original draft preparation,
+fundingacquisition;XiangLan,reviewandediting;ZuoangZhou,re-
+themiddleareas,andtheemissionintensityishighinthenorth
+viewandediting;FangWang,writing–reviewandediting
+andlowinthesouth.(2)TheagriculturalGHGregionalcor-
+relation is obvious; the emission network has high stability
+Funding This research was funded by the National Natural Science
+andhighinequality;regionalspillovereffectis“strictlygrad-
+FoundationYouthProject(71704127).
+ed,” and the central region is in a dominant and controlling
+position. (3) The central region is the most important in the Availabilityofdataandmaterials Alldatageneratedoranalyzedduring
+agricultural GHG-related network. The importance of the this study are included in this published article and its supplementary
+informationfiles.
+northwest and southwest regions has increasedsignificantly,
+andthenumberofregionsactingasintermediariesandbridges
+Compliancewithethicalstandards
+has decreased. (4) The provinces in the agricultural GHG-
+relatednetworkcanbedividedintoeightblockswithdifferent
+Competinginterests Theauthorsdeclarethattheyhavenocompeting
+rolesandstatuses.Influencersaremainlyconcentratedinthe
+interests
+middle reaches of the Yangtze River and the northwest.
+Dependentors are mainly concentrated in the municipalities Ethicalapproval Notapplicable
+thataredirectlyunderthecontrolofthecentralgovernment.
+Theintermediatorsarerelativelyscattered.(5)Thecloserthe Consenttoparticipate Notapplicable
+spatial distance between regions, the more similar the
+7944 Environ Sci Pollut Res (2021) 28:7929–7944
+RybaczewskaB,Magdalena,Gierulsk,Wacław(2018)Eco-effificiency characteristicsinChina:basedonthespatialDurbinmodel.China
+evaluation of agricultural production in the EU-28.Sustainability PopulResourEnviron6:53–61
+10:4544 WuHY,HuangHJ,TangJ,ChenW,HeY(2019)Netgreenhousegas
+SarkodieSA,StrezovV(2019)Effectofforeigndirectinvestments,eco- emissionsfromagricultureinChina:estimation,spatialcorrelation
+nomic development and energy consumption on greenhouse gas andconvergence.Sustainability11:4817
+emissionsindevelopingcountries.SciTotalEnviron1:862–871
+Xiong CH,YangDG,HuoJW(2016)Spatial-temporalcharacteristics
+SnyderCS,DavisonEA,SmithPetal(2016)Researchintodynamiclag andLMDI-basedimpactfactordecompositionofagriculturalcarbon
+effectofR&Dinputoneconomicgrowthbasedonthevectorauto- emissionsinHotanprefecture,China.Sustainability8:262
+regressionmodel.JComputTheorNanosci13:6787–6796
+XuXM,LanY(2017)Spatialandtemporalpatternsofcarbonfootprints
+SovikAK,KloveB(2007)EmissionofN2OandCH4fromaconstructed ofgraincropsinChina.JCleanProd10:218–227
+wetlandinsoutheasternNorway.SciTotalEnviron380:28–37
+XuX,HuangX,HuangJ,GaoX,ChenL(2019)Spatial-temporalchar-
+Stanley W (1994) Social network analysis: methods and applications.
+acteristics of agriculture green total factor productivityin China,
+Cambridge,English. 1998–2016: based on more sophisticated calculations of carbon
+SunH,LiangHM,ChangXL(2015)Landusepatternsoncarbonemis-
+emissions.IntJEnvironResPublicHealth16(20):3932
+sionandspatialassociationinChina.EconGeogr3:154–162
+YangL,LiZ(2017)Technologyadvanceandthecarbondioxideemis-
+SunYN,LiuHJ,LiuCMetal(2016)Researchonspatialassociationof
+sion in China - empirical research based on the rebound effect.
+provincescarbonemissionsanditseffectsinChina.ShanghaiEcon
+EnergyPolicy101:150–161
+Res2:82–92
+TianY,ZhangJ(2017)ResearchoncarbonemissionfromChina’sagri- YangGY, Wu Q,TuY (2016) Researchs ofChina’s regional carbon
+emissionspatialcorrelationanditsdeterminants:basedonthemeth-
+culture,lowcarbonagriculturalproductivityandtheircoordination.
+JChinAgricUniv22(05):208–213
+odofsocialnetworkanalysis.BusEconManage4:56–68
+YangYW,LinWL,ZhangLQ(2017)Agriculturaltechnologyprogress,
+TianY,ZhangJB,LiB(2012)AgriculturalcarbonemissionsinChina:
+calculation, spatial-temporal comparison and decoupling effects. technical efficiencyand grain productionempiricalanalysis from
+ResourceScience34(11):2097–2105 China’sprovincialpaneldata.JAgricTechnol5:46–56
+VergeXPC,MaximeD,DyerJA(2013)CarbonfootprintofCanadian YangZ, WangD,Du Tetal(2018)Total-factorenergyefficiency in
+dairyproducts:calculationsandissues.JDairySci9:6093–6104 China’sagriculturalsector:trends,disparitiesandpotentials.Energy
+VladimirH,MaamarS,MohammadASetal(2018)Theenergy-growth 11(4):853
+nexus:history,development,andnewchallenges.Theeconomics YaoW,ZhangYQ,TianYetal(2019)Influencingfactorsandspatial
+andeconometricsoftheenergy-growthnexus,Lamia spilloverofagriculturalcarbonemissionsinmajorgrainproducing
+WangF,GaoMN,LiuJ,FanW(2018)Thespatialnetworkstructureof areasinChina.JSAgric7:1632–1639
+China’sregionalcarbonemissionsanditsnetwordeffect.Energies YingZ,JingP(2016)Theresearchoneconomicaccountingofforest
+11:2706 carbonsinksanditsbalancesheetestablishment.StatRes33(11):
+WeiW,WenCC,CuiQetal(2018)Theimpactsoftechnologicalad- 71–76
+vanceonagriculturalenergyuseandcarbonemission-ananalysis ZhangYG(2017a)Interregionalcarbonemissionspillover-feedbackef-
+basedonGTAP-Emodel.JAgrotechEcon2018(2):31–40 fectsinChina.EnergPolicy100:138–148
+WisniewskiP,KistowskM(2018)Assessmentofgreenhousegasemis- ZhangJ(2017b)StudyonChineseprovincialcollaborativecarbonreduc-
+sions from agricultural sources in order to plan for needs of low tion based on spatial correlation network structure. Stat Inform
+carboneconomyatlocallevelinPoland.Geografisktidsskriftdanish Forum2:65–71
+JGeogr118(2):1–14
+ZhaoX,WangX,GuoQ(2018)Researchontherelationshipbetween
+WuYG,FengKW(2019)Spatial-temporaldifferentiationfeaturesand
+regionalinnovationcapabilityandcoordinateddevelopmentofag-
+correlation effects of provincial agricultural carbon emissions in
+riculturaleconomyandecologicalenviromnent-spatialevonometric
+China.EnvironSciTechnol3:180–190
+analysis based on provincial panel. Sci Technol Progress Policy
+WuXR,ZhangJB,TianYetal(2014)Provincialagriculturalcarbon 35(07):35–42
+emissionsinChina:calculation,performancechangeandinfluenc-
+ingfactors.ResourSci36(1):0129–0138
+Publisher’snoteSpringerNatureremainsneutralwithregardtojurisdic-
+WuXR, Zhang JB, Cheng LL (2015)Potential of agricultural carbon
+tionalclaimsinpublishedmapsandinstitutionalaffiliations.
+reduction under climate change and its spatial correlation
+

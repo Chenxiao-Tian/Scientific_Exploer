@@ -1,0 +1,27 @@
+Extracted Keywords:
+bipartite graphs, bipartite BTER, bipartite, Princeton University, graphs, degree distributions, graph, degree, University user, modeling bipartite
+
+Main Topics:
+Complex Networks, 581–603
+doi, 10.1093/comnet/cnx001Advance Access Publication, 26 March, bipartite graphs, community structure
+Sinan G. Aksoy
+Department, San Diego, USA
+Tamara G. Kolda†
+Sandia National Laboratories, USA
+†Corresponding author, Ali Pinar
+Sandia National Laboratories, USA
+Edited, Aaron Clauset, 7 July, editorial decision, 12 January, 13 February, Network science, a powerful tool, complex systems, This article, generative models, large-scale bipartite graphs, two-way graphs, two-mode networks, two generative models, the characteristics, real-world networks, the degree distributions, the metamorphosis coefﬁcient, The metamor-phosis coefﬁcient, a bipartite analogue, the clustering coefﬁcient, the proportion, length-three pathsthat participate, length-four cycles, a high metamorphosis coefﬁcient, a necessary conditionfor close-knit community structure, edge, node and degreewis
+
+Methodologies:
+More generally, generative models enableunlimited network data generation for computational analysis, for example, varying the characteristicsof the graph to test a graph algorithm under different scenarios. As we see in the results in Section 4.3, these two distributions
+may be quite different from one another, in part because the size (and, consequently, the average degree)for each partition may be quite different. Other metrics result by considering the product
+graph that is produced by considering just onevertex partition and connecting any two nodes that share a
+common neighbour in the bipartite graph. Our experimental results show that this
+model is effective at reproducing the degree distributions. Thisextension is not straightforward since the afﬁnity block concept does not carry over easily to the bipartitecase, so we develop a new method for creating the blocks. Computational r
+
+Research Outcomes:
+More generally, generative models enableunlimited network data generation for computational analysis, for example, varying the characteristicsof the graph to test a graph algorithm under different scenarios. As we see in the results in Section 4.3, these two distributions
+may be quite different from one another, in part because the size (and, consequently, the average degree)for each partition may be quite different. Other metrics result by considering the product
+graph that is produced by considering just onevertex partition and connecting any two nodes that share a
+common neighbour in the bipartite graph. Our experimental results show that this
+model is effective at reproducing the degree distributions. Thisextension is not straightforward since the afﬁnity block concept does not carry over easily to the bipartitecase, so we develop a new method for creating the blocks. Computational r

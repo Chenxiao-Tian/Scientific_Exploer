@@ -1,0 +1,986 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+Adaptive Synthesis of Indoor Scenes via Activity-Associated Object Relation Graphs
+FU, Qiang; CHEN, Xiaowu; WANG, Xiaotian; WEN, Sijia ; ZHOU, Bin; FU, Hongbo
+Published in:
+ACM Transactions on Graphics
+Published: 01/11/2017
+Document Version:
+Post-print, also known as Accepted Author Manuscript, Peer-reviewed or Author Final version
+License:
+Unspecified
+Publication record in CityU Scholars:
+Go to record
+Published version (DOI):
+10.1145/3130800.3130805
+Publication details:
+FU, Q., CHEN, X., WANG, X., WEN, S., ZHOU, B., & FU, H. (2017). Adaptive Synthesis of Indoor Scenes via
+Activity-Associated Object Relation Graphs. ACM Transactions on Graphics, 36(6), Article 201. Advance online
+publication. https://doi.org/10.1145/3130800.3130805
+Citing this paper
+Please note that where the full-text provided on CityU Scholars is the Post-print version (also known as Accepted Author
+Manuscript, Peer-reviewed or Author Final version), it may differ from the Final Published version. When citing, ensure that
+you check and use the publisher's definitive version for pagination and other details.
+General rights
+Copyright for the publications made accessible via the CityU Scholars portal is retained by the author(s) and/or other
+copyright owners and it is a condition of accessing these publications that users recognise and abide by the legal
+requirements associated with these rights. Users may not further distribute the material or use it for any profit-making activity
+or commercial gain.
+Publisher permission
+Permission for previously published items are in accordance with publisher's copyright policies sourced from the SHERPA
+RoMEO database. Links to full text versions (either Published or Post-print) are only available if corresponding publishers
+allow open access.
+Take down policy
+Contact lbscholars@cityu.edu.hk if you believe that this document breaches copyright and provide us with details. We will
+remove access to the work immediately and investigate your claim.
+Download date: 15/02/2024
+Adaptive Synthesis of Indoor Scenes via Activity-Associated Object
+Relation Graphs
+QIANGFU,BeihangUniversity
+XIAOWUCHEN∗,BeihangUniversity
+XIAOTIANWANG,BeihangUniversity
+SIJIAWEN,BeihangUniversity
+BINZHOU,BeihangUniversity
+HONGBOFU,CityUniversityofHongKong
+Fig.1. Givenanemptyroomandonlyafewspecifiedobjectcategories(Left),oursystemleveragesactivity-associatedobjectrelationgraphslearnedfroma
+2Dfloorplandatabasetosuggestobjectcombinationsandthengeneratestheirlayoutmasks(Middle)toguideadaptivecreationof3Dscenes(Right).
+Wepresentasystemforadaptivesynthesisofindoorscenesgivenanempty AdditionalKeyWordsandPhrases:3Dscenes,adaptivescenesynthesis,
+roomandonlyafewobjectcategories.Automaticallysuggestingindoor objectrelationgraph
+objectsandproperlayoutstoconvertanemptyroomtoa3Dsceneischal-
+ACMReferenceformat:
+lenging,sinceitrequiresinteriordesignknowledgetobalancethefactors
+QiangFu,XiaowuChen∗,XiaotianWang,SijiaWen,BinZhou,andHongbo
+likespace,pathdistance,illuminationandobjectrelations,inordertoinsure
+Fu.2017.AdaptiveSynthesisofIndoorScenesviaActivity-AssociatedObject
+thefunctionalplausibilityofthesynthesizedscenes.Weexploitadatabase
+RelationGraphs.ACMTrans.Graph.36,6,Article201(November2017),
+of2Dfloorplanstoextractobjectrelationsandprovidelayoutexamples
+13pages.
+forscenesynthesis.Withthelabeledhumanpositionsanddirectionsin
+https://doi.org/10.1145/3130800.3130805
+eachplan,wedetecttheactivityrelationsandcomputethecoexistencefre-
+quencyofobjectpairstoconstructactivity-associatedobjectrelationgraphs.
+Giventheinputroomanduser-specifiedobjectcategories,oursystemfirst 1 INTRODUCTION
+leveragestheobjectrelationgraphsandthedatabasefloorplanstosuggest
+morepotentialobjectcategoriesbeyondthespecifiedonestomakeresulting Indoorscenesynthesisisanimportantproblemincomputergraph-
+scenesfunctionallycomplete,andthenusesthesimilarplanreferencesto icsandhasreceivedagreatdealofattentionlately.3Dvirtualscenes
+createthelayoutofsynthesizedscenes.Weshowvarioussynthesisresults thatenabledailyhumanactivitiesareofhighdemandinvarious
+todemonstratethepracticabilityofoursystem,andvalidateitsusabilityvia applicationslikeinteriordesignand3Dgameproduction.Given
+auserstudy.Wealsocompareoursystemwiththestate-of-the-artfurni-
+adatabaseof3Dscenemodels,tocreatesuchscenes,itgenerally
+turelayoutandactivity-centricscenerepresentationmethods,intermsof
+requiressolvingtwosubproblems:firstselectapropersubsetof
+functionalplausibilityanduserfriendliness.
+furnitureobjects,andthenplacethemintoagivenroomwitha
+CCSConcepts:•Computingmethodologies→Computergraphics; properlayout.Achievingthesetwostepsmanuallyistimeconsum-
+Shapemodeling; ing.Designingquality3Dscenesisevenchallengingfornovice
+users,sincethisprocessrequiresinteriordesignknowledgetofulfill
+thefunctionaldemandswhilesatisfyingthephysicalspacecon-
+© ACM, 2017. This is the author's version of the work. straints.Suchuserscangreatlybenefitfromsystemsthatadaptively
+exploreproperindoorobjectsandtheirlayoutstosynthesize3D
+It is posted here by permission of ACM for your personal
+scenes.
+use. Not for redistribution. The definitive version was
+Theexistingworkson3Dscenesynthesishavemainlyfocusedon
+published in ACM Transactions on Graphics, {Volume addressingeitheroftheabovetwosubproblems.Toexploreproper
+36, Issue 6, (November 2017)} objectsforanindoorscene,someworksaimtosuggestnewobjects
+basedonthestatisticobject-objectrelations,withsomeexisting
+https://doi.org/10.1145/3130800.3130805
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+201:2 • Fu,Q.etal
+furniture[FisherandHanrahan2010]orareferencescene[Fisher with the state-of-the-art furniture layout method [Merrell et al.
+etal.2012].Besides,someotherworksfocusonthehuman-object 2011]andactivity-centricscenerepresentation[Savvaetal.2016],
+relationstoexploreindoorobjectsbasedoncertainactions(e.g., intermsoffunctionalplausibilityofsynthesizedscenesanduser
+[Fisheretal.2015;Maetal.2016;Savvaetal.2016]).Ontheother friendlinessofthesystems.
+hand,someresearchesleverageinteriordesignguidelinesforthe Weclaimthefollowingcontributionsinthiswork:
+arrangement of a given set of indoor objects [Merrell et al. 2011; • Anobjectrelationgraphrepresentingobjectswithactivity
+Yuetal.2011],whosemanualselection,however,isatedioustask
+relationsandcoexistencefrequencies,toenableadaptive
+especiallyfornoviceusers.
+objectsuggestiongivenaroomandafewspecifiedobject
+Duetothelackofcoordinationmechanismsbetweenthecur-
+categories.
+rentsolutionstosuchtwosubproblems,naivelycombiningthese • A2Dfloorplandatabasethatenablesobjectrelationgraph
+methodsmighteasilycauseundesiredresults.Forexample,ifthe
+constructionandprovideslayoutexamplesforlayoutcre-
+objectexplorationstepreturnstoomanyfurnitureobjects,thelay-
+ationofthesynthesizedscenes.
+outstepmightcreateatoocrowdedscene.Moreover,thecurrent • Anend-to-endsystemthatadaptivelycreates3Dscenes,
+objectexplorationmethodsfocusmoreonpairsofdirectlyrelated
+andsupportotherapplicationslikeindoorsceneediting
+objects,e.g.,aPConadeskorahumansittingonachairandusinga
+andactivityanimationcreation.
+desk,whileobjectswithactivityrelationslikebookshelf-chair-desk
+groupsarerarelyconcernedabout.Inaddition,guidelinesinthe 2 RELATEDWORK
+currentlayoutmethodsonlyleveragepartialinteriordesignknowl-
+ContextualSceneUnderstanding. Contextualsceneunderstand-
+edgefocusedmainlyonobject-objectrelations,withoutconsidering
+ing has become an important technique for indoor object orga-
+functionoractivityrelatedruleslikeanti-backlightingandpath
+nizationandscenesynthesis.Severaldata-drivenapproachesat-
+optimizationandthuspossiblyresultinginscenesthatarespatially
+tempted to model the context of indoor objects or their spatial
+wellarrangedbutarenotverysuitableforcertainactivities(e.g.,
+relationshipsfromexistingscenes,e.g.,toencodesemanticscene
+watchingTV).
+structures[FisherandHanrahan2010;Fisheretal.2011].Liuet
+Toaddresstheseproblems,wepresentanovelindoorscenesyn-
+al.[2014]presentedanalgorithmthatusesaprobabilisticgrammar
+thesissystemthatisabletoadaptfurnitureexplorationandlayout
+learnedfromexamples,forhierarchicaldecompositionofascene
+creationwithrespecttoagivenemptyroomwiththedoorand/or
+intosemanticcomponents.Xuetal.[2014]proposedtoorganize
+windowspecifications.Toreducetheamountofuserintervention,
+aheterogeneousscenecollectionbyclusteringthescenesbased
+usersonlyneedtospecifyasmallnumberofrequiredobjectcat-
+onasetofextractedfocalpoints,whichareusedtorepresentsub-
+egories,withanoptionalnumber(onebydefault)ofobjectsper
+structuresinascenecollection.Thecontextualinformationcan
+category,andoursystemautomaticallysuggestsotherobjectcate-
+alsobeusedtoturnafreehandsketchtosemanticallyvalidand
+goriesthatarecloselyrelatedtotheexistingcategories.Thisdesign
+wellarranged3Dscenes[Xuetal.2013],orforautomaticsemantic
+choicealsoenablesoursystemtoautomaticallydeterminethescene
+modelingofindoorscenesfromasparsesetoflow-qualityRGB-D
+typeofawholeorcertainareaofthegivenroom,thusreducing
+images[Chenetal.2014].TheImaginingtheUnseensystem[Shao
+theuserinterventionofselectingmanyscenetypetagswhencre-
+etal.2014]wasproposedtohallucinategeometryintheoccludedre-
+atinglargeroomswithsubareasofdifferentscenetypes.Thisis
+gionsofascannedscenebygloballyanalyzingthephysicalstability
+achievedbyexploitingtheknowledgehiddeninadatabaseof2D
+oftheresultantobjectarrangements.Inourwork,weextractobject
+floorplandesignedbyprofessionalsfordifferentscenes.Thescene
+relationgraphstorepresentthecoexistenceandactivityrelations
+examplesinthefloorplansalsocontainthelatentactivityrelations
+ofpair-wiseobjects,similartothecurrentscenestructurerepre-
+ofobjectcategories.Tosuggestapropersetofobjects,oursystem
+sentationmethods[Liuetal.2014;Xuetal.2014].However,our
+firstdeterminesthescenetypeoftheinputroomaccordingtothe
+objectrelationgraphsareactivity-associatedandcapturepotential
+roomsizeandthequantityofeachspecifiedobject.Tomakethe
+relationsbetweenobjectseveniftheyarenotincloseproximityor
+auto-completionofobjectcategoriesmorepowerful,weintroduce
+directlyinteractedbyaposedhumanagent.
+anduseanactivity-associatedobjectrelationgraphforeachscene,
+whichcapturesnotonlytheobject-objectrelationsusedinthepre- Activity-CentricAnalysis. Activity-centricunderstandingofman-
+viousworks[Liuetal.2014;Xuetal.2014]butalsotherelations madeobjectsandindoorenvironmentshasbeenapopularresearch
+betweenobjectsthatarenotincloseproximitybutrelatedbya topicinrecentyears.Basedontheconceptofaffordance,several
+certainactivity(e.g.,abookshelftoadeskforreading).Wealso techniqueshavebeenproposedtousehuman-objectinteractions
+derivethelayoutsfromthe2Dfloorplandatabasebyconsidering forvariousapplicationslikeposeestimation[Kimetal.2014],shape
+thepositionsandsizesofwindowsanddoors,whichareseldom analysis[Xieetal.2014],objectreshaping[Zhengetal.2016],and
+consideredintheexistingindoorscenesynthesisworks.Thelayouts scenereconstruction[Xuetal.2015].Understandingactionsin3D
+ofthedatabasefloorplanswiththeroomsofsimilarcapacitytothe sceneshasalsobeenstudied.Forexample,Grabneretal.[2011]
+inputonearefinallyweightedandcombinedtoguidetheplacement proposedtolearnanaffordancedetectorandapplyittosceneanal-
+oftheexploredobjects(seeFigure1). ysis.Savvaetal.[2014]presentedanactionmapoverasceneto
+Weshowthepracticabilityofoursystemwithvarioussynthesis predictalikelihoodofagivenactiontakingplaceovereveryloca-
+results.Auserstudywasalsoconductedtoevaluateoursystem tionina3Denvironment.Besides,Huetal.[2015]presentedan
+comparedtomanualscenecreation.Wealsocomparedoursystem interactioncontextdescriptortoexplicitlyrepresentthegeometry
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+AdaptiveSynthesisofIndoorScenesviaActivity-AssociatedObjectRelationGraphs • 201:3
+Table1. Asummaryofdifferencesbetweenourworkandthecloselyrelatedworks.
+[Fisheretal.2012] [Xuetal.2013] [Savvaetal.2016] Ours
+Object
+Sceneexample Sketch Posedagent Fewspecifiedobjects
+exploration
+[Merrelletal.2011] [Chenetal.2015a] [Fisheretal.2015] Ours
+Layout
+Layoutguidelines Indoorimageexample Placedagents Floorplanexamples
+creation
+[Merrelletal.2011] [Fisheretal.2012] [Fisheretal.2015]
+Ours
+[Chenetal.2015a] [Xuetal.2013] [Savvaetal.2016]
+Relation Objectposition/direction Objectco-existence Object-activity Activity-associated
+prior relation relation relation objectrelation
+ofobject-objectinteractions.Thestate-of-the-artworkshavebeen furniture-levellayoutofindoorsceneswiththeobjectsandtheir
+abletolearngraphsencodingrelationsbetweenhumanposesand layoutsadaptivelydetermined.Inoursystem,differentsizesofinput
+objectgeometries,andrepresentthesehuman-objectrelationsin roomordifferentquantitiesofacertainobjectcategorycanlead
+theformofaction+noundescriptions[Savvaetal.2016],which tovariationsofsynthesizedscenesduetotheadaptivescenetype
+iscloselyrelatedtoourwork.Suchdescriptionscouldaccurately determinationandobjectexploration.Besides,the2Dfloorplan
+determinewhatkindofobjectsshouldbeinteractedto,whenan databaseinoursystemprovideslayoutexamplesfollowinginterior
+actionoccurs.However,suchanaccuratedefinitiontodescribethe designknowledgeandthusbeingabletoguideobjectarrangement
+functionaldemandsofaroommightbetediousforuserstogive.In forthegivenroomandexploredobjects.
+contrastoursystemonlyrequiresasmallsetofobjectcategoriesto InTable1,wehavesummarizedthedifferencesofoursystem
+indicatetheuser’sintensioneasily. fromcloselyrelatedworksintermsoftheconditionsforobject
+exploration,layoutcreation,andtherequiredrelationpriors.Com-
+SceneSynthesis. Synthesizingindoorscenesbyfurniturearrange- paredwiththeworksbasedonactivityrelations[Fisheretal.2015;
+menthaspracticalapplicationssuchasinteriordesignandonline Savvaetal.2016],ourworkperformstheobject-levelinference
+games.SeveralsystemslikeMakeitHome[Yuetal.2011]andthe forscenesynthesis,insteadofrequiringusermanipulationonhu-
+interactivefurniturelayout[Merrelletal.2011]employedthepre- managents.Comparedwiththeworksbasedonobjectco-existence
+definedguidelinesortherelationslearnedfroma3Dscenedatabase, relations[Fisheretal.2012;Xuetal.2013],ourworkusesobject
+toassistusersinsuggestingarrangementsforagivensetoffurniture co-existencefrequencytoenhancetheobjectrelationswhichare
+objects.Fisheretal.[2012]presentedanexample-basedsynthesis associatedbymeaningfulactivities.Comparedwiththeworksfo-
+methodtoproduceadiversesetofplausiblenewscenesgivenanex- cusingobjectarrangement[Chenetal.2015a;Merrelletal.2011],
+isting3Dsceneasinput.OthersystemslikeMagicDecorator[Chen ourworkcanalsoimplicitlydescribethepotentialfunction/activity
+etal.2015b]andImage2Scene[Chenetal.2015a]aimedtoreveal ofthesynthesizedscenesthustofacilitateimplementationslike
+theindoorscenestyleslikecolorsandlayoutsfromindoorscene activityanimationcreation.Giventhesedifferences,oursystem
+images.Besides,thereexistsomeworksonlayoutcomputationfor requiresonlyaverysparsespecificationofmajorobjectcategories,
+largescalesceneslikebuildingsandurbanfaces[Pengetal.2014; andcanautomaticallycreatesceneswithenrichedobjectsadapted
+Yangetal.2013].Ourworkdiffersfromthesepreviousworksin tothegivenroom.
+termsofbothinputs(anemptyroomwithuser-specifiedobject
+3 OVERVIEW
+categoriesversusagivensetof3Dfurnitureobjectsalreadyortobe
+placedintoaroom)andmethodologies(activity-associatedobject As illustrated inFigure2, our system consistsof two stages: an
+relationsversusrelativepositionsofobjectpairs). off-linestageforextractingobjectrelationgraphsfroma2Dfloor
+Usinghumanfactorsforscenesynthesishasbeengettingmore plandatabaseforeachtypeofscene;anon-linestageforusing
+andmorepopular,sincethenatureofindoorscenesistomeetthe theextractedobjectrelationgraphstoexploreproperobjectsand
+demandofhumanactivities.Jiangetal.[2012]proposedtousehu- similarfloorplanexamplestoguidethesynthesisof3Dscenes.
+mancontextforobjectarrangementsbylearninghowobjectsrelate Inthefirststage,wecollecta2Dfloorplandatabasewithlayouts
+tohumanposesbasedontheiraffordances,easeofuse,andreacha- designedbyprofessionals,includingeighttypesofscenes.Toextract
+bility.Fisheretal.[2015]presentedamethodtogenerate3Dscenes theactivity-relatedpriorofindoorobjectsbehindthesefloorplans,
+thatallowthesameactivitiesasrealenvironmentsrepresentedas wefirstsegmentandlabelalltheindoorobjectsineachplan.Asa
+noisy and incomplete 3D scans. Savva et al. [2016] proposed to cuetorevealtheinteractionrelationsbetweenobjects,wealsolabel
+learnaprobabilisticmodelconnectinghumanposesandarrange- thehumanpositionsanddirectionsinsidefloorplans.Forsome
+ments of object geometry, for jointly generating 3D scenes and objectssuchaswardrobeandchair,human-objectrelationshipis
+interactionposes.Maetal.[2016]providedaframeworkforaction- ratherfixedandcanbedeterminedafterobjectannotation.However,
+drivenevolutionofindoorscenesfocusingontheobjectplacement forotherobjectslikesofa,theremightbemultiplepotentialhuman
+variationscausedbyasequenceofactions.Oursystemfocuseson positions,andtheirpositions/directionsthusmightchangeacross
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+201:4 • Fu,Q.etal
+Fig.2. Pipelineofoursystem.Weusea2Dfloorplandatabasetogenerateactivity-associatedobjectrelationgraphsforeachtypeofscene.Givenanempty
+roomandafewuser-specifiedobjectcategories,oursystememploystheobjectrelationgraphstoexploremoreproperobjectcategoriesandgeneratetheir
+layoutstoguidescenesynthesis.
+floorplans,dependingonsurroundinginteractiveobjects.Hence
+weplacesomehumanagentswithproperpositionsandfrontdirec-
+tionstoensurethateveryexistingobjectinthefloorplanscanbe
+interactedwithacertainplacedhumanagent(Section4.1).Wealso
+havea3Dindoorobjectdatabaseforscenesynthesis,witheighteen
+categoriesoffurniture-levelobjects.Withsuchafloorplandatabase,
+wecountthestatisticsonthecoexistencefrequencyofeachpair
+ofobjectcategories,andalsodetecttheactivityrelationsofobject
+Fig.3. Ineachroomofour2Dfloorplandatabase,wemanuallylabel
+pairsusingtheplacedhumanagentsineachfloorplan.Afterwards,
+thefurnitureobjects,potentialhumanpositions(reddots)andtheirfront
+weconstructobjectrelationgraphswiththeobjectcategoriesas
+directions(redarrows),andthefreeareasthatcanbepotentiallyusedfor
+thenodesandtheirrelationsastheedgeswithdifferentweightsto objectplacement.
+describetheirrelationdegrees(Section4.2).Besides,wealsoextract
+theroomfeatureandlayoutofeach2Ddatabasefloorplanforthe
+subsequentadaptivescenesynthesis(Section5.1). interactiverelatedneighborsinthegraphstartingfromacertain
+Inthesecondstageweuseour2Dfloorplandatabase,3Dobject object(Section6).
+databaseandobjectrelationgraphstogeneratescenesadaptedto
+thegivenemptyroomanduser-specifiedobjectcategories,with 4 ACTIVITY-ASSOCIATEDOBJECTRELATIONGRAPHS
+one(bydefault)ormultipleobjectspercategory.Oursystemfirst
+Activityplaysanimportantroleinrevealinghuman-objectrelations.
+determinesthescenetypeofthegivenroombasedontheinputroom
+Ourgoalistodiscoveractivity-associatedobjectsandencodetheir
+sizeandthespecifiedobjectcategoriesintermsoftheirquantity
+relationsasagraph.Eachtypeofscenehasitsownobjectrelation
+(Section5.2).Then,anobjectexplorationalgorithmisemployed
+graphasaresultofthefunctionalityofthescene.Sucharepresen-
+toadaptivelysuggestmoreproperobjectcategoriesbeyondthe
+tationdoesnotneedtodefineanynounofactionoractivity,as
+user-specifiedonesviatheobjectrelationgraphsandthefloorplan
+donein[Savvaetal.2016].Instead,wedeemthatactivitiesarethe
+database,tomaketheinputroomhavemorecloselyrelatedobjects
+latentrelationsembodiedinthelayoutsof2Dfloorplans.Inthis
+andareasonablerateofoccupancy.Finally,weusetheroomfeature
+manner,givenacertainobjectcategory,wecanfinditsactivity-
+oftheinputroomtofindseveralsimilarfloorplanexamples.The
+relatedcategoriesfromtheachievedrelationgraphtoenrichthe
+layouts ofthese examples areweighted andcombined tocreate
+scenevariations.
+thelayoutoftheinputroom,andalltheexploredobjectsarethen
+placedintotheroomtogeneratethesynthesizedscene(Section 4.1 2DFloorPlanDatabase
+5.3).Oursystemnaturallyenablesscenesynthesisandediting.For
+Wecollectedeightscenetypesofprofessionallydesignedfloorplans
+example,theobjectsthatareaddedintoanexistingroomcanbe
+toestablishour2Ddatabase,includingbedrooms,livingrooms,din-
+automaticallyre-arranged.Wealsoshowtheobjectrelationgraphs
+ingrooms,studyrooms,offices,conferencerooms,gymsanddining
+canbenefitanimationcreationofindooractivitiesbyseekingfor
+halls. These floor plans were collected from the websites of the
+house-builders and interior design companies. We denote these
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+AdaptiveSynthesisofIndoorScenesviaActivity-AssociatedObjectRelationGraphs • 201:5
+Table2. Somehighlightedparameters.
+AVG. Graph
+Set Feature Area
+area weight
+Scene
+type
+S θs Ws Scene fr θr
+Object
+category
+O θc Object f
+obj
+θo
+scenetypesasS={s1,···,s8}.Thesefloorplanshavetheassoci-
+atedscaleinformationandwelldesignedfurniturelayoutsfollowing
+interiordesignknowledgeandfullyconsideringtheaffordanceof
+eachroom.Weleveragethesecommonlyseenhomeandpublic
+scenestoprovidepotentiallyrelatedobjectgroupsandlayoutrefer-
+encesinoursystem.Tothisend,asillustratedinFigure3,wefirst
+manuallylabeledthecategories,positionsandsizesoftheindoor
+objects,windowsanddoorsineachplan.Nextwemanuallyplaced
+humanagentswithproperpositionsandfrontdirectionsintoeach
+floorplan.Theseagentsareimportantfordetectingactivity-related
+objects.Sincemostofthefloorplansonlycontainthebasicfurni-
+turebutwewouldalsoliketoconsiderdailyapplianceslikewater
+dispenserandrefrigerator,weinvitedaprofessionaldesignerto
+assistinlabelingsomefreeareas(Figure3)wheresomeappliances Fig.4. Partofanobjectrelationgraph(partialnodes)extractedfromthe
+mightbeplacedwithoutinfluencingtheuseofexistingfurniturein typeofbedroomfloorplans.Weshowthepair-wiseobjectrelationweight
+eachfloorplan. matrix {Ws(oi,oj)}(top)andthegraphwhichonlycontainstheedges
+whoseweightisgreaterthan0(bottom).Notetheedgeswithgreaterweight
+4.2 RelationExtraction areheavier.
+Objectslabeledinthe2Dfloorplansbelongtosomebasicfurniture
+categories.Toenrichthevariationsofthesynthesizedscenes,we
+activitytotheotherone,whileobjectswiththesecondfunctional
+also collected a 3D object database (18 object categories in our
+purposecanberelatedtoobjectswiththefirstpurposesoastofulfill
+system), denoted as O = {o1,···,o18}. It contains more object
+theactivityafterfetchingsomething(e.g.,abedorachaircanbe
+categoriesthantheexistingonesinthe2Ddatabasefloorplans,and relatedtoabookshelfforreadingactivity).Inthisway,A(oi,oj)=1
+objectsofthesecategoriescanbeplacedincertainlabeledfreeareas.
+ifoi andoj bothhavethefirstfunctionalpurposeoroneofthem
+Foreachscenetype,afullyconnectedgraphcanbeconstructed,with
+hasthefirstpurposewhiletheotherhasthesecond.
+eachnoderepresentingoneobjectcategoryinO.Ourgoalinthis
+However,theobjectrelationsobtainedbythefunctionalpurposes
+stepistodeterminetherelationsbetweeneachobjectcategorypair
+mightnotbealwayscorrect.Forinstance,accordingtothefunc-
+oi andoj astheweightoftheiredgeE(oi,oj).Wetakeintoaccount
+tionalpurposesalone,arefrigeratorisrelatedtoabed,butthereis
+boththecoexistencefrequencyandactivitypriorstodescribesuch
+nonaturalactivityassociatedwithsuchanobjectpair.Fortunately,
+objectrelations.InTable2,wehighlightsomeparametersofscene
+the2Dfloorplandatabasecanbeusedtoaddressthisproblemby
+typeandobjectcategoryaswellasthesceneandobject,whichwill
+countingtheobjects’coexistencefrequency.Thisisbecauseactivities
+beusedinthesubsequentdiscussions.
+areusuallydoneinthesameroom.Forexample,arefrigeratoris
+Specifically,iftwocategoriesofobjectsoi andoj areoftencoex-
+morelikelytoberelatedtoachairasideadiningtableinadinning
+istentandsimultaneouslyusedbyahuman,orhavethematched
+roomratherthanabedinabedroom.Benefitedfromthelabeled
+functionalpurposes,theywouldhavealargeedgeweight.Tocom-
+objectsineachfloorplan,thecoexistencefrequencyiseasytocalcu-
+putetheactivitypriors,denotedasabinarymatrixA(oi,oj),weuse
+lateformostoftheobjects,exceptthefreeareaswhicharelabeled
+theplacedhumanagentsineachfloorplantofirstdetecttheinterac-
+toplacecertainapplianceslikepianoandeasel,whicharenotcon-
+tiveobjects.Forexample,alyingagentinabedhasatoucharea(i.e.,
+tainedinthefloorplans.Wecomparethesizesofthelabeledfree
+withinthearm’sreach)coveringanighttableandavisualarea(i.e.,
+areaswiththesizesofthoseappliancestogivetheexistenceproba-
+allregionsinfrontoftheagent)coveringaTVset,A(oi,oj)=1for
+bilityofsuchappliancecategoriesineachfloorplan.Leto′denotea
+thebed-nighttablepairandbed-TVsetpair.Besides,wealsodefine
+certaincategoryofsuchappliances.Weusetheaveragedshortand
+twokindsoffunctionalpurposes:tostayinacertainobjectfora longedgelengthslo′ andlo′
+offloorprojectionsofalltheobjects
+longtime(e.g.,beds,chairs,couches,gymandplayequipments);to s l
+inthiscategorytodefinetheobjectsizefeaturefo′ = {lo′ ,lo′}.
+fetchsomethingfromanobjectwithashortstay(e.g.,bookshelves, obj s l
+wardrobes,waterdispensers,andrefrigerators).Weobservethat Similarly,forafloorplanr withafreeareawecalculateitssize
+objectswiththefirstfunctionalpurposecanberelatedtoswitchone featuref obj anddefineexist(o′,r)=||fo ob′ j −f obj|| 22todescribethe
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+201:6 • Fu,Q.etal
+objectcategoriestoenrichthescene,andfinallyusesthelayout
+examplesextractedfromthe2Dfloordatabasetoseekfortheproper
+objectsforthesuggestedobjectcategories,andguidethearrange-
+mentoftheexploredobjectstosynthesize3Dscenes.Thisprocess
+isadaptivetothegivenroomanduser-specifiedobjects.Inother
+words,iftheuseralreadyspecifiesenoughobjectcategoriesleading
+aproperratioofoccupancyforthegivenroom,oursystemwillnot
+suggestmoreobjectsbutfocusesongeneratingaproperlayoutto
+placethesespecifiedobjects.
+5.1 RoomandLayoutDescription
+Weobservethatthelayoutofthescenedependsatleastontheroom
+size,positionsofwindowsanddoors,andtheareasofallfurniture.
+For simplicity, let us assume all floor plans in our database are
+Fig.5. Top:weusethelabelsinthefloorplantogeneratealayoutmask. rectangular,with(cid:205)θo andθr astheareasofallplacedobjectsand
+Bottom:2Dembeddingofthelayoutsofthebedroomfloorplans.We theroom,respectively.Todescribethesimilarityoftworooms,we
+clusterthemintotwogroupsandshowtwocasesineachgroup. thusdefinearoomfeaturefr ={∠(w,d),rs,re,φ},where∠(w,d)
+istheincludedanglebetweentwovectorswandd,whicharefrom
+existenceprobabilityofobjectcategoryo′inr.Notethatwealso thehomecentertotheaveragepositionsofthewindowsanddoors,
+fi e.l gte .,r wo eut set th ae li lr er xa it sio t(n oa ′l ,re )xi =st 0en foce rrr ee fl ra it gio en ras toin ra inc ee art ca hin flosc oe rn pe lat nyp oe f, r oe cs cp ue pc at niv ce yl ,y re(a is ss th ho ew ran tii on oF fig thur ee s6 ho( ra t)) e, dr gs e= to(cid:205) tθ hθ r eo li os nt ghe edr ga etio ofo af
+t ph lae nco dn atf aer be an sec ,e wro eo sm et. eF xo ir st th (oe ,o rt )h =er 1o ib fj oec bt js ecw th ci ac th ega op rp ye oar isin lat bh ee lefl doo inr room,andφ= θrθ +r
+θs
+isascalefactor,whereθs istheaveragearea
+ofallroomsinthesamescenetypetomakethescalefactorφcan
+afloorplanr andexist(o,r)=0otherwise.Inthisway,weobtain
+describetherelativesizeofaroominitsscenetype.
+thecoexistencefrequencyP(oi,oj|s)ofscenetypesasfollows:
+The2Dfloorplansalsoprovideplausiblelayoutexamplesfor
+P(oi,oj|s)=
+(cid:205) r∈∇exist(oi |∇,r |)·exist(oj,r)
+, (1)
+d obiff tae ir nen at br io no arm ys m.F ao skre inac wh hd ica hta tb ha es ae rfl eao so pr lp al ca en di wn itt hhe fus ra nm ite urt eyp are e,w see
+t
+where ∇ = {r} isasetoffloorplansinscenetypes.Then,the to1,whiletheotherareasaresetto0(seeFigure5(top)).Thenwe
+weightoftheiredgeE(oi,oj)forscenetypes,denotedasWs(oi,oj), alignallthesemasksinthesametypeofscenesbythelongedgesof
+istheproductofthecoexistencefrequencyP(oi,oj|s)andactivity therooms,andmakethebarycenteroftheroomtobeinthebottom-
+priorsA(oi,oj),i.e.,Ws(oi,oj)=P(oi,oj|s)·A(oi,oj).Forthefully right,byhorizontally/verticallyflippingthemasksifneeded.After
+that,eachalignedmaskisresizedtoa10×10matrix,denotedas
+connectedgraphwithallobjectcategoriesasthenodes,wecut
+theedgeswhoseWs(oi,oj) = 0andremovetheisolatednodesto M,suchthatlayoutsfromdifferentfloorplanscanbeamalgamated
+toanewlayout.Weuseamatrixwithsmallsizetoensurethatthe
+obtain an object relation graph. See Figure 4 for an example of
+floorplanlayoutscanbeamalgamatedthoroughly,ratherthana
+theweightmatrixandcorrespondingrelationgraph.Theactivity-
+largeronethatonlygeneratesalayoutwithallobjectsfromthe
+associatedrelationscontainboththedirectinteractionrelations
+referencefloorplansoverlappedinaroom.Besides,thoughthe
+andtheactivity-associatedcontexts.Forexample,wecanfinda
+databasefloorplanshavedifferentsizes,weonlyusefewfloorplans
+directinteractionrelationbetweenchairanddresserthatcanbe
+withsimilarroomfeatures(includingroomsize)togeneratethe
+interactivewithastatichuman,andanactivity-associatedcontext
+layoutofthegivenroom.Thusitallowsthemasksofthedatabase
+betweenwardrobeandchair-dresserindicatingadynamicprocess
+floorplanstoberesizedtothesamesize.Evenasameroomcan
+ofdressing-upactivityfromourrelationgraph.
+havemorethanoneplausiblelayout,andwethusalsoclusterthese
+5 ADAPTIVESCENESYNTHESIS layoutmatricesineachtypeofscenesintogroups(viaMeanShift
+clustering)torevealthelayoutsimilarity.InthebottomofFigure
+Similartotherecentfurniturelayoutmethods[Chenetal.2015a;
+5,weclusterthelayoutofallbedroomsinourfloorplandatabase
+Merrelletal.2011;Yuetal.2011],oursystemfocusesonfurniture-
+intotwogroups,andshowsomefloorplanexamplesineachgroup.
+levelobjectarrangement.Sincethelayoutsinour2Dfloorplan
+Layoutmatricesinthesamegroupareeasiertoamalgamatedueto
+databaseweredesignedbyprofessionals,thedesignofsuchlayouts
+theirsimilarities.
+hasalreadyfollowednotonlyarrangementguidelinesbutalsothe
+reasonablerateofoccupancyandtheactivity-relatedpriorssuchas
+5.2 SceneTypeDetermination
+anti-backlightwhenplacingTVset,optimizingtheindoorpathway,
+etc.Thismotivatesustoleveragethe2Dfloordatabasetoadap- Sincedifferenttypesofsceneshavedifferentlayoutdistributions
+tivelyexploreproperobjectsandtheirlayoutsforscenesynthesis, andobjectrelations,weneedtofirstdeterminewhichtypeofscene
+usingtheactivity-associatedobjectrelationgraphs.Toachievethis, ismoresuitablefortheinputroom.Theinputroomcanbeasingle
+oursystemfirstdeterminesthescenetypeofagivenroom,then sceneoracompositesceneconsistingofmultiplepieces.Theoutput
+exploresmoreproperobjectcategoriesbesidestheuser-specified of this step is thus either a single scene type or a combination
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+AdaptiveSynthesisofIndoorScenesviaActivity-AssociatedObjectRelationGraphs • 201:7
+Fig.6. Adaptivescenesynthesis.(a)theinputroomandspecifiedobjectcategories.(b)basedontheobjectrelationgraph,moreproperobjectcategories
+(green)whicharerelatedtothespecifiedones(blue)areexplored.(c)aproperlayoutmaskisgeneratedbyweightedamalgamatingthedatabasefloorplans
+withthesimilarroomfeatures.Weshowthetop-4floorplans.Notethattheremightnotexistadatabasefloorplanthathasthesameroomandlayoutasthe
+generatedresult.(d)objectsareplacedintotheroomguidedbythelayouttosynthesizea3Dscene.
+of multiple types. It depends on the size of input room and the typesofscenesandsuggestsdifferentcategoriesofobjecttocreate
+quantity of the user-specified objects to determine which scene 3Dscenes,asshowninSection7.
+type(s)shouldtheinputroomtobe.Assume O˜ ⊂ O isasetof
+user-specifiedobjectcategoriesandθi istheaverageroomareaof 5.3 ObjectExplorationandArrangement
+s
+scenetypesi,calculatedbyusingthe2Ddatabasefloorplansinthe
+Tomakeoursystemeasytouse,usersonlyneedtospecifyasmall
+sametype.Foraninputroomwhoseareaisθr,wearetoexplore
+number of object categories. The quantity of the object in each
+asetofscenetypesS˜ ={si},suchthatthesumoftheareaofthe
+specifiedcategoryissetto1bydefault,andcanbespecifiedbythe
+exploredscenetypesshouldbeclosetoθr,andtheexploredscene user.Thisgivesacoarsedescriptionoftheuser’sdemandsabout
+typesshouldbereadytoaccommodateallspecifiedobjects.Thus thetargetscenes.Weexploremoreproperobjectcategoriesusing
+wedeterminethescenetype(s)asfollows: theactivity-associatedobjectrelationgraphs.Thekeyideahere
+istoensurethattheexploredobjectshavecloserelationsamong
+argmin
+|θr −(cid:205) S˜θ si|
+, themselvesandtothespecifiedones,andalltheexploredobjectscan
+S˜ θr maketheinputroomtohaveareasonablerateofoccupancysimilar
+(2)
+s.t. sm i∈a Sx ˜P(oj|si)>0and s(cid:213) i∈S˜N(oj,si)≥noj,∀oj ∈O˜, t
+c
+Bo
+a
+uts teo
+g
+bm
+o
+yre
+rie
+eo
+s
+mf at orh vee inufl gso
+e
+to
+d
+hr
+f
+ep
+o
+wl ra
+s
+en
+y
+ae
+n
+kx
+lt
+yham
+e rs
+ep
+i ls
+al ,e tts eh. deN osa bcm
+je
+ene cl
+e
+ty cm, aif
+i tg
+ea
+h
+gll
+t
+op
+b
+rio
+e
+et ste ,on tot hi
+c
+ea rl soo uwb mdje
+e
+oc dt
+f.
+whereP(oj|si)istheoccurrencefrequencyofobjectcategoryoj in objectareasoftheremainingcategoriesdecreasesapproachingto
+scenetypesi,N(oj,si)isthemaximumnumberofobjectoj inany adesiredrateofoccupancy,whichcanbecalculatedbythefloor
+sceneoftypesi,noj istheuser-specifiedquantityofoj (noj =1ifit planexampleswiththeirroomssimilartotheinputone.Hence,we
+isnotexplicitlyspecified).Tosolveanapproximatesolutionofthis employthefollowingobjectexplorationalgorithmtoachievethis
+equation,wefirstuseallscenetypesasS˜ andremovethescene goal:
+typesi whichhasthelargestaverageareaonebyone,untilthe
+sumoftheareasoftheremainingscenetypesisapproximatetothe
+givenroom.Whenremovingascenetypewillleadtheconstraints ALGORITHM1:ObjectExploration
+tobenolongersatisfied,suchascenetypewillbepreservedinS˜. Input:SpecifiedobjectcategorysetO˜,objectrelationgraphGs =(O,Ws),
+WeleverageEquation(2)tosuggestapropercombinationwith inputroomareaθr
+oneormultiplescenetypesforthegivenroom(seeexamplesin Output:ExploredobjectcategoriesO out
+(Figure11)).Iftheinputroomcanbepiecedtogetherwithmultiple O out =O;
+scenes(e.g.,alargeroomdividedintoabedroomandastudyroom), Cost =C(O,θr,Ws);
+w sce enu ese pt ah re tm wa hx
+os si e∈S t˜
+yP p( eoj h| asi s) tt ho esp gre ec aif ty ese ta ec xh iso tb ej ne cc etc pa rt oe bg ao br iy lit to yt fh oe
+r
+whil Re em|O ov| e> ob|O j˜ e| ctd co
+ategoryo ∈ Oando(cid:60)O˜ withtheminimumE(Ws,o)
+suchanobjectcategory.Forexample,giventwoscenetypess1and
+fromO;
+s2 beingexploredfortheobjectcategoriesO˜,ifP(o|s1) > P(o|s2) R ae fm teo rv oe io sb rj ee mct oc va ete dg ;ories{oi}fromOwhichareisolatedingraphGs
+foranobjectcategoryo ∈ O˜,thenobelongstothescenetypes1
+UpdatetheedgeweightWs aftergraphGs ischanged;
+whensynthesizingthescene(Section5.3).Suchlargeroomsare NewCost =C(O,θr,Ws);
+thendividedintosub-rooms,oneforeachsinglescenetype,by
+ifNewCost <Costthen
+addingvirtualboundariesintheroomtomakethesub-roomshave O
+out
+=O;
+thesimilarproportionalrelationtotheaverageareasoftheirscene Cost =NewCost;
+types. Hence the scene synthesis task is respectively tackled in
+end
+eachsub-roomwithasinglescenetype.Inthisway,givendifferent
+end
+sizesofinputroomsordifferentquantitiesofspecifiedobjects,our
+returnO out;
+systemadaptivelyusesthelayoutexamplesfromoneormultiple
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+201:8 • Fu,Q.etal
+Inthisalgorithm,E(Ws,oi)indicatestheaverageweightofan
+objectcategoryoitoitsneighborsintherelationgraphofscenetype
+s usedforremovingtheweaklyrelatedobjectcategoryfromthe
+graphineachiteration,andC(O,θr,Ws)isacostfunctionaiming
+atfindingcategorygroupwithproperrateofcapacityandclose
+relation.Assumecategoryoi hasJ neighborsinthegroup,weonly
+comparetop-K(K =10inourimplementation)databasefloorplans
+whohavethesimilarroomfeaturesasthegivenroom.E(Ws,oi)
+andC(O,θr,Ws)aredefinedasfollows:
+1 (cid:213)
+E(Ws,oi)= Ws(oi,oj),
+J
+j∈{1,···,J}
+1 (cid:213) (cid:12) (cid:12)
+C(O,θr,Ws)= K (cid:12) (cid:12)R(O,θr)−r sk(cid:12) (cid:12) (3)
+k∈{1,···,K} Fig.7. Twosynthesizedscenesandsomeoftheirassociatedreferences.
+(cid:213)
+−ω· Ws(oi,oj), Oursystemexploresobjects(green)andcreateslayoutsinfluencedbythe
+referencefloorplans.Notethetworoomshavedifferentconfigurationsbut
+O
+aregiventhesamecategoryofobject(blue).
+where{oj}isthesetofneighborsofoi intheobjectrelationgraph,
+R(O,θr) = (cid:205) θθ rc istheratioofcapacityoftheinputroomandr sk
+(left)aresuggestedtohavedifferentfloorplanreferences(right).
+istheratioofcapacityofthek-thdatabasefloorplanwhichhasa
+Thereferencesinthetopcaseonlyhavethebasiccomponentsof
+similarroomfeatureastheinputroombycalculatingtheirEuclidean
+livingroom,whiletheconfigurationsofthebottomonesprovidethe
+distancewiththeuniformweightingforindividualcomponents,
+andwesettheweightω =0.02.Notethatθc istheaverageareaof extraspacetoallowmoreobjects.Thesedifferencesactuallyleadto
+variationsofthesynthesizedresults,morespecifically,intermsof
+thedeterminedobjectcategories,andiftheuserspecifiesmultiple
+differentquantitiesofobjectsthataroomcanaccommodate,and
+objectsinthesamecategoryasinput,wesumupalltheirprojection
+different layouts to arrange these objects. Since both the object
+areasforθc whencalculatingtheratioofoccupancyR(O,θr).
+exploration(Algorithm1)andlayoutcreation(Equation4)relyon
+Inthismanner,weobtainagroupofobjectcategoriesthatcould
+thefloorplanreferences,thedifferentreferencefloorplansthus
+beplacedintotheinputroom.AsillustratedinFigure6,theseobject
+leadtothedifferentsynthesizedscenes.Hence,althoughtheuser
+categorieswillbearrangedbythelayoutsextractedfromthe2D
+specifiesthesamecategoryofobject(i.e.,threecouches),oursystem
+floordatabase.Weintendtoseekforthefloorplanswiththesimilar
+actuallyexploresagymequipmentforthebottomcaseandplaces
+roomfeaturestotheinputroomandusetheirlayoutmatricesto
+thecouch-TVgroupslightlyoffcentrecomparedtothetopcase.
+synthesizeanewlayout.Byusingtheaverageareaforeachcategory
+Withthegeneratedlayoutmask,weplacetheexploredobject
+ofthesuggestedobjects,wecancalculatetheroomfeaturefr ofthe
+categoriesintotheroominturn.Wechoosetheaveragelengthofthe
+inputroom.Then,top-K floorplanswiththeminimumEuclidean
+sidesofthefloorprojectionboundingboxforeachobjectcategory
+distancesoftheroomfeaturestofr areexploredasthereferences.
+torepresentaregularobjectinthiscategory.Notewefocusonthe
+Thesefloorplanreferenceshavethesimilarroomstotheinputone
+largefurnitureasbed,wardrobe,desk,etc,whiletheiraccessory
+intermsoftheroomsize,positionsofwindowsanddoors,andthe
+objectslikenighttable,TV,chair,etc,areplacedaftertheassociated
+ratiosofcapacity.Thelayoutmatricesofthefloorplansinthesame
+largefurniturearranged,andfollowafixedrelativerelationsand
+clusteredgroupareamalgamatedinaweightedmannerasfollows:
+directionsastheyareinthe2Ddatabasefloorplans.Thequantities
+M =
+(cid:205)D k˜( Dfr (f, rf ,k r˜ f)
+k r˜
+)M k˜, (4)
+o
+a
+hnf avdth ete
+h
+mea uic
+r
+lc tse
+ii
+ps
+z
+ls
+e
+eo sr
+,
+cy
+e h.
+ago i.b
+r,
+sj le .ac Trgt hs
+e
+ea
+d
+pl is rno
+on
+pr ie
+n
+ol rgy tito oan
+nbl
+aet lh
+s
+re
+o
+elra as
+c
+ts
+io
+oo
+n
+nc fi sea
+r
+ot ee fnd
+tc
+hl ea etr qag
+b
+ue
+l
+aef nu
+s
+tr
+a
+in
+tl
+iwi et su ayr oe
+s
+f
+theaccessoryobjectsandthesizeoftheirassociatedlargefurniture
+whereD(fr,fk r˜ )isthefeaturedistancebetweenfr andthefeatureof
+aredeterminedbytheexamplesinthe2Dfloorplandatabase.The
+itsk˜-thfloorplanwiththesimilarroomwhoselayoutmatrixisM k˜. sizesandrelativepositionsofsomecommonfurniturecombinations
+Notethat{k˜}⊂{1,···,K}isasetoffloorplanswhosemembers inthefloorplans(e.g.,threeorfourcouchesaroundatea-table),
+belongtothesameclusteredgroupinthetop-K similardatabase arealsoextractedasthepriorsforobjectarrangement.Benefited
+examples.Weusethesetwithmostmembersifthetop-K floor fromthegeneratedlayoutmask,thelargefurnitureareplacedin
+plansareclusteredintodifferentgrouptogetthelayoutmatrixM, themaskwiththepositionsanddirectionscoveringtheregionwith
+andthenresizeittothesamesizeastheinputroom,asthelayout maximalvalue.Thefurnitureareplacedonebyonebasedontheir
+maskforobjectarrangement.Inthismask,theregionswiththe sizesfromthelargesttothesmallesttoensurethatsmallfurniture
+largevaluesaremorelikelytobeplacedwithfurniture.Notethat willnotbeplacedintheregionwhichismoresuitableforthebigger
+thereferencefloorplansinfluenceboththeobjectexplorationand ones.Eachtimeanobjectisplaced,wecoverthisregioninthe
+arrangementstages,tocreatescenesadaptedtothegivenrooms. layoutmaskto0inthisregiontoavoidobjectconflict.Afterall
+ForanexampleinFigure7,tworoomswithdifferentconfigurations exploredobjectcategoriesareplaced,wemakeasuggestionlist
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+AdaptiveSynthesisofIndoorScenesviaActivity-AssociatedObjectRelationGraphs • 201:9
+Sceneediting. Oursystemalsoallowstheusertoeditexisting
+scenes,e.g.,byaddingnewcategoriesofobjectsorreusingexisting
+layouts(Figure9(top)).Givenaroomwithalreadyarrangedobjects,
+oursystemprovidesalistofobjectcategoriesfortheusertochoose
+newobjectcategoriestobeaddedintotheroom.Withtheratio
+ofoccupancychangedduetothechosenobjects,oursystemcan
+re-generatenewlayoutsbyEquation(4)toplacetheseobjectsinto
+Fig.8. Theuserinterfaceofoursystemwiththedisplaypanel(inredbox), theroom.
+optionspanel(inbluebox)andthesuggestionlistforobjectreplacement
+(ingreenbox).Thecreatedscenecanbedisplayedas2Dfloorplan(Left)or Activityanimationcreation. Usingouractivity-associatedobject
+3Dscene(Right). relationgraphtorepresentascenewithvariousfurniturecanalso
+indicatethepotentialactivitiesthatcanoccurinthesynthesized
+scene.Henceoursystemcangenerateactivityscriptstodrivea
+humanagenttowanderaroundalltheseobjectsaccordingtothe
+edgeweightsoftheobjectpairsinthegraph.AsillustratedinFigure
+9(bottom),startingfromanyfurniturewhichhasthefunctionalpur-
+poseforstayingorfetchingsomething,animationsareperformed
+withitsrelatedobjectsinthegroupfortouchingorwatching,orget-
+tingsomethingfromtheobjects.Thentheagentwanderstothenext
+objectwhichhasthelargestweightoftheedgewiththeprevious
+objectintheobjectrelationgraph.Thus,allthepotentialactivities
+abouttheexistingobjectscanbeperformed,resultinginanactivity
+animation.Seetheaccompanyingvideoforsuchanimation.
+Fig.9. Top:addinganewobject(ingreen)intoanexistingscene(Left).
+Notetheoriginallayouthasbeenadjustedfollowingthegeneratedlayout
+7 RESULTSANDEVALUATION
+mask(Right).Bottom:activityanimationcreationbasedonouractivity-
+associatedobjectrelationgraph(right).Thehumanagentswanderthrough Inthissectionwefirstpresentvariousscenesynthesisresultsgen-
+threeplacestododifferentactivities.Thisanimationisshownintheac- eratedbyoursystem,andshowhowthesynthesizedscenesadapt
+companyingvideo. totheinputs.Thenweevaluateoursystemwithauserstudywhere
+ourresultsarecomparedtomanuallycreatedscenesintermsof
+oftheassociated3Dmodelsinthedatabasebasedonthecovering bothfunctionalplausibilityandvisualnaturalness.Wealsocompare
+regionsoftheirfloorprojectionsinthemask. ourmethodtothecloselyrelatedworks[Merrelletal.2011;Savva
+etal.2016]todemonstratethepracticabilityofoursysteminlayout
+6 USERINTERFACE creationandactivityrepresentation.
+Our2Dfloorplandatabaseconsistsoffourtypesofhomescenes
+AsillustratedinFigure8,theuserinterfaceofoursystemprovides
+including living rooms (195), bedrooms (406), study rooms (47),
+two main panels: a display panel to assist the user to set up an
+diningrooms(178),andanotherfourtypesofpublicscenesincluding
+emptyroom,andshowthe2Dfloorplanorsynthesized3Dscene;
+offices(35),conferencerooms(23),gym(36),dininghall(113).These
+anoptionspaneltospecifyobjectcategoriesastheinputdemands
+floor plans provide activity-based object relations and plausible
+orforaddingnewobjects.Sinceoursystemisabletodeterminethe
+layoutsforouradaptivescenesynthesissystem.Wealsocollect18
+scenetype(s)ofthegivenroom,whichmightbedividedintosub-
+categoriesof3Dmodelsincludingchairs(67),beds(87),couches(61),
+roomswithdifferentscenetypes,specifyingobjectcategoriesand
+TVsets(61),desks(58),nighttables(58),diningtables(54),dressers
+theirquantitiesasthesysteminputscanmakethescenetypesofthe
+(53),teatables(57),conferencetables(51),pianos(40),easels(13),
+givenroombeadaptive.Foreachobjectinthesynthesizedscene,
+bookshelves(57),refrigerators(12),wardrobes(13),waterdispensers
+wealsoprovidealistofsuggestedobjectsforpotentialreplacement
+(17),gymequipments(13)andplayequipmentslikebilliardtables
+tomakescenevariations(seetheaccompanyingvideoforalive
+andplaytables(22)toenrichthevarietyofsynthesizedresults.On
+demo).
+averageoursystemneedslessthanoneminutetointeractivelyset
+Scenesynthesis. Withourinterface,theuserfirstspecifiesafew upanemptyroomwithdoor(s)andwindow(s),andabout2seconds
+objectcategoriesasconstraints,andbuildsanemptyroombycon- toautomaticallygeneratea3Dscene,testedonaPCwithIntelCore
+trollingtheroomsize,thepositionsandsizesofdoorsandwindows. i7-47903.60GHzCPUwith16GBRAM.
+Afterwards,oursystemautomaticallyexploresmoreobjectcate-
+goriesrelatedtothespecifiedonesandcreatesaproperlayoutto Synthesisresults. InFigure10,wepresent6synthesizedscenes
+placeallthefurnitureintothegivenroom.Sincethesynthesized toshowhowthesceneresultsadapttodifferentspecifiedobject
+scenesofoursystemareadaptivetotheinputroomsizeandobject categories.Eachcolumnhasapairofscenesgeneratedbythesame
+categories,thesameroomwithdifferentspecifiedobjectcategories emptyroomsbutdifferentlycategoryconstraints.InFigure11,we
+orthesamespecifiedobjectsindifferentsizesofroomscanleadto show4largesceneswhicharepiecedtogetherbymultiplepartsin
+differentsynthesizedscenes(seeexperimentalresultsinSection7). differentscenetypes.Foreachsynthesizedscene,theinputempty
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+201:10 • Fu,Q.etal
+Fig.10. Galleryofsynthesizedscenesgivenanemptyroomandoneormultipleobjectcategories.
+Fig.11. Largescenesgeneratedwiththegivenroomdividedintomultiplesub-rooms.Weshowthegeneratedlayoutmaskinthebottomofeachcase.
+roomcomeswithdoors,windowsandsomemanuallycreatedorna- objectcategoryconstraints.Comparetotheleftexample,theright
+mentslikeplants,andafewspecifiedobjectcategories,whileour caseshowsalargeroomthatencouragedbyoursystemtobepieced
+systemadaptivelyexploresmoreindoorobjectsandplacesthem bymultipleparts,i.e.,astudyroomleftandabedroomright.Figure
+intotheroom,makingthesynthesizedscenesvisuallypleasingand 12(bottom)showstheadaptivescenesynthesisbydifferentquan-
+functionallyplausible.InthetopofFigure12,weshowthatthe titiesofacertainspecifiedobjectcategory:differentquantitiesof
+synthesizedresultsareadaptivetotheroomsize.Foreachscene,a thespecifiedgymequipmentsleadtoalivingroomoragymbyour
+smallroom(Left)andalargeone(Right)aregivenwiththesame systemgiventhesameroom.
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+AdaptiveSynthesisofIndoorScenesviaActivity-AssociatedObjectRelationGraphs • 201:11
+Fig.12. Top:giventhesamespecifiedobjectcategories,thesynthesizedsceneisadaptivetothesizeoftheinputroom.Bottom:giventhesameroom,the
+synthesizedsceneisalsoadaptivetothequantityofacertainspecifiedobjectcategory.
+Userstudy. Oneoftheimportantcharacteristicsofoursystemis
+thattheexploredobjectsandlayoutsofthesynthesizedscenesare
+appropriateforindooractivities.Akeyevaluationofoursystemis
+thustotestwhetherthegeneratedscenesarefunctionallyplausible
+intermsoftheobjectsandlayouts.Likepreviousworks[Fisher
+etal.2015;Maetal.2016],wealsoleavesuchsubjectivejudgments
+tohumansubjects.Topreparetheuserstudy,wecollected5floor
+plansofdifferentscenetypes(namely,bedroom,livingroom,office,
+conferenceroomanddininghall).Thesenewfloorplanswereagain
+professionallydesignedbutnotincludedinouroriginal2Dfloor
+plandatabase(Section4.1).Wethenusedtheroomsizeandpartial
+existingobjectcategoriestocreatesceneswithoursystem.Forfur-
+thercomparisons,wealsoinvited5noviceuserswithnointerior
+designknowledgeandaskedthemtomanuallyselectobjectcate-
+gories,andplacetheobjectsintoeachroomwiththesameinputsas
+oursystem.Wechooseasameobjectforeachcategoryinallthose
+scenestoreducetheinfluenceoffurniturestyleonthesubjective
+judgments.
+Fig.13. Statisticsofouruserstudy.Top:thebedroomcasewith“bed”and
+Afterwards,thefloorplansofthescenesgeneratedby3different
+“bookshelf”categoriesspecifiedinouruserstudytestdata.Bottom:the
+ways(intotal,5setsof3scenes;seeonesetofscenesinFigure13 averageevaluationscoresforthescenescreatedbynoviceusers,profes-
+(Top))wereblindlygivento20professionalparticipantsengagedin sionals,andourmethodintermsofthefunctionalplausibilityandlayout
+interiordesigntoevaluatetheplausibilityofboththelayoutsand plausibility.
+thefunctionality.Eachparticipantwasaskedtogiveascoreforeach
+sceneinthediscretescaleof10(best)to0(worst)basedontheabove [Merrelletal.2011],andthesynthesisresultsbyoursystem(with
+twocriterions.Thestatisticsontheevaluationresultsareplotted thesamefurniture(Middle)andwithourownsuggestedobjects
+inFigure13(Bottom).Thescoresofthenoviceusers’designare (Right)).Inthetwocomparisoncases,althoughtheobjectsarewell
+low,mainlybecausethateventhoughthenoviceuserscouldchoose arrangedusingthefurniturelayoutguidelines,somedrawbacks
+properobjectsforthescenes,thelackofinteriordesignknowledge mightinfluencecertainactivitiesinthescenes.Forexample,the
+ledtheirdesignstolow-qualitylayouts.Ontheotherhand,guided positionoftheTVsetinthetop-leftcaseisinabacklightstatuswith
+bythelayoutsinour2Dfloorplandatabase,ourresultsachieved theTVsetfacingthewindow,whilethisproblemdoesnotexistwith
+similarorsometimesevenbetterqualityresultscomparedtothe ourresults(MiddleandRight),sincethereferencelayoutsinour
+scenesmanuallydesignedbyprofessionals. plandatabasehavealreadyimplicitlyconsideredanti-backlighting.
+In the bottom-left case, a pre-placed TV set plays a role as the
+Comparisonstocloselyrelatedworks. InFigure14weshowthe emphasistoforcethecouchestofaceit,whilesuchalayoutincreases
+furniture layout results (Left) suggested by the guidelines used thedistanceofthewayfromthedoortositonthecouch(Left).
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+201:12 • Fu,Q.etal
+functionalplausibilityofthescenesespeciallyforthedynamicactiv-
+ities.Benefitedfromtheobjectrelationgraphsandlayoutsextracted
+froma2Dfloorplandatabase,oursystemhasseveralapplications
+likeindoorscenesynthesis,editingandevenactivityanimation
+creation.Wehavevalidatedtheusabilityofoursystemviavarious
+scenecreationresults,subjectiveuserstudyandcomparisonsto
+closelyrelatedworks.
+Discussions.Ourcurrentsystemusestheuser-specifiedobject
+categoriesastheconstraintsforscenecreation.Somehigherlevel
+prescriptionsuchasactivitytagcanbeusedasthealternativein-
+Fig.14. Comparisonwith[Merrelletal.2011](Left).Oursynthesisresults
+put.Sincewehaveextractedtheactivity-associatedobjectrelation
+withthesameinputobjectsastheir(Middle)andoursuggestedobjects
+graphs,wecanlabelcertainrelationswithsemanticactivitytags
+(Right).
+andprovidethemastheoptionsinthesystemUI.Forexample,if
+welabeltherelationsofobjectpairslikebookshelf-bed,chair-desk,
+etc.witha“reading”tag,wecanthenextractsomesub-graphsfrom
+therelationgraphwithcertainobjectsassociatedwiththeread-
+ingactivity.Inthesesub-graphs,someobjectslikebookshelfare
+necessary,whiletheotherslikedeskorbedareoptional.Oncethe
+userchoosesthereadingtagasinput,itisequivalenttochoosing
+thebookshelfastheuser-specifiedobjectcategory,andoursystem
+Fig.15. Foranindoorscene(Left),weshowthedescriptionsof[Savvaetal.
+canstillexploretheotherassociatedobjectsadaptedtothegiven
+2016](Middle)andours(Right),whichcouldbeusedforrepresentingand
+room.Besides,theobjectexplorationstageinoursystemcanalso
+guidingthesynthesisofsuchascene.
+beemployedintheinteractivescenesynthesisframeworks(e.g.,
+[Merrelletal.2011]):oncetheuserchoosesanobject,ouralgorithm
+Ourworkdoesnotneedsuchapre-placedemphasisasconstraint. automaticallyexplorestherelatedonestoacceleratethemodeling
+Benefitedfromthelayoutsinthefloorplandatabase,oursystem process.Moreover,consideringthecolorstyleofroomandobject
+providesabettersolutionwithashorterpathandenablinganti- mightimprovethequalityandefficiencyofscenecreation.Forex-
+backlightingforwatchingTVaswell.Anothersignificantadvantage ample,usingthecolorstylemetricfromtheexistingworkslike
+ofourapproachisautomaticsuggestionforproperobjects,which MagicDecorator [Chenetal.2015b]canenableoursystemtoex-
+havetobemanuallyspecifiedasinputfor[Merrelletal.2011]. ploreobjectswithconsistentcolorstylesfrom3Ddatabase,thus
+Our system also has the advantage over the current activity- constrainingtheobjectcolorsinthesynthesizedscenetothesame
+centricscenesynthesismethodsinactivityrepresentation.InFigure colorthemeofthegivenroom.
+15,wecomparethegraphsofoursystemandthestate-of-the-art Limitations.Althoughoursystemoftenproducesqualityresults
+interactionrepresentationmethodPiGraphs[Savvaetal.2016],and givenemptyroomsandcertainobjectdemands,itstillhasseveral
+visualizethesegraphswhichrepresenttheactivitiesinthesame technicallimitations.Sinceoursystemfocusesonfurniture-level
+room(Left).Wecanseethatouractivity-awarerelationgraphisa objectarrangement,thepositionsofsomesmallobjectslikedishes
+singlegraphconnectedallobjectsofthescene,whilePiGraphspro- andcupsarenotconsidered.Inour3Dfurnituredatabase,such
+videstwoisolatedgraphsrepresentingcertaingroupsofobjects.It objectsareattachedtofurnitureobjectslikediningtablesandtea
+takesmoreeffortstorepresentascenebytheirgraphwhichisbased tableswithfixedpositions.Henceoursystemcanprovidetheinitial
+onaposedsinglehuman,especiallyforsceneswithobjectswhere sceneinputtoexistingmethodsfocusingonthearrangementof
+humandoesnotstayforalongtime,e.g.,bookshelf,wardrobe,etc. suchsmallobjects(e.g.,SceneEvolution[Maetal.2016])toobtain
+Forexample,inthiscase,PiGraphsisabletorepresenttheactivities moreinterestingvariationsclosertothenaturalindoorscenes.Be-
+of“sit-bed+wathcing-TV”,and“sit-chair+read-book”.However,ac- sides,sinceourobjectexplorationcomponentreliesontheratiosof
+tivitieswhichinvolvedynamicprocesseslikefirstgettingabook occupancyofthedatabasefloorplans,alargeinputroomwillbe
+fromthebookshelfandthengoingtobedorchairtoreadthebook suggestedtohavemanyexploredindoorobjects.Iftheuserprefers
+canhardlyberepresented.Incontrast,ouractivity-associatedob- amoreemptyroomwithfewerobjectsordoesnotlikesomeof
+jectrelationgraphcanrepresentboththeactivitiesperformedby theexploredobjects,aslightuserassistanceisrequiredtoremove
+aposedhuman,andthedynamicactivitiesthatneedthehuman undesiredobjectcategories.Moreover,Ifauserspecifiedtoomany
+towalkfromoneplacetotheotherone,facilitatingtheanimation objectcategoriesgivenasmallroom,oursystemwillholdallthe
+creationdiscussedinSection6. specifiedobjectsandleadthesynthesizedscenestobetoocrowded.
+8 DISCUSSION,LIMITATIONANDFUTUREWORK
+Anotherlimitationexistsinthelayoutgenerationstage.Whena
+Wepresentedanoveltechniqueforadaptivesynthesisofindoor largeroomissuggestedtobedividedintomultiplesub-roomswith
+scenes.Comparedwiththeguideline-basedoractivity-centricscene differentscenetypes,theirrelativepositionsarenotdetermined.In
+synthesismethods, oursystem isable toadaptivelysuggest the ourcurrentsystem,wealwaysmakethelargestroomtypeinthe
+properobjectsandtheirlayoutstocreate3Dscenes,ensuringthe middleoftheroomornearesttothewindow.However,different
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+AdaptiveSynthesisofIndoorScenesviaActivity-AssociatedObjectRelationGraphs • 201:13
+andCityU11300615),theCityUniversityofHongKong(Project
+No.7004915),andACIM-SCM.
+REFERENCES
+KangChen,Yu-KunLai,Yu-XinWu,RalphMartin,andShi-MinHu.2014.AutomaticSe-
+manticModelingofIndoorScenesfromLow-qualityRGB-DDataUsingContextual
+Information.ACMTransactionsonGraphics33,6(2014),208:1–208:12.
+KangChen,KunXu,YizhouYu,Tian-YiWang,andShi-MinHu.2015b.MagicDecorator:
+AutomaticMaterialSuggestionforIndoorDigitalScenes. ACMTransactionson
+Graphics34,6(2015),232:1–232:11.
+XiaowuChen,JianweiLi,QingLi,BoGao,DongqingZou,andQinpingZhao.2015a.
+Image2Scene:TransformingStyleof3DRoom.InProceedingsofthe23rdAnnual
+ACMConferenceonMultimediaConference.ACM,321–330.
+MatthewFisherandPatHanrahan.2010.Context-basedSearchfor3DModels.ACM
+TransactionsonGraphics29,6(2010),182:1–182:10.
+MatthewFisher,DanielRitchie,ManolisSavva,ThomasFunkhouser,andPatHanrahan.
+Fig.16. Top:Twosceneswithdifferentlayoutsmightleadtodifferentsub- 2012.Example-basedSynthesisof3DObjectArrangements.ACMTransactionson
+jectivefeelingswhenusingdeskorbedforreading.Bottom:theplacing Graphics31,6(2012),135:1–135:11.
+orderbasedonthesizeofeachobjectleadsapianotooccupytheplace MatthewFisher,ManolisSavva,andPatHanrahan.2011.CharacterizingStructural
+RelationshipsinScenesUsingGraphKernels.ACMTransactionsonGraphics30,4
+whichismoreproperforthedesk(Left),aslightuserassistanceisrequired
+(2011),34:1–34:12.
+tochangetheirorderstogetamoreplausibleresult(Right). MatthewFisher,ManolisSavva,YangyanLi,PatHanrahan,andMatthiasNießner.
+2015. Activity-centricSceneSynthesisforFunctional3DSceneModeling. ACM
+TransactionsonGraphics34,6(2015).
+H.Grabner,J.Gall,andL.VanGool.2011. Whatmakesachairachair?.InIEEE
+waystodividetheroomcancertainlyleadtodifferenteffectson
+ConferenceonComputerVisionandPatternRecognition.1529–1536.
+humanactivities.ForanexampleinFigure16(Top),aroomhasbeen RuizhenHu,ChenyangZhu,OlivervanKaick,LigangLiu,ArielShamir,andHaoZhang.
+dividedintoastudyroomandabedroomwithtwodifferentrelative 2015.InteractionContext(ICON):TowardsaGeometricFunctionalityDescriptor.
+ACMTransactionsonGraphics34,4(2015),83:1–83:12.
+positions,andtheseroomsarerespectivelysynthesizedandpieced
+YunJiang,MarcusLim,andAshutoshSaxena.2012.LearningObjectArrangementsin
+togethertogeneratethewholescenes.Theleftresulthasabetter 3DScenesusingHumanContext.InInternationalConferenceonMachineLearning.
+lightingenvironmentforthebed,whichisclosertothewindowthan VladimirG.Kim,SiddharthaChaudhuri,LeonidasGuibas,andThomasFunkhouser.
+2014.Shape2Pose:Human-centricShapeAnalysis.ACMTransactionsonGraphics
+thedesk,tomakethe“reading”activitymoreappropriatetooccur 33,4(2014),120:1–120:12.
+inthebed,whiletherightoneisonthecontrary.Sincetheimpact TianqiangLiu,SiddharthaChaudhuri,VladimirG.Kim,QixingHuang,NiloyJ.Mi-
+tra,andThomasFunkhouser.2014. CreatingConsistentSceneGraphsUsinga
+oftheenvironmentonactivitiesisverysubjective,weneedusersto
+ProbabilisticGrammar.ACMTransactionsonGraphics33,6(2014),211:1–211:12.
+choosetheirfavoriteresultwhensuchscenarioshappen.Besides, RuiMa,HonghuaLi,ChangqingZou,ZichengLiao,XinTong,andHaoZhang.2016.
+sincethelayoutsofthesub-roomsarerespectivelycreated,when Action-Driven3DIndoorSceneEvolution. ACMTransactionsonGraphics35,6
+(2016),173:1–173:13.
+piecingthemtogethertogenerateawholescene,someobjects(e.g.,
+PaulMerrell,EricSchkufza,ZeyangLi,ManeeshAgrawala,andVladlenKoltun.2011.
+abookshelforwardrobe)mightbeplacedintheborderbetween InteractiveFurnitureLayoutUsingInteriorDesignGuidelines.ACMTransactions
+twosub-rooms.Sincesomeofthemshouldbetterbeintheplaces onGraphics30,4(2011),87.
+Chi-HanPeng,Yong-LiangYang,andPeterWonka.2014. ComputingLayoutswith
+againstthewall,theseobjectswillbesnappedagainsttothewallon DeformableTemplates.ACMTransactionsonGraphics33,4(2014),99:1–99:11.
+theothersideofthesub-room.Moreover,theplacingorder(from ManolisSavva,AngelX.Chang,PatHanrahan,MatthewFisher,andMatthiasNießner.
+2014.SceneGrok:InferringActionMapsin3DEnvironments.ACMTransactionson
+largetosmall)mightnotalwaysbeappropriate.Insomecases,user
+Graphics33,6(2014),212:1–212:10.
+assistanceisrequiredtochangetheplacingorderforabetterresult ManolisSavva,AngelX.Chang,PatHanrahan,MatthewFisher,andMatthiasNießner.
+(Figure16(Bottom)).Lastly,oursystemhasmainlyfocusedonthe 2016.PiGraphs:LearningInteractionSnapshotsfromObservations.ACMTransac-
+tionsonGraphics(2016),5:1–5:2.
+rectangularroomssincethenon-rectangularfloorplansareless
+TianjiaShao,AronMonszpart,YouyiZheng,BongjinKoo,WeiweiXu,KunZhou,and
+commonandmightnotbesuitableforlayouttransfer.However,our NiloyJ.Mitra.2014.ImaginingtheUnseen:Stability-basedCuboidArrangements
+systemallowsuserstosetupsomeindependentrectangularrooms forSceneUnderstanding.ACMTransactionsonGraphics33,6(2014),209:1–209:11.
+ZhigeXie,YueshanXiong,andKaiXu.2014.AB3D:action-based3Ddescriptorfor
+andcombinethemtoformaT-orL-typescene. shapeanalysis.TheVisualComputer30,6-8(2014),591–601.
+Futurework.Inthefuture,weplantofurtherconsiderlivinghabits KunXu,KangChen,HongboFu,Wei-LunSun,andShi-MinHu.2013.Sketch2Scene:
+Sketch-basedCo-retrievalandCo-placementof3DModels.ACMTransactionson
+ofhumanuserstoenableoursystemtoproducemorepersonalized
+Graphics32,4(2013),123:1–123:15.
+generations.Morekindsofdatalikevideosofindoorhumanactivi- KaiXu,HuiHuang,YifeiShi,HaoLi,PinxinLong,JianongCaichen,WeiSun,and
+tieswouldalsobefurtherconsideredtoachievemoreinformationto BaoquanChen.2015.AutoscanningforCoupledSceneReconstructionandProactive
+ObjectAnalysis.ACMTransactionsonGraphics34,6(2015),177:1–177:14.
+enhancetheabilityofsystemtocreatemoreactivity-associated3D
+KaiXu,RuiMa,HaoZhang,ChenyangZhu,ArielShamir,DanielCohen-Or,andHui
+scenes.Afinalinterestingdirectiontoextendoursystemistoem- Huang.2014.OrganizingHeterogeneousSceneCollectionsThroughContextual
+ploythenaturallanguageprocessingtechniquestocreateaccurate FocalPoints.ACMTransactionsonGraphics33,4(2014),35:1–35:12.
+Yong-LiangYang,JunWang,EtienneVouga,andPeterWonka.2013.UrbanPattern:
+3Dsceneswithtextdescriptions. LayoutDesignbyHierarchicalDomainSplitting.ACMTransactionsonGraphics32,
+6(2013),181:1–181:12.
+ACKNOWLEDGMENTS Lap-FaiYu,SaiKitYeung,Chi-KeungTang,DemetriTerzopoulos,TonyF.Chan,and
+StanleyOsher.2011.Makeithome:automaticoptimizationoffurniturearrangement.
+Wewouldliketothanktheanonymousreviewersfortheirhelpin ACMTransactionsonGraphics30,4(2011),86.
+Y.Zheng,H.Liu,J.Dorsey,andN.Mitra.2016.Ergonomics-inspiredReshapingandEx-
+improvingthepaper.Thisworkwaspartiallysupportedbygrants
+plorationofCollectionsofModels.IEEETransactionsonVisualizationandComputer
+fromNSFC(61532003&61325011&61421003&61502023),theRe- Graphics22,6(2016),1732–1744.
+searchGrantsCouncilofHKSAR,China(ProjectNo.CityU11237116
+ACMTransactionsonGraphics,Vol.36,No.6,Article201.Publicationdate:November2017.
+

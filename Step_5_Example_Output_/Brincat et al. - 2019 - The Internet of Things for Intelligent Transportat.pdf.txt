@@ -1,0 +1,38 @@
+Extracted Keywords:
+Smart Cities, smart roads, IEEE, Smart, Real Smart, Alberto Attilio, Attilio Brincat, network, Cities Scenarios, IEEE Xplore
+
+Main Topics:
+The Internet, Intelligent Transportation 
+Systems, Real Smart Cities Scenarios 
+ 
+Alberto Attilio Brincat  
+T.Net S.p.A. 
+      Catania, Italy  
+abrincat@tnet.it, Federico Pacifici  
+T.Net S.p.A. 
+Catania, Italy                                                              
+fpacifici@tnet.it                                                       
+ Stefano Martinaglia  
+T.Net S.p.A.  
+Milan, Italy  
+smartinaglia@tnet.it  
+ Francesco Mazzola  
+T.Net S.p.A.  
+Milan, Italy  
+fmazzola@tnet.it  
+Abstract, This paper, an overview, real Smart Cities scenarios, IoT Technologies, Intelligent Transportation Systems, several use cases, connected and 
+autonomous vehicles, cooperative transportation networks, smart roads, data propagation, heterogeneous connectivity, low latency applications, high capacity environments, ITS techniques, all the involved ecosystems, interconnected Smart Cities, future dev
+
+Methodologies:
+ITS techniques can be also applied on 
+logistics, so accuracy on delivery and timing can be improved 
+consider all the involved ecosystems, baseline and standardized architectures in interconnected Smart Cities for future development and integration. IoT (Internet of Things) techniques These use cases comprise road traffic solutions with cloud-based systems and sensors installed on road surface and/or guard rail that count, classify and detect vehicles through advanced machine learning techniques, artificial neural networks and data mining that learn and avoid congestions and accidents. The framework outperforms on high density corridors 
+where the secure road side unit (RSU) enable an enhanced way 
+to forward packets to the network through low latency algorithms that prevent unexpected accidents and enable a priority and secure route through VPN (Virtual Private Network) tunneling.     
+
+Research Outcomes:
+ITS techniques can be also applied on 
+logistics, so accuracy on delivery and timing can be improved 
+consider all the involved ecosystems, baseline and standardized architectures in interconnected Smart Cities for future development and integration. IoT (Internet of Things) techniques These use cases comprise road traffic solutions with cloud-based systems and sensors installed on road surface and/or guard rail that count, classify and detect vehicles through advanced machine learning techniques, artificial neural networks and data mining that learn and avoid congestions and accidents. The framework outperforms on high density corridors 
+where the secure road side unit (RSU) enable an enhanced way 
+to forward packets to the network through low latency algorithms that prevent unexpected accidents and enable a priority and secure route through VPN (Virtual Private Network) tunneling.     

@@ -1,0 +1,48 @@
+Extracted Keywords:
+Street Network, Urban Area, urban street, Street, Wiley Online, Online Library, Network Models, Urban, Network, data
+
+Main Topics:
+Geographical Analysis, 519–535
+doi, The Ohio State University
+519Special Issue
+Street Network Models, Every 
+Urban Area, the World
+Geoff Boeing
+Department, Urban Planning, Spatial Analysis, Sol Price School, Public Policy, Southern California, Los Angeles, CA USA
+Cities, a variety, street network patterns, human mobility, This study models, the street 
+networks, every urban area, the world, the Global Human 
+Settlement Layer, Street network data, the open-  source, OSMnx software, this study models, 160 million 
+OpenStreetMap street network nodes, 8,914 urban areas, 178 countries, grade data, This article, the study’s 
+reproducible computational workflow, two new open data repositories, ready-  
+to-, global street network models, calculated indicators, summary 
+findings, street network form, four contributions, the 
+methodological advances, this open-  source workflow, an open data 
+repo
+
+Methodologies:
+This article presents the study’s 
+reproducible computational workflow, introduces two new open data repositories of ready-  
+to- use global street network models and calculated indicators, and discusses summary 
+findings on street network form worldwide. Second, it produces an open data 
+repository containing street network models for each urban area. Third, it analyzes these 
+models to produce an open data repository containing street network form indicators for 
+each urban area. Fourth, it presents a summary analysis of urban street network form, reporting the 
+first such worldwide results in the literature.
+ It places all of the resulting network models, indicators, and code 
+into open data repositories for public reuse.
+ This article reports the novel methods employed in this modeling and analytics project. 
+ In sum, this study produces the first comprehensive public data repository
+
+Research Outcomes:
+This article presents the study’s 
+reproducible computational workflow, introduces two new open data repositories of ready-  
+to- use global street network models and calculated indicators, and discusses summary 
+findings on street network form worldwide. Second, it produces an open data 
+repository containing street network models for each urban area. Third, it analyzes these 
+models to produce an open data repository containing street network form indicators for 
+each urban area. Fourth, it presents a summary analysis of urban street network form, reporting the 
+first such worldwide results in the literature.
+ It places all of the resulting network models, indicators, and code 
+into open data repositories for public reuse.
+ This article reports the novel methods employed in this modeling and analytics project. 
+ In sum, this study produces the first comprehensive public data repository

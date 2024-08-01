@@ -1,0 +1,44 @@
+Extracted Keywords:
+Icarus, Asphaug, Networks, impact, impact cratering, Nature, graphs, graph, small, asteroid
+
+Main Topics:
+Nature © Macmillan Publishers Ltd, current modelling efforts27, small bodies, another dimension, our code, massively parallel architectures, (K. M. Olson, a
+more comprehensive analysis, The exploratory simulations, a
+young, non-porous asteroid, if such exist, extensive impact
+damage, the resulting fracture pattern, the asteroid’s
+response, future impacts, The stochastic nature, small asteroid interiors, their
+shapes, spin states, Detailed numerical simulations, accurate shape models, collisional response, internal conﬁguration, Detailed
+simulations, the quantitative
+effects, nuclear explosions, Earth-crossing comets, resource exploitation29, Such predictions, detailed reconnaissance, the composition, internal structure, the targeted object, H. J. The Stickney impact, A dynamical model, E. et al. Mechanical and geological effects, 3. Nolan, M. C., R. Impact craters, their size, 4. Love, S
+
+Methodologies:
+The exploratory simulations presented here suggest that when a
+young, non-porous asteroid (if such exist) suffers extensive impact
+damage, the resulting fracture pattern largely deﬁnes the asteroid’s
+response to future impacts. These small-world networks result from the immediate drop in L(p)
+caused by the introduction of a few long-range edges. Tocheck therobustness of
+these results, wehavetested man ydifferent typesofinitial regu lar
+graphs, aswell asdiffer entalgorithms forrandom rewirin g,and all
+give qualitatively similar results. Tocheck therobustness of
+these results, wehavetested man ydifferent typesofinitial regu lar
+graphs, aswell asdiffer entalgorithms forrandom rewirin g,and all
+give qualitatively similar results. Ineach case, theelements were
+coupled accordin gtothefamily ofgraphs described inFig.1.(1)For
+cellular automata charged withthecomputational task ofdensit y
+classiﬁ
+
+Research Outcomes:
+The exploratory simulations presented here suggest that when a
+young, non-porous asteroid (if such exist) suffers extensive impact
+damage, the resulting fracture pattern largely deﬁnes the asteroid’s
+response to future impacts. These small-world networks result from the immediate drop in L(p)
+caused by the introduction of a few long-range edges. Tocheck therobustness of
+these results, wehavetested man ydifferent typesofinitial regu lar
+graphs, aswell asdiffer entalgorithms forrandom rewirin g,and all
+give qualitatively similar results. Tocheck therobustness of
+these results, wehavetested man ydifferent typesofinitial regu lar
+graphs, aswell asdiffer entalgorithms forrandom rewirin g,and all
+give qualitatively similar results. Ineach case, theelements were
+coupled accordin gtothefamily ofgraphs described inFig.1.(1)For
+cellular automata charged withthecomputational task ofdensit y
+classiﬁ

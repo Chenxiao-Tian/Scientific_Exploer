@@ -1,0 +1,313 @@
+Final Report: SciNetExplorer Project
+Name：Chenxiao Tian
+NetID：ct3471
+Date 4/19/2024
+
+
+I. Introduction
+Motivation:
+The SciNetExplorer project presents a unique opportunity to bridge the gap between network science and the extensive knowledge encapsulated within scientific literature. By developing a Python module to dissect and analyze the complex web of citations, similarities, and thematic connections among scientific papers, the project aims to significantly contribute to the academic community by offering new insights into how scientific knowledge is structured and disseminated.
+
+II. Methodologies
+
+The SciNetExplorer module is designed to facilitate the study of relationships among scientific papers through a comprehensive Python module that leverages network science principles.
+
+
+1. Extract Meta Information:
+a Tool Used: python-bibtexparser
+
+Purpose: Parse and extract meta-information from Zotero-generated BibTeX files, including author names, paper titles, publication years, and journals.
+
+b Method Description: extract_meta_information
+
+The extract_meta_information function is designed to parse and extract bibliographic metadata from a BibTeX file and then output this information in a structured format to a specified file. The function utilizes the bibtexparser library to handle the parsing of BibTeX files, which are commonly used to store bibliographic information in LaTeX documents.
+
+c Functionality and Process
+Opening Files:
+Output File: The function opens or creates an output file where the extracted metadata will be written. The file is opened in write mode with UTF-8 encoding to accommodate any special characters.
+BibTeX File: The function opens the specified BibTeX file in read mode, also with UTF-8 encoding, to ensure all bibliographic entries are correctly read, especially those containing special characters.
+
+d Parsing the BibTeX File:
+The BibTeX file is loaded and parsed using the bibtexparser.load function, which converts the content of the BibTeX file into a structured format that is easier to handle programmatically. This structured format is a BibDatabase object, where each entry is represented as a dictionary within the entries list attribute of the object.
+
+e Extracting and Writing Metadata:
+The function iterates over each entry in the BibDatabase. Each entry is a dictionary where the keys are the metadata fields (e.g., author, title, year) and the values are the corresponding details.
+For each entry, the function writes a header ("Entry:") to the output file to delineate different bibliographic entries.
+It then extracts and writes the following metadata if available, or provides a placeholder text if a particular piece of metadata is not present:
+Authors: Listed under "Authors:".
+Title: Listed under "Title:".
+Publication Year: Listed under "Publication Year:".
+Journal: Listed under "Journal:".
+Additional metadata not categorized under the primary headings is written under "Other Metadata:". This includes any other key-value pairs present in the entry that aren't author, title, year, or journal.
+
+2.Manual Linking of Papers:
+
+a Approach: Manually assign edges between papers that reference each other to create a basic citation network.
+
+b Function: get_references
+This function retrieves the references for a given paper using its DOI. It interacts with the CrossRef API to fetch reference information, specifically extracting DOIs of cited papers.
+
+c Parameters:
+
+doi (str): The DOI of the paper for which references are being retrieved.
+Returns:
+
+list: A list of DOIs for the papers that are referenced by the given DOI.
+Process:
+
+Constructs a URL to access data from CrossRef based on the DOI.
+Makes an HTTP GET request to retrieve the data.
+Parses the JSON response to extract the list of references, specifically the DOIs.
+Returns a list of DOIs or an empty list if no references are found or in case of an error.
+
+d. Function: draw_citation_network
+This function reads a BibTeX file, constructs a citation network from the DOIs listed within, and visualizes this network.
+
+e Parameter:
+
+file_path (str): Path to the BibTeX file containing bibliographic entries.
+Process:
+
+Parses the BibTeX file using bibtexparser to extract bibliographic entries.
+Initializes a directed graph G using networkx.
+Maps DOIs to their respective citation keys to facilitate building the network.
+Uses ThreadPoolExecutor from concurrent.futures to parallelize the retrieval of reference lists for each entry with a DOI, improving the efficiency of the network building process.
+For each paper, adds nodes to the graph and establishes directed edges from citing papers to cited papers based on the retrieved reference lists.
+Visualizes the citation network using matplotlib, showing nodes and directed edges that represent the citation relationships.
+f Error Handling
+In the process of retrieving references, if an error occurs (e.g., network issues, API limits), the error is caught and a message is printed. This ensures that the program continues running and processes as many entries as possible.
+
+g Visualization
+The citation network is visualized with nodes representing the papers (labeled by their citation keys) and directed edges showing citation relationships. The visualization is saved as a PNG file and also displayed.
+
+3.Automatic Extraction of Connections:
+
+a Challenge: Develop a method to automate the extraction of citation connections directly from the papers' text.
+
+b This script uses bibliographic data from a BibTeX file to create and visualize a citation graph based on document similarities derived from text data like keywords and abstracts. The script utilizes libraries such as bibtexparser for parsing BibTeX files, scikit-learn for text vectorization and similarity calculations, and networkx with matplotlib for graph operations and visualization.
+
+c Function Descriptions
+load_documents:
+Purpose: Loads and preprocesses documents from a BibTeX file, extracting essential information such as titles, abstracts, and keywords.
+Parameters:
+bib_path (str): Path to the BibTeX file.
+Returns:
+list: A list of dictionaries, each containing key document details.
+build_citation_graph:
+Purpose: Constructs a citation graph where nodes are documents, and edges represent citation relationships inferred from content similarity.
+Parameters:
+documents (list): List of dictionaries containing document information.
+Returns:
+nx.DiGraph: A directed graph with nodes representing documents and edges representing citation links based on similarity thresholds.
+visualize_citation_graph:
+Purpose: Visualizes the citation graph using matplotlib, adjusting node positions with a spring layout to reflect the network structure.
+Parameters:
+G (nx.DiGraph): The directed graph to visualize.
+
+d Main Workflow
+Document Loading: The BibTeX file is read, and relevant document information is extracted and prepared for further processing.
+Graph Building: A citation graph is built by comparing document similarities. Documents can only cite others from previous years, and a similarity threshold is applied to determine citations.
+Graph Visualization: The citation graph is visualized, showing the relationships among documents based on their content similarities.
+
+4.Tool Suggested: Custom text analysis scripts.
+a.Read PDF Versions of Papers:
+Tool Used: PyPDF2
+Purpose: Integrate PDF parsing capabilities to read the full text of scientific papers.
+
+b. The script is designed to process PDF files listed in a BibTeX file, extracting specific sections such as references, annexes, and body text. It uses the PyPDF2 and pdfplumber libraries to read and extract text from PDFs, and incorporates multi-threading to handle multiple files concurrently. Here’s a simplified explanation of the functions and their operations:
+
+Script Method Description
+Functions Breakdown
+read_pdf:
+Purpose: Extracts all text from a PDF file.
+Parameter:
+pdf_file_path (str): The path to the PDF file.
+Returns:
+text (str): All text extracted from the PDF file.
+extract_text_sections:
+Purpose: Segregates text into references, annexes, and body text based on identifiers found within the text.
+Parameter:
+pdf_path (str): Path to the PDF file.
+Returns:
+tuple: Contains three strings representing the references, annexes, and body text respectively.
+process_pdf_and_write_to_text:
+Purpose: Calls extract_text_sections to get specific text sections from a PDF and writes them to a text file organized by section.
+Parameters:
+pdf_file_path (str): Path to the PDF file.
+output_dir (str): Directory to save the output text file.
+Output:
+Creates a text file with the extracted sections.
+process_bib_file:
+Purpose: Processes each entry in a BibTeX file, checking for linked PDF files, and processes each PDF in parallel using threading.
+Parameters:
+bib_file_path (str): Path to the BibTeX file.
+output_dir (str): Directory to save the output files.
+Process:
+Reads the BibTeX file, extracts entries, and for each entry with a linked PDF, calls process_pdf_and_write_to_text in a separate thread.
+Main Function: main_output_4
+Purpose: Sets up the environment for processing a BibTeX file by specifying paths and ensuring the output directory exists, then calls process_bib_file to initiate the processing.
+Parameters:
+bib_file_path (str): Path to the BibTeX file.
+output_dir (str): Directory to save the output files.
+c.Execution
+The script's execution begins with setting the bib_file_path and output_dir, ensuring the directory exists, and then processing the BibTeX file for PDF links and extracting desired content.
+
+5.Extract Keywords and Content:
+a Tool Used: Yet Another Keyword Extractor (YAKE)
+Purpose: Utilize NLP techniques to extract keywords and content, identifying main topics and research outcomes.
+
+The script is designed to process PDF files from a BibTeX file, extracting and analyzing the text to identify keywords, methodologies, research outcomes, and main topics using various text analysis tools like YAKE and spaCy. The script also involves writing the analyzed data into structured text files. Here’s a simplified and clear explanation of the functions within the script:
+
+b  Script Method Description
+Functions Breakdown
+read_pdf:
+Purpose: Extracts all text from a PDF file using the PyPDF2 library.
+Parameter:
+pdf_file_path (str): Path to the PDF file.
+Returns:
+text (str): All text extracted from the PDF file.
+extract_keywords:
+Purpose: Identifies the most relevant keywords from the text using the YAKE (Yet Another Keyword Extractor) library.
+Parameter:
+text (str): Text from which to extract keywords.
+Returns:
+list: A list of keywords extracted from the text.
+analyze_text:
+Purpose: Analyzes the text to extract methodologies and research outcomes using spaCy's NLP capabilities and custom patterns for matching.
+Parameter:
+text (str): Text to be analyzed.
+Returns:
+tuple: Contains lists of methodologies, research outcomes, and main topics identified in the text.
+truncate_text:
+ Purpose: Truncates the text to a specified maximum length to ensure brevity and relevance in the output.
+Parameters:
+text (str): Text to truncate.
+max_length (int): Maximum length of the text.
+Returns:
+str: The truncated text.
+process_pdf_and_write_to_text:
+Purpose: Processes a single PDF by reading it, extracting and analyzing its content, and writing the results into a text file.
+Parameters:
+pdf_file_path (str): Path to the PDF file.
+output_dir (str): Directory to store the output text file.
+Process:
+Extracts text, identifies keywords and main topics, analyzes for methodologies and outcomes, and writes these elements into a structured text file.
+process_bib_file:
+Purpose: Processes each entry in a BibTeX file to find linked PDF files and processes each one using multiple threads for efficiency.
+Parameters:
+bib_file_path (str): Path to the BibTeX file.
+output_dir (str): Directory to save the output files.
+Process:
+Reads the BibTeX file, splits entries, and processes each linked PDF in parallel.
+Main Function: main_output_5
+Purpose: Facilitates the entire PDF processing operation by setting up directories and initiating the processing of the BibTeX file.
+Parameters:
+bib_file_path (str): Path to the BibTeX file.
+output_dir (str): Directory to save the output files.
+
+
+6.Link Papers with Similar Content:
+a Method: Use algorithms to find thematic and conceptual connections between papers based on the extracted keywords and content.
+
+The script is designed to load and process bibliographic data from a BibTeX file, extract text from associated PDF files, perform text clustering, and visualize the results as a network graph of document clusters. Here’s a simplified and clear explanation of each component and its functionality within the script:
+
+b  Script Method  Description
+Function Descriptions
+load_bibtex:
+Purpose: Parses a .bib file to extract necessary bibliographic information for each entry, such as title, abstract, keywords, and file path.
+Parameter:
+file_path (str): Path to the BibTeX file.
+Returns:
+documents (list): A list of dictionaries, each containing key details about a document.
+extract_text_from_pdf:
+Purpose: Extracts all text from a PDF file specified by its path.
+Parameter:
+pdf_path (str): Path to the PDF file.
+Returns:
+text (str): Text extracted from the PDF file.
+create_cluster_graph:
+Purpose: Creates and displays a graph based on the clustering results where each node represents a document.
+Parameters:
+documents (list): List of document dictionaries.
+labels (list): List of cluster labels corresponding to the documents.
+Process:
+Nodes are added to a graph with labels based on clustering results.
+Nodes are colored differently based on their cluster label for easy distinction.
+main_output_6:
+Purpose: Coordinates the loading of documents, text extraction from PDFs, text clustering, and visualization of clusters.
+Parameters:
+bib_path (str): Path to the BibTeX file.
+output_path (str): Path to save the output text file containing the cluster information.
+Process:
+Loads document data from the BibTeX file.
+Extracts text from each associated PDF and combines it with abstract and keywords for clustering.
+Performs TF-IDF vectorization on the combined text data.
+Applies K-means clustering to organize documents into clusters.
+Visualizes the document clusters as a network graph.
+Writes the cluster results to a file, grouping document titles by their assigned clusters.
+
+c Workflow
+Document Loading: Documents are loaded from a BibTeX file, extracting essential details required for subsequent operations.
+Text Extraction: Text is extracted from each document’s linked PDF file.
+Clustering Preparation: Each document’s abstract, keywords, and extracted text are combined and vectorized using TF-IDF.
+Clustering: The K-means algorithm is used to cluster the documents based on the vectorized text data.
+Visualization: A graph is generated to visually represent the clustering of documents, using different colors for different clusters.
+Output Generation: The titles of documents within each cluster are written to an output file, organized by cluster.
+
+7.Analyze and Visualize Results:
+a Tools Used: NetworkX and Matplotlib
+Purpose: Analyze the resulting network to identify key papers, influential authors, and major research clusters, and visualize these connections.
+
+
+b The script is an extensive analysis pipeline for extracting, processing, and analyzing scientific publications from a BibTeX file. It utilizes a combination of bibliographic parsing, text extraction from PDFs, document clustering, and network analysis to reveal patterns and structures within a corpus of scientific literature.
+
+c Script Overview and Functions
+
+1. load_bibtex
+Purpose: Load and parse a BibTeX file, extracting document details such as titles, abstracts, keywords, authors, and file paths.
+Output: Returns a list of document information, a dictionary mapping authors to their works, and citation relationships.
+2. extract_text_from_pdf
+Purpose: Extract text content from a specified PDF file.
+Output: Returns the concatenated text from all pages of the PDF.
+3. build_text_data
+Purpose: Combine abstracts, keywords, and extracted PDF text for each document to prepare for clustering.
+Output: Returns a list of combined text for each document.
+4. cluster_documents
+Purpose: Apply TF-IDF vectorization to the text data and cluster documents using KMeans.
+Output: Returns cluster labels for each document.
+5. create_network_graph
+Purpose: Construct a network graph from document relationships, adding nodes for each document and edges based on text similarity.
+Output: Returns a NetworkX graph object representing the document network.
+6. analyze_network
+Purpose: Perform various network analyses including community detection, centrality analysis, and visualizations to identify key papers and community structures.
+Output: Visualizations and outputs of network analysis metrics.
+7. highlight_connections
+Purpose: Visualize connections in the document network graph highlighting the links between nodes.
+8. highlight_key_papers
+Purpose: Identify and highlight key papers in the network based on centrality measures.
+9. highlight_influential_authors
+Purpose: Identify and visualize influential authors in the network based on their centrality.
+10. analyze_community_structure
+Purpose: Analyze the community structure within the document network using the Louvain method for community detection.
+11. identify_major_research_clusters
+Purpose: Identify and visualize major research clusters in the network, color-coded by community.
+12. main_output_7
+Purpose: Coordinate the entire analysis workflow from loading data to visualizing results.
+
+d Detailed Workflow
+Data Preparation: Parse the BibTeX file to extract document metadata and text from linked PDFs.
+Text Processing: Combine the abstracts, keywords, and PDF text for clustering.
+Clustering: Vectorize the text using TF-IDF and apply KMeans to find clusters among the documents.
+Network Construction: Build a similarity-based network graph using cosine similarity between document vectors.
+Network Analysis: Analyze the network for key documents and authors, community structures, and visualize the results.
+
+III. Challenges and Solutions
+Data Quality and Completeness: Ensuring the accuracy and completeness of extracted metadata from diverse formats of BibTeX entries was challenging. Solutions involved enhancing the parsing algorithms and incorporating multiple data verification steps.
+Complexity of Automatic Link Detection: Developing algorithms to accurately detect and extract citation links from unstructured text required advanced NLP techniques and iterative testing to refine the approach.
+Scalability: Handling large datasets of scientific papers and maintaining performance posed significant challenges. Solutions included optimizing data structures and employing more efficient graph-processing algorithms.
+IV. Insights and Gained Knowledge
+Network Dynamics: The analysis illuminated how certain papers serve as central nodes within the network, indicating their influence and relevance in the field.
+Research Trends: The project revealed evolving trends and emerging topics within scientific communities by analyzing keyword frequencies and thematic similarities over time.
+Community Structures: Visualizing the network highlighted distinct clusters of research, facilitating a better understanding of interdisciplinary connections.
+V. Conclusion
+The SciNetExplorer project has somehow demonstrated the power of applying network science to the realm of scientific publications. The developed Python module not only enhances the understanding of academic literature but also serves as a vital tool for researchers seeking to uncover hidden patterns and connections in their fields.

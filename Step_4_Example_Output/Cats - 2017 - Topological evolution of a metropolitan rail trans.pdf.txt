@@ -1,0 +1,1059 @@
+References:
+construction of modes with higher speed, longer distances between stations, higher capacity and
+higher costs per kilometre. The three development periods correspond to (a) short distances-short
+travel times, dominated by trams in the inner-city and inner-suburbs, with both falling with the
+dismantle of tram services; (b) long distances- longer travel times, metro extended to outer suburbs,
+gradually attaining shorter travel times with almost unchanged distances due to improved
+technology, and; (c) intermediate distances and speeds, multi-modal network, densification of the
+network core and cross-radial connections contribute to improvements in accessibility in terms of
+both distances and travel times. Hence, the longitudinal analysis performed in this study reveals that
+the technological changes that took place during this time span have contributed to the evolution of
+network topological structure, in conjunction with transformations in urban and transport planning.
+The network science indicators used in this study allow for a systematic analysis and
+comparison of the networks constructed for the entire study period based on the well-established
+principles of complex system theory. Global topological indicators provide information on coverage,
+connectivity, efficiency and directness. Local indicators are instrumental in analysing the spatial
+distribution of accessibility (closeness centrality) and flows (betweenness centrality) which are often
+used by transport planners and geographers in their analysis of transport networks. The
+consequences of alternative planning strategies can be investigated using these indicators to examine
+how it relates to past trends. While the analysis performed in this study goes beyond a strictly
+topological analysis by including travel time, it is limited to the analysis of the infrastructure. Future
+studies may analyse the evolution of the service layer superimposed on this network and passenger
+flows. This will potentially allow gaining insights into how service types and congestion evolve in
+transport networks.
+While the exploration phase extends the network coverage and regional accessibility, the
+densification phase increases network efficiency and contributes to network robustness. Overall,
+network shape is developing towards the form seen by Roth et al (2012) for metro networks with a
+dense core from which branches fork at secondary hubs. Increasing the number of circuits and moving
+away from Stockholm’s MRTN dependency on few central and saturated hubs will contribute to
+relieving congestion under normal conditions as well as strengthen network robustness in case of
+disruptions by offering alternative routes. This yields a considerable strengthening of network
+robustness compared to the findings of Wang et al. (2017) who compared 33 metro worldwide
+networks and found Stockholm to be among the least robust networks with the lowest meshedness
+coefficient and robustness indicator values (i.e. both being zero).
+The findings of this study can support the development and increase the realism of models
+designed to mimic transport network evolution. The topological analysis performed in this study can
+be further enhanced by considering alternative graph representations that account for the service
+layer (i.e. lines and frequencies) and its impacts on passenger travel times. Future studies of the
+development patterns exhibited by other public transport networks will allow investigating whether
+there are common drivers and rules that underlie network evolution and formation. In particular, this
+will allow determining the extent to which path dependency and exploration-densification phases
+dominate network development. Alternatively, various transport network planning strategies
+undertaken by various actors can be specified and tested for example in an agent-based modelling
+environment and the network structure results thereof be compared with those observed for real
+transport networks. For example, different patterns might be observed for systems which have been
+developed over a long period of time of about a century by a large number of actors in a traditionally
+monocentric metropolitan area such as Moscow, London and Paris, as opposed to systems centrally
+developed and rapidly expanded within a short time span of less than two decades such as in the case
+of Guangzhou, Shanghai and Madrid.
+Acknowledgments
+The author thanks Jacob Rommel for his assistance with data compilation. The paper has benefited
+from the comments made by three anonymous reviewers.
+References
+Ash J. and Newth D. (2007). Optimizing complex networks for resilience against cascading failure.
+Physica A, 380, 673-683.
+
+Annexes/Appendices:
+transport services and road-bound services only seldom constitute part of the high-capacity public
+transport. In the following, important milestones in the development of Stockholm MRTN, as well as
+future developments, are described to set the analysis in the next section in context.
+In the late 19th century and early 20th century, Stockholm gradually grew beyond the old
+town islands to encompass neighbouring islands. This process was facilitated by a steadily growth of
+the tram network that connected city districts and nearby suburbs. In 1950, when the first metro line
+was inaugurated, Stockholm had a large network of 21 tram line serving 212 stations, covering the area
+now known as the inner-city. A set of detached train lines connected Stockholm and neighbouring
+towns, and the metro system was gradually expanded to nearby suburbs. The 60’s marked an
+important shift in Stockholm’s urban and transport planning. Similarly to many European cities, the
+tram network was subject to a degradation in the post war decades and was gradually replaced by
+buses and metro. In 1967, all the remaining inner-city tram lines were closed down as Sweden changed
+from left-hand to right-hand traffic. The Miljonprogrammet, a national program for public housing
+which was realized between 1965 and 1974, transformed Stockholm into a metropolitan area with the
+metro system as its backbone. Cervero (1995) describes the importance of the metro in Stockholm’s
+transition from being a monocentric city into being a multi-centred metropolis in the late 20th
+century. The transition was aided by building an extensive rail network with different branches
+connecting new satellite towns to Stockholm city centre. However, a recent spatial analysis based on
+passenger flows suggests that a polycentric or even multi-centric urban structure has not yet emerged
+in Stockholm (Cats et al. 2015).
+The inseparable urban and transport planning in Stockholm is a prime example of a radial
+public transport system which is primarily oriented towards regional accessibility rather than
+providing local coverage. In addition, the commuter train services provide faster connection to the
+outer-suburbs and in recent years also cities in nearby counties, facilitating the further integration of
+the Mälaren lake region. However, the current regional planning guidelines promote a more
+polycentric structure (Stockholm City 2011). Future developments of the MRTN which were
+approved in 2013 are designed to support a stronger network of strategic nodes. The investment plan
+includes the extension of the cross-radial light rail train (Cats and Jenelius 2015), several extensions
+of the metro system and a cross-town tram line. In 2017 Stockholm City Line project will become
+operational, increasing the capacity of the commuter and regional train system.
+4.2 Implementation
+Stockholm MRTN was analysed for each year between 1950 and 2025. The starting year marks the
+opening of the metro system while the end year is set to mark the completion of the current mass
+transit expansion plan. The network consists of tram, light rail train, metro, express high-speed
+connections and local, commuter and regional trains. Only lines that operated with at least 23
+departures per day per direction (which typically implies 3 departures per direction in the peak hour)
+were included in the analysis for each of the years. Network data, including all operating stations and
+lines, track lengths and service timetables were acquired from professional literature, technical
+reports and databases, development programs, rail history books, museums and archives including the
+Royal Library, Stockholm City Museum, Stockholm Transport Museum and Stockholm Railway
+Association, among others (for more details see Appendix). Data collection involved compiling
+network configurations including the exact location of stations, service lines, distances and scheduled
+travel times between stations and service frequencies. Year on year changes in either network or
+operations were carefully noted.
+For each year, the list of MRTN lines that satisfy the frequency criterion, stations and
+scheduled travel time between consecutive stations were recorded and mapped. Remarkably,
+network topology has changed in 52 out of the 75 years considered. Undirected L-space graphs were
+coded in Gephi, a free network visualization and analysis tool. Network indicators that involve the
+calculation of link labels (i.e. diameter, betweenness and closeness centrality, directness) were
+computed in MATLAB and then imported and visualized in Gephi. Coordinates of existing and future
+stations were available from Stockholm County Traffic Administration (SLL), whereas coordinates of
+stations that closed down were approximated based on their locations in the respective maps.
+5. Results and Discussion
+Barabasi A.L. and Albert L. (1999). Emergence of scaling in random networks. Science, 286 (5439), 509-
+512.
+Barthélemy M. (2010). Spatial Networks. Available at: http://arxiv.org/pdf/1010.0302v2.pdf
+Barthélemy M., Bordin P., Berestycki H. and Gribaudi M. (2013). Self-organization versus top-down
+planning in the evolution of a city. Scientific Reports, 3, 2153.
+Cats O. (2016). The Robustness Value of Public Transport Development Plans. Journal of Transport
+Geography, 51, 236-246.
+Cats O., Wang Q. and Zhao Y. (2015). Identification and classification of urban centres using public
+transport passenger flows. Journal of Transportation Geography. 48, 10-22.
+Cats O., West J. and Eliasson J. (2016). A dynamic stochastic model for evaluating congestion and
+crowding effects in transit systems. Transportation Research Part B, 89, 43-57.
+Chen S., Claramunt C. and Ray C. (2014). A spatio-temporal modelling approach for the study of
+connectivity and accessibility of the Guangzhou metropolitan network. Journal of Transport
+Geography, 36, 12-23.
+Derrible S. and Kennedy C. (2011). Applications of graph theory and network science to transit
+network design. Transport Reviews, 31 (4), 495-519.
+Derrible S. (2012). Network Centrality of Metro Systems. PloS ONE, 7 (7), e40575.
+Derrible S. and Kennedy C. (2010). Characterizing metro networks: state, form, and structure.
+Transportation, 37 (2), 275-297.
+Ducruet C. (2017). Multilayer dynamics of complex spatial networks: The case of global maritime
+flows (1977-2008). Journal of Transport Geography, 60, 47-58.
+Ducruet C. and Beauguitte L. (2014). Spatial science and network scence: Review and outcomes of a
+complex relationship. Networks and Spatial Economics, 14(3-4), 297-316.
+Ducruet C. and Logo I. (2013). Structure and dynamics of transport networks: Concepts, models and
+applications, in Rodrigue J.P., Notteboo T.E. and Shaw J. (eds.), The SAGE Handbook of Transport
+Studies, SAGE Publications Ltd., 347-364.
+Dupuy G. (2013). Network geometry and the urban railway system: the potential benefits to
+geographers of harnessing inputs from ”naive” outsiders. Journal of Transport Geography, 33, 85-94.
+Erath A., Löchl M. and Axhausen K.W. )2009). Graph-theoretical analysis of the Swiss road and
+railway networks over time. Networks and Spatial Economics, 9, 379-400.
+Homeland Security, U.S. Department of (2010). Transportation Systems Sector-Specific Plan, an
+Annex to the National Infrastructure Protection Plan.
+Mohajeri N. and Gudmundsson A. (2014). The evolution of urban street networks. Geographical
+Analysis, 1-23.
+Jenelius E. and Cats O. (2015). The value of new public transport links for network
+robustness and redundancy. Transportmetrica A: Transport Science, 11 (9), 819-835.
+Lee K., Jung W-S., Park J.S. and Choi M.Y. (2008). Statistical analysis of the Metropolitan Seoul
+subway system: Network structure and passenger flows. Physica A, 387 (24), 6231-6234.
+Lin J. and Ban Y. (2014). The evolving network structure of US airline system during 1990-2010.
+Physica A, 410, 302-312.
+Lin J. and Ban Y. (2013). Complex network topology of transportation system. Transport Reviews, 33 (6),
+658-685.
+Roth C., Kang S., Batty M. and Barthelemy M. (2012). A long-time limit for world subway networks.
+Interface, doi:10.1098/rsif.2012.0259.
+Sienkiewicz J. and Holyst J.A. (2005). Statistical analysis of 22 public transport networks in Poland.
+Physical Review E, 72(4).
+Stockholm2070 (2017). http://www.stockholm2070.se/ Accessed on 22-01-2017.
+Stockholm City, the City Planning Administration (2011). The walkable city, Stockholm city plan.
+Strano E., Nicosia V., Latora V., Porta S. and Barthelemy M. (2012). Elementary processes governing
+the evolution of road networks. Scientific Reports, 2, 296.
+Sun L., Jin J.G., Axhausen K.W., Lee D-H., Cebrian M. (2015). Quantifying long-term evolution of
+intra-urban spatial interactions. Journal of the Royal Society Interface, 12, 1-8.
+Appendix: Sources used in compiling and reconstructing case study networks data
+Data was gathered from searching through the archives of the Stockholm Transport Museum,
+Stockholm City Museum, Swedish Railway Association and Royal Library. The former was especially
+instrumental for retrieving the topological development of the metro network while service
+timetables were mostly found in the latter.
+The following books were used as primary sources for reconstructing the topological information for
+the Stockholm tram network:
+Aspenberg N. (1998). The tramways in Stockholm: The history of the tramways, interurbans,
+trolleybuses and underground. Oslo: Banerforlaget
+Eriksson G. (1991). All of Stockholm’s tramways – a 90 years tram journey in Stockholm [in Swedish].
+Stockholm: Jan Jangö AB.
+Lange T. (1998). Stockholm on track. From horse trams to fast trams [in Swedish]. Stockholm:
+Svenska Spårvägssällskapet.
+The following books were used as the primary source for reconstructing the topological information
+for the Stockholm commuter train network and light rail lines:
+Hällqvist A. (2008). Commuter train in Stockholm’s region [in Swedish]. Stockholm:
+Trafiknostalgiska Förlaget.
+Landgren K. (1993). Saltsjöbanan [in Swedish]. Stockholm: Svenska Järnvägsklubben.
+SLJ (1985). Roslagsbanan 100 years [in Swedish]. Malmö: Frank Stenvalls Förlag.
+Information concerning future developments of the network were obtained from Stockholm County
+Transport Administration reports and press releases.
+
+Body Text:
+Delft University of Technology
+Topological evolution of a metropolitan rail transport network
+The case of Stockholm
+Cats, Oded
+DOI
+10.1016/j.jtrangeo.2017.06.002
+Publication date
+2017
+Document Version
+Accepted author manuscript
+Published in
+Journal of Transport Geography
+Citation (APA)
+Cats, O. (2017). Topological evolution of a metropolitan rail transport network: The case of Stockholm.
+Journal of Transport Geography, 62, 172-183. https://doi.org/10.1016/j.jtrangeo.2017.06.002
+Important note
+To cite this publication, please use the final published version (if applicable).
+Please check the document version above.
+Copyright
+Other than for strictly personal use, it is not permitted to download, forward or distribute the text or part of it, without the consent
+of the author(s) and/or copyright holder(s), unless the work is under an open content license such as Creative Commons.
+Takedown policy
+Please contact us and provide details if you believe this document breaches copyrights.
+We will remove access to the work immediately and investigate your claim.
+This work is downloaded from Delft University of Technology.
+For technical reasons the number of authors shown on this cover page is limited to a maximum of 10.
+Topological Evolution of a Metropolitan Rail Transport Network:
+The Case of Stockholm
+Oded Cats
+Department of Transport and Planning, Delft University of Technology, The Netherlands
+Department of Transport Science, Royal Institute of Technology (KTH), Stockholm, Sweden
+Highlights:
+ Longitudinal analysis of the evolution of multi-modal metropolitan network topology
+ Revealing the evolution of Stockholm’s rail infrastructure network in 1950-2025
+ Investigating the development of network structure, density and impedance
+ Same connectivity and accessibility in 2025 as in 1950 but for a greater area
+ Identifying patterns and transition points in network evolution and their drivers
+Keywords: Public Transport; Network Evolution; Topology; Rail; Infrastructure; Investments
+Abstract
+The structure of transport networks is the outcome of a large number of infrastructure investment
+decisions taken over a long time span. Network indicators are widely used for characterizing
+transport network topology and its performance as well as provide insights on possible
+developments. Little is known however on how rail bound public transport networks and their
+network indicators have evolved into their current form. In this study I conduct a longitudinal
+analysis of the topological evolution of a multimodal rail network by investigating the dynamics of its
+topology for the case of Stockholm in 1950-2025. The starting year marks the opening of the metro
+system while the end year is set to mark the completion of the current development plan. Based on a
+compilation of network topology and service properties, a year-on-year analysis of changes in global
+network efficiency and directness as well as local nodal centrality were conducted. Changes in
+network topology exhibit smooth long-term technological and spatial trends as well as the signature
+of top-down planning interventions. Stockholm rail network evolution is characterized by
+contraction and stagnation periods followed by network extensions and is currently undergoing a
+considerable densification, marking a shift from peripheral attachment to preferential attachment.
+1. Introduction
+Public transport networks constitute an important infrastructure in many metropolitan areas and are
+often considered critical infrastructure (e.g. Homeland Security 2010). Public transport networks are
+developed over a long time span alongside land-use developments. Mass rapid services in the form of
+urban rail lines started with the introduction of steamed trams in the late 19 century and then rapidly
+expanded with tram, metro, commuter train and light rail. Investments in urban rail networks are
+expensive and complicated and are therefore considered strategic and long-term commitments with
+urban rail lines functioning as a backbone. This study conducts a longitudinal analysis of the
+topological evolution of a multimodal public transport network by investigating the dynamics of its
+topology for the case of Stockholm in 1950-2025.
+The form and structure of public transport networks has been a subject of considerable
+research. In the last few years, an increasing number of studies have examined the properties of
+networks worldwide using network science indicators. Lin and Ban (2013) provide a review of
+applications of complex network theory in the transport domain. While these studies provide better
+understanding of the characteristics of public transport networks, there is lack of knowledge on how
+networks evolve until they arrive at their currently observed state. Knowledge on how public
+transport networks and their respective indicators have evolved over time can be insightful when
+considering infrastructure investments and identifying whether future development mark a
+continuation or break away with respect to topological trends.
+The urban rail network is clearly not a ‘self-organizing’ system as its planning, construction
+and to a lesser extent its operations are subject to centralized decision making. Nevertheless, network
+extension decisions are often the outcome of interactions between a large number of players that
+pursue their interests rather than a unified planning process. A diverse set of stakeholders stemming
+from multiple co-existing political levels and interests, successive planners and policies that their
+influence changes over time, and, geographical coverage of multiple authorities, all of which have an
+influence on how the network develops. Investments in new rail sections and stations where a travel
+demand is expected results from a continuous and long process. The discontinuation of a service or
+even the removal of tracks can also occur, albeit less common. Therefore, the term network evolution is
+used in this study rather than network growth but the usage of this term does not imply a bottom-up
+self-organizing governing principle.
+The objective of this study is to quantitatively analyse the evolution of a public transport
+network over a long period as well as its projected further development by examining changes in its
+topology. Sun et al. (2015) argue that the lack of longitudinal data hinders understanding and
+evaluating how network and urban mobility evolve. The lack of research on public transport network
+evolution arguably stems from the difficulty to obtain data on historical network topologies. Data on
+historical developments of urban public transport networks is not readily available and data
+compilation for long time spans pose a significant challenge in performing such an analysis. Network
+data, including distances and timetables, for each year from 1950 to 2025 was acquired for the purpose
+of this study for the case study network of the metropolitan rail transport network of greater
+Stockholm. The main contributions of this study are:
+ Revealing the evolution of a multi-modal complex network designed by multiple actors over a
+long time span (75 years)
+ Investigating how network extent, density and directness using network science indicators
+change over time
+ Analysing the relation between changes in network structure, nodal centrality and travel
+distance and travel time metrics
+ Identifying patterns and transition points in network evolution and their relation to planning
+policies, urban developments and operations
+The results of the study provide for the first time to the best of the author knowledge empirical
+evidence on the evolution of a metropolitan rail network developed over a long time.
+The remainder of this paper is organized as follows: The following section reviews the
+literature on public transport network topology and transport network evolution. Section 3 presents
+the topological indicators used in analysing the networks. The case study of Stockholm is described in
+Section 4, followed by the results and discussion in Section 5. Section 6 concludes with the
+implications of the study findings and directions for further research.
+2. Literature review
+The structure of transport networks in general, and public transport networks in particular has long
+been the subject of interest of researchers and planners. While networks could be classified in relation
+to idealized prototypes such as grid and radial structures, only recently research advances enabled the
+systematic quantification of network topological properties. This is largely driven by developments in
+network sciences which provided researchers with a useful toolbox with solid theoretical foundations
+in graph theory to examine transportation networks as reviewed by Lin and Ban (2013). This section
+is devoted to reviewing the literature on public transport network topology (2.1) and the evolution of
+transport networks (2.2).
+2.1 Public transport topological analysis
+Transport planners use a large variety of metrics to quantify networks in terms of the coverage,
+accessibility and connectivity that they yield. These metrics are based on principles adopted from
+graph theory and spatial analysis techniques (see Ducruet and Lugo 2013 for a review of these
+methodologies). These approaches analyse the performance of a given transport network rather than
+its underlying topological characteristics and often require detailed representation in Geographical
+Information Systems software for transportation applications. Another line of research by transport
+planners and geographers is concerned with creating a taxonomy of public transport network
+prototypes and analysing their common network structure characteristics (e.g. Vuchic 2005). While
+such studies provide insights on the diversity of network structures and discusses descriptively how
+they grow over time, it does not quantify network characteristics and does not allow for a systematic
+analysis of their evolution or comparison.
+Complex network theory has increasingly emerged as a new scientific paradigm for analysing
+and designing a wide range of systems including urban metabolisms, information and communication,
+social relations, as well as transport systems. In the case of the latter, the networks are embedded in a
+spatial-geographical system and the analysis is therefore typically concerned with a planar graph
+representation. There is a growing literature which applies complex network theory methods to
+analyse transport systems including road (Xie and Levinson 2009), rail (Wang et al. 2009), urban
+public transport (von Ferber et al. 2009), air (Wang et al. 2011) and maritime (Ducruet 2017).
+The analysis of network topology indicators suggests that different types of network share
+common features. Two notable network classes are scale-free and small-world networks. A scale-free
+network is characterized by a node degree distribution that follows a power law, implying that there
+are many nodes with few connections and few nodes with many connections (Barabasi and Albert
+1999). Previous studies assert that there are many man-made and complex natural networks that are
+scale-free, including road and metro networks (Xie and Levinson 2007, Derrible and Kennedy 2011). A
+blueprint of a small-world network, which is neither a random graph nor an orderly planned graph, is a
+short path length and high clustering (Watts and Strogatz 1998). While a scale-free structure is
+prominent for public transport networks when represented in L-space (i.e. nodes correspond to
+stations and links correspond to a service connecting consecutive stations), small-world has not been
+often observed when using the P-space representation (i.e. nodes correspond to stations and links
+correspond to the existence of at least one common line) (von Ferber et al. 2009, Sienkiewicz and
+Holyst 2005, Lee et al. 2008).
+Several studies analysed and compared the network topology of metro and urban rail systems
+across the world. von Ferber et al (2009) describe different ways to represent a public transport
+network. Comparisons of indicators for networks worldwide were performed by Derrible and
+Kennedy (2010) and Zhang et al. (2013) for 32 metro and 30 urban-rail networks, respectively. The
+former proposed metrics for classifying networks based on their state, form and structure.
+In the context of public transport, topological indicators have been most extensively used for
+analysing network vulnerability in case of link or node failure and for the identification of critical
+links. This research topic was investigated for 17 prototype network structures (Zhang et al. 2015),
+the world largest metro systems (Angeloudis and Fisk 2006), 32 metro systems worldwide (Derrible
+and Kennedy 2010), London and Paris (von Ferber et al. 2012), Nanjing (Deng et al. 2013) and Madrid
+(Rodriguez-Nunez and Garcia-Palomares 2014). The results demonstrate that public transport
+networks vary in their capacity to absorb random and targeted attacks. The availability of cyclic paths
+which allow to perform detours and bypass a disrupted area in case needed contributes to network
+robustness. Cats (2016) enriched the topological analysis with travel demand distribution to evaluate
+the impacts of network extension plans on its robustness.
+While network science is increasingly applied to the transport, and in particular public
+transport domain, many of these applications are performed without considering key network
+features. Dupuy (2013) asserts that by neglecting such features and the urban planning context,
+studies performed by scientists from other disciplines in the field of network geometry and urban
+railway systems provide very limited recommendations to network planners and thus obstruct
+potential implementations. Remarkably, only few studies have included information on travel
+impedance (e.g. distance or time), representing the public transport network as an unweighted graph.
+The analysis of topological indicators for non-weighted graphs is then based on counting links,
+questioning the value of often reported indicators such as network diameter (longest shortest path),
+average shortest path, node closeness and betweenness centrality. Assigning link labels is essential for
+measuring the intended network coverage, node efficiency, location accessibility and interchanging
+flows, respectively.
+2.2 Transport network evolution
+The process in which networks evolve over time is an important aspect in the growing interest in
+network science. Nevertheless, most studies have focused on the topological analysis of networks in
+their current state. As stressed by Dupuy (2013), graph theory-based studies resulted with a static
+representation of the network, hindering the analysis of network development process. In their
+review of how network science has been integrated into the work of spatial scientists, Ducruet and
+Beauguitte (2014) concluded that research concerning the evolution and dynamics of networks using
+network science concepts and methods has remained surprisingly unexplored as most studies
+adopting a static approach. In line with Dupuy’s arguments, some the of studies that have taken a
+dynamic perspective to network topology were performed by scientists from disciplines other than
+transport, in particular from physics and computer sciences, as reflected by the neglect of spatial
+elements in the analysis and interpretation.
+In the absence of empirical data, several studies have simulated how transport networks may
+have evolved by specifying principles that may govern their development. Ash and Newth (2007)
+modelled the evolution of a simple grid network with links being added or removed in an iterative
+manner with network robustness measured in terms of average efficiency as the objective function.
+Xie and Levinson (2008) proposed an agent-based approach for simulating how road networks may
+develop if in each iteration roads that are not used as much were to be abandoned whereas heavily
+used roads would have been upgraded. Model results show that some networks had similar
+characteristics even though they have developed from very different initial types of networks. This
+was taken as an indication that transport networks possess robust properties that can emerge from
+the interplay between many different actors. While this approach may be useful for analysing the
+outcomes of alternative strategies, it lacks empirical underpinning and assumes a highly systematic
+and consistent network design approach.
+Longitudinal infrastructure data is increasingly made available for road and heavy rail
+networks. This has led to a stream of empirical research in recent years into the development of these
+networks. The findings of these studies suggest that developments range from self-organizing
+patterns to a top-down planning signature, with most networks exhibiting a combination of the two.
+Both Strano et al. (2012) and Mohajeri and Gudmundsson (2014) identified two underlying
+mechanisms governing street network growth: expansion and densification. Strano et al. suggest that
+these are two development phases: an exploration phase where branches are built into areas
+previously not served by roads followed by a densification phase where the network became denser
+through the addition of links between already existing branches. Interestingly, the most important
+roads as measured by node betweenness centrality maintained their importance throughout the 200
+years analysis period. Conversely, Barthélemy et al. (2013) in their analysis of how the street network
+of Paris evolved over more than 200 years observed a self-organized smooth growth and densification
+was penetrated by large-scale top-down planning. A similar pattern was found by Thevenin et al.
+(2016) in their analysis of the evolution of the French railway network over a century and also
+resonates with the findings of Erath et al. (2009) concerning the development of the Swiss road
+network between 1950-2005 where a period of systematic growth is followed by a stagnation. Top-
+down planning was found particularly important in the investigation of the changes in accessibility
+offered by the Chinese railway network by Wang et al. (2009) during the 20th century. They stress
+the strong political influence and the importance of central governmental policies in network
+development and its impacts on changes in accessibility and the generation of economic centres.
+Research into the evolution of airline and shipping networks is facilitated by the recent
+availability of open data concerning their line operations. These highly dynamic networks are
+characterized by point-to-point line-based networks that develop at a continental or global scale and
+operate in a highly competitive setting. Airline traffic is highly market-driven and exercises strong
+fluctuations in response to changes in demand patterns as shown by Lin and Ban (2014) and Wang et
+al. (2014) for the air transport networks of the US in 1990-2010 and China in 1930-2012, respectively.
+Ducruet (2017) concludes from analyzing the dynamics of multi-layer maritime global flows that their
+evolution is highly path-dependent with the reinformcement of major hubs. The reinforcement of
+existing hubs - a growth pattern that tends to connect new nodes to nodes that already well-
+connected (also known as ‘the rich getting richer’ phenomenon) - will give rise to a scale-free
+network.
+Few studies have discussed the development of metropolitan public transport systems using a
+network science approach. Based on a static analysis of three bus networks in China, Yang et al.
+(2014) concluded from the node degree distribution that network topology evolved through random
+network extensions, although the evolution of these network has not been directly investigated.
+Metro networks were found to share some common topological properties even when considering
+networks that have been constructed at different times and by different governmental structures.
+Derrible (2012) examined trends in how betweenness centrality changes in metro networks as a
+function of their size in terms of number of nodes (stations). He observed an exponentially increasing
+trend with larger networks having a much more distributed betweenness centrality suggesting a
+process of democratization where central nodes in larger networks obtain a smaller share of the total
+betweenness centrality compared to those in smaller network. This analysis did not however take
+travel times into account. The only study that to the best of the author’s knowledge investigated the
+evolution of public transport network structure was conducted by Roth et al (2012) who investigated
+how fourteen metro networks around the world have developed over time. They observed that metro
+networks develop into a shape with a denser core surrounded by a circular line and branches
+extending from the core to suburbs, often through fork stations. The analysis by Roth et al.
+considered the unweighted graph, though discarding network distances or travel times and were
+therefore restricted to configurational metrics. An analysis limited to nodal accessibility was
+performed by Chen et al. (2014) who examined the rapid development of Guangzhou metro network
+in 1999-2011.
+Complex network theory applications to public transport have resulted with a growing
+knowledge of the topological properties of public transport networks. Several studies have also
+modelled how public transport network may evolve over time based on certain growth principles.
+However, there is lack of knowledge on how public transport networks evolve in a context where
+investments in surface transport infrastructure span over long periods of time. This arguably stems
+from the difficulty of obtaining and compiling longitudinal data, partially attributed to corresponding
+organisational and technological changes. This study aims to extend the knowledge on how public
+transport topology evolves over time by empirically investigating the dynamics of the indicators
+presented in the following section.
+3. Network topology indicators
+L-space is used for representing the public transport network in this study. This graph representation
+is adopted in this study because it allows focusing on the availability of physical tracks which
+represent a long-term investment in infrastructure. Hence, the physical network infrastructure is
+defined by a directed graph G(S,E), where the node set S represents rail stations, and the link
+(edge) set E SS represents rail segments connecting a pair of stations. The graph could be
+described as a 𝑆×𝑆 adjacency matrix, 𝐴, where each entry 𝐴 equals 1 if 𝑖 and 𝑗 are connected with a
+𝑖𝑗
+link and equals 0 if there is no direct connection. Each link eE is a service-segment that may be
+operated by one or several public transport lines and induces a certain travel impedance. Link labels
+may correspond to link length, in-vehicle travel time or a generalized travel cost function for the
+respective link. Let 𝑙 and 𝑡 denote respectively the length (distance) and travel time associated
+𝑒𝑖𝑗 𝑒𝑖𝑗
+with link 𝑒 which connects stations 𝑖 and 𝑗 (𝑖,𝑗 ∈𝑆).
+𝑖𝑗
+In the following, the network indicators used for investigating network states and evolution
+are defined. Global network indicators are used to characterise network structure whereas local
+network indicators quantify the centrality of network elements. For a comprehensive review of
+spatial network indicators, the reader is referred to Barthélemy (2010).
+3.1 Global network structure indicators
+The number of stations and links is denoted by the cardinality of the node and link sets, |𝑆| and |𝐸|,
+respectively. The total network length of all rail segments is
+𝑙 = ∑ 𝑙 (1)
+𝑒∈𝐸 𝑒
+In addition, network size can be assessed by measuring its diameter:
+𝑑 =max 𝑑 (2)
+𝑖,𝑗∈𝑆 𝑖𝑗
+Where 𝑑 is the distance shortest path between nodes 𝑖 and 𝑗. The diameter measures the extent of
+𝑖,𝑗
+the graph in terms of the maximum topological length (i.e. rail segment-km) between any pair of
+nodes (i.e. stations). The shortest path in terms of the number of sections (all link labels equal one),
+network distance or travel time can be found for each pair of nodes using for example the Dijkstra
+algorithm.
+Several network indicators can be used to describe network density and connectivity. A
+simple and commonly-used measure of network connectivity, the gamma index, is defined as the ratio
+between the number of links and the maximum number of links in a complete planar graph:
+|𝐸|
+𝛾 = (3)
+3(|𝑆|−2)
+The gamma index equals 1 in the case of a complete graph. In the context of rail networks it can be
+interpreted as the likelihood that a pair of stations has a direct rail segment connecting them. A more
+connected network offers a greater number of alternative routes between any pairs of stations.
+Similarly, the alpha index is an indicator of network meshedness and ranges between 0 for a tree and 1 for
+a complete graph. It is defined as the ratio between the number of elementary cyclic and the
+maximum number of cycles in a graph:
+|𝐸|−|𝑆|+1
+𝛼 = (4)
+2|𝑆|−5
+The alpha corresponds to the probability that it is possible to travel from any station back to the same
+station without traversing the same (bi-directional) rail segment twice. This is an indicator of
+network robustness as it provides information on network redundancy in case of a link closure.
+As a planar spatial network, an important feature of a public transport network is its
+directness. The directness of each connection is defined as the average discrepancy ratio between
+network distance (measured in rail segment-km) and the geographical distance, or in other words the
+percentage-wise detour that the network structure induces. Overall network directness is measured as
+the average ratio calculated over all origin-destination (station) pairs
+𝑞 =
+∑ 𝑖∈𝑆∑ 𝑖≠𝑗∈𝑆𝑙𝑖𝑗
+(5)
+|𝑆|(|𝑆|−1)∑ 𝑖∈𝑆∑ 𝑖≠𝑗∈𝑆𝑙̂
+𝑖𝑗
+Where 𝑙̂ is the geodesic distance between nodes 𝑖 and 𝑗. The higher node directness is, the greater
+𝑖𝑗
+the travel impedance compared with the hypothetical shortest path.
+3.2 Local centrality indicators
+In addition to measures that are computed at the network level, indicators defined at the node level
+allow investigating the spatial variation of topological properties among stations. Moreover, local
+indicators can facilitate the investigation of global network characteristics by comparing statistics of
+their distributions across networks.
+Three measures of stations centrality are considered in this study to capture the extent of
+direct connections to other stations, accessibility to all other stations and its role in connecting pairs
+of stations across the network. The simplest node centrality indicator is node degree which is simply
+the number of stations directly connected to each station
+𝑘 = ∑ 𝐴 ∀𝑖 ∈𝑆 (6)
+𝑖 𝑗∈𝑆 𝑖𝑗
+The node degree corresponds thus to the number of incoming/outgoing rail segments per station.
+While node degree measures the number of direct neighbours, it does not provide information
+on how close or far the station is from all other stations in the network. Node closeness centrality is
+defined based on the shortest paths from a certain node to all other nodes in the network
+1
+𝑐 = ∑ ∀𝑖 ∈ 𝑆 (7)
+𝑖 𝑖≠𝑗∈𝑆
+𝑑𝑖,𝑗
+This definition implies that station closeness centrality increases for lower travel impedances to other
+stations in the network and hence reflects the accessibility of each station from all other stations. The
+average node closeness is commonly used to quantify network efficiency since it reflects the average
+number of stations that are passed when travelling between any pair of stations.
+The importance of a station could also be considered in terms of its role in connecting other
+stations. For example, a peripheral station that is poorly connected locally (i.e. low node degree and
+closeness) may constitute a bridge between two sub-networks. The latter is especially important in
+the context of multi-modal metropolitan rail networks where a station may serve as a terminal hub
+connecting services with distinguished operations and hierarchy (e.g. commuter train and trams).
+This is measured by node betweenness centrality which is defined as the share of shortest paths that
+traverse through a certain station
+𝑏 = ∑
+𝑛𝑗,𝑘(𝑖)
+∀𝑖 ∈ 𝑆 (8)
+𝑖 𝑗≠𝑘∈𝑆
+𝑛𝑗,𝑘
+Where 𝑛 (𝑖) is the number of shortest paths between stations 𝑗 and 𝑘 that traverse through station 𝑖
+𝑗,𝑘
+and 𝑛 is the total number of shortest paths found between these pair of stations. This definition of
+𝑗,𝑘
+node betweenness centrality is inherently dependent on the number of nodes. To facilitate the
+analysis of changes in station relative importance, a standardized indicator is defined by dividing Eq. 8
+by the sum of node centrality for all stations:
+𝑏̃ = 𝑏𝑖 ∀𝑖 ∈ 𝑆 (9)
+𝑖 ∑ 𝑖∈𝑆𝑏𝑖
+The standardized betweenness centrality corresponds thus to the percentage of network shortest
+paths that traverse through a certain station. The standardized centrality indicator allow comparing
+the betweenness centrality distribution for different networks.
+4. The Case of Stockholm metropolitan rail network
+4.1 Study area
+The evolution of the metropolitan rail transport network (MRTN) was investigated for the case of
+Stockholm, Sweden. Only rail-bound services were considered in this analysis because they require
+substantial long-term investments and therefore become an integral part of the metropolitan
+infrastructure over long periods of network lifetime. Furthermore, our interest lies in mass public
+Based on the analysis of network indicators, phases in the development of the case study network are
+identified (Section 5.1). Network structure and its evolution in terms of its global coverage,
+connectivity, efficiency and directness are then analysed (5.2). Trends in local centrality indicators
+and their underlying causes are then discussed (5.3). Finally, the co-evolution of several key indicators
+is investigated (5.4).
+5.1 Three periods in the evolution of the network
+Based on the evolution of three indicators of Stockholm MRTN size (Figure 1), three distinctive
+periods with pronounced transition points can be identified:
+(a) Contraction, 1950-1967: The number of stations and links contracted gradually between 1950-1966
+where each year saw on average the closure of one tram line and then fell dramatically in 1967
+when the remaining tram lines were dismantled. The latter happened in conjunction with the
+shift into right-side driving which marked the end of the compact street-level rail network in the
+inner-city. Notwithstanding, the simultaneous construction of metro lines counteracted these
+closures resulting with a slight increase in total network length.
+(b) Stagnation, 1968-1998: Three decades of relative stagnation with incremental extensions of
+existing lines. This period starts after the completion of the large-scale urban and transport
+development of suburbs built around stations along radial metro corridors. Already in 1978 the
+metro lines have almost reached their current form, extending well-beyond the inner-city. Total
+network length increased by less than 2.5% between 1978-1998.
+(c) Growth, 1999-2025: A period of substantial and consistent growth. This period is characterized by
+a shift in urban and transport policy with a focus on: (1) regional integration, and (2) increased
+capacity and connections in the core of the network. While these two trends may seem
+contradictory at first, the analysis below demonstrates that they are pursued simultaneously. The
+development of long commuter and regional services culminated in 1999-2003 resulting in an
+rapid increase in network length. The opening of new light rail line in the 2000’s and future
+metro extension plans lead to a growing number of stations and rail links in the core of the
+network contributing to a modest increase in network length.
+It is thus evident that Stockholm MRTN manifests a complex non-monotonous growth
+pattern, demonstrating some abrupt changes as well as periods of incremental growth. The average
+number of new links per year increased steadily from 1.22 in the period 1967-1985 to 1.53 in 1986-1998,
+2.2 in 1999-2009 and set to increase to 2.6 in the period of 2010-2025. Moreover, while the number of
+nodes and links follows an overall similar trend of contraction, stagnation and growth, the total
+network length follows a generally increasing trend with long periods of incremental increases and a
+short period of a rapid growth. Remarkably, the number of nodes and links in 2025 will still fall short
+by 12% and 8% of the respective values in 1950, while network length and the population of
+Stockholm metropolitan area increase to 213% and 267%, respectively, of their 1950 values. This
+reflects the shift from a dense inner-city tram network to a metropolitan mass transit system with
+larger station spacing. It is thus important to analyse the trends in the context of the underlying
+transition from low-capacity rail services characterized by short distances between stations and
+lower speeds (i.e. city trams operating in mixed traffic) to high-capacity rail-bound services that
+operate with longer distances between stations with higher speeds (i.e. underground and commuter
+trains).
+350 1500
+1350
+300
+1200
+s T
+k n250 1050to
+il/
+s e
+d200
+900 ten
+la
+o w
+n 750 o
+f
+o
+r
+e
+b150
+600 nel
+kr
+m
+u100 450
+htg
+N [
+k
+300 m
+50 ]
+150
+Nodes Links Total network length
+0 0
+0 3 6 9 2 5 8 1 4 7 0 3 6 9 2 5 8 1 4 7 0 3 6 9 2 5
+5 5 5 5 6 6 6 7 7 7 8 8 8 8 9 9 9 0 0 0 1 1 1 1 2 2
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2
+Year
+Figure 1: Numbers of nodes and links and total network length per year
+5.2 Network structure
+Table 1 provides a summary of network indicators for six selected years that mark important
+milestones in Stockholm MRTN development. Alongside the population in the case study area and in
+addition to the number of nodes, links and network length, columns 6-10 present the network-level
+indicators: diameter, average path length, connectivity, meshedness, and directness.
+Stockholm MRTN growth stems from a combination of increased network coverage, i.e.
+extending its reach, and increased network density, by connecting already existing stations. Growing
+geographical coverage was the main driver of network growth until the 2000’s. Even though the
+diameter is determined by the extreme value of the path length distribution, its development is in line
+with that of other indicators of network size until 2010. The diameter of the Stockholm MRTN
+decreased slightly between 1950 and 1967 as the tramways that extended to nearby suburbs were
+closed down while the metro had covered a smaller area until the 1990’s. Since the mid-1990’s,
+network diameter was determined by commuter and regional trains which increased the reach of the
+MRTN from approximately 100km to 150km, extending beyond the boundaries of Stockholm county
+into neighbouring counties to the north, north west and south west of Stockholm. However, the
+diameter slightly decreased in 2025 due to the closure of one of the regional train terminals and with
+investments focused on central parts of the network.
+Network growth in 2010-2025 stems from a rapid construction of new links (Figure 1) that
+densify the network rather than extend it. The densification of the core is driven by a combination of
+planning policies: (1) intensifying sub-centres and strengthening their inter-connections (Cats et al.
+2015); (2) increasing the capacity and relieving congestion of main axes by adding parallel corridors
+and bypass alternatives (Cats et al. 2016, Jenelius and Cats 2015); (3) improving network robustness
+by adding redundancy and thus rerouting possibilities (Cats 2016). The average path length which
+had consistently increased until 2010, decreases as a result of the current expansion plan. In other
+words, network efficiency improves as new travel alternatives offer shorter connections. The sharp
+increase in average path length in 1967 stems from the closure of many tram stations which exercised
+shorter stop spacing compared with other rail-bound modes. This reflects thus a change in the
+composition of the multi-modal mix of Stockholm MRTN, shifting towards longer spacing modes
+such as metro and commuter train.
+Network connectivity has followed a U-shaped development in the period between 1950-
+2025 as indicated by both gamma (Eq. 3) and alpha (Eq. 4) indicators. The compact dense network of
+the 1950s fragmented to the minimum values of 0.339 and 0.0054 in 1967 for the gamma and alpha
+indicators, respectively, indicating that the network included about one third of all possible links and
+half a percent of all possible cycles. Network connectivity and meshedness increased gradually
+between the years 1968-2000 and then increased substantially in the following decade and finally
+reached the 1950 level in 2010. An accelerated growth in network connectivity is projected in the
+years leading to 2025, reflecting a densification of the network and the construction of cross-radial
+(suburb to suburb) connections. In 2025 Stockholm MRTN will offer the same connectivity as in 1950
+but for a much greater service area. Network meshedness will be in 2025 more than twice as high as in
+2010 and ten times higher than in 1967, suggesting a significant improvement in network robustness
+thanks to increased redundancy in case of disruptions (Jenelius and Cats 2015).
+Table 1: Summary of network indicators for selected years
+Year Pop. No. No. Network Diameter Average Connect- Meshed- Directness
+[millions] nodes Links length [km] path ivity ness
+[km] length
+|𝑺| |𝑬| 𝒍 𝒅 [km] 𝜸 𝜶 𝒒
+1950 0.952 306 319 614.9 97.35 1.928 0.350 0.0231 1.311
+1967 1.427 187 188 644.6 93.81 3.429 0.339 0.0054 1.426
+1985 1.578 206 210 769.6 93.95 3.665 0.343 0.0123 1.402
+2000 1.823 227 233 928.0 119.98 3.983 0.345 0.0156 1.373
+2010 2.054 245 255 1184.2 156.72 4.644 0.350 0.0227 1.338
+2025 2.368 267 294 1307.3 153.92 4.447 0.370 0.0529 1.312
+The average network directness (Eq. 5) follows an inverted U-shape development with the
+detour rate yielding the maximal value in 1967 with the average path length being 42.6% longer than
+the geodesic distance (Table 1). This large path discrepancy is attributed to the dominance of local
+train services in Stockholm archipelago landscape in 1967 and their reliance on few bridges that often
+require detours. Directness improved gradually between 1967-1999 and then more rapidly in 2000-
+2025, yielding after 75 years approximately the same level of directness that was offered in 1950. This
+pattern is evident in Figure 2 where the cumulative density functions of the directness indicators for
+each year from 1950 to 2025 is plotted. The median path detour ratio increased from 1.35 in 1950 to
+1.47 in 1968, decreased gradually due to relatively direct commuter and regional train services and will
+get back to 1.35 by 2025 thanks to the availability of cross-radial connections that enable travellers to
+bypass the city centre which was almost inevitable in the radial MRTN structure.
+1
+1
+0,9
+0,9 0,8
+0,7
+0,6
+0,8 0,5
+0,4
+0,3
+0,7
+0,2
+0,1
+0
+0,6 1,1 1,15 1,2 1,25 1,3 1,35 1,4 1,45 1,5 1,55 1,6 1,65 1,7 1,75
+,directness
+1950 1967 1985 2000 2010 2025
+0,5
+0,4
+0,3
+0,2
+0,1
+0
+1,1 1,15 1,2 1,25 1,3 1,35 1,4 1,45 1,5 1,55 1,6 1,65 1,7 1,75
+,directness
+Figure 2: The evolution of the distribution of directness –each curve corresponds to the cumulative
+distribution of one year, progressing from the darkest curve (1950) to the lightest curve (2025) (for
+selected years in the inset)
+5.3 Evolution in node centrality measures
+The investigation of station centrality measures enables the analysis of station importance and role in
+the greater network for a given year and how they evolve over the study period. Changes in the
+statistical properties of the distributions of node centrality indicators are first discussed followed by a
+discussion of the patterns of their spatial distribution.
+The three periods identified in Section 5.1 are also visible in the evolution of node degree.
+Figure 3 depicts the average and coefficient of variation (CV) of the node degree for 1950-2025. The
+average value decreases from about 2.1 direct neighbours for each node to almost 2.01 and then
+increased gradually to 2.05 in 2000 to then rapidly bounce back to an average value of 2.2 in 2025. The
+vast majority of the nodes having a degree of two (consecutive stations along the same line) and few
+nodes having many connections (transfer hubs) or only one (terminals). This pattern emerges from a
+preferential attachment scheme with only 1% of the stations having a degree of six or higher. This
+finding is in line with previous studies that examined L-space of public transport networks (Lin and
+Ban 2013). As reflected in the increase of CV from 0.3 to 0.45, the node degree distribution becomes
+more skewed due to the increase in number and diversity of transfer hubs, with second- and third-tier
+interchanges emerging in the boundaries of Stockholm inner-city (2000’s) and nearby suburbs
+(2010’s). The pronounced radial network dominated by the metro network with a single station that
+allows transferring between all metro and commuter train lines has evolved into a meshed centre with
+a ring of hubs beyond which rail lines fork (see Figure 5).
+2,25 0,5
+Average CV 0,45
+C
+o
+e
+2,2 0,4 f
+f
+ci
+ei
+e 0,35n
+e
+r o
+t
+g f
+e2,15 0,3 v
+d a
+e
+d
+air
+o
+n
+0,25 oit
+e
+g 2,1 0,2 o
+n
+a f
+r e
+v
+A
+0,15don
+e
+d
+2,05 0,1 e
+g
+r
+e
+0,05e
+2 0
+1950195519601965197019751980198519901995200020052010201520202025
+Year
+Figure 3: Average and coefficient of variation of node degree per year
+The evolution of average node closeness centrality in terms of distance and travel time
+manifests a distinctively different pattern than node degree. The signature of the three development
+period is evident in Figure 4 where average closeness centrality is shown for both distance and travel
+time. While global closeness is often considered an indicator of network transmission efficiency, this
+analysis highlights the sensitivity of the results to the selected impedance factor. Both closeness
+centrality indicators yielded the maximum value in the mid-1950s and then fell drastically in 1967. The
+compact and dense tram network resulted with closely connected nodes in terms of both distance and
+travel time and its degradation meant longer paths between the remaining stations. The expansion of
+the metro led to a further decrease (1968-1978) in average distance closeness because new stations
+were situated further away from the network core, increasing the average path distance. In contrast,
+travel time closeness increased because the metro offers significantly higher speeds and new travel
+alternatives leading to a reduction in the average path travel time. This transport planning policy
+catered for improving regional accessibility in conjunction with the construction of satellite towns.
+The distance closeness further decreased in the 2000’s due to the integration of regional
+services into the MRTN and then bounces back from 2010 onwards due to the densification of the
+network core with new centrally positioned stations and cross-radial connections that cut down
+travel distances as well as travel times, improving accessibility in the case study area. This trend will
+result with a travel time closeness centrality in 2025 (0.032) that is approaching the average value in
+1950 (0.034). This is remarkable as the distance covered by the network is much greater (see network
+diameter and a 43% decrease in distance closeness centrality - reflecting that the average distance
+between a pair of nodes has almost doubled) but the greater travel speeds provided by primarily
+metro and commuter trains will achieve a similar travel time closeness to the one that existed in the
+much smaller urban area of 1950 which was served by trams. This demonstrates the improved
+accessibility and enlarged labour market enabled by the development of the MRTN.
+0,038 0,00009
+Travel time Distance
+0,000085
+0,036
+0,00008
+0,034
+0,000075
+s
+s e D
+n si
+e
+s o0,032
+0,00007 nat
+lc ec
+e 0,000065 c
+m ol
+it
+le
+0,03
+0,00006
+nes
+v e
+a s
+rT0,028 0,000055s
+0,00005
+0,026
+0,000045
+0,024 0,00004
+1950195519601965197019751980198519901995200020052010201520202025
+Year
+Figure 4: Average node closeness centrality measured in terms of travel time and distance per year
+The spatial variation of accessibility, as measured in terms of travel time node closeness
+centrality, is illustrated for the selected years in Figure 5. There are pronounced and persistent
+differences between network core and branches. In line with the findings based on the analysis of
+passenger flows in Stockholm by Cats et al. (2015), the MRTN reflects as well as facilitates a growing
+and denser network core connecting centres of activities. The on-going networks extensions will
+result with a significant improvement in accessibility, especially in the southern part of the network
+core and north-west of the network core, which was also found to contribute to the capability of the
+case study network to withstand link breakdowns (Cats 2016). These developments constitute
+strategic and costly investments as they entail constructing tunnels and bridges to connect islands
+and land on different shores of the sea and lake as well as constructing over- and underground tracks
+in densely built-up areas.
+1950 1967
+1985 2000
+2010 2025
+Figure 5: Travel time closeness centrality maps for selected years, main part of the network, 1cm = 8km
+(lighter colours indicating higher closeness centrality values, the station with the highest closeness
+centrality is highlighted)
+The Stockholm MRTN is becoming increasingly dependent on few stations. Figure 6 presents
+the distribution of the standardized betweenness node centrality (Eq. 9) for 1950-2025 in its
+cumulative form. It shows the distribution of relative station importance in connecting origin-
+destination pairs across the network when searching for the paths that yield the shortest travel time.
+While the overall shape of the distribution remains stable over the analysis period, the distribution
+becomes in the first several decades more egalitarian and thereafter reverses into a more oligarchic
+form, even if having few more oligarchs. This implies that passenger flow distribution can be expected
+to be extremely uneven. This finding is in disagreement with Derrible (2012) who concluded from the
+topological analysis of 28 worldwide metro networks that betweenness centrality is more evenly
+distributed for larger networks while neglecting travel times (i.e shortest path was calculated in
+terms of number of intermediate hubs) in his analysis. For example, the share of nodes that are
+situated on the shortest paths connecting more than 1% of all origin-destination pairs each in the case
+study network increased from 7.5% in 1950 to 21% in 1971 and then decreases to 11% in 2025. These
+shifts suggest that the network was heavily dependent on a small number of nodes in the 1950s for
+transmitting travel flows, followed by a more distributed structure that was then gradually almost
+reversed back to earlier centralization levels, albeit for a larger network. Due to the relation between
+betweenness centrality and flow distribution, this can have ramifications for hub saturation levels and
+passenger and pedestrian congestion.
+1
+0,9
+0,8
+0,7
+0,6
+0,5
+0,4
+0,3
+0,2
+0,1
+0
+0 0,005 0,01 0,015 0,02 0,025 0,03 0,035 0,04 0,045 0,05
+,percentage betweeness centrality
+Figure 6: The evolution of the distribution of standardized betweenness centrality – each curve
+corresponds to the cumulative distribution of one year, progressing from the darkest curve (1950) to
+the lightest curve (2025)
+The most central stations as measured by node centrality indicators change considerably
+during the analysis period. The most central stations as measured in terms of their node degree change
+considerably over the years because of the local nature of this indicator which can change more
+rapidly in response to limited interventions. For example, only one of the top five stations in 1950, (i.e.
+Centralstationen) retains its position in the top five in 2025. In contrast, betweenness and closeness
+centrality see dramatic changes between 1950 and 1967 due to the overhaul change in network
+topology while more incremental changes have taken place ever since.
+There is a consensus among the three centrality indicators that Centralstationen is the most
+central station as it name implies from 1967 onwards. This is however far from universal as the
+centrality of many stations varies considerably depending on the centrality indicator considered. For
+example, some of the most central stations when measured in terms of its travel time-wise closeness
+are neither transfer hubs nor heavily traversed station for connecting origin-destination pairs (i.e.
+Kungsträdgården). In contrast, stations that serve as gateway transfer hubs between network trunks
+and branches (e.g. Östra Station, Älvsjö) are characterized by high betweenness centrality due to their
+bridging function even if they are not central in terms of closeness travel time.
+Until the late 1970’s, all central stations are in the core of the inner-city.. The construction of the
+metro system resulted with new hubs in the edges of the inner-city. The urban and transport
+development since the 1990’s aimed at expending the boundaries of the inner-city and provide greater
+accessibility to such strategic nodes.
+5.4 Relations between network indicators
+The evolution of Stockholm MRTN was assessed in the previous sections by studying the evolution of
+various network indicators. The inter-relation between selected network indicators was examined by
+investigating their co-evolution to provide further insights into the underlying changes in network
+structure. Figure 7 presents a scatter plot of the number of nodes and the gamma index (Eq. 3) of
+network connectivity for the 52 unique network topologies in 1950-2025. The three development
+periods described in Section 5.1 are again clearly visible: (a) with the removal of nodes, connectivity
+decreases linearly (1950-1966) and then falls abruptly to the lowest number of stations in 1967; (b) the
+addition of nodes gradually improves connectivity (1967-1999), and; (c) this trend accelerates in the
+last period (2000-2025) as the number of connections increases faster than the number of stations.
+The latter signifies an investment policy focused on increased connectivity rather than coverage.
+0,375
+0,37
+0,365
+2000-2025
+0,36
+y
+t
+iv
+it0,355
+c
+e
+n
+n 1967-1999
+o 0,35
+C
+0,345
+1950-1966
+0,34
+0,335
+175 185 195 205 215 225 235 245 255 265 275 285 295 305 315
+Number of Nodes
+1950 1951 1952 1954 1956 1957 1958 1959 1960 1961 1962 1963 1964
+1965 1966 1967 1968 1969 1970 1971 1972 1973 1975 1976 1977 1978
+1982 1985 1986 1987 1993 1994 1995 1996 1999 2000 2001 2002 2003
+2006 2008 2009 2010 2012 2013 2014 2017 2018 2020 2021 2022 2025
+Figure 7: Relation between number of nodes and connectivity 1950-2025
+When investigating the relation between the number of nodes and the average node degree, a
+very similar trend to the one observed in Figure 7 is revealed. While Zhang et al. (2013) found only a
+slight increasing trend in average node degree for networks with a higher number of nodes, there is a
+clear positive linear relation between these two network indicators in the case of Stockholm (𝑅2 =
+0.56 and 𝑅2 = 0.95 when calculated only for 2000-2025). This is expected since the development of
+the Stockholm network was first directed towards low-density coverage followed by increased
+connectivity leading to an increase in node degree at more mature network stages.
+The co-evolution of average node closeness centrality in terms of distance and travel time is
+presented in Figure 8. As can be expected, there is a strong positive correlation between the average
+values of the two closeness indicators, albeit only 68% of the variation in closeness centrality in terms
+of travel time is explained by closeness centrality in terms of distance. A perfect correlation would
+have been yielded if travel times were to remain the same across the networks throughout the analysis
+period. This is evidently not the case given the aforementioned shift towards relying on faster rail
+services.
+0,0001
+1950-1966
+0,00009
+y
+t
+ila0,00008
+r
+t
+n
+e0,00007
+c
+s
+s e 1967-1999
+n0,00006
+e
+s
+o
+lc0,00005
+e
+c
+n
+a
+t0,00004
+s
+iD 2000-2025
+0,00003
+0,00002
+0,024 0,026 0,028 0,03 0,032 0,034 0,036 0,038 0,04
+Travel time closeness centrality
+1950 1951 1952 1954 1956 1957 1958 1959 1960 1961 1962 1963 1964
+1965 1966 1967 1968 1969 1970 1971 1972 1973 1975 1976 1977 1978
+1982 1985 1986 1987 1993 1994 1995 1996 1999 2000 2001 2002 2003
+2006 2008 2009 2010 2012 2013 2014 2017 2018 2020 2021 2022 2025
+Figure 8: Relation between average distance and travel time closeness centrality 1950-2025
+6. Conclusions
+The case of Stockholm demonstrates that network evolution patterns carry the signature of planning
+policies, metropolitan developments and changes in system operations. The results of the analysis of
+the development of network structure along with a discussion of the underlying policies and
+technological changes are relevant for both transport planners and network scientists. The analysis
+reveals that network evolution can be characterised by abrupt changes as well as incremental growth
+and by investments as well as disinvestments. Network development does not follow thus in reality a
+simple growth pattern but is rather subject to multiple simultaneous trends that manifest themselves
+over a long period of time due to the lag between planning policies, investment decisions,
+construction of large-scale infrastructure projects and launching new passenger services.
+Notwithstanding, network evolution is clearly path-dependent and even though changes in planning
+policies can result in a change in course (e.g. dismantling the tramways or shifting towards
+densification and polycentric planning), network states and the range of possible futures highly
+depends, although not fully determined, by previous stages.
+The evolution of the Stockholm rail network is characterized by three distinctive
+development phases of contraction, stagnation and growth. Network developments exhibit first a
+period of exploration (1967-2000) followed by a period of densification (2000-2025). This represents
+a shift from peripheral attachment – adding stations at the edges of existing lines, extending branches
+- to preferential attachment – new stations are connected to nodes which are already well-connected.
+The current development trends can be expected to continue in the foreseen future also beyond 2025
+based on Stockholm’s unusually long-term vision plan for the development of its public transport
+network up to 2070 (Stockholm2070, 2017). If this trend will indeed persist in the future, then the
+network may become scale-free (Barabasi and Albert 1999), resembling the evolutionary process
+identified by Strano et al (2012) for a region-wide street network which went through a similar
+transition from exploration to densification.
+Technological changes that result with increased commercial speed play an important role
+alongside the construction of previously non-existing links. It is remarkable that in 2025 the
+Stockholm network will offer the same level of directness, connectivity and accessibility that were
+offered in 1950 for a much smaller area. This is driven by the dramatic shift in the modal composition
+of Stockholm rail-bound network during the analysis period. This shift is characterized by the
+Thevenin T., Mimeur C., Schwartz R. and Sapet L. (2016). Measuring one century of railway
+accessibility and population change in France. A historical GIS approach. Journal of Transport
+Geography, 56, 62-76.
+Wang J., Mo H. and Wang F. (2014). Evolution of air transport network of China 1930-12012. Journal of
+Transport Geography, 40, 145-158.
+Wang J., Jin F., Mo H. and Wang F. (2009) Spatiotemporal evolution of China’s railway network in
+the 20th century: An accessibility approach. Transportation Research Part A, 43 (8), 765-778.
+Wang J., Mo H., Wang F. and Jin F. (2011). Exploring the network structure and nodal centrality of
+China’s air transport network: A complex network approach. Journal of Transport Geography, 19, 712-
+721.
+Wang X., Koc Y., Derrible S., Ahmad S.N., Pino W.J.A. and Kooij R.E. (2017). Multi-criteria
+robustness analysis of metro networks. Physica A, 474, 19-31.
+Watts D. and Strogatz S. (1998). Collective dynamics of ‘small-world’ networks. Nature, 393, 440-442.
+von Ferber C., Holovatch T., Holovatch Y. and Palchykov V. (2009). Public transport networks:
+empirical analysis and modeling. European Physical Journal, 68, 261-275.
+von Ferber C., Berche B., Holovatch T. and Holovatch Y. (2012). A tale of two cities. Journal of
+Transportation Security, 5 (3), 199-216.
+Vuchic V.R. (2005). Chapter 4: Transit lines and networks, in: Urban Transit: Operations, Planning and
+Economics. Wiley, New Jersey.
+Xie F. and Levinson D. (2009). Modeling the growth of transportation networks: A comprehensive
+review. Networks and Spatial Economics, 9, 291-307.
+Xie F. and Levinson D. (2008). Topological evolution of surface transportation networks. Computers,
+Environment and Urban Systems, 33 (3), 211-223.
+Yang X-H., Chen G., Chen S-Y., Wang W-L. and Wang L. (2014). Study on some bus transport
+networks in China with considering spatial characteristics. Transportation Research Part A, 69, 1-10.
+Zhang X., Miller-Hooks E. and Denny K. (2015). Assessing the role of network topology in
+transportation network resilience. Journal of Transport Geography 46, 35-45.
+Zhang J., Zhao M.m Liu H. and Xu X. (2013). Networked characteristics of the urban rail transport
+networks. Physica A, 392, 1538-1546.
+

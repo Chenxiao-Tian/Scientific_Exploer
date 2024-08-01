@@ -1,0 +1,325 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+The average distances in random graphs with given
+expected degrees
+FanChung*andLinyuanLu
+DepartmentofMathematics,UniversityofCaliforniaatSanDiego,LaJolla,CA92093-0112
+CommunicatedbyRonaldL.Graham,UniversityofCaliforniaatSanDiego,LaJolla,CA,October17,2002(receivedforreviewAugust20,2002)
+Random graph theory is used to examine the ‘‘small-world phe- ration graph of mathematical reviews has (cid:1)(cid:2) 2.97 (see www.
+nomenon’’;anytwostrangersareconnectedthroughashortchain oakland.edu(cid:1)(cid:3)grossman(cid:1)trivia.html). The power law distribu-
+ofmutualacquaintances.Wewillshowthatforcertainfamiliesof tionhasalonghistorythatcanbetracedbacktoZipf(15),Lotka
+randomgraphswithgivenexpecteddegreestheaveragedistance (16), and Pareto (17). Recently, the impetus for modeling and
+is almost surely of order log n(cid:1)log d˜, where d˜ is the weighted analyzinglargecomplexnetworkshasledtorenewedinterestin
+average of the sum of squares of the expected degrees. Of power law graphs.
+particular interest are power law random graphs in which the Inthisarticle,wewillshowthatforcertainfamiliesofrandom
+number of vertices of degree k is proportional to 1(cid:1)k(cid:1)for some graphs with given expected degrees, the average distance is
+fixedexponent(cid:1).Forthecaseof(cid:1)>3,weprovethattheaverage almost surely (1 (cid:4) o(1)) log n(cid:1)log d˜. Here d˜ denotes the
+distance of the power law graphs is almost surely of order log second-orderaveragedegreedefinedbyd(cid:1) (cid:2)(cid:5)w2(cid:1)(cid:5)w,where
+i i
+n(cid:1)logd˜.However,manyInternet,social,andcitationnetworksare w denotestheexpecteddegreeoftheithvertex.Consequently,
+i
+powerlawgraphswithexponentsintherange2<(cid:1)<3forwhich theaveragedistanceforapowerlawrandomgraphonnvertices
+thepowerlawrandomgraphshaveaveragedistancealmostsurely with exponent (cid:1)(cid:1) 3 is almost surely (1 (cid:4) o(1)) log n(cid:1)log d˜.
+of order log log n, but have diameter of order log n (provided Whentheexponent(cid:1)satisfies2(cid:6)(cid:1)(cid:6)3,thepowerlawgraphs
+havingsomemildconstraintsfortheaveragedistanceandmaxi- have a very different behavior. For example, for (cid:1)(cid:1) 3, d˜ is a
+mumdegree).Inparticular,thesegraphscontainadensesubgraph, functionof(cid:1)andisindependentofn butfor2(cid:6)(cid:1)(cid:6)3,d˜ can
+whichwecallthecore,havingnc(cid:1)loglognvertices.Almostallvertices beaslargeasafixedpowerofn.Wewillprovethatforapower
+arewithindistanceloglognofthecorealthoughtherearevertices law graph with exponent 2 (cid:6) (cid:1)(cid:6) 3, the average distance is
+atdistancelognfromthecore. almostsurelyO(loglogn) (andnotlogn(cid:1)logd˜) iftheaverage
+degree is strictly greater than 1 and the maximum degree is
+I n 1967, the psychologist Stanley Milgram (1) conducted a sufficientlylarge.Also,thereisadensesubgraph,thatwecallthe
+seriesofexperimentsthatindicatedthatanytwostrangersare core,ofdiameterO(loglogn)insuchapowerlawrandomgraph
+connectedbyachainofintermediateacquaintancesoflengthat suchthatalmostallverticesareatdistanceatmostO(loglogn)
+most six. In 1999, Barab´asi et al. (2) observed that in certain fromthecore,althoughthereareverticesatdistanceatleastc
+portionsoftheInternetanytwowebpagesareatmost19clicks
+lognfromthecore.Atthephasetransitionpointof(cid:1)(cid:2)3,the
+awayfromoneanother.Inthisarticle,wewillexamineaverage randompowerlawgraphalmostsurelyhasaveragedistanceof
+distances in random graph models of large complex graphs. In order log n(cid:1)log log n and diameter of order log n.
+turn,thestudyofrealisticlargegraphsprovidesdirectionsand
+DefinitionsandStatementsoftheMainTheorems
+insights for random graph theory.
+In a random graph G (cid:2) G(w) with a given expected degree
+Mostoftheresearchpapersinrandomgraphtheoryconcern
+theErdo˝s–R´enyimodelG ,inwhicheachedgeisindependently sequencew(cid:2)(w 1,w 2,...,w n),theprobabilityp ijofhavingan
+chosen with probability pp for some given p (cid:1) 0 (see ref. 3). In edgebetweenv iandv jisw iw j(cid:2)for(cid:2)(cid:2)(1(cid:1)(cid:5) iw i).Weassumethat
+max w2 (cid:6) (cid:5) w so that the probability p (cid:2) ww(cid:2)is strictly
+such random graphs the degrees (the number of neighbors) of i i i i ij i j
+between0and1.Thisassumptionalsoensuresthatthedegree
+verticesallhavethesameexpectedvalue.However,manylarge
+sequencew canberealizedasthedegreesequenceofagraph
+random-like graphs that arise in various applications have i
+ifwsareintegers(18).Ourgoalistohaveasfewconditionsas
+diverse degree distributions (2, 4–7). It is therefore natural to i
+possibleonthewswhilestillbeingabletoderivegoodestimates
+consider classes of random graphs with general degree i
+for the average distance.
+sequences.
+First, we need some definitions for several quantities associ-
+We consider a general model G(w) for random graphs with
+givenexpecteddegreesequencew(cid:2)(w ,w ,...,w ).Theedge atedwithG andG(w). InagraphG, thevolumeofasubsetS
+between v and v is chosen
+independe1 ntly2
+with
+pron
+bability p ,
+ofverticesinGisdefinedtobevol(S)(cid:2)(cid:5) v(cid:2)Sdeg(v),thesum
+i j ij of degrees of all vertices in S. For a graph G in G(w), the
+where p is proportional to the product ww. The classical
+ij i j
+expecteddegreeofv isexactlyw andtheexpectedvolumeofS
+randomgraphG(n, p) canbeviewedasaspecialcaseofG(w) i i
+by taking w to be (pn, pn,..., pn). Our random graph model
+isVol(S) (cid:2) (cid:5) i(cid:2)Sw i. Inparticular,theexpectedvolumeofG is
+Vol(G)(cid:2)(cid:5) w.BytheChernoffinequalityforlargedeviations
+G(w) isdifferentfromtherandomgraphmodelswithanexact i i
+(19), we have
+degreesequenceasconsideredbyMolloyandReed(8,9),and
+Newman,Strogatz,andWatts(10,11).Derivingrigorousproofs Prob(cid:7)(cid:2)vol(cid:7)S(cid:8)(cid:3)Vol(cid:7)S(cid:8)(cid:2)(cid:4)(cid:5)(cid:8)(cid:6)e(cid:9)(cid:5)2/(cid:7)2Vol(cid:7)S(cid:8)(cid:4)(cid:5)/3(cid:8)
+.
+for random graphs with exact degree sequences is rather com-
+plicatedandusuallyrequiresadditional‘‘smoothing’’conditions Fork(cid:7)2,wedefinethekthmomentoftheexpectedvolumeby
+be Aca lu thse ouo gf hth Ge (d we )p ie sn wd ee ln lc dy ea fim neo dng fot rhe are bd itg re as ry(s de ee gr re ef e. d8) is.
+tribu-
+V Go ,l tk h( eS) di(cid:2) sta(cid:5) nv ci(cid:2) eS dw (uik ,a vn )d bw ete ww eeri nte twV ool vk e( rG ti) ce(cid:2) su(cid:5) ai nw dik. vI in sa jug stra tp hh
+e
+tions,itisofparticularinteresttostudypowerlawgraphs.Many length of a shortest path joining u and v (if it exists). In a
+realistic networks such as the Internet, social, and citation connectedgraphG,theaveragedistanceofGistheaverageover
+networks have degrees obeying a power law. Namely, the frac- alldistancesd(u, v) foru andv inG. Weconsiderverysparse
+tion of vertices with degree k is proportional to 1(cid:1)k(cid:1)for some
+constant(cid:1)(cid:1) 1. Forexample,theInternetgraphshavepowers
+ranging from 2.1 to 2.45 (see refs. 2 and 12–14). The collabo- *Towhomcorrespondenceshouldbeaddressed.E-mail:fan@ucsd.edu.
+www.pnas.org(cid:1)cgi(cid:1)doi(cid:1)10.1073(cid:1)pnas.252631999 PNAS (cid:2) December10,2002 (cid:2) vol.99 (cid:2) no.25 (cid:2) 15879–15882
+SCITAMEHTAM
+graphsthatareoftennotconnected.IfG isnotconnected,we Lemma 1. In a random graph G in G(w) with a given expected
+definetheaveragedistancetobetheaverageamongalldistances degreesequencew(cid:2) (w ,..., w ), foranyfixedpairsofvertices
+1 n
+d(u,v)forpairsofuandvbothbelongingtothesameconnected (u, v), the distance d(u, v) between u and v is greater than
+component.ThediameterofGisthemaximumdistanced(u,v), (log Vol(G) (cid:9) c)(cid:1)log d˜ with probability at least 1 (cid:9) (w w (cid:1)
+u v
+whereuandvareinthesameconnectedcomponent.Clearly,the d˜(d˜ (cid:9) 1))e(cid:9)c.
+diameter is at least as large as the average distance. All of our
+graphs typically have a unique large connected component, Lemma2.InarandomgraphG(cid:2)G(w),foranytwosubsetsSand
+calledthegiantcomponent,whichcontainsapositivefractionof T of vertices, we have
+edges.
+TheexpecteddegreesequencewforagraphGonnvertices Vol (cid:7)T(cid:8)
+in G(w) is said to be strongly sparse if we have the following:
+Vol(cid:7)(cid:13)(cid:7)S(cid:8)(cid:3)T(cid:8)(cid:7)(cid:7)1(cid:3)2(cid:8)(cid:8)Vol(cid:7)S(cid:8) Vol2
+(cid:7)G(cid:8)
+(i) Thesecondorderaveragedegreed˜ satisfies0(cid:6)logd˜ (cid:6)(cid:6) withprobabilityatleast1(cid:9)e(cid:9)cwhere(cid:13)(S)(cid:2){v:v(cid:3)u(cid:2)Sand
+(ii) l Fo og rn so. meconstantc(cid:1)0,allbuto(n)verticeshaveexpected v (cid:2) S}, provided Vol(S) satisfies
+degree w i satisfying w i (cid:7) c. The average expected degree 2cVol (cid:7)T(cid:8)Vol(cid:7)G(cid:8) (cid:8)Vol (cid:7)T(cid:8)Vol(cid:7)G(cid:8)
+pd o(cid:2) sit(cid:5) ivi ew i v(cid:1) an luis es (cid:8)tr ii nct dly epg ere na dt ee nr tth oa fn n1 .,i.e.,d(cid:1)1(cid:4)(cid:8)forsome (cid:8)2V3 ol 22(cid:7)T(cid:8) (cid:9)Vol(cid:7)S(cid:8)(cid:9) V2 ol 3(cid:7)T(cid:8) . [1]
+TheexpecteddegreesequencewforagraphGonnvertices Lemma 3. For any two disjoint subsets S and T with Vol(S)
+inG(w)issaidtobeadmissibleifthefollowingconditionholds, Vol(T) (cid:1) cVol(G), we have
+in addition to the assumption that w is strongly sparse.
+Pr(cid:7)d(cid:7)S, T(cid:8)(cid:4)1(cid:8)(cid:6)e(cid:9)c,
+(iii) There is a subset U satisfying: Vol (U) (cid:2) (1 (cid:4)
+2
+o(1))Vol 2(G) (cid:1)(cid:1) (Vol 3(U) log d˜ log log n(cid:1)d˜ log n). where d(S, T) denotes the distance between S and T.
+TheexpecteddegreesequencewforagraphGonnvertices
+is said to be specially admissible if i is replaced by i(cid:10) and iii is Lemma4.SupposethatG isarandomgraphonn verticessothat
+replaced by iii(cid:10): for a fixed value c, G has o(n) vertices of degree less than c and
+hasaveragedegreedstrictlygreaterthan1.Thenforanyfixedvertex
+(i(cid:10)) log d˜ (cid:2) O(log d). vinthegiantcomponent,if(cid:10)(cid:2)o((cid:14) n),thenthereisanindexi (cid:9)
+(iii(cid:10)) lT oh ge d˜re ),i as nda Vsu ob ls (e Ut )U (cid:1)s da Vtis of lyi (n Gg )(cid:1)V d˜o .l 3(U) (cid:2) O(Vol 2(G))(d˜(cid:1) c 0(cid:10)so that with probability at least 1 (cid:9) (c 1(cid:10)3/2(cid:1)ec2(cid:10) ), we have0
+2 2
+Vol(cid:7)(cid:13) (cid:7)v(cid:8)(cid:8)(cid:7)(cid:10),
+In this article, we will prove the following: i0
+wherecsareconstantsdependingonlyonc andd,while(cid:13)(S) (cid:2)
+sT eh qe uo ere nm ce1 (. wFo ,r .a ..ra ,n wdo )m ,thg era ap vh erG agw ei dth ista ad nm ceis is sib al le me ox sp te sc ute red lyde (g 1re (cid:4)e (cid:13)((cid:13) i(cid:9)1(i S)) for i (cid:1) 1 and (cid:13) 1(S) (cid:2) (cid:13)(S). i
+o(1))(log n(cid:1)1 log d˜). n WeremarkthatintheproofsofTheorem1andTheorem2,we
+will take (cid:10)to be of order (log n(cid:1)log d˜). The statement of the
+Corollary1.Ifnp(cid:7)c(cid:1)1forsomeconstantc,thenalmostsurely abovelemmaisinfactstrongerthanwhatwewillactuallyneed.
+the average distance of G(n, p) is (1 (cid:4) o(1))(log n(cid:1)log np), Another useful tool is the following result on the expected
+provided (log n(cid:1)log np) goes to infinity as n 3 (cid:11). sizes of connected components in random graphs with given
+Theproofoftheabovecorollaryfollowsbytakingw (cid:2)npand expected degree sequences (21).
+i
+Utobethesetofallvertices.Itiseasytoverifyinthiscasethat
+w is admissible, so Theorem 1 applies. Lemma 5. Suppose that G is a random graph in G(w) with given
+expected degree sequence w. If the expected average degree d is
+Theorem2.ForarandomgraphGwithaspeciallyadmissibledegree strictly greater than 1, then the following holds:
+sequence(w ,...,w ),thediameterisalmostsurely(cid:12)(logn(cid:1)logd˜).
+1 n (i) AlmostsurelyGhasauniquegiantcomponent.Furthermore,
+C tho ero dll ia ar my e2 t. erIf on fp G(cid:2) (nc
+,
+p(cid:1) )1 isf (cid:12)or (s loo gm ne )c .onstantc,thenalmostsurely t (oh 1(e 1 (cid:4)v ))o Vl lu oom gl(e dGo )) (cid:1)f dt ih fe (cid:4)dg (cid:7)i oa (n ( 14t )c (cid:1) )o e Vm ) o(cid:2)p l(o G1n .e )4n 7 it f1is d5a . (cid:6)t .le . 2a , .s at n( d1 i(cid:9) sa( t2 l(cid:1) e(cid:14) astd (e 1)(cid:4) (cid:9)
+Theorem3.Forapowerlawrandomgraphwithexponent(cid:1)(cid:1)3and (ii) ThesecondlargestcomponentalmostsurelyhassizeO(logn(cid:1)
+log d).
+average degree d strictly greater than 1, almost surely the average
+distanceis(1(cid:4)o(1))(logn(cid:1)logd˜)andthediameteris(cid:12)(logn).
+ProofofTheorem1
+Theorem4.Supposeapowerlawrandomgraphwithexponent(cid:1)has Suppose G is a random graph with an admissible expected
+degree sequence. From Lemma 5, we know that with high
+average degree d strictly greater than 1 and maximum degree m
+satisfyinglogm (cid:1)(cid:1) logn(cid:1)loglogn. If2 (cid:6) (cid:1)(cid:6) 3, almostsurely
+probabilitythegiantcomponenthasvolumeatleast(cid:12)(Vol(G)).
+thediameteris(cid:12)(logn)andtheaveragedistanceisatmost(2(cid:4) FromLemma5,thesizesofallsmallcomponentsareO(logn).
+o(1))(loglogn(cid:1)log(1(cid:1)((cid:1)(cid:9)2))).Forthecaseof(cid:1)(cid:2)3,thepower Thus, the average distance is primarily determined by pairs of
+law random graph has diameter almost surely (cid:12)(log n) and has vertices in the giant component.
+average distance (cid:12)(log n(cid:1)log log n). From the admissibility condition i, d˜ (cid:9) n(cid:8) implies that only
+o(n)verticescanhaveexpecteddegreesgreaterthann(cid:8).Hence
+NeighborhoodExpansionandConnectedComponents wecanapplyLemma1(bychoosingc(cid:2)3(cid:8)logn,foranyfixed
+Herewestateseveralusefulfactsconcerningthedistancesand (cid:8) (cid:1) 0) so that with probability 1 (cid:9) o(1), the distance d(u, v)
+neighborhood expansions in G(w). These facts are not only between u and v satisfies d(u, v) (cid:7) (1 (cid:9) 3(cid:8) (cid:9) o(1))log n(cid:1)
+usefulfortheproofsofthemaintheoremsbutalsoareofinterest logd˜. HereweusethefactthatlogVol(G) (cid:2) logd (cid:4) logn (cid:2)
+on their own right. The proofs can be found in ref. 20. (1 (cid:4) o(1))log n. Because the choice of (cid:8) is arbitrary, we
+15880 (cid:2) www.pnas.org(cid:1)cgi(cid:1)doi(cid:1)10.1073(cid:1)pnas.252631999 ChungandLu
+concludetheaveragedistanceofGisalmostsurelyatleast(1(cid:4)
+o(1))log n(cid:1)log d˜.
+Next, we want to establish the upper bound (1 (cid:4) o(1))(cid:1)
+(logVol(G)(cid:1)log d˜) for the average distance between two ver-
+tices u and v in the giant component.
+Foranyvertexuinthegiantcomponent,weuseLemma4to
+see that for i (cid:9) C(cid:8)(log n(cid:1)log d˜), the i boundary (cid:13) (v) of v
+0 0 i0
+satisfies
+logn
+Vol(cid:7)(cid:13) (cid:7)v(cid:8)(cid:8)(cid:7)(cid:8)
+i0 logd˜
+with probability 1 (cid:9) o(1).
+Next, we use Lemma 2 to deduce that Vol((cid:13)(u)) will grow
+i
+roughly by a factor of (1 (cid:9) 2(cid:8))d˜ as long as Vol((cid:13)(u)) is no
+i
+more than (cid:14) cVol(G) (by choosing c (cid:2) 2 log log n). The
+failure probability is at most e(cid:9)c at each step. Hence, for i (cid:9)
+1
+log(c Vol(G))(cid:1)(2 log(1 (cid:9) 2(cid:8))d˜) more steps, we have Fig.1. ThepowerlawdegreedistributionofthecollaborationgraphG1.
+1Vo (cid:9)l((cid:13) o(i0 1(cid:4) )i .1( Hv) e) r(cid:7) ei(cid:14) (cid:4)cV iol (cid:2)(G () 1w (cid:4)ith op (1ro ))b (a lb oi glit ny (cid:1)a 2t ll oe gas d˜t )1 .(cid:9) Simi 1e il(cid:9) ac rl(cid:2)
+y,
+forthevertexv,t0 here1
+areintegersi(cid:10) andi(cid:10) satisfyingi(cid:10) (cid:4)i(cid:10) (cid:2)
+TheRange2<(cid:1)<3
+h(1 ol(cid:4) dso w(1 it) h)( plo rog bn a(cid:1) b( i2 litl yog atd˜) le) as so tt 1ha (cid:9)tV o0 (o 1l( )(cid:13) .i(cid:10) 01 (cid:4)i(cid:10) 1(v))(cid:7)(cid:14) c0 Vol(1 G) sP to ruw ce tr ul ra ew stg hr aa tp ch as nw bit eh re ox up go hn lyen dt e2 sc(cid:6) rib(cid:1) e(cid:6) da3 sh aa nve ‘‘ov ce tr oy pi un st ’e ’r wes itt hin ag
+By Lemma 3, with probability 1 (cid:9) o(1) there is a path densesubgraphhavingsmalldiameterasthecore.WedefineS k
+connecting u and v with length i (cid:4) i (cid:4) 1 (cid:4) i(cid:10) (cid:4) i(cid:10) (cid:2) (1 (cid:4) tobethesetofverticeswithexpecteddegreeatleastk.(Wenote
+o(1))(logn(cid:1)logd(cid:1) ).Hence,almost0 surel1 ytheavera0 gedi1
+stanceof
+that the set S
+k
+can be well approximated by the set of vertices
+a random graph with an admissible degree sequence is (1 (cid:4) with degree at least k.)
+o(1))(log n(cid:1)log d(cid:1) ). sibW lee fon ro 2te (cid:6)th (cid:1)at (cid:6)th 3e .Tp ho uw se Tr hla ew ord emistr 2ib cu antio nn otis bn eo dt ire es cp te lyci ua sll ey da .d Hm ei rs e-
+TheproofofTheorem2issimilartothatofTheorem1except
+weoutlinethemainideasfortheproofofTheorem4.
+that the special admissibility condition allows us to deduce the
+desiredboundswithprobability1(cid:9)o(n(cid:9)2).Thus,almostsurely
+SketchofProofforTheorem4
+every pair of vertices in the giant components have mutual Wedefinethecoreofapowerlawgraphwithexponent(cid:1)tobe
+distanceO(logn(cid:1)logd˜). Weremarkthatitwouldbedesirable thesetS ofverticesofdegreeatleastt (cid:2) n1/loglogn.
+to establish an upper bound (1 (cid:4) o(1)) log n(cid:1)log d˜ for the Claim1t :ThediameterofthecoreisalmostsurelyO(loglogn).
+diameter.However,wecanonlydeducetheweakerupperbound ThisfollowsfromthefactthatthecorecontainsanErdo˝s–Renyi
+becauseofthetraveofffortherequiredprobability1(cid:9)o(n(cid:9)2) graphG(n(cid:10),p)withn(cid:10)(cid:2)cnt1(cid:9)(cid:1)andp(cid:2)t2(cid:1)Vol(G).Fromref.
+by using Lemma 4. 3,thissubgraphisalmostsurelyconnected.Usingaresultin(22),
+thediameterofthissubgraphisatmost(logn(cid:10)(cid:1)logpn(cid:10))(cid:2)(1(cid:4)
+RandomPowerLawGraphs o(1))(log n(cid:1)((3 (cid:9) (cid:1)) log t)) (cid:2) O(log log n).
+For random graphs with given expected degree sequences Claim2:Almostallverticeswithdegreeatleastlognarealmost
+satisfying a power law distribution with exponent (cid:1), we may surelywithindistanceO(loglogn)fromthecore.Toseethis,we
+assume that the expected degrees are w
+i
+(cid:2) ci(cid:9)1(cid:1)((cid:1)(cid:9)1) for i startwithavertexu 0withdegreek 0(cid:7)logCnforsomeconstant
+satisfyingi (cid:9)i(cid:6)n(cid:4)i .Herecdependsontheaveragedegree
+0 0
+and i depends on the maximum degree m, namely, c (cid:2) (cid:1)(cid:9)
+0
+2(cid:1)((cid:1)(cid:9) 1)dn(1(cid:1)(cid:1)(cid:9)1), i (cid:2) n(d((cid:1)(cid:9) 2)(cid:1)m((cid:1)(cid:9) 1))(cid:1)(cid:9)1.
+0
+Thepowerlawgraphswithexponent(cid:1)(cid:1)3arequitedifferent
+fromthosewithexponent(cid:1)(cid:6)3asevidencedbythevalueofd˜
+(assuming m (cid:1)(cid:1) d).
+(cid:3)
+(cid:7)(cid:1)(cid:3)2(cid:8)2
+(cid:7)1(cid:12)o(cid:7)1(cid:8)(cid:8)d
+(cid:7)(cid:1)(cid:3)1(cid:8)(cid:7)(cid:1)(cid:3)3(cid:8)
+if(cid:1)(cid:4)3.
+2m
+d˜(cid:11) (cid:7)1(cid:12)o(cid:7)1(cid:8)(cid:8)1dln if(cid:1)(cid:11)3.
+2 d
+(cid:7)(cid:1)(cid:3)2(cid:8)(cid:1)(cid:3)1m3(cid:3)(cid:1)
+(cid:7)1(cid:12)o(cid:7)1(cid:8)(cid:8)d(cid:1)(cid:3)2
+(cid:7)(cid:1)(cid:3)1(cid:8)(cid:1)(cid:3)2(cid:7)3(cid:3)(cid:1)(cid:8)
+if2(cid:6)(cid:1)(cid:6)3.
+For the range of (cid:1)(cid:1) 3, it can be shown that the power law
+graphsarebothadmissibleandespeciallyadmissible.[Oneofthe
+keyideasistochooseU inconditioniiioriii(cid:10)tobeasetU (cid:2)
+y
+{v : deg(v) (cid:9) y} for an appropriate y independent of the
+maximumdegreem.Forexample,chooseytoben1/4for(cid:1)(cid:1)4,
+tobe4for(cid:1)(cid:2)4andtobelogn(cid:1)(logdloglogn)for3(cid:6)(cid:1)(cid:6)
+4.] Theorem 3 then follows from Theorems 1 and 2. Fig.2. AninducedsubgraphofthecollaborationgraphG1.
+ChungandLu PNAS (cid:2) December10,2002 (cid:2) vol.99 (cid:2) no.25 (cid:2) 15881
+SCITAMEHTAM
+C (cid:2) (1.1(cid:1)(((cid:1) (cid:9) 2)(3 (cid:9) (cid:1)))). By applying Lemma 3, with with high probability, we can find such a path. Hence the
+probability at least 1 (cid:9) n(cid:9)3, u 0 is a neighbor of some u 1 with diameter is almost surely (cid:12)(log n).
+degreek 1(cid:7) (k 0(cid:1)logCn)1/((cid:1)(cid:9)2)s. Wethenrepeatthisprocessto Forthecaseof(cid:1)(cid:2)3,similarargumentsshowthatthepower
+findapathwithverticesu 0, u 1,..., u s, andthedegreek sofu s lawrandomgraphalmostsurelyhasdiameteroforderlognbut
+satisfies k s (cid:9) (k 0(cid:1)logC n)1/((cid:1)(cid:9)2)s with probability 1 (cid:9) n(cid:9)2. By the average distance is (cid:12)(log n(cid:1)log d˜) (cid:2) (cid:12)(log n(cid:1)log log n).
+choosing s to satisfy log k (cid:7) log n(cid:1)log log n, we are done.
+s
+Claim 3: For each vertex v in the giant component, with Summary
+probability 1 (cid:9) o(1), v is within distance O(log log n) from a Whenrandomgraphsareusedtomodellargecomplexgraphs,
+vertex of degree at least logC n. This follows from Lemma 4 thesmall-worldphenomenonofhavingshortcharacteristicpaths
+(choosing(cid:10)(cid:2) c logloglogn andtheneighborhoodexpansion iswellcapturedinthesensethatwithhighprobability,powerlaw
+factor c(cid:10) log log log n). randomgraphswithexponent(cid:1)haveaveragedistanceoforder
+Claim 4: For each vertex v in the giant component, with lognif(cid:1)(cid:1)3,andoforderloglognif2(cid:6)(cid:1)(cid:6)3.Thus,aphase
+probability 1 (cid:9) o(n(cid:9)2), v is within distance O(log n) from a transition occurs at (cid:1)(cid:2) 3 and, in fact, the average distance
+vertex of degree at least O(log n). Thus with probability 1 (cid:9) of power law random graphs with exponent 3 is of order log
+o(1), the diameter is O(log n). n(cid:1)loglogn.Morespecifically,fortherangeof2(cid:6)(cid:1)(cid:6)3,there
+CombiningClaims1–3,wehavederivedanupperboundO(log isadistinctcoreofdiameterloglognsothatalmostallvertices
+log n) for the average distance. [By a similar but more careful arewithindistanceloglognfromthecore,whilealmostsurely
+analysis(20),thisupperboundcanbefurtherimprovedtoclog there are vertices of distance log n away from the core.
+log n for c (cid:2) (2(cid:1)log(1(cid:1)((cid:1)(cid:9) 2))).] From Claim 4, we have an Anotheraspectofthesmall-worldphenomenonconcernsthe
+upper bound O(log n) for the diameter. so-called clustering effect, which asserts that two people who
+Next,wewillestablishalowerboundoforderlogn.Wenote share a common friend are more likely to know each other.
+thattheminimalexpecteddegreeinapowerlawrandomgraph However,theclusteringeffectdoesnotappearinrandomgraphs
+with exponent 2 (cid:6) (cid:1)(cid:6) 3 is (1 (cid:4) o(1))(d((cid:1)(cid:9)2)(cid:1)((cid:1)(cid:9)1)). We andsomeexplanationisinorder.Atypicallargenetworkcanbe
+considerallverticeswithexpecteddegreelessthantheaverage regardedasaunionoftwomajorparts:aglobalnetworkanda
+degree d. By a straight-forward computation, there are about localnetwork.Powerlawrandomgraphsaresuitableformod-
+((cid:1)(cid:9)2)(cid:1)((cid:1)(cid:9)1)(cid:1)(cid:9)1n suchvertices.Foravertexu andasubsetT elingtheglobalnetworkwhiletheclusteringeffectispartofthe
+ofvertices,theprobabilitythatuhasonlyoneneighborthathas distinct characteristics of the local network.
+expecteddegreelessthandandisnotadjacenttoanyvertexin Based on the data graciously provided by Jerry Grossman
+T is a(cid:4)t least (cid:5) (OaklandUniversity,Rochester,MI),weconsidertwotypesof
+collaboration graphs with roughly 337,000 authors as vertices.
+w uw v(cid:2) (cid:7)1(cid:3)w uw j(cid:2)(cid:8)(cid:6)w uvol(cid:7)S d(cid:8)(cid:2)e(cid:9)wu The first collaboration graph G
+1
+has about 496,000 edges with
+wv(cid:6)d j(cid:15)v eachedgejoiningtwocoauthors.Itcanbemodeledbyarandom
+(cid:7) (cid:7) (cid:8) (cid:8) powerlawgraphwithexponent(cid:1) (cid:2)2.97andd(cid:2)2.94(seeFig.
+(cid:6) 1(cid:3) (cid:1)(cid:1) (cid:3)(cid:3) 12 (cid:1)(cid:3)2 w ue(cid:9)wu. e1 da gn ed s,2 e) a. cT hh re es pe rc eo sen nd tic no gll aab joo ir na tti po1 an pg er ra wph ithG e2 xh aa cts lyab twou ot a2 u2 t6 h, o0 r0 s0
+.
+The collaboration graph G corresponds to a power law graph
+2
+Note that this probability is bounded away from 0, (say, withexponent(cid:1) (cid:2)3.26andd(cid:2)1.34.Theorem3predictsthat
+2
+it is greater than c for some constant c). Then, with prob- the value for the average distance in this case should be 9.89
+ability at least n(cid:9)1/100, we have an induced path of length (with a lower order error term). In fact, the actual average
+atleastlogn(cid:1)(100logc)inG.Startingfromanyvertexu,we distance in this graph is 9.56 (www.oakland.edu(cid:1)(cid:3)grossman(cid:1)
+search for a path as an induced subgraph of length at least trivia.html).
+logn(cid:1)(100logc)inG.Ifwefailtofindsuchapath,wesimply
+repeat the process by choosing another vertex as the starting This research was supported in part by National Science Foundation
+point. Since S d has at least (((cid:1)(cid:9)2)(cid:1)((cid:1)(cid:9)1))(cid:1)(cid:9)1n vertices, then GrantDMS0100472.
+1. Milgram,S.(1967)Psychol.Today2,60–67. 12. Faloutsos,M.,Faloutsos,P.&Faloutsos,C.(1999)SIG-COMM’9929,251–262.
+2. Albert,R.,Jeong,H.&Barab´asi,A.(1999)Nature401,130–131. 13. Broder,A.,Kumar,R.,Maghoul,F.,Raghavan,P.,Rajagopalan,S.,Stata,
+3. Erdo˝s,P.&R´enyi,A.(1959)Publ.Math.Debrecen6,290–291. R., Tompkins, A. & Wiener, J. (2000) WWW9(cid:1)Computer Networks 33,
+4. Aiello,W.,Chung,F.&Lu,L.(2001)Exp.Math.10,53–66. 309–320.
+5. Aiello,W.,Chung,F.&Lu,L.(2002)inHandbookofMassiveDataSets,eds. 14. Yook,S.H.,Jeong,H.&Barab´asi,A.L.(2002)Proc.Natl.Acad.Sci.USA99,
+Abello, J., Pardalos, P. M. & Resende, M. G. C. (Kluwer, Dordrecht, The
+13382–13386.
+Netherlands),pp.97-122.
+15. Zipf,G.K.(1949)HumanBehaviorandthePrincipleofLeastEffort(Hafner,
+6. Barab´asi,A.-L.&Albert,R.(1999)Science286,509–512.
+NewYork).
+7. Jeong,H.,Tomber,B.,Albert,R.,Oltvai,Z.&Bab´arasi,A.-L.(2000)Nature
+16. Lotka,A.J.(1926)J.Wash.Acad.Sci.16,317.
+407,378–382.
+8. Molloy,M.&Reed,B.(1995)RandomStruct.6,161–179. 17. Pareto,V.(1897)Coursd’EconomiePolitique(Rouge,LausanneetParis).
+9. Molloy,M.&Reed,B.(1998)Combin.Probab.Comput.7,295–305. 18. Erdo˝s,P.&Gallai,T.(1961)Mat.Lapok11,264–274.
+10.Newman, M. E. J., Strogatz, S. H. & Watts, D. J. (2000) e-Print Archive, 19. Alon,N.&Spencer,J.H.(1992)TheProbabilisticMethod(Wiley,NewYork).
+http:(cid:1)(cid:1)xxx.lanl.gov(cid:1)abs(cid:1)condmat(cid:1)0007235. 20. Lu,L.(2002)Ph.D.thesis(UniversityofCalifornia,SanDiego).
+11.Newman,M.E.J.,Watts,D.J.&Strogatz,S.H.(2002)Proc.Natl.Acad.Sci. 21. Chung,F.&Lu,L.(2002)Ann.Combinatorics,inpress.
+USA,99,Suppl.1,2566–2572. 22. Chung,F.&Lu,L.(2001)AppliedMath.26,257–279.
+15882 (cid:2) www.pnas.org(cid:1)cgi(cid:1)doi(cid:1)10.1073(cid:1)pnas.252631999 ChungandLu
+

@@ -1,0 +1,40 @@
+Extracted Keywords:
+network analysis, social networks, centrality, networks, space syntax, urban street, network, urban, street networks, graph
+
+Main Topics:
+1 Introduction, urban street patterns, the dawn, the power, Euclidean geometry, ``certain man, anarchitect or urban designer, an axiom, the design ofstreets, uneven and windy street patterns, the route, Le Corbusier, grid-like and geometric structures, the route, a new era, old neighborhoods, their mostfundamental values, this modernist stigmatization, a
+whole stream, the early 1960s, the nameof, the `magic, old cities, The claim, The modern city, The social success, an urban
+settlement, the complex, uncoordinated interaction, countless different
+routes, a suitable environment, a nostalgic claim, aprescientific era, Jane Jacobs, urban streets, a primal approach
+Sergio Porta
+Dipartimento di Progettazione dell' Architettura, Politecnico di Milano, Via Golgi, sergio.porta@polimi.it
+Paolo Crucitti
+Scuola Superiore di Catania, pacrucitti@ssc.unict.it
+Vito Latora
+Dipartimento di Fisica e Astro
+
+Methodologies:
+Jane Jacobs argued, following Weaver (Jacobs, 1961; Weaver, 1948),The network analysis of urban streets: a primal approach
+Sergio Porta
+Dipartimento di Progettazione dell' Architettura, Politecnico di Milano, Via Golgi 39,
+Milano 20133, Italy; e-mail: sergio.porta@polimi.it
+Paolo Crucitti
+Scuola Superiore di Catania, Catania, Italy; e-mail: pacrucitti@ssc.unict.it
+Vito Latora
+Dipartimento di Fisica e Astronomia, Universita ©di Catania and INFN Sezione di Catania, Italy;
+e-mail: vito.latora@ct.infn.itReceived 3 March 2005; in revised form 7 September 2005Environment and Planning B: Planning and Design 2006, volume 33, pages 705 ^ 725
+Abstract. After a previous work on some structural properties of theprimal graph representation of urban street networks, in this paper we provide an in-depth investiga-
+tion of centrality in the primal approach as compared with the dual one. We show that, in
+
+Research Outcomes:
+Jane Jacobs argued, following Weaver (Jacobs, 1961; Weaver, 1948),The network analysis of urban streets: a primal approach
+Sergio Porta
+Dipartimento di Progettazione dell' Architettura, Politecnico di Milano, Via Golgi 39,
+Milano 20133, Italy; e-mail: sergio.porta@polimi.it
+Paolo Crucitti
+Scuola Superiore di Catania, Catania, Italy; e-mail: pacrucitti@ssc.unict.it
+Vito Latora
+Dipartimento di Fisica e Astronomia, Universita ©di Catania and INFN Sezione di Catania, Italy;
+e-mail: vito.latora@ct.infn.itReceived 3 March 2005; in revised form 7 September 2005Environment and Planning B: Planning and Design 2006, volume 33, pages 705 ^ 725
+Abstract. After a previous work on some structural properties of theprimal graph representation of urban street networks, in this paper we provide an in-depth investiga-
+tion of centrality in the primal approach as compared with the dual one. We show that, in

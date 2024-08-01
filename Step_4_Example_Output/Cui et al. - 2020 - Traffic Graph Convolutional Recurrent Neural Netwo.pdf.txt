@@ -1,0 +1,981 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+IEEETRANSACTIONSONINTELLIGENTTRANSPORTATIONSYSTEMS,VOL.21,NO.11,NOVEMBER2020 4883
+Traffic Graph Convolutional Recurrent Neural
+Network: A Deep Learning Framework
+for Network-Scale Traffic Learning
+and Forecasting
+Zhiyong Cui , Student Member, IEEE, Kristian Henrickson , Ruimin Ke , Student Member, IEEE,
+and Yinhai Wang , Senior Member, IEEE
+Abstract—Traffic forecasting is a particularly challenging methods and machine learning models. Most of the stud-
+applicationofspatiotemporalforecasting,duetothetime-varying ies focusing on traffic forecasting using statistical methods
+trafficpatternsandthecomplicatedspatialdependenciesonroad
+were developed when traffic systems were less complex, and
+networks.Toaddressthischallenge,welearnthetrafficnetwork
+the sizes of traffic datasets were relatively small. However,
+asagraphandproposeanoveldeeplearningframework,Traffic
+GraphConvolutionalLongShort-TermMemoryNeuralNetwork statistical models’ capability of handling high dimensional
+(TGC-LSTM), to learn the interactions between roadways in time series data is quite limited. With the more recent rapid
+the traffic network and forecast the network-wide traffic state. development in computational power, as well as growth
+We define the traffic graph convolution based on the physical
+in traffic data volume, much of the more recent work on
+network topology. The relationship between the proposed traffic
+this topic focuses on machine learning methods for traffic
+graph convolution and the spectral graph convolution is also
+discussed. An L1-norm on graph convolution weights and an forecasting.
+L2-normongraphconvolutionfeaturesareaddedtothemodel’s Machine learning methods with the capability of cap-
+loss function to enhance the interpretability of the proposed turing complex non-linear relationships, like support vec-
+model. Experimental results show that the proposed model
+tor regression (SVR) [6], tend to outperform the statistical
+outperforms baseline methods on two real-world traffic state
+methods, such as autoregressive integrated moving average
+datasets. The visualization of the graph convolution weights
+indicates that the proposed framework can recognize the most (ARIMA) [7] and its variants, with respect to handling com-
+influential road segments in real-world traffic networks. plex traffic forecasting problems[4]. However,the full poten-
+tial of artificial intelligence approaches to traffic forecasting
+Index Terms—Traffic forecasting, spatial–temporal, graph
+convolution, LSTM, recurrent neural network. was not exploited until the rise of deep neural network (NN)
+models (also referred to as deep learning models). Following
+I. INTRODUCTION early works [2], [8] applying NNs to the traffic prediction
+TRAFFICforecastingisoneofthemostchallengingcom- problem, many NN-based methods have been adopted for
+traffic forecasting.
+ponentsof IntelligentTransportationSystems (ITS). The
+Deep learning models for traffic forecasting, such as deep
+goaloftrafficforecastingistopredictfuturetrafficstatesinthe
+beliefnetworks(DBN)[9]andstackedauto-encoders[10],can
+trafficnetworkgivena sequenceofhistoricaltrafficstatesand
+effectively learn high dimensional features and achieve good
+the physical roadway network. Since the volume and variety
+forecastingperformance.Recurrentneuralnetwork(RNN)and
+of traffic data has been increasing in recent years, data-driven
+its variants, including long short-term memory (LSTM) [11]
+traffic forecasting methods have shown considerable promise
+and gated recurrent unit (GRU) [12] networks, have also
+in their ability to outperform conventional and simulation-
+shown great potential for solving traffic forecasting prob-
+based methods [1].
+lems [4], [13]–[15]. Although RNN-based methods can learn
+Previous work [2]–[5] on this topic roughly categorizes
+the spatial dependencies, they tend to be over-complex and
+existing models into two categories: classical statistical
+inevitably capture a certain amount of noise and spurious
+Manuscript received September 25,2018;revised May17,2019;accepted relationships which likely do not represent the true causal
+September 30, 2019. Date of publication November 28, 2019; date of
+structure in a physical traffic network. Moreover, interpret-
+current version October 30, 2020. This work was supported in part by the
+PacificNorthwestTransportationConsortium(PacTrans),USDOTUniversity ing the network parameters in terms of real-world spatial
+Transportation Center for Federal Region 10. The Associate Editor for this dependencies is most often impossible. To address this, other
+article wasJ.Sanchez-Medina. (Correspondingauthor:YinhaiWang.)
+works [5], [16], [17] attempt to model spatial dependencies
+Z. Cui, R. Ke, and Y. Wang are with the Department of Civil and Envi-
+ronmental Engineering, University of Washington, Seattle, WA 98195 USA with convolutional neural network (CNN). However, conven-
+(e-mail: zhiyongc@uw.edu; ker27@uw.edu; yinhai@uw.edu). tional CNNs are most appropriate for spatial relationships
+K. Henrickson is with INRIX, Inc., Kirkland, WA 98033 USA (e-mail:
+in the Euclidean space as represented by two-dimensional
+kristian.henrickson@inrix.com).
+Digital ObjectIdentifier 10.1109/TITS.2019.2950416 (2D) matrices or images. Thus, spatial features learned in
+1524-9050©2019IEEE.Personaluseispermitted, butrepublication/redistribution requires IEEEpermission.
+Seehttps://www.ieee.org/publications/rights/index.html formoreinformation.
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+4884 IEEETRANSACTIONSONINTELLIGENTTRANSPORTATIONSYSTEMS,VOL.21,NO.11,NOVEMBER2020
+CNN are not optimal for representing the traffic network regularizationterms,includinganL1-normontrafficthe
+structure [18], [19]. graphconvolutionweightsandanL2-normonthetraffic
+Recently, substantial research has focused on extending graphconvolutionfeatures,thatcanbeoptionallyadded
+the convolution operator to more general, graph-structured to the model’s loss function.
+data, which can be applied to capture the spatial relation- 4. The real-world traffic speed data, including the graph
+ships present in a traffic network. There are two primary structure of the traffic network, used in this study is
+ways to conduct graph convolution. The first class of meth- published via a publicly available website1 to facilitate
+ods [20]–[23] makes use of spectral graph theory, by design- further research on this problem.
+ing spectral filter/convolutions based on the graph Laplacian
+matrix. Spectral-based graph convolution has been adopted II. LITERATUREREVIEW
+and combined with RNN [19] and CNN [1] to forecast A. Deep Learning Based Traffic Forecasting
+traffic states. These models successfully apply convolution
+Deep learning models have shown their superior capabil-
+to graph-structured data, but they do not fully capture the
+ities of capturing nonlinear spatiotemporal effects for traffic
+unique properties of graphs [24], like traffic networks. These
+forecasting [28]. Ever since the precursory study [29] using
+models [22], [25] usually adopt multiple graph convolution
+the feed-forward NN for vehicle travel time estimation was
+layers, and thus, their learned spatial dependencies are hard
+proposed, many other NN-based models, including fuzzy
+to interpret. The other form of graph convolution proposed
+NN [30], recurrent NN [8], convolution NN [5], [17], deep
+in several newly-published studies is conducted on graph
+belief networks [9], [31], auto-encoders[10], [32], generative
+data dynamically, for example, the dynamic edge-conditioned
+adversarial networks [33], [34], and combinations of these
+filtersingraphconvolution[26],thehigh-orderadaptivegraph
+models have been applied to forecast traffic states. With the
+convolutional network [24], [27]. Still, these methods are not
+capability of capturing temporal dependencies, the recurrent
+capable of fully accommodating the physical specialties of
+NNoritsvariants,likeLSTM[11]andGRU[12],waswidely
+traffic networks.
+adopted as a component of a traffic forecasting model to
+One of the deficiencies of the previous graph
+forecasttrafficspeed[4],traveltime[35],andtrafficflow[36].
+convolution-based models is that the receptive field of
+Further, in most recent years, various novel deep learning-
+the convolution operators is not confined in the graph
+based traffic forecasting models have been proposed through
+according to the real structure of the traffic network. The
+adjusting classical neural network model, combining existing
+traffic states of two locations far apart from each other in
+methods, and incorporating auxiliary data. Multiple novel
+the traffic network should not be influenced by each other in
+LSTM based models, such as bidirectional LSTM [13], deep
+a short time period. Though the spectral graph convolution
+LSTM[14],sharedhiddenLSTM[37],andnestedLSTM[38],
+models [19], [22] can capture features from K-localized
+have been designed via reorganizing and combing single
+neighbors of a vertex in the graph, how to choose the value
+LSTMmodelsandappliedtocapturecomprehensivetemporal
+of K and whether the localized neighbors truly affect the
+dependencies for traffic prediction. In addition, sequence-
+vertex are still questions to be answered. Thus, we propose
+to-sequence (seq2seq) architecture based models [19], [32]
+a free-flow reachable matrix based on the free-flow speed of
+have also been used for traffic state sequence forecasting.
+the real traffic and apply it on the graph convolution operator
+To deal with different types of features, multi-stream deep
+to learn features from the truly influential neighborhood in
+learning models [14], [39]–[41] have also been well studied
+the traffic network.
+and tested for traffic forecasting problems. To improve the
+Inthisstudy,welearnthetrafficnetworkasagraphandcon-
+prediction performance, multiple deep learning based models
+duct convolution on the traffic network-based graph. To learn
+alsoincorporatevarioustraffic-relatedauxiliarydata,including
+localized features and incorporate roadway physical charac-
+roadway geographical attribute data [32], accident data [14],
+teristics, we proposed a traffic graph convolution operator.
+and weather data [42].
+Baseonthisoperator,weproposeatrafficgraphconvolutional
+To capture spatial relationships present in traffic networks,
+LSTM (TGC-LSTM) to model the dynamics of the traffic
+many forecasting models [5], [43] incorporating CNNs to
+flow and capture the spatial dependencies. Evaluation results
+extract spatial features from 2D spatial–temporal traffic data.
+show that the proposed TGC-LSTM outperforms multiple
+Due to the traffic structure is hard to be depicted by 2D
+state-of-the-arttrafficforecastingbaselines.Moreimportantly,
+spatial–temporaldata, studies [17] tried to convert traffic net-
+the proposed model turns out to be capable of identifying
+work structures to images and use CNNs to learn spatial fea-
+themostinfluentialroadwaysegmentsinthereal-worldtraffic
+tures.However,these convertedimageshavea certainamount
+networks. The main contributions of our work include:
+of noise, inevitably resulting in spurious spatial relationships
+1. A traffic graph convolution operator is proposed to
+captured by CNNs. Recent studies [41], [44], [45] also
+accommodatephysicalspecialtiesoftrafficnetworksand
+attempted to convert traffic state data into three-dimensional
+extract comprehensive features.
+(3D)matricesandusethe3Dconvolutionalnetworktoextract
+2. A traffic graph convolutional LSTM neural network
+more effective features. However, conventional CNN based
+is proposed to learn the complex spatial and dynamic
+methodsstillcannotinherentlydealwiththetopologicalstruc-
+temporal dependencies presented in traffic data.
+tureandthephysicalattributesofthetrafficnetwork.Tosolve
+3. To make learned localized graph convolution features
+more consistent and interpretable, we proposed two 1https://github.com/zhiyongc/Seattle-Loop-Data
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+CUIetal.: TRAFFICGRAPHCONVOLUTIONALRNN 4885
+this problem, studies [1], [19] attempted to learn the traffic Even though some roads are directed in the reality, due to
+network as a graph and adopt the graph-based convolution theimpactoftrafficcongestionsoccurringonthese roadswill
+operator to extract features from the graph-structured traffic be bi-directionally propagated to upstream and downstream
+network. roads [13], we take the bidirectional impact into account and
+thus let G be an undirected graph.
+B. Graph Convolution Networks 2) Adjacency Matrix and Neighborhood Matrix: The con-
+nectednessofnodesinG isrepresentedbyanadjacencymatrix
+Traffic networks have already been analyzed as graphs for
+dynamic shortest path routing [46], traffic congestion analy-
+A ∈ RN×N, in which each element A i,j = 1 if there is an
+sis[47],anddynamictrafficassignment[48].Inthelastcouple
+edge connecting node i and node j and A i,j = 0 otherwise
+of years, many studies attempt to generalize neural networks
+(A i,i =0). Based on the adjacency matrix, the degree matrix
+of G, which measures the number of edges attached(cid:4)to each
+to work on arbitrarily structured graphs by designing graph vertex,can bedefinedas D ∈RN×N in which D = A .
+convolutional networks. Generally, the graph convolutional ii j ij
+Disadiagonalmatrixandallnon-diagonalelementsarezeros.
+networks utilize the adjacency matrix or the Laplacian matrix
+(cid:2)Based(cid:3)on the adjacency matrix, an edge counting function
+to depictthe structureof a graph.The Laplacianmatrixbased
+d v ,v can be definedas countingthe minimumnumberof
+graphconvolution[21],[25]aredesignedbasedonthespectral i j
+edgestraversedfromnodei to node j.Then,the set of k-hop
+graph theory[49]. As an extension,a localized spectral graph
+(k-th order) neighborhood(cid:5)of each no(cid:2)de i,(cid:3)inclu(cid:6)ding node i
+convolution [22] is also proposed to reduce the learning
+itself, can be defined as v ∈V|d v ,v ≤k . However,
+complexity. The adjacency matrix based graph convolution j i j
+since the traffic states are time series data and the current
+neural networks [23], [24] incorporate the adjacency matrix
+traffic state on a road will definitely influence the future
+and their network structures are more flexible. The traffic
+state, we consider the all roads are self-influenced. Thus,
+network can be considered as a graph consisting of nodes
+we consider the neighborhood of a node contains the node
+andedges,andthus,severalgraphconvolutionneuralnetwork
+itself and a neighborhood matrix to characterize the one-hop
+basedmodels,includingthespectralgraphconvolution[1]and
+neighborhoodrelationship of the whole graph, denoted as
+the diffusion graph convolution [20], are proposed to fulfill
+network-wide traffic forecasting. Several studies [50], [51] A˜ = A+I (1)
+also incorporated multi-scale graph convolution operations
+where I is the identity matrix. Then, the k-hop neighborhood
+into their proposed models to learn traffic features. Although
+relationship of the graph nodes can be characterized by
+theseexistingmethodscanextractspatialfeaturesfromneigh-
+(A+I)k.However,someelementsin(A+I)k willinevitably
+borhoods in the traffic network, the physical specialties of
+exceed one. Owing to the k-hop neighborhood of a node
+roadways, like length, speed limits, and the number of lanes,
+is only used for describing the existence of all the k-hop
+are normally neglected.
+neighbors,itisnotnecessarytomakeanode’sk-hopneighbors
+weighted by the number of hops. Thus, we clip the values of
+III. METHODOLOGY
+allelementsin(A+I)k tobein{0,1}anddefineanewk-hop
+A. Notions
+neighborhoodmatrix
+A˜k,
+in which each element
+A˜k
+satisfies
+i,j
+1) TrafficNetworkBasedGraph: Normally,agraphconsists (cid:7) (cid:8)
+ofnodes(vertices)andedges.Thegraphrepresentinga traffic A˜k =min (A+I)k ,1 (2)
+i,j i,j
+networkisdistinctfromsocialnetworkgraphs,documentcita-
+tion graphs, or molecule graphs, in several respects: 1) there where min refers to minimum. In this case, A˜1 = A1 = A.
+are no isolated nodes/edges in traffic network based graphs An intuitiveexampleof k-hopneighborhoodwith respectto a
+andthetrafficnetworkstructureseldomchanges;2)thetraffic node (a red star) is illustrated by blue points on the left side
+status of each road in a traffic network varies over time; and of III-F.
+3) the roads in a traffic network have meaningful physical 3) Free-Flow Reachable Matrix: Based on the length of
+characteristics, such as the length, type, speed limit, and lane each road in the traffic network, we define a distance matrix
+numbers of a road. Further, traffic state data is collected Dist
+∈RN×N,whereeachelement
+Dist i,j representsthereal
+by different types of sensors such that some types of data roadwaydistancefromnodei to j (Dist i,i =0).Whentaking
+detect location-based traffic states, but others may measure the underlying physics of vehicle traffic on a road network
+roadsegmentbasedaveragedtrafficstates.Duetotrafficstates intoconsideration,we needto understandthatthe impactof a
+vary over time, it is better to let the graph nodes possess the roadway segment on adjacent segments is transmitted in two
+varyingtraffic states and keepthe graphstructurefixed.Thus, primary ways: 1) slowdowns and/or blockages propagating
+to ensure the consistency of the definition in a graph, we use upstream; and 2) driver behavior and vehicle characteris-
+nodes to represent the traffic sensing locations, which can be tics associated with a particular group of vehicles traveling
+sensor stations or road segments. Then, the edges in a graph downstream. Thus, for a traffic network-based graph or other
+represent the intersections or road segments connecting those similar graphs, the traffic impact transmission between non-
+traffic sensing locations. adjacent nodes cannot bypass the intermediate node/nodes,
+The traffic network and the relationship between traffic and thus, we need to consider the reachability of the impact
+locations can be represented by an undirected gr(cid:2)aph G (cid:3)where between adjacent and nearby node pairs. To ensure the traffic
+G = (V,E) with N nodes v ∈ V and edges v ,v ∈ E. impact transmission between k-hop adjacent nodes follow the
+i i j
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+4886 IEEETRANSACTIONSONINTELLIGENTTRANSPORTATIONSYSTEMS,VOL.21,NO.11,NOVEMBER2020
+established traffic flow theory [52], we define a free-flow is defined as
+(cid:7) (cid:7) (cid:8)(cid:8)
+reachable ma (cid:9)trix, FFR ∈RN×N, that F [x 1,...,x t,...,x T];G V,E,A˜k,FFR = x T+1 (4)
+FFR i,j = 01 ,, oS tiF , hjF erm w(cid:2) iset −Dist i,j ≥0 , ∀v i,v j ∈V Further, another goal of this study is to learn the traffic
+impact transmission between adjacent and neighboring nodes
+(3) in a traffic network-based graph by learning the weight para-
+FF meters in the function F(·).
+where S is the free-flow speed between node i and j,
+i,j
+andfree-flow speed [53] refers to the average speed that a
+motorist would travel if there were no congestion or other C. Traffic Graph Convolution
+adverseconditions(suchassevereweather).(cid:2)t istheduration Previous work [23], [24], [27] has defined the graph con-
+of time quantum and m is a number counting how many volution based the adjacency matrix. The core idea of a
+timeintervalsareconsideredtocalculatethedistancetravelled convolution layer in a neural network is to extract localized
+underfree-flowspeed.Thus,m determinesthetemporalinflu- features from input data in a 2D or 3D matrices structure.
+ence of formulating the FFR. Each element FFR i,j equals The localized region of the input space which affects the
+one if vehicles can traverse from node i to j in m time-step, convolution operation results is called receptive field. Anal-
+m · (cid:2)t, with free-flow speed, and FFR i,j = 0 otherwise. ogously, the core idea of a graph convolution layer is to
+Intuitively,the FFR i,j measureswhethera vehiclecan travel extractlocalized featuresfrominputdata in a graphstructure.
+˜
+fromnodei tonode j withthefree-flowspeedunderaspecific Thus, the product of the neighborhood matrix A, the input
+˜
+time interval. We consider each road is self-reachable, and data x , and a trainable weight matrix W, i.e. Ax W, can be
+t t
+thus, all diagonal values of FFR are set as one. An example consideredasagraphconvolutionoperationtoextractfeatures
+FFR with respect to a node (a red star) is shown bygreen from one-hop neighborhood [23], [24]. Then, the receptive
+lines on the left side of Fig. 1. field of the graph convolution operation on a node is the
+one-hop neighborhood.
+However, in this way, the receptive field is confined, and it
+B. Traffic Forecasting Problem
+onlyconcentratesonone-hopneighboringnodes.Toovercome
+Traffic forecasting refers to predicting future traffic states,
+this shortcoming, we extend the receptive field of graph
+such as traffic speed, travel time, or volume, given previously ˜
+convolution by replacing the one-hop neighborhoodmatrix A
+observed traffic states from a road network. In this study,
+with the k-hop neighborhoodmatrix
+A˜k.
+Meanwhile, existing
+the traffic network is converted into a graph consisting of
+studies either neglect the properties of the edges in a graph,
+all N nodes, representing N traffic sensing locations, and a
+such as the distances between different sensing locations (the
+set of edges. During a period of time t, the signals of these
+lengths of the graph edges) and the free-flow reachability
+nodes representing the collected traffic states, can be denoted
+defined in (3), or fail to consider high-order neighborhood
+as x ∈RN.
+t of nodes in the graph. Hence, to comprehensively solve the
+To formulate the traffic forecasting problem, the main
+network-wide forecasting problem, we consider both graph
+aforementionednotationsaresummarizedinthefollowinglist:
+edge properties and high-order neighborhood in the traffic
+G Traffic network-based graph network-based graph. Hence, we define the k-order (k-hop)
+G =(V,E)
+Traffic Graph Convolution (TGC) operation as
+V Set of vertices in G with the size of (cid:7) (cid:8)
+|V|= N GCk t = W gck (cid:6) A˜k (cid:6)FFR x t (5)
+E Set of edges in G with the size of |E|
+where (cid:6) is the Hadamard product operator, i.e. the
+A ∈RN×N Adjacency matrix of G element-wise matrix multiplication operator, and x ∈ RN is
+D ∈RN×N Degree matrix of G t
+the vector of traffic states (speed) of all nodes at time t. The
+A˜ ∈RN×N
+Neighborhood matrix defined by (1) W ∈ RN×N is a trainable weight matrix for the k-order
+A˜k ∈RN×N
+k-hop neighborhood matrix defined
+trag fc fi_ ck
+graph convolution and the GCk ∈ RN is the extracted
+by (2) k-ordertrafficgraphconvolutionfeature.Dueto A˜k andFFR
+Dist ∈ Distance matrix are both sparse matrices only containing 0 and 1 elements,
+RN×N the result of W (cid:6) A˜k (cid:6) FFR is also sparse. Further,
+FFR ∈ Free-flow reachable matrix by (3) the trained weigg hc tk W has the potential to measure the
+RN×N gc_k
+interactive influence between graph nodes, and thus, enhance
+x t ∈RN Vector of speed of all graph nodes at the interpretability of the model.
+time t In Equation (5), k should be a positive integer. The larger
+The short-term traffic forecasting problem aims to learn the order k is, the larger the size of the receptive field of the
+a function F(·) to map T time steps of historical graph TGC is, and then the more neighborhood-based features can
+signals, i.e. X = [x ,...,x ,...,x ], to the graph signals be extracted from the graph. However,k is not infinite, and it
+T 1 t T
+in the subsequent one or multiple time steps. In this study, canbeeasilyprovedthat,foraspecificgraph,whenincreasing
+the function attempts to forecast the graph signals in the the value of k, A˜k(cid:6)FFR will eventually converge to FFR
+subsequent one step, i.e. x T+1, and the formulation of F(·) suchthatk = K
+max
+and A˜Kmax(cid:6)FFR =FFR. Itshouldbe
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+CUIetal.: TRAFFICGRAPHCONVOLUTIONALRNN 4887
+TABLEI
+COMPARISONBETWEENTGC,SGC,ANDLSGC
+noted that, while extracting traffic graph convolution features parameterized by θ ∈ RN [23]. The diag(θ) is the diagonal-
+to solve real traffic prediction problems, it is not necessary ized matrix givenθ. The spectralgraph convolutionoperation
+to set k as the max value K . The trade-off between the can be described as
+max
+predictionaccuracyandthe featurerichness, whichis directly
+related to the computational cost, should be considered and hθ ∗ G x t =UhθUTx t =Udiag(θ)UTx t (9)
+balanced. where∗ G isthespectralgraphconvolutionoperator.Thefilter
+Let K ≤ K denote the largest hop for traffic graph
+max hθ that can be considered as a learnable convolutionalkernel
+convolution in this study, and the corresponding traffic graph
+weight.
+convolution feature is GCK with respect to input data x .
+t t Further, for saving computational cost, the localized spec-
+DifferenthopsofneighborhoodinTGCwillresultindifferent
+tral graph convolution (L(cid:4)SGC) is proposed by employing a
+extracted features. To enrich the feature space, the features polynomial filter hθ(cid:8) = k j− =1 0θ(cid:8) j(cid:3)j [22] and the learnable
+extracted from different orders (from 1 to K) of traffic graph parameter θ(cid:8) ∈ RK. Then K-hop localized spectral graph
+convolutionwith respect to X t are concatenated together as a convolution can be formulated as:
+vector defined as follows
+(cid:10) (cid:11) K(cid:12)−1 K(cid:12)−1
+GC{ tK} = GC1 t,GC2 t,...,GC tK (6) hθ(cid:8) ∗ G x t =U θ(cid:8) j(cid:3)jUTx t = θ(cid:8) jLjx t (10)
+j=0 j=0
+The GC{K} ∈ RN×K contains all the K orders of traffic
+t TheadvantagesoftheLSGCisthatitonlyhasK parameters
+graph convolutional features, as intuitively shown in the left
+and does not need eigen-decomposition. It is well spatial
+part of Fig. 1. In this study, after operating the TGC on input
+{K} localized and each convolutionoperationon a centeredvertex
+data x , the generated GC will be fed into the following
+t t extracts the summed weighted feature of the vertex’s K-hop
+layerintheproposedneuralnetworkstructuredescribedinthe
+neighbors.Thedetails of SGC andLSGC can be foundin the
+following section.
+literature [21]–[23].
+ThecomparisonbetweenTGC,SGC,andLSGCintermsof
+D. Comparing TGC With Spectral Graph Convolution the number of parameters, computational time, and localized
+feature extraction, is shown in TABLE I. Comparing to SGC
+The proposed traffic graph convolution is based on adja-
+and LSGC, the TGC is better in terms of spatial localiza-
+cency matrix A, but the spectral graph convolution (SGC) is
+tion because it can extract local features based on physical
+defined in the Fourier domain [49] based on the Laplacian
+propertiesof roadwaysby incorporatingthe FFR. TGC with
+matrix L, which equals
+more parameters has better capabilities of representing the
+L = D− A (7) relationships between connected nodes in the graph. Further,
+SGC and LSGC normally need multiple convolutionallayers,
+where D isthedegreematrixasintroducedinSectionIII.A.2.
+which leads the SGC and LSGC to lose their interpretability.
+The Laplacian matrix L is symmetric positive semi-definite
+However, TGC only needs one convolution layer and its
+such that it can be diagonalized via eigen-decompositionas
+parameters can be better interpreted.
+L =U(cid:3)UT (8)
+where (cid:3) is a diagonal matrix containing the eigenvalues, U E. Traffic Graph Convolutional LSTM
+consists of the eigenvectors, and UT is the transpose of U. We propose a Traffic Graph Convolutional LSTM
+The spectral convolution on graph is defined as the mul- (TGC-LSTM) recurrent neural network, as shown on the
+tiplication of a signal x
+t
+∈ RN with a filter hθ = diag(θ) right side of the Fig. 1, which learns both the complex
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+4888 IEEETRANSACTIONSONINTELLIGENTTRANSPORTATIONSYSTEMS,VOL.21,NO.11,NOVEMBER2020
+Fig.1. Thearchitecture oftheproposedTrafficGraphConvolution LSTMisshownontherightside.Thetrafficgraphconvolution (TGC)asacomponent
+ofthe proposedmodelis shownontheleft sideindetail byunfolding thetraffic graphconvolution attimet,inwhich
+A˜ksandFFR
+withrespect toared
+starnodearedemonstrated.
+spatial dependencies and the dynamic temporal dependencies At the final time step T, the hidden state h is the output
+T
+presented in traffic data. In this model, the gates structure in of TGC-LSTM, namely the predicted value yˆ = h . Let
+T T
+the vanilla LSTM [11] and the hidden state are unchanged, y ∈ RN denote the label of the input data X ∈ RN×N.
+T T
+but the input is replaced by the graph convolution features, For the sequence prediction problem in this study, the label
+which are reshaped into a vector GC{K} ∈ RKN. The forget of time step T is the input of the next time step (T +1) such
+gate f t, the inputgate i t, the outputgate o t, and the inputcell that y
+T
+= x T+1. Then the loss during the training process is
+˜
+state C in terms of time step t are defined as follows defined as
+t
+(cid:7) (cid:8) (cid:2) (cid:3)
+f
+t
+= σ
+g
+(cid:7)W
+f
+·GC{ tK}+U
+f
+·h t−1+b
+(cid:8)f
+(11) Loss =L y T,yˆ
+T
+=L(x T+1,h T) (18)
+i = σ W ·GC{K}+U ·h +b (12) where L(·) is a function to calculate the residual between
+t g i t i t−1 i
+(cid:7) (cid:8) the predicted value yˆ and the true value y . Normally,
+o t = σ g W o·GC{ tK}+U o·h t−1+b o (13) the L(·) function is aT Mean Squared Error (MT SE) function
+(cid:7) (cid:8)
+C˜
+t
+= tanh W C·GC{ tK}+U
+C
+·h t−1+b
+C
+(14) for predicting continuous values.
+where·isthematrixmultiplicationoperator.W f,W i,W o,and Algorithm1CalculationtheOutputoftheTGC-LSTMLayer
+tW heC t∈ hreR eN g× aK teN
+s
+aa nre dt th he ew ine pi ug th ct em lla str taic tee ,s, wm ha ilp ep Uin fg ,t Uh ie ,i Un op ,u at nt do I Pn ap ru at ms: etX
+erT
+s:= (cid:5)[ Wx 1,. ,. .. ., .x
+,T
+W], A˜1 (cid:6), ,. W.., s,A˜ UK s, ,F aF ndR
+bs in
+U
+∈RN×N
+arethe weightmatricesforthe precedinghidden
+gc1 gcK
+C Eq. (11-14) WN in Eq. (15)
+state. b f,b i,b o, and b C ∈ RN are four bias vectors. The σ g Initialize: h =0∈RN, C =0∈RN
+0 0
+is the gate activation function, which typically is the sigmoid for t =1 to T do
+function, and tanh is the hyperbolic tangent function. for k =1 t(cid:7)o K do (cid:8)
+Due to each node in a traffic network graph is influenced GCk ← W (cid:6) A˜k (cid:6)FFR x
+by the preceding states of itself and its neighboring nodes, t gck t
+end for (cid:13) (cid:14)
+the LSTM cell state of each node in the graph should also GC{K} ← GC1,GC2,...,GCK
+be affected by neighboring cell states. Thus, a cell state gate t t t t
+is designed and added in the LSTM cell. The cell state gate, h t, C t = TGC-LSTM(x t, GC{ tK} , h t−1,C t−1 )
+end for
+as shown in Fig. 1, is defined as follows
+Return: h
+T
+C t∗ −1 = WN (cid:6)(A˜K (cid:6)FFR)·C t−1 (15)
+Toexplaintheproposedmethodina clearerway,apseudo-
+where WN is a weight matrix to measurethe contributionsof
+codeoftheTGC-LSTMalgorithmispresentedinAlgorithm1.
+neighboringcell states. To correctly reflectthe traffic network
+structure, the WN is constrained by multiplying a FFR Given the traffic state data X T and the graph related matrices
+based K-hop adjacency matrix, A˜K (cid:6)FFR. With this gate, as input, the pseudo-code mainly describes the process of
+generating the final output h after T steps of iteration.
+the influence of neighboring cell states will be considered T
+For simplicity, the pseudo-code does not include the mini-
+when the cell state is recurrently input to the subsequent
+batchgradientdescentprocessandthebackpropagation-based
+time step. Then, the final cell state and the hidden state are
+parameter updating process. In Algorithm 1, Eq. is short
+calculated as follows
+for Equation and the function TGC-LSTM(·) refers to the
+C
+t
+= f
+t
+(cid:6)C t∗ −1+i
+t
+(cid:6)C˜
+t
+(16)
+whole calculation process described in Equation (11-17) in
+h = o (cid:6)tanh(C ) (17) this section.
+t t t
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+CUIetal.: TRAFFICGRAPHCONVOLUTIONALRNN 4889
+F. Traffic Graph Convolution Regularization
+Since the proposed model contains a traffic graph convo-
+{K}
+lution operation, the generated(cid:5)set of TGC fea(cid:6)tures GC
+t
+and the learned TGC weights W ,...,W provide an
+gc1 gcK
+opportunity to make the proposed model interpretable via
+analyzing the learned TGC weights. To confine the graph
+convolution features within a reasonable scale and make the
+learnedweightsmorestableandinterpretable,weproposetwo
+optional regularization terms that can be added to the loss
+function described in Equation (18).
+1) Regularization on Graph Convolution Weights: Because
+the graph convolution weights are not confined to be positive
+and each node’s extracted features are influenced by mul-
+tiple neighboring nodes, the graph convolution weights can
+vary a lot while training. Ideally, the convolution weights Fig.2. (a)LOOPdataset coveringthefreeway networkinSeattle area;(b)
+would be themselves informative, so that the relationships INRIX dataset covering the downtown Seattle area, where traffic segments
+areplotted withcolors.
+between different nodes in the network could be interpreted
+and visualized by plotting the convolution weights. This is where λ and λ are penalty terms to control the weight
+1 2
+not likely to be possible without regularization, because very
+magnitude of the regularization terms on graph convolution
+high or low weights tend to appear somewhat randomly,
+weights and features.
+with the result that high/low weights tend to cancel each
+other out. In combination, such weights can still represent
+IV. EXPERIMENTS
+informative features for the network, but they cannot reflect
+thetruerelationshipbetweennodesinthegraph.Thus,weadd A. Dataset Description
+L1-normof the graph convolutionweight matrices to the loss In this study, two real-world network-scale traffic speed
+functionasaregularizationtermtomaketheseweightmatrices datasets are utilized. The first contains data collected from
+assparse aspossible.TheL1 regularizationtermisdefinedas inductiveloop detectorsdeployedon fourconnectedfreeways
+follows (I-5, I-405, I-90, and SR-520) in the Greater Seattle Area,
+(cid:15) (cid:15) (cid:12) (cid:16) (cid:16) showninFig.2(a).Thisdataset,whichispubliclyaccessible2,
+R{1} =(cid:15) W gc(cid:15)
+1
+= iK =1(cid:16) W gci(cid:16) (19) contains traffic state data from 323 sensor stations over the
+entirety of 2015 at 5-minute intervals. The second contains
+In this way, the trained graph convolution weight can be road link-level traffic speeds aggregated from GPS probe
+sparse and stable, and thus, it will be more intuitive to dis- data collected by commercial vehicle fleets and mobile apps
+tinguishwhichneighboringnodeorgroupofnodescontribute provided by the company INRIX. The INRIX traffic network
+most. covers the Seattle downtown area, shown in Fig. 2 (b). This
+2) Regularization on Graph Convolution Features: Con- datasetdescribesthetrafficstateat5-minuteintervalsfor1014
+sidering that the impact of neighboring nodes with respect road segments and covers the entire year of 2012. We use
+to a specific node must be transmitted through all nodes LOOP data and INRIX data to denote these two datasets,
+betweenthenodeofinterestandtheinfluencingnode,features respectively, in this study.
+extracted from differenthops in the graph convolutionshould We adopt the speed limit as the free-flow speed, which for
+not vary dramatically. Thus, to restrict the difference between the segments in the LOOP traffic network is 60mph in all
+featuresextractedfromadjacenthopsofgraphconvolution,an cases. The INRIX traffic network contains freeways, ramps,
+L2-norm based TGC feature regularization term is added on arterials, and urban corridors, and so the free-flow speeds
+the loss function at each time step. The regularizationterm is of INRIX traffic network range from 20mph to 60mph. The
+defined as follows distance adjacency matrices Dist and free-flow reachable
+(cid:15) (cid:15) (cid:17) (cid:12) (cid:7) (cid:8) matrices FFR for both datasets are calculated based on the
+R{2} =(cid:15) (cid:15)GC{K}(cid:15) (cid:15) = K−1 GCi −GCi+1 2 (20) roadway characteristics and topology.
+T 2 i=1 T T
+In this way, the features extracted from adjacent hops of B. Experimental Settings
+graph convolution should not differ dramatically, and thus, 1) Baselines: We compare TGC-LSTM with the follow-
+the graph convolution operator should be more in keeping ing baseline models: (1) ARIMA: Auto-Regressive Integrated
+with the physical realities of the relationships present in a MovingAveragemodel[7];(2) SVR: SupportVector Regres-
+traffic network. sion [6]; (3) FNN: Feed forward neural network with two
+Then, the total loss function at time t can be defined as hidden layers, i.e. the multilayer perceptron, whose hidden
+follows layersizeisN;(4)LSTM:LongShort-TermMemoryrecurrent
+Loss =L(h
+T
+−x T+1)+λ 1R{1}+λ 2R{2} (21) 2https://github.com/zhiyongc/Seattle-Loop-Data
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+4890 IEEETRANSACTIONSONINTELLIGENTTRANSPORTATIONSYSTEMS,VOL.21,NO.11,NOVEMBER2020
+TABLEII
+PERFORMANCECOMPARISONOFDIFFERENTAPPROACHES.(THENUMBEROFHOPSKISSETAS3INTHEGRAPHCONVOLUTIONRELATEDMODEL)
+neuralnetwork[11];(5)DiffGRU[19]:anadjustedversionof is the next subsequent data of the input sequence. The per-
+diffusion convolutional gated recurrent network [19] whose formance of the proposed and the compared models are eval-
+gate units are defined based on diffusion convolution. Since uated by three commonly used metrics in traffic forecasting,
+the graph is undirected in this study, we replace the diffusion including 1) Mean Absolute Error (MAE), 2) Mean Absolute
+convolution with spectral graph convolution in DiffGRU; Percentage Error (MAPE), and 3) Root Mean Squared
+(6) Conv+LSTM: a one-dimensional (1D) convolution layer Error (RMSE).
+with two channels followed by an LSTM layer, the 1D (cid:12) (cid:16) (cid:16)
+CNN is conducted on x t with two output channels (kernel MAE = n1 n i=1(cid:16) (cid:16)y T −yˆ T(cid:16)
+(cid:16)
+(22)
+ss piz ee c= tr5 ala gn rd apst hrid ce o= nv2 o) l; u( t7 io) nSG laC ye+ rL [S 25T ]M w: is tt hac ak nin Lg Sa To Mne- lala yy ee rr ; MAPE = 1 (cid:12) n (cid:16) (cid:16) (cid:16)y T −yˆ T(cid:16) (cid:16) (cid:16)∗100% (23)
+(8) LSGC+LSTM: stacking a one-layer localized spectral
+(cid:17)n i=1 Y
+T
+(cid:12) (cid:2) (cid:3)
+graph convolution layer [22] whose K = 3 and an LSTM RMSE = 1 n y −yˆ 2 (24)
+layer.AlltheLSTM/GRUlayershavethesameweightdimen- n i=1 T T
+sions. Thebaseline modelsdo notincludeauto-encoderbased
+models and pure CNN based models, due to the core ideas
+C. Experimental Results
+of these methodologies are totally different from the tested
+baseline models which are mostly single RNN layer-based TABLE II demonstrates the results of the TGC-LSTM and
+models. All the neural networks are implemented based on other baseline models on the two datasets. The proposed
+PyTorch 1.0.1 and they are trained and evaluated on a single method outperforms other models with all the three metrics
+NVIDIA GeForce GTX 1080 Ti with 11GB memory. on the two datasets. The ARIMA and SVR cannot compete
+with other methods, which suggest that non-neural-network
+2) TGC-LSTMModel: Forbothdatasets, thedimensionsof
+approaches are less appropriate for this network-wide predic-
+the hidden states of the TGC-LSTM are set as the amount
+tion task, due to the complex spatiotemporal dependencies
+of the nodes in the traffic network graphs. The size of hops
+and the high dimension features in the datasets. The basic
+in the graph convolution can vary, but we set it as 3, K =3,
+FNN does not perform well on predicting spatial–temporal
+for the model evaluation and comparison in this experiment.
+sequence.TheDiffGRUperformsnearlythesameastheFNN.
+In this case, the FFR is calculated based on three time
+The reason might be that GRU has the no cell state to store
+steps. The two regularization terms
+(R{1}
+and
+R{2})
+can not
+historical information in its gate units comparing to LSTM.
+only confine the learnt graph convolution weights, they also
+This can reduce the prediction capability of DiffGRU. Both
+can avoid overfitting causing the decrease of the prediction
+LSTM and Conv+LSTM work well and they have similar
+accuracy. Thus, there is a trade-off between the prediction
+performance. The SGC+LSTM performs better than vanilla
+accuracyandthescaleofthepenaltyterms(λ andλ ).Based
+1 2 LSTM, which demonstrates the feature extraction by using
+on empiricallyadjustingthe regularizationrates, the valuesof
+spectral graph convolution is beneficial for traffic forecast-
+the λ and λ are both set as 0.01. We train our model by
+1 2 ing. However, the LSGC+LSTM does not outperform LSTM
+minimizingthemeansquareerrorwiththebatchsizeof10and
+resulting from utilizing one-layerLSGC, whose parametersis
+the initial learning rate of
+10−5.
+Since the RMSProp [54] can
+not enough for representing the network features. The pro-
+solvethegradientexplodingandvanishingproblems,itisused
+posed TGC-LSTM, which capture graph-basedfeatureswhile
+as the gradient descent optimizer whose alpha (smoothing
+accommodating the physical specialties of traffic networks,
+constant) is set as 0.99 and epsilon (the term added to the
+performs better than all other approaches. It should be noted
+denominator to improve numerical stability) is set as
+10−8.
+that, for the INRIX data, during the nighttime or off-peak
+3) Evaluation: In this study, the samples of the input are hours when there are no observed speed values on specific
+traffic time series data with 10 time steps. The output/label roads, the missing speed values are comprehensivelyimputed
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+CUIetal.: TRAFFICGRAPHCONVOLUTIONALRNN 4891
+E. Effect of Regularization
+The model’s loss function can add regularization terms
+to avoid overfitting. The proposed L1-norm on the graph
+convolution weights and L2-norm on the graph convolutional
+features can further help the model to confine the learned
+weights and features. However, there is a trade-off between
+the prediction accuracy and the scale of the penalty terms
+(λ and λ ). As tested, by adding the regularization terms
+1 2
+to the loss function with the penalty rates setting as 0.01,
+the MAEs of the proposed model tested on the two datasets
+increase around 0.02, which are still superior to baseline
+models.Meanwhile,theTGCweightsparsityisincreasedand
+the value of the feature regularization
+R{2}
+is lower than that
+of the proposed model without regularization terms in the
+loss function, which means the TGC features’ consistency
+Fig. 3. Histogram of performance comparison for the influence of orders
+is enhanced. Thus, it is worth adding these regularization
+(hops)ofgraphconvolutionintheTGC-LSTMonINRIXandLOOPdatasets.
+terms to the loss function to help the trained model to be
+more interpretable. Fig. 5 (a) and (b) show portions of the
+averaged graph convolution weight matrices for the INRIX
+by the data provider. Thus, there are few variations at the
+non-peak hours in the INRIX data. Further, the speed values
+data and the LOOP data, respective(cid:4)ly, where K = 3 and
+theaverageweightiscalculatedby 1 K W (cid:6) A˜i (cid:6)FFR.
+in the INRIX data are all integers. Therefore, the calculated K i=1 i
+Theroadsegmentnames,whicharenotdisplayed,arealigned
+errors of the INRIX data is less than that of the LOOP data
+ontheverticalandhorizontalaxeswiththesameorderineach
+and the evaluated performance on INRIX data is inflated
+figure. The colored dots in the matrices in Fig. 5 (a) and (b)
+somewhat.
+illustrate the weight of the contribution of a single node
+Fig. 3 shows a histogram of performance comparison on
+to its neighboring nodes. Since we align the traffic states
+the effects of orders (hops) of the graph convolution in the
+of roadway segments based on their interconnectedness in
+TGC-LSTM. The model performance is improved when the
+the training data, most of the weights are distributed around
+value of K increases. For the LOOP data, the performance
+the diagonal line of the weight matrix. The INRIX network
+improves slightly when K is gradually increased. But for the
+is more complex and the average degree of nodes in the
+INRIX data, there is a big improvementin when K increases
+INRIX graph is higher than that in the LOOP graph. Hence,
+to two from one. The complex structure and the various road
+the dots in the average weight matrix of the INRIX graph
+types in the INRIX traffic network could be the main reason
+convolution are more scattered. But these dots still form
+for this performingdifference.Further, when K is larger than
+multiple clusters demonstrating the weights of several nearby
+two, the improvement of the prediction is quite limited. This
+is also the reason why we choose K = 3 in the model or connected road segments. Considering roadway segments
+comparison part, as shown in TABLE II. are influenced by their neighboring or nearby connected
+segments, the nodes with the large absolute weight in a
+cluster are very likely to be key road segments in the local
+D. Training Efficiency
+traffic network. In this way, we can infer the bottlenecks of
+In this subsection, we compare the training efficiency of
+the traffic network from the traffic graph convolution weight
+theproposedmodelandotherLSTM-basedmodels.Fig. 4(a)
+matrices.
+showsthevalidationlosscurvesversusthetrainingepoch.Due
+totheearlystoppingmechanismisusedinthetrainingprocess, F. Model Interpretation and Visualization
+thenumbersoftrainingepochsaredifferent.TheTGC-LSTM
+To better understandthe contributionof the graph convolu-
+needs less epochs to converge than the SGC+LSTM and
+tion weight, we mark seven groups of representative weights
+the LSGC+LSTM. In addition, the loss of the TGC-LSTM
+in Fig. 5 (a) and (b) and visualize their physical locations on
+decreasesfastestamongthecomparedmodels.Fig.4(b)shows
+the real map in Fig. 5 (c) and (d), by highlighting them with
+the comparison of the training time per epoch of different
+models. The training cost of Conv+LSTM is between that of Romannumeralsandredboxes.Theinfluenceofthesemarked
+LSTM and SGC+LSTM. TGC-LSTM costs twice as much weights on neighboring nodes in the INRIX and LOOP data
+as LSTM does. The time required for SGC+LSTM is less are visualized by lines and circles, respectively, considering
+than that for TGC-LSTM, while LSGC+LSTM costs slightly the INRIX traffic network is too dense to use circles. The
+morethanTGC-LSTM.Fig.4(c)showsthetraininglossesof darkness of the green and pink colors and the sizes of the
+TGC-LSTM with differenthopsof graphconvolutioncompo- circlesrepresentthemagnitudeofinfluence.Itshouldbenoted
+nents. The rate of convergence increases when increasing the that the darkness of colors on lines on the INRIX map and
+numberofhops,k.Inourexperiments,whenk islargerthan3, thesizeofthecirclesontheLOOPmapwillchangewhenthe
+thetrainingandvalidationresultsimproveonlymarginallyfor model is trained with different scales of regularization terms
+both INRIX and LOOP datasets. (λ and λ ).
+1 2
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+4892 IEEETRANSACTIONSONINTELLIGENTTRANSPORTATIONSYSTEMS,VOL.21,NO.11,NOVEMBER2020
+Fig. 4. (a)Validation loss versus training epoch (batch size = 40 and early stopping patience = 10 epochs). (b) Histogram of model’s training time per
+epochs. (c) Compare training efficiency with different K hops of TGC:training loss versus training iteration (batch size = 40). (The figures are generated
+basedontheLOOPdata.
+Fig. 5. (a) Visualization of a proportion of the INRIX GC weight matrix, in which three representative weight areas are tagged. (b) Visualization of a
+proportionoftheLOOPGCweightmatrix,inwhichfourrepresentative weightareasaretagged.(c)VisualizationoftheINRIXgraphconvolutionweighton
+thereal traffic network usingcolored lines. (d)Visualization ofthefourtagged weight areas intheLOOPgraphconvolution weight ontheSeattle freeway
+networkusingcolorful circles.
+From Fig. 5 (c), we can find the marked areas with dark intersections between I-90 and I-405 and between I-5 and
+colors in the INRIX GC weight matrix, (I), (II), and (III), SR-520,respectively.TheVIIarealocatedonSR-520contains
+are all located at very busy and congested freeway entrance a frequent-congestedrampconnectingto the city of Bellevue,
+and exit ramps in Seattle downtown area. In Fig. 5 (d), thelocationofwhichishighlightedbythebiggestgreencircle.
+the area tagged with (IV) is quite representative because the Additionally, there are many other representative areas in the
+two groups of circles are located at the intersections between graph convolution weight matrix, but we cannot show all of
+freeways and two main corridors that represent the entrances themduetospacelimits.Bycomparingtheweightmatrixwith
+to an island (Mercer Island). Areas (V) and (VI) are the thephysicalrealitiesofthetrafficnetwork,itcanbeshownthat
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+CUIetal.: TRAFFICGRAPHCONVOLUTIONALRNN 4893
+[2] D.ParkandL.R.Rilett, “Forecasting freeway linktraveltimes witha
+multilayerfeedforwardneuralnetwork,”Comput.CivilInfrastruct.Eng.,
+vol.14,no.5,pp.357–367, Sep.1999.
+[3] E.I.Vlahogianni, M.G.Karlaftis,andJ.C.Golias,“Short-term traffic
+forecasting: Where we are and where we’re going,” Transp. Res. C,
+Emerg.Technol., vol.43,pp.3–19,Jun.2014.
+[4] X.Ma,Z.Tao,Y.Wang,H.Yu,andY.Wang,“Longshort-termmemory
+neural network for traffic speed prediction using remote microwave
+sensor data,” Transp. Res. C, Emerg. Technol., vol. 54, pp. 187–197,
+May2015.
+[5] X. Ma, Z. Dai, Z. He, J. Ma, Y. Wang, and Y. Wang, “Learning
+traffic as images: A deep convolutional neural network for large-scale
+transportationnetworkspeedprediction,”Sensors,vol.17,no.4,p.818,
+2017.
+[6] A.J.SmolaandB.Schölkopf,“Atutorialonsupportvectorregression,”
+Statist. Comput.,vol.14,no.3,pp.199–222,Aug.2004.
+[7] M. M. Hamed, H. R. Al-Masaeid, and Z. M. B. Said, “Short-term
+predictionoftrafficvolumeinurbanarterials,”J.Transp.Eng.,vol.121,
+no.3,pp.249–254,May1995.
+[8] J.W.C.VanLint,S.P.Hoogendoorn,andH.J.VanZuylen,“Freeway
+traveltimepredictionwithstate-spaceneuralnetworks:Modelingstate-
+space dynamics with recurrent neural networks,” Transp. Res. Rec.,
+Fig. 6. Traffic time series forecasting visualization for LOOP and INRIX vol.1811,no.11,pp.30–39,2002.
+datasets ontworandomlyselected days. [9] W.Huang,G.Song,H.Hong,andK.Xie,“Deeparchitecturefortraffic
+flow prediction: Deep belief networks with multitask learning,” IEEE
+Trans.Intell. Transp.Syst.,vol.15,no.5,pp.2191–2201, Oct.2014.
+theproposedmethodeffectivelycapturesspatialdependencies
+[10] Y.Lv,Y.Duan,W.Kang,Z.Li,andF.-Y.Wang,“Trafficflowprediction
+and helps to identify the most influential points/segments in with big data: A deep learning approach,” IEEE Trans. Intell. Transp.
+the traffic network. Syst.,vol.16,no.2,pp.865–873,Apr.2015.
+[11] S. Hochreiter and J. Schmidhuber, “Long short-term memory,” Neural
+Fig. 6 visualizes the predicted traffic speed sequences and Comput.,vol.9,no.8,pp.1735–1780, 1997.
+thegroundtruthoftwolocationsselectedfromtheLOOPand [12] K. Cho et al., “Learning phrase representations using RNN encoder-
+decoder for statistical machine translation,” 2014, arXiv:1406.1078.
+INRIXdataset.Thoughthetrafficnetworksofthetwodatasets
+[Online]. Available: https://arxiv.org/abs/1406.1078
+are very different, the curves demonstrate that the trends of [13] Z.Cui,R.Ke,andY.Wang,“Deepstacked bidirectional andunidirec-
+the traffic speed are predicted well at both peak traffic and tional LSTM recurrent neural network for network-wide traffic speed
+prediction,” in Proc. 6th Int. Workshop Urban Comput. (UrbComp),
+off-peak hours.
+2016,pp.1–9.
+[14] R. Yu,Y.Li, C. Shahabi, U.Demiryurek, and Y. Liu,“Deep learning:
+V. CONCLUSION A generic approach for extreme condition traffic forecasting,” inProc.
+SIAMInt.Conf.onDataMining, Jun.2017,pp.777–785.
+In this paper, we learn the traffic network as a graph and [15] F. Kong, J. Li, B. Jiang, T. Zhang, and H. Song, “Big data-
+define a traffic graph convolution operation to capture spatial drivenmachinelearning-enabled trafficflowprediction,” Trans.Emerg.
+Telecommun. Technol.,vol.30,no.9,Sep.2019,Art.no.e3482.
+features from the traffic network. The traffic graph convo-
+[16] J. Zhang, Y. Zheng, and D. Qi, “Deep spatio-temporal residual net-
+lution incorporates the adjacency matrix and the proposed worksforcitywide crowdflowsprediction,” inProc.AAAI,Feb.2017,
+free-flow reachable matrix to extract localized features from pp.1655–1661.
+[17] H.Yu,Z.Wu,S.Wang,Y.Wang,andX.Ma,“Spatiotemporalrecurrent
+the graph. We propose a traffic graph convolutional LSTM convolutionalnetworksfortrafficpredictionintransportationnetworks,”
+neuralnetworktoforecastnetwork-widetrafficstates.Wealso Sensors,vol.17,no.7,p.1501,2017.
+[18] B. Yu, M. Li, J. Zhang, and Z. Zhu, “3D graph convolutional net-
+designtworegularizationtermsontheTGCweightsandTGC
+works with temporal graphs: A spatial information free framework for
+features, respectively, that can be added to the model’s loss traffic forecasting,” Mar. 2019, arXiv:1903.00919. [Online]. Available:
+functiontohelpthelearnedTGCweighttobemorestableand https://arxiv.org/abs/1903.00919
+[19] Y.Li,R.Yu,C.Shahabi,andY.Liu,“DiffusionConvolutionalRecurrent
+interpretable.By evaluatingon two real-worldtraffic datasets, Neural Network: Data-Driven Traffic Forecasting,” in Proc. Int. Conf.
+ourapproachisprovedtobesuperiortothecomparedbaseline Learn.Representations (ICLR),Feb.2018,pp.1–16.
+[20] J.Atwood andD. Towsley, “Diffusion-convolutional neural networks,”
+models. In addition, the learned TGC weight can help to
+inProc.Adv.NeuralInf.Process.Syst.,2016,pp.1993–2001.
+identify the most influential roadways, and thus, enhance the [21] J.Bruna,W.Zaremba,A.Szlam,andY.LeCun,“Spectralnetworksand
+interpretability of the proposed model. locally connected networks on graphs,” Dec. 2013, arXiv:1312.6203.
+[Online]. Available: https://arxiv.org/abs/1312.6203
+For future work, we will move forward to improve the [22] M.Defferrard,X.Bresson,andP.Vandergheynst,“Convolutionalneural
+model’s prediction performance in terms of accuracy and networks ongraphswithfastlocalized spectral filtering,” inProc.Adv.
+NeuralInf.Process.Syst.,2016,pp.3844–3852.
+robustness, and further investigate how to conduct the con-
+[23] T.N.KipfandM.Welling, “Semi-supervised classification withgraph
+volutionon bothspatialand temporaldimensionsto make the convolutional networks,” in Proc. Int. Conf. Learn. Representations
+neural network more interpretable. (ICLR),2017,pp.1–13.
+[24] Z. Zhou and X. Li, “Graph convolution: A high-order and adaptive
+approach,” 2018, arXiv:1706.09916. [Online]. Available: https://arxiv.
+ACKNOWLEDGMENT org/abs/1706.09916
+[25] M. Henaff, J. Bruna, and Y. LeCun, “Deep convolutional networks on
+Theauthorswouldlike to thankWashingtonDepartmentof
+graph-structured data,” Jun. 2015, arXiv:1506.05163. [Online]. Avail-
+Transportation for providing the datasets. able:https://arxiv.org/abs/1506.05163
+[26] M.SimonovskyandN.Komodakis, “Dynamic edge-conditioned filters
+REFERENCES inconvolutionalneuralnetworksongraphs,”inProc.CVPR,Jul.2017,
+pp.3693–3702.
+[1] B. Yu, H. Yin, and Z. Zhu, “Spatio-temporal graph convolutional [27] S.Abu-El-Haijaetal.,“MixHop:Higher-ordergraphconvolutionarchi-
+networks: A deep learning framework for traffic forecasting,” 2017, tectures viasparsifiedneighborhoodmixing,”inProc.Int.Conf.Mach.
+arXiv:1709.04875.[Online].Available: https://arxiv.org/abs/1709.04875 Learn.,May2019,pp.21–29.
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+4894 IEEETRANSACTIONSONINTELLIGENTTRANSPORTATIONSYSTEMS,VOL.21,NO.11,NOVEMBER2020
+[28] N. G. Polson and V. O. Sokolov, “Deep learning for short-term traffic [53] K. Hunter-Zaworski, J. Fowler, K. Lall, T. Bardwell, P. Bird, and
+flow prediction,” Transp. Res. C, Emerg. Technol., vol. 79, pp. 1–17, S.Dahl, “Transportation engineering online labmanual,” OregonState
+Jun.2017. Univ., Corvallis, OR, USA, Tech. Rep., 2003. [Online]. Available:
+[29] J. Hua and A. Faghri, “Apphcations of artificial neural networks to https://www.webpages.uidaho.edu/niatt_labmanual/index.htm
+intelligentvehicle-highwaysystems,”Transp.Res.Rec.,vol.1453,p.83, [54] T.TielemanandG.Hinton,“Lecture6.5-RMSPROP:Dividethegradient
+Apr.1994.[Online]. Available: https://trid.trb.org/view/424675 by a running average of its recent magnitude,” COURSERA, Neural
+[30] H. Yin, S. C. Wong, J. Xu, and C. K. Wong, “Urban traffic flow Netw.Mach. Learn.,vol.4,no.2,pp.26–31,2012.
+prediction using a fuzzy-neural approach,” Transp. Res. C, Emerg.
+Technol., vol.10,no.2,pp.85–98,2002.
+[31] F.Kong,J.Li,B.Jiang,andH.Song,“Short-termtrafficflowprediction ZhiyongCui(S’15)receivedtheB.S.degreeinsoft-
+insmartmultimediasystemforInternetofvehiclesbasedondeepbelief wareengineering fromBeihangUniversity in2012,
+network,”FutureGener.Comput.Syst.,vol.93,pp.460–472,Apr.2019. and the M.S. degree in software engineering and
+[32] B. Liao et al., “Deep sequence learning with auxiliary information microelectronics from Peking University in 2015.
+for traffic prediction,” in Proc. 24th ACM SIGKDD Int. Conf. Knowl. He is currently pursuing the Ph.D. degree in civil
+Discovery DataMining, Aug.2018,pp.537–546. and environmental engineering with the University
+[33] Y. Liang, Z. Cui, Y. Tian, H. Chen, and Y. Wang, “A deep genera- of Washington, where he has been a Research
+tive adversarial architecture for network-wide spatial-temporal traffic- Assistant with the Smart Transportation Applica-
+state estimation,” Transp. Res. Rec., J. Transp. Res. Board, vol. 2673, tions and Research Laboratory (STAR Lab) since
+no. 45, pp. 87–105, Dec. 2018. [Online]. Available: https://journals. 2015. His research interests include deep learning,
+sagepub.com/doi/full/10.1177/0361198118798737 machinelearning,urbancomputing,connectedvehi-
+[34] Y. Lin, X. Dai, L.Li, and F.-Y.Wang, “Pattern sensitive prediction of cles, autonomous driving, and transportation data science. He serves as a
+traffic flow based on generative adversarial framework,” IEEE Trans. member of the Transportation Research Board (TRB) Standing Committee
+Intell. Transp.Syst.,vol.20,no.6,pp.2395–2400, Jun.2019. onIntelligent Transportation Systems(AHB15)andtheStandingCommittee
+[35] Y. Duan, Y. Lv, and F.-Y. Wang, “Travel time prediction with LSTM onGeospatial DataAcquisition Committee(AFB80).
+neural network,” in Proc. IEEE 19th Int. Conf. Intell. Transp. Syst.
+(ITSC),Nov.2016,pp.1053–1058.
+Kristian Henrickson received the B.S. degree in
+[36] Z.Zhaoetal.,“LSTMnetwork:Adeeplearningapproachforshort-term
+civil engineering from the University of Idaho,
+trafficforecast,”IETIntell.Transp.Syst.,vol.11,no.2,pp.68–75,2017.
+[37] X. Song, H. Kanasugi, and R. Shibasaki, “DeepTransport: Prediction Moscow,ID,USA,in2013,andthePh.D.degreein
+andsimulationofhumanmobilityandtransportationmodeatacitywide civil and environmental engineering from the Uni-
+level,” inProc.IJCAI,Jul.2016,pp.2618–2624. versity ofWashington, Seattle, WA,USA,in2018.
+[38] X.Ma,Y.Li,Z.Cui,andY.Wang,“Forecastingtransportationnetwork He currently works as a Data Scientist at INRIX,
+speed using deep capsule networks with nested LSTMmodels,” 2018, Inc., Kirkland, WA, USA. His work at INRIX
+arXiv:1811.04745.[Online].Available: https://arxiv.org/abs/1811.04745 includes developing new human mobility-oriented
+[39] Y.Wu,H.Tan,L.Qin,B. Ran,and Z.Jiang, “A hybriddeeplearning dataproductsforthecommercialandpublicsectors.
+based traffic flow prediction method and its understanding,” Transp. His research interests include transportation data
+Res.C,Emerg.Technol.,vol.90,pp.166–180,May2018. quality issues, machine learning, and large-scale
+[40] R.Ke,W.Li,Z.Cui,andY.Wang,“Two-streammulti-channelconvolu- mobilityanalytics.
+tionalneuralnetwork(TM-CNN)formulti-lanetrafficspeedprediction
+considering traffic volume impact,” 2019, arXiv:1903.01678. [Online].
+Ruimin Ke (S’15) received the B.E. degree from
+Available: https://arxiv.org/abs/1903.01678
+theDepartmentofAutomation,TsinghuaUniversity,
+[41] C.ZhangandP.Patras,“Long-termmobiletrafficforecastingusingdeep
+in 2014, and the M.S. degree in the civil and
+spatio-temporalneuralnetworks,”inProc.18thACMInt.Symp.Mobile
+environmental engineering from the University of
+AdHocNetw. Comput.,Jun.2018,pp.231–240.
+Washington in 2016, where he is currently pursu-
+[42] D. Zhang and M. R. Kabuka, “Combining weather condition data to
+ing the Ph.D. degree in civil and environmental
+predict traffic flow:AGRU-based deep learning approach,” IETIntell.
+engineering. Since 2014, he has been a Research
+Transp.Syst.,vol.12,no.7,pp.578–585, Mar.2018.
+[43] W. Jin, Y. Lin, Z. Wu, and H. Wan, “Spatio-temporal recurrent con- AssistantwiththeSmartTransportationApplications
+volutionalnetworksforcitywideshort-termcrowdflowsprediction,”in and Research Laboratory (STAR Lab), University
+Proc.2ndInt.Conf.ComputeDataAnal.,Mar.2018,pp.28–35. ofWashington. His research interests include intel-
+[44] C. Chen et al., “Exploiting spatio-temporal correlations with multiple ligent transportation systems, urban mobility, smart
+3Dconvolutionalneuralnetworksforcitywidevehicleflowprediction,” cityinfrastructure,autonomousdriving,andcomputervision.He isamember
+inProc.IEEEInt.Conf.DataMining(ICDM),Nov.2018,pp.893–898. of the Statewide Transportation Data and Information Systems Committee
+[45] S.Guo,Y.Lin,S.Li,Z.Chen,andH.Wan,“Deepspatial–temporal3D (ABJ20) of TRB and a young member of the Infrastructure Systems Com-
+convolutional neuralnetworksfortrafficdataforecasting,” IEEETrans. mitteeofASCET&DI.In2018,hereceivedtheOutstandingGraduateStudent
+Intell. Transp.Syst.,vol.20,no.10,pp.3913–3926,Oct.2019. Awardpresented byITEWashington.
+[46] Y. Sun, X. Yu, R. Bie, and H. Song, “Discovering time-dependent
+shortestpathontrafficgraphfordriverstowardsgreendriving,”J.Netw.
+Yinhai Wang (SM’18) is currently a Professor in
+Comput.Appl.,vol.83,pp.204–212, Apr.2017.
+transportation engineering and the Founding Direc-
+[47] H. Sun, J. Wu, D. Ma, and J. Long, “Spatial distribution complexities
+tor of the Smart Transportation Applications and
+of traffic congestion and bottlenecks in different network topologies,”
+Research Laboratory (STAR Lab), University of
+Appl.Math. Model.,vol.38,no.2,pp.496–505,Jan.2014.
+Washington (UW). He also serves as the Direc-
+[48] G.KalafatasandS.Peeta,“Anexactgraphstructurefordynamictraffic
+tor for Pacific Northwest Transportation Consor-
+assignment: Formulation, properties, andcomputational experience,” in
+tium (PacTrans),USDOTUniversity Transportation
+Proc.Transp.Res.Board86thAnnu.Meeting,2007.[Online].Available:
+Center for Federal Region 10. He is currently the
+https://trid.trb.org/view/801550
+President of the Transportation and Development
+[49] D. I. Shuman, S. K. Narang, P. Frossard, A. Ortega, and
+P.Vandergheynst, “The emerging field ofsignal processing on graphs: Institute (T&DI) at the American Society of Civil
+Extendinghigh-dimensionaldataanalysistonetworksandotherirregular Engineers(ASCE),andamemberoftheIEEESmart
+domains,” IEEE Signal Process. Mag., vol. 30, no. 3, pp. 83–98, CitiesTechnicalActivitiesCommittee.Hisactiveresearchfieldsincludetraffic
+sensing, transportation safety, e-science of transportation, big-data analytics,
+May2013.
+[50] X. Geng et al., “Spatiotemporal multi-graph convolution network trafficoperationsandsimulation,andsmarturbanmobility.Hehaspublished
+for ride-hailing demand forecasting,” in Proc. AAAI Conf. Artif. over 170peer-reviewed journal articles and delivered morethan 180invited
+Intell.(AAAI),2019,pp.1–8. talks and nearly 280 other academic presentations. Also, he serves as a
+[51] Q. Zhang, Q. Jin, J. Chang, S. Xiang, and C. Pan, “Kernel-weighted member of the Artificial Intelligence and Advanced Computing Committee
+graphconvolutional network:Adeeplearningapproachfortrafficfore- of the Transportation Research Board (TRB) and an Associate Editor for
+casting,” inProc.24thInt.Conf.PatternRecognit. (ICPR),Aug.2018, three journals, including the Journal of Transportation Engineering Part A,
+pp.1018–1023. the Journal of Intelligent Transportation Systems, and PLOS One. He was
+[52] C.F.Daganzo,“Thecelltransmissionmodel:Adynamicrepresentation the winner of the ASCE Journal of Transportation Engineering Best Paper
+of highway traffic consistent with the hydrodynamic theory,” Transp. Awardfor2003andtheInstituteofTransportationEngineer(ITE)Innovation
+Res.PartB,Methodol., vol.28,no.4,pp.269–287,Aug.1994. inEducationAwardfor2018.
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:58:41 UTC from IEEE Xplore. Restrictions apply.
+

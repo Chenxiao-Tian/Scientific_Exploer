@@ -1,0 +1,54 @@
+Extracted Keywords:
+Networks, Spatial Networks, network, Spatial, Transportation networks, nodes, Optimal networks, complex networks, Fig., model
+
+Main Topics:
+URA 2306 F-91191 Gif-sur-Yvette France and
+Centre d'Analyse et de Math ematique, UMR 8557 CNRS-EHESS, Ecole des Hautes Etudes en Sciences Sociales, 54 bd, F-75270 Paris Cedex, Complex systems, the form, Transportation and mobility networks, mobile phone networks, power grids, social and contact networks, neural networks, all the information, the structure, the evolution, spatial networks, many dierent elds, An important consequence, a cost, the length, the topological
+structure, these networks, the current state, our understanding, the structure, these networks, the most recent empirical observations, the most important models, spatial networks, various processes, these spatial networks, phase
+transitions, random walks, disease spread, Contents
+I. Networks, B. Quantitative geography, 2
+C., this review, about 2
+II, spatial networks, 3
+A. Generalities, planar networks, Classical results
+
+Methodologies:
+Classical results for planar networks 3
+3. [44]) and the present review is an attempt to collect mod-
+ern results on networks and to help researchers in various
+elds to reach quantitative answers and realistic model-
+ing. In geography and urban studies, it would be about
+understanding the evolution of transportation networks,
+the human mobility, the spatial structure of urban areas,
+etc. and how these dierent factors are entangled with
+each other, in order to propose an integrated approach
+of scale, mobility, and spatial distribution of activities at
+various scales.
+ However, it is obvi-
+ously impossible to review all the existing results related3
+to spatial networks. Rivers form spatial networks (which
+in most cases are essentially trees), and result from the
+interplay between gravity and the elevation distribution.
+ In
+particular these mathematical methods allow to under-
+stand the c
+
+Research Outcomes:
+Classical results for planar networks 3
+3. [44]) and the present review is an attempt to collect mod-
+ern results on networks and to help researchers in various
+elds to reach quantitative answers and realistic model-
+ing. In geography and urban studies, it would be about
+understanding the evolution of transportation networks,
+the human mobility, the spatial structure of urban areas,
+etc. and how these dierent factors are entangled with
+each other, in order to propose an integrated approach
+of scale, mobility, and spatial distribution of activities at
+various scales.
+ However, it is obvi-
+ously impossible to review all the existing results related3
+to spatial networks. Rivers form spatial networks (which
+in most cases are essentially trees), and result from the
+interplay between gravity and the elevation distribution.
+ In
+particular these mathematical methods allow to under-
+stand the c

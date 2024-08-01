@@ -1,0 +1,51 @@
+Extracted Keywords:
+Object, Object Relation, object categories, ACM Transactions, scene, objects, scene synthesis, floor plan, Scenes, Indoor Scenes
+
+Main Topics:
+ 
+  
+ 
+ 
+Adaptive Synthesis, Indoor Scenes, Activity-Associated Object Relation Graphs
+FU, ACM Transactions, 01/11/2017
+Document Version, Accepted Author Manuscript, Peer-reviewed or Author Final version
+License, Unspecified
+Publication record, CityU Scholars, Published version, 10.1145/3130800.3130805
+Publication details, Adaptive Synthesis, Indoor Scenes, Activity-Associated Object Relation Graphs, ACM Transactions, Advance online 
+publication, this paper, the full-text, CityU Scholars, the Post-print version, Accepted Author
+Manuscript, Peer-reviewed or Author Final version, the Final Published version, the publisher's definitive version, other details, General rights
+Copyright, the publications, the CityU Scholars portal, the author(s, other
+copyright owners, a condition, these publications, the legal
+requirements, these rights, the material, any profit-making activity, commercial ga
+
+Methodologies:
+We show various synthesis results
+to demonstrate the practicability of our system, and validate its usability via
+a user study. We also compare our system with the state-of-the-art furni-
+ture layout and activity-centric scene representation methods, in terms of
+functional plausibility and user friendliness.
+ Due to the lack of coordination mechanisms between the cur-
+rent solutions to such two subproblems, naively combining these
+methods might easily cause undesired results. Due to the lack of coordination mechanisms between the cur-
+rent solutions to such two subproblems, naively combining these
+methods might easily cause undesired results. Moreover, the current
+object exploration methods focus more on pairs of directly related
+objects, e.g., a PC on a desk or a human sitting on a chair and using a
+desk, while objects with activity relations like bookshelf-chair-desk
+groups are rarely 
+
+Research Outcomes:
+We show various synthesis results
+to demonstrate the practicability of our system, and validate its usability via
+a user study. We also compare our system with the state-of-the-art furni-
+ture layout and activity-centric scene representation methods, in terms of
+functional plausibility and user friendliness.
+ Due to the lack of coordination mechanisms between the cur-
+rent solutions to such two subproblems, naively combining these
+methods might easily cause undesired results. Due to the lack of coordination mechanisms between the cur-
+rent solutions to such two subproblems, naively combining these
+methods might easily cause undesired results. Moreover, the current
+object exploration methods focus more on pairs of directly related
+objects, e.g., a PC on a desk or a human sitting on a chair and using a
+desk, while objects with activity relations like bookshelf-chair-desk
+groups are rarely 

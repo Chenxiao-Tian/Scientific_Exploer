@@ -1,0 +1,36 @@
+Extracted Keywords:
+journal, Environmental Technology, Algorithm, review, Technology, smart, Innovation, Qureshi, Pasha, Innovation journal
+
+Main Topics:
+EnvironmentalTechnology&Innovation22(2021)101443
+Contents lists, ScienceDirect
+EnvironmentalTechnology&Innovation
+journal homepage, www.elsevier.com/locate/eti
+SmartHomeEnergyManagementSystemsinInternetof
+Thingsnetworksforgreencitiesdemandsandservices
+MuhammadSaiduAlieroa,KashifNaseerQureshib,MuhammadFermiPashaa,
+GwanggilJeonc,∗
+aSchool, Information Technology, Monash University, Subang Jaya, Malaysia
+bDepartment, Computer Science, Bahria University Islamabad, Pakistan
+cDepartment, Embedded Systems Engineering, Incheon National University, a r t, f o
+Article history, opportunitya b, Inarecentinvestigationof
+theglobaldemandforenergyconsumptionacrossvariousenergyconsumptionsectors, Thisasaresultof
+poormanagementpracticeandimplementationofstrategiestoavoidexcessenergycon-
+sumption, researchersinbothacademiaandindustrieshavefocusedon
+varioustechniquestodealwithunnecessaryenergyconsumptionand
+
+Methodologies:
+Among these techniques is Smart Home
+EnergyManagementSystems(SHEMs),whichtransformelectrichomeappliances,sensor
+nodes,intoautonomousdevicesinordertomanageenergyconsumptioneffectively. Conclusion.................................................................................................................................................................................................17
+Declarationofcompetinginterest..........................................................................................................................................................18
+Acknowledgments....................................................................................................................................................................................18
+References...................................................................................................................
+
+Research Outcomes:
+Among these techniques is Smart Home
+EnergyManagementSystems(SHEMs),whichtransformelectrichomeappliances,sensor
+nodes,intoautonomousdevicesinordertomanageenergyconsumptioneffectively. Conclusion.................................................................................................................................................................................................17
+Declarationofcompetinginterest..........................................................................................................................................................18
+Acknowledgments....................................................................................................................................................................................18
+References...................................................................................................................

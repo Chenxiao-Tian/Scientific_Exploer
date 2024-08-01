@@ -1,0 +1,811 @@
+References:
+BoeingAppliedNetworkScience (2019) 4:67 Page17of19
+further research can unpack the relationship between development era, design
+paradigm, city size, transportation planning objectives, and street network entropy
+to explore how network growth and evolution affect spatial order. Finally, given
+the importance of taking multiple indicators in concert, future work can develop a
+grid-index to unify them and eventually include streetscape and width attributes as
+further enrichment to explore walkability and travel behavior.
+Conclusion
+Street networks organize and constrain a city’s transportation dynamics according
+to a certain spatial logic—be it planned or unplanned, ordered or disordered. Past
+studies of this spatial order have been challenged by small samples, limited geog-
+raphies, and abstract entropy indicators. This study accordingly looked at a larger
+sample of cities around the world, empirically examining street network configur-
+ation and entropy across 100 cities for the first time. It measured network
+orientation entropy, circuity, connectedness, and grain. It also developed an
+orientation-order indicator φ, to quantify the extent to which a network is
+ordered according to a single grid.
+This study found significant correlations between φ and other indicators of spatial
+order, including street circuity and measures of connectedness. It empirically
+confirmed that the cities in the US and Canada are more grid-like (exhibiting far less
+entropy and circuity) than was typical elsewhere. It is noteworthy that Chicago—the
+foremost theoretical model of twentieth century city growth and development in
+urban studies (Dear 2001; Park and Burgess 1925; Wirth 1928)—is an extreme outlier
+among world cities in terms of spatial orientation-order. In sum, these methods and
+indicators demonstrate scalable techniques to empirically measure and visualize the
+complexity of spatial order, illustrating patterns in urbanization and transportation
+around the world.
+Acknowledgements
+Notapplicable.
+Author’scontributions
+Theauthordesignedandconductedthestudyandwrote,revised,andapprovedthefinalmanuscript.
+Funding
+Notapplicable.
+Availabilityofdataandmaterials
+Alldatausedinthisstudyarepubliclyavailablefromhttps://www.openstreetmap.org/.
+Ethicsapprovalandconsenttoparticipate
+Notapplicable.
+Consentforpublication
+Notapplicable.
+Competinginterests
+Theauthordeclaresthathehasnocompetinginterests.
+Received:6March2019Accepted:12August2019
+References
+BallonH(ed)(2012)Thegreatestgrid:themasterplanofManhattan,1811–2011.ColumbiaUniversityPress,NewYork
+Barrington-LeighC,Millard-BallA(2017)Theworld’suser-generatedroadmapismorethan80%complete.PLoSOne12:
+e0180698.https://doi.org/10.1371/journal.pone.0180698
+
+Annexes/Appendices:
+
+Body Text:
+BoeingAppliedNetworkScience (2019) 4:67 Applied Network Science
+https://doi.org/10.1007/s41109-019-0189-1
+RESEARCH Open Access
+Urban spatial order: street network
+orientation, configuration, and entropy
+Geoff Boeing
+Correspondence:boeing@usc.edu
+Abstract
+DepartmentofUrbanPlanningand
+SpatialAnalysis,SolPriceSchoolof
+Street networks may be planned according to clear organizing principles or they
+PublicPolicy,UniversityofSouthern
+California,201BLewisHall,Los may evolve organically through accretion, but their configurations and orientations
+Angeles,California90089-0626,USA help define a city’sspatiallogic and order. Measures of entropy reveal a city’sstreets’
+order and disorder. Past studies have explored individual cases oforientation and
+entropy, but little is known about broaderpatterns and trends worldwide.This study
+examines street network orientation,configuration, and entropyin 100citiesaround
+the world using OpenStreetMap data and OSMnx. It measuresthe entropy ofstreet
+bearingsin weighted and unweighted network models, along with each city’s typical
+street segment length, average circuity, average node degree, and the network’s
+proportions of four-way intersections and dead-ends.It also develops a new
+indicatorof orientation-order that quantifieshow a city’sstreet network follows the
+geometric ordering logic of a single grid. A cluster analysis is performed to explore
+similarities and differences among these study sites in multiple dimensions.
+Significant statistical relationships exist between city orientation-order and other
+indicatorsof spatial order, including street circuity and measures ofconnectedness.
+On average, US/Canadian study sites are far more grid-like than those elsewhere,
+exhibiting less entropy and circuity. These indicators, taken in concert, help reveal
+the extent and nuance ofthe grid. These methods demonstrate automatic, scalable,
+reproducible tools to empirically measure and visualize city spatial order, illustrating
+complex urban transportation system patterns and configurations around theworld.
+Introduction
+Spatial networks such as streets, paths, and transit lines organize the human dynamics of
+complex urban systems. They shape travel behavior, location decisions, and the texture of
+the urban fabric (Jacobs 1995; Levinson and El-Geneidy 2009; Parthasarathi et al. 2015).
+Accordingly, researchers have recently devoted much attention to street network patterns,
+performance, complexity, and configuration (Barthelemy et al. 2013; Batty 2005a; Boeing
+2018a; Buhl et al. 2006; Chan et al. 2011; Ducruet and Beauguitte 2014; Jiang et al. 2014;
+JiangandClaramunt2004;Marshall2004;Masuccietal.2013;NilssonandGil2019;Tsio-
+tas and Polyzos2018;Wang 2015). Inthesespatialnetworks,entropyhasdeep theoretical
+connectionswithcomplexity(Batty2005b;Battyetal.2014).Oneresearchstream hasex-
+plored the nature of entropy and order in urban street networks, seeking to quantify pat-
+terns of spatial order and disorder in urban circulation systems (Gudmundsson and
+Mohajeri 2013; Li et al. 2018; Mohajeri et al. 2013a, 2013b; Mohajeri and Gudmundsson
+2012,2014;YehandLi2001).
+©TheAuthor(s).2019OpenAccessThisarticleisdistributedunderthetermsoftheCreativeCommonsAttribution4.0International
+License(http://creativecommons.org/licenses/by/4.0/),whichpermitsunrestricteduse,distribution,andreproductioninanymedium,
+providedyougiveappropriatecredittotheoriginalauthor(s)andthesource,providealinktotheCreativeCommonslicense,and
+indicateifchangesweremade.
+BoeingAppliedNetworkScience (2019) 4:67 Page2of19
+Theories of urban order span sociological frameworks of physical-social dis-
+order (e.g., “broken windows” theory), to public health goals of opening-up and
+sanitizing pathogenic urban spaces, to city planners’ pursuit of functional differ-
+entiation and regulation (Boyer 1983; Hatuka and Forsyth 2005; Mele 2017;
+O’Brien et al. 2019; Park and Burgess 1925; Xu 2008). This study considers the
+spatial logic and geometric ordering that arise through street network orientation.
+A city’s development eras, design paradigms, underlying terrain, culture, and local
+economic conditions influence the pattern, topology, and grain of its street net-
+works (Jackson 1985; Kostof 1991). These networks in turn structure the human
+interactions and transportation processes that run along them, forming an
+important pillar of city planners’ quest for spatial order (Rose-Redwood and
+Bigon 2018). In particular, network orientation and geometry have played an out-
+sized role in urban planning since its earliest days (Smith 2007).
+Measuring these network patterns can help researchers, planners, and community
+members understand local histories of urban design, transportation planning, and
+morphology; evaluate existing transportation system patterns and configurations; and
+explore new infrastructure proposals and alternatives. It also furthers the science of cit-
+ies by providing a better understanding of urban patterns and how they correspond to
+evolutionary mechanisms, planning, and design. However, due to traditional data gath-
+ering challenges, this research literature has necessarily relied on small samples, limited
+geographies, and abstract indicators. Past studies have typically explored circuity and
+entropy in individual or paired case studies—less is known about broader cross-
+sectional trends worldwide. How do street network configurations organize and order
+urban spaceincities aroundthe world?
+This paper addresses this gap by empirically modeling and measuring order and
+configuration in 100 city street networks around the world, comprising over 4.8
+million nodes and 3.3 million edges. It measures street network orientation
+entropy, circuity, connectedness, and grain. It also develops a straightforward new
+indicator, the orientation-order φ, to quantify the extent to which a street network
+follows the spatial ordering logic of a single grid. It finds significant statistical rela-
+tionships between city orientation and other indicators of spatial order (including
+street circuity and connectedness). The most common orientation worldwide, even
+among cities lacking a strong grid, tends toward north-south-east-west. It also finds
+that American cities tend to be far more grid-like and less circuitous than cities
+elsewhere. Considered jointly, this collection of indicators helps reveal the extent
+and nuance of the grid around the world.
+Background
+Streetnetworkplanning
+The orthogonal grid, the most common planned street pattern, is often traced back to
+Hippodamus of Miletus (Mazza 2009; Paden 2001)—whom Aristotle labeled the father of
+city planning for his orthogonal design of Piraeus in ancient Greece—but archaeologists
+havefoundvestigesinearliersettlementsaroundtheworld(Burns1976;Stanislawski1946).
+Mohenjo-Daro in the Indus Valley, dating to 2500BCE, featured a north-south-east-west
+orthogonal grid (McIntosh 2007). Ancient Chinese urban design organized capital cities
+BoeingAppliedNetworkScience (2019) 4:67 Page3of19
+around gridded patterns codified in the Kao Gong Ji, a scientific text from c. 500BCE
+(ElmanandKern2009).Teotihuacanfeaturedanoffsetgrid,datingto100BCE,thataligned
+withtheValleyofMexico’szenithsunrise(PetersonandChiu1987;Sparavigna2017).The
+RomanEmpireusedstandardizedstreetgridstoefficientlylayoutnewtownsandcolonies
+during rapid imperial expansion (Kaiser 2011). Many medieval towns were even planned
+around approximate, if distorted, grids possibly to maximize sun exposure on east-west
+streetsduringwinter market days(Lilley2001).In1573,King Phillip II ofSpain issuedthe
+LawoftheIndies,systematizinghowcolonistssitednewsettlementsanddesignedrectilin-
+ear gridded street networks around central plazas (Low 2009; Rodriguez 2005). In the US,
+many east coast cities planned their expansions around street grids, including Philadelphia
+in 1682, Savannah in 1733, Washington in 1791, and New York in 1811 (Jackson 1985;
+Sennett1990).ThesubsequentUSHomesteadActsweepinglyorganizedtheAmericanin-
+terioraccordingtothespatiallogicofthegridiron(Boeing2018b).
+In the context of urban form, the concept of “spatial order” is fuzzy. Street networks
+that deviate from griddedness inherently possess different spatial logics and ordering
+principles (Karimi 1997; Southworth and Ben-Joseph 1995, 2004). Cities planned with-
+out a grid—as well as unplanned cities that grew through accretion—may lack clearly
+defined orientation order, but can still be well-structured in terms of complex human
+dynamics and land use (Hanson 1989). Specific visual/geometric order should not be
+confused for functional/social order (Roy 2005; Salingaros 1998; Smith 2007). Different
+design logics support different transportation technologies and appeal to different cul-
+tures anderas(Jackson1985).
+The grid has been used to express political power, promote military rule, improve ca-
+dastrallegibility,fosteregalitarianism,andencouragelandspeculationanddevelopment
+(Ellickson 2013; Groth 1981; Low 2009; Martin 2000; Mazza 2009; Rose-Redwood
+2011; Sennett 1990). Many cities spatially juxtapose planned and unplanned districts or
+non-binarily intermingle top-down design with bottom-up self-organized complexity.
+Old cores maycompriseorganic patternsadjacent tolater gridirons,inturnadjacent to
+later winding suburbs. Even previously highly-ordered urban cores can grow in entropy
+as later generations carve shortcuts through blocks, reorganize space through infill or
+consolidation, and adapt to shifting points of interest—all of which occurred in
+medievalRome andBarcelona,forinstance (Kostof1991).
+Streetnetworkmodeling
+Street networks are typically modeled as graphs where nodes represent intersec-
+tions and dead-ends, and edges represent the street segments that link them
+(Barthelemy and Flammini 2008; Cardillo et al. 2006; Lin and Ban 2013; Marshall
+et al. 2018; Porta et al. 2006). These edges are spatially embedded and have both a
+length and a compass bearing (Barthelemy 2011). The present study models urban
+street networks as undirected nonplanar multigraphs with possible self-loops. While
+directed graphs most-faithfully represent constraints on flows (such as vehicular
+traffic on a one-way street), undirected graphs better model urban form by
+corresponding 1:1 with street segments (i.e., the linear sides of city blocks). While
+many street networks are approximately planar (having relatively few overpasses or
+underpasses), nonplanar graphs provide more accurate models by accommodating
+BoeingAppliedNetworkScience (2019) 4:67 Page4of19
+those bridges and tunnels that do often exist (Boeing 2018c; Eppstein and
+Goodrich 2008).
+The data to study these networks typically come from shapefiles of digitized streets. In
+theUS,theCensusBureauprovidesTIGER/Lineshapefilesofroadsnationwide.Inother
+countries, individual municipal, state, or federal agencies may provide similar data, how-
+ever,digitizationstandardsanddataavailabilityvary.Accordingly,cross-sectionalresearch
+ofstreetnetworkorientationandentropyhastendedtobelimitedtoindividualgeograph-
+ical regions or examine small samples. However, today, OpenStreetMap presents a new
+alternativedatasource.OpenStreetMapisacollaborativeworldwidemappingprojectthat
+includes streets, buildings,amenities, and otherspatial features. Although its data quality
+varies somewhat between countries, in general its streets data are high quality, especially
+incities(Barrington-Leighand Millard-Ball 2017; Barron etal. 2014; Zielstraetal. 2013).
+This data source offers the opportunity to conduct cross-sectional research into street
+networkformandconfigurationaroundtheworld.
+Recently, scholars have studied street network order and disorder through circu-
+ity and orientation entropy. The former measures street curvature and how this re-
+lates to other urban patterns and processes (Boeing 2019; Giacomin and Levinson
+2015; Levinson and El-Geneidy 2009). The latter quantifies and visualizes the en-
+tropy of street orientations to assess how ordered they are (Courtat et al. 2011;
+Gudmundsson and Mohajeri 2013; Mohajeri et al. 2013a, 2013b; Mohajeri and
+Gudmundsson 2012, 2014), as entropy quantifies the fundamentally related con-
+cepts of disorder, uncertainty, and dispersion. Louf and Barthelemy (2014) explore
+city block geometries around the world as a function of block size and form factor,
+clustering them to identify differences between US and European cities. However,
+less is known about cross-sectional trends in the spatial orientation and ordering
+of street networks worldwide. This study builds on this prior research into circuity,
+order, and entropy by drawing on OpenStreetMap data to examine cities around
+the world and explore their patterns and relationships.
+Methods
+Data
+Tobetterunderstandurbanspatialorderandcitystreetnetworkentropy,weanalyze100
+largecitiesacrossNorthAmerica,SouthAmerica,Europe,Africa,Asia,andOceania.Our
+samplingstrategyemulatesLoufandBarthelemy’s(2014)toselectcitiesthroughabalance
+of high population, regional significance, and some stratification to ensure geographical
+diversity within regions. Accordingly, this sample comprises a broad cross-section of dif-
+ferent histories, cultures, development eras, and design paradigms. Of course, no single
+consistent definition of “city” or its spatial jurisdiction exists worldwide as these vary be-
+tween countries for historical and political reasons. We aim for consistency by trying to
+useeachstudysite’sclosestapproximationofa“municipality”forthecitylimits.Thelone
+exception is Manhattan, where we focus on one borough’s famous grid instead of the
+amalgamofboroughsthatcomposeNewYorkCity.
+Once these study sites are defined, we use the OSMnx software to download the
+street network within each city boundary and then calculate several indicators.
+OSMnx is a free, open-source, Python-based toolkit to automatically download
+BoeingAppliedNetworkScience (2019) 4:67 Page5of19
+spatial data (including municipal boundaries and streets) from OpenStreetMap and
+construct graph-theoretic objects for network analysis (Boeing 2017).
+Analysis
+For each city, we calculate the street network’s edges’ individual compass bearings with
+OSMnx using two different methods. The first method simplifies the topology of each
+graph such that nodes exist only at intersections and dead-ends; edges thus represent
+street segments (possibly curving, as full spatial geometry is retained) between them
+(ibid.). In this method, the bearing of edge e equals the compass heading from u to v
+uv
+andits reciprocal (e.g.,ifthebearing from utovis90° then weadditionallyaddabear-
+ing of 270° since the one-dimensional street centerline points in both directions). This
+captures the orientation of street segments but ignores the nuances of mid-block
+curvature. To address this, the second method does not simplify the topology: edges
+represent OpenStreetMap’s raw straight-line street segments, either between intersec-
+tions or in chunks approximating curving streets. This method weights each edge’s
+bearing by length to adjust for extremely short edges in these curve-approximations. In
+both methods,self-loopingedges haveundefinedbearings, which areignored.
+Oncewehavecalculatedallofthebearings(andtheirreciprocals)foralltheedgesina
+city, we divide them into 36 equal-sized bins (i.e., each bin represents 10°). To avoid ex-
+tremebin-edgeeffectsaroundcommonvalueslike0°and90°,weshifteachbinby−5°so
+thatthesevaluessitatthecentersoftheirbinsratherthanattheiredges.Thisallowssimi-
+lar common bearings such as 359.9° and 0.1° to fall in the same bin as each other. Once
+the bearings are binned, we calculate the Shannon entropy, Η, of the city’s orientations’
+distribution (Shannon 1948). For each city’s graph, we first calculate the entropy of the
+unweighted/simplifiedstreetorientations,Η ,as:
+o
+X
+Η ¼− n PðoÞ log PðoÞ ð1Þ
+o i¼1 i e i
+where n represents the total number of bins, i indexes the bins, and P(o) represents
+i
+the proportion of orientations that fall in the ith bin. We similarly calculate the entropy
+oftheweighted/unsimplified street orientations,Η ,as:
+w
+X
+Η ¼− n PðwÞ log PðwÞ ð2Þ
+w i¼1 i e i
+where n represents the total number of bins, i indexes the bins, and P(w) represents
+i
+the proportion of weighted orientations that fall in the ith bin. While Η is biased by
+w
+thecity’sshape (duetolength-weighting),Η isnot.
+o
+The natural logarithm means the value of Η is in dimensionless units called
+“nats,” or the natural unit of information. The maximum entropy, Η , that any
+max
+city could have equals the logarithm of the number of bins: 3.584 nats. This rep-
+resents the maximum entropy distribution, a perfectly uniform distribution of
+street bearings across all bins. If all the bearings fell into a single bin, entropy
+would be minimized and equal 0. However, given the undirected graph, the min-
+imal theoretical entropy a street network could have (e.g., if all of its streets ran
+only north-south, thus falling evenly into two bins) would be 0.693 nats. But
+given the nature of the real world, a more plausible minimum would instead be
+an idealized city grid with all streets in four equal proportions (e.g., north-south-
+BoeingAppliedNetworkScience (2019) 4:67 Page6of19
+east-west). This perfect grid entropy, Η , would equal 1.386 nats. Therefore, we
+g
+can calculate a normalized measure of orientation-order, φ, to indicate where a
+city stands on a linear spectrum from completely disordered/uniform to perfectly
+ordered/grid-like as:
+(cid:2) (cid:3)
+Η −Η 2
+φ¼1− o g ð3Þ
+Η −Η
+max g
+Thus, a φ value of 0 indicates low order (i.e., perfect disorder and maximum entropy
+with a uniform distribution of streets in every direction) and a φ value of 1 indicates
+high order (i.e., a single perfectly-ordered idealized four-way grid and minimal possible
+entropy). Note that the value is squared to linearize its already normalized scale be-
+tween 0 and 1, allowing us to interpret it as the extent to which a city is ordered ac-
+cording to a single grid. All remaining indicators’ formulae use the (unweighted)
+simplified graph for the most faithful model of the urban form, geographically and
+topologically. We calculate each city’s median street segment length ĩ, average node de-
+gree k (i.e., how many edges are incident to the nodes on average), proportion of nodes
+that are dead-ends P , and proportion of nodes that are four-way intersections P .
+de 4w
+Finally,wecalculateeachcitystreet network’saverage circuity, ς,as:
+L
+ς¼ net ð4Þ
+L
+gc
+where L represents the sum of all edge lengths in the graph and L represents the
+net gc
+sum of all great-circle distances between all pairs of adjacent nodes. Thus, ς represents
+how much more circuitous a city’s street network is than it would be if all its edges
+were straight-linepaths betweennodes (Boeing 2019;Qureshietal. 2002).
+We visualize these characteristics and examine their statistical relationships to
+explore the nature of spatial order/disorder in the street networks’ orientations,
+hypothesizing that more-gridded cities (i.e., higher φ values) have higher connect-
+edness (i.e., higher node degrees, more four-way intersections, fewer dead-ends)
+and less-winding street patterns. Finally, to systematically interpret city similar-
+ities and differences, we cluster the study sites in a four-dimensional feature
+space of the key indicators of interest (k, φ, ĩ, and ς), representing a cross-section
+of street network character. We first standardize the features for appropriate scal-
+ing, then perform hierarchical agglomerative clustering using the Ward linkage
+method with a Euclidean metric.
+Results
+Table 1 presents the indicators’ values for each of the cities studied. We find that Η
+o
+and Η are very strongly correlated (Pearson product-moment correlation coefficient
+w
+r>0.99, p<0.001) and thus provide essentially redundant statistical information about
+these networks. Therefore, the remainder of these findings focus on Η unless other-
+o
+wise explicitly stated. Three American cities (Chicago, Miami, and Minneapolis) have
+the lowest orientation entropies of all the cities studied, indicating that their street net-
+worksarethe mostordered. Infact, all16 cities with the lowest entropiesare intheUS
+and Canada. Outside of the US/Canada, Mogadishu, Kyoto, and Melbourne have the
+lowest orientation entropies. Surprisingly, the city with the highest entropy, Charlotte,
+BoeingAppliedNetworkScience (2019) 4:67 Page7of19
+Table1Resultingindicatorsforthe100studysites
+Region City φ Η o Η w ĩ ς k̅ P de P 4w
+Asia/Oceania Bangkok 0.105 3.465 3.452 64.6 1.059 2.385 0.360 0.108
+Beijing 0.335 3.177 3.206 177.5 1.053 2.985 0.135 0.241
+Hanoi 0.010 3.573 3.572 64.4 1.065 2.610 0.246 0.102
+HongKong 0.012 3.571 3.563 61.0 1.137 2.932 0.114 0.174
+Jakarta 0.167 3.391 3.347 52.8 1.065 2.741 0.175 0.096
+Kabul 0.076 3.499 3.510 79.3 1.062 2.673 0.226 0.130
+Karachi 0.088 3.485 3.493 71.3 1.032 3.027 0.095 0.216
+Kathmandu 0.054 3.523 3.500 63.3 1.071 2.595 0.234 0.089
+Kyoto 0.357 3.148 3.229 49.6 1.090 2.887 0.134 0.157
+Manila 0.062 3.514 3.484 63.5 1.023 3.141 0.095 0.347
+Melbourne 0.340 3.172 3.203 51.9 1.037 3.160 0.060 0.332
+Mumbai 0.075 3.499 3.476 68.9 1.081 2.705 0.211 0.136
+NewDelhi 0.062 3.515 3.491 62.5 1.083 2.696 0.197 0.119
+Osaka 0.243 3.298 3.306 51.0 1.025 3.155 0.069 0.292
+PhnomPenh 0.324 3.193 3.235 81.6 1.040 2.784 0.205 0.188
+Pyongyang 0.024 3.557 3.568 132.4 1.097 2.524 0.294 0.120
+Seoul 0.009 3.573 3.573 53.5 1.048 3.011 0.101 0.205
+Shanghai 0.121 3.447 3.433 233.0 1.040 3.017 0.156 0.317
+Singapore 0.005 3.578 3.570 64.7 1.077 2.994 0.110 0.215
+Sydney 0.092 3.480 3.431 93.1 1.073 2.674 0.206 0.087
+Taipei 0.158 3.402 3.428 73.5 1.068 3.096 0.110 0.305
+Tokyo 0.050 3.528 3.529 49.6 1.046 2.950 0.119 0.186
+Ulaanbaatar 0.058 3.519 3.463 88.7 1.065 2.486 0.283 0.061
+Europe Amsterdam 0.071 3.504 3.488 65.8 1.080 2.897 0.146 0.205
+Athens 0.041 3.538 3.532 55.5 1.019 3.245 0.056 0.363
+Barcelona 0.108 3.462 3.460 78.1 1.052 3.135 0.078 0.303
+Berlin 0.011 3.572 3.570 113.1 1.040 3.002 0.118 0.259
+Budapest 0.050 3.528 3.516 93.0 1.032 3.037 0.096 0.231
+Copenhagen 0.029 3.552 3.551 78.0 1.048 2.881 0.146 0.194
+Dublin 0.024 3.557 3.541 71.5 1.061 2.492 0.279 0.068
+Glasgow 0.047 3.531 3.513 72.3 1.079 2.620 0.238 0.109
+Helsinki 0.006 3.577 3.571 42.0 1.063 2.348 0.395 0.134
+Kiev 0.014 3.568 3.554 125.1 1.053 2.813 0.164 0.160
+Lisbon 0.023 3.558 3.546 60.8 1.068 2.923 0.108 0.154
+London 0.015 3.566 3.564 70.3 1.061 2.561 0.251 0.070
+Madrid 0.019 3.562 3.553 62.5 1.050 3.079 0.065 0.210
+Moscow 0.007 3.576 3.573 130.5 1.055 2.999 0.074 0.170
+Munich 0.078 3.496 3.482 96.0 1.046 2.958 0.099 0.200
+Oslo 0.008 3.574 3.564 78.0 1.095 2.711 0.197 0.113
+Paris 0.016 3.566 3.568 71.5 1.023 3.110 0.050 0.240
+Prague 0.049 3.529 3.513 84.5 1.065 2.807 0.177 0.171
+Reykjavik 0.056 3.522 3.529 63.2 1.071 2.540 0.283 0.117
+Rome 0.005 3.578 3.578 73.7 1.070 2.820 0.161 0.145
+Sarajevo 0.039 3.540 3.558 94.7 1.133 2.522 0.270 0.078
+BoeingAppliedNetworkScience (2019) 4:67 Page8of19
+Table1Resultingindicatorsforthe100studysites(Continued)
+Region City φ Η o Η w ĩ ς k̅ P de P 4w
+Stockholm 0.006 3.577 3.568 82.0 1.091 2.681 0.222 0.141
+Venice 0.017 3.564 3.553 23.2 1.090 2.474 0.300 0.073
+Vienna 0.050 3.528 3.515 90.4 1.043 2.985 0.122 0.244
+Warsaw 0.036 3.544 3.532 90.9 1.043 2.717 0.204 0.160
+LatinAmerica Bogota 0.040 3.539 3.529 58.4 1.044 2.977 0.122 0.234
+BuenosAires 0.151 3.411 3.423 104.8 1.011 3.548 0.027 0.576
+Caracas 0.029 3.551 3.564 95.3 1.148 2.710 0.217 0.145
+Havana 0.029 3.551 3.552 86.9 1.040 3.130 0.118 0.357
+Lima 0.278 3.254 3.228 76.7 1.017 3.161 0.040 0.331
+MexicoCity 0.154 3.408 3.406 69.9 1.043 2.977 0.146 0.264
+PortauPrince 0.028 3.552 3.554 55.0 1.088 2.495 0.295 0.087
+RiodeJaneiro 0.014 3.568 3.566 74.0 1.055 2.804 0.172 0.147
+SaoPaulo 0.002 3.581 3.580 76.0 1.050 2.936 0.120 0.176
+MiddleEast/Africa Baghdad 0.083 3.490 3.498 68.3 1.033 3.043 0.050 0.144
+Beirut 0.206 3.344 3.308 63.9 1.026 3.061 0.072 0.218
+Cairo 0.041 3.538 3.526 66.6 1.067 2.996 0.085 0.171
+CapeTown 0.025 3.556 3.553 75.2 1.102 2.793 0.183 0.162
+Casablanca 0.094 3.477 3.461 48.0 1.048 3.026 0.080 0.178
+Damascus 0.043 3.536 3.525 65.8 1.085 2.801 0.146 0.107
+Dubai 0.031 3.550 3.529 79.7 1.087 2.925 0.074 0.073
+Istanbul 0.007 3.576 3.574 50.1 1.059 2.998 0.093 0.174
+Jerusalem 0.014 3.568 3.562 44.0 1.092 2.735 0.180 0.109
+Johannesburg 0.019 3.562 3.556 88.6 1.098 2.865 0.158 0.182
+Lagos 0.039 3.540 3.521 87.2 1.048 2.619 0.223 0.070
+Mogadishu 0.375 3.123 3.292 39.4 1.019 3.346 0.055 0.472
+Nairobi 0.014 3.568 3.556 91.8 1.083 2.506 0.279 0.075
+Tehran 0.137 3.427 3.405 52.0 1.045 2.652 0.240 0.134
+US/Canada Atlanta 0.315 3.204 3.197 112.5 1.074 2.806 0.164 0.153
+Baltimore 0.223 3.324 3.367 100.0 1.036 3.182 0.085 0.360
+Boston 0.026 3.554 3.552 77.0 1.039 2.945 0.135 0.211
+Charlotte 0.002 3.582 3.581 117.2 1.067 2.546 0.288 0.139
+Chicago 0.899 2.083 2.103 105.3 1.016 3.343 0.074 0.507
+Cleveland 0.486 2.961 2.899 103.7 1.029 2.979 0.091 0.198
+Dallas 0.305 3.218 3.182 106.1 1.042 3.120 0.091 0.317
+Denver 0.678 2.634 2.571 102.7 1.031 3.249 0.071 0.416
+Detroit 0.582 2.807 2.718 101.2 1.012 3.352 0.053 0.482
+Honolulu 0.034 3.545 3.550 101.8 1.073 2.681 0.252 0.185
+Houston 0.425 3.052 3.006 96.2 1.045 3.027 0.127 0.307
+LasVegas 0.542 2.874 2.775 86.1 1.079 2.676 0.230 0.166
+LosAngeles 0.348 3.161 3.145 109.9 1.048 2.911 0.171 0.273
+Manhattan 0.669 2.650 2.571 82.2 1.017 3.508 0.027 0.572
+Miami 0.811 2.341 2.291 96.7 1.023 3.236 0.069 0.407
+Minneapolis 0.749 2.486 2.464 115.4 1.023 3.393 0.053 0.521
+Montreal 0.204 3.346 3.332 87.4 1.057 3.239 0.051 0.344
+BoeingAppliedNetworkScience (2019) 4:67 Page9of19
+Table1Resultingindicatorsforthe100studysites(Continued)
+Region City φ Η o Η w ĩ ς k̅ P de P 4w
+NewOrleans 0.123 3.444 3.457 99.6 1.035 3.378 0.077 0.526
+Orlando 0.481 2.969 2.929 100.1 1.064 2.914 0.120 0.237
+Philadelphia 0.312 3.209 3.267 83.9 1.030 3.315 0.047 0.398
+Phoenix 0.586 2.801 2.563 97.1 1.073 2.795 0.186 0.171
+Pittsburgh 0.018 3.564 3.565 94.0 1.054 2.854 0.173 0.231
+Portland 0.679 2.632 2.680 82.1 1.041 3.032 0.146 0.327
+SanFrancisco 0.278 3.253 3.226 94.4 1.033 3.304 0.087 0.454
+Seattle 0.723 2.542 2.474 97.2 1.028 3.107 0.136 0.369
+StLouis 0.276 3.256 3.225 107.0 1.023 3.165 0.098 0.374
+Toronto 0.474 2.980 2.885 103.1 1.090 2.994 0.109 0.217
+Vancouver 0.749 2.488 2.413 103.7 1.022 3.308 0.073 0.455
+Washington 0.377 3.121 3.113 99.5 1.038 3.252 0.065 0.370
+φistheorientation-orderindicator,Η orepresentsstreetorientationentropy,Η wrepresentsweightedstreetorientation
+entropy,ĩrepresentsmedianstreetsegmentlength(meters),ςrepresentsaveragecircuity,k̅representsaveragenode
+degree,P derepresentstheproportionofnodesthataredead-ends,andP 4wrepresentstheproportionofnodesthatare
+four-wayintersections
+is also in the US. São Paulo and Rome immediately follow it as the next highest cities.
+Chicago, the most ordered city, has a φ of 0.90, while Charlotte, the most disordered,
+has a φ of 0.002. Recall that a φ of 0 indicates a uniform distribution of streets in every
+direction and a φ of 1 indicates a single perfectly-ordered grid. Charlotte’s and São
+Paulo’sstreetorientations arenearly perfectly disordered.
+Venice, Mogadishu, Helsinki, Jerusalem, and Casablanca have the shortest median
+street segment lengths (indicating fine-grained networks) while Kiev, Moscow,
+Pyongyang, Beijing, and Shanghai have the longest (indicating coarse-grained net-
+works). Due to their straight gridded streets, Buenos Aires, Detroit, and Chicago have
+the least circuitous networks (only 1.1%–1.6% more circuitous than straight-line dis-
+tances), while Caracas, Hong Kong, and Sarajevo have the most circuitous networks
+(13.3%–14.8% more circuitous than straight-line distances) due largely to topography.
+Helsinki and Bangkok have the lowest average node degrees, each with fewer than 2.4
+streets per node. Buenos Aires and Manhattan have the greatest average node degrees,
+both over 3.5 streets per node. Buenos Aires and Manhattan similarly have the largest
+proportionsoffour-way intersectionsandthesmallest proportionsofdead-endnodes.
+Figure 1 and Table 2 aggregate these results by world region (though note that the
+regional aggregation sample sizes are relatively small and thus the usual caveats apply).
+On average, the US/Canadian cities exhibit the lowest street orientation entropy, circu-
+ity, and proportions of dead-ends as well as the highest median street segment lengths,
+average node degrees, and proportions of four-way intersections. They are also by far
+the most grid-like in terms of φ. On average, the European cities exhibit the highest
+street orientation entropy and proportion of dead-ends as well as the lowest average
+nodedegrees.Theyaretheleastgrid-likeintermsofφ.
+To illustrate the geography of these order/entropy trends, Fig. 2 maps the 100 study
+sites by φ terciles. As expected, most of the sites in the US and Canada fall in the high-
+est tercile (i.e., they have low entropy and highly-ordered, grid-like street orientations),
+but the notable exceptions of high-entropy Charlotte, Boston, and Pittsburgh fall in the
+lowest tercile. Most of the sites in Europe fall in the lowest tercile (i.e., they have high
+BoeingAppliedNetworkScience (2019) 4:67 Page10of19
+Fig.1Probabilitydensitiesofcities’φ,Η o,andΗ w,byregion,estimatedwithkerneldensityestimation.The
+areaundereachcurveequals1
+entropy and disordered street orientations). Most of the sites across the Middle East
+andSouth Asiafallinthemiddle tercile.
+To better visualize spatial order and entropy, we plot polar histograms of each city’s
+street orientations. Each polar histogram contains 36 bins, matching the description in
+the methods section.Each histogram bar’s direction represents the compass bearings of
+the streets (in that histogram bin) and its length represents the relative frequency of
+streets with those bearings. The two examples in Fig. 3 demonstrate this. On the left,
+Manhattan’s 29° angled grid originates from the New York Commissioners’ Plan of
+1811, which laid out its iconic 800-ft×200-ft blocks (Ballon 2012; Koeppel 2015).
+Broadway weaves diagonally across it, revealing the path dependence of the old Wick-
+quasgeck Trail’s vestiges, by which Native Americans traversed the island long before
+the first Dutch colonists arrived (Holloway 2013). On the right, Boston features a grid
+in some neighborhoods like the Back Bay and South Boston, but they tend to not align
+with one another, resulting in the polar histogram’s jumble of competing orientations.
+Furthermore,thegridsarenotubiquitousandBoston’sotherstreetswindinvariousdi-
+rections, resulting from its age (old by American standards), terrain (relatively hilly),
+and historical annexation of various independent towns with their own pre-existing
+streetnetworks.
+Figures 4 and 5 visualize each city’s street orientations as a polar histogram. Figure 4
+presents them alphabetically to correspond with Table 1 while Fig. 5 presents them in
+descendingorderofφvaluestobetterillustratetheconnectionbetweenentropy,gridded-
+ness, and statistical dispersion. The plots exhibit perfect 180° rotational symmetry and,
+typically, approximate 90° rotational symmetry as well. About half of these cities (49%)
+have an at least approximate north-south-east-west orientation trend (i.e., 0°-90°-180°-
+270° are their most common four street bearing bins). Another 14% have the adjacent
+Table2Meanvaluesofindicatorsaggregatedbyworldregion
+φ Η Η ĩ ς k̅ P P
+o w de 4w
+Asia/Oceania 0.123 3.439 3.437 80.6 1.062 2.836 0.171 0.184
+Europe 0.033 3.547 3.540 78.7 1.061 2.814 0.172 0.172
+LatinAmerica 0.081 3.490 3.489 77.5 1.055 2.971 0.140 0.257
+MiddleEast/Africa 0.081 3.490 3.490 65.8 1.064 2.883 0.137 0.162
+US/Canada 0.427 3.003 2.969 98.8 1.043 3.090 0.116 0.334
+SeeTable1forcolumndefinitions
+BoeingAppliedNetworkScience (2019) 4:67 Page11of19
+Fig.2Mapofstudysitesintercilesoforientation-order,φ
+orientations (i.e., 10°-100°-190°-280° or 80°-170°-260°-350°) as their most common. Thus,
+evencitieswithoutastronggridorientationoftenstilldemonstrateanoveralltendencyfa-
+voring north-south-east-west orientation (e.g., as seen in Berlin, Hanoi, Istanbul, and
+Jerusalem).
+Straightforward orthogonal grids can be seen in the histograms of Chicago, Miami, and
+others. Detroit presents an interesting case, as it primarily comprises two separate orthog-
+onalgrids,oneaslightrotationoftheother.WhileSeattle’shistogramlooksfairlygrid-like,
+itisnotfullyso:mostofSeattleisindeedonanorth-south-east-westgrid,butitsdowntown
+rotates by both 32° and 49° (Speidel 1967). Accordingly, there are observations in all of its
+bins and its Η =2.54 and φ=0.72, whereas a perfect grid would have Η =1.39and φ=1.
+o o
+Thus, it is about 72% of the way between perfect disorder and a single perfect grid.
+However,itsrotateddowntowncomprisesarelativelysmallnumberofstreetssuchthatthe
+Fig.3StreetnetworksandcorrespondingpolarhistogramsforManhattanandBoston
+BoeingAppliedNetworkScience (2019) 4:67 Page12of19
+Fig.4Polarhistogramsof100worldcities’streetorientations,sortedalphabeticallycorrespondingwith
+Table1
+restofthecity’smuchlargervolumeswampsthehistogram’srelativefrequencies.Thesame
+effectsaretrueofsimilarcites,suchasDenverandMinneapolis,thathavedowntowngrids
+at an offset from the rest of the city (Goodstein 1994). If an entire city is on a grid except
+foronerelativelysmalldistrict,theprimarygridtendstooverwhelmthefeweroffsetstreets
+(cf.Detroit,withitstwodistinctandmoreevenly-sizedseparategrids).
+Figures 4 and 5 put Chicago’s low entropy and Charlotte’s high entropy in per-
+spective. Of these 100 cities, Chicago exhibits the closest approximation of a single
+perfect grid with the majority of its streets falling into just four bins centered on
+0°, 90°, 180°, and 270°. Its φ=0.90, suggesting it is 90% of the way between perfect
+disorder and a single perfect grid, somewhat remarkable for such a large city. Most
+American cities’ polar histograms similarly tend to cluster in at least a rough, ap-
+proximate way. Charlotte, Rome, and São Paulo, meanwhile, have nearly uniform
+distributions of street orientations around the compass. Rather than one or two
+primary orthogonal grids organizing city circulation, their streets run more evenly
+in every direction.
+As discussed earlier, orientation entropy and weighted orientation entropy are strongly
+correlated. Additionally, φ moderately and negatively correlates with average circuity (r(φ,
+ς)=−0.432, p<0.001) and the proportion of dead-ends (r(φ, P )=−0.376, p<0.001), and
+de
+BoeingAppliedNetworkScience (2019) 4:67 Page13of19
+Fig.5PolarhistogramsfromFig.4,resortedbydescendingφfrommosttoleastgrid-like(equivalentto
+leasttogreatestentropy)
+moderatelyandpositivelycorrelateswiththeaveragenodedegree(r(φ,k)=0.518,p<0.001)
+andproportionoffour-wayintersections(r(φ,P )=0.634,p<0.001).Ashypothesized,cit-
+4w
+ies with more grid-like street orientations tend to also have more streets per node, more
+four-way junctions, fewer winding street patterns, and fewer dead-ends. Besides these
+relationships, φ also has a weak but significant correlation with median street segment
+length (r(φ, ĩ)=0.27, p<0.01), concurring with previous findings examining the UK alone
+(Gudmundsson and Mohajeri 2013). Average circuity moderately strongly and negatively
+correlates with the average node degree (r(ς, k)=−0.672, p<0.001) and the proportion of
+four-way intersections (r(ς, P )=−0.689, p<0.001). Cities with more winding street pat-
+4w
+ternstendtohavefewerstreetspernodeandfewergrid-likefour-wayjunctions.
+Figure 6 presents the dendrogram obtained from the cluster analysis, allowing
+us to systematically explore cities that are more- or less-similar to each other.
+The dendrogram’s structure suggests three high-level superclusters of cities, but
+for further analysis, we cut its tree at an intermediate level (eight clusters) for
+better external validity and more nuanced insight into those larger structures. To
+visualize these clusters another way, we map their four-dimensional feature space
+to two dimensions using t-SNE, a manifold learning approach for nonlinear
+dimensionality reduction that is well-suited for embedding higher-dimensional
+BoeingAppliedNetworkScience (2019) 4:67 Page14of19
+Fig.6Clusteranalysisdendrogram.ClustercolorscorrespondtoFig.7
+data in a plane for visualization (van der Maaten and Hinton 2008). Figure 7
+scatterplots the cities in these two dimensions: the t-SNE projection preserves
+their cluster structure relatively well despite inherent information loss, but, given
+the global density-equalizing nature of the algorithm, the relative distances within
+BoeingAppliedNetworkScience (2019) 4:67 Page15of19
+Fig.7Scatterplotofcitiesintwodimensionsviat-SNE.ClustercolorscorrespondtoFig.6.Triangles
+representUS/Canadiancitiesandcirclesrepresentothercities
+and between clusters are not preserved in the embedding and should not be
+interpreted otherwise.
+Most of the North American cities lie near each other in three adjacent clusters
+(red, orange, and blue), which contain grid-like—and almost exclusively North
+American—cities. The orange cluster represents relatively dense, gridded cities like
+Chicago, Portland, Vancouver, and Manhattan. The blue cluster contains less-
+perfectly gridded US cities, typified by San Francisco and Washington (plus, interest-
+ingly, Buenos Aires). The red cluster represents sprawling but relatively low-entropy
+cities like Los Angeles, Phoenix, and Las Vegas. Sprawling, high-entropy Charlotte is
+in a separate cluster (alongside Honolulu) dominated by cities that developed at least
+in part under the auspices of twentieth century communism, including Moscow, Kiev,
+Warsaw, Prague, Berlin, Kabul, Pyongyang, and Ulaanbaatar. Beijing and Shanghai are
+alone in their own cluster, more dissimilar from the other study sites. The dark gray
+cluster comprises the three cities with the most circuitous networks: Caracas, Hong
+Kong, and Sarajevo. While the US cities tend to group together in the red, orange,
+and blue clusters, the other world regions’ cities tend to distribute more evenly across
+the green, purple, and light gray clusters.
+Discussion
+The urban design historian Spiro Kostof once said: “We ‘read’ form correctly only to
+the extent that we are familiar with the precise cultural conditions that generated it…
+The more we know about cultures, about the structure of society in various periods of
+historyindifferentpartsoftheworld, the better weare abletoread theirbuilt environ-
+ment” (Kostof 1991, p. 10). This study does not identify whether or how a city is
+planned or not. Specific spatial logics cannot be conflated with planning itself, which
+takes diverse forms and embodies innumerable patterns and complex structures, as do
+informal settlements and organic urban fabrics. In many cities, centrally planned and
+BoeingAppliedNetworkScience (2019) 4:67 Page16of19
+self-organized spatial patterns coexist, as the urban form evolves over time or as a city
+expands toaccrete newheterogeneous urban formsthroughsynoecism.
+Yet these findings do, in concert, illustrate different urban spatial ordering principles
+and help explain some nuances of griddedness. For example, gridded Buenos Aires has
+a φ value suggesting it only follows a single grid to a 15% extent. However, its low cir-
+cuity and high average node degree values demonstrate how it actually comprises mul-
+tiple competing grids—which can indeed be seen in Figs. 4 and 5—and it clusters
+accordingly in Figs. 6 and 7 with gridded American cities. Jointly considered, the φ in-
+dicator, average circuity, average node degree, and median street segment length tell us
+about the extent of griddedness and its character (curvilinear, straight-line, monolithic,
+heterogeneous, coarse-grained, etc.). Charlotte further illustrates the importance of tak-
+ing these indicators together. Although its φ and orientation entropy are more similar
+to European cities’ than American cities’, it is of course an oversimplification to claim
+that Charlotte is therefore the US city with the most “European” street network—in
+fact, its median street segment length is about 50% longer than that of the average
+European city, and among European cities, Charlotte clusters primarily with those of
+the Communist Bloc. Pittsburgh, on the other hand, sits alone in a small sub-cluster
+with Munich andVienna.
+We find that cities with higher φ values also tend to have higher node degrees, more
+four-way intersections, fewer dead-ends, and less-winding street patterns. That is, cities
+that are more consistently organized according to a grid tend to exhibit greater con-
+nectedness and less circuity. Interestingly, the Η and Η orientation entropies are ex-
+o w
+tremely similar and strongly correlated: the weighted curvatures (versus straight-line
+orientation) of individual street segments have little impact on citywide orientation en-
+tropy, but the average circuity of the city network as a whole positively correlates with
+orientation entropy. Thisfinding deserves further exploration.
+These results also demonstrate substantial regional differences around the
+world. Across these study sites, US/Canadian cities have an average φ value
+nearly thirteen-times greater than that of European cities, alongside nearly double
+the average proportion of four-way intersections. Meanwhile, these European cit-
+ies’ streets on average are 42% more circuitous than those of the US/Canadian
+cities. These findings illustrate the differences between North American and
+European urban patterns. However, likely due to such regional heterogeneity, this
+study finds statistical relationships somewhat weaker (though still significant)
+than prior findings examining cities in the UK exclusively.
+Accordingly, given the heterogeneity of these world regions, future research can
+estimate separate statistical models for individual regions or countries—or even the
+neighborhoods of a single city to draw these findings closer to the scale of plan-
+ning/design practice. The methods and indicators developed here offer planners
+and designers a toolbox to quantify urban form patterns and compare their own
+cities to those elsewhere in the world. Our preliminary results suggest trends and
+patterns, but future work should introduce additional controls to clarify relation-
+ships and make these findings more actionable for researchers and practitioners.
+For instance, topography likely constrains griddedness and influences circuity and
+orientation entropy: a study of urban elevation change and hilliness in conjunction
+with entropy and circuity would help clarify these relationships. Additionally,
+BoeingAppliedNetworkScience (2019) 4:67 Page18of19
+BarronC,NeisP,Zipf A(2014) AcomprehensiveframeworkforintrinsicOpenStreetMapqualityanalysis.TransGIS18:
+877–895.https://doi.org/10.1111/tgis.12073
+BarthelemyM(2011)Spatialnetworks.PhysRep499:1–101.https://doi.org/10.1016/j.physrep.2010.11.002
+BarthelemyM,BordinP,BerestyckiH,GribaudiM(2013)Self-organizationversustop-downplanningintheevolutionofa
+city.SciRep3.https://doi.org/10.1038/srep02153
+BarthelemyM,FlamminiA(2008)ModelingUrbanStreetPatterns.PhysRevLett100.https://doi.org/10.1103/PhysRevLett.100.138702
+BattyM(2005a)Networkgeography:relations,interactions,scalingandspatialprocessesinGIS.In:UnwinDJ,FisherP(eds)
+Re-presentingGIS.Wiley,Chichester,pp149–170
+BattyM(2005b)Citiesandcomplexity:understandingcitieswithcellularautomata,agent-basedmodels,andfractals.MITPress,Cambridge
+BattyM,MorphetR,MasucciP,StanilovK(2014)Entropy,complexity,andspatialinformation.JGeogrSyst16:363–385.
+https://doi.org/10.1007/s10109-014-0202-2
+BoeingG(2017)OSMnx:newmethodsforacquiring,constructing,analyzing,andvisualizingcomplexstreetnetworks.
+ComputEnvironUrbanSyst65:126–139.https://doi.org/10.1016/j.compenvurbsys.2017.05.004
+BoeingG(2018a)Measuringthecomplexityofurbanformanddesign.Urban DesInt23:281–292. https://doi.org/10.1
+057/s41289-018-0072-1
+BoeingG(2018b)Amulti-scaleanalysisof27,000urbanstreetnetworks:everyUSCity,town,urbanizedarea,andZillow
+neighborhood.EnvironPlanB:UrbanAnalCitySci:1–19.https://doi.org/10.1177/2399808318784595
+BoeingG(2018c)Planarityandstreetnetworkrepresentationinurbanformanalysis.EnvironPlanB:UrbanAnalCitySci:1–13.
+https://doi.org/10.1177/2399808318802941
+BoeingG(2019)Themorphologyandcircuityofwalkableanddrivablestreetnetworks.In:D’AcciL(ed)Themathematicsof
+urbanmorphology.Birkhäuser,Basel.https://doi.org/10.1007/978-3-030-12381-9_12
+BoyerCM(1983)DreamingtheRationalCity.TheMITPress,Cambridge
+BuhlJ,Gautrais J,ReevesN,SoléRV,ValverdeS,KuntzP,Theraulaz G(2006)Topologicalpatternsinstreetnetworks
+ofself-organizedurbansettlements.EurPhysJB49:513–522. https://doi.org/10.1140/epjb/e2006-00085-1
+BurnsA(1976)HippodamusandthePlannedCity.Historia:ZeitschriftAlteGeschichte25:414–428
+CardilloA,ScellatoS,LatoraV,PortaS(2006)Structuralpropertiesofplanargraphsofurbanstreetpatterns.PhysRevE73.
+https://doi.org/10.1103/PhysRevE.73.066107
+ChanSHY,DonnerRV,LämmerS(2011)Urbanroadnetworks—spatialnetworkswithuniversalgeometricfeatures?Eur
+PhysJB84:563–577.https://doi.org/10.1140/epjb/e2011-10889-3
+CourtatT,GloaguenC,Douady S(2011)Mathematicsandmorphogenesisofcities:ageometricalapproach.PhysRev
+E83:1–12.https://doi.org/10.1103/PhysRevE.83.036106
+DearM(2001)FromChicagotoL.A.:makingsenseofurbantheory.Sagepublications,Thousandoaks
+DucruetC,BeauguitteL(2014)Spatialscienceandnetworkscience:reviewandoutcomesofacomplexrelationship.Netw
+SpatEcon14:297–316.https://doi.org/10.1007/s11067-013-9222-6
+EllicksonRC(2013)Thelawandeconomicsofstreetlayouts:howagridpatternbenefitsadowntown.AlabamaLawRev64:463–510
+ElmanB,KernM(eds)(2009)Statecraftandclassicallearning:theritualsofZhouineastAsianhistory.BrillAcademicPub,Boston
+EppsteinD,GoodrichMT(2008)Studying(non-planar)roadnetworksthroughanalgorithmicLens.In:Proceedingsofthe
+16thACMSIGSPATIALinternationalconferenceonadvancesingeographicinformationsystems,GIS‘08.Presentedatthe
+SIGSPATIAL‘08,Irvine,California,p16.https://doi.org/10.1145/1463434.1463455
+GiacominDJ,LevinsonDM(2015)Roadnetworkcircuityinmetropolitanareas.EnvironPlanB:PlanDes42:1040–1053.
+https://doi.org/10.1068/b130131p
+GoodsteinP(1994)Denverstreets:names,numbers,locations,Logic.NewSocialPublications,Denver
+GrothP(1981)Streetgridsasframeworksforurbanvariety.HarvardArchitRev2:68–75
+GudmundssonA,MohajeriN(2013)Entropyandorderinurbanstreetnetworks.SciRep3.https://doi.org/10.1038/srep03324
+HansonJ(1989)OrderandstructureinUrbanDesign.Ekistics56:22–42
+HatukaT,ForsythL(2005)Urbandesigninthecontextofglocalizationandnationalism.UrbanDesInt10:69–86.https://doi.
+org/10.1057/palgrave.udi.9000142
+HollowayM(2013)ThemeasureofManhattan:thetumultuouscareerandsurprisinglegacyofJohnRandel,Jr.,cartographer,
+surveyor,inventor.W.W.Norton&Company,NewYork
+JacksonKT(1985)Crabgrassfrontier:thesuburbanizationoftheUnitedStates.OxfordUniversityPress,NewYork
+JacobsA(1995)Greatstreets.MITPress,Cambridge
+JiangB,ClaramuntC(2004)Topologicalanalysisofurban streetnetworks.EnvironPlanB:PlanDes31:151–162.
+https://doi.org/10.1068/b306
+JiangB,DuanY,LuF,YangT,ZhaoJ(2014)Topologicalstructureofurbanstreetnetworksfromtheperspectiveofdegree
+correlations.EnvironPlanB:PlanDes41:813–828.https://doi.org/10.1068/b39110
+KaiserA(2011)Romanurbanstreetnetworks:streetsandtheOrganizationofSpaceinfourcities.Routledge,London
+KarimiK(1997)ThespatiallogicoforganiccitiesinIranandtheUnitedKingdom.Presentedatthespacesyntaxfirst
+internationalsymposium.England,London
+KoeppelG(2015)Cityonagrid:howNewYorkbecameNewYork.DaCapoPress,Boston
+KostofS(1991)TheCityshaped:urbanpatternsandmeaningsthroughhistory.BulfinchPress,NewYork
+LevinsonD,El-GeneidyA(2009)Theminimumcircuityfrontierandthejourneytowork.RegSciUrbanEcon39:732–738.
+https://doi.org/10.1016/j.regsciurbeco.2009.07.003
+LiW,HuD,LiuY(2018)Animprovedmeasuringmethodfortheinformationentropyofnetworktopology.TransGIS22:
+1632–1648.https://doi.org/10.1111/tgis.12487
+LilleyKD(2001)Urbanplanningandthedesignoftownsinthemiddleages.PlanPerspect16:1–24.https://doi.org/10.1080/
+02665430010000751
+LinJ,BanY(2013)Complexnetworktopologyoftransportationsystems.TranspRev33:658–685.https://doi.org/10.1080/
+01441647.2013.848955
+LoufR,BarthelemyM(2014)Atypologyofstreetpatterns.JRSocInterface11:1–7.https://doi.org/10.1098/rsif.2014.0924
+LowSM(2009)IndigenousarchitectureandtheSpanishAmericanplazainMesoamericaandtheCaribbean.AmAnthropol
+97:748–762.https://doi.org/10.1525/aa.1995.97.4.02a00160
+MarshallS(2004)Streetsandpatterns.SponPress,NewYork
+BoeingAppliedNetworkScience (2019) 4:67 Page19of19
+MarshallS,GilJ,KropfK,TomkoM,FigueiredoL(2018)Streetnetworkstudies:fromnetworkstomodelsandtheir
+representations.NetwSpatEcon.https://doi.org/10.1007/s11067-018-9427-9
+MartinL(2000)Thegridasgenerator.ArchitResQ4:309–322.https://doi.org/10.1017/S1359135500000403
+MasucciAP,StanilovK,BattyM(2013)Limitedurbangrowth:London’sstreetnetworkdynamicssincethe18thcentury.PLoS
+One8:e69469.https://doi.org/10.1371/journal.pone.0069469
+MazzaL(2009)Planandconstitution-Aristotle’sHippodamus:towardsan“ostensive”definitionofspatialplanning.Town
+PlanRev80:113–141.https://doi.org/10.3828/tpr.80.2.2
+McIntoshJR(2007)TheancientIndusValley:newperspectives.ABC-CLIO,SantaBarbara
+MeleC(2017)Spatialorderthroughthefamily:theregulationofurbanspaceinSingapore.UrbanGeogr38:1084–1108.
+https://doi.org/10.1080/02723638.2016.1187372
+MohajeriN,FrenchJ,GudmundssonA(2013a)Entropymeasuresofstreet-networkdispersion:analysisofcoastalcitiesin
+BrazilandBritain.Entropy15:3340–3360.https://doi.org/10.3390/e15093340
+MohajeriN,FrenchJR,BattyM(2013b)Evolutionandentropyintheorganizationofurbanstreetpatterns.AnnGIS19:1–16.
+https://doi.org/10.1080/19475683.2012.758175
+MohajeriN,GudmundssonA(2012)Entropiesandscalingexponentsofstreetandfracturenetworks.Entropy14:800–833.
+https://doi.org/10.3390/e14040800
+MohajeriN,GudmundssonA(2014)Theevolutionandcomplexityofurbanstreetnetworks:urbanstreetnetworks.Geogr
+Anal46:345–367.https://doi.org/10.1111/gean.12061
+NilssonL,GilJ(2019)Thesignatureoforganicurbangrowth:degreedistributionpatternsoftheCity’sstreetnetwork
+structure.In:D’AcciL(ed)Themathematicsofurbanmorphology.Springer,Cham,pp93–121.https://doi.org/10.1007/
+978-3-030-12381-9_5
+O’BrienDT,FarrellC,WelshBC(2019)Lookingthrough brokenwindows:theimpactofneighborhooddisorderon
+aggressionandfearofcrimeisanartifactofresearchdesign.AnnRev Criminol2:53–71.https://doi.org/10.1146/
+annurev-criminol-011518-024638
+PadenR(2001)ThetwoprofessionsofHippodamusofMiletus.PhilosGeogr4:25–48.https://doi.org/10.1080/10903770124644
+ParkRE,BurgessEW(eds)(1925)TheCity.UniversityofChicagoPress,Chicago
+ParthasarathiP,Hochmair H,LevinsonD(2015)Streetnetworkstructureandhouseholdactivityspaces.UrbanStud
+52:1090–1112.https://doi.org/10.1177/0042098014537956
+PetersonCW,ChiuBC(1987)OntheastronomicaloriginoftheoffsetstreetgridatTeotihuacan.JHistAstron18:13–18.
+https://doi.org/10.1177/002182868701801102
+PortaS,CrucittiP,LatoraV(2006)Thenetworkanalysisofurbanstreets:aprimalapproach.EnvironPlanB:PlanDes
+33:705–725.https://doi.org/10.1068/b32045
+QureshiM,HwangH-L,ChinS-M(2002)Comparisonofdistanceestimatesforcommodityflowsurvey:greatcircledistances
+versusnetwork-baseddistances.TranspResRec:212–216.https://doi.org/10.3141/1804-28
+RodriguezR(2005)ThefoundationalprocessofcitiesinSpanishAmerica:thelawofindiesasaplanningtoolfor
+urbanizationinearlycolonialtownsinVenezuela.Focus2:47–58.https://doi.org/10.15368/focus.2005v2n1.8
+Rose-RedwoodR(2011)MythologiesofthegridintheEmpireCity,1800-2011.GeogrRev101:396–413.https://doi.org/1
+0.1111/j.1931-0846.2011.00103.x
+Rose-RedwoodR,BigonL(2018)Griddedworlds:anurbananthology.Springer,Cham
+RoyA(2005)Urbaninformality:towardanepistemologyofplanning.JAmPlanAssoc71:147–158.https://doi.org/10.1080/01
+944360508976689
+SalingarosNA(1998)Theoryoftheurbanweb.JUrbanDes3:53–71.https://doi.org/10.1080/13574809808724416
+SennettR(1990)Americancities:thegridplanandtheProtestantethic.IntSocSciJ42:269–285.https://doi.org/10.1007/
+978-3-319-76490-0_11
+ShannonCE(1948)Amathematicaltheoryofcommunication.BellSystTechJ27(379–423):623–656.https://doi.org/10.1145/584091.584093
+SmithME(2007)Formandmeaningintheearliestcities:anewapproachtoancienturbanplanning.JPlanHist6:3–47.
+https://doi.org/10.1177/1538513206293713
+SouthworthM,Ben-JosephE(1995)Streetstandardsandtheshapingofsuburbia.JAmPlanAssoc61:65–81.https://doi.
+org/10.1080/01944369508975620
+SouthworthM,Ben-JosephE(2004)ReconsideringtheCul-de-sac.Access24:28–33.https://doi.org/10.1179/chi.2008.28.1.135
+SparavignaAC(2017) Thezenithpassageofthesunandthearchitecturesofthetropicalzone.MechMaterSciEng
+10:239–250.https://doi.org/10.2412/mmse.20.89.933
+SpeidelWC(1967)Sonsoftheprofits.NettleCreekPublishing,Seattle
+StanislawskiD(1946)Theoriginandspreadofthegrid-patterntown.GeogrRev36:105–120.https://doi.org/10.2307/211076
+TsiotasD,PolyzosS(2018)Thecomplexityinthestudyofspatialnetworks:anepistemologicalapproach.NetwSpatEcon18:
+1–32.https://doi.org/10.1007/s11067-017-9354-1
+vanderMaatenL,HintonG(2008)VisualizingDatausingt-SNE.JMachLearnRes9:2579–2605
+WangJ(2015)Resilienceofself-organisedandtop-downplannedcities—acasestudyonLondonandBeijingstreet
+networks.PLoSOne10:e0141736.https://doi.org/10.1371/journal.pone.0141736
+WirthL(1928)Theghetto.UniversityofChicagoPress,Chicago
+XuY(2008)Urbancommunities,state,spatialorder,andmodernity:studiesofImperialandrepublicanBeijinginperspective.
+ChinaRevInt15:1–38.https://doi.org/10.1353/cri.0.0139
+YehAG-O,LiX(2001)Measuringandmonitoringofurbansprawlinarapidlygrowingregionusingentropy.Photogramm
+EngRemoteSens67:83–90
+ZielstraD,HochmairHH,NeisP(2013)AssessingtheeffectofdataimportsonthecompletenessofOpenStreetMap–a
+UnitedStatescasestudy.TransGIS17:315–334.https://doi.org/10.1111/tgis.12037
+Publisher’s Note
+SpringerNatureremainsneutralwithregardtojurisdictionalclaimsinpublishedmapsandinstitutionalaffiliations.
+

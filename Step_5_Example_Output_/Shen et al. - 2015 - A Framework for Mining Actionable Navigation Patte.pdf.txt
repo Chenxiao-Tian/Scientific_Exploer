@@ -1,0 +1,43 @@
+Extracted Keywords:
+path segment, shopping path, shopping transaction, STP, path, transaction path, shopping, RFID, path STP, RFID data
+
+Main Topics:
+15, 5344 -5375, doi:10.3390/s150305344  
+ 
+sensors  
+ISSN, 1424 -8220  
+www.mdpi.com/journal/sensors  
+Article  
+A Framework, Mining Actionable Navigation Patterns, Indoor Mapping  
+Bin Shen, Xingsen Li, Libo Xu, 1 Ningbo Institute, Zhejiang  University, tsingbin @nit.zju.edu.cn, 2 School, Computer Science, Hangzhou Dianzi, E -Mail: xu_libo@163.com, +86-574-8813 -0015, External Editors, Kourosh Khoshelham, 11 December, / Accepted, the quick development, RFID technology, the decreasing prices, RFID devices, various intelligent services, the retail application d omain, the shopping tracks, the potential, this promising 
+application, this paper, a unified framework, RFID -based path analy tics, shopping paths, RFID -based  purchas ing data, mine 
+actionable  navigation patterns, Four modules, this framework, : 
+(1) mapping, the physical space, the cyber  space, 2) data, a nd (4) knowledge u
+
+Methodologies:
+To solve thi s problem,  
+two types of redundant patterns,  i.e., loop repeat pattern and palindrome -contained pattern 
+are recognized and the corresponding processing algorithms  are proposed. The 
+experimental results show that the redundant pattern filtering functions are effective and 
+scalable.   As a result,  both the walking trajectories of customers 
+and the correspo nding purchas e behaviors are automatically recorded in the RFID datasets, which are 
+quite precious for mining in -depth knowledge about the shopping behaviors of customers.   
+ [24–32] technologies shed s light on 
+the above problem, and motivate s us to consider building a bridge between RFID -based indoor 
+mapping and advance d data mining technique s to explore customer ’s shopping behavior  in depth . 
+ An algorithm which  can filter two types of 
+redundant patterns is also proposed. Then, a  simulated shoppin
+
+Research Outcomes:
+To solve thi s problem,  
+two types of redundant patterns,  i.e., loop repeat pattern and palindrome -contained pattern 
+are recognized and the corresponding processing algorithms  are proposed. The 
+experimental results show that the redundant pattern filtering functions are effective and 
+scalable.   As a result,  both the walking trajectories of customers 
+and the correspo nding purchas e behaviors are automatically recorded in the RFID datasets, which are 
+quite precious for mining in -depth knowledge about the shopping behaviors of customers.   
+ [24–32] technologies shed s light on 
+the above problem, and motivate s us to consider building a bridge between RFID -based indoor 
+mapping and advance d data mining technique s to explore customer ’s shopping behavior  in depth . 
+ An algorithm which  can filter two types of 
+redundant patterns is also proposed. Then, a  simulated shoppin

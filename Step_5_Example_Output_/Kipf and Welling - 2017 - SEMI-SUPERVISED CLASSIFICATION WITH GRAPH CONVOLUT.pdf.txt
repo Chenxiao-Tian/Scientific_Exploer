@@ -1,0 +1,63 @@
+Extracted Keywords:
+GRAPH, GCN model, neural network, model, network, node, GCN, network model, graphs, nodes
+
+Main Topics:
+a conference paper, 2017
+SEMI-SUPERVISED CLASSIFICATION, GRAPH CONVOLUTIONAL NETWORKS
+Thomas N. Kipf
+University, T.N.Kipf@uva.nlMax Welling
+University, Amsterdam
+Canadian Institute, Advanced Research, a scalable approach, semi-supervised learning, graph-structured
+data, an efﬁcient variant, convolutional neural networks, the choice, our convolutional archi-
+tecture, a localized ﬁrst-order approximation, spectral graph convolutions, Our model, the number, graph edges, hidden layer
+representations, both local graph structure, a number, citation networks, a knowledge, our approach, related methods, a signiﬁcant
+margin, the problem, a graph, a citation
+network, a small subset, This problem, graph-based semi-supervised learning, label information, the graph, some form, explicit graph-based regularization, Zhu et al, a graph Laplacian regularization term, the loss function, L=L0+Lreg;withLreg
+
+Methodologies:
+Published as a conference paper at ICLR 2017
+SEMI-SUPERVISED CLASSIFICATION WITH
+GRAPH CONVOLUTIONAL NETWORKS
+Thomas N. Kipf
+University of Amsterdam
+T.N.Kipf@uva.nlMax Welling
+University of Amsterdam
+Canadian Institute for Advanced Research (CIFAR)
+M.Welling@uva.nl
+ABSTRACT
+We present a scalable approach for semi-supervised learning on graph-structured
+data that is based on an efﬁcient variant of convolutional neural networks which
+operate directly on graphs. In
+a number of experiments on citation networks and on a knowledge graph dataset
+we demonstrate that our approach outperforms related methods by a signiﬁcant
+margin.
+ In
+a number of experiments on citation networks and on a knowledge graph dataset
+we demonstrate that our approach outperforms related methods by a signiﬁcant
+margin.
+ Experiments on a number of
+datasets demonstrate that our model compares favorably both in classiﬁcatio
+
+Research Outcomes:
+Published as a conference paper at ICLR 2017
+SEMI-SUPERVISED CLASSIFICATION WITH
+GRAPH CONVOLUTIONAL NETWORKS
+Thomas N. Kipf
+University of Amsterdam
+T.N.Kipf@uva.nlMax Welling
+University of Amsterdam
+Canadian Institute for Advanced Research (CIFAR)
+M.Welling@uva.nl
+ABSTRACT
+We present a scalable approach for semi-supervised learning on graph-structured
+data that is based on an efﬁcient variant of convolutional neural networks which
+operate directly on graphs. In
+a number of experiments on citation networks and on a knowledge graph dataset
+we demonstrate that our approach outperforms related methods by a signiﬁcant
+margin.
+ In
+a number of experiments on citation networks and on a knowledge graph dataset
+we demonstrate that our approach outperforms related methods by a signiﬁcant
+margin.
+ Experiments on a number of
+datasets demonstrate that our model compares favorably both in classiﬁcatio

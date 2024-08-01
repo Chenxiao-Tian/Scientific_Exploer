@@ -1,0 +1,1051 @@
+References:
+MEASURINGANDMODELINGBIPARTITEGRAPHS 601
+(a) (b)
+(c) (d)
+(e) (f)
+Fig.11.Degreedistributionsillustratingtheoriginal(circles),fastbipartiteCL(diamonds),andbipartiteBTER(squares).Thedata
+islog-binned.
+References
+1. Dhillon, I. S. (2001) Co-clustering documents and words using bipartite spectral graph partitioning. In
+KDD’01:ProceedingsoftheSeventhACMSIGKDDInternationalConferenceonKnowledgeDiscoveryand
+Datamining,269–274.NewYork,NY:ACM.
+2. Guillaume,J.-L.&Latapy,M.(2004)Bipartitestructureofallcomplexnetworks.Inf.Process.Lett.,90,
+215–221.
+3. Guillaume, J.-L. & Latapy, M. (2006) Bipartite graphs as models of complex networks. Physica A, 371,
+795–813.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+
+Annexes/Appendices:
+
+Body Text:
+JournalofComplexNetworks(2017)5,581–603
+doi:10.1093/comnet/cnx001
+AdvanceAccessPublicationon26March2017
+Measuringandmodelingbipartitegraphswithcommunitystructure
+SinanG.Aksoy
+DepartmentofMathematics,UniversityofCalifornia,SanDiego,CA92093,USA
+TamaraG.Kolda†
+SandiaNationalLaboratories,Livermore,CA94550,USA
+†Correspondingauthor.Email:tgkolda@sandia.gov
+and
+AliPinar
+SandiaNationalLaboratories,Livermore,CA94550,USA
+Editedby:AaronClauset
+[Receivedon7July2016;editorialdecisionon12January2017;acceptedon13February2017]
+Network science is a powerful tool for analyzing complex systems in fields ranging from sociology to
+engineeringtobiology.Thisarticleisfocusedongenerativemodelsoflarge-scalebipartitegraphs,also
+knownastwo-waygraphsortwo-modenetworks.Weproposetwogenerativemodelsthatcanbeeasily
+tunedtoreproducethecharacteristicsofreal-worldnetworks,notjustqualitativelybutquantitatively.The
+characteristicsweconsiderarethedegreedistributionsandthemetamorphosiscoefficient.Themetamor-
+phosiscoefficient,abipartiteanalogueoftheclusteringcoefficient,istheproportionoflength-threepaths
+thatparticipateinlength-fourcycles.Havingahighmetamorphosiscoefficientisanecessarycondition
+for close-knit community structure. We define edge, node and degreewise metamorphosis coefficients,
+enablingamoredetailedunderstandingofthebipartiteconnectivitythatisnotexplainedbydegreedis-
+tributionalone.Ourfirstmodel,bipartiteChung–Lu,isabletoreproducereal-worlddegreedistributions,
+andoursecondmodel,bipartiteblocktwo-levelErdo¨s–Re´nyi,reproducesboththedegreedistributionsas
+wellasthedegreewisemetamorphosiscoefficients.Wedemonstratetheeffectivenessofthesemodelson
+severalreal-worlddatasets.
+Keywords:bipartitegenerativegraphmodel;two-waygraphmodel;two-modenetwork;metamorphosis
+coefficient;bipartiteclusteringcoefficient;complexnetworks.
+1. Introduction
+Network science is a powerful tool for analysing complex systems in fields ranging from sociology
+toengineeringtobiology.Theabilitytodeveloprealisticmodelsofthenetworksisneededforseveral
+reasons.Pragmatically,weneedtogenerateartificialnetworkstofacilitatesharingofrealisticnetworkdata
+whilerespectingconcernsaboutprivacyandsecurityofdata.Moregenerally,generativemodelsenable
+unlimitednetworkdatagenerationforcomputationalanalysis,forexample,varyingthecharacteristics
+of the graph to test a graph algorithm under different scenarios. Ultimately, we hope to understand
+the underlying nature of complex systems, and modelling them mathematically is a way to test our
+understanding.
+Thisarticleisfocusedongenerativemodelsofbipartitegraphs,alsoknownastwo-waygraphsor
+two-modenetworks.Manyreal-worldsystemsarenaturallyexpressedasbipartitegraphs.Thedefining
+PublishedbyOxfordUniversityPress2017.Thisworkiswrittenby(a)USGovernmentemployee(s)andisinthepublicdomainintheUS.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+582 S.G.AKSOYETAL.
+Fig.1.Bipartitegraph.
+characteristicofabipartitegraphisthatitsverticesaredividedintotwopartitions,U andV,suchthat
+edges,E,onlyconnectverticesacrossthetwopartitions,thatis
+G=(U,V,E) with U∩V =∅ and E ⊆U⊗V.
+Examples of bipartite graphs include author–paper networks, user–product purchase histories, user–
+songplaylists,actor–movieconnections,document–keywordmappingsandsoon.Hypergraphscanbe
+represented as bipartite graphs in the sense of an incidence graph: the nodes and hyperedges are rep-
+resented by U and V, respectively, and edge (i,j) exists if node i is in hyperedge j. Bipartite graphs
+have been widely studied; see [1–6] and references therein. An example bipartite graph is shown
+inFig.1.
+Weproposeagenerativemodelthatcanbeeasilytunedtoreproducethecharacteristicsofreal-world
+networks,notjustqualitativelybutquantitatively.Themeasurementsweconsiderinthisarticlearethe
+degree distributions and the bipartite analogue of the clustering coefficient. Of course, there are many
+othermeasurementsthatwecouldconsider,andwecomebacktothoseshortly.Thedegreedistributionis
+thenumber(orproportion)ofnodesofdegreedforeachd =1,2,....Abipartitegraphhastwodegree
+distributions,oneforeachvertexpartition.AsweseeintheresultsinSection4.3,thesetwodistributions
+maybequitedifferentfromoneanother,inpartbecausethesize(and,consequently,theaveragedegree)
+foreachpartitionmaybequitedifferent.Theclusteringcoefficientofaone-waygraph,introducedby
+HollandandLeinhardt[7],istheprobabilitythatatwo-path(orwedge)participatesinathreecycle(or
+triangle);i.e.,
+3n(cid:6) 3×(totalnumberoftriangles)
+c= = .
+n∧ totalnumberofwedges
+Onecharacteristicofabipartitegraphisthatishasnoodd-lengthcycles;hence,itcannothaveatriangle.
+RobinsandAlexander[5]proposeabipartiteclusteringcoefficientthatistheprobabilitythatabipartite
+three-path(orcaterpillar)participatesinabipartitefourcycle(orbutterfly),i.e.,
+4n 4×(totalnumberofbutterflies)
+c= = . (1.1)
+n totalnumberofcaterpillars
+Wecallcin(1.1)themetamorphosiscoefficientinreferencetothenotionofhowoftencaterpillarsbecome
+butterflies.Opsahl[8]says“itcouldbeconsideredameasureofreinforcementbetweentwoindividuals
+ratherthanclusteringofagroupofindividuals.”Themultiplieroffourinthenumeratorisbecauseevery
+butterflycontainsfourdistinctcaterpillars,justaseverytrianglecontainsthreedistinctwedges;seeFig.2.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 583
+(a) (b)
+Fig.2.Abutterflycontainsfourdistinctcaterpillars.
+Ahighmetamorphosiscoefficientinabipartitegraphisindicativeofgreatercommunitystructureinthe
+graph, analogous to the role of a high clustering coefficient in a one-way graph. The metamorphosis
+coefficient plays an important role in communities because any tight-knit community will have a high
+metamorphosiscoefficient.Infact,SariyuceandPinar[9]haverecentlyshownthatbutterfliesarethekey
+toidentifyingdensesubstructures,correspondingtohighlyconnectedcommunities,inbipartitegraphs.
+InSection5.1,weextend(1.1)todefineedge,nodeanddegreewisemetamorphosiscoefficients,enabling
+amoredetailedunderstandingofthebipartitecommunitystructure.
+Asmentionedabove,therearenumerousmorecomplexmetricsthatcanbeusedintheanalysisof
+bipartitegraphs;see,e.g.,[4,5].Examplesofsuchmetricsincludegraphdiameter(i.e.,themaximum
+distancebetweenanypairofnodes),singularvaluesoftheadjacencymatrix,centralitymeasures,joint
+degreedistributions(i.e.,theproportionofnodesofdegreed thatconnecttonodesofdegreed(cid:8) forall
+possiblepairs(d,d(cid:8))),assortativity(i.e.,degreecorrelations),subgraphcensus(i.e.,countsofallpatterns
+ofthreenodes,fournodes,andsoon).Barber[10]introducedabipartitemodularitycoefficient,extending
+one-wayNewman–Girvanmodularitygraphmodularitytothebipartitecase.Usingthismeasurerequires
+a partitioning of the vertices into communities, and finding a partition that maximizes Barber’s modu-
+larity coefficient has been shown to be NP-hard [11]. Other metrics result by considering the product
+graphthatisproducedbyconsideringjustonevertexpartitionandconnectinganytwonodesthatsharea
+commonneighbourinthebipartitegraph.However,anyanalysisofbipartitecommunitystructurebased
+solely on product graphs is fundamentally limited due to the structural information lost in the product
+graph[3,4,9,12].Becausethesequantitiesareoftenexpensivetocomputeforlargegraphs,wedonot
+considertheminthisarticle.Instead,weconsiderthesimplermetricsofdegreedistributionandmeta-
+morphosiscoefficientshereforreasonsanalogoustothoseconsideredby[4,13].Thedegreedistributions
+areinterestingbecausemanylargereal-worldgraphs(includingtheonesweconsiderhere)donothave
+the Poisson distributions that occur if edges are distributed at random; instead, they have heavy-tailed
+distributions (hypothesized to be power law [14] or log-normal [15]). The metamorphosis coefficient
+isinterestingbecauserandomgraphsthathavethesamedegreedistributionasareal-worldgraphtend
+to have a much lower metamorphosis coefficients, as we show in Section 4.4. This is a well-known
+phenomenonfortheclusteringcoefficientofone-waygraphs[16].Wecontendthatmatchingmetamor-
+phosis coefficients is critical for capturing social or, more generally, interconnectedness behaviour in
+networks.
+Withthegoalsofcapturingbothdegreedistributionandournewlydefineddegreewisemetamorphosis
+coefficients,wedeveloptwodifferentmodels.ThefirstisastraightforwardextensionofChung–Lu(CL)
+[17–19],whichisverycloselyrelatedtotheconfigurationmodel.Ourexperimentalresultsshowthatthis
+modeliseffectiveatreproducingthedegreedistributions.However,thebipartiteCLgraphsdonotproduce
+thesamemetamorphosiscoefficientsasobservedinreal-worldnetworks.Therefore,thesecondmodelwe
+proposeisabipartiteextensionoftheBlockTwo-LevelErdo˝s–Re´nyi(BTER)[13,15]model.TheBTER
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+584 S.G.AKSOYETAL.
+modelisagoodstartingpointbecauseitreproducesboththedegreedistributionanddegreewiseclustering
+coefficientsofagivennetwork.Todoso,itgroupsnodesintoErdo˝s–Re´nyi(ER)subgraphs,calledaffinity
+blocks, that are highly connected and so produce high-clustering coefficients. We propose a bipartite
+BTERthatreproducesboththedegreedistributionsandthedegreewisemetamorphosiscoefficients.This
+extensionisnotstraightforwardsincetheaffinityblockconceptdoesnotcarryovereasilytothebipartite
+case,sowedevelopanewmethodforcreatingtheblocks.ComputationalresultsforbipartiteBTERshow
+thatitachievesourgoalsofmatchingboththedegreedistributionsandthedegreewisemetamorphosis
+coefficients.
+Forsomeoftheotherexpensivemetricsmentionedabove,webrieflyspeculateontheperformance
+ofbipartiteBTER.Forinstance,thelargestsingularvaluesshouldbeonthesameorderofmagnitude,
+sincethesevaluesrelyinpartondegreedistribution.Wemayexpectgoodresultsintermsofthesubgraph
+consensus,sincetheaffinityblockswillproduceotherstructuresbeyondbutterflies.Conversely,thesimple
+modelhasnomechanismtomatchthejointdegreedistributionorassortativity.Communitystructureis
+more complex: bipartite BTER creates butterflies that are key to small tight-knit communities, but the
+model as described in this article, does not necessarily produce a hierarchy of dense structures (i.e.,
+largeryetsparsecommunitiesthatagglomeratethesmallerdenseblocks).Inparticular,westressthatit
+producesalargenumber(hundredstomillions)ofsmallaffinityblocks,incontrasttomethodsthatfocus
+onmodularitywithrespecttoasmallnumber(twototwenty)ofcommunities.InSection6,wediscuss
+thepossibilityofextendingthebipartiteBTERmodeltogroupaffinityblockstoproduceahierarchyof
+looselyknitcommunities,butwedonotpursuethatavenueinthiswork.
+Before we continue, we briefly survey other models which fall into two classes. The first class is
+bipartiteconfigurationmodelswhich,asmentionedabove,areverysimilartoourproposedbipartiteCL
+model.Thesecanbeimplementedefficientlyandscaletolargegraphs,buttheymaynotreproducethe
+metamorphosis coefficient. Both Newman et al. [20] and Guillaume and Latapy [3] propose bipartite
+configuration models that sample node degrees from a distribution (one per partition), create stubs for
+each node equal to its degree, and then match the stubs. Our bipartite CL model is very similar, and
+we discuss the connections further in Section 4.2. Guillaume and Latapy [3] considered the clustering
+coefficients of the product graph, but this may be viewed as being a direct consequence of matching
+thebipartitedegreedistribution(acollapsednodeofdegreed createsacliqueofsized intheproduct
+graph)andsoisdifferentthanthemetamorphosisconditionconsideredhere.Thesecondclassaremodels
+thataremoresophisticatedbutdonotscaletolargegraphs.Onthetheoreticalside,Kannanetal.[21]
+consider the convergence of a Markov chain rewiring algorithm for generating a bipartite graph and
+showthattheirprocessisrapidlymixingforregularbipartitegraphs,thatis,graphswhereallthenode
+degreesarethesame.Later,thisresultwasextendedtographsinwhichonlyonepartitionisrequiredto
+beregular[22].Instatistics,researchersconsidertheproblemofgeneratingbinarycontingencytables
+with given row and columns sums. This problem is equivalent to specifying the degrees in a bipartite
+graph. In [23, 24], the focus is on an algorithm that is guaranteed to produce a specified row and
+columnsums,assumingitsrealizable.Theproposedalgorithmisnotconsideredpracticalbutratherof
+theoreticalinterest.Asforone-waygraphs,therearealsoincrementalgrowthmodelsinwhichtheoutput
+graphisiterativelyconstructedbyaddingverticesandedgesaccordingtosomerule.Themethodsare
+sequential since the connections created for new nodes usually depend on the state of the graph at the
+iteration in which the nodes are created. Guillaume and Latapy [3] analyse a bipartite growing model
+in which new vertices are linked via a preferential attachment process. Other work has considered a
+similar idea except that one vertex partition remains fixed while the other grows [25, 26]. Lastly, we
+noteavarietyofapplication-specificgenerativebipartitegraphmodelshavebeenintroducedtomodel
+specificnetworks,includingpollinationnetworksinecology[27,28],andprotein-domainnetworksin
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 585
+Table 1 Real-worldbipartitegraphs
+Name Partition1 Partition2 Edges
+CondMat[30,31] 16,726authors 22,016papers 58,595
+IMDB[4,32] 127,823actors 383,640movies 1,470,418
+Flickr[33,34] 1,728,701users 103,648groups 8,545,307
+MovieLens[35,36] 65,133movies 71,567critics 10,000,054
+MillionSong[37–39] 1,019,318users 384,546songs 48,373,586
+Peer2Peer[4,32] 1,986,588peers 5,380,546files 55,829,392
+LiveJournal[33,34] 5,284,451users 7,489,296groups 112,307,385
+biology[29].WestressthatthebiggestdifferencebetweenbipartiteBTERandthemodelsinthesecond
+groupisscalability.
+2. Datasets
+We test our methods on publicly available real-world datasets, whose properties are summarized in
+Table1.TheirdegreedistributionsareshowninFigs3–5.CondMatrepresentsanauthor–papernetwork
+fromarXivpreprintsincondensedmatterphysicsfrom1995–1999[30];thishasmostlybeenusedinthe
+contextofthecoauthorshipgraph,buthereweconsidertheunderlyingdata[31].Themajorityofauthors
+haveonly1paper,whereasthemostprolificauthorhas116papers.Conversely,themostcoauthorsona
+singlepaperis18,andthemostlikelyscenarioisforapapertohave2or3authors.IMDBlinksmovies
+andtheactorsthatappearedinthem[4,32],ascollectedfromtheInternetMovieDatabase.Thebusiest
+actorwasin294movies;conversely,thelargestproductionhad646actors.Flickr[33,34]isanonline
+photo-sharingsite,andthenetworkrepresentsgroupmembershipofvarioususers.Themostconnected
+user is in 2186 groups, whereas the largest group has 34989 members. MovieLens [35, 36] is a very
+famousdatasetthatlinksmoviesandtheirreviewers/critics.Themost-reviewedmoviehad34864reviews,
+andthemostactivecriticreviewed7359movies.Thisdatasetapparentlyexcludescriticswithlessthan
+20reviews.TheMillionSong[37–39]datasetconnectsusersandthesongstheyplayed.Thedatasetonly
+includeslistenersof10songsormore.Thewidestranginguserlistenedto4,400distinctsongs.Thetop
+songwasplayedby110,479distinctlisteners.ThePeer2Peerdataset[4,32]linksusers(peers)andthe
+filestheyuploadedordownloaded.Thebusiestusertouched19,496files.Ontheotherhand,themost
+popularfileonlyhad3396downloads.LiveJournal[33,34]representsuser–groupmembershipsfroma
+bloggingsite.Themostengageduserisin300groups,whichappearstobethemaximumallowed,since
+thereare5personsinthatcategory.Thelargestgrouphasoveronemillionmembers.
+3. Notation
+We set up the notation for one-way and two-way graphs in Table 2. We assume all graphs are simple,
+meaningthattherearenomultipleedges.Intheone-waycase,weletn = |V|andindexnodesinV by
+i,j ∈ {1,...,n}.Inthetwo-waycase,weletnu = |U|andnv = |V|denotethesizesofpartitionsone
+(left)andtwo(right),respectively.Weusei ∈{1,...,nu}andj ∈{1,...,nv}toindexnodesinpartition
+oneandtwo,respectively.Withoutlossofgenerality,indexingbyi assumespartitiononeandlikewise
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+586 S.G.AKSOYETAL.
+Table 2 Notation
+One-waygraph Two-waygraph
+G=(V,E) G=(U,V,E)
+Vertices:V Vtx.Partition1:U
+Vtx.Partition2:V
+Edges:E ⊆V ⊗V Edges:E ⊆U⊗V
+#Vertices:n=|V| #VerticesinU :nu =|U|
+#VerticesinV :nv =|V|
+#Edges:m=|E| #Edges:m=|E|
+#Wedges:n∧ #Caterpillars:n
+#Triangles:n(cid:6) #Butterflies:n
+Clust.Coeff.:c=3n(cid:6)/n∧ Meta.Coeff.:c=4n /n
+VertexIndex:i∈{1,...,n} IndexinU :i∈{1,...,nu}
+IndexinV :j ∈{1,...,nv}
+Degreeofi:d =|{j ∈V|(i,j)∈E}| Degreeofi:du =|{j ∈V|(i,j)∈E}|
+i i
+Degreeofj:dv =|{i∈U|(i,j)∈E}|
+j
+forjandpartitiontwo.Forinstance,ifi =j =2inthetwo-waycase,althoughverticesiandjhavethe
+samevertexlabelof2,theybelongtodifferentpartitionsandarethustwodistinctvertices.
+4. FastbipartiteCLmodel
+WeadapttheCLgenerativemodel[17–19]tobipartitegraphsanddemonstrateitsabilitytoreproduce
+bipartitedegreedistributions.WefollowthenotationdescribedinSection3.
+4.1 CLforone-waygraphs
+Consideraone-waygraphG=(V,E).TheCLmodelattemptstomatchthedesireddegrees{d ,...,d },
+1 n
+whered denotesthedesireddegreeofvertexi.Themodelgeneratesarandomgraphonnverticessuch
+i
+thattheprobabilitythatvertexiisadjacenttojisgivenby
+dd
+1(cid:2)n
+Pr((i,j)∈E)= i j, where m= d = desirednumberofedges.
+2m 2 i
+i=1 √
+Toensurethequantitiesarealltrueprobabilities,weassume(cid:3)d(cid:4)i ≤ 2mforalli.Aclassicalimplementation
+oftheCLmodelonnverticesflipsacoinforeachofthe n = (cid:2)(n2)possibleedges.Manyreal-world
+2
+graphsarelargeandsparse,thatis,thenumberofedgesm=O(n).Forthisreason,wefavour‘fast’CL
+thatflipsonly2mcoins[15,40].Weexplainthefastmethodbelowinthecontextoftwo-waygraphs.
+4.2 CLfortwo-waygraphs
+ConsiderthebipartitegraphG=(U,V,E).HerewehaveseparatedesireddegreesfortheverticesinU
+andV,denoted
+{du}nu
+and
+{dv}nv
+,
+i i=1 j j=1
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 587
+respectively.Necessarily,thesumsofthedegreesineachpartitionmustbeequaltoeachotherandtothe
+numberofedges,i.e.,
+(cid:2)nu (cid:2)nv
+m= du = dv.
+i j
+i=1 j=1
+Hence,thebipartiteCLmodelgeneratesarandombipartitegraphonnuverticesinthefirstpartitionand
+nv verticesinthesecondpartitionsuchthat
+dudv
+Pr((i,j)∈E)= i j . (4.1)
+m
+√ √
+To ensure these are true probabilities, we assume du ≤ m for all i and dv ≤ m for all j. A na¨ive
+i j
+implementationofbipartiteCLwouldflipacoinforallnunvpossibleedges.Instead,weadoptthe‘fast’
+approach as follows. Rather than flipping a coin for every possible edge, we instead randomly choose
+twoendpointsforeveryexpectededge.Sincethegraphissparse,wemayassumethatm(cid:12)nunv,sothis
+approachrequiresmanyfewerrandomsamples.Foreachofthemedges,wechooseendpointsinU and
+V proportionalto
+du dv
+Pr(i)= i and Pr(j)= j ,
+m m
+respectively.Theprobabilitythatedge(i,j)existsisthengivenby
+dudv
+Pr((i,j)∈E)=m·Pr(i)·Pr(j)= i j ,
+m
+whichisthesameas(4.1).AlthoughbothimplementationsofCLyieldidenticalexpecteddegrees,akey
+distinctionisthatmultipleedgesbetweenthesamepairofverticesarepossibleinfastCL.Inpractice,
+forlargegraphswithheavy-taileddegreedistributions,thisrarelypresentsaproblem.Thefastbipartite
+CLalgorithmisdescribedinAlgorithm1.
+Algorithm1FastbipartiteCL
+1:
+procedur(cid:5)efbcl({du},{dv})
+i j
+2: m← du
+i i 3: E ←∅
+4: fork =1,...,mdo
+5:
+Randomlyselecti∈U proportionaltodu/m
+i
+6: Randomlyselectj ∈V proportionaltodv/m
+j
+7: E ←E∪(i,j) (cid:15)Duplicateedgesdiscarded
+8: endfor
+9: returnE
+10: endprocedure
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+588 S.G.AKSOYETAL.
+(a) (b)
+Fig.3.Degreedistributionsillustratingtheoriginal(circles)versusbipartitefastChung-Lu(diamonds).Thedataislog-binned.
+As mentioned in Section 1, a closely related approach is the bipartite configuration model [3, 20].
+Thesedifferinsomedetails;forinstance,intheCLmodel,thedegreedistributionisnotspecifiedexactly
+butrathereachdegreeissampledfromadistribution.However,ifweignorethatdetail,wemayconsider
+that each node i ∈ U has du stubs and likewise each node j ∈ V has dv stubs, and the stubs from
+i j
+partitiononearerandomlyconnectedtothestubsinpartition2.AswithfastbipartiteCL,wediscardany
+repeatededges.Inallthreecases,bipartiteCL,fastbipartiteCLandthebipartiteconfigurationmodels,
+theexpecteddegreeofavertexisthesame.
+4.3 Experimentalresults
+WegeneraterandomgraphsusingCLandthedegreedistributionsofthegraphsdescribedinSection2.
+ThedegreedistributionsareshowninFigs3–5.Thedegreedistributionoftheoriginalgraphisshown
+in blue, and the degree distribution of the graph generated by bipartite CL is shown in orange. These
+arebinned degreedistributions,asadvocatedin[41].Weusepowersoftwoforthebinborders,sothe
+x-coordinate 2k corresponds to the bin from [2k,2k+1). The y-coordinate is the average value for that
+bin, including zero values, so the y-coordinate can be less than one. Overall, the degree distributions
+are very close, especially for IMDB (Fig. 4a and b), Flickr (Fig. 4c and d) and LiveJournal (Fig. 5e
+and f). For CondMat (Fig. 3a and b), the distribution of degrees on the author nodes is a close match,
+but there is some trouble matching the paper degree distribution. The model slightly overestimates at
+thehigherendofthedegreescaleandunderestimatesatthelowerend.Thisislargelyduetothesmall
+sizeofthegraphandtheverysmalldistribution(maximumof18authorsforapaper).ForMovieLens
+(Fig. 4e and f), the model generates a few ‘critic’ nodes of degree less than 20, even though no nodes
+existinthetruedegreedistribution.Asimilarphenomenonoccursforthe‘user’nodesinMillionSong.
+Ingeneral,theCLmodelcannothandlegapsinthedegreedistributionbecauseofPoissondistributions
+initsexpectations.InPeer2Peer(Fig.5candd),thenumberofdegree-1peernodesisunderestimated,
+forreasonsdescribedin[40].
+4.4 ShortcomingsofbipartiteCL
+Overall,ifweprovidethedegreedistributionsofareal-worldgraph,thefastbipartiteCLmodelgenerates
+arandomgraphwhosedegreedistributioncloselymatchesthedegreedistributionoftheoriginalgraph.
+However, the graphs generated by CL typically have many fewer butterflies than the original graphs.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 589
+(a) (b)
+(c) (d)
+(e) (f)
+Fig.4.Degreedistributionsillustratingtheoriginal(circles)versusbipartitefastChung-Lu(diamonds).Thedataislog-binned.
+Table3showsthatthenumberofbutterfliesfrombipartiteCLissmallerthantheoriginalgraphinevery
+case,andsometimesbyoneormoreordersofmagnitude(CondMat,IMDB,Peer2Peer).Thenumberof
+caterpillarsfortheoriginalandthegeneratedgraphsontheotherhand,iscloser,sothemetamorphosisof
+theoriginalgraphismuchhigherthanforthegeneratedgraphwithlow-butterflycounts.Thisindicates
+thatthebipartiteCLmodelisomittingsomeimportantstructure.
+Notethatthebutterflystructureiswhatunderliesthecohesive,close-knitstructureinmanyreal-world
+graphs.Justasatrianglecanbeconsideredasthesmallestunitofcohesiononone-waygraphs,butterflies
+can be considered as the smallest unit of cohesion in bipartite graphs. Conversely, without butterflies,
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+590 S.G.AKSOYETAL.
+(a) (b)
+(c) (d)
+(e) (f)
+Fig.5.Degreedistributionsillustratingtheoriginal(circles)versusbipartitefastChung-Lu(diamonds).Thedataislog-binned.
+a bipartite graph will not have a community structure. This is our motivation for considering a more
+complexmodelinthenextsection.
+5. BipartiteBTERmodel
+IntheBTERmodelforone-waygraphs,thegoalistomatchboththedegreedistributionaswellasthe
+degreewiseclusteringcoefficients[13,15].Ourgoalhereistoextendthosenotionstothebipartitecase.
+Weuse(1.1)asthebipartitedefinitionoftheclusteringcoefficient,thoughothermetricsexistassurveyed
+byLatapyetal.[4]andOpsahl[8].
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 591
+Table 3 PropertiesoftheoriginalandthebipartiteCLgraphs
+Graph Size Edges Cats. Buts. Meta.
+nu nv m n n c
+CondMat-Orig 1.67e4 2.20e4 5.86e4 1.24e6 7.05e4 2.28e−1
+CondMat-CL 1.67e4 2.20e4 5.86e4 2.22e6 3.57e2 6.43e−4
+IMDB-Orig 1.28e5 3.84e5 1.47e6 8.56e8 3.50e6 1.64e−2
+IMDB-CL 1.28e5 3.84e5 1.47e6 1.11e9 1.41e5 5.10e−4
+Flickr-Orig 1.73e6 1.04e5 8.55e6 2.57e+12 3.53e+10 5.49e−2
+Flickr-CL 1.73e6 1.04e5 8.39e6 2.20e+12 1.52e+10 2.78e−2
+MovieLens-Orig 6.51e4 7.16e4 1.00e7 2.46e+13 1.20e+12 1.95e−1
+MovieLens-CL 6.51e4 7.16e4 8.78e6 1.37e+13 5.34e+11 1.56e−1
+MillionSong-Orig 1.02e6 3.85e5 4.84e7 2.21e+13 2.15e+11 3.89e−2
+MillionSong-CL 1.02e6 3.85e5 4.81e7 2.59e+13 6.74e+10 1.04e−2
+Peer2Peer-Orig 1.99e6 5.38e6 5.58e7 8.18e+11 3.80e9 1.86e−2
+Peer2Peer-CL 1.99e6 5.38e6 5.58e7 1.20e+12 1.14e8 3.79e−4
+LiveJournal-Orig 5.28e6 7.49e6 1.12e8 3.36e+14 3.30e+12 3.92e−2
+LiveJournal-CL 5.28e6 7.49e6 1.11e8 3.31e+14 2.04e+12 2.47e−2
+5.1 Degreewisemetamorphosiscoefficient
+BTERmatchesthedegreewiseclusteringcoefficient,soweneedasimilarmeasureforbipartitegraphs.
+We describe the degreewise metamorphosis coefficient, which provides a more nuanced measurement
+ofbipartitecommunitystructurethanthemetamorphosiscoefficient.Tothebestofourknowledge,this
+ideahasnotbeenproposedbefore.
+Wedefinethemetamorphosisofanedge(i,j)as
+⎧
+⎪⎨n
+(i,j) =
+numberofbutterfliescontaining(i,j)
+ifn >0,
+c(i,j) = ⎪⎩n
+(i,j)
+numberofcaterpillarscenteredat(i,j) (i,j) (5.1)
+0 ifn =0.
+(i,j)
+Weknowthenumberofcaterpillarscenteredat(i,j)immediatelyfromthedegreesofitsendpoints,thatis
+n =(du−1)(dv−1). (5.2)
+(i,j) i j
+Fromthis,wedefinethemetamorphosiscoefficientsofverticesi∈U andj ∈V asthemeanvalueover
+alledgesincidenttothevertex:
+(cid:2) (cid:2)
+1 1
+c iu =
+du
+c(i,j) and c jv =
+dv
+c(i,j). (5.3)
+i (i,j)∈E j (i,j)∈E
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+592 S.G.AKSOYETAL.
+Wemayconsider(5.3)tobethebipartiteanalogueoftheclusteringcoefficientofavertex,asintroduced
+byWattsandStrogatz[42].Finally,wecandefinetheper-degreemetamorphosiscoefficientstobe
+(cid:2) (cid:2)
+1 1
+cu = cu and cv = cv, (5.4)
+d |U | i d |V | j
+d i∈Ud d j∈Vd
+whereU andV denotethesubsetsofdegree-d nodes,thatis
+d d
+U ={i∈U|du =d} and V ={j ∈V|dv =d}.
+d i d j
+Degreewisemetamorphosiscoefficientscontrolfortheeffectsofbothvertexmodeandvertexdegree
+onbipartiteclustering.Accordingly,thismetricmayrevealinsightsotherwiselostinmetricsbasedonly
+on the ratio of total butterfly to caterpillar counts. To illustrate, consider the CondMat author–paper
+network,whosedegreewisemetamorphosiscoefficientsareshownbythebluelineinFig.6candd.The
+degreewisemetamorphosiscoefficientsarealsobinnedinthesamewaythatwebinnedthedataforthe
+degree distributions: We use powers of two for the bins, so the x-coordinate 2k corresponds to the bin
+from [2k,2k+1). The y-coordinate is the average value for that bin. For the binning, we define cu = 0
+d
+foranydegreesuchthat|U | = 0 (i.e.,whentherearenonodesofdegreed),andlikewiseforcv.We
+d c
+seethatdegreewisemetamorphosiscoefficientsintheauthormode(Fig.6c)arehigherforlowdegrees
+thanforhighdegrees,meaningthatauthorswithfewerpaperstendedtohavehigherproportionofrepeat
+collaborationsthanauthorswithmanypapers.Conversely,thepapermode(Fig.6d)showsthatauthors
+ofpaperswithfewauthorstendtohavemorerepeatsofthesameauthorset.
+5.2 Affinityblocks
+InBTERforone-waygraphs,denseERsubgraphsarekeytoproducingtriangles.ForbipartiteBTER,
+wewillusedensebipartiteERsubgraphstoproducebutterflies.WerefertothesedenseERsubgraphs
+asaffinityblocks.
+In (one-way) BTER, an affinity block ideally consists of a set of d +1 vertices of degree d. The
+connectivity of each block is computed according to the degree-d clustering coefficient. The bipartite
+affinityblocksaresimilarinspirit,butthebipartitenatureofthegraphraisesissuesthatrequireanentirely
+newapproachtotheblockconstruction.
+ThefirstkeydifferenceisthateachaffinityblockinbipartiteBTERconsistsoftwosetsofvertices,
+onefromeachpartition.Whileeachpartitionsetinanaffinityblockideallycontainsverticesofthesame
+degree, the degrees do not necessarily match between partition sets. Indeed, in many bipartite graphs,
+onepartitionsetmayhaveaverydifferentrangeofdegreesthantheother,soattemptingtocreateblocks
+thatmatchinter-partitiondegreeisnotarealisticgoal.
+Consequently,asecondkeydifferenceconcernshowwedeterminethesizesofthepartitionsetsfor
+the affinity blocks. In the one-way BTER method, the size of each block only depends on the degree
+oftheverticesintheblock.Inthetwo-waycase,thesizesofeachpartitionsetwithinablockaremore
+complicated.
+Toworkoutthecalculationsofsizesandconnectivityfortheblocks,weconsiderbuildingasingle
+affinity block denoted by Gˆ = (Uˆ ,Vˆ ,Eˆ). Without loss of generality, we assume all nodes in Uˆ want
+ˆ ˆ ˆ
+degreeduandallnodesinV wantdegreedv.Notethatthesedegreesarewithrespecttotheentiregraph,
+not the subgraph. We further assume all nodes in Uˆ want metamorphosis coefficient cˆu and likewise
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 593
+forVˆ andcˆv.Whenmatchingareal-worldgraph,wechoosethedegreewisemetamorphosiscoefficients
+correspondingtothetargetdegreesasdefinedin(5.4),thatis,
+cˆu =c dˆu and cˆv =c dˆv.
+Thegoalistodeterminethesizesnˆu =|Uˆ|andnˆv =|Vˆ|andtheconnectivity,ρ,whichistheprobability
+ofanedgebetweenanodeinnˆu andavertexinnˆv,andthusthenumberofedges,|Eˆ|
+Fori ∈ Uˆ ,wecancomputeitsexpectedmetamorphosiscoefficientasfollows.Bydefinition(5.3),
+wehave
+⎛ ⎞
+(cid:2) (cid:2) (cid:2) (cid:2)
+c iu = d1
+u
+c(i,j) = d1
+u
+⎝ c(i,j)+ c(i,j)⎠≈ d1
+u
+c(i,j). (5.5)
+i (i,j)∈E i (i,j)∈Eˆ (i,j)∈E\Eˆ i (i,j)∈Eˆ
+The last step comes from the assumption that nearly all butterflies in the larger graph come from the
+affinityblocks.Usingdefinition(5.1),wecanrewrite(5.5)as
+(cid:2) (cid:2)
+cu = 1 n (i,j) = 1 n (i,j) . (5.6)
+i du n du (du−1)(dv−1)
+i (i,j)∈Eˆ (i,j) i (i,j)∈Eˆ i j
+ˆ
+WehaveassumedthatthedegreesandclusteringcoefficientswithinGareconstant,so(5.6)becomes
+(cid:2)
+1 2n
+cˆu = n = i . (5.7)
+dˆ u(dˆ u−1)(dˆ v−1) (i,j) dˆ u(dˆ u−1)(dˆ v−1)
+(i,j)∈Eˆ
+Thelastequalityusesthefactthatthesumofbutterfliesinvolvingedgesoftheform(i,j)isequaltotwo
+timesthenumberofbutterfliesinvolvingnodeisinceeachsuchbutterflyhastwoedgesinvolvingi.In
+expectation,
+(cid:14) (cid:15)
+.
+nˆv
+n =ρ4(nˆu−1) , (5.8)
+i 2
+(cid:3) (cid:4)
+becausethereare(nˆu−1)otherchoicesforthesecondnodeinUˆ
+and
+nˆv
+choicesforthetwonodesin
+2
+Vˆ .Finally,ρ4 istheprobabilitythatallfouredgesexist.Combining(5.7)and(5.8)gives
+. ρ4nˆv(nˆu−1)(nˆv−1)
+cˆu = . (5.9)
+dˆ u(dˆ u−1)(dˆ v−1)
+Usinganalogousreasoningforcˆv,weultimatelywant
+cˆudˆ u(dˆ u−1)(dˆ v−1) cˆvdˆ v(dˆ u−1)(dˆ v−1)
+ρ4 = = . (5.10)
+nˆv(nˆu−1)(nˆv−1) nˆu(nˆu−1)(nˆv−1)
+Ideally,wewouldhave
+nˆu =dˆ v and nˆv =dˆ u, (5.11)
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+594 S.G.AKSOYETAL.
+but we cannot generally satisfy (5.10) and (5.11) at the same time. Therefore, we choose one of the
+equalitiesin(5.11)andthensolvefortheothernumberofnodesandconnectivityusing(5.10)toget
+nˆu =dˆ v ⇒ nˆv =
+cˆu
+dˆ u, ρ =
+(dˆ u−1)(cˆv)2
+, (5.12) cˆv cˆudˆ u−cˆv
+nˆv =dˆ u ⇒ nˆu =
+cˆv
+dˆ v, ρ =
+(dˆ v−1)(cˆu)2
+. (5.13)
+cˆu cˆvdˆ v−cˆu
+So that we can have the possibility of using a complete bipartite subgraph to yield metamorphosis
+coefficientsofone,weconstrainourchoicestosatisfy:
+nˆu ≥dˆ v and nˆv ≥dˆ u. (5.14)
+To satisfy (5.14), we choose (5.12) if cˆu ≥ 1 and (5.13) otherwise. It is easy to see from (5.10) that
+cˆv
+this has the added bonus of ensuring ρ ≤ 1. This logic forms the basis of building affinity blocks for
+bipartiteBTER.
+5.3 BipartiteBTERalgorithm
+As explained in Section 5.2, the affinity block building process for bipartite BTER takes into account
+boththedesiredvertexdegreesandcorrespondingdesiredper-degreemetamorphosiscoefficientswhen
+settingthepartitionsizesandconnectivityofeachaffinityblock.Thisinformationisthenusedtomodel
+each affinity block as an ER subgraph, where the preponderance of the graph butterflies are created.
+Accordingly,theaffinityblockconstructioniskeytomatchingper-degreemetamorphosiscoefficients.
+In order to match the desired degree distribution, the remaining excess degree (i.e., edges not used in
+constructingtheaffinityblocks)isconnectedviaafastbipartiteCLprocedure.ThefullbipartiteBTER
+algorithmislistedinAlgorithm2.
+5.4 Experimentalresults
+WegeneratebipartiteBTERgraphsusingtheproceduredescribedinSection5.3.Wefirstdiscussasingle
+graph:CondMat.Weshowtheresultingdegreedistributionanddegreewisemetamorphosiscoefficients
+in Fig. 6. The degree distributions, shown in Fig. 6a and b, show little difference between bipartite
+BTERandCL;botharegoodmatchestotheoriginaldegreedistribution.Thedegreewisemetamorphosis
+coefficientsareshowninFig.6candd.AlthoughthereisnotaperfectmatchbetweenbipartiteBTER
+andtheoriginalgraph,itismuchbetterthanCL,whichhasalmostnobutterflies.
+Summary data for all graphs is shown in Table 4. This is the same as Table 3 except that now we
+haveaddedarowforbipartiteBTER.Forthefirstfourgraphs,wearereportingaveragevaluesover100
+experiments,andwealsoreporttheentirerangeofvalues;wedonotdomultipletrialsforthelargergraphs
+because the postprocessing to count the butterflies is extremely expensive. The numbers of butterflies
+andmetamorphosiscoefficientsaresignificantlyimprovedascomparedtoCL.WeseethatCondMathas
+70,000butterflies,bipartiteCLproduceslessthan400butterflies,butbipartiteBTERproduces120,000
+butterflies.ThebipartiteBTERnumberisaslightoverestimate,butoverallmuchbetterthanCL.
+Forthefirsttwographs,whereweseealargedifferencebetweenthemetamorphosiscoefficients,we
+considertheimpactontheproductgraphs(A(cid:8)AandAA(cid:8) whereAistheadjacencymatrix)inFig.7.We
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 595
+Algorithm2BipartiteBTER
+1:
+procedurebibter({du},{dv},{cu},{cv})
+i j d d
+Weassum(cid:5)ethatdegreesaresortedinincreasingorder
+2: m← du
+i i
+3: E ←∅
+4:
+{eu}←{du},{ev}←{dv} (cid:15)Excessdegreeinitialization
+i i j j
+5:
+i←min{i|du >1},j ←min{j|dv >1}
+i j
+6: repeat (cid:15)Createaffinityblocksuntilnodesexhausted
+7: dˆ u ←du,dˆ v ←dv
+i j
+8:
+cˆu ←c dˆu,cˆv ←c
+dˆv
+9: if cˆu/cˆv ≥1then (cid:16) (cid:17) (cid:16) (cid:17)
+10: nˆu ←dˆ v,nˆv ←round c cˆ ˆu vdˆ u ,ρ ← (dˆ cˆu u− dˆ1 u) −(cˆ cˆv v)2
+1/4
+11: else (cid:16) (cid:17) (cid:16) (cid:17)
+12: nˆv ←dˆ u,nˆu ←round cc ˆˆ uv dˆ v ,ρ ← (dˆ cˆv v− dˆ1 v) −(cˆ cˆu u)2
+1/4
+13: endif
+14: if i+nˆu−1≤nu andj+nˆv−1≤nv then (cid:15)CreateERsubgraph
+15:
+forˆ i=i,i+1,...,i+nˆu−1do
+16: forˆ j =j,j+1,...,j+nˆv−1do
+17: r ←U(0,1) (cid:15)Uniformrandomvaluein[0,1]
+18: if r <=ρ then
+19: E ←E∪(ˆ i,ˆ j)
+20: e ˆu
+i
+=max{0,e ˆu
+i
+−1},e ˆv
+j
+=max{0,e ˆv
+j
+−1} (cid:15)Updateexcessdegree
+21: endif
+22: endfor
+23: endfor
+24: endif
+25:
+i←i+nˆu,j ←j+nˆv
+26: untili>nu orj >nv
+27: E ←E∪fbcl({eu},{ev})
+i j
+28: endprocedure
+expectthatCLwillproducetoomanynonzerosintheproductgraphbecausetherewillnotbeenough
+overlapinthecliques.Indeed,CLpredictstoomanynonzeros,butBTERismuchclosertotheoriginal.
+The degreewise metamorphosis coefficients for the remaining graphs are shown in Figs 8 and 9.
+EvenincaseswherebipartiteCL’soverallnumbersareclosetotheoriginalgraphasshowninTable4,
+the degreewise metamorphosis coefficients are essentially zero. Bipartite BTER corrects this problem
+andgetsmetamorphosiscoefficientsthataremuchclosertowhatweseeintheoriginalgraph.Insome
+cases like MovieLens (Fig. 8e), the CL metamorphosis coefficients are much higher than zero, which
+istheresultoftheoverallhighdensityofthegraph.Indeed,ithasbeenproven(seeLemma1in[43])
+thatundermildassumptions,anybipartitegraphwithmedgesandpartitionsizesnu andnv containsat
+leastontheorderof(nu)2·( m )4 manybutterflies.Thus,thepresenceofacertainminimumnumber
+nv nu+nv
+butterfliesinbipartitegraphsofsufficientdensityisinevitable;nevertheless,theoriginalgraphstillhas
+highervaluesthatarematchedbetterbybipartiteBTER.MovieLensalsohasanunusualprofileinMode2
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+596 S.G.AKSOYETAL.
+(a) (b)
+(c) (d)
+Fig.6.Degree distribution and degreewise metamorphosis coefficients on the original CondMat graph as well as the models
+generatedbyCLandbipartiteBTER.
+(seeFig.8f),whichisreallyjustanartefactofthedatacollection.Nevertheless,bipartiteBTERisable
+to obtain a reasonable approximation. For completeness, the degree distributions for bipartite CL and
+BTERascomparedtotheoriginalgraphsareshowninFigs10and11.Thereislittledifferencebetween
+bipartiteBTERandCLintermsofthedegreedistribution.
+6. Conclusions
+We have considered the problem of how to generate realistic bipartite graphs to reproduce the charac-
+teristics of large real-world networks. Our first model, bipartite CL, accurately reproduces the degree
+distribution.Oursecondmodel,bipartiteBTER,goesfurthertocapturethedegreewisemetamorphosis
+coefficients.Highcoefficientsareindicativeofarelativelylargenumberofbutterfliesindicatingcohesion
+orcommunitystructure,whichisrareinsparserandomgraphsunlesstherearesomebehaviorsthatgo
+beyond just the degree structure. Creating realistic graph models leads to some hypotheses about the
+ways the graphs were formed. In the cases where CL greatly underestimated the number of butterflies
+(CondMat,IMDBandPeer2Peer),wecansurmisethatthereissomesignificantcommunity-likebehav-
+ior. This is easy to see for authorship of papers (CondMat) and actors appearing in movies (IMBD).
+For the Peer2Peer network, we might hypothesize that some tight-knit peer groups are sharing many
+filesbetweenthemselves.Theothergraphshaveasmallerdifferencebetweenthenumberofbutterflies
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 597
+Table 4 Metamorphosiscoefficientsfororiginal,bipartiteCL,andbipartiteBTERgraphs
+Graph Size Edges Cats. Buts. Meta.
+nu nv m n n c
+CondMat-Orig 1.67e4 2.20e4 5.86e4 1.24e6 7.05e4 2.28e−1
+CondMat-CL 1.67e4 2.20e4 5.86e4 2.22e6 3.57e2 6.43e−4
+CondMat-BTER 1.67e4 2.20e4 6.00e4 2.36e6 1.10e5 1.86e−1
+BTER100trialrange [1.67–1.67] [2.20–2.20] [6.00–6.01] [2.31–2.42] [1.01–1.16] [1.73–1.99]
+IMDB-Orig 1.28e5 3.84e5 1.47e6 8.56e8 3.50e6 1.64e−2
+IMDB-CL 1.28e5 3.84e5 1.47e6 1.11e9 1.41e5 5.10e−4
+IMDB-BTER 1.28e5 3.84e5 1.47e6 1.35e9 6.77e6 2.00e−2
+BTER100trialrange [1.28–1.28] [3.84–3.84] [1.47–1.47] [1.35–1.36] [6.62–6.91] [1.95–2.04]
+Flickr-Orig 1.73e6 1.04e5 8.55e6 2.57e12 3.53e10 5.49e−2
+Flickr-CL 1.73e6 1.04e5 8.39e6 2.20e12 1.52e10 2.78e−2
+Flickr-BTER 3.96e5 1.04e5 8.34e6 2.36e12 4.25e10 7.21e−2
+BTER100trialrange [3.96–3.96] [1.04–1.04] [8.34–8.34] [2.35–2.37] [4.23–4.27] [7.19–7.23]
+MovieLens-Orig 6.51e4 7.16e4 1.00e7 2.46e13 1.20e12 1.95e−1
+MovieLens-CL 6.51e4 7.16e4 8.78e6 1.37e13 5.34e11 1.56e−1
+MovieLens-BTER 1.07e4 6.99e4 8.52e6 1.23e13 1.08e12 3.51e−1
+BTER100trialrange [1.07–1.07] [6.99–6.99] [8.51–8.52] [1.23–1.23] [1.07–1.08] [3.50–3.51]
+MillionSong-Orig 1.02e6 3.85e5 4.84e7 2.21e13 2.15e11 3.89e−2
+MillionSong-CL 1.02e6 3.85e5 4.81e7 2.59e13 6.74e10 1.04e−2
+MillionSong-BTER 1.02e6 3.85e5 4.80e7 2.93e13 1.90e11 2.59e−2
+Peer2Peer-Orig 1.99e6 5.38e6 5.58e7 8.18e11 3.80e9 1.86e−2
+Peer2Peer-CL 1.99e6 5.38e6 5.58e7 1.20e12 1.14e8 3.79e−4
+Peer2Peer-BTER 1.99e6 5.38e6 5.60e7 1.66e12 6.71e9 1.61e−2
+LiveJournal-Orig 5.28e6 7.49e6 1.12e8 3.36e14 3.30e12 3.92e−2
+LiveJournal-CL 5.28e6 7.49e6 1.11e8 3.31e14 2.04e12 2.47e−2
+LiveJournal-BTER 3.20e6 7.49e6 1.10e8 3.50e14 4.61e12 5.26e−2
+producedbyCLandthereal-worldgraph,indicatingthatthereismuchlesscommunitystructure.Infact,
+somegraphsaresodensethatCLhasanonzerometamorphosiscoefficient,especiallyMovieLens.
+Although these models match real-world observations in some aspects, more study is needed to
+understandtheirlimitations.Howwelldothesemodelsreproduceothermetricssuchasgraphdiameter,
+singular values of the adjacency matrix, centrality measures, joint degree distributions, assortativity,
+subgraph census, and so on? Can we find evidence that affinity blocks exist in real-world graphs? We
+havecreatednon-overlappingblocks;isthatrealistic?Wehavenotmentionedtimeevolution,butcertainly
+allnetworksareevolvingintimeandweneedmodelsthatcapturesuchchanges.Westressthatbipartite
+BTERisnotgearedtowardscreatingahierarchyofcommunitiesforbipartitegraphsasdescribedin[9],
+butitcouldpotentiallybemodifiedtodosobygroupingtheaffinityblocks.Thesearebutafewtopics
+forfutureinvestigation.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+598 S.G.AKSOYETAL.
+Fig.7.ComparisonofnumberofnonzerosinproductgraphsAA(cid:8)andA(cid:8)AfromCLandBTERascomparedtofromtheoriginal.
+(a) (b)
+(c) (d)
+(e) (f)
+Fig.8.Degreewisemetamorphosiscoefficientoftheoriginalgraph(circles),fastbipartiteCL(diamonds),andbipartiteBTER
+(squares).
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 599
+(a) (b)
+(c) (d)
+(e) (f)
+Fig.9.Degreewisemetamorphosiscoefficientoftheoriginalgraph(circles),fastbipartiteCL(diamonds),andbipartiteBTER
+(squares).
+Acknowledgements
+We thank our colleagues for helpful discussions in the course of this work, especially Grey Ballard,
+KennyChowdhary,DannyDunlavy,KevinMatulefandMichaelWolf.Wealsothankthetwoanonymous
+refereesforinsightfulcommentsthatimprovedtheworkconsiderably.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+600 S.G.AKSOYETAL.
+(a) (b)
+(c) (d)
+(e) (f)
+Fig.10.Degreedistributionsillustratingtheoriginal(circles),fastbipartiteCL(diamonds),andbipartiteBTER(squares).Thedata
+islog-binned.
+Funding
+ThisworkwassupportedinpartbytheDefenseAdvancedResearchProjectAgency(DARPA).Sandia
+National Laboratories is a multi-mission laboratory managed and operated by Sandia Corporation, a
+whollyownedsubsidiaryofLockheedMartinCorporation,fortheU.S.DepartmentofEnergy’sNational
+NuclearSecurityAdministrationundercontractDE-AC04-94AL85000.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+602 S.G.AKSOYETAL.
+4. Latapy,M.,Magnien,C.&Vecchio,N.D.(2008)Basicnotionsfortheanalysisoflargetwo-modenetworks.
+SocialNetworks,30,31–48.
+5. Robins,G.&Alexander,M.(2004)Smallworldsamonginterlockingdirectors:networkstructureanddistance
+inbipartitegraphs.Comput.Math.Organiz.Theory,10,69–94.
+6. Sun,J.,Qu,H.,Chakrabarti,D.&Faloutsos,C.(2005)Relevancesearchandanomalydetectioninbipartite
+graphs.SIGKDDExplor.Newsl.,7,48–55.
+7. Holland,P.W.&Leinhardt,S.(1970)AMethodfordetectingstructureinsociometricdata.Am.J.Social.,
+76,492–513.
+8. Opsahl,T.(2013)Triadicclosureintwo-modenetworks:redefiningtheglobalandlocalclusteringcoefficients.
+Soc.Networks,35,159–167.
+9. Sariyuce,A.E.&Pinar,A.(2016)ButterflyEffect:PeelingBipartiteNetworks.arXiv:1611.02756.
+10. Barber,M.J.(2007)Modularityandcommunitydetectioninbipartitenetworks.Phy.Rev.E,76,066102.
+11. Miyauchi,A.&Sukegawa,N.(2014)MaximizingBarber’sbipartitemodularityisalsohard.Optim.Lett.,9,
+897–913.
+12. Guimera`,R.,Sales-Pardo,M.&Amaral,L.A.N.(2007)Moduleidentificationinbipartiteanddirected
+networks.Phys.Rev.E,76.
+13. Seshadhri,C.,Kolda,T.G.&Pinar,A.(2012)CommunityStructureandScale-freeCollectionsofErdo˝s-
+Re´nyiGraphs.Phys.Rev.E,85.
+14. Baraba´si,A.-L.&Albert,R.(1999)Emergenceofscalinginrandomnetworks.Science,286,509–512.
+15. Kolda,T. G., Pinar,A., Plantenga,T. & Seshadhri, C. (2014) A scalable generative graph model with
+communitystructure.SIAMJ.Sci.Comput.,36,C424–C452.
+16. Newman,M.E.J.(2003)Thestructureandfunctionofcomplexnetworks.SIAMRev.,45,167–256.
+17. Aiello,W.,Chung,F.&Lu,L.(2001)Arandomgraphmodelforpowerlawgraphs.Exp.Math.,10,53–66.
+18. Chung,F.&Lu,L.(2002a)Theaveragedistancesinrandomgraphswithgivenexpecteddegrees.Proc.Nat.
+Acad.Sci.,99,15879–15882.
+19. Chung, F. & Lu, L. (2002b) Connected components in random graphs with given degree sequences. Ann.
+Comb.,6,125–145.
+20. Newman,M.E.J.,Strogatz,S.H.&Watts,D.J.(2001)Randomgraphswitharbitrarydegreedistributions
+andtheirapplications.Phys.Rev.E,64.
+21. Kannan,R.,Tetali,P.&Vempala,S.(1999)SimpleMarkov-chainalgorithmsforgeneratingbipartitegraphs
+andtournaments.RandomStruc.Algorithms,14,293–308.
+22. Miklo´s,I.,Erdo˝s,P.L.&Soukup,L.(2013)Towardsrandomuniformsamplingofbipartitegraphswith
+givendegreesequence.ElectronicJ.Combinatorics,20,P16.
+23. Beza´kova´,I.,Bhatnagar,N.&Vigoda,E.(2006)Samplingbinarycontingencytableswithagreedystart.
+RandomStruct.Algorithms,30,168–205.
+24. Chen,Y., Diaconis, P., Holmes, S. P. & Liu, J. S. (2005) Sequential Monte Carlo Methods for Statistical
+AnalysisofTables.J.Am.StatisticalAssoc.,100,109–120.
+25. Ganguly, N., Ghosh, S., Krueger, T. & Srivastava, A. (2012) Degree distributions of evolving alphabetic
+bipartitenetworksandtheirprojections.Theor.Comput.Sci.,466,20–36.
+26. Peruani, F., Choudhury, M., Mukherjee,A. & Ganguly, N. (2007) Emergence of a non-scaling degree
+distributioninbipartitenetworks:anumericalandanalyticalstudy.EurophysicsLetters(EPL),79,28001.
+27. Dormann,C.F.,Fru¨nd,J.,Blu¨thgen,N.&Gruber,B.(2009)Indices,graphsandnullmodels:analyzing
+bipartiteecologicalnetworks.OpenEcol.J.,2,7–24.
+28. Saavedra,S.,Reed-Tsochas,F.&Uzzi,B.(2008)Asimplemodelofbipartitecooperationforecological
+andorganizationalnetworks.Nature,457,463–466.
+29. Nacher,J.C.,Ochiai,T.,Hayashida,M.&Akutsu,T.(2009)Amathematicalmodelforgeneratingbipartite
+graphsanditsapplicationtoproteinnetworks.J.Phys.A:Math.Theor.,42,485005.
+30. Newman,M.E.J.(2001)Thestructureofscientificcollaborationnetworks.Proc.Nat.Acad.Sci.,98,404–409.
+31. Opsahl,T.(2015)TnetDatasets.
+32. Latapy,M.(2006)BipartiteGraphTools,Version1.0.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+MEASURINGANDMODELINGBIPARTITEGRAPHS 603
+33. Mislove,A.(2015)PersonalCommunication.
+34. Mislove,A.,Marcon,M.,Gummadi,K.P.,Druschel,P.&Bhattacharjee,B.(2007)Measurementand
+analysisofonlinesocialnetworks.InIMC’07:Proceedingsofthe7thACMSIGCOMMConferenceonInternet
+Measurement,29–42,NewYork,NY:ACM.
+35. Davies,R.(2009)MovieLens10M.GroupLens,DepartmentofComputerScienceandEngineering,University
+ofMinnesota.https://grouplens.org/datasets/movielens/10m/(lastaccessedFebruary21,2017).
+36. Harper,F.M.&Konstan,J.A.(2015)TheMovieLensdatasets.ACMTrans.InteractiveIntell.Syst.,5,1–19.
+37. Bertin-Mahieux,T.,Ellis,D.P.W.,Whitman,B.&Lamere,P.(2011)TheMillionSongDataset.InISMIR
+2011: Proc. 12th Intl. Conf. on Music Information Retrieval. (A. Klapuri & C. Leider eds). Miami, FL:
+UniversityofMiami.
+38. McFee,B.,Bertin-Mahieux,T.,Ellis,D.P.&Lanckriet,G.R.(2012)Themillionsongdatasetchallenge.In
+WWW’12Companion:Proc.21stIntl.Conf.CompaniononWorldWideWeb,NewYork,NY:ACM.909–916.
+39. The Echo Nest Taste Profile Subset, the Official User Data Collection for the Million Song Dataset.
+http://labrosa.ee.columbia.edu/millionsong/tasteprofile (last accessed May 15,
+2015).
+40. Durak,N.,Kolda,T.G.,Pinar,A.&Seshadhri,C.(2013)AScalableNullmodelfordirectedgraphsmatching
+alldegreedistributions:in,out,andreciprocal.InNSW2013:ProceedingsofIEEE20132ndInternational
+NetworkScienceWorkshop,23–30,IEEEComputerSociety2013,ISBN978-1-4799-0436-5.
+41. Milojevic´, S. (2010) Power Law Distributions in Information Science: Making the Case for Logarithmic
+Binning.J.Am.Soc.Inf.Sci.Technol.,61,2417–2425.
+42. Watts,D.&Strogatz,S.(1998)Collectivedynamicsof‘small-world’networks.Nature,393,440–442.
+43. Tait,M.&Verstrae¨te,J.(2016)Onsetsofintegerswithrestrictionsontheirproducts.Eur.J.Comb.,51,
+268–274.
+Downloaded
+from
+https://academic.oup.com/comnet/article/5/4/581/3091113
+by
+Princeton
+University
+user
+on
+15
+February
+2024
+

@@ -1,0 +1,35 @@
+Extracted Keywords:
+scene graph, Scene Layout, Scene, Layout, graph, Computer Vision, layout synthesis, scene synthesis, IEEE Conference, layouts
+
+Main Topics:
+Scene Layout
+Andrew Luo1Zhoutong, Zhang2Jiajun Wu3Joshua B. Tenenbaum2, scene layout synthesis, scene graphs, an abstract but general representation, guidethe synthesis, diverse scene layouts, the scene graph, moreﬂexible control, the synthesis process, vari-ous forms, scene layouts, a single color image, ourconditional layout synthesizer, various lay-outs, the same structure, the input example, this conditional generation design, only 2D projections, the scene, Givena depth, a semantics map, the differentiable render-ing module, the synthesized layoutto, the given input, our model, higher accu-racy, conditional scene synthesis, allowsexemplar-based scene generation, various input forms, Introduction
+Interior scene layout generation, the positioning, commonly encoun-tered indoors, its important role, simulated navigation, home automation, interior design, The predominant, unconditioned l
+
+Methodologies:
+Many previous methods have used scene graphs as an in-
+termediate representation for downstream vision tasks suchas image synthesis, where they mostly formulate the prob-lem in a deterministic manner. Related Work
+Our method is related to the multiple areas in computer
+vision and graphics, including scene graph representations,scene synthesis, and differentiable rendering.
+ Many of these approaches build upon the recent advance-
+ment of large-scale scene repositories [ 28, 20, 36] and in-
+door scene rendering methods [ 35, 16, 10]. Many of these approaches build upon the recent advance-
+ment of large-scale scene repositories [ 28, 20, 36] and in-
+door scene rendering methods [ 35, 16, 10]. Methods
+We propose 3D Scene Layout Networks (3D-SLN), a
+conditional variational autoencoder network tailored to op-erate on scene graphs. Scene Layout Generator
+While previous methods generate 2D bound
+
+Research Outcomes:
+Many previous methods have used scene graphs as an in-
+termediate representation for downstream vision tasks suchas image synthesis, where they mostly formulate the prob-lem in a deterministic manner. Related Work
+Our method is related to the multiple areas in computer
+vision and graphics, including scene graph representations,scene synthesis, and differentiable rendering.
+ Many of these approaches build upon the recent advance-
+ment of large-scale scene repositories [ 28, 20, 36] and in-
+door scene rendering methods [ 35, 16, 10]. Many of these approaches build upon the recent advance-
+ment of large-scale scene repositories [ 28, 20, 36] and in-
+door scene rendering methods [ 35, 16, 10]. Methods
+We propose 3D Scene Layout Networks (3D-SLN), a
+conditional variational autoencoder network tailored to op-erate on scene graphs. Scene Layout Generator
+While previous methods generate 2D bound

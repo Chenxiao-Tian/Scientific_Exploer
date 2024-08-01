@@ -1,0 +1,42 @@
+Extracted Keywords:
+degree distribution, Complex Networks, degree, bipartite graph, Networks, graph, bipartite, Graphs, model, bipartite model
+
+Main Topics:
+Complex Networks
+Jean-Loup Guillaume, Matthieu Latapy
+liafa, Universit´ e, 2 place, 75005 Paris, the classical random graph model, real-
+world complex networks, their main properties, various
+attempts, accurate models, a model, the following challenges, the three main wanted
+properties, clustering, degree distribution, average distance, some real-
+world observations, its main
+properties, This model, a random bipartite graph, prescribed
+degree distribution, any complex network, ma y, a
+bipartite graph, some speciﬁc characteristics, its main properties, this underlying structure, a growing model, this observation, most real-world complex netw orks, some speciﬁc, These properties, the mo del, this discovery, a central role, many con texts, the robustness, the
+Internet, the spread, o ver, the Internet, the Web or
+other social networks, the performance, proto cols, a strong eﬀort, the realist
+
+Methodologies:
+These properties are not captured by the mo del generally used before
+this discovery, although they play a central role in many con texts like the robustness of the
+Internet [6, 15, 19, 20, 49], the spread of viruses or rumors o ver the Internet, the Web or
+other social networks [48, 52, 58], the performance of proto cols and algorithms Some models obtain all the w anted properties but rely on
+artiﬁcial methods which give unrealistic graphs (trees, gr aphs with uniform degrees, etc).
+ This approach could in principle be continued to sample a gra ph among the ones having
+a given number of nodes, a given degree distribution anda given clustering. However, until
+now, there is no known method to sample uniformly such a graph , and the problem seems
+diﬃcult.
+ 3Note that this algorithm may induce multiple links and loops . One may also use techniques to avoid them,
+see for instance [38, 44], b
+
+Research Outcomes:
+These properties are not captured by the mo del generally used before
+this discovery, although they play a central role in many con texts like the robustness of the
+Internet [6, 15, 19, 20, 49], the spread of viruses or rumors o ver the Internet, the Web or
+other social networks [48, 52, 58], the performance of proto cols and algorithms Some models obtain all the w anted properties but rely on
+artiﬁcial methods which give unrealistic graphs (trees, gr aphs with uniform degrees, etc).
+ This approach could in principle be continued to sample a gra ph among the ones having
+a given number of nodes, a given degree distribution anda given clustering. However, until
+now, there is no known method to sample uniformly such a graph , and the problem seems
+diﬃcult.
+ 3Note that this algorithm may induce multiple links and loops . One may also use techniques to avoid them,
+see for instance [38, 44], b

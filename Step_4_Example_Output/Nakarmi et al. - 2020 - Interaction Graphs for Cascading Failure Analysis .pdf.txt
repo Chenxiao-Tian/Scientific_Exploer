@@ -1,0 +1,1255 @@
+References:
+Energies2020,13,2219 20of25
+powergrids. Furthermore,intheareaofcascadingfailurereliabilityanalysisbasedoninteraction
+graphs,recentliteratureismoreinclinedtowardsidentifyingstructuresandpatternsintheinteraction
+graphstostudythevulnerabilitiesinpowergrids. However,otheranalyses,suchaspredictingthe
+pathandsizeofthecascades,canalsoutilizetheinteractiongraphsofthesystem.
+Next,futuredirectionsofresearchrelatedtotheinteractiongraphsforcascadingfailureanalysis
+arebrieflyreviewed. Oneofthekeyareasofresearchinthisdomainwouldbetorelaxthedependence
+oftheconstructedinteractiongraphontheappliedmethod, data, andoperatingcharacteristicsof
+thesystem. Asdiscussedinthissurvey,themethodusedforinferringtheinteractions;theavailable
+data;andtheoperatingsettingofthesystem,suchastheloadinglevelofitscomponents,allaffectthe
+interactiongraphs. Itisimportanttobeabletoderiveunifiedgraphsofinteractionsthatimplicitly
+capturetheeffectofsuchfactorsinthemodel. Moreover,thecomputationalcomplexityofconstructing
+interactiongraphs(whichincreaseswiththesizeandscaleofpowergrids)haslimitedtheirapplication
+tooff-lineanalysisofreliability. Thislimitationsuggeststheneedforfurtherresearchindeveloping
+moreeffectivedata-drivenandelectricdistance-basedmethodsfordevelopingreal-timeanalysisbased
+oninteractiongraphsfortimesensitiveanalysisduringcascadingfailures.
+Inaddition,mostoftheexistingstudiesusingtheinteractiongraphsareobservedtobefocused
+ontheidentificationofthecriticalcomponentsofthepowergrid. Suchanalysescanbeasteptowards
+developingmitigationstrategiesthatcanbeappliedtocreatemorereliablepowergrids. Assuch,itis
+importantthatpracticalandeconomicallyfeasiblemitigationstrategiesbestudiedanddeveloped,
+basedontheinsightsprovidedbytheinteractiongraphs.
+Finally,inordertocreateresilientandreliablepowergrids,itisimportanttounderstandtherole
+ofinteractionsamongthecomponentsofthesysteminreliabilitychallenges,suchascascadingfailures,
+asdiscussedinthispaper. However,inadditiontothereliabilityanalysisofthephysicalcomponents
+ofthesystem,itisalsoimportanttoconsidersoftfactors,suchashumanfactorsandtheirinfluenceson
+thesystemaswellasoperatingpoliciesinreliabilityanalysisandplanning. Suchinteractionanalyses
+willbeanessentialresearchdirectionforfuturestudiesofcascadingfailuresandoneexampleofsuch
+studyispresentedintheworkin[103].
+AuthorContributions: Allauthorscontributedtothismanuscript. Allauthorshavereadandagreedtothe
+publishedversionofthemanuscript.
+Funding: Thisresearchreceivednoexternalfunding.
+ConflictsofInterest:Theauthorsdeclarenoconflictofinterest.
+References
+1. Baldick,R.;Chowdhury,B.;Dobson,I.;Dong,Z.;Gou,B.;Hawkins,D.;Huang,H.;Joung,M.;Kirschen,D.;
+Li,F.;etal. Initialreviewofmethodsforcascadingfailureanalysisinelectricpowertransmissionsystems
+(IEEEPESCAMStaskforceonunderstanding,prediction,mitigationandrestorationofcascadingfailures).
+InProceedingsoftheIEEEPower&EnergySocietyGeneralMeeting(PESGM)—ConversionandDelivery
+ofElectricalEnergyinthe21stCentury,Pittsburgh,PA,USA,20–24July2008;pp.1–8.
+2. Hines,P.;Balasubramaniam,K.;Sanchez,E.C. Cascadingfailuresinpowergrids. IEEEPotentials2009,
+28,24–30.[CrossRef]
+3. U.S.-CanadaPowerSystemOutageTaskForce. FinalReportontheAugust14,2003BlackoutintheUnited
+StatesandCanada:CausesandRecommendations; U.S.DepartmentofEnergy:Washington,DC,USA;Natural
+ResourcesCanada:Ottawa,ON,Canada,2004.
+4. Berizzi,A.TheItalian2003blackout. InProceedingsoftheIEEEPowerEngineeringSocietyGeneralMeeting
+(PESGM),Denver,CO,USA,6–10June2004;pp.1673–1679.
+5. Ilho,J. Brazilianblackout2009blackoutwatch. PACWorldMagazine,4April2010;p.1.
+6. Lai,L.L.;Zhang,H.T.;Lai,C.S.;Xu,F.Y.;Mishra,S.InvestigationonJuly2012Indianblackout. InProceedings
+oftheIEEEInternationalConferenceonMachineLearningandCybernetics,Tianjin,China,14–17July2013;
+pp.92–97.
+
+Annexes/Appendices:
+
+Body Text:
+energies
+Review
+Interaction Graphs for Cascading Failure Analysis in
+Power Grids: A Survey
+UpamaNakarmi* ,MahshidRahnamayNaeini,MdJakirHossain† andMdAbulHasnat†
+DepartmentofElectricalEngineering,UniversityofSouthFlorida,Tampa,FL33620,USA;
+mahshidr@usf.edu(M.R.N.);mdjakir@usf.edu(M.J.H.);hasnat@usf.edu(M.A.H.)
+* Correspondence:unakarmi@usf.edu
+† Theseauthorscontributedequallytothiswork.
+(cid:1)(cid:2)(cid:3)(cid:1)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:1)
+(cid:1)(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)
+Received:20March2020;Accepted:17April2020;Published:2May2020
+Abstract: Understanding and analyzing cascading failures in power grids have been the focus
+of many researchers for years. However, the complex interactions among the large number of
+componentsinthesesystemsandtheircontributionstocascadingfailuresarenotyetcompletely
+understood. Therefore,varioustechniqueshavebeendevelopedandusedtomodelandanalyzethe
+underlyinginteractionsamongthecomponentsofthepowergridwithrespecttocascadingfailures.
+Suchmethodsareimportanttorevealtheessentialinformationthatmaynotbereadilyavailablefrom
+powersystemphysicalmodelsandtopologies. Ingeneral,theinfluencesandinteractionsamongthe
+componentsofthesystemmayoccurbothlocallyandatdistanceduetothephysicsofelectricity
+governing the power flow dynamics as well as other functional and cyber dependencies among
+thecomponentsofthesystem. Toinferandcapturesuchinteractions,data-drivenapproachesor
+techniques based on the physics of electricity have been used to develop graph-based models of
+interactionsamongthecomponentsofthepowergrid. Inthissurvey,variousmethodsofdeveloping
+interactiongraphsaswellasstudiesonthereliabilityandcascadingfailureanalysisofpowergrids
+usingthesegraphshavebeenreviewed.
+Keywords: interaction graphs; cascading failures; data-driven; electrical distance; power grids;
+systemmodeling
+1. Introduction
+1.1. AnOverviewoftheReviewandOverallSignificance
+Cascadingfailuresinpowergridsaresuccessiveinterdependentfailuresofcomponentsinthe
+system,whichareusuallyinitiatedbyfewoutagesduetointernalorexogenousdisturbancesandare
+propagatedinarelativelyshortperiodoftimeleadingtolargeblackouts[1,2]. Examplesofblackouts
+thatresultedfromcascadingfailuresarethecaseofUSNortheastblackoutin2003[3],Italianblackout
+in2003[4],Brazilianblackoutin2009[5],andIndianblackoutin2012[6]. Whilelargeblackoutsare
+infrequent,theiroccurrencestillhassubstantialrisksassociatedwiththesignificanteconomiclosses
+andsocialimpactsthattheycause. Understandingandmitigatingcascadingfailuresinpowersystems
+remainachallengeduetothelargesizeofthesesystemsaswellascomplexandsometimeshidden
+interactionsamongthecomponents. Variousstudiesandmodelshavebeendevelopedtounderstand
+andcontrolthesecomplexphenomenaincludingmethodsbasedonpowersystemsimulation[7,8],
+deterministic analytical models [9], probabilistic models [10–12], and graph-based models [13–63].
+Forasurveyofvariousmethodsforstudyingcascadingfailures,see[64–69]. Eachoftheseapproaches
+shedlightondifferentaspectsofthesephenomena.
+Energies2020,13,2219;doi:10.3390/en13092219 www.mdpi.com/journal/energies
+Energies2020,13,2219 2of25
+Amongthesecategoriesofapproaches,graph-basedmethodshaveattractedalotofattention
+due to the simplicity of the models and their ability to describe the propagation behavior of the
+failuresonthegraphofthesystem[70,71]. Manyinitialgraph-basedmodelsweredevelopedbased
+on the physical topology of the power system, where the connections among the nodes represent
+theactualphysicalconnectionsamongthecomponentsofthesystem[72,73]. However,thestudies
+in [62,74] showed the lack of strong connection between the physical topology of the system and
+failurepropagationincascadingfailuresinpowergrids. Ingeneral,influencesandinteractionsamong
+thecomponentsofthesystemduringcascadeprocessmayoccurbothlocallyandatdistancedueto
+thephysicsofelectricitygoverningthepowerflowdynamicsaswellasotherfunctionalandcyber
+dependencies among the components of the system. For instance, historical as well as simulation
+dataverifythatfailureofacriticaltransmissionlineinthepowergridmaycauseoverload/failure
+ofanothertransmissionlinethatmayormaynotbetopologicallyclose. Therefore, graphmodels
+basedonthephysicaltopologyofthesystemarenotadequateindescribingthepropagationbehavior
+of failures in power grids. Hence, new methods are emerging to reveal the complex and hidden
+interactionsthatmaynotbereadilyavailablefromphysicaltopologyofthepowersystem. Thesenew
+approachesarefocusedonextractingandmodelingtheunderlyinggraphofinteractionsamongthe
+componentsofthesystem. Whilethefocusofthissurveyisongraph-basedmethods,othermodeling
+approachessuchasprobabilistic,riskanalysis-based,andagent-basedapproaches[75]canalsobe
+usedformodelinginteractionsamongthecomponentsofthesystem.
+1.2. ReviewMethodology
+In this survey, various techniques for building the interaction graphs are reviewed. While the
+mainfocusofthissurveyisonthemethodsforconstructinginteractiongraphs,reliabilitystudies,
+andanalysesperformedusingsuchgraphsarealsobrieflydiscussed.Thebenefitofinteractiongraphs
+is that the interactions among the components are topologically local, which simplifies the study
+andanalysisofpropagationbehavioroffailuresandproperties/rolesofvariouscomponentsinthe
+systemduringthecascadeprocess. Notethatascascadingfailuresareattributedtothetransmission
+networkofpowergrids,thefocusofthesestudiesaremainlyonthetransmissionnetwork. Moreover,
+the majority of studies based on the interaction graphs are focused on cascading failure analyses
+inpowergrids;however,interactiongraphscanbeusedforotherapplicationsinpowergrids(e.g.,
+analyzing reliability to targeted attacks) or even other networked systems such as transportation
+networks[76,77].
+Theearliestresearchstudyinfindinginteractionsbetweencomponentscanbetracedbacktothe
+1989studyin[78],inwhichinteractionsbetweenthebusesinthesystemrepresentedameasureof
+electricaldistancebetweencomponentsbasedonchangesinvoltagemagnitudesensitivities. Whilethe
+powergridanalyzedinthisstudywasnotmodeledasagraph,theconceptinthisstudyhasbeenwidely
+adaptedbynumerousgraph-basedmodelstorepresentinteractionsbetweencomponents. Inthis
+survey,methodsforconstructinginteractiongraphsarebroadlycategorizedintotwomainclasses:
+data-drivenapproachesandelectricdistance-basedapproaches. Asthenameimplies,thedata-driven
+approachesforbuildinginteractiongraphsrelyondatacollectedfromthesystem(historicalandreal
+dataorsimulationdata)forinferringandcharacterizinginteractionsamongthecomponentsofthe
+system. Further,threecategoriesaredefinedfordata-driveninteractiongraphsbasedonthemethod
+usedforanalyzingthedata.Theseinclude: (1)methodsbasedonoutagesequenceanalysis[13–37],
+(2)risk-graphmethods[38–41],and(3)correlation-basedmethods[29,30,42,79].Thecategoryofoutage
+sequenceanalysisisfurtherdividedintofoursub-categoriesincluding(i)consecutivefailure-based
+methods [13–20], (ii) generation-based methods [21–26], (iii) influence-based methods [27–30],
+and (iv) multiple and simultaneous failure-based methods [31–37]. This novel taxonomy is used
+to classify thirty detailed research studies, including conference and journal publications, in the
+data-drivencategoryintovarioussubcategories.
+Energies2020,13,2219 3of25
+Ontheotherhand,electricdistance-basedapproachesexploitpropertiesbasedonthephysicsof
+powerandelectricitygovernedbyKirchoff’slawstodefineinteractionsamongthecomponents. Thus,
+theinteractionsarerepresentedbyelectricaldistances,whichillustratesthepropertiesoftheelectrical
+interactionsbasedonpowerflowsamongthecomponents. Twosub-categoriesaredefinedforelectric
+distance-basedinteractiongraphsbasedonthepowergridconditionsthatareconsideredforcreating
+thegraphs. Theseinclude: (1)methodsthatdefinetheinteractionsbasedonchangesinthepower
+flowduetochangesinphysicalattributesofcomponentscausedbyoutageconditions[43–47]and
+(2)methodsthatdefinetheinteractionsamongcomponentsduringnormalornon-outageoperating
+conditions[48–63,78]. Thecategoryofdefininginteractionsduringnon-outageoperatingconditions
+is classified into two sub-categories: (i) impedance-based methods, which define interactions by
+consideringasingleimpedancemeasureamongthecomponentsconnectedovermultiplepaths[48–59]
+and(ii)sensitivitiesincomponents’statesduetochangesinvoltagemagnitudesandvoltagephase
+angles [60–63,78]. This novel taxonomy is used to classify twenty-one detailed research studies,
+including conference and journal publications, in the electric distance-based category into various
+subcategories. Figure1showsthetaxonomyofthereviewedmethodsforconstructingvarioustypes
+ofinteractiongraphs. Thefigurealsospecifiessectionnumbersforthecategoriesandsubcategories,
+in which the methods have been discussed. Research studies included in this review have been
+foundusingdatabasessuchasIEEEExplore,Elsevier,AIP(AmericanInstituteofPhysics)Publishing,
+Springer,APS(AmericanPhysicalSociety)Physics,andMDPI.Moststudiesinthisreviewarefairly
+recentandhavebeenpublishedinthepastdecade.
+Interaction
+Graphs
+Electric
+Data-driven
+Distance-based
+(Section 3.1)
+(Section 3.2)
+Outage Correlation- Outage Non-outage
+Risk Graph
+Sequence based Condition-based Condition-based
+(Section 3.1.2)
+(Section 3.1.1) (Section 3.1.3) (Section 3.2.1) (Section 3.2.2)
+Multiple and
+Consecutive Generation- Influence- Impedance-
+Simultaneous Jacobian
+Failures based Failures based based
+Failures (Section 3.2.2.2)
+(Section 3.1.1.1) (Section 3.1.1.2) (Section 3.1.1.3) (Section 3.2.2.1)
+(Section 3.1.1.4)
+Figure1.Taxonomyofmethodsforconstructinginteractiongraphswithsectionnumbersshownfor
+thecategoriesandsub-categories.
+Inadditiontothereviewofvariousmethodsforconstructinginteractiongraphs,variousreliability
+analysis and studies performed using these graphs are also briefly reviewed. Some studies of
+interactiongraphsarefocusedonidentifyingcriticalcomponentsinthecascadeprocessofpower
+grids[14–24,27–31,38–40,48,56–59]. Thesestudiescanhavedifferentpurposessuchas(1)identifying
+the vulnerable or most influential components of the system in the cascade process by utilizing
+standardcentralitymetrics[14–20,50,54]ordefiningnewcentralitymetrics[21–24]and(2)identifying
+the set of components whose upgrade (for instance, by increasing the power flow capacity of
+transmission lines) or protection can help in mitigating the risk of cascading failures and large
+blackouts[27,28,31,58]orquantifyingtheperformanceofthegridsafteradditionofnewtransmission
+lines[58,59]. Tocharacterizethelatter,someworks[16,38–40,59]focusontheresponseofpowergrids
+toattacksandfailurescenariosusingmetricsthatquantifytheefficiencyofthegridbeforeandafter
+theattacks. Furthermore,tocharacterizetheroleofcomponentsinthecascadeprocess,someefforts
+Energies2020,13,2219 4of25
+are focused on characterizing the patterns and structures in interaction graphs using community
+detectionapproaches[29,30]ortreestructures[43,44]. Moreover, theworkin[44]usesinteraction
+graphstoidentifytransmissionlinesthatwhenswitchedoffcreatepartitionsthatlimitthepropagation
+offailuresinthepowergrid. Somestudies[31,42]alsousethestructuresandpatternsininteraction
+graphstocharacterizeandpredictthedistributionofcascadesizes. Similarly,structuresininteraction
+graphs have been used for reliability analysis of zonal patterns [51] and partitioning into voltage
+controlregions[78].
+1.3. KeyContributionsandReviewStructure
+Thekeycontributionsofthisreviewworkareasfollows:
+1. A novel classification of methods for constructing interaction graphs into two categories:
+data-drivenandelectricdistance-basedapproachesaswellasmultiplesub-categoriesasshown
+inFigure1.
+2. Acomprehensivestudyanddetaileddiscussiononthetechniquesusedintheconstructionof
+interactiongraphs. Moreover,keypropertiesandlimitationsofeachtypeofinteractiongraphis
+discussed. Suggestionsonaddressingthelimitationsandpossiblefuturedirectionsarepresented.
+3. Abriefoverviewofcascadingfailureanalysisinpowergridsusingtheconstructedinteraction
+graphsarepresented.
+The organization of the rest of the review is as follows. In Section 2, a brief discussion on
+the preliminary terms pertinent to this review is presented including: (1) definition and causes
+of cascading failures, (2) well established cascading failure models in literature, and (3) physical
+topology-based graphs of power grids. In Section 3, a comprehensive discussion on the various
+methods for constructing interaction graphs is provided, and in Section 4, a brief discussion is
+presentedonthereliabilityanalysisandcascadingfailurestudiesperformedusingtheinteraction
+graphsconstructedinSection3. Finally,inSection5,thereviewissummarizedandconcluded.
+2. Definitions
+2.1. CascadingFailures
+Cascadingfailuresaretheleadingcauseofwideareablackouts[3]. Whilelargeblackoutsare
+infrequent, the power law behavior exhibited by the blackout size distribution (e.g., measured in
+terms of unserved energy, numbers of customers with no service, number of transmission lines
+tripped)warrantstheneedtostudysuchevents[7]. Acascadingfailurecanbedefinedasasequenceof
+interdependentoutageevents,initiatedbyfewoutagesordisturbances[1,64]. Theinitiatingeventscan
+beattributedtovariousfactorssuchasnaturaldisasters,vegetationdisturbances(e.g.,treecontact),
+humanerrors,software/hardwareerrors,andsoon. Inrecentyears,cyber/physicalattacksonpower
+grids, such as the case of the Ukrainian cyber attack of 2015 [80], are also precursors to cascading
+failures. After the occurrence of the initiating events, the dependent sequence of outages results
+fromvariousinternaleventssuchasvoltageandangularinstabilities,lineoverloads,hiddenfailures
+causedduetothemisbehaviorofprotectiondevicesaswellaserrorsrelatedtomaintenance,operation,
+andhumanfactors[64]. Further,variousoperatingconditionsofthepowergrid,suchastheinitial
+loading conditions of the components, also affect the behavior of the overall power grid during
+cascadeprocesses.
+2.2. ModelsofCascadingFailures
+Modelingandstudyingcascadingfailuresincludeadiversefieldoftechniquesandapproaches.
+Theyincludetopologicalmodels,highlevelstatisticalmodels,deterministicandprobabilisticmodels,
+simulation-basedmodelsforanalyzingquasisteadyanddynamicbehaviorofthesystem,orhybrid
+models,interdependentmodelswithothersystems(e.g.,communicationsystems),andsoon(see [66]).
+Energies2020,13,2219 5of25
+Many of these methods have been bench-marked and validated as well as cross validated [81,82].
+Sincethisreviewisfocusedongraph-basedmethods,theupcomingsectionsbeginbydiscussingthe
+physicaltopology-basedgraphsofpowergridsandtheirlimitationsinrepresentinginteractionsamong
+components during cascading failures, which motivates the subsequent discussion of interaction
+graphsforpowergrids.
+2.3. PhysicalTopology-BasedGraphsofPowerGrids
+AsmentionedinSection1,initialgraph-basedstudiesofpowergrids,suchas[70–73],werebased
+onthephysicaltopologyofthepowergrid. Ingeneral,apowergridcansimplyberepresentedbya
+graph,G = (V,E),whereV representsthesetofgenerator,transmission,substation,orloadbuses,
+and Erepresentsthesetofpowerlines[83]. Suchagraphshowsthephysicalconnectivityamong
+the components of the system. Various studies have been performed on the physical topology of
+thepowergridsbyanalyzingtheirglobalstructuralproperties[72,73],suchasaveragepathlength,
+clusteringcoefficient, anddegreedistribution, foranalyzingpowergridswithrespecttostandard
+complex networks such as small world, random, and scale-free graphs. Particularly, in the study
+in[73],theaveragepathlengthandclusteringcoefficientofreal-worldpowergridswerecomparedto
+theirequivalentrandomandscale-freenetworkmodels.However,thestudyconcludedthatreal-world
+powergridsdifferedsignificantlyfromstandardnetworkmodelsastheclusteringcoefficientandthe
+averagepathlengthofreal-worldgridsweresignificantlygreaterthanthatoftheircomplexnetwork
+modelcounterparts. Somestudiesperformedonthephysicaltopologyalsofocusedonproperties
+of the electrical connections [84] identified using centrality measures such as degree, eigenvector,
+closeness,andbetweenness(forareviewanddefinitionofcentralitymeasuresreferto[85]). However,
+ithasalsobeendiscussedthatphysicalgraphsmaybeinadequateinrepresentingandcapturingthe
+interactionsamongthecomponentsofthepowergrid[62,74], specificallyforanalyzingcascading
+failures. This limitation is due to the inability of the physical graphs to capture the dynamics of
+interactionsat-distanceincascadingfailures,forinstance,duetoKirchoff’sandOhm’slaws. Inrecent
+literature,somestudiesconsiderthephysicalaswellaselectricalpropertiesofpowergrids. Thefocus
+ofsuchstudiesisonthegenerationofsyntheticpowergridnetworksthatconsidertheheterogeneity
+ofthecomponentsintermsoftheiroperatingvoltages[83,86]. Insuchtypesofgraphs,eachvertexis
+associatedwithavoltageratingsuchthattransmissionlinesarerepresentedasedgesbetweenvertices
+ofthesamevoltagelevelandvoltagetransformersarerepresentedasedgesbetweenverticeswith
+differentvoltagelevels. However,extensiveanalysisofsuchgraphsforcascadingfailurescenariosis
+stillanopenresearchproblem.
+3. GraphofInteractions
+Inthissection,themethodsofmodelingpowersystemsbygraphsofinteractionsarereviewedin
+twodistinctcategories: data-drivenmethodsandelectricdistance-basedmethods. Thesemethods
+build a graph of interactions for the system, denoted by G = (V,E) in which the set of vertices
+i i i
+V are the components of the system whose interactions are of interest, such as the set of buses
+i
+or transmission lines. Further, the set E represents the set of interactions/influences among the
+i
+components,whichmaybedirected,undirected,weighted(representingthestrengthofinteractions
+orinfluences),orunweighteddependingontheanalysisofinterest.
+3.1. Data-DrivenMethodsforInteractionGraphs
+Various data-driven approaches have been proposed for inferring and modeling interactions
+amongthecomponentsofthepowergrid. Theseapproachesrelyondatafromsimulationorhistorical
+outagedatasets. Asthehistoricaldatasetsarelimited, themajorityofstudiesusesimulationdata.
+However,thefocusofthisreviewisnotonreviewingthemechanismforgeneratingcascadedata;
+for example, from power system simulations. Rather, the focus is on modeling the cascade data
+intointeractiongraphsandthesubsequentreliabilityanalysisperformedonsuchinteractiongraphs.
+Energies2020,13,2219 6of25
+Thecascadedatasetsusedinthevariousmethodswillbementionedasnecessarywhendiscussing
+themethods. Inthispaper,fiveclassesofdata-drivenmethodshavebeenidentifiedandreviewedfor
+modelinginteractiongraphsforstudyingcascadingfailuresinpowergridsasshowninTable1. Next,
+eachclassofmethodisdiscussedindetail.
+Table1.Classificationofexistingstudiesusingthedata-driventaxonomy.
+Category Subcategory FurtherSubcategory Works
+ConsecutiveFailures [13–20]
+Generation-basedFailures [21–26]
+OutageSequence
+Data-driven
+Influence-based [27–30]
+InteractionGraphs
+MultipleandSimultaneousFailures [31–37]
+Risk-graph [38–41]
+Correlation-based [29,30,42]
+3.1.1. InteractionGraphsBasedonOutageSequencesinCascadingFailures
+This class of methods rely on cascading failure data in the form of a sequence of failures in
+eachcascade. Forinstance, thesequence l → l → l → l representsanexampleofsequenceof
+5 7 3 6
+transmissionlinefailuresinacascadescenario,wherel representsoutagedtransmissionlinesand
+i
+thearrowrepresentstheorderinwhichthelinesfailedduringcascades. Thesemethodsarebasedon
+analysisofsequenceoffailuresforextractinginteractionsandfocusonthecauseandeffectinteractions
+amongfailureofcomponents.Methodsinthiscategoryusevarioustechniquesandstatisticstoanalyze
+suchdataasdiscussednext.
+3.1.1.1. InteractionGraphBasedonConsecutiveFailures
+In this category of outage sequence analysis, only direct consecutive failures in a sequence
+are used for deriving the interaction links among the components of the system. In other words,
+twocomponentsinthesystemhaveaninteractionlink, e ∈ E, onlyiftheyappearassuccessive
+i,j i
+outagesintheorderl → l inacascadescenariointhedataset. Theorderoftheoutagesrepresents
+i j
+thedirectionofthelinksintheinteractiongraph,e.g.,outagesequencel → l suggestsanoutgoing
+5 7
+link from node l to node l . Further, if the example sequence l → l → l → l represents a
+5 7 5 7 3 6
+longersequenceoftransmissionlinefailuresinacascadescenario,thefollowingdirectedinteraction
+edgeswillbelongtograph G,i.e.,{e ,e ,ande } ∈ E. Thestrengthofinteractionsamongthe
+i 5,7 7,3 3,6 i
+componentsinthiscasecanbecharacterizedusingthestatisticsofoccurrencesofpairsofsuccessive
+outages in cascade scenarios in the dataset. For instance, the work in [13] assigns weights to the
+interactionedgesbystatisticalanalysisofthenumberoftimesthatapairofsuccessivelineoutages
+occursinthecascadedataset. Forinstance,theweightoftheinteractionlinkfromnodel tonode
+a
+l canbecharacterizedas|l → l |/(totalnumberofsuccessivepairsintheoverallcascadedataset),
+b a b
+where|l → l |isthenumberoftimesfailuresl andl occurredsuccessivelyinthecascadedataset.
+a b a b
+These weights can be interpreted as the probability of occurrence of each pair of successive line
+outages. Examplesofstudiesusingthismethodtodevelopthepowergrid’sgraphofinteractions
+include[13–20],wheretransmissionlinesinthesystemaretheverticesV oftheinteractiongraphG.
+i i
+In the study presented in [87], the sequences of consecutive failures are called fault chains.
+For creating the dataset of fault chains, in the first step, a single transmission line is tripped as
+theinitiatorofcascadingfailureinthesimulation,andinthesubsequentsteps,themostoverloaded
+componentduetopowerflowre-distributionsisconsideredasthenextfailureintheoverallsequence
+Energies2020,13,2219 7of25
+ofconsecutivefailures. Inthestudiesin[14–16,18–20], forapowergridwith n transmissionlines,
+nfaultchainsarecreated,andtheedgesamongconsecutivefailuresineachchainareweightedbased
+on power flow changes in a line after the failure. In the work in [17], fault chains are created by
+consideringmultipleinitialfailuressuchthatasystemwithntransmissionlinesmayhavemorethann
+faultchains. Inadditiontopowerflowre-distributions,theworkin[19]alsoconsidersthetemperature
+evolutionprocessoftransmissionlinesduringcascadeswhileconstructingfaultchains. Thus,thefault
+chainsarecapableofreflectingthermo-physicaleffectsoftransmissionlinesduringcascades. Finally,
+a fault chain graph is developed by combining all fault chains together into a single graph where
+theverticesareallthecomponentsthathavefailedinthefaultchains, andtheedgesbetweenthe
+verticesexistiftheoutageshavesuccessivelyoccurredinthefaultchains. Forpairsofoutages(l → l )
+i j
+thathavereoccurredinmultiplefaultchains,theircombinededgeweightinthefaultchaingraph
+isaveraged.
+3.1.1.2. InteractionGraphUsingGeneration-BasedAnalysisofFailures
+ThemethodbasedontheconsecutivefailuresdiscussedinSection3.1.1.1focusesononetoone
+impactthattheoutageofalinehasontheoutageofanotherline. However, incascadingfailures,
+instead of pair-wise interactions among successive failures, a group of failures may contribute to
+failuresofothercomponents. Therefore,itisimportanttoconsidertheeffectsofgroupsoffailuresand
+characterizeinteractionsamongthecomponentsbasedontheeffectsamonggroupsofcomponents.
+Theworkspresentedin[21–25]definesuchgroupsasgenerationoffailureswithinacascadeprocess,
+whicharefailuresthatoccurwithinshorttemporaldistanceofeachother.Intheseworks,thesequence
+offailuresinthecascadearedividedintosequenceofgenerations,andthefailureinducedcauseand
+effectrelationshipsareconsideredbetweenconsecutivegenerations. Specifically,outagesoccurringin
+generationm+1areassumedtobecausedbyoutagesingenerationm.
+Theinteractionsbasedonsuccessivegenerationsaredefinedindifferentwaysintheliterature.
+Forinstance,theauthorsin[27]assumethatallcomponentsingenerationmhaveinteractionswithall
+componentsingenerationm+1,i.e.,ifgenerationmhasn numberofcomponentsandgeneration
+1
+m+1hasn numberofcomponents,thenthenumberofinteractionsbetweengenerationmandm+1
+2
+willben ×n . However,somestudiesarguethatconsideringallpossiblepairsofinteractionsamong
+1 2
+componentsoftwoconsecutivegenerationsoverestimatestheinteractionsamongcomponents[21–26].
+Specifically, all line outages in one generation may not be the cause of a line outage in the next
+generation. Therefore,intheworkspresentedin[21,23],thecauseoffailureofalinekingeneration
+m+1isconsideredtobeduetothefailureofalineingeneration m withthemaximuminfluence
+valueonthelinek. Theinfluencevalueforcomponent jingenerationmisdefinedasthenumber
+oftimesthatthecomponentjhasfailedingenerationmbeforethefailureoflinekinthesuccessive
+generationm+1inthecascadedataset. Forcaseswheretwoormorelinesingenerationmhavethe
+samemaximuminfluencevaluesonlinekingenerationm+1,allsuchcomponentsareassumedto
+interactwithlinek. Intheworksdiscussedsofarinthissection,theinteractionamongcomponentjin
+generationmandcomponentkingenerationm+1willberepresentedbyadirectedlinke .
+j,k
+While the works in [21,23] limit the interactions by only considering the maximum influence
+values in current generation as the probable cause of component failures in the next generation,
+the work in [22] gives an estimate of the interactions between successive generations using the
+expectationmaximization(EM)algorithm. Initially,allfailedcomponentsingenerationmareassumed
+tobethecausesoffailureofallcomponentsingenerationm+1. However,theactualcomponents
+ingenerationm(hiddenvariables)thatcausefailureofcomponentsingenerationm+1arefound
+usingtheiterativeprocessofupdatingtheprobabilitiesoffailures. Thus,aftertheiterativeupdate
+processiscompleted,someprobabilitiesoffailuresbetweencomponentsmaybezero,whichremoves
+theoverestimatedinteractionsoftheinitialassumption.
+Theweightoftheinteractionlinkscanalsobedefinedinvariousways. Forinstance,theweight
+ofthelinkcanbedefinedastheratioofnumberoftimesthatthepairofcomponentsappearedintwo
+Energies2020,13,2219 8of25
+successivegenerationsoverthetotalnumberoftimesthatcomponentkhasappearedinthedataset.
+Thisweightcanbeinterpretedasthelikelihoodoffailureofcomponentkinthenextgenerationgiven
+the failure of component j in the current generation. The work in [24] also generates the graph of
+interactionsbasedonthemaximuminfluencesamonggenerationsincascades,similartothemethod
+usedin[21,23]. However,thegraphofinteractionshastwoadditionallayers: onelayertocapture
+theweightofinteractionsbasedontheamountofloadshedthathasoccurredafterthefailuresin
+generationm(therefore,thedatasetrequiresadditionalinformationabouttheamountofloadshed
+duringthecascadeprocess)andtheotherlayertocapturetheweightsofinteractionsbasedonthe
+electricdistancebetweentransmissionlinesduringthecascadeprocess. Wewillpresentthedetailed
+discussion of the electric distance-based interactions in Section 3.2.2. The study in [26] considers
+bothstatisticalpropertiesaswellastheamountofloadshedthathasoccurredbetweensuccessive
+generationstoassigninteractionlinkweights. However,thestudyin[26]identifiedislandsformedin
+thepowergridsduringoutagesandthenselectivelyassignedlinksbetweencomponentsofsuccessive
+generationsonlyifthegenerationswerelocatedinislandsthatweredirectconsequencesofoneanother.
+3.1.1.3. Influence-BasedInteractionGraph
+In this method, the interactions among the components are derived based on successive
+generations in cascades; however, the weights of the interactions are characterized based on the
+influence model and the branching process probabilistic framework. The influence model is a
+networkedMarkovchainframework,originallyintroducedin[88]andwasfirstappliedtocascade
+datasetintheworkpresentedin[89].Thissurveyreviewsthestudiesthatusetheinfluencemodelinthe
+contextofpowergridstodevelopthegraphofinteractions. Inthesestudies,thetransmissionlinesin
+thesystemareconsideredastheverticesV oftheinteractiongraphG andtheinfluences/interactions
+i i
+betweenthelinesastheedgesE.
+i
+In[27],authorsconsiderinteractionlinksamongallpairsoflinesintwosuccessivegenerations
+inacascadeusingtheinfluencemodel. Theweightsofthedirectedlinksarederivedintwosteps.
+Inthefirststep,abranchingprocessapproachisusedinwhicheachcomponentcanproducearandom
+number of outages in the next generation. The number of induced outages by each component is
+assumedtohaveaPoissondistributionbasedonthebranchingprocessmodel. Parameterλ specifies
+i
+thepropagationrate(meannumberofoutages)ingenerationm+1fortheoutageofcomponentiin
+generationm. Inotherwords,thisstepdefinestheimpactofcomponentsontheprocessofcascade
+bydescribinghowmanyfailurestheirfailurecangenerate[12]. Inthesecondstep,itisassumedthat
+giventhatcomponenticauseskoutagesinthenextgeneration,somecomponentsaremorelikelyto
+outagethanothers. Therefore,theycalculatetheconditionalprobabilityg(j|i),whichistheprobability
+ofcomponentjfailingingenerationm+1,giventhefailureofcomponentiingenerationm. Ifonly
+g(j|i)valuesbasedonthestatisticalanalysisofdataareconsidered,thentheprobabilityoffailureof
+componentjgivencomponentifailurewillbeknown;however,theexpectednumberoffailuresfrom
+failureofcomponentiisnotknown. Hence,bothstepsareimportantincharacterizingtheinfluences
+amongcomponents.
+Thefinalstepconsistsofcombiningtheinformationfromthefirstandsecondstepsintoasingle
+influencematrixH(representingthelinksofgraphofinteractionsandtheirweights). Theelements
+ofthematrixaredefinedbasedontheconditionalprobabilitythataparticularcomponent jfailsin
+the next generation m+1, given that component i has failed in generation m and that generation
+m+1includesexactlykfailures. ThisprobabilitycanbedefinedasP(j|i,k) =1−(1−g[j|i])k. Then,
+theconditionalprobabilityh thatcomponentjfailsingenerationm+1,giventhatcomponenti
+i,j,m
+failedingenerationm,overallpossiblevaluesofkrepresentstheactualelementsofHandisfoundby
+multiplyingP(j|i,k)withtheprobabilityofkfailuresoccurringasfollows:
+∞ λk
+h = ∑ (1−(1−g[j|i]k)) i,m e−λi,m. (1)
+i,j,m
+k!
+k=0
+Energies2020,13,2219 9of25
+Based on the influence graph, cascading failures can start with a line outage at a node of the
+graphandpropagateprobabilisticallyalongthedirectedlinksinthegraph. Examplesofotherworks,
+that have used the influence-based approach to derive the graph of interactions for power grids
+include[28–30].
+3.1.1.4. InteractionGraphofMultipleandSimultaneousFailures
+Thisclassofmethodsalsousethesequenceoffailurestomodelinteractionsamongcomponents
+ofthesystem;however,theyconsidertheinteractionsamongmultiplesimultaneousfailures.
+Specifically,inthestudypresentedin[31],aMarkoviangraphwasdevelopedwiththegoalof
+addressingtheproblemofcapturingtheeffectofmultiplesimultaneousoutageswithingenerations
+onthecharacterizationoftheinteractionsamongthecomponentsofthesuccessivegenerationsin
+acascade. Inthiscase, thenodesofthegraphrepresentthestatesoftheMarkovchaindefinedas
+thesetoflineoutagesinagenerationofthecascade,andthelinksrepresentthetransitionamong
+the states (i.e., interactions between successive generations of outages). Hence, each node in the
+graph may represent the outage of a single line or multiple lines. Markovian interaction graphs
+differ from generation-based and influence-based interaction graphs as edges are the interactions
+betweensuccessivegenerationsofsetsoflineoutagesinsteadoftheindividualinteractionsbetween
+lineoutagesinsuccessivegenerations. Markovianinteractiongraphsalsoconsideranodewithanull
+state,whichrepresentsthestatewherethecascadestops. Thisstateoccursattheendofallcascade
+scenarios. Thetransitionprobabilitiesamongthestates(i.e.,theweightofthelinks)fromstateito
+statejcanbeestimatedbycountingthenumberofconsecutivestatesinwhichstateiandstatejoccur
+inallthecascadesanddividingbythenumberofoccurrencesofstatei.
+Otherstudiesthatconsidertheinteractionamongmultiplefailuresatthesametimearepresented
+in [32,33]. In these works, the state of each component in the power grid, including buses and
+transmission lines/transformers, is represented by 0 for a failed condition and 1 for a working
+condition. Then,statesofallcomponentsinthepowergridareaggregatedandrepresentedbyavector
+withsizen+l,wherenisthenumberofbusesandlisthenumberoftransmissionlines/transformers.
+Asinglestatevectorcanberegardedasanodeintheinteractiongraph,andthereareexactly2n+l
+numberofnodesinthegraph,representingallpossiblestates. Initially,allcomponentsinthepower
+gridareinworkingconditionsuchthattheinitialstateconsistsofastatevectorirepresentedbyall
+ones. Afteracomponentfailureoccurs,thestateofthecomponentchangesto0,andthecorresponding
+entryofthecomponentintheinitialstatevectoriisalsoupdated,andthus,anewstatevector jis
+formed. Thistransitionisrepresentedintheinteractiongraphbyadirectedlinkfromtheinitialstate
+vector i totheupdatedstatevector j. Thisprocessiscontinuedforallsequencesoffailuresinthe
+cascadedataset. Finally,somenodesinthestatetransitiongraphmaybehighlyconnectedwhereas
+somenodesmaybeisolated. Notetheobtainedinteractiongraphisdirectedbutunweighted.
+Other examples of methods that consider interactions of multiple failures at the same time
+include[34–37]. Intheseworks,faultchainsareusedtoconstructastatefailurenetwork. Eachfault
+chainisalsoassociatedwithitsfinalloadlossvalue.Notethatthedefinitionofafaultchainhasalready
+beendiscussedinSection3.1.1.1. Similartothestudiesin[32,33],eachcomponentisrepresentedby
+binaryvalues0or1forworkingandfailedconditions,respectively. Theworking/failedconditions
+forallcomponentsinthesystemareaggregatedtoformastate. Eachstateisann-dimensionvector,
+wherenisthenumberoftransmissionlinesinthepowergrid. However,incontrasttothestudies
+in[32,33],whereallpossiblestates,i.e.,2n,areconsideredasnodesintheinteractiongraph,statesare
+enumeratedfromthefaultchaindata. Forexample,forafaultchain{l → l → l → l } → load ,
+5 7 3 6 loss
+four states are used for representing the four line faults in the chain, and a single state is used to
+represent the total load loss associated with the fault chain. All such fault chains in the cascade
+dataset are combined together into the state failure network. Nodes in the network represent the
+statesenumeratedfromthecompletedataset,andlinksinthenetworkrepresentthefailedcomponent
+occurringimmediatelyafteraparticularstate. Thus,thelinkscanberegardedasrecordsofcomponent
+Energies2020,13,2219 10of25
+failures that occur after a state. Next, nodes and links in the network are assigned weights by
+back-propagationofthefinalloadlossesbasedontheprobabilityofoccurrenceofthelinks. Thus,
+each node (state) and each link (failed component) is associated with an expected load loss after
+theiroccurrence.
+3.1.2. RiskGraphsforInteractionGraph
+The work presented in [38] introduces the risk-based interaction graphs, which describe the
+interactionsorrelationshipsamongthenodes(i.e.,buses/substations)ofthepowergridbasedon
+theeffectsoftheirsimultaneousfailuresincausingdamageinthesystem. Thisgraphisnotsolely
+focusedonanalysisofinteractionsamongcomponentsduringcascadingfailures. Instead,itisfocused
+onthevulnerabilityanalysisofthepowergrid,andtheeffectoffailuresisassessedusingmetricssuch
+asnet-ability,whichmeasurestheeffectivenessofapowergridsubjectedtofailures,basedonpower
+systemattributesincludingpowerinjectionlimitationandimpedanceamongthecomponents.
+Constructionofriskgraphsisdoneintwosteps. Thefirststepincludesgeneratingandtracking
+thesetsofstrongestnodecombinationswhosesimultaneousfailureshavesignificanteffectsonthe
+powergrid. Identificationofsuchsetsofstrongnodecombinationscanbedonebyreducingthesearch
+spaceorexhaustivesearchmethods[38,39]. Reducedsearchspacestrategyisthepreferredmethodfor
+computationalpurposes. Forinstance,in[39],thesearchworksasfollows: givenm-nodecombination
+ofcomponents,whichcausesdamageinthenetwork,m+k-nodecombination(wherekrepresents
+additionalcomponents)shouldcauseanevengreaterdamage.
+Inthesecondstep,thesesetsofstrongnodecombinationsareusedtoformtheriskgraphs. Ifa
+nodeappearsatleastonceinthesetsofstrongnodecombinations,thenthenodebecomesavertexof
+theriskgraph. Linksamongnodesintheriskgraphexistiftheyappearinthesamesetofstrongnode
+combinations. Bothnodesandlinksintheriskgraphareweightedbasedonthefrequencyoftheir
+appearanceinthesetsofstrongnodecombinations.Thisapproachresultsinaweightedbutundirected
+noderiskgraph,wherehigherweightvaluesonthelinkssuggeststrongernodecombinations. Node
+riskgraphsaredependentonthesystemparameterssuchasratioofcapacitytotheinitialloadof
+thenodesinthesystem. Toremovedependenciesonsystemparameters, noderiskgraphscanbe
+constructedformultipleparametervaluesandcombinedtogethertoformthenodeintegratedrisk
+graphusingtheriskgraphadditivityproperty[38,39]. Theaforementionedriskgraphcanalsobe
+extended to a directed risk graph, where the removal of components in a specific order in strong
+nodecombinationsareconsidered. Thestudyin[40]constructsthedirectednoderiskgraphsandthe
+directednodeintegratedriskgraphwiththesameconceptasitsundirectedcounterpartinthestudies
+in[38]and[39].
+Anothersimilarconcepttoriskgraphisthedoublecontingencygraphintroducedin[41]. Whilem
+contingency combinations of attack scenarios for the power grid was studied in the risk graphs,
+many methods focus on N−2 contingency analysis as the power grid is considered to be N−1
+protected[90]. Inthedoublecontingencygraph,theverticesofthegrapharethetransmissionlines,
+andthelinksbetweenverticesshowpairsoftransmissionlineswhosesimultaneousfailureasinitial
+triggerscanaffectthereliabilityofthesystemby,forinstance,violatingthethermalconstraintrulesin
+thepowergrid. Similartotheriskgraph,doublecontingencygraphonlyconsiderscombinationsof
+initialtriggersandlacksinformationaboutthecomponents,whichwillbeaffectedduetotheoutage
+oftheinitialtriggers. Therefore,theworkin[41]usesacombinationofthedoublecontingencygraph
+withinfluencegraphforreliabilityanalysisofthepowergrid.
+3.1.3. Correlation-BasedInteractionGraph
+Theworkin[42]presentsagraphofinteractionsforpowergridsbasedonthecorrelationamong
+thefailuresofthecomponents. Inthecorrelation-basedinteractiongraphin[42],verticesrepresent
+the transmission lines, and the edges represent the pairwise correlation between line failures in
+the cascade dataset. The correlation dependence between failures are captured in the correlation
+Energies2020,13,2219 11of25
+matrix,whoseijthelementsarepositivePearsoncorrelationcoefficientbetweenthefailurestatuses
+ofcomponentsiandjinthecascadedataset. Theresultingcorrelationmatrixissymmetricandcan
+beinterpretedasanundirectedandweightedinteractiongraph,wherethenodesarethefailedlines,
+theedgesaretheinteractionsbetweenthelines,andtheweightsarethecorrelationvaluesamongthe
+components. Similarly,thestudiesin[29]and[30]alsoconstructcorrelation-basedinteractionsgraphs
+fromsimulatedcascadedatasetconsistingofsequencesoftransmissionlinefailures.
+3.1.4. ComparisonofData-DrivenMethodsforConstructingInteractionGraphs
+Inthepastdecade,cascadingfailureshavebeenactivelymodeledandanalyzedusingdata-driven
+interactiongraphs. Thesegraphscanbeconsideredasabstractmodelsofpowergridsforstudying
+cascading failures; as the physical details of the system such as generation, load consumption,
+linepowerflows,capacityconstraints,etc.,arenotexplicitlyconsidered;instead,theyareimplicitly
+capturedthroughthecascadedata. Thissectionprovidesabriefcomparisonamongthedata-driven
+interactiongraphsanddiscussestheirkeypropertiesandlimitations(summarizedinTable2).
+Onekeydifferenceamongthedata-drivenmethodsforconstructinginteractiongraphsisthetype
+ofdatathattheyneedtobuildthegraph. Forinstance,influence-basedmethodscanbeappliedtoboth
+simulationdataaswellashistoricaldata. However,fortheconsecutivefailure-basedmethods,suchas
+fault-chains,aswellasriskgraphs,thesequenceoffailuresneedstobegeneratedbytargetedfailureof
+componentstocreateacomprehensivelistoffailurestobuildtheinteractiongraph. Moreover,asthe
+combinationsoftheinitialtargetedfailuresincrease,thecomputationalcomplexityofgeneratingthe
+listoffailuresandbuildingtheriskgraphsalsoincreases.
+Another difference among the data-driven methods is their ability in considering group
+interactions;e.g.,theconsecutivefailures-basedmethodscanonlyconsiderone-to-oneinteractions
+based on direct consecutive orders of failures. However, generation-based and influence-based
+methodscanconsidertheinfluenceofagroupofcomponentsonanothergroupofcomponents(using
+theconceptofgenerations)anduseittodefineone-to-oneinteractionsamongpairsofcomponents.
+Multipleandsimultaneousfailuresinteractionmethodsnotonlyconsidertheinfluenceofagroupof
+componentsonanothergroupbutalsoallowforinteractionlinksamonggroupsofcomponentsinstead
+ofindividualpairsofcomponents. Thedata-drivenmethodsforconstructinginteractiongraphsresult
+indirectedgraphsexceptforthecorrelation-basedmethod. Thecorrelation-basedmethodcannot
+capturetheorderanddirectionofinteractionsduetosymmetricpropertiesofthecorrelationmeasure.
+Anotherchallengewiththecorrelation-basedmethodisthatthemethodgenerallyresultsindense
+graphs,withmanylinksshowingsmallcorrelationsamongthecomponents,whichmayneedtobe
+thresholded or applied with other techniques to be able to focus on more significant correlations.
+In general, one of the key limitations of the data-driven methods is the heavy dependency of the
+derivedgraphsandinferredinteractionsonthedatasetandtheappliedmethod,whichmayleadto
+overestimation/underestimationoftheinteractions. Asshownin[29,30],interactiongraphsderived
+fromdifferentoutagedataaredifferentandcanleadtodifferentconclusions;e.g.,theoperatingsetting
+ofthepowergrid(suchasitsloadinglevel)willaffectthecascadeprocessandthecascadedataset[91]
+and, consequently, lead to different interaction graphs. Using a single interaction graph to model
+powergridsandcaptureallpossibleoperatingsettingconditionsthatcanaffectthesystemisstilla
+challengetoaddress. Thereisalsoaneedtotesttheinteractiongraphstohistoricalcascadedata[64].
+Historicaldatashowstheheavy-taileddistributionofblackoutsizesandcanbeusedtobenchmarkthe
+data-driveninteractiongraphs[64]. Similarly,crossvalidatingthevarioustechniqueswitheachother
+mayalsoprovideinsightsintothemostusefultechniquesinextractinginteractionsfromcascadedata.
+Energies2020,13,2219 12of25
+Table2.Keypropertiesandlimitationsofthemethodsforbuildingdata-driveninteractiongraphs.
+Category KeyProperties Limitations
+OutageSequence:
+Consecutive • Simplederivationofinteractionsbasedonconsecutiveorderoffailures,resultingin • Only considers direct one-to-one consecutive interactions
+directedgraphs. incascades.
+Failures
+• Weightsofinteractionsareassignedusingvariousmethods,e.g.,statisticalanalysisor • Doesnotconsiderinteractionsbetweengroupsofcomponents.
+physical/electricalpropertiesofthesystem.
+OutageSequence:
+Generation-based • Interactionsareconsideredbetweengroupsofcomponents(basedontheconceptof • Interactionsbetweengroupsofcomponentsoftwoconsecutive
+generations)andareusedtodefineone-to-oneinteractionlinksbetweencomponents generations characterized using various methods (may
+Failures
+ofconsecutivegenerations. overestimate/underestimatetheinteractions).
+• Considersorderoffailures/interactions,resultingindirectedgraphs.
+OutageSequence:
+Influence-based • Generation-basedinteractionsareconsideredtodefineone-to-oneinteractionlinks • Interaction links among all pairs of components of two
+betweencomponentsbasedontheinfluenceframework. consecutivegenerationsmayoverestimatetheinteractions.
+• Considersorderoffailures/interactions,resultingindirectedgraphs.
+• Considerspropagationrateoflineoutagesaswellastheirprobabilityofcausing
+furtheroutagesthroughinfluenceframework.
+• Influence-basedframeworkprovidesmathematicaltractabilityforcertainanalysisof
+thedynamicsoffailures.
+OutageSequence:
+Multipleand • Characterizessimultaneousinteractionsbetweengroupsofcomponentsinsteadof • The number of nodes in the resulted graphs (to capture
+onlyone-to-oneinteractionsbetweenpairsofindividualcomponents. possiblestatesofgroupinteractions)willbelarge.
+Simultaneous
+• Considersorderoffailures/interactions,resultingindirectedgraphs.
+Failures
+• Considers group interactions, eliminating the challenge of overestimation or
+underestimationofpair-wiseinteractionsbetweenindividualcomponents.
+Risk-graph
+• Characterizestheinteractionsbasedontargetedfailuresofthecomponents,resulting • Interactionsbetweengroupsofcomponentsarenotconsidered.
+indirectedgraphs. • Reduced performance when number of targeted
+• Requiressmalldatasetforsmallnumberoftargetedfailures. failuresincrease.
+Correlation-based
+• Usessimplestatisticalcorrelationmeasuretoconstructthegraph. • Doesnotconsidertheorderoffailuresininteractions.
+• Doesnotconsidergroupinteractions.
+• Resultedgraphsareusuallydense.
+Energies2020,13,2219 13of25
+3.2. ElectricDistance-BasedInteractionGraphs
+Whilethereisabundantliteraturefocusedondata-driveninteractiongraphs,variousmethods
+havebeenproposedformodelinginteractionsamongthecomponentsusingthedynamicsofpower
+flow as well as the physical/electrical properties of the system and components. In this review,
+suchmethodsarecalledelectricdistance-basedmethods.
+Inapowergrid,electricitydoesnotflowthroughtheshortestpathbetweentwonodesiand j.
+Instead,itcanflowthroughparallelpathsbetweennodesiandjbasedonthephysicalpropertiesof
+thesystemanditscomponentsaswellasthephysicsofelectricity(i.e.,Ohm’slaw). Thus,theelectrical
+interactions between the components may extend beyond the physical topology and the direct
+connections in the power grid. The concept of electric distance was first introduced by Lagonotte
+et al. [78] in 1989as a measure of coupling between busesin the power system andwas based on
+sensitivitiesinthepowersystemduetochangesinvoltagemagnitudes. Therearevariousmethodsin
+theliteratureforcharacterizingtheelectricaldistancesbetweencomponents. Thesemethodscanuse
+distributionfactorsinpowergridsincludingpowertransferdistributionfactor(PTDF)[92],whichindicates
+the change in real power on transmission lines due to changes in real power injection at different
+nodesofthesystem,andlineoutagedistributionfactor(LODF)[93],whichmeasuresthechangesinthe
+powerflowoftransmissionlinesduetotheoutageofanotherline. Next,theelectricdistance-based
+methodsforconstructinginteractiongraphsarediscussedintwocategories: outagecondition-based
+andnon-outagecondition-basedasshowninTable3.
+3.2.1. OutageCondition-BasedInteractionGraph
+Thisclassofmethodsforcharacterizingelectricdistance-basedinteractiongraphsarefocused
+on interactions among the components of the power grid during outage conditions. For instance,
+inthestudypresentedin[44],interactionsamongthecomponentsaswellastheirweightsarederived
+usingthechangesinthepowerflowsintransmissionlinesduringoutageconditions. Thus,theoutage
+inducedinteractiongraph G consistsofthesetofvertices V thatrepresentthetransmissionlines
+i i
+and the set of edges E that represent the impact of outage of one line on another. This impact is
+i
+characterizedusingLODF[93],whereLODFforlinee ∈ E iscalculatedbasedontheratioofthe
+i,j i
+impactofoutageoflineionlinejbasedonthereactanceofallpossiblespanningtreepathsbetween
+thelines,overtheimpactofoutageoflineionline jusingthereactanceofallalternativespanning
+treepathswherethepowercanflow(i.e.,excludingthespanningtreepathoflinei)[43].
+However, during cascading failures, the impact of a failed line on the remaining lines is not
+limitedtochangesinpowerflows. Inapowergrid,iftwoormorelinesshareabus,outageofone
+linemayexposetheremaininglines(connectedthroughthesamebus)toincorrecttrippingdueto
+malfunctioningoftheprotectionrelays.Theexposedlinesarepronetofailureandanincreaseinpower
+flowintheexposedlinesexacerbatestheirtrippingprobabilitycausingfurtheroutages. Suchfailures
+are known as hidden failures. In the studies in [45–47], vertices V represent transmission lines as
+i
+well as a hidden failure state, and edges E represent inter-line interactions as well as interactions
+i
+between lines and the hidden failure state. Thus, the interaction graph G will have n+1 nodes
+i
+where n isthenumberoftransmissionlines, andtheextraonenoderepresentsthehiddenfailure
+state. Thehiddenfailurenodehasbidirectionallinksfromitselftoeveryothernodeinthepowergrid.
+However, thehiddenfailurenodedoesnothaveanyinfluenceonitself. Theinter-lineinteraction
+e ∈ E showstheincreaseofpowerflowinline jduetooutageoflinei. Theinteractionfromthe
+i,j i
+hidden failure node to a line i reflects the likelihood of failure of line i due to the failure of other
+nodeswhenthepowerflowinlineiexceedsaflowlimitmargin. Interactionfromlineitothehidden
+failurenodereflectstheaveragetrippingprobabilityofalltheotherlinesduetotheoutageofline
+i. Thisinteractioncanberegardedastheaggregatedinfluencethattheoutageofline i hasonthe
+trippingprobabilityofalltheotherremaininglines.
+Energies2020,13,2219 14of25
+Table3.Classificationofexistingstudiesusingtheelectricdistance-basedtaxonomy.
+Category Subcategory FurtherSubcategory Works
+OutageCondition-based [43–47]
+ElectricDistance-based
+InteractionGraphs Impedance-based [24,48–59]
+Non-outageCondition-based
+Jacobian [52,60–63]
+3.2.2. Non-OutageCondition-BasedInteractionGraphs
+Thisclassofmethodsforconstructingtheelectricdistance-basedinteractiongraphsisfocused
+on interactions among the components of the power grid during normal operating conditions.
+Forinstance,measurestocapturethecharacteristicsofthepowerflowpathsbetweencomponents,
+suchasimpedanceofthetransmissionlines,canbeusedtoformelectricdistance-basedinteraction
+graphs. Moreover,powersystemsensitivitiesbasedonPTDFandtheonesshowingchangesinvoltage
+magnitudes and voltage phase angles, derived from Jacobian matrices during normal conditions,
+can also be used to form electric distance-based interaction graphs. In this paper, non-outage
+condition-basedinteractiongraphsarebroadlycategorizedintotwocategories: impedance-basedand
+Jacobian. Next,bothcategoriesarediscussedindetail.
+3.2.2.1. Impedance-BasedInteractionGraph
+Impedance-based electric distance interaction graphs G consist of vertices V that represent
+i i
+buses and edges E that represent electrical interactions between pairs of buses weighted by their
+i
+corresponding impedance-based electrical distances. Inverse admittance matrix, more commonly
+knownastheimpedancematrixZ,isoneofthesimplestformsofrepresentingelectricalinteractions
+between pairs of buses in the system and is found by inverting the system admittance matrix Y,
+i.e.,Z = Y−1.MatrixZshowstherelationshipbetweenthenodalbusvoltagevectorandthenodal
+currentinjectionvector. However,unlikematrixY,whichissparse,impedancematrixZisnon-sparse
+as it represents the changes in nodal voltage throughout the system due to a single nodal current
+injectionbetweenapairofnodesinthesystem. Therefore,edgesintheimpedance-basedinteraction
+grapharetheconnectionsbetweentheelementsintheZmatrixwithweightsbetweenbusesiand
+jcorrespondingtotheirabsolutevalueoftheimpedance,i.e., |Z |[48–52]. Smallermagnitudesof
+ij
+impedancerepresentshorterelectricdistancebetweenbuses. NotethattheindividualelementsZ in
+ij
+matrixZarecomplexvalued. Thestudiesin[53–55]alsoadopttheconceptofrepresentingelectrical
+distances between buses using the Thevenin equivalent impedance between buses but apply the
+condition that power only flows from generator buses to load buses such that impedance values
+between generator buses and load buses suggest edges in the interaction graph. Similarly, in the
+studyin[56],inadditiontotheimpedancebetweenpairsofgeneratorandloadbusesinthesystem,
+thepowerflowsthroughthelinesalongthepathbetweenthepairsofbusesisconsidered. Therefore,
+electricalconnectionsbetweengeneratorandloadbuses i and j alongpath k, areweightedbythe
+impedancebetweenbusesi and jaswellasthePTDFofthelinesalongthepathk ofpowerflows
+betweenthebuses.Inthestudiesin[53–56],matrixZhasdimensionZ ×Z ,whereZ andZ arethe
+G L G L
+numberofgeneratorandloadbuses,respectively. Thus,matrixZmaybeasymmetric,dependingon
+thenumberofgeneratorsandloadaswellastheentryoftheelementssuggestingthattheinteraction
+graphisdirected.
+Notethatstudiesin[48–56]arenotfocusedoncascadingfailures,buttheirconceptofformulating
+impedance-basedelectricaldistancescanbeextendedforstudyingcascadeprocesses. Forexample,in
+thestudyin[24],transmissionlinesareconsideredasthenodesoftheinteractiongraph,andthus,
+impedance-basedelectricdistancesbetweenpairsoftransmissionlinesareassignedasweightsofthe
+Energies2020,13,2219 15of25
+interactionlinks. Tofindtheelectricdistancebetweentransmissionlinesiandj,wherelineiconnects
+bus i to i and line j connects bus j to j , the minimum of the four possible Thevenin equivalent
+s d s d
+impedancesbetweenthepairsofbuses,i.e.,Z ,Z ,Z ,andZ istaken. Thisinteractiongraphis
+isjs isjd idjs idjd
+alsothethirdlayerofthemulti-layeredinteractiongraphdiscussedinSection3.1.1.2usedformodeling
+cascadingfailures.
+Cascadingfailurescanalsobestudiedbyrepresentinginteractionsbetweenpairsofnodesby
+effectiveresistancesbetweenthenodes. Effectiveresistance,R ,betweennodesiandj,alsoknownas
+ij
+Kleinresistancedistance[94],istheequivalentresistanceofallparallelpathsbetweenthenodes. Itwas
+initiallyintroducedinthestudyin[94]asameasureofdistanceingraphtheory,andinthecontextof
+powersystems,itshowsthepotentialdifferencebetweennodesiandjduetounitcurrentinjectionat
+nodeiandwithdrawalatnodej. Whileimpedance-basedelectricaldistancesbetweennodesaccount
+fornon-linearapproximationsofpowerflow,effectiveresistancesonlyconsiderlinearapproximations
+ofpowerflowsinthegrid. Forcascadingfailureanalysis,astheimpedanceofatransmissionlineina
+highvoltagetransmissionnetworkisdominatedbytheimaginarypartofimpedance,i.e.,reactance,
+the effective resistance between nodes can be formulated in terms of their reactance. Thus, in the
+studiesin[57–59],effectiveresistancebetweennodesiandjisfoundasR = Q −2Q +Q where,
+ij ii ij jj
+Q istherowiandcolumn jelementofQ+,whichisthePenrosepseudo-inverseoftheLaplacian
+ij
+matrixQ.MatrixQisdefinedasthedifferencebetweentheweighteddiagonaldegreematrixandthe
+weightedadjacencymatrixderivedfromthephysicaltopologyandshowstherelationshipbetween
+thebusesandtransmissionlinesinthegrid. Inthestudiesin[57–59],theweightsoftheedgesinthe
+physicaltopologyrequiredforfindingtheweighteddiagonaldegreematrixandadjacencymatrixare
+thesusceptance(i.e.,theimaginarypartofimpedance)valuesbetweenthenodes. Notethatmatrix
+Q constructed using susceptance values is equivalent to matrix Y. Thus, edges E in the effective
+i
+resistanceinteractiongraphreflecttheelectricalconnectionsbetweenthebuseswithweightsbetween
+nodesiandjbeingthecorrespondingR values.
+ij
+3.2.2.2. JacobianInteractionGraph
+Electricdistance-basedinteractiongraphscanalsobeconstructedusingthesensitivitymatrix
+of the power grid during normal operating conditions. In such interaction graph G, vertices V
+i i
+represent the buses, and the edges E represent the electrical interactions in terms of sensitivities
+i
+between the buses. These sensitivities can be found using the Jacobian matrix, which is obtained
+duringNewton–Raphson-basedloadflowcomputation. JacobiansensitivitymatrixJshowstheeffect
+ofcomplexpowerinjectionatabusonthevoltagemagnitudeandvoltagephaseanglesofotherbuses.
+Itconsistsoffoursub-matrices: matrixJ ,whichshowstherelationshipbetweennodalactivepower
+Pθ
+injectionsandvoltagephaseanglechanges;matrixJ ,whichshowstherelationshipbetweennodal
+PV
+activepowerinjectionsandvoltagemagnitudechanges; matrixJ ,whichshowstherelationship
+Qθ
+betweennodalreactivepowerinjectionsandvoltagephaseanglechanges; andmatrixJ ,which
+QV
+showstherelationshipbetweennodalreactivepowerinjectionsandvoltagemagnitudechanges. The
+inverseofanyoftheseJacobiansub-matrices,denotedasJ−1,canbeusedtofindthesensitivitymatrix
+byusingtheKleinresistancedistance[94],whoseindividualelementiscalculatedasx +x −x −x ,
+ii jj ij ji
+where x represents the element in row i and column j of the inverted Jacobian sub-matrix J−1 in
+ij
+consideration. Inthestudyin[52],allofthefourJacobiansub-matricesareappliedtoKleinresistance
+distancetoformsensitivitymatricesforthepurposeofvisualizingpowergrids,whichinturncan
+beusedtoforminteractiongraphswhoseedgesE representtheelectricalinteractionsbetweenthe
+i
+componentsofthesensitivitymatricesweightedbytheircorrespondingelements.
+However,theliteraturehasrevealedthatmoststudiesarefocusedontwoofthefourJacobian
+sub-matrices,i.e.,matrixJ andmatrixJ . Theremainingsub-matricesJ andmatrixJ arenot
+Pθ QV Qθ PV
+usedintheliteratureduetoun-intuitiveinterpretations. Theseminalworkofelectricaldistancesby
+Lagonotteetal. in[78]focusesonusingtheJacobiansub-matrix(J ), alsoknownasthevoltage
+QV
+sensitivity matrix ∂V/∂Q, to find the electric distance between buses. Similarly, the study in [60]
+Energies2020,13,2219 16of25
+also uses the voltage sensitivity matrix. In both studies, the matrix of maximum attenuations is
+found,whichconsistsofcolumnsofvoltagesensitivitymatrixdividedbythediagonalvalues. Finally,
+electricalinteractionse ∈ E betweenbusesiandjweightedbytheirelectricdistanceisderivedas
+i,j i
+thelogarithmoftheindividualelementsoftheattenuationmatrix. Thestudyin[61]alsousesthe
+voltage sensitivity matrix to find electric distance between buses, but instead of finding matrix of
+attenuations,thestudyappliesthesensitivitymatrixtoKleinresistancedistanceformulation. Note
+thatstudiesin[60,61]analyzeriskofcascadingfailuresbystudyingthevoltagecollapsephenomenon,
+which is a sequential process during which large parts of the power grid may suffer due to low
+voltages[95]. Similarly,thestudiesin[62]and[63]applytheJacobiansub-matrixJ orthesensitivity
+Pθ
+matrix∂P/∂θtoKleinresistancedistanceandfindelectricaldistancesbetweenbuses. However,the
+studies[62,63]arenotfocusedoncascadingfailureanalysisbutareincludedinthisreviewastheir
+electricdistance-basedinteractiongraphscanhavepotentialimplicationsforanalyzingcascading
+failures.
+3.2.3. KeyPropertiesandLimitationsofElectricDistance-BasedInteractionGraphs
+Inthissection,keypropertiesandlimitationsoftheelectricdistance-basedinteractiongraphsare
+brieflydiscussed. However,variousmethodsarenotdirectlycomparedasdifferentmethodshave
+differentapplicationsaswellasconceptsintheirmodels.
+Electricdistance-basedmethodsconsiderthefundamentalcharacteristicsofapowergridand
+thepowerflowwhiledefininginteractionsamongcomponents. Thesegraphsdifferfromdata-driven
+interaction graphs as they directly use the inherent electrical properties of power grids based on
+Kirchoff’sandOhm’slaws. Theyarealsonotspecifictocascadingfailurestudiesandcanbeusedfora
+varietyofapplicationssuchascontingencyanalysis[49],reliabilitystudiesfordefiningzonesforload
+deliverabilityanalysis[51],responsetotargetedattacks[55],andsoon. Specifically,gridattributes
+suchasadmittance/impedancematrices,Jacobianmatrices,andPTDF’sreflecttheoperationalfeatures
+ofpowergridsandcanbeusedforthementionedapplications. Sincethesegraphsdonotrelyon
+extensivesimulationdata,computationalcomplexityoffindingsuchgraphsisrelativelysmall.
+Forcascadingfailureanalysis,LODF-basedinteractiongraphs[43,44]aswellasinteractiongraphs
+showingtheimpactofhiddenfailures[45–47]onlinesduringcascadeshavebeenused.Thesemethods
+usuallyworkwellforcascadescenariosinvolvingasmallnumberofcontingenciesandsmallersized
+system. However,constructingsuchinteractiongraphsforcascadestudiesinvolvingalargenumber
+of contingencies is computationally expensive. To this end, effective resistance-based interaction
+graphs can be used for cascade studies, as they can be easily produced by finding the effective
+resistance [57–59] between components without extensive power flow simulations. In addition to
+the above mentioned applications, electric distance-based interaction graphs can also be used for
+visualizingdistinctelectricalstructureofpowergridsintwodimensions[52].
+4. ReliabilityAnalysisUsingInteractionGraphsofPowerGrids
+InteractiongraphsconstructedinSection3canbeusedforvariousanalysis;specificallyrelatedto
+thereliabilityofthepowergrid,includinganalyzingtheroleofcomponentsandfindingcriticalones
+thatcontributeheavilyinacascadeprocess,predictingdistributionofcascadessizes,andstudying
+patternsandstructuresthatrevealconnectionsandpropertiesofthecomponentsinthepowergrid
+thatextendbeyondphysicaltopology-basedgraphs. Thus,reliabilitystudiesperformedusingthese
+interactiongraphsaredividedintovariouscategoriesasdiscussedbelow.
+4.1. CriticalComponentAnalysis
+Thestudiesthatidentifyandanalyzetheroleofcriticalcomponentsinpowergrid’sreliabilityare
+classifiedintothreebroadcategoriesthatinclude(1)usingpre-existingaswellasnovelmeasuresto
+findcriticalbuses/transmissionlines,(2)evaluatingattackstrategiesthatcausesignificantdamage
+Energies2020,13,2219 17of25
+inthepowergrid,and(3)employingmitigationmeasuressuchasupgradingtransmissionlinesor
+addingnewcomponentstoprotecttheidentifiedcriticalcomponents.
+4.1.1. CriticalComponentIdentification
+Thisclassofreliabilityanalysesfocusonfindingcriticalbuses/transmissionlinesbyanalyzing
+structural properties of interaction graphs using standard centrality measures such as degree,
+betweenness,etc. (forareviewofstandardcentralitymeasures,referto[85])orbydefiningnovel
+interactiongraphbasedmetrics.
+4.1.1.1. CriticalComponentIdentificationUsingStandardCentralityMeasures
+Inthestudiespresentedin[14–16,18–20],faultchain-basedinteractiongraphsarefoundtobe
+scale free graphs, indicating that most nodes possess low degrees but a limited number of nodes
+possesshighinandoutdegrees. Thus,inthefaultchain-basedinteractiongraphs,verticeswithhigher
+degreesareassumedtobethecriticalcomponentsofthesystem. Similarconclusionsareobtained
+byauthorsinthestudiesin[50,54],wheretheimpedance-basedinteractiongraphisobservedtobe
+scale-freeandconsistingofalimitednumberofnodeswithhighdegrees,whichareconsideredasthe
+criticalcomponentsofthesystem. Theseareexamplesofworksthatconsiderthedegreecentrality
+measuretoidentifycriticalcomponentsofthesystem. Othercentralitymeasuressuchasbetweenness,
+eigenvector,andPageRankhavealsobeenconsideredoninteractiongraph-basedrepresentationsof
+powergridsincluding[45,47,61]tofindcriticalcomponentsofthesystem.
+4.1.1.2. CriticalComponentIdentificationUsingNewCentralityMeasures
+Inadditiontothestudiesthatrelyonstandardcentralitymeasures;someworksdevelopnew
+centralitymeasuresinthecontextofpowergridsandthedevelopedinteractiongraphstoanalyze
+criticality of the components. For instance, in the generation-based interaction graphs [21–24,26],
+out-strengthmeasure,whichisthesumoftheweightsoftheinteractionlinksoriginatingfromanode,
+isusedtofindcriticaltransmissionlines. Suchlinesaretheoneswhosefailureatanystageofthe
+cascadeincludingtheinitialstageorthepropagationstageinducesfailureinasignificantnumber
+ofothertransmissionlines. Outagesintheinitialstagesarecausedbyexternalfactorssuchasbad
+weatherconditions,impropervegetationmanagement,andexogenousevents,whereasoutagesinthe
+propagationstageisduetopowerflowre-distributions,hiddenfailures,andotherinteractionsbetween
+components as discussed in Section 2.1. Influence-based [27,28] and multiple and simultaneous
+failure [31] interaction graphs are also used to find critical transmission lines, but they explicitly
+focusonlineswhosefailureduringthepropagationstageofcascadingfailurescauseslargecascades.
+Particularly,thestudiesin[27,28]useacascadeprobabilityvectorderivedusingtheinfluence-based
+interactiongraphtoquantifytheprobabilityoffailureoflinesduringthepropagationstageofcascades
+anddefinecriticallinesastheoneswhosecorrespondingentriesintheprobabilityvectorhavehigher
+values. Similarly, the study in [31] finds the probability distribution of states of the multiple and
+simultaneous failure-based interaction graph and defines critical lines as the ones that belong to
+stateswithhigherprobabilityofoccurrence. Influence-basedandcorrelation-basedinteractiongraphs
+constructedinthestudiesin[29,30]arealsousedtofindthecriticaltransmissionlinesduringcascade
+processesbyusingacommunity-centralitymeasure. Asthenamesuggests,themeasurequantifiesthe
+criticalityoftransmissionlinesbasedontheircommunitymembership,wherecriticallinesaretheones
+thatbelongtomultiplecommunitiesoractasbridgesbetweencommunities. Notethatcommunities
+aredefinedasgroupsofverticeswithstrongconnectionsamongthemselvesandfewconnections
+outside (for definition of communities and a review of community detection methods on graphs,
+referto[96]).
+Identificationofcriticallinesisnotlimitedtodata-driveninteractiongraphs. Multiplestudies
+useelectricdistance-basedinteractiongraphsforsuchanalysisaswell. Effectiveresistancebetween
+Energies2020,13,2219 18of25
+componentsintheeffectiveresistance-basedinteractiongraphcanbesummedforallnodepairsin
+the graph to find the effective graph resistance metric of the power grid. Effective graph resistance
+metricwasinitiallydefinedinthestudyin[94]asKirchhoffindexandusedinthestudyin[97]asa
+robustness metric. Lower values of this metric suggest that the power grid is robust to cascading
+failures. Effectivegraphresistancecanalsobefoundusingtheeigenvaluesandeigenvectorsofthe
+Laplacianmatrixofthegrid[98].Inthestudyin[57],criticaltransmissionlinesarefoundbymeasuring
+thechangesineffectivegraphresistancebeforeandaftertheremovaloftheline. Inasimilarmanner,
+impedance-basedinteractiongraphsconstructedinthestudyin[56]and[53]arealsousedtofind
+criticaltransmissionlinesbymeasuringthechangesinnet-abilitymetricbeforeandaftertheremoval
+ofaline. Net-abilityreflectstheperformanceofanetworkbyquantifyingtheabilityofageneratorto
+transferpowertoaloadwithinthepowerflowlimits.
+4.1.2. StudyingtheEffectofLineUpgradesandLineAdditionsonReliabilityofPowerGrids
+Whileidentificationofcriticalcomponentsinthepowergridisnecessary,assessingtheimpact
+ofmodificationsandprotectionofsuchcriticalcomponentsintheoverallpowergridisthenextstep
+inthestudy. Inthestudiespresentedin[27]and[28],aninfluenceinteractiongraph-basedmetric
+isusedtoquantifytheimpactofupgradingthecriticallines(forexample,byimprovingvegetation
+managementaroundthelinesorbyimprovingprotectionsystems)oncascadepropagation. Thework
+in[31]usesthemultipleandsimultaneousfailure-basedinteractiongraphtodoasimilarstudy.Inboth
+interaction graphs, the authors conclude that upgrading lines that take part in the propagation of
+failuresduringcascadesreducestheriskoflargecascadescomparedtotheupgradeoflinesthatinitiate
+cascades. Whilethestudiesin[27,28]investigatetheperformanceofthepowergridnetworksafter
+lineupgrades,thestudiesin[58]and[59]useeffectivegraphresistancemetrictostudytheimpact
+of adding transmission lines in optimal locations of the power grid. However, in [59] the authors
+warnthatplacinganadditionallinebetweenapairofnodesdoesnotnecessarilyimplyincreased
+robustness of the grid. In fact, grid robustness may decrease after adding additional lines (due to
+Braess’sparadox[99]),iftheadditionsaredonehaphazardly.
+4.1.3. AnalyzingResponsetoAttack/FailureScenarios
+Inadditiontoidentifyingcriticalcomponentsandcharacterizingtheimpactoftheirmodifications
+inthereliabilityofpowergrids,thestudyoftheresponseofpowergridstoattacksandfailuresisalso
+necessary. Suchstudiescanbeusedtofindcriticalcomponentsandattackstrategiesthatthreatenthe
+reliabilityoftheoverallpowergrid. Inthestudiesin[38–40],nodeintegratedriskgraphsareusedto
+findgroupsoftransmissionlineswhoseremovalfromthegraphcausesthelargestdropinnet-ability
+ofthepowergrid,asdiscussedinSection3.1.2. Thesegroupscanbefoundinreal-timeindependentof
+systemparameters. Thestudyin[59]alsoanalyzestherobustnessofpowergridstodeliberateattacks
+usingtheeffectivegraphresistancemetric,asdiscussedinSection4.1.1.2.
+4.2. PredictionofCascadeSizes
+Forecastingcascadesizesisanotherchallengeinthereliabilityanalysisofpowergrids. Inthe
+studyin[42],acorrelationgraph-basedstatisticalmodel,knownastheco-susceptibilitymodel,isused
+topredictcascadesizedistributionsintransmissionnetworkofpowergridsusingindividualfailure
+probabilitiesoftransmissionlinesaswellasfailurecorrelationsbetweentransmissionlinesfound
+fromthecorrelationmatrix. Thestudyexploitstheideathatgroupsofcomponentsthathavehigher
+correlationsarelikelytofailtogetherandusesthecorrelationmatrixtofindsuchco-susceptiblegroups,
+whichisanapproximateestimateofthecascadesizegivenaninitialtriggerfailure. Asimilaridea
+isusedinthestudiesin[29,30],wherecomponentswithinthesamecommunityareassumedtobe
+likelytofailtogether,andthesizeofcommunitiesgivesanapproximationofcascadesizes. Thestudy
+in[31]alsocharacterizessizeofcascadesbyusingthestatesoftheMarkovchaintofindtheprobability
+distributionofthenumberofgenerationsinacascade.
+Energies2020,13,2219 19of25
+4.3. StudyingPatternsandStructuresinInteractions
+Structuresandpatternsinnetworksareimportantindescribingthespreadofvariousprocesses
+suchasinfectiousdiseases,behaviors,rumors,etc.[100–102].Forinstance,inthestudiesin[29,30,43,44],
+structurespresentintheinteractiongraphsofpowergridsareusedtostudytheimpactofcascading
+failures in the transmission network and utilize the graph structure to mitigate large cascades.
+Thegraphstructureconsideredinthestudiesin[29,30]arecommunitieswhereasthegraphstructure
+consideredinthestudiesin[43,44]aretreepartitions.
+Inthestudyin[43],treestructurespresentintheoutagecondition-basedinteractiongraphshowed
+thattransmissionlinefailurescouldnotpropagateacrosscommonareasoftreepartitions. Further,the
+extendedworkof[43]in[44]foundthecriticalcomponentsofthetreepartitions,knownasbridges.
+Thefailureofbridgelinesplaysacrucialroleinthepropagationofcascadingfailures. However,failure
+ofnon-bridgecomponentsdoesnotpropagatefailuresandtheimpactismorelikelytobecontained
+insidesmallerregions/cells. Thisimportantpropertyofbridgelinesisusedinmitigationofcascading
+failuresbyswitchingofftransmissionlinesthatcausenegligiblenetworkcongestionaswellasimprove
+therobustnessofthesystem. Similarly,inthestudiesin[29,30],influence-basedandcorrelation-based
+interactiongraphswereusedtolimitpropagationofcascadingfailuresinsidecommunitystructures.
+Particularly,theauthorsusedtheideathatfailurescanbetrappedwithincommunitiesbyprotecting
+thebridge/overlapnodes,whichconnectmultiplecommunitiestogether.
+Purposesofanalyzingstructurespresentintheinteractiongraphsarenotlimitedtomitigationof
+cascadingfailures. Forinstance,inthestudyin[49],networkstructureswereusedforcontingency
+analysis. Theimpedance-basedinteractiongraphin[49]wasprunedbyremovingedgesabovean
+operator defined threshold. Then, the common structure between the pruned impedance-based
+interactiongraphandthetopologicalgraphofthepowergridwasanalyzedandverifiedtobethe
+contingenciesthatviolatetransmissionlinelimitsandcauseoverloads. Similarly,thestudyin[51]
+identifiedzonalpatternsintheimpedance-basedinteractiongraphforreliabilityassessmentofzones
+forloaddeliverabilityanalysis.
+5. Summary
+Analyzing interactions among the components of power grids during cascading failures can
+revealimportantinformationaboutthefailurepropagationprocessinthesesystemsandtheroleof
+thecomponentsintheprocess. Itwasdiscussedthatthephysicaltopologyofthepowergridshave
+limitationsinmodelingcascadingfailureprocessinpowergrids. Assuch,newmethodsareemerging
+tocapturenon-localinfluences/interactionsamongthecomponentsofthepowergrid. Inthissurvey,
+varioustechniquesforconstructingthegraphofinteractions(beyondthephysicaltopologyofthe
+powergrid)werereviewed. Anoveltaxonomywaspresentedforclassifyingtheexistingresearch
+studiesintovariouscategoriesandsubcategoriesbasedonthetypeofdataandtechniquesusedin
+inferringtheinteractionsandcreatingthegraphmodelofthesystem. Finally, abriefoverviewof
+variousreliabilityanalysisstudiesbasedontheinteractiongraphswaspresented.
+Specifically, the presented taxonomy introduced two main categories for the methods of
+constructing interaction graphs: data-driven and electric distance-based approaches. The key
+properties and limitations of various techniques in each category as well as an overview of the
+methodsineachcategoryhavebeendiscussed. Whilefordata-drivenmethods,availabilityofcascade
+dataisanecessity,theelectricdistance-basedmethodsrelyonaccuratephysicalmodelsofthesystem
+(whicharenotrequiredfordata-drivenmethods). Therefore,dependingontheavailabilityofthedata
+orthephysicalmodelofthesystem,onecanchoosebetweenthesecategoriesofmethods. Moreover,
+astheexistingmethodsusevariousinformationforinferringandmodelinginteractions,theycanshed
+lightonvariousaspectsofthecascadeprocessandreliabilityandvulnerabilityofthecomponents.
+Assuch,dependingontheanalysisofinterest,differenttechniquescanbeselected. Studiesinboth
+areasofdata-drivenandelectricdistance-basedapproachesareongoing,anditcanbeexpectedthat
+thesemethodswillgreatlycontributeinprovidingnewunderstandingsaboutthecascadeprocessin
+Energies2020,13,2219 21of25
+7. Dobson,I.;Carreras,B.A.;Lynch,V.E.;Newman,D.E. Complexsystemsanalysisofseriesofblackouts:
+Cascadingfailure,criticalpoints,andself-organization. ChaosInterdiscip.J.NonlinearSci.2007,17,026103.
+[CrossRef]
+8. Hines,P.;Cotilla-Sanchez,E.;Blumsack,S. Topologicalmodelsandcriticalslowingdown:Twoapproaches
+topowersystemblackoutriskanalysis. InProceedingsofthe201144thHawaiiInternationalConferenceon
+SystemSciences(HICSS),Kauai,HI,USA,4–7January2011;pp.1–10.
+9. DeMarco,C.L. Aphasetransitionmodelforcascadingnetworkfailure. IEEEControlSyst. Mag. 2001,
+21,40–51.
+10. Rahnamay-Naeini, M.; Wang, Z.; Ghani, N.; Mammoli, A.; Hayat, M.M. Stochastic analysis of
+cascading-failuredynamicsinpowergrids. IEEETrans.PowerSyst.2014,29,1767–1779.[CrossRef]
+11. Ren,H.;Dobson,I. Usingtransmissionlineoutagedatatoestimatecascadingfailurepropagationinan
+electricpowersystem. IEEETrans.CircuitsSyst.IIExpressBriefs2008,55,927–931.[CrossRef]
+12. Dobson,I.Estimatingthepropagationandextentofcascadinglineoutagesfromutilitydatawithabranching
+process. IEEETrans.PowerSyst.2012,27,2146–2155.[CrossRef]
+13. Hines,P.D.;Dobson,I.;Cotilla-Sanchez,E.;Eppstein,M. “DualGraph”and“RandomChemistry”methods
+forcascadingfailureanalysis. InProceedingsofthe46thIEEEHawaiiIntl.ConferenceonSystemSciences
+(HICSS),Wailea,HI,USA,7–10January2013;pp.2141–2150.
+14. Wei, X.; Zhao, J.; Huang, T.; Bompard, E. Anovelcascadingfaultsgraphbasedtransmissionnetwork
+vulnerabilityassessmentmethod. IEEETrans.PowerSyst.2018,33,2995–3000.[CrossRef]
+15. Wei,X.;Gao,S.;Huang,T.;Bompard,E.;Pi,R.;Wang,T. Complexnetwork-basedcascadingfaultsgraphfor
+theanalysisoftransmissionnetworkvulnerability. IEEETrans.Ind.Inform.2018,15,1265–1276.[CrossRef]
+16. Wei,X.;Gao,S.;Huang,T.;Wang,T.;Fan,W. Identificationoftwovulnerabilityfeatures:Anewframework
+forelectricalnetworksbasedontheloadredistributionmechanismofcomplexnetworks. Complexity2019,
+2019,3531209.[CrossRef]
+17. Wang,T.;Wei,X.;Huang,T.;Wang,J.;Peng,H.;Pérez-Jiménez,M.J.;Valencia-Cabrera,L. Modelingfault
+propagationpathsinpowersystems:AnewframeworkbasedoneventSNPsystemswithneurotransmitter
+concentration. IEEEAccess2019,7,12798–12808.[CrossRef]
+18. Zang,T.;Lei,J.;Wei,X.;Huang,T.;Wang,T.;Pérez-Jiménez,M.J.;Lin,H. Adjacentgraphbasedvulnerability
+assessmentforelectricalnetworksconsideringfaultadjacentrelationshipsamongbranches. IEEEAccess
+2019,7,88927–88936.[CrossRef]
+19. Yang,S.;Chen,W.;Zhang,X.;Liang,C.;Wang,H.;Cui,W. Agraph-basedmodelfortransmissionnetwork
+vulnerabilityanalysis. IEEESyst.J.2019,14,1447–1456.[CrossRef]
+20. Wei,X.;Gao,S.;Huang,T.;Wang,T.;Zang,T. Electricalnetworkoperationalvulnerabilityevaluationbased
+onsmall-worldandscale-freeproperties. IEEEAccess2019,7,181072–181082.[CrossRef]
+21. Qi,J.;Sun,K.;Mei,S. Aninteractionmodelforsimulationandmitigationofcascadingfailures. IEEETrans.
+PowerSyst.2015,30,804–819.[CrossRef]
+22. Qi,J.;Wang,J.;Sun,K. EfficientestimationofcomponentinteractionsforcascadingfailureanalysisbyEM
+algorithm. IEEETrans.PowerSyst.2018,33,3153–3161.[CrossRef]
+23. Ju,W.;Qi,J.;Sun,K. SimulationandanalysisofcascadingfailuresonanNPCCpowersystemtestbed.
+InProceedingsoftheIEEEPower&EnergySocietyGeneralMeeting(PESGM),Denver,CO,USA,26–30
+July2015;pp.1–5.
+24. Ju,W.;Sun,K.;Qi,J. Multi-layerinteractiongraphforanalysisandmitigationofcascadingoutages. IEEEJ.
+Emerg.Sel.Top.CircuitsSyst.2017,7,239–249.[CrossRef]
+25. Chen,C.;Ju,W.;Sun,K.;Ma,S. Mitigationofcascadingoutagesusingadynamicinteractiongraph-based
+optimalpowerflowmodel. IEEEAccess2019,7,168637–168648.[CrossRef]
+26. Luo,C.;Yang,J.;Sun,Y.;Yan,J.;He,H. Identifycriticalbrancheswithcascadingfailurechainstatisticsand
+hypertext-inducedtopicsearchalgorithm. InProceedingsoftheIEEEPower&EnergySocietyGeneral
+Meeting(PESGM),Chicago,IL,USA,16–20July2017;pp.1–5.
+27. Hines,P.D.;Dobson,I.;Rezaei,P. Cascadingpoweroutagespropagatelocallyinaninfluencegraphthatis
+nottheactualgridtopology. IEEETrans.PowerSyst.2017,32,958–967.
+Energies2020,13,2219 22of25
+28. Zhou, K.; Dobson, I.; Hines, P.D.; Wang, Z. Can an influence graph driven by outage data determine
+transmissionlineupgradesthatmitigatecascadingblackouts? InProceedingsoftheIEEEInternational
+ConferenceonProbabilisticMethodsAppliedtoPowerSystems(PMAPS),Boise,ID,USA,24–28June2018;
+pp.1–6.
+29. Nakarmi,U.;Rahnamay-Naeini,M. Analyzingpowergrids’cascadingfailuresandcriticalcomponents
+usinginteractiongraphs. InProceedingsoftheIEEEPower&EnergySocietyGeneralMeeting(PESGM),
+Portland,OR,USA,5–10August2018;pp.1–5.
+30. Nakarmi,U.;Rahnamay-Naeini,M.;Khamfroush,H. Criticalcomponentanalysisincascadingfailuresfor
+powergridsusingcommunitystructuresininteractiongraphs. IEEETrans.Netw.Sci.Eng.2019.[CrossRef]
+31. Zhou,K.;Dobson,I.;Wang,Z.;Roitershtein,A.;Ghosh,A.P. AMarkovianinfluencegraphformedfrom
+utilitylineoutagedatatomitigatecascading. IEEETrans.PowerSyst.2020.[CrossRef]
+32. Wu,Z.G.;Zhong,Q.;Zhang,Y. Statetransitiongraphofcascadingelectricalpowergrids. InProceedingsof
+theIEEEPowerEngineeringSocietyGeneralMeeting(PESGM),Tampa,FL,USA,24–28June2007;pp.1–7.
+33. Chang,L.;Wu,Z. Performanceandreliabilityofelectricalpowergridsundercascadingfailures. Int.J.Electr.
+PowerEnergySyst.2011,33,1410–1419.[CrossRef]
+34. Li,L.;Wu,H.;Song,Y. Temporaldifferencelearningbasedcriticalcomponentidentifyingmethodwith
+cascadingfailuredatainpowersystems. InProceedingsoftheIEEEPower&EnergySocietyGeneral
+Meeting(PESGM),Portland,OR,USA,5–10August2018;pp.1–5.
+35. Li,L.; Wu,H.; Song,Y.; Song,D.; Liu,Y. Quantifytheimpactoflinecapacitytemporaryexpansionon
+blackoutriskbythestate-failure-networkmethod. IEEEAccess2019,7,183049–183060.[CrossRef]
+36. Li,L.;Wu,H.;Song,Y.;Liu,Y. Astate-failure-networkmethodtoidentifycriticalcomponentsinpower
+systems. Electr.PowerSyst.Res.2020,181,106192.[CrossRef]
+37. Liu,L.;Li,L.;Wu,H. Identifyingcriticalpatternsofcascadingfailureinpowersystemsbasedonsequential
+patternminingwithgapconstraints. InProceedingsofPurpleMountainForumInternationalForumonSmart
+GridProtectionandControl;Springer:Berlin,Germany,2020;pp.837–855.
+38. Zhu,Y.;Yan,J.;Sun,Y.;He,H. Risk-awarevulnerabilityanalysisofelectricgridsfromattacker’sperspective.
+InProceedingsoftheIEEEPESInnovativeSmartGridTechnologies(ISGT),Washington,DC,USA,24–27
+Febrary2013;pp.1–6.
+39. Zhu,Y.;Yan,J.;Sun,Y.L.;He,H. Revealingcascadingfailurevulnerabilityinpowergridsusingrisk-graph.
+IEEETrans.ParallelDistrib.Syst.2014,25,3274–3284.[CrossRef]
+40. Zhu,Y.;Yan,J.;Tang,Y.;Sun,Y.L.;He,H. Resilienceanalysisofpowergridsunderthesequentialattack.
+IEEETrans.Inf.ForensicsSecur.2014,9,2340–2354.[CrossRef]
+41. Kaplunovich,P.;Turitsyn,K.S. StatisticalpropertiesandclassificationofN-2contingenciesinlargescale
+powergrids. InProceedingsofthe47thIEEEHawaiiIntl.ConferenceonSystemSciences(HICSS),Waikoloa,
+HI,USA,6–9January2014;pp.2517–2526.
+42. Yang, Y.; Nishikawa, T.; Motter, A.E. Vulnerability and cosusceptibility determine the size of network
+cascades. Phys.Rev.Lett.2017,118,048301.[CrossRef]
+43. Guo,L.;Liang,C.;Low,S.H. Monotonicitypropertiesandspectralcharacterizationofpowerredistribution
+incascadingfailures. InProceedingsofthe55thIEEEAnnualAllertonConferenceonCommunication,
+Control,andComputing,Monticello,IL,USA,3–6October2017;pp.918–925.
+44. Guo,L.;Liang,C.;Zocca,A.;Low,S.H.;Wierman,A.Failurelocalizationinpowersystemsviatreepartitions.
+In Proceedings of the IEEE Conference on Decision and Control (CDC), Miami Beach, FL, USA, 17–19
+December2018;pp.6832–6839.
+45. Ma, Z.; Liu, F.; Shen, C.; Wang, Z.; Mei, S. Fast searching strategy for critical cascading paths toward
+blackouts. IEEEAccess2018,6,36874–36886.[CrossRef]
+46. Ma,Z.;Liu,F.;Shen,C.;Zhang,X.;Mei,S.;Gao,F. Speedingupsimulationsofcascadingblackoutinpower
+systemsbyidentifyinghighinfluentiallines. InProceedingsoftheIEEEPower&EnergySocietyGeneral
+Meeting,(PESGM),Chicago,IL,USA,16–20July2017;pp.1–5.
+47. Ma, Z.; Shen, C.; Liu, F.; Mei, S. Fast screening of vulnerable transmission lines in power grids: A
+PageRank-basedapproach. IEEETrans.SmartGrid2017,10,1982–1991.[CrossRef]
+48. Zio,E.;Golea,L.R.Analyzingthetopological,electricalandreliabilitycharacteristicsofapowertransmission
+systemforidentifyingitscriticalelements. Reliab.Eng.Syst.Saf.2012,101,67–74.[CrossRef]
+Energies2020,13,2219 23of25
+49. Poudel, S.; Ni, Z.; Sun, W. Electrical distance approach for searching vulnerable branches during
+contingencies. IEEETrans.SmartGrid2018,9,3373–3382.[CrossRef]
+50. Hines,P.;Blumsack,S. Acentralitymeasureforelectricalnetworks. InProceedingsofthe41stIEEEHawaii
+InternationalConferenceonSystemSciences(HICSS),Waikoloa,HI,USA,7–10January2008;p.185.
+51. Blumsack,S.;Hines,P.;Patel,M.;Barrows,C.;Sanchez,E.C. Definingpowernetworkzonesfrommeasures
+of electrical distance. In Proceedings of the IEEE Power & Energy Society General Meeting (PESGM),
+Calgary,AB,Canada,26–30July2009;pp.1–8.
+52. Cuffe,P.; Keane,A. VisualizingtheelectricalstructureofpowerSys. IEEESyst. J.2015,11,1810–1821.
+[CrossRef]
+53. Bompard,E.;Napoli,R.;Xue,F. Analysisofstructuralvulnerabilitiesinpowertransmissiongrids. Int.J.
+Crit.Infrastruct.Prot.2009,2,5–12.[CrossRef]
+54. Wang,K.;Zhang,B.H.;Zhang,Z.;Yin,X.G.;Wang,B. Anelectricalbetweennessapproachforvulnerability
+assessmentofpowergridsconsideringthecapacityofgeneratorsandload. Phys. AStat. Mech. ItsAppl.
+2011,390,4692–4701.[CrossRef]
+55. Bompard,E.;Pons,E.;Wu,D. Extendedtopologicalmetricsfortheanalysisofpowergridvulnerability.
+IEEESyst.J.2012,6,481–487.[CrossRef]
+56. Arianos,S.;Bompard,E.;Carbone,A.;Xue,F. Powergridvulnerability: Acomplexnetworkapproach.
+ChaosInterdiscip.J.NonlinearSci.2009,19,013119.[CrossRef]
+57. Koç, Y.; Warnier, M.; Kooij, R.; Brazier, F. Structural vulnerability assessment of electric power grids.
+InProceedingsofthe11thIEEEInternationalConferenceonNetworking,SensingandControl(ICNSC),
+Miami,FL,USA,7–9April2014;pp.386–391.
+58. Koc,Y.;Warnier,M.;VanMieghem,P.;Kooij,R.E.;Brazier,F.M. Theimpactofthetopologyoncascading
+failuresinapowergridmodel. Phys.AStat.Mech.ItsAppl.2014,402,169–179.[CrossRef]
+59. Wang,X.;Koç,Y.;Kooij,R.E.;VanMieghem,P. Anetworkapproachforpowergridrobustnessagainst
+cascadingfailures. InProceedingsofthe7thIEEEInternationalWorkshoponReliableNetworksDesignand
+Modeling(RNDM),Munich,Germany,5–7October2015;pp.208–214.
+60. Caro-Ruiz,C.;Mojica-Nava,E.Voltagecollapseanalysisinagraphtheoreticalframework. InProceedingsof
+theIEEEPESInnovativeSmartGridTechnologies(ISGT)LatinAmerica,Montevideo,Uruguay,5–7October
+2015;pp.667–672.
+61. Caro-Ruiz, C.; Mojica-Nava, E. Centralitymeasuresforvoltageinstabilityanalysisinpowernetworks.
+InProceedingsoftheIEEE2ndColombianConferenceonAutomaticControl,Manizales,Colombia,14–16
+October2015;pp.1–6.
+62. Cotilla-Sanchez,E.;Hines,P.D.;Barrows,C.;Blumsack,S. Comparingthetopologicalandelectricalstructure
+oftheNorthAmericanelectricpowerinfrastructure. IEEESyst.J.2012,6,616–626.[CrossRef]
+63. Cotilla-Sanchez,E.;Hines,P.D.;Barrows,C.;Blumsack,S.;Patel,M. Multi-attributepartitioningofpower
+networksbasedonelectricaldistance. IEEETrans.PowerSyst.2013,28,4979–4987.[CrossRef]
+64. Vaiman,M.;Bell,K.;Chen,Y.;Chowdhury,B.;Dobson,I.;Hines,P.;Papic,M.;Miller,S.;Zhang,P. Risk
+assessmentofcascadingoutages: Methodologiesandchallenges. IEEETrans. PowerSyst. 2012,27,631.
+[CrossRef]
+65. Cuadra,L.;Salcedo-Sanz,S.;DelSer,J.;Jiménez-Fernández,S.;Geem,Z.W. Acriticalreviewofrobustnessin
+powergridsusingcomplexnetworksconcepts. Energies2015,8,9211–9265.[CrossRef]
+66. Guo,H.;Zheng,C.;Iu,H.H.C.;Fernando,T. Acriticalreviewofcascadingfailureanalysisandmodelingof
+powersystem. Renew.Sustain.EnergyRev.2017,80,9–22.[CrossRef]
+67. Abedi,A.;Gaudard,L.;Romerio,F. Reviewofmajorapproachestoanalyzevulnerabilityinpowersystem.
+Reliab.Eng.Syst.Saf.2018,183,153–172.[CrossRef]
+68. HaesAlhelou,H.;Hamedani-Golshan,M.E.;Njenda,T.C.;Siano,P. Asurveyonpowersystemblackoutand
+cascadingevents:Researchmotivationsandchallenges. Energies2019,12,682.[CrossRef]
+69. Nakarmi,U.;Rahnamay-Naeini,M.;Hossain,J.;Hasnat,A. Interactiongraphsforreliabilityanalysisof
+powergrids:Asurvey. arXiv2019,arXiv:1911.00475.
+70. Buldyrev, S.V.; Parshani, R.; Paul, G.; Stanley, H.E.; Havlin, S. Catastrophic cascade of failures in
+interdependentnetworks. Nature2010,464,1025.[CrossRef]
+71. Crucitti,P.;Latora,V.;Marchiori,M. Modelforcascadingfailuresincomplexnetworks. Phys.Rev.Lett.2004,
+69,045104.[CrossRef]
+Energies2020,13,2219 24of25
+72. Albert,R.;Albert,I.;Nakarado,G.L. StructuralvulnerabilityoftheNorthAmericanpowergrid. Phys.Rev.
+E2004,69,25103.[CrossRef]
+73. Holmgren,Å.J. Usinggraphmodelstoanalyzethevulnerabilityofelectricpowernetworks. RiskAnal.2006,
+26,955–969.[CrossRef]
+74. Hines,P.;Cotilla-Sanchez,E.;Blumsack,S.Dotopologicalmodelsprovidegoodinformationaboutelectricity
+infrastructurevulnerability? ChaosInterdiscip.J.NonlinearSci.2010,20,033122.[CrossRef]
+75. Kröger,W.;Zio,E.VulnerableSystems;Springer:London,UK,2011;doi:10.1007/978-0-85729-655-9.[CrossRef]
+76. Nakarmi,U.;Rahnamay-Naeini,M. Towardsintegratedinfrastructuresforsmartcityservices:Astoryof
+trafficandenergyawarepricingpolicyforcharginginfrastructures. InProceedingsoftheInternational
+ConferenceonSmartCitiesandGreenICTSystemsSMARTGREENS,Porto,Portugal,22–24April2017;
+pp.208–218.
+77. Nakarmi, U.; Rahnamay-Naeini, M. An influence-based model for smart city’s interdependent
+infrastructures: Application in pricing design for EV charging infrastructures. In Smart Cities, Green
+Technologies,andIntelligentTransportSystems;Springer:Berlin,Germany,2017;pp.111–130.
+78. Lagonotte,P.;Sabonnadiere,J.;Leost,J.Y.;Paul,J.P. Structuralanalysisoftheelectricalsystem:Application
+tosecondaryvoltagecontrolinFrance. IEEETrans.PowerSyst.1989,4,479–486.[CrossRef]
+79. Hasnat,A.;Rahnamay-Naeini,M. Adata-drivendynamicstateestimationforsmartgridsunderDoSattack
+usingstatecorrelations. InProceedingsoftheIEEENorthAmericanPowerSymposium(NAPS),Wichita,
+KS,USA,13–15October2019.
+80. Liang,G.;Weller,S.R.;Zhao,J.;Luo,F.;Dong,Z.Y. The2015Ukraineblackout:Implicationsforfalsedata
+injectionattacks. IEEETrans.PowerSyst.2016,32,3317–3318.[CrossRef]
+81. Bialek,J.;Ciapessoni,E.;Cirio,D.;Cotilla-Sanchez,E.;Dent,C.;Dobson,I.;Henneaux,P.;Hines,P.;Jardim,
+J.;Miller,S.;etal. Benchmarkingandvalidationofcascadingfailureanalysistools. IEEETrans.PowerSyst.
+2016,31,4887–4900.[CrossRef]
+82. Henneaux,P.;Ciapessoni,E.;Cirio,D.;Cotilla-Sanchez,E.;Diao,R.;Dobson,I.;Gaikwad,A.;Miller,S.;
+Papic,M.;Pitto,A.;etal. Benchmarkingquasi-steadystatecascadingoutageanalysismethodologies. In
+ProceedingsoftheIEEEInternationalConferenceonProbabilisticMethodsAppliedtoPowerSystems
+(PMAPS),Boise,ID,USA,24–28June2018;pp.1–6.
+83. Aksoy,S.G.;Purvine,E.;Cotilla-Sanchez,E.;Halappanavar,M. Agenerativegraphmodelforelectrical
+infrastructurenetworks. J.ComplexNetw.2019,7,128–162.[CrossRef]
+84. Wang,Z.;Scaglione,A.;Thomas,R.J. Electricalcentralitymeasuresforelectricpowergridvulnerability
+analysis. InProceedingsofthe49thIEEEConferenceonDecisionandControl(CDC),Atlanta,GA,USA,
+15–17December2010;pp.5792–5797.
+85. Borgatti, S.P.; Everett, M.G. Agraph-theoreticperspectiveoncentrality. Soc. Netw. 2006, 28,466–484.
+[CrossRef]
+86. Halappanavar,M.;Cotilla-Sanchez,E.;Hogan,E.;Duncan,D.;Hines,P.D. Anetwork-of-networksmodelfor
+electricalinfrastructurenetworks. arXiv2015,arXiv:1512.01436.
+87. Wang,A.;Luo,Y.;Tu,G.;Liu,P. Vulnerabilityassessmentschemeforpowersystemtransmissionnetworks
+basedonthefaultchaintheory. IEEETrans.PowerSyst.2011,26,442–450.[CrossRef]
+88. Asavathiratham, C.; Roy, S.; Lesieutre, B.; Verghese, G. Theinfluencemodel. IEEEControlSyst. 2001,
+21,52–64.
+89. Roy,S.;Asavathiratham,C.;Lesieutre,B.C.;Verghese,G.C. Networkmodels:Growth,dynamics,andfailure.
+InProceedingsofthe34thIEEEHawaiiInternationalConferenceonSystemSciences(HICSS),Maui,HI,
+USA,6January2001;pp.728–737.
+90. (NERC)NorthAmericanElectricityReliabilityCouncil. ReliabilityGuideline:MethodsforEstablishingIROLs;
+TechnicalReport;NERC:Atlanta,GA,USA,2018.
+91. Rahnamay-Naeini, M.; Hayat, M. Impactsofoperatingcharacteristicsonsensitivityofpowergridsto
+cascadingfailures. InProceedingsoftheIEEEPower&EnergySocietyGeneralMeeting(PESGM),Boston,
+MA,USA,17–21July2016.
+92. Ejebe,G.C.;Waight,J.G.;Sanots-Nieto,M.;Tinney,W.F. Fastcalculationoflinearavailabletransfercapability.
+IEEETrans.PowerSyst.2000,15,1112–1116.[CrossRef]
+93. Guo,J.;Fu,Y.;Li,Z.;Shahidehpour,M. Directcalculationoflineoutagedistributionfactors. IEEETrans.
+PowerSyst.2009,24,1633–1634.
+Energies2020,13,2219 25of25
+94. Klein,D.J.;Randic´,M. Resistancedistance. J.Math.Chem.1993,12,81–95.[CrossRef]
+95. Kundur,P.; Paserba,J.; Ajjarapu,V.; Andersson,G.; Bose,A.; Canizares,C.; Hatziargyriou,N.; Hill,D.;
+Stankovic,A.;Taylor,C.;etal. DefinitionandclassificationofpowersystemstabilityIEEE/CIGREjointtask
+forceonstabilitytermsanddefinitions. IEEETrans.PowerSyst.2004,19,1387–1401.
+96. Fortunato, S.; Hric, D. Community detection in networks: A user guide. Phys. Rep. 2016, 659, 1–44.
+[CrossRef]
+97. Ellens,W.;Spieksma,F.;VanMieghem,P.;Jamakovic,A.;Kooij,R. Effectivegraphresistance. LinearAlgebra
+ItsAppl.2011,435,2491–2506.[CrossRef]
+98. Gutman,I.;Mohar,B. Thequasi-WienerandtheKirchhoffindicescoincide. J.Chem.Inf.Comput.Sci.1996,
+36,982–985.[CrossRef]
+99. Steinberg,R.;Zangwill,W.I. TheprevalenceofBraess’paradox. Transp.Sci.1983,17,301–318.[CrossRef]
+100. Anderson, R.M.; Anderson, B.; May, R.M. Infectious Diseases of Humans: Dynamics and Control; Oxford
+UniversityPress:Oxford,UK,1992.
+101. Centola,D. Thespreadofbehaviorinanonlinesocialnetworkexperiment. Science2010,329,1194–1197.
+[CrossRef][PubMed]
+102. Daley,D.J.;Kendall,D.G. Epidemicsandrumours. Nature1964,204,1118.[CrossRef]
+103. Wang,Z.;Rahnamay-Naeini,M.;Abreu,J.M.;Shuvro,R.A.;Das,P.;Mammoli,A.A.;Ghani,N.;Hayat,M.M.
+Impactsofoperators’behavioronreliabilityofpowergridsduringcascadingfailures. IEEETrans.Power
+Syst.2018,33,6013–6024.[CrossRef]
+(cid:13)c 2020bytheauthors.LicenseeMDPI,Basel,Switzerland.Thisarticleisanopenaccess
+articledistributedunderthetermsandconditionsoftheCreativeCommonsAttribution
+(CCBY)license(http://creativecommons.org/licenses/by/4.0/).
+

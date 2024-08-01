@@ -1,0 +1,1504 @@
+References:
+28 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Each technology that is rapidly progressing has got specific Lo(cid:3)pez-de-Ipin~aGonza(cid:3)lez-de-Artaza:Supervision.LuigiPatrono:
+potential drawbacks that need to be carefully analysed and Conceptualization,Methodology,Supervision.
+addressed. Since IoT devices are measured in billions, and with
+largepotentialimpactsonthepopulation,specificchallengesneed Declarationofcompetinginterest
+to be addressed, which were detected based on the herein con-
+ducted review. The main goal is to secure a sustainable and Wewishtoconfirmthattherearenoknownconflictsofinterest
+balanceddevelopmentofIoTtechnologies.Therefore,furtherissues associated with this publication in Journal of Cleaner Production
+are briefly discussed below and should be carefully considered (Internet of Things (IoT): Opportunities, issues and challenges
+duringthefurtherdevelopmentofIoTtechnologies: towardsasmartandsustainablefuture)andtherehasbeenno
+significant financial support for this work that could have influ-
+- the rapid development of IoT technologies causes fast con- enceditsoutcome.
+sumption of raw materials to produce different electronic de- Weconfirmthatthemanuscripthasbeenreadandapprovedby
+vices where unfortunately some of raw materials are already allnamedauthorsandthattherearenootherpersonswhosatisfied
+rareorbecoming, the criteria for authorship but are not listed. We further confirm
+- electronicdevicesarebecomingmoreeconomicallyacceptable that the order of authors listed in the manuscript has been
+where a potentially large population would be affected. High approvedbyallofus.
+production volumes are expected which can finally cause a We confirm that wehave given due consideration tothe pro-
+reboundeffectandamorerapidunwantedutilizationofalready tectionofintellectualpropertyassociatedwiththisworkandthat
+limitedresources, there are no impediments topublication, including the timingof
+- thesustainabilityaspectandlong-termeffectsofIoTtechnolo- publication, with respect to intellectual property. In so doing we
+gies are not clear and insufficiently investigated. A noticeable confirmthatwehavefollowedtheregulationsofourinstitutions
+amountofenergywouldbeneededtooperateIoTdevicesand concerningintellectualproperty.
+the electronic industry is leaving different unfavourable envi- WeunderstandthattheCorrespondingAuthoristhesolecon-
+ronmentalfootprintsthatalsoneedtobecarefullyinvestigated, tact for the Editorial process (including Editorial Manager and
+- electronic waste will become one of the major issues caused direct communications with the office). He is responsible for
+withtheplannedriseofIoTproducts.Recyclingratesmustbe communicating with the other authors about progress, sub-
+improvedandbettere-wastemanagementshouldbesecured, missionsofrevisionsandfinalapprovalofproofs.Weconfirmthat
+- IoTtechnologiescancausesocialimpactsinspecificindustrial wehaveprovidedacurrent,correctemailaddresswhichisacces-
+branchesorbusinessessinceworkinglabourcouldbereduced siblebytheCorrespondingAuthorandwhichhasbeenconfigured
+anddirectsocialcontactshavealsobeenreduced.Inthatsense, toacceptemailfrom(snizetic@fesb.hr).
+theapplicationofIoTtechnologiesshouldbecarefullyconsid-
+eredtakingtheraisedissuesintoaccount, Acknowledgments
+- significant advancements in both specific electronic compo-
+nentsaswellasuser-friendlysoftwaresolutionsarerequired, This work has been supported in part by Croatian Science
+- furtherdevelopmentinsensingtechnologiesandadvanceddata Foundation under the project “Internet of Things: Research and
+acquisitionsystemsisalsorequired, Applications”,UIP-2017-05-4206,Croatia.
+- the minimization of energy consumption in IoT devices is a
+crucialtarget,i.e.reductionofenergysupply. References
+Fromthehereinaddressedrecentresearchfindingswithinthe Aazam,M.,Zeadally,S.,Harras,K.A.,2018.Deployingfogcomputinginindustrial
+VSI SpliTech 2019, it is obvious that developments in various IoT internetofthingsandindustry4.0.IEEETransactionsonIndustrialInformatics.
+PP(99):1-1.
+application sectors are promising but further advancements are Abdou, M., Mohammed, R., Hosny, Z., Essam, M., Zaki, M., Hassan, M., Eid, M.,
+expectedandthataremainlyfocusedonmaximizingtheefficiency Mostafa,H.,2019.ProceedingsoftheInternationalConferenceonMicroelec-
+of specific IoT supported processes or technologies, minimizing tronics, ICM, Volume 2019-December, December 2019, pp.103e107. Article
+number9021613.
+resourceutilization(rawmaterialsandenergy)andenvironmental
+Ajanovic, A., Haas, R., 2019. Economic and environmental prospects for battery
+footprints. IoT technologies are an opportunity for humanityand electric-andfuelcellvehicles:areview.FuelCell.19(5),515e529.
+canbringimportantaswellasusefulbenefitstothepopulation.The Al-Ali,A.R.,Zualkernan,I.A.,Rashid,M.,Gupta,R.,Alikarar,M.,2017.Asmarthome
+energymanagementsystemusingIoTandbigdataanalyticsapproach.IEEE
+authors contributions within the JCLEPRO VSI SpliTech2019 pro-
+Trans.Consum.Electron.63(4).
+vided quality discussion and presentation of the latest advance- Al-Masri,E.,Diabate,I.,Jain,R.,Lam,M.H.,Nathala,S.R.,2018.AserverlessIoTar-
+ments in the field, and most important, they contributed to the chitectureforsmartwastemanagementsystems.In:2018IEEEInternational
+ConferenceonIndustrialInternet(ICII).
+betterunderstandingofIoTapplicationareas,technologicalpossi-
+Alletto,S.,Cucchiara,R.,DelFiore,G.,Mainetti,L.,Mighali,V.,Patrono,L.,Serra,G.,
+bilities, but also potential drawbacks and issues that should be 2015.Anindoorlocation-awaresystemforanIoT-basedsmartmuseum.IEEE
+carefully monitored in future terms. The crucial and important InternetofThingsJournal3(2),244e253.
+Almusaylim,Z.A.,Alhumam,A.,Jhanjhi,N.Z.,2020.ProposingasecureRPLbased
+aspects are linked with sustainability where the rapid de-
+internetofthingsroutingprotocol:areview.AdHocNetw.101.Articlenumber
+velopmentsinIoTtechnologiesmustbecarefullymonitoredfroma 102096.
+resourceandenvironmentalpointofviewtoensurebalancedand Websource:Arduino.cc,(accessed,April22,2020).
+sustainable development of IoT products. Herein presented Web source: Arduino low-power, "Arduino Low Power”, Online: github.com/
+arduino-libraries/ArduinoLowPower,(accessedApril2020.).
+knowledgeandpublishedworksintheJournalofCleanerProduc- Arumugam, S.S., Umashankar, V., Narendra, N.C., Badrinath, R., Mujumdar, A.P.,
+tionareservingasimportantfoundationsforresearchers dealing Holler,J.,Hernandez,A.,2018.IOTenabledsmartlogisticsusingsmartcontracts.
+withthischallenginganddynamicresearchfield. In: 2018 8th International Conference on Logistics, Informatics and Service
+Sciences(LISS).https://doi.org/10.1109/LISS.2018.8593220.
+Web source: Datasheet - ATECC508A, “ATECC508A”, Online: microchip.com/
+CRediTauthorshipcontributionstatement wwwproducts/en/ATECC508A,(accessedApril21,2020).
+Web source: Datasheet - ATmega328P, Online: microchip.com/downloads/en/
+Sandro Ni(cid:1)zeti(cid:3)c: Conceptualization, Methodology, Supervision. DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Data-
+Petar S(cid:1) oli(cid:3)c: Conceptualization, Methodology, Supervision. Diego Avansh cie ne it ,.p Dd .f B.( ,ac Mce as rs tie nd s,Ap S.r Gil .B2 .1 ,, R2 a0 b2 e0 l) o. , R.A.L., Solic, P., Rodrigues, J.J.P.C., 2018.
+
+Annexes/Appendices:
+
+Body Text:
+JournalofCleanerProduction274(2020)122877
+ContentslistsavailableatScienceDirect
+Journal of Cleaner Production
+journal homepage: www.elsevier.com/locate/jclepro
+Internet of Things (IoT): Opportunities, issues and challenges towards
+a smart and sustainable future
+Sandro Ni(cid:1) zeti(cid:3) c a,* , Petar S(cid:1) oli(cid:3) c b, Diego Lo(cid:3) pez-de-Ipin~ a Gonza(cid:3) lez-de-Artaza c,
+Luigi Patronod
+aLTEF-LaboratoryforThermodynamicsandEnergyEfficiency,FacultyofElectricalEngineering,MechanicalEngineeringandNavalArchitecture,University
+ofSplit,RudjeraBoskovica32,21000,Split,Croatia
+bDepartmentofElectronics,FacultyofElectricalEngineering,MechanicalEngineeringandNavalArchitecture,UniversityofSplit,RudjeraBoskovica32,
+21000,Split,Croatia
+cFacultyofEngineering,DeustoTech-Fundacio(cid:3)nDeusto,UniversidaddeDeusto,Despacho545Avda,Universidades24,48007,Bilbao,Spain
+dDepartmentofInnovationEngineering,UniversityofSalento,EcotekneCampus-S.P.6,Lecce,Monteroni,73100,LECCE,LE,Italy
+a r t i c l e i n f o a b s t r a c t
+Articlehistory: Therapiddevelopmentandimplementation ofsmartandIoT(InternetofThings)basedtechnologies
+Received11May2020 have allowed for various possibilities in technological advancements for different aspects of life. The
+Receivedinrevisedform maingoalofIoTtechnologiesistosimplifyprocessesindifferentfields,toensureabetterefficiencyof
+12June2020 systems(technologiesorspecificprocesses)andfinallytoimprovelifequality.Sustainabilityhasbecome
+Accepted13June2020
+a key issue for population where the dynamic development of IoT technologies is bringing different
+Availableonline19July2020
+useful benefits, but this fast development must be carefully monitored and evaluated from an envi-
+Handlingeditor:CeciliaMariaVillasBo^asde ronmentalpointofviewtolimitthepresenceofharmfulimpactsandensurethesmartutilizationof
+Almeida limited global resources. Significant research efforts are needed in the previous sense to carefully
+investigate the pros and cons of IoT technologies. This review editorial is partially directed on the
+Keywords: researchcontributionspresentedat the 4th International ConferenceonSmart andSustainable Tech-
+IoT nologiesheldinSplitandBol,Croatia,in2019(SpliTech2019)aswellasonrecentfindingsfromliter-
+Smartcity ature.TheSpliTech2019conferencewasavaluableeventthatsuccessfullylinkeddifferentengineering
+Sustainability professions,industrialexpertsandfinallyresearchersfromacademia.Thefocusoftheconferencewas
+Energy
+directed towards key conference tracks such as Smart City, Energy/Environment, e-Health and Engi-
+Environment
+neering Modelling. The research presented and discussed at the SpliTech2019 conference helped to
+SpliTech2020
+understand the complex and intertwined effects of IoT technologies on societies and their potential
+effectsonsustainabilityingeneral.VariousapplicationareasofIoTtechnologieswerediscussedaswell
+as the progress made. Four main topical areas were discussed in the herein editorial, i.e. latest ad-
+vancements in the further fields: (i) IoT technologies in Sustainable Energyand Environment, (ii) IoT
+enabled Smart City, (iii) E-health e Ambient assisted living systems (iv) IoT technologies in Trans-
+portationandLowCarbonProducts.Themainoutcomesofthereviewintroductoryarticlecontributedto
+thebetterunderstandingofcurrenttechnologicalprogressinIoTapplicationareasaswellastheenvi-
+ronmentalimplicationslinkedwiththeincreasedapplicationofIoTproducts.
+©2020ElsevierLtd.Allrightsreserved.
+1. Introduction Digitalizationhasallowed‘‘smart’’(Zhengetal.,2019)tobecome
+the epicentre of already ongoing technological developments. In
+Withrisingtechnologicaldevelopmentsinsociety,newpossi- fact,IoTtechnologiesarenowadaysassumedtobeoneofthekey
+bilities have occurred and that could simplify our daily life and pillarsofthefourthindustrialrevolutionduetosignificantpoten-
+provide more efficient services or production processes. tial in innovations and useful benefits for the population. On the
+other side, each development utilizes limited resources leaving
+behinddifferentenvironmentalfootprints,(Lietal.,2020a),espe-
+* Correspondingauthor. cially different kinds of pollutants, (Zeinalnezhad et al., 2020).
+E-mailaddress:snizetic@fesb.hr(S.Ni(cid:1)zeti(cid:3)c). Internetofthings(IoT)basedtechnologiesbringacompletelynew
+https://doi.org/10.1016/j.jclepro.2020.122877
+0959-6526/©2020ElsevierLtd.Allrightsreserved.
+2 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+perspective on the further progress of various fields, such as for
+instance in engineering, (Zaidan and Zaidan, 2020), agriculture
+(Farooqetal.,2020),ormedicine(SalagareandPrasad,2020),and
+in other fields that have not been explored yet. Some potential
+applicationareasinIoTtechnologiesarestillunknownorinsuffi-
+cientlyclearon howtoapproach themwhich is an evident indi-
+cationthatmoreintenseresearchactivityshouldbeconductedin
+thischallengingfieldtowardsnewandimportantpotentialbenefits
+for society. Therefore, the relevance and importance of IoT tech-
+nologies in future terms are more than clear and should playan Fig.2. ExpectedincreaseinglobalWi-Fispeedsinperiodof2017e2022(Zdnet,2018),
+importantrole.
+TheriseofIoTtechnologiesiscurrentlyintenseandaccordingto
+projections for the next 10 years, over 125 $109 IoT devices are speedareexpectedformorethanafactoroftwo,i.e.fromabout
+expected to be connected, (Techradar, 2019). The expected in- 24Mbpstomorethan54Mbps.ThemostintenseincreaseinWi-Fi
+vestmentsinIoTtechnologiesarealsohighwithexpectationsbeing speedisexpectedintheAsianregion,(Zdnet,2018).
+over120$109USDby2021,withacompoundannualgrowthrateof ThelowestWi-FispeedisnoticeableintheLatinAmericaand
+about7.3%,(Forbes,2018).Thegeneralpresentmarketstructureof Middle East&Africa regions, which are an indication of potential
+IoTtechnologiesispresentedinFig.1,whereitisevidentthatthe problemsfortheefficientimplementationofIoTproductsornovel
+majorityofthemarketisfocusedonsmartcitiesandindustrialIoT. moreadvancedupcomingtechnologies.
+If recent projects in IoT technologies are being analysed than AnincreasedimplementationofIoTtechnologieswouldleadto
+mostofthemareinthefieldofsmartcitiesandindustrialIoT.Other a more intense utilization of fossil technologies to ensure the
+significantpotentialsareconnectedbuildings,connectedcarsand necessaryenergysupplyforIoTproductionlines.Theproductionof
+energysegments(Forbes,2018),butlowerthanthefirstmentioned electronic equipment is causing potentially unbalanced waste of
+fields.ItisalsofoundthatthemostrisingtrendinthenumberofIoT limited metals and resources in general, which could become a
+projectscurrentlyisasexpectedinsmartcities,connectedhealth critical issue in the long run. Unfortunately, the recycling rate of
+andsmartsupplychainsegments,withanannualriseover30%in electronicwasteislowandcurrentlyintheamountofabout20%
+the EU and USA. Industrial IoT, connected cars and agriculture (Thebalancesmb, 2020) which makes matters questionable
+segmentshasrecordedadecreaseinthenumberofrealizedpro- regardingtheavailableresourcecapacitytoproduceIoTproducts
+jects, i.e. over 25% in the USA and EU, (Forbes, 2018). From a when taking into accounts the rising market demands. The pro-
+perspective of high upcoming population pressure on cities and ductionofelectronicgadgetshasledtotheconsumptionofvarious
+becauseapopulationofalmost11$109isexpectedbytheendofthe chemicals,waterandfinallyfossilfuelsthathaveallleftenviron-
+century(Pewresearch,2019),thesmartcityconceptcouldbecome mentalimpacts.Asalreadytackled,differentmetalsarealsobeing
+a vital one to allow for a normal operation of highly populated usedtoproduceelectronicssuchascopper,silver,gold,palladium
+cities. etc.One of the major issues isthe led contentin e-wasteand its
+In order to support the rapid technical development of IoT severeimpacttotheenvironment.Recyclingintheprevioussense
+technologies,aswellasnovelpotentialapplicationsareas,specific is very important, where the present recycling rate of electronic
+technicalissueswouldneedtoberesolved,(Techradar,2019).One equipment is certainly not sufficient and must be increased.
+ofthemainissuesisassociatedwiththedevelopmentofdifferent Globally,theannualriseoftherecyclingraterangesfromabout4%
+tools for the monitoring of network operations (Kakkavas et al., to5%(Thebalancesmb,2020).Thelegislationrelatedtothee-waste
+2020), then issues with security tools and their management, isoneofthemaindrawbackssincemorethan50%ofworldpop-
+(Conti et al., 2020), issues with software bugs, demanding main- ulationisstillnotwellcoveredwithproperlegislationrelatedtoe-
+tenance ofIoTnetworks,andfinallysecurityissues relatedtoIoT waste, (Globalewaste, 2017), which is preventing the further
+networks,(Almusaylimetal.,2020).Theimportantproblemlinked developmentofe-wastefacilities.Themarketvalueofrawmate-
+withtheefficientimplementationofIoTtechnologiesislinkedwith rials from e-waste is estimated to be more than 50$109 Euros,
+the available speed and coverage of wireless networks (Wi-Fi), (Globalewaste,2017).Certainly,morestrategicandtargetedactions
+whereexpectationsare highduetonoticeable increasesin Wi-Fi are needed in the e-waste issue to secure a more balanced and
+network coverage in the period of 2017e2022 as well as in- sustainable development of IoT technologies. Overall, the annual
+creasesinWi-FispeedFig.2.Inaglobalsense,increasesinWi-Fi
+generationofe-wasteismorethan44$109metrictonnes,whichis
+equivalent to more than 6 kg per inhabitant annually,
+(Globalewaste,2017).Apotentialexistsandmustbebetterutilized
+toensureasufficientquantityofvaluablerawresources.
+It should be highlighted that there is no doubt in what IoT
+technologieswouldbringtothetable,suchasvarioususefulben-
+efits to society and an overall improvement in life quality. Each
+technology has specific issues and drawbacks that need to be
+detected and closely investigated on time, since IoT technologies
+havethepotentialtochangeourlivesandhabits.Severalimportant
+factsneedtobeemphasizedwhenaddressingIoTtechnologiesto
+beabletounderstandthelong-termeffectsassociatedwiththefast
+developmentofIoT:
+- IoT technologies have caused an increase in the utilization of
+limited resources or raw materials where some of them have
+becomerareorarealreadyrare(forinstance,specificprecious
+Fig.1. GeneralmarketstructureofIoTtechnologies(Ni(cid:1)zeti(cid:3)cetal.,2019). metalsforelectronics),
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 3
+- Thepricesofelectronicdeviceshavebecomemoreacceptable, sector (Villa-Henriksen et al., 2020) are also promising, having
+which means an increase in production volume, finally more significantpotential.
+resourcesarebeingutilized.Areboundeffectispossibleinthat Thedevelopmentofspecific IoTapplicationareas stronglyde-
+sense, pendsfromseveralkeyfactorssuchas:
+- The long term environmental impacts of IoT technologies are
+unknown.Anoticeableamountofenergywouldbeneededto - generalavailableadvancementsinelectroniccomponents,
+supporttheproductionandoperationofIoTdevices, - availablesoftwaresolutionsanduserfriendlysurrounding,
+- An increase in electronic waste is expected due to the large - solutionsrelatedtosensortechnologiesanddataacquisition,
+estimatednumberofIoTbaseddevicesinthenearfuture, - qualityofnetwork,i.e.networkconnectivityandinfrastructure,
+- Insomesectors,IoTtechnologiescouldhavesocialimpactsdue - sufficient energy supply for production and operation of IoT
+tothereducednecessityforlabourandlimitationofdirectsocial devices.
+contacts,whichisvitalandanimportantaspectforeachhuman
+being. Inthecontinuationoftherevieweditorial,somekeyIoTappli-
+cationareaswillbebrieflyaddressedtogetherwiththemainde-
+Themainpointoftheaboveraisedissuesisnottoindicateand velopmentsandcurrentchallenges.
+createanegativeattitudetowardsIoTtechnologiesbuttocarefully
+analyze the overall aspects in order to secure a smart and sus- 1.2.1. IoTinindustry
+tainable development of IoT technologies, which are a valuable The application of IoT technologies in industrial applications
+opportunityforhumanity. wouldallowforanincreaseinefficiencyregardingtheproduction
+process and would ensure more efficient communication and
+1.1. Necessityforsmarttechnologies networking between operators and machines, Fig. 5. Finally, it
+wouldallowformorecompetitivecompaniesonthemarketwith
+Theworldisrapidlychanging,i.e.developinginatechnological more efficient quality control with a minimization in losses. A
+senseandisbeingdrivenbythepresenteconomicsystemglobally. criticalfeaturewouldbethedevelopment,designandintegration
+Unfortunately, each technological development has got its price, of various useful sensors in the industrial applications (Li et al.,
+which can be sensed through the intense utilization of limited 2020b),toformintegralandeffectivemanagementsystems.More
+fossil-basedresourcesandtheproductionofvariousimpactstothe intenseresearcheffortsareneededtowardsanefficientapplication
+environment, (Chen et al., 2020a). The population is constantly ofIoTtechnologiesintheindustryandtobetterunderstandhow
+growingwithanannualrateofabout1.1%peryearwiththecurrent IoTtechnologiescouldbeimplementedinspecificindustrieswhere
+population being over 7.7$109 (Data.worldbank, 2020). As previ- benefitswouldbepossible.Progressiscrucialinthesenseofhowto
+ouslyaddressed,thepopulationconcentrationisincitiesandac- connectdifferentindustrialsensors,useandprocessthecollected
+cording to UN projections, about 68% of the population will be variousdatatoenableenhancedindustrialprocesses,i.e.ensuefor
+living in cities by 2050, (UN, 2018). A significant infrastructure instance smart IoT based Computer-Integrated Manufacturing,
+pressure is expected in cities due to boosted urbanization, thus (Chenetal.,2020b).
+novel technological solutions would be key to secure the normal
+operation of cities in the given complex and demanding circum- 1.2.2. IoTinsmartcityconcept
+stances. In the previous sense, the general application of IoTand TheroleofIoTtechnologiesinthesmartcityconcept(Janiketal.,
+smarttechnologieswouldhaveanimportantroleandcouldhelpto 2020) is crucial to bridge the already mentioned global infra-
+bridge some major infrastructure related issues in cities. The ne- structural challenges in cities, which are linked with the current
+cessityforIoTtechnologiesiscloselylinkedwithongoingtechno- increase of population in cities. IoT technologies in smart cities
+logicaladvancementsanddigitalizationwhereavarietyofdifferent wouldenabletheutilizationofdifferentdevices,whichwouldin-
+electronic products need to be somehow connected in a useful creasethelifequalityincitiesaswellastheefficiencyofdifferent
+manner.Thereisanecessityformoreefficientservicesandflexible dailyservicessuchastransportation,security(surveillance),smart
+processes in general, which could be obtained with the proper metering, smart energy systems, smart water management, etc.
+implementationofIoTtechnologies.IoTtechnologieshaveallowed Differentsensingdeviceswouldreceiveinformation,whichwould
+foravarietyofefficientservicesandsmartnetworking,applications be processed towards efficient and useful solutions. The main
+or devices that can ensure useful synergic effects and produce benefitofIoTtechnologiesinsmartcitieswouldbedirectedtothe
+benefits.ThemajoradvantageofIoTtechnologiesistheirconnec- earlydetectionofdifferentproblemsorinfrastructuralfaults(such
+tivityaspectthathasenormouspotential,Fig.3. asissueswithtrafficjams,energysupply,watershortage,security
+Variousbenefitsarepossibleandwouldbegraduallyintegrated incidents, etc.). In smart cities, many sensors are installed and
+inourlivesthoroughupcomingyearsindifferentapplicationareas linkedwithmanyotherdevicesovertheinternetwhichgivesin-
+and will be briefly discussed in the upcoming section of the formation to the users as for instance parking spaces, any mal-
+introductoryrevieweditorial. functions, electrical failure and many other issues. Developing
+thesetechnologieswouldhelpinleadingthecitiestowardssmart
+1.2. Applicationareas grids, smart healthcare, smart warehouses, smart transportation,
+smart waste management, smart communities, etc. Different
+The application areas of IoTare various and based on current implementationchallengestowardsthesmartcityconceptexists,
+availabletechnologicalsolutions,themostrepresentedapplication Fig.6andshouldbesolvedforvariousapplications,(Fig.7).
+sectors are shown in Fig. 4. The most important and most pro- The most present implementation challenges are linked with
+gressing application areas of IoT are related to the industry the efficient integration of different sensing technologies, devel-
+(Osterrieder et al., 2020) and smart city concept (Sivanageswara opmentofasuitablenetworkinfrastructure,educationofpopula-
+Raoetal.,2020),withrespecttothenumberofrealizedprojects. tion, investigation of the sustainability aspect, such as carbon
+The transportation (Porru et al., 2020), smartenergy manage- footprint,etc.
+mentinbuildings(Douglasetal.,2020)ormanagementofpower The application of IoT technologies in smart homes,
+networks (Martín-Lopo et al., 2020), as well as the agriculture (Moniruzzamanetal.,2020),withinthesmartcityconceptallows
+4 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Fig.3. GeneralstructureofIoTnetworkandconnectivity(Zhangetal.,2018).
+home concept and enable an efficient integration of renewable
+energy technologies in homes (Stavrakas and Flamos, 2020), and
+theirefficientbalancing(efficientsupplyanddemand).
+1.2.3. IoTinagriculture
+Efficientagricultureproductionisanecessityforourpopulation
+to prevent the potential lack of food resources in future terms
+causedbydifferentfactors,(Hussainetal.,2020).Thefirstfactoris
+constantpopulationgrowth,asalreadyemphasized,thesecondis
+linked with climate change issues (Yang et al., 2020), which is
+causingareductionintheyieldsofimportantcrops,orsomeareas
+areevenbecomingunsuitableforefficientagricultureproduction.
+The food waste issue is one of the major problems (Keng et al.,
+2020), since it has become a global problem, especially in devel-
+oped economies. It is estimated that more than 28% of available
+agriculture areas is ‘‘reserved’’ for food waste and unfortunately
+more than 800$106 people are currently hungry, (Fao.org, 2020).
+TheimplementationofIoTtechnologiesinagriculturecancertainly
+helptosecuresufficientfooddemandsandincreasetheefficiency
+ofagriculturalproductionprocessesingeneral.Varioususefuldata
+aboutcropscouldbecollectedandusedforyieldmonitoringand
+thedetectionofpotentialdiseasesinadvancethatcansignificantly
+reducetheyieldsofspecificcrops.Themonitoringofsoilandnu-
+trients would rationalize agricultural production processes and
+leadtowatersavingsthatarepreciousinsomespecificgeograph-
+Fig.4. ApplicationareasofIoTtechnologies.
+icalregions,whichcouldbeutilizedthroughsmartirrigationsys-
+tems, (Xin et al., 2020). A more precise seeding could also be
+ensuredandfertilitycropmanagementingeneral,Fig.8.Thereare
+for an increase in the life quality within residential facilities, someissueslinkedwiththeefficientapplicationofIoTtechnologies
+bringingnovelandattractivetechnologicalsolutions.Both,energy inagricultureproduction.Differentsensingandmonitoringtech-
+andfundsavingscouldbereachedwithmoreefficienttimeman- nologies should be developed and a better education of farmers
+agement, which is a valuable feature in our present economic shouldbeprovided(i.e.developmentofstandardeducationmod-
+system. Different control options are possible within the smart ulesforfarmers).Duetoalargequantityofcollecteddata,farmers
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 5
+could be potentially overwhelmed, (Ec.europa, 2017). Therefore,
+there is a necessity for the development of standard trainings
+(educationmodules)forfarmerscoupledwiththedevelopmentof
+moreuser-friendlysoftwaresolutions.
+The application of IoT technologies in the agricultural sector
+wouldleadtoadvancementsthatcoulddrasticallymodifycurrent
+productionproceduresinagriculture,(Shafietal.,2020)(Fig.8).
+1.2.4. IoTinwastemanagement
+Waste management towards a circular economy concept (Fan
+etal., 2019)isavital currentpopulationproblem, where thereis
+certainlyaroleforIoTtechnologiesthatcouldhelpprovidemore
+efficientwastemanagementinspecificareas(VocaandRibic,2020)
+and recycling of different limited resources, (Qiu et al., 2020).
+Currently, various technological solutions are being developed to
+supportthesmartwastemanagementconcept, (Dasetal.,2019).
+Some of them are already available on the market for wide
+implementation, (Iot.farsite, 2020). The developed solutions are
+mostlydirectedtowardsthesmartmonitoringofwastebins(Dhana
+Shreeetal.,2019),i.e.binfillingleveldetection,wastetemperature
+andfiredetection,binvibrationoccurrenceandbintilt,presenceof
+wasteoperators,wastehumidity,binGPSlocationetc.Ingeneral,
+smartwastemanagementsystems,canbeeffectivelysupportedby
+IoTdevices,Fig.9.IoTtechnologiescouldalsobeusedforthesmart
+coordination of waste trucks (Idwan et al., 2020) and efficiency
+waste utility companies could be ensured in that manner, which
+wouldbefollowedbyareductionofharmfulemissions(pollutants)
+created by garbage trucks, (Kozina et al., 2020). From the
+perspectiveofsmarttechnologies,theproperandIoTbasedwaste
+management of electronic waste is very important (Kang et al.,
+2020) to secure sufficient raw resources to produce electronic
+equipment as already highlighted. IoT technologies could also be
+usedforthereductionoffoodwastethroughintelligentappliances
+andadevelopedmanagementstructureinthatsense,(Liegeardand
+Manning,2020).
+Fig.5. GeneralconceptofIoTindustrialapplication(Aazametal.,2018). InnovativeIoTbasedtechnologicalsolutionsareexpectedtobe
+developedinupcomingyears,especiallyfromasmartcityconcept
+perspective and that could support smart waste management
+systemsandacirculareconomyconcept.
+1.2.5. IoTinhealthcare
+One challenging implementation field of IoT technologies has
+beendetectedinthehealthcaresystemingeneral,throughthee-
+health concept, (Farahani et al., 2020). An increase in the service
+qualityofhealthcaresystemscouldbeutilizedthroughIoTsupport
+(mainly collection of patient health data) and finally with the
+improvementofpatientsafetyandcaresinceitcouldalsoleadtoan
+increaseinpatientlifeexpectancy.Thereisanenormouspotential
+insmartmedicaldevicesfordifferentpurposes(Papaetal.,2020)
+thatcanbeutilizedforthemonitoringofvariousvitalandvaluable
+humanfunctionssuchasheartrate,skintemperature,movement
+monitoring, etc. Remote health monitoring is also an interesting
+perspectivethat could be utilized with the proper support of IoT
+devices and products. The prediction of different symptoms and
+preventionofpotentiallylifehazardousstatesanddiseasescould
+generallybeenabled,(Muthuetal.,2020).Assistancetotheelderly
+could also be ensured by monitoring a patient’s general health
+conditionandnutritionstatus(Nivethaetal.,2020),thatwouldbe
+supported via IoT devices. Rehabilitation after a serious disease
+couldalsobeefficientlysupportedwithIoTtechnologies,especially
+incasesofhomerehabilitationcircumstances,(Bisioetal., 2019).
+Fig.6. DifferentchallengesinSmartCityconcept(Bhagyaetal.,2018). One of the main issues and challenges in this specific IoT
+6 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Fig.7. Varioussmarthomemanagementsystems(Zhouetal.,2016).
+diversity,resourcesofmedicalstaffandresources,medicaltriage,
+etc.),suchasistherecentcoronavirussituationthathasseverely
+threatened the global population, (WHO, 2020). The healthcare
+sectoris probablyone of themost challengingareasfor IoT, thus
+importantprogressisexpectedintheupcomingyearwithserious
+benefitsforthepopulation.
+1.2.6. IoTintransportation
+Transportationmodeswillbesignificantlychangedinupcoming
+decades, (Jonkeren et al., 2019), especially due to the expected
+Fig.8. IoTinagriculturalproductionfromfarmer’sperspective. rising implementation of electric cars on the market, (Capuder
+et al., 2020). The upcoming ban of Diesel based vehicles due to
+environmentalissues(Lietal.,2020c)andfinallydevelopmentof
+application field would be to ensure proper cyber safety due to alternative transportation technologies, such as hydrogen based
+potential attacks that could occur within healthcare monitoring vehiclesforexample(AjanovicandHaas,2019),wouldchangethe
+systems,(Johnetal.,2019).Significantprogressinupcomingyears shape of future transportation systems. In general, there is a de-
+is expected in the field of software development for health care mand for more environmentally suitable transportation options
+systems,i.e.especiallyinhospitals.Namely,differentdevicescould that are already being gradually developed with an expected
+belinkedviaadvancedsoftwaresolutionsasforexampleMRIsor penetration on the market. A necessary development of trans-
+CT devices and connected with laboratory data to create a smart portationinfrastructureisneededforspecificvehicletechnologies
+hospitalinformationsystem.Thepreviouslymentionedapproach toensuredesirablevehicleautonomy.Nowadays,theIoTemerged
+would allow for the better treatment of patients, detection of inthe‘‘internetofvehicles’’concept(Shenetal.,2020),whichjust
+medicalprioritiesandsupportformedicalstaffinmonitoringand provesitspotentialinthisimportantarea.ThemostsignificantIoT
+therapydecisions.IoTsystemscouldalsobe usedin hospitalsfor applicationareaisinthecaseofthesmartcar(vehicles)concept,
+the efficient maintenance of a large number of medical devices (Chughetal.,2020).Thesmartcarconceptconsiderstheutilization
+(Shamayleh et al., 2020). Equipment costs could be reduced in andoptimizationofdifferentinternalfunctionsinthecarthatare
+hospital systems due to the early detection of severe equipment supported by IoT technologies. The application of IoT would up-
+malfunctions that could affect the accuracy of specific readings gradedriverexperienceandincreaseincomfortandsafety.Specific
+from medical devices. The development of smart and based IoT data are collected in the smart carand associated with the main
+solutionsinhealthcaresystemscouldalsobeveryusefulinthecase operating parameters such as tyre pressure, fuelling, early detec-
+of severe global pandemic states (data collection and fast data tion of potential failures, regular maintenance indicators, etc. In
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 7
+Fig.9. IoTinsmartwastemanagementsystem,(Quamtra,2020).
+general, improved service as well as added value for customers animportantaspect.Efficientdemandsidemanagementwithaccu-
+could be obtained with a targeted utilization of IoT technologies, rateandflexiblesmartmeteringtechnologiesarekeyfactorstoenable
+whichfinallycanimprovecompetitionintheautomobileindustry smartpowermanagementinsmartgrids,(Mendesetal.,2020).The
+between vehicle manufacturers. The challenging aspect of IoT most important role of IoT technologies in smart grids is to save
+applicationisinthecaseofautonomousvehicles,(Padmajaetal., electricity(Rishavetal.,2019),withefficientdistributionofelectricity,
+2019).Location,directionaswellasaplannedpathoftheauton- Fig.10.ThecollectionofspecificgriddatathroughIoTdevices,and
+omousvehiclecouldbeefficientlysupportedwithIoTingeneralas latertheiranalysiswiththepropersoftware,couldhelpimprovegrid
+wellasthemonitoringofsafetysystemsforautonomousvehicles, reliabilityandefficiency.Theeconomicaspectofelectricitycouldalso
+(Bylykbashi et al., 2020). The most important issue with autono- be improved with IoT due to the already mentioned efficiency
+mous vehicles is the prevention and avoidance of crash vehicle improvement as previously highlighted. Useful benefits could be
+accidents,whichcouldbesolvedwithatargetedutilizationofIoT ensuredbothforcustomersandserviceproviders.
+devices,(Abdouetal.,2019).Smartparkingisalsocurrentlyoneof Ademandsidemanagementinhouseholdsisalsoanimportant
+themostdevelopingIoTareaswhenconsideringthetransportation application area of IoT, (Rahimi et al., 2020). Homes are typically
+sectoringeneralterms.Differentresearcheffortsareprovidedin equipped with different appliances that are becoming more
+thatsensewiththemaingoalbeingtoenablethelateststatusof advanced,creatingthepossibilityforanefficientoperationwiththe
+availableparkingspace,controlandmonitoringofdifferentuseful regulation of IoT, (Tawalbeh et al., 2019). The efficient and smart
+parking spaceinformationin real time,(Luque-Vegaet al., 2019). forecasting of electricity demands for households could also be
+Again,thedevelopmentofsensortechnologies,i.e.smartparking effectively supported by IoT technologies, (Nils et al., 2020). An
+sensorsisveryimportanttoenableefficientandaccurateservice, expectedhigherpenetrationofrenewablesinhouseholdsthrough
+(Perkovi(cid:3)cetal.,2020a).Themaintenanceandfailurepreventionof hybridenergysystemsasanexample(Gaglianoetal.,2019),would
+differentvehiclescouldalsobesupportedbyIoT(Sakietal.,2020), alsorequireasmartoperationstrategythatcouldbeutilizedbyIoT
+whichcouldimprovesecurityandthelifetimeofvehicles.Taking throughintegratedsmartnano-grids,(Kalairetal.,2020).Agrowth
+all the previously addressed into account, IoT technologies could of IoT products and technologies in smart power management is
+completelychange the driving experience and generally improve expectedtoenableaccurateforecastinganddifferentloadstrate-
+thequalityoftransportationsystemsfromvariousaspects. giesinthecaseofrenewablegeneration,(Pawaretal.,2020).The
+elaborated main issues and challenges above just reflect the
+importanceofIoTdevicesinsmartgridsandpowermanagement.
+1.2.7. IoTinsmartgridsandpowermanagement
+Energytransition(Biresseliogluetal.,2020)hasbecomeaneces-
+sityduetothepotentialshortcomingsoffossilfuelresourcesinfuture 1.3. Reviewmethodology
+termsandforthereductionofdifferentpollutionimpactsthatare
+associatedwiththeutilizationofvariousfossil-basedtechnologies, Byaddressingalltheaboveraisedgeneralchallengestowardsan
+(Bielski et al., 2020). Since a more intense implementation of efficient and suitable implementation of IoT technologies, it is
+renewableenergytechnologieshasalreadybeenoccurring,theeffi- evident that more intense research efforts are needed to lead to
+cientandadvancedpowermanagementofelectricgridshasbecome furtheradvancementsinthisdynamicresearchtopic,withastrong
+8 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Fig.10. Conceptofsmartgrids(TuballaandLochinvarAbundo,2016),
+applicationpotential.Asynergyofdifferentresearcheffortsinthe 2. IoTtechnologiesinsustainableenergyandenvironment
+field, mainly focused on the targeted topical area is needed. The
+maincontributionandnoveltyofthisrevieweditorialisinlinewith The rapid development of information technologies caused in
+that.Furthermaintopicalareasareaddressedinthehereinreview onesensethenecessityfor‘‘energydigitalization’‘.Theincreasing
+introductoryeditorial; applicationofrenewableenergytechnologiesanddevelopmentof
+efficientpolicieswillbekeypointsinupcomingdecadestobeable
+- IoT technologies in sustainable energy and environmental to secure global energy transition goals, (Tzankova, 2020). Refer-
+issues, ring to the previous, the development of alternative renewable
+- IoTenabledSmartCity energy sources would also be valuable, (Ni(cid:1)zeti(cid:3)c, 2010). Different
+- E-healtheAmbientassistedlivingsystems energyscenariosoroptionshavebeenconsideredinrecentyears
+- IoTtechnologiesinTransportationandLowCarbonProducts involving a high share of renewables via hybrid energy options
+(Nizetic et al., 2014), or for instance the possible application of
+Themainobjectiveofthehereinpresentedrevieweditorialisto alternative energy sources such as hydrogen technologies in
+addressanddiscussthelatestadvancementsintheabovespecified differentimplementationfields(El-Emametal.,2020),orvehicle
+and key IoT application areas. This review editorial serves as an applications (Matuli(cid:3)c et al., 2019). The focus of the research is to
+introductiontotheVirtualSpecialIssue(VSI)ofJCLEPROdevotedto investigatethetechno-economicviabilityofdifferentenergycon-
+the 4th International Conference on Smartand Sustainable Tech- ceptsinordertosecureasuitablemixofenergytechnologiesthat
+nologies(SplTtech2019)heldon18e21June2019,inBol(Islandof would support an efficientenergy transition. Animprovement in
+Bra(cid:1)c) and Split, at the University of Split, (Croatia). The herein theenergyefficiencyofdifferentrenewableenergytechnologiesis
+presented introductory review editorial was directed to the also important, especially in the case of photovoltaics (Grubi(cid:1)si(cid:3)c-
+selectedandacceptedpublicationsfromtheinternationalconfer- C(cid:1) abo et al., 2019) and wind generation technologies (Marini(cid:3)c-
+ence SpliTech2019 and published papers were divided into four Kragi(cid:3)cetal.,2020),tosecurelargescaleprojects.Theefficiencyof
+main topical areas as already specified above. Overall 38 papers specificproductionprocesses(Giamaetal.,2020),isalsovitaland
+wereinitiallyselectedandinvitedforpotentialinclusionintheVSI certainlyneedstobecarefullyinvestigatedandanalysed,toreduce
+SpliTech2019.Afterconductedpeer-reviewprocess,basedonthe energyintensityandprovideacirculareconomyconceptinspecific
+JCLPprocedures,29ofthemwereselectedforinclusionintheVSI applicationareas,(Xuetal.,2020).Themainresearcheffortsshould
+SpliTech2019.Authorsfromfollowingcountrieshavecontributed be directed towards the upgrade of energy saving technologies
+VSI SpliTech 2019: China, India, Australia, Canada, Italy, Croatia, followed with the increasing utilization of renewable energy
+Serbia, Greece, Poland, Czech Republic, Spain, Cyprus, Turkey, sources,(Kleme(cid:1)setal.,2019).Recenttechnologicalprogressinthe
+Norway,Iran,Germany,Brazil,Malaysia,Pakistan,DubaiandUnited fieldofIoTtechnologieshasenableddifferentopportunitiesforthe
+Kingdom.BesidestheselectedVSISpliTech2019workspublishedin possibleapplicationofIoTconceptsintheenergysectorandenvi-
+theJCLEPRO,theotherrelevantandlatestworksfromtheexisting ronmentalprotectiontosecureasustainabledevelopment.
+literatureinthefieldwerealsoaddressedusingtheScopusdata- Energy and environment are two of the most important ele-
+base, (Scopus, 2020). Based on the conducted review as well as mentsofSmartCitiesandareveryoftencloselyinterrelatedcon-
+selected contributions in this VSI the key issues were identified, cepts.Theavailablechallengesinenergymanagementtouseand
+discussedandhighlightedintheconclusionsection. generate energy in the most efficient manner possible, and the
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 9
+developmentofasustainableenergystructurecantakeadvantage ofpower,whichcouldbesoldtotheenergyprovider.Recentworks
+ofInternetofThings(IoT)andInternetofEnergy(IoE)technologies, intheenergyrelatedfieldarediscussedintheupcomingsectionof
+Fig.11 (Mohammadian, 2019) or in the case of battery charging the paper to highlight IoT implementation areas and clarify the
+protocols(Fachechietal.,2015). benefitsinspecificengineeringapplications.
+Theclimatechangeandglobalwarmingimposeaparadigmshift Inmicrogrids,IoTtechnologiesareintroducedmainlytorealize
+in the exploitation of resources and in more efficient energy asmartsystemabletoautonomouslyscheduleloadsand/ordetect
+resourcemanagement:production,distributionandconsumption, system faults and then improving the efficiency of the energy
+asanintegralpartofthisvision.Theenergytransitionmustpointto consumption. The work (Nayanatara et al., 2018) proposes a
+an infrastructure change at the centerof which there are the so- renewable energy based microgrid management strategy to use
+calledsmartgrids.Withtheadventofsmartgridsandnewtech- renewable energy (solar energy from a photovoltaic panel and
+nologies, the energy industry is inexorably changing. The most windenergyfromawindturbine)effectivelyreducingtheenergy
+interestingaspectisthatsmartgridsensureflexibilityindemand usagefromthepowergrid.IoTtechnologiesareusedtorealizinga
+andallowconsumerstoparticipateintheenergysystem,aspro- smartschedulingalgorithmabletocontrolschedulableloadsasper
+sumers.Smartgridsexploitdigitalandinnovativetechnologiesto theneedsoftheconsumer.Authorsdemonstratethattheproposed
+manageandmonitorthetransportofelectricityfromallsourcesof energymanagementsysteminstalledinaninstitutionenableslow
+generationtopromptly,quicklyandeffectivelysatisfythedemand powerconsumptionandreducedcosts.In(Sujeethetal.,2018)an
+of end users. Smart grids are raising reliability, system resilience IoT-basedautomatedsystemthatconstantlymonitorsthecurrent
+andstability,andminimizingdisruptions,costsandenvironmental and voltage flowing through various branches of a DC microgrid,
+impacts. Some of these new technologies such as Distributed detectsandcontrolsthefaultclearanceprocessduringfaultcon-
+Generation (DG) and microgrids provide energy locally, creating ditionsthathasbeendeveloped.Thesystemiscapabletoalertthe
+largerandmorereliablenetworksandreducingthelineoverload. user during overcurrent faults, ground faults and short circuit
+Energy storage complements the energy from renewable sources faults.Astheoperationofamicrogridisautomated,theneedfor
+while microgrids help reduce any blackouts by providing energy humandecisionmakingiseliminatedandtheminimumreaction
+locally.Unliketheexistingpowersystemofaunidirectionalsystem, time to react to fault conditions is drastically reduced. The work
+whichdistributeselectricitygeneratedfromapowerplanttothe (Majeeetal.,2018)isalsofocusedontheissueoffaultmanagement
+consumer,themicrogridisequippedwithalocalpowersupplyand withinamicrogridexploitingtheIoT.TheconceptofIoTisusedto
+storagesystem centeredon independent distributed power sour- solve the issues of microgrid reconfiguration occurring due to
+ces.Itisanenergynetworkthatcanconnectwithanexistingpower faults, changing energy usage patterns and the inclusion and
+systemasneededandtheself-sufficiencyofenergysuchaselec- removalofdistributedenergyresources.
+tricityandheatbyusingmultipledistributedpowersourcesinde- Smartgridscanautomaticallymonitorenergyflowsandadapt
+pendently.Inadditiontogivingownerstheabilitytogeneratetheir tochangesinenergydemandandsupplyinaflexibleandreal-time
+own energy, microgrids also reduce the dependency on energy manner.Thesesmartsystemscanbenefitfromtechnologiessuchas
+providers by helping reduce costs and avoid peak usage charges. machine learning (Chou et al., 2019) and artificial intelligence
+Themicrogridcanproducerevenueifitweretoproduceasurplus (Bose,2017)toperformpredictiveanalyzesandbetterconfigureall
+Fig.11. IoEarchitecture(Mohammadian,2019).
+10 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+thedevices.Todothis,however,smartgridsrequireadequateand homeownerstolivecomfortablyandmanageenergyconsumption
+equally intelligent measuring instruments. Here, smart metering throughconnecteddevices.Inthisfield,numerousapplicationshave
+toolscouldbeefficientsolution,reachingtheconsumersandsup- been implemented and, despite the common goal of creating an
+pliers, providing themwith information on consumption in real- EnergyManagementSystem(EMS)forhome,thetechniquesusedto
+time.Withsmartmeters,consumerscanadapt-intermsoftime achieveitcanbeverydifferent.Forexample(Lietal.,2018),propose
+andvolume-theirenergyconsumptiontodifferentenergyprices a self-learning home management system that exploits computa-
+during the day, saving on their energy bills by consuming more tional and machine learning technologies, Fig. 14. The proposed
+energyinperiodsoflowerprices.Inthisperspective,thepossibil- systemhasbeenvalidatedbycollectingreal-timepowerconsump-
+itiesgeneratedbyimproveddigitizationandsensorization,utiliz- tiondatafrom aSingapore smarthome.In(Al-Aliet al.,2017), an
+ingtotheInternetofThingssolutions,hasledmanyresearchworks EMS for smart home is realized exploiting off-the-shelf Business
+tofocusonrealizinginnovativeIoT-basedhardwareandsoftware Intelligence(BI)andBigDataanalyticssoftwarepackagestobetter
+solutions. These solutions are capable of providing real-time in- manageenergyconsumptionandmeetconsumerdemands.Inthis
+formationaboutthequalityusageofappliances,dataconsumption, work,theproposedsystemhasbeenvalidatedrealizingacasestudy
+and energy flow information (Morello et al., 2017). present an basedontheuseofHVAC(Heating,VentilationandAirCondition-
+interestingstudyontheroleofadvancedsmartmeteringsystems ing) Units. Smart energysolutions such as those analysed provide
+in the electric grid of the future through the realization and the real-time visibility of consumption and billing data, helping con-
+experimentalvalidationofasmartmeter,Fig.12.Thecosteffective sumerstosaveresources,whileenergyandservicecompaniescan
+three phase smart energy meter, IoTenabled, multi-protocol and better balance production to meet actual demands, reducing po-
+modular, capabletocollect, process, andtransmitseveralelectric tential problems. As the main effect, the energy consumption of
+energiesrelatedinformation,mainlyfocusedonconsumer-side,to familiesisreduced,alsodecreasingourimpactonclimatechange.
+anysmartenergycontrolsystemwasproposedby(Avancinietal., In addition to buildings and homes, industrial facilities and
+2018),Fig.13. enterprisesalsodealwiththeadoptionofinnovativeenergyeffi-
+SeveralsolutionsarealsobasedontheuseoftheArduinoplat- ciency solutions to optimize resource consumption and reduce
+form(Arduino,2020)andafewsensorsfortherealizationoflow- costs,buttheyneedtoevaluateahighnumberoffactorstoadopt
+costsmartmeters(Pateletal.,2019)orforinstanceArduinobased thebestenergyefficiencymeasures.Thework(Suciuetal.,2019)
+solutions(Sahaetal.,2018).Althoughsmartgridsarefundamental proposes an IoTand Cloud-based energy monitoring and simula-
+elementswhenitcomestoenergysustainability,itisreductiveto tion platform to help companies monitor energy production and
+identify the concept of smart energy only in them. In fact, smart consumption,forecasttheenergyproductionpotentialandsimu-
+buildingsalsoplayacrucialrole.Theenergyefficiencyofbuilding latetheeconomicefficiencyformultipleinvestmentscenarios.
+structuresusingsmarttechnologiesprovidesanincreasinglyintel- Theconceptofsustainabilityisincreasinglylinkedtothatofcir-
+ligentmanagementofresources,avoidingwaste,improvingthelife culareconomy,whichisnowconsideredthekeytothisnewpara-
+qualityofpeopleandmakingthebuildingsthemselvesmoreresil- digm.Unlikethetraditionallineareconomy,basedontheso-called
+ient in the face of current climate changes. Thanks to building “take-make-dispose”scheme,which provides fora complete utili-
+automation and IoT not only individual buildings but also entire zation of resources, the circular economy model promotes repar-
+neighborhoodscanbecontrolledremotelyfromanenergypointof ability,durabilityandrecyclability.Inpractice,thecirculareconomy
+viewandintermsofthesecurity.Forexample,itispossibletocarry aims to minimize waste through reuse, repair, refurbishment and
+outchecks onairpollutionremotely(Becnel etal.,2019),monitor recyclingof existingmaterials and products,focusing attentionon
+fire systems (Cavalera et al., 2019) or, furthermore, immediately designsthatlastovertime.Inthissystem,theIoTisconsideredan
+detectanyintrusionbyoutsiders(Dasarietal.,2019). essentialelement,asitoffersnewopportunitiesinvarioussectors,
+Smartbuildingsareabletomonitoractualenergyneeds,opti- such as manufacturing, energy and public services, infrastructure,
+mizing consumption and therefore counting not only on green logistics, waste management, fishing and agriculture. Especially in
+energy,butalsoonahighdegreeofenergyefficiency.Thevirtuous the field of waste management, research has made great strides
+process thatpasses fromsmartenergyallowstocounton Nearly throughthecreationofinnovativesystemscapableofconcretizing
+(Net)ZeroEnergyBuilding(NZEB)(RushikeshBabuandVyjayanthi, theconceptofdigitaleconomy.Inthework(DeFazioetal.,2019)the
+2017)andonawiderenergysustainability. activities related to the research project called POIROT were dis-
+The most common use of IoT for energy and environmental cussed,whichexploitinnovativehardwareandsoftwaretechnolo-
+sustainability is in the home automation systems, which allow gies,aimingtorealizeaplatformfortheinertizationandtraceability
+oforganicwaste.Indetail,themainprojectobjectiveistorealizea
+targetedtransformation,throughtechnologicalprocesses,regarding
+the organic fraction of urban solid waste, into inert, odorless and
+sanitizedmaterial,identifiedandtracedtobeemployedforbuilding
+applicationsorasthermalacousticinsulator,Fig.15.
+Severalworksproposesolutionstosupportwastemanagement
+at a domestic level, simplifying the waste separation to avoid
+problems due to improper waste management including hazards
+forhumanhealthorenvironmentalissues.Forexample(Al-Masri
+et al., 2018), propose a server-less IoT architecture for smart
+wastemanagementsystemsabletoidentifywastematerialsprior
+totheseparationprocess.Thisallowsreducingcostsrelatedtothe
+wasteseparationprocessfromhazardousmaterialssuchaspaintor
+batteries(Kumaretal.,2017).proposeahygienicelectronicsystem
+ofwastesegregation.Theproposedapproacheasesthesegregation
+of wastes at source level and thereby reducing the human inter-
+actionandcurbsthepollutioncausedbyimpropersegregationand
+Fig.12. Proposedsmartpowermeter,(Morelloetal.,2017). managementofwastesatsourcelevel.
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 11
+Fig.13. PhotoofcreatedIoTenabledsmartenergymeter(Avancinietal.,2018).
+Theproposedandtestedcontrolsolutionshowedtobeefficient
+withrespecttotheconsideredapplication,sincecompressionrates
+weresatisfactoryand theproposed concept showedpotentialfor
+other applications. The demand side management of a hybrid
+rooftop photovoltaic systemwas discussedin (Kalairetal., 2020)
+wherethesystemwasintegratedinasmartNanogrid.Thesmart
+monitoringsystemwaspresentedindetailforresidentialpurposes,
+togetherwitha developedexperimentalsetupthatcontainsspe-
+cific electronic components, Fig.17. The developed controller can
+automatically detect any frequencyand voltage changes and link
+them with specific loading patterns. The proposed solution
+demonstratedefficiencysincethepowersupplyreliabilitywasup
+to97%.Theproposedhomemanagementsystemcouldleadtothe
+reductionofcarbonfootprintsinthecaseofresidentialfacilities.
+A machine learning-based smart home energy system was
+investigated in (Machorro-Cano et al., 2020), using big datawith
+thesupportofIoT.Thehomeautomatizationsystemwascoupled
+withIoTdevicesthatenabledenergysavingsforthegivenpurpose.
+A machine learning algorithm was used to study user behaviour
+Fig.14. Self-learninghomemanagementsystemarchitecture(Lietal.,2018).
+andwaslaterlinkedwithenergyconsumption,i.e.,withthepro-
+posed approach, specific user patterns were revealed. The devel-
+opedmonitoringsystem,Fig.18allowedspecificrecommendations
+The role ofIoTsupportedsmart meters was considered in the toleadtowardsanimprovementofenergyefficiencyinhouseholds,
+work (Mendes et al., 2020) to address different demand side whichweresomehowpersonalizedforthespecifichousehold.The
+management scenarios. The novel and adaptive compression system was successfully validated via the provided case study
+mechanism was proposed in the same work to improve the where the main strength of the conducted research was the
+communication infrastructure for the given case, i.e. complete personalized approach for the specific household. A step further
+controllingstructure,Fig.16.Theproposedmechanismcanreduce couldbetonetworkandbalanceotherhouseholdsinthespecific
+thequantityofdatasenttoutilitycompaniesandcanautomatize buildingfacility.TheimportanceoftheBIM(BuildingInformation
+energyconsumptionmanagement. Modelling) systems was discussed and analysed in the review
+12 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Fig.15. Architectureofproposedidentificationandtraceabilitysystem,(DeFazioetal.,2019).
+Fig.16. Proposedgeneralcontrollingstructure(Mendesetal.,2020).
+paper (Pantelia et al., 2020). An overview of the recent works
+focused on the building smartoperationwas elaborated in detail
+with use of IoT technologies. In the same work the renovation
+projects were also tackled as well as interoperability problems
+causedbydatasharingwithrespecttotheBIMrelatedapplications.
+An application of smart wearable sensors was reported in the
+study (Pivac et al., 2019) that were used for the monitoring of
+thermal comfort data as well as for the modelling of occupant
+metabolicresponseinofficebuildings.ThesmartandIoTsupported
+monitoringsystemallowedthecollectionofusefuldatafromthe
+wearablesensors.Thereadingshelpedforthebetterunderstanding
+of thermal comfort issues in office buildings from a personalized
+thermalcomfortpointoftheview.Theexperimentalreadingswere
+comparedwithasubjectiveresponsefromtheoccupants,wherea
+successfulmodellingofpersonalmetabolicresponseswasenabled
+with an accuracy of over 90%. Industrial facilities could also be
+improvedwiththeimplementationofIoTtechnologiesasalready
+brieflyaddressedintheintroductionsection.Legislationsupportis
+importanttoensuresmartelectricityutilizationinthehouseholds,
+especially from the perspective of the smart city concept. Study
+Fig.17. Experimental setup with pre-processing unit (a) and smart controller (b) (Grycan,2020)discussedlegislativeforelectricityconsumptionfor
+(Kalairetal.,2020).
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 13
+Fig.18. ConceptofproposedIoTsupportedsmarthomesystem(Machorro-Canoetal.,2020).
+the case of the Polish residential sector. Lack of legislative was wasproposedtobridgethementionedgapandsecureanefficient
+detected and mainly in the smart metering solutions that are pathway for the improvement of energy efficiency in IoT based
+slowing down development of the smart infrastructure. There is lighting smart and green highwaysystems. The necessity for the
+necessity for the new regulations to ensure adaptability to the environmental suitability of the proposed smart lighting system
+noveldesiredgoalstowardssmartcities.Developmentofthenovel wasalsoraisedinthesamestudyandnotedasanimportantfactor
+business models is important to ensure smart driven business in that needs to be further investigated. Energy harvesting is also
+theenergysector.Thecaseofthesmartenergydrivenmodelwas interestingtopicandcloselylinkedwiththepossibleapplicationof
+elaborated in (Chasin et al., 2020) as well as implications and IoT technologies, especially since IoT devices require energy for
+necessary changes in the energy sector. Eight smart business their operation. An underwater piezoelectric energy harvesting
+modelswerediscussedwithintroductionofdesiredchanges.Pre- systemwasdiscussedin(Kimetal.,2020)forthecaseofautono-
+sented knowledge and development business scenarios could be mous IoT sensor production. The proposed solution was fully
+usefulguidelineforenergyutilitycompanies.ThepossibilityofIoT designed and provided in the form of a prototype and demon-
+basedsmartsolutionswasdiscussedinthereviewpaper(Bagdadee stratedanautonomousenergysourcethatcouldbefurtherlinked
+etal.,2020),wherethefocusoftheworkwasonIoT-basedenergy with IoT devices. The harvesting of waste energy could also be
+management systems in the industry. IoT based energy manage- consideredwiththeimplementationofIoTdevices.Thepossibility
+mentsystemswereelaboratedforindustrialapplicationsaswellas forwasteenergyharvestingsupportedbyIoTwasaddressedand
+for smart energy planning in industrial facilities. The energy discussed in (Kausmallyet al., 2020) for the case of an industrial
+management systems in factories were addressed from a chimney. The complete design procedure was reported, i.e. the
+perspectiveofenergydemandandsupply.ThefocusofIoTappli- conceptual approach for the waste heat recovery where the pro-
+cationscouldalsobeusedonalevelofsingleormultipledevicesor totype was successfully developed and demonstrated. Energy
+appliances.Theschedulingandoptimalpowermanagementofthe storage systems are also interesting for the application of IoT
+transformerswasanalysedanddiscussedin(Saraj(cid:1)cevetal.,2020). technologies.Arenewableenergystoragesystemwasanalysedin
+TheBayesianapproachwasappliedtodetectanoptimalcontrolling (Sathishkumar and Karthikeyan, 2020), where a power manage-
+strategy to ensure benefits for power utilitycompanies. The pro- mentstrategywassupportedbyIoT.Theoptimaldesignofahybrid
+posedanddemonstratedmodelcanpredictthetransformerhealth energysystemcoupledwithenergystoragewasdiscussedbasedon
+indexwithanaccuracyofabout90%.Thesolutioncouldbeapplied solarandwindrenewableenergyresources.
+onthefleetofthepowertransformerswherewiththeapplication TheIoTapproachallowssuccessfulmonitoringandmanagingof
+ofIoTtechnologies,furthersavingscouldbeensuredforthespecific complex energy systems. The main advantage of IoT for the
+application. The efficiency of the lighting system could also be consideredapplicationistheenergyefficiencyimprovement,bet-
+improvedwithIoTdevices.Thework(Muktaetal.,2020)discussed tersynchronizationofdifferentenergysystemsandimprovement
+and reviewedthe possible application of IoT technologies for the oftheeconomicaspect.AsignificantdevelopmentofIoTproducts
+energy efficiency improvement of highway lighting systems. The wouldleadtoarapidincreaseofbigdatathatareusuallyprocessed
+resultsoftheconductedreviewrevealedthatthedevelopmentof by data centres. The energy load of data centres is increased, so
+smartandIoTsupportedhighwaylightingsystemslackasystem- efficiencyimprovementsarenecessaryinthecaseofdatacentresto
+aticapproach,qualityandcomprehensiveness.Possibleframework minimize load power as well as utilization of other limited
+14 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+resources. The issue related to data centres, power demands and andlowcostsensorsweredevelopedandsuccessfullyappliedfor
+thepossibleapplicationofIoTtechnologiesinordertoreducethe thegivenpurpose.Theproposedprototypeofthedevicewaspre-
+mentionedunwantedimpactswasdiscussedin(Kauretal.,2020). sented and was used for the mechanical treatmentof waste. The
+Theauthorsproposedaspecificframeworkinthesameworkthatis developed IoT supported framework for the identification and
+applicable for data centres and could lead to efficiency improve- traceabilityofproductswaspresentedinFig.20.
+ment of over 27% (proposed approach was based on empirical The implementation of IoT technologies in a circular supply
+evaluations). chainframeworkwaselaboratedin(Garrido-Hidalgoetal.,2020)
+IoT technologies could also be successfully implemented in a for the waste management of Li-ion battery packs from used
+circulareconomyconceptasabovealreadymentioned,especiallyin electric vehicles. A novel and IoT supported supply chain frame-
+smartwastemanagementsystemsandenvironmentprotectionas work was proposed, which is compatible with the information
+already mentioned. The role of IoT technologies in e-waste was infrastructure.Theapproachcouldbefurtherusedfortherecovery
+discussed in (Kang et al., 2020) for the case of the Malaysian processofLi-ionbatteries.Duetoaplannedincreaseinelectriccar
+recyclingsector.Anovelsmartwastecollectionboxwasdesigned fleetsglobally,intensiveresearchwasalsodirectedforthepotential
+together with a user friendly mobile application, Fig. 19. The usageofIoTtechnologiesforthesmartchargingofelectricvehicles.
+concept was successfully demonstrated. The developed solution Real time IoT based forecasting applications were proposed in
+could be further optimized and fitted for possible market imple- (Savarietal.,2020)foramoreefficientchargingprocessofelectric
+mentation. A discussion of possible IoT framework, based on the vehicles. The application allowed better scheduling management
+developedIoTsupportedsmarte-wastebinwaselaboratedforthe where the waiting time was minimized, which improved the
+SunwaycityinMalaysia.Theproposedapproachcouldbeahelpful overallchargingeconomyaswellaschargingtime.
+guidelineforothercities. Theremaining issuewith theproposed Environmentalprotectionandsustainablebehaviourcouldalso
+concept is its economic feasibility that should be further investi- beimprovedwiththetargetedapplicationofIoTtechnologies.In
+gatedviaadetailedusersurvey,detectinguserwillingnessforthe thestudy(Irizar-Arrietaetal.,2020),long-termfieldinvestigation
+acceptanceoftheproposedconcept.TheinnovativeIoTsupported was presented with the main goal being to investigate how IoT
+platform for the transformation of organic waste into inert and technologiescouldhelpensurethesustainablebehaviourofusers
+sterilizedmaterialwasreportedin(Ferrarietal.,2020).Thespecific in office building facilities. The results of the conducted directed
+Arduino-electronicplatformwasdevelopedtocontrolprocesspa- study could lead to the improvement of energy efficiency at
+rametersandlinkthemwithuserresponsesandtraceability.Novel workplaceswithIoTutilizationindifferentaspects.Theimpactof
+IoT technologies on a sustainable perspective and society was
+addressed in (Mahmood et al., 2020). The study was focused on
+addressingtheimpactsofhomesystemsontheenvironmentand
+sustainabilityingeneral.Asurveywasconductedforspecificusers
+andtheinvestigationshowedthattheimpactofhomeautomati-
+zation on sustainabilityand environment is significant. However,
+theenvironmentaleffectsshouldbediscussedinmoredetailand
+quantified to get realistic indicators that would later be used for
+sustainableplanning.
+BesidestheobviouspotentialimpactofIoTtechnologiestothe
+environment, IoT products could on the other side be used for
+environmentalprotection.Thedesignandconceptofasystematic
+frameworkforthemassivedeploymentofIoT-basedPM(Particu-
+lateMatter)sensingdeviceswaselaboratedin(Chenetal.,2020c).
+The proposed framework was applied for the monitoring of air
+quality. Compressed spatiotemporal data were used and that
+allowed for the efficiency improvementof air quality monitoring
+systems,energysavingsandimproveddatasavingratio.Inorderto
+improvetheinteroperabilitybetweendifferentsensornetworks,as
+wellasdatasources,anovelIoTdataframeworkwasproposedin
+(Duyetal.,2019).Theproposedanalyticalframeworkwasusedasa
+useful tool to improve the data management of environmental
+monitoring systems. The developed framework enabled a more
+efficient utilization of the gathered environmental data and
+improvedknowledge extractionlater.IoTplatformscouldalsobe
+used for environmental planning as it was demonstrated in the
+study (Wu et al., 2019). In the conducted research, a building in-
+formationmodelwasintegratedsuccessfullywithIoTandusedfor
+environmental planning for environmental protection reasons.
+Moreover,thesystemwasusedforenvironmentalprotectionina
+specific construction project (tunnel utility). Different impacts to
+theenvironmentweremonitoredduringtheconstructionproject
+suchasdustfallingcontrol,temperaturemonitoring,visualmoni-
+toring etc. The overall findings directed that the proposed IoT
+supported system showed to be effective for the considered
+application. The application of an IoT based data logger was pre-
+sentedin(Mishraetal.,2020),forthemonitoringofequipmentfor
+Fig.19. Prototypeofsmarte-wastebin(Kangetal.,2020). environmental protection. The developed monitoring system
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 15
+Fig.20. ConceptualIoTsupportedframeworkforwasteprocessing(Ferrarietal.,2020).
+ensuredaccurateandreliableworkoftheequipmentusedforthe serious and an important issue that should be carefully
+environmentalprotection.Potentialequipmentfaultsweredetec- considered and investigated when discussing specific IoTcon-
+tedin advance(preventionofseriousfailure),theequipmenten- cepts. Moreover, an integral techno-economic-environmental
+ergy consumption was rationalized and scheduled maintenance conceptual approach (TEE) should be applied when consid-
+wasenabled.Theaccuratepredictionofparticulatematter(PM2.5) eringanIoTapplicationforspecificcases,
+concentrationsisveryimportant,especiallyinurbanareas.Usually, - The main advantages (benefits) of IoT technologies enable a
+there is a network of sensors used for the monitoring of PM2.5 personalizedapproachinspecificengineeringapplicationssuch
+concentrationsbuttheyarenotwellconnectedandharmonizedin as smart homes (level of single user), which lead to different
+some situations, which is vital. An IoT framework was used, possibilitiesforbothenergyandfundsavings,
+together with a fusion technique, to improve the data utilization - ThereissignificantpotentialinIoTtechnologiesforenvironmental
+from the PM measuring stations in the work (Lin et al., 2020). A protection; however, rare studies have been conducted in that
+novel multi-sensor space-time data fusion framework was pro- sense.Moreintenseresearcheffortsareneededinthatdirectionto
+posedthatensuredbetteraccuracy,i.e.amorereliablemodelwas beabletoutilizeallthepotentialbenefitsofIoTtechnologiesand
+ensuredwith a higher spatial-temporal resolution. Regarding the improvetheenvironmentalsuitabilityofIoTinonesense,
+current progress of specific application areas in IoT devices for - Thewastemanagementandcirculareconomyconceptcouldbe
+environmental protection, it can be conducted that the studies wellsupportedwithIoTtechnologies,wherethemainissueis
+were mostly focused on air quality monitoring. Water-Energy- thedevelopmentofintegralandconceptualsmartwasteman-
+Carbon(WEC)nexuswasanalysedindetailforEU27countries,in agementframeworksthatwouldefficientlysupportthecircular
+the recent work (Wang et al., 2020) by implementation of the economyconceptindifferenteconomies.
+Environmental Input-Output model (EIO). Study was important
+sincecontributedtothebetterunderstandingoftheenvironmental
+performanceinEU27andcouldserveasimportantbasisforfuture 3. IoTenabledsmartcity
+considerationsorplanningforpolicymakers.
+Basedonthepreviouslyconductedoverviewoflatestresearch ToenabletheIoT-basedsmartcityconcept,Fig.21,isdescribed
+findingsrelatedtotheapplicationofIoTtechnologiesinsustainable intheformofatreethatcanbeconsideredtofurtherunderstand
+energy and environment, the further main findings could be what the possible applications or functionalities the IoT-enabled
+highlighted: Smart City canprovide. The branches of the given tree are dedi-
+cated toapplications, whereinthe leaves of the given branch are
+- IoTtechnologiesareintensivelyinvestigatedfromaperspective dedicatedtothefunctionalitiesthateachapplicationcanhave.As
+of smart monitoring in different devices or engineering com- themoreleavesabranchcontains,themorefunctionalitiesithas.
+ponents that are associated with energy applications. Better Fig.16 represents the different functionalities of a smart parking
+usage and networking of various collected data could lead to systemforinstance.Furtheron,forexample,smarthomescanhave
+noticeable efficiency improvements, energy savings, improved manyfunctionalities:smartmetering(electricity,waterconsump-
+safety, improved equipment maintenance and finally the gen- tion,gasmonitoring),smartlockcontrol,smartroomtemperature
+eral improved operation of devices in different engineering monitoring, smart kitchensand otherappliances, etc.The rootof
+applications, thegiventree(enablerandinformationsourceofthesesystems)is
+- The economic aspect associated with the application of IoT dedicatedtothehardwarewhosesystemusestoaccomplishanyof
+technologies was not addressed in most studies, which is a the givenpossible functionalities. This section considers an over-
+significantdrawback, viewof themostimportanthardwaretechnologies,andsoftware
+- Theenvironmentalimpactsassociatedwiththeimplementation architectures that can enable and present functionalities for
+ofIoTtechnologiesforspecificusewerenotaddressed,whichis differentapplicationsinthesmartcityconcept.
+16 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+thedatarateissacrificed,justsuitableforsensorialapplication.In
+these cases, sensor devices send several data packets containing
+onlythesensedinformation.
+When considering LPWANs, the competitive technologies are
+alsoorthogonalintermsofdifferentapplicationpointsofview.A
+goodoverviewofthesetechnologiesisgiveninFig.25andFig.26,
+alsobyprovidingthecostsforeachofthem.Inaddition,Figs.25and
+26givethetechnologicalcomparisonbetweeneachofthem,sothe
+deployerscanunderstandwhichtechnologybetterfitswhichneed.
+These mostly refer to which kind of infrastructure is required to
+matchneeds,whatdistancecanbecovered,whattheoverallsystem
+latencyiswhenconsideringthenumberofnodes,etc.
+3.3. Powermanagement
+Thebasicmechanismthatallowsforthelonglifetimeofbattery-
+operateddevices(uptoacoupleofyears)istokeepthedevicein
+low-power state during inactive periods. IoT devices, especially
+battery-operatedones,spendonlyasmallfractionoftimewithin
+Fig.21. GeneralizedconceptofIoTenabledSmartCityArchitecture(Perkovi(cid:3)cetal., active state, in which MCU performs sensor readings, and com-
+2020b). municates data over wireless channels using a radio peripheral,
+whileduringinactiveperiods, theMCUalongwithothercompo-
+nentsiskeptindeep-sleepstate.Suchaperiodbetweentwoactive
+3.1. Hardwareoverviewandstate-of-the-art states, i.e. active - sleep - active is referred to as a duty cycle.
+Intuitively,toincreasethelifetimeofanIoTdevice,itisnecessaryto
+To enable Smart Cities, an infrastructure that uses sensing minimizeitsconsumptionduringinactiveperiods.Logically,within
+hardwareactingasaninformationsourceisofcrucialimportance. inactiveperiods,itisnecessarytoplaceallactivecomponentsinto
+Asthissensinghardwareislocatedinremoteareas,oftenwithout sleep. Some components, such as sensors, and radio modules,
+access to an electrical network, an almost zero-energy use is alreadycomewithlibrariesthatsupportlow-powerconsumption
+needed and therefore can prolong battery lifetime and possibly insleepstate(around1uApercomponentorless).Usingbuilt-in
+enable self-powering through ambient power sources, e.g. solar functions, the MCU triggers external components to enter sleep
+cells.Thisiscrucialforimprovingtheusabilityofthewholesystem once the sensor reading and radio transmission is done. On the
+as a battery replacement in these circumstances is difficult, otherhand,theMCUalsohastobekeptindeep-sleepduringthe
+expensive and a time-consuming activity. To understand power sleepperiod.However,totriggertheMCUwakingfromdeep-sleep,
+consumptionissues,anoverviewofstate-of-the-arttechnologiesto someformofinterrupthastobesenttoit.Thisisusuallyaccom-
+buildthehardwareisprovided. plished with some form of low-power timer. Depending on the
+Astandardsensingnode,presentedinFig.22isconsistedofa MCUthatisusedintheimplementationofanIoTdevice,thereare
+sensor component that delivers the sensed information to a mi- manywaystoaccomplishthis.
+crocontrollerunit(MCU)foritsfurtherprocessing.Toreducepower AnMCUsuchasATmega328P,foundonArduinoboards,comes
+needs, the node is usually equipped with a related power man- with a built-in Watchdog timer (WDT), with consumption up to
+agementunit,whilethereisagivenpowersource.OncetheMCU couple of Ua, (ATmega328P, 2020). Some external timers, like
+acquiresthedatafromthesensor,itgivesdatatoaradiounitthat TPL5010 come with Watchdog functionalities, however, with nA
+usesanantennatotransmitthedataoverawirelesschannel.Inthe scaleconsumption(TPL5010,2020).Unfortunately,themaximum
+next sections, the components are described in depth by refer- time WDTcan hold the MCU in low-power mode is around 8 s
+encingtherelevantliterature,whilethespecificoriginalworkwas
+(Tutorial - Atmega328p, 2020). One way to increase sleep time
+done in current technology investigations that can enable these usingWDTwouldrequirealoopthatperiodicallytriggerstheMCU
+functionalities. waking up every 8 s, after which the MCU immediately enters
+Sensors vary in terms of design and functionalities. A good deep-sleep. Within deep-sleep period, the consumption of MCU
+overview of sensing technologies, and its power consumption is andWDTisonlyafewuA.ToincreasesleeptimeforATmega328P,
+given in Fig. 23. It can be noticed that each of them has its own an external RTC clock could be employed, such as a cheap and
+powerconsumptionpattern,wherethe morefunctionalitiesthey preciseRS3231RTCclock,with±2ppmstabilityand1uAofcon-
+have,themoreconsumptionwillappear.Usingitinanoptimalway sumption(Datasheet-RTC3231,2020).OtherMCUs,suchasSTM32
+isofthehighestimportanceforreducingbatterylifetime. orSAMD21,alreadycomewithbuilt-inRTCclocksthatcanbeused
+to trigger an alarm for waking up from deep sleep (Libraries -
+3.2. EfficientIoTradiounits Arduino low-power, 2020), (STM32, 2020). All these components
+(MCU, sensor, RTC clock, radio peripheral, voltage regulators, ca-
+Toachievedatatransmission,acriticalpartistodeliverthedata pacitors, etc.), although in low-power mode, combined may
+in an efficient manner. For this, the major idea and enabler is to consumetenstoevencoupleofhundredofuAwhilebeingplaced
+providedatalinksbetweensensingnodesandreceivingstationsfor indeep-sleep.Moreover,itmayhappenthatsomeboardsequipped
+transmitted data. To satisfy different applications and related with components that adopt low-power modes have a hardware
+functionalities,itisimportantthattheseradioscantimelytransmit problem that prevent them from achieving low deep-sleep cur-
+the data over larger distances while consuming less energy. The rents, such as found in MKRWAN1300 (Arduino LoRa with
+majorcompetitorsinthisareaareLow-PowerWideAreaNetworks SAMD21)and(MKRWAN1300,2020).
+(LPWAN) with their technology competitors: LoRa, NB-IoT and Toreduceevenmoreconsumptionregardingallcomponents,it
+Sigfox.AccordingtoFig.24LPWANcansatisfylongrangeswherein is suggested to use an external timer component that will
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 17
+Fig.22. BlockschemeofstandardsensingnodearchitectureinIoTenabledSmartCity.
+Fig.23. Mostpopularsensorsandtheirpowerrequirementsinactiveandpower-down(i.e.sleepmode,Perkovi(cid:3)cetal.,2020b).
+allowingforthedurationofsleepmodetobeupto2h(TPL5110,
+2020). Within the sleep period, the TPL5110 simply cuts-off po-
+wer from other components leaving overall consumption to be
+equaltotheconsumptionofthetimeronly.SincetheTPL5110islow
+powerbynature,theoverallconsumptionfallstoonly50nA.The
+drawbackofsuchasolutionisthattheMCUisnolongerindeep-
+sleepbutisinsteadpoweredoff,whichmeansthatpossiblevari-
+ablesthatwereheldinvolatilememoryduringdeep-sleepwillnot
+be available to the MCU when it wakes up. For this reason, it is
+suggestedtouseEEPROMorflashmemorytowritethevariables
+beforecuttingoffpowerfromtheMCU.ATega328Pmayusebuilt-
+inEEPROM,whileSTM32orSAMD21canuseflashmemoryorRTC
+backup RAM (Flash storage, 2020). The RS3231 RTC clock has an
+EEPROMthatcanbeusedforsavingvariables.Themaindrawback
+of EEPROM and flash memory is the limited number of writes
+Fig.24. Overviewoftechnologiesthatcansatisfydifferentusagescenarios(Mekki (around 10,000), hence some external EEPROM or flash memory
+etal.,2019).
+maybeusedwithalargernumberofwritings,oreitheranexternal
+specializedchiplikeATECC508A(ATECC508A,2020)thatsupports
+securestorage(ofkeyforexample)(ATEC).Itmustbenotedthat
+completelycut-offpowerforpredefinedperiods.TheTPL5110isa whentheMCUwakesfromdeep-sleep,thecoderunsfromwhereit
+lowpowertimerwhereanalarmclockisregulatedwithresistors, leftoff,whichusuallyrequiresacoupleofmS.Ontheotherhand,
+18 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Fig.25. OverviewofperformancesanddeploymentcostsfordifferentLPWANtechnologies(Mekkietal.,2019).
+3.4. MicrocontrollersforIoT:scoutingandcomparison
+TheMicrocontroller(MCUhereafter)isthecoreofanyInternet
+ofThings(IoT)deviceandembeddedsystem.Indeed,itsroleisto
+coordinate, according to a specific pre-programmed logic, all the
+peripheralsoftheIoTnodethusprovidingsensing,actuation,and
+connectivityinanaslowpowermodeaspossible.Inotherwords,
+theMCUsetsthe“smart-ability”ofacertainobjectinrelationwith
+its cost, computational capability, power consumption, memory,
+communication interfaces and other features to accurately select
+during the designphase. It is worth highlighting that a “perfect”
+microcontrollerdoes notexist, but just the mostsuitable one for
+thespecificapplication.Forthisreason,theroleofthedesignerin
+selectingthemicrocontrollerforaspecificIoTapplicationisnever
+Fig.26. ProsandconsforeachofLPWANcompetitors(Mekkietal.,2019). simple.Some“universal”microcontrollerkeyfeaturesareusefulto
+drive the designer towards the right choice according to the re-
+poweringtheMCUwithanexternaltimersuchasTPL5110requires quirementsoftheconsideredIoTapplication.
+a fresh restart of code, which in some scenarios may indicate Theproposedanalysisaimsatcomparingsomemicrocontrollers
+runningthebootloader.ForATmega328P,bydefaultitmaytakeup as potentially useful for the IoT by considering the following
+to 2 s for the bootloader to start (Tutorial - Low-power nodes, objectiveparameters.
+2020). Hence, to reduce consumption, it is suggested to either
+completely wipe out the bootloader or flash faster bootloader (cid:1) RegisterMemoryBits:Thisparameterreferstothenumberof
+(Bootloader, 2020). It must be mentioned that battery capacity, internalregisterbitsandbuffer.ThehigherthenumberofMCU
+along with its input voltage may vary during sensor lifetime or bits,thehigherthenumberofoperationsthattheMCUitselfcan
+couldbelargerthantheoperatingvoltageofsomecomponents.A sustain. This parameter sets different families of
+goodqualityvoltageregulatorthatmaydeliverenoughcurrenttoa Microcontrollers.
+sensordevicewhileconsumingitselfsmallcurrentisrequired.For (cid:1) MaximumClockFrequency:isthemaximumfrequencyonthe
+example, MCP1700 (MCP1700, 2020) is a family of CMOS low internal/external clock of the microcontroller. It is useful
+dropout(LDO)voltageregulatorsthatcandeliverupto250mAof becauseitsetsthenumberofoperationsofanMCUinasingle
+currentwhileconsumingonly1.6mA,withinputoperatingranging timeunit.
+from2.3Vto6.0V,makingitidealforbatteryoperateddevices.
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 19
+(cid:1) RAM:RAMisthevolatilememoryofanMCUwhichisusefulfor manufacturer descriptions, which is useful to understand the
+performing quick operations, actions or data buffering. The differentcategories,a tablesummarizingtheirmainfeatures will
+absenceofpoweringresetsthiskindofmemory beprovided.Beinglow-power,“No-Operatingsystem”deviceswill
+(cid:1) FlashType:ItisthestaticmemoryofanMCUthatretainsdata beconsideredinthiscomparison,Fig.27.
+intheabsenceofpower.Thequalityofthismemoryintermsof
+writingoperationfiguresandwriting/readingspeeddetermines 3.4.1. TexasinstrumentsGseriesMSP430G2x13andMSP430G2x53
+aconsistentpartofthemicrocontrollercost. The MSP430G2x13 and MSP430G2x53 series are ultra-low-
+(cid:1) NumberandTypeofGPIOs:GPIOistheacronymofageneral- power microcontrollers with built-in 16-bit timers, up to 24 I/O
+purposeinput/outputinterface.Itisreferredtoasthepresence capacitive-touchenabledpins,aversatileanalogcomparator,and
+of pins that can be configured to act as the analog or digital built-in communication capability using a universal serial
+input/outputoftheMCU.ThehigherthenumberofMCUGPIOs, communication interface. In addition, the MSP430G2x53 family
+thehigher thenumberofexternal devices(sensors,actuators, membershavea10-bitanalog-to-digital(A/D)converter.Thisisan
+transceivers)thatcanbecontrolled. entry-levelmicrocontrollerusefulforgeneralpurposelow-power
+(cid:1) SerialBus:PresenceofanSPI/I2Cbusforcommunication and low-cost IoT applications. The availability of a development
+(cid:1) IntegratedWirelessConnectivityInterfaces:Thiskeyfeature board for the MSP43G2553 MCU, called “Launchpad”, makes the
+isusefulintheIoTtowirelesslyconnecttheMCUbyusingWi-Fi, designeasyforsimpleIoTsensingnodes.
+Ethernet,orBLEinterfaces.
+(cid:1) PowerConsumption:PowerConsumptionisthemostimpor- 3.4.2. TexasinstrumentsFseriesMSP430F552x
+tant aspect of IoT-oriented Microcontrollers. This parameter The MSP430F5529, MSP430F5527, MSP430F5525, and
+shouldbeoptimizedbycontrollingtheActivetimeandSleeping MSP430F5521 microcontrollers have an integrated USB and PHY
+timeoftheMCUaccordingtothespecificapplication. supporting USB 2.0, four 16-bit timers, a high-performance 12-bit
+(cid:1) Development board/Launchpad: The availability of a devel- analog-to-digitalconverter(ADC),twoUSCIs,ahardwaremultiplier,
+opment board is helpful during the design phase to test the DMA,anRTCmodulewithalarmcapabilities,and63I/Opins.The
+targetedIoTsolutionbeforerealizingaprototype.Providingthis MSP430F5528, MSP430F5526, MSP430F5524, and MSP430F5522
+boardisanaddedvalueforMCUs. microcontrollersincludetheseperipheralsbuthave47I/Opins.This
+(cid:1) Arduino IDE Programming Interface: Multi-brand MCUs MCUfamilyiscompatiblewithlow-powerhi-performanceIoTap-
+implement an Arduino-compatible convergence programming plicationswherehi-speedcommunication,portavailability,andUSB
+language useful to simplify the programming operations and connectivity is required. Also in this case, the availability of a
+modularimplementationofIoTapplications. “Launchpad”,fortheMSP430F5529MCUmakesthedesigneasyfor
+(cid:1) Cost: IoT applications are often cost-sensitive. In many cases, ratheradvancedandlow-costIoTsmartnodes.
+functionalitiescouldnotbeimplementedtomaintainalow-cost
+IoT system design. Generally, both MCUs and the presence of 3.4.3. TexasinstrumentsFRseriesMSP430FR572xand
+specificsensorsdeterminethecostofthewholesolution. MSP430FR59xx
+The TI MSP430FR572x and MSP430FR59xx families of ultra-
+Inadditiontotheabove-mentionedparameters,thecomputa- low-power microcontrollers consist of multiple devices that
+tionalcapabilityofamicrocontrollercanbe evaluatedbyconsid- featureanembeddedFRAMnonvolatilememory,ultra-low-power
+eringthepresenceofanon-boardOperatingSystem.Ifsupported, 16-bitMSP430™CPU,anddifferentperipheralstargetedforvarious
+thisfeaturehelpsinmanagingcomplexIoTembeddedapplications applications. The architecture, FRAM, and peripherals, combined
+whereseveralperipheralsmustbemanaged.Inthisregard,three withsevenlow-powermodes,areoptimizedtoachieveextended
+differenttypologiesofmicrocontrollerscanbesummarized: batterylifeinportableandwirelesssensingapplications.FRAMisa
+newnonvolatilememorythatcombinesthespeed,flexibility,and
+(cid:1) No-Operatingsystem:Theoperatingsystemisnotpresent.In enduranceofSRAMwiththestabilityandreliabilityofflash,allat
+thiscasethemicrocontrollercanbeprogrammedina“canoni- lowertotalpowerconsumption.Peripheralsincludea10-bitADC,a
+cal” manner, by developing a code for low-level operations 16-channel comparator with voltage reference generation and
+(Assembler of C are the main programming languages). A hysteresis capabilities, three enhanced serial channels capable of
+software-level connection cannot be implemented, however, I2C,SPI,orUARTprotocols,aninternalDMA,ahardwaremultiplier,
+thecost-effectivenessofthesekindsofmicrocontrollersaswell anRTC,five16-bittimers,anddigitalI/Os.
+asreducedpowerconsumption,makethisMCUtypologyquite
+diffused. 3.4.4. MicrochipPIC18FfamilyPIC18F26K22
+(cid:1) RTOS: namely “Real-Time Operating System”. An RTOS Oper- ThePIC18microcontrollerfamilyprovidesPICmicro®devicesin
+ating system enables a multi-task approach by introducing 18-to80-pinpackages,thatarebothsocketandsoftwareupwardly
+priority levels among the tasks running under the operating compatible to the PIC16 family. The PIC18 family includes all the
+system.Moreover,thisOperatingSystemguaranteesthecorrect popularperipherals,suchasMSSP,ESCI,CCP,flexible8-and16-bit
+timingofsingleevents. timers, PSP, 10-bit ADC, WDT, POR and CAN 2.0B Active for a
+(cid:1) Linux/UNIX: This feature allows high-level programming in a maximum flexible solution. Most PIC18 devices will provide a
+waysimilartoacanonicalcomputer.Opensourcesoftwarecan FLASH program memory in sizes from 8 to 128 Kbytes and data
+be run on the MCU thus enabling connectivityand port man- RAMfrom256to4Kbytes;operatingfrom2.0to5.5V,atspeedsof
+agement.Real-timeandlow-poweroperationsareneverguar- DCto40MHz.Optimizedforhigh-levellanguageslikeANSIC,the
+anteedsothatthiskindofMCUisoftennotcompatiblewithIoT PIC18familyoffersahighlyflexiblesolutionforcomplexembedded
+applications,exceptforhi-levelmanagementIoTnodesystems. applications.
+Underneath, selected multi-brand MCUs will be compared by 3.4.5. MicrochipPIC24FfamilyPIC24F16KA102
+using the above-mentioned metrics in order to have a quick The PIC24F is a cost-effective, low-power family of micro-
+perspective useful in selecting the right MCU for a specific IoT controllers(MCUs)basedoneXtremeLowPower(XLP)technology
+application.Afteraquickoverviewofthemicrocontrollersbasedon and 16-bit architecture. The flash memory ranges from 16 KB to
+20 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Fig.27. Comparisonofmicrocontrollerdevices.
+1 MB. The PIC24F family is a suitable solution for many space- timers,onelow-powertimer(LPTIM),threegeneral-purpose16-bit
+constrained, low-power, cost-sensitive industrial, IoT and con- timersandonebasictimer,oneRTCandSysTickwhichcanbeused
+sumerapplications. astimebases.TheMCUisprovidedwithSPI,I2C,UARTandUSB2.0
+busses. This kind of MCU is studied for Ultra Low Power IoTap-
+3.4.6. STMicroelectronicsSTM32L0familyeSTM32L053x8 plicationsandisprovidedwithaneffectivedevelopmentArduino-
+TheSTM32L053x6/8devicesprovidehighpowerefficiencyfora compatible modular kit, called NUCLEO, allowing for easy inter-
+widerangeofIoTapplications.Itisachievedwithalargechoiceof connectionwithconnectivity(BLE,Wi-Fi,Lo-Ra,etc)modulesfor
+internalandexternalclocksources,aninternalvoltageadaptation IoT.
+and severallow-power modes. The STM32L053x6/8 devices offer Taking into the account the above elaborated recent works,
+several analog features, one 12-bit ADC with hardware over- application scenarios and the enabling technology overview,
+sampling, one DAC, two ultra-low-power comparators, several followingcanbeemphasized:
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 21
+- allkindsofservicesthatareusedtoenablesmartcitieshighly
+dependonthedeployedhardwaresensinginfrastructure.Less
+infrastructureimplieslimitedfunctionalitiesforgivenapplica-
+tionscenarios.Oncontrary,manydifferentapplicationscenarios
+can be considered but this increases implementation and
+maintenancecosts,
+- manydifferentsensingtechniqueswereproposed,andresearch
+communityisintensivelyworkingtoprovidemorereliableand
+cost-effective sensing technologies that can be easily imple-
+mentedinIoTsensingnodes,
+- toenabledifferentfunctionalitiesofthegivenapplicationsce-
+nariositisimportanttohavethetechnologywhichcandeliver
+senseddataonagreaterdistance,whilepreservingtheenergy
+in order toimprove batterylifetime. For their products, many
+vendorsspecify2e10yearsoflifetimefortheirproducts,andit
+can be concluded that the battery lifetime depends on how
+frequentlydataissensedandsenttothereceivingstation.Two-
+yearsspancancertainlybeconsideredasnotenough,tenyears’
+horizoncouldbeenoughasbythen,newtechnologiesmayarise
+andsubstitutecurrentlyimplementedtechnologies.Inanycase,
+providing new technologies from any point of view: radios,
+MCUs,sensingtechniquesthatcanpreservebatterylifetimeisof
+crucialinterestforbothcurrentandfutureIoTdeployment,
+- currently available radios can fulfil today’s needs in terms of
+deliveringdata fromremoteareas in smart cities/villages. The
+Fig.28. IoTtechnologyapplicationsforAALdomain,(Maskeliunasetal.,2019).
+NB-IoT, LoRa and Sigfox are overlapping in part, but can be
+consideredasorthogonalforspecificuse-cases.Smartusageof
+givenradioscanfurtherimprovebatterylifetime.However,itis
+always of the high interest to consume even less energy and reminders(Uribeetal.,2011),aswellasbyallowingolderadultsto
+provide larger communication distances and it provides the connect with their families and medical staff. The recent ad-
+spaceforfurtheranalysisandtechnologyimprovements. vancements in mobile and wearable sensors helped the vision of
+AALtobecomeareality.Allnovelmobiledevicesareequippedwith
+4. E-healtheambientassistedlivingsystems different sensors such as accelerometers, gyroscopes, a Global
+Positioning System (GPS) and so on, which can be used for
+Inrecentyears,theexploitationofnewassistedlivingtechnol- detectingusermobility.Inthesameway,recentadvancesinelec-
+ogieshasbecomenecessaryduetoarapidlyagingsociety.Infact,it tronic and microelectromechanical sensor (MEMS) technology
+isestimatedthat50%ofthepopulationinEuropewillbeover60 promiseaneweraofsensortechnologyforhealth(Vohnoutetal.,
+yearsoldin2040,whileintheUSAitisestimatedthatoneinevery 2010).Researchershavealreadydevelopednoninvasivesensorsin
+sixcitizenswillbeover65yearsoldin2020(Corchadoetal.,2008). the form of patches, small holter-type devices, wearable devices,
+Inaddition,in75-year-olds,theriskofMildCognitiveImpairment andsmartgarmentstomonitorhealthsignals.Forexample,blood
+(MCI)andfrailtyincreasesandpeopleover85yearsofageusually glucose, blood pressure, and cardiac activity can be measured
+require continuous monitoring. This suggests that taking care of through wearable sensors using techniques such as infrared or
+elderly people is a challenging and very important issue. People optical sensing. User localization is another key concept in AAL
+with limited mobilityare increasingly looking for innovative ser- systemsbecauseitallowstracking,monitoring,andprovidingfine-
+vices that can help their daily activities. Ambient Assisted Living grained location-based services for the elderly. While GPS is the
+(AAL) encompasses technological systems to support people in most widespread and reliable technology to deal with outdoor
+theirdailyroutinetoallowanindependentandsafelifestyleaslong localizationissues,inindoorscenariosithasalimitedusagedueto
+aspossible.AAL(orsimplyassistedliving)solutionscanprovidea itslimitedaccuracyduetotheimpactofobstaclesonthereceived
+positiveinfluenceonhealthandqualityoflife,especiallywiththe signals.Thenumberofalternativeindoorpositioningsystemshave
+elderly.AnAALapproachisthewaytoguarantee betterlifecon- beenproposedintheliterature(Mainettietal.,2014)thatcanbe
+ditions for the aged and people with limited mobility, chronic exploitedinordertosupportAALsystems.Amongalltechnologies,
+diseasesandinrecoverystatuswiththedevelopmentofinnovative Bluetooth(BT)technologyrepresentsavalidalternativeforindoor
+technologiesandservices. localization(Yapengetal.,2013)orspecificallyinmuseums(Alletto
+Modernassistivetechnologiesconstituteawiderangeoftech- etal.,2015).Itisabletoguaranteealowcostsinceitisintegratedin
+nological solutions aimed at improving the well-being of the mostofdailyuseddevicessuchastabletsandsmartphones.The
+elderly, Fig. 28. These technologies are used for personalized spread of the emerging Bluetooth Low Energy (BLE) technology
+medicine, smart health, health tracking, telehealth, health-as-a- makestheBTalsoenergy-efficient,whichisakeyrequirementin
+service (HaaS), smart drugs and multiple other applications many indoor applications. An interesting investigation regarding
+(Maskeliunasetal.,2019). the state-of-the-art and adaptive AAL platforms for older adult
+AALtechnologiescanalsoprovide more safetyfor theelderly, assistancewasprovidedin(Duarteetal.,2018).Theauthorspresent
+offering emergency response mechanisms (Lin et al., 2013), fall an overview of AAL platforms, development patterns, and main
+detectionsolutions(Kongetal.,2018),andvideosurveillancesys- challengesinthisdomain.
+tems(Meineletal.,2014).OtherAALtechnologiesweredesignedin Inrecentyears,alargenumberofsolutionshavebeenproposed
+ordertoprovidesupportindailylife,bymonitoringtheactivitiesof intheliteratureinordertocreatesmartenvironmentsandappli-
+daily living (ADL) (Reena and Parameswari, 2019), by generating cationstosupportelderlypeople.Themainpurposeistoprovidea
+22 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+levelofindependenceathomeandimproveelderlyqualityoflife. algorithm,thereceivedsignal powerfromdifferentaccesspoints
+In(Dobreetal.,2018),anarchitecturewhichconstitutesthebase locatedinthehouseisdetermined.Mobileaccelerometersareused
+forthedevelopmentofanintegratedInternetofThings(IoT)plat- to analyze the movement of users and detect steps. Single board
+form to deliver non-intrusive monitoring and support for older computers, such as Raspberry Pi, are used tocollect data coming
+adults to augment professional healthcare giving is presented, fromthedifferentsensorswirelesslyconnectedtoobtainreal-time
+Fig. 29. The proposed architecture integrates proven open-data context-awareinformationsuchasgas,temperature,fire,etc.orto
+analytics technology with innovative user-driven IoT devices to get information from biomedical sensors such as, oxygen meter,
+assist caregivers and provide smart care for older adults at out- blood pressure, ECG, accelerometer, etc. The Raspberry Pi can be
+patientsclinicsandoutdoors. connected to a TV to transmit warnings or notifications coming
+Asolutionformonitoringpatientswithspecificdiseasessuchas fromhealthcareprofessionals.
+diabetesusingmobiledevicesisdiscussedin(Villarrealetal.,2014). The work (Mainetti et al., 2016) proposes an AAL system for
+The proposed system provides continuous monitoring and real elderly assistance applications able to provide both outdoor and
+time services, collecting the information from healthcare and indoorlocalizationbyusingasinglewearabledevice.Aprototypal
+monitoring devices located in the home environment which are devicehasbeendevelopedexploitingGPStechnologyforoutdoor
+connectedtoBTmobiledevices.Thesensordataaretransmittedto localization and BLE technology for indoor localization. The pro-
+acentraldatabaseformedicalserverevaluationandmonitoringvia posed system is also able to collect all information coming from
+3GandWi-Finetworks.Anadhocapplication,installedonamobile heterogeneous sensors and forward it towards a remote service
+phone,allowstheremotecontrolofapatient’shealthstatuswhilst thatisabletotriggerevents(e.g.,pushnotificationstofamiliesor
+thepatientcanreceiveanynotificationsfromthehealthcarepro- caregiversandnotificationstothesameindoorenvironmentthat
+fessionals via the application running on her/his mobile phone, willchangeitsstatus).Inanenrichedwork(Mainettietal.,2017),
+Fig.30. presents an architecturethatexploits IoT technologies tocapture
+The work (Villarrubia et al., 2014) proposes a monitoring and personaldataforautomaticallyrecognizingchangesinthebehav-
+trackingsystem forpeoplewithmedicalproblemswhosesystem iourofelderlypeopleinanunobtrusive,low-costandlow-power
+architectureisshowninFig.31.Thesolutionincludesasystemfor manner,Fig.32.Thesystemallowsperformingabehavioralanal-
+performing biomedical measurements, locomotor activity moni- ysisofelderlypeopletopreventtheoccurrenceofMCIandfrailty
+toringthroughaccelerometersandWi-Finetworks.Theinteractive problems.
+approach involves the user, through a smart TV. The locomotor BasedontherecentanalysedresearchworksontheuseofIoT
+activityoftheelderlyisdeducedthroughtheanalysisofReceived technologiesinthee-healthandforthecreationofAALsystems,it
+Signal Strength Indication (RSSI) measurements, i.e. through an ispossibletodrawthefollowinggeneralobservations:
+Fig.29. Proposedmodulararchitecture,(Dobreetal.,2018).
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 23
+Fig.30. Proposedsystemforcontinuousmonitoringandrealtimeservices,(Villarrealetal.,2014).
+Fig.31. Virtualorganizationofsystem,(Villarrubiaetal.,2014).
+- anextensiveresearchisaimedatcreatingAALsystemsintended 5. IoTtechnologiesinTransportationandLowCarbon
+primarilyfortheelderlyorforpeoplewithphysicalormental Products
+diseases,
+- currentchallengesdealwiththeuseofIoTtechnologiesinorder The issue of security and traceability of goods is increasingly
+tocapturethehabitsofthepeoplemonitoredbothinindoorand important in the logistics sector, with repercussions in terms of
+outdoor environments for behavioral analysis purposes. The supply chain management and goods transport. In this case, in-
+behavioral analysis can be useful for monitoring people, formationtechnologiesandinparticulartheIoTcanoffervaluable
+schedulinginterventionsandprovidingnotificationsdirectlyto support, increasing the degree of visibility and control over the
+theuser, entiresupplychain.TransportationisagoodexampleofhowIoT
+- increasingeffortsareneededinordertounobtrusivelycapture technologiescanbringvalue.Infact,thissectorneedssystemsthat
+habitsbyfavoringtheuseofwearabledevices. on the one hand allow for the planning, management and
+24 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+and right price, in the right place and to the right customer. As
+carryingouteach of these tasks has become much morecompli-
+catedinanincreasinglyglobalizedandinterconnectedworld,the
+need for innovative solutions to achieve these objectives also in-
+creases.Asmentionedabove,theIoTisrevolutionizingthelogistics
+sector,offeringmanyadvantagesandopportunities.Supplychain
+monitoring, vehicle tracking, inventory management, secure
+transportandprocessautomationarethecornerstonesofIoTap-
+plicationsaswellasthemainelementsofinterconnectedlogistics
+systems.
+In the logistics sector, the IoT allows creating smart location
+management systems, which allow companies to easily monitor
+driveractivities,vehiclelocationanddeliverystatus,(Brincatetal.,
+2019). Thissolutionisindispensablein theplanningofdeliveries
+andtheorganizationoftimetablesandreservations.Itispossibleto
+detect any changes in real time and this is precisely the reason
+behindthesuccessoftheIoT:theabilitytoimprovethemanage-
+ment of good movement and therefore streamline business pro-
+cesses. Inventory and warehouse management is another
+important element of the connected logistics ecosystem. The
+positioningofsmallsensorsallowscompaniestoeasilytrackitems
+in warehouses, monitor their status, position and create a smart
+controlsystem.Infact,withthehelpofIoTtechnology,employees
+Fig.32. Overalllogicalarchitecture(Mainettietal.,2017).
+willbeabletosuccessfullypreventanyloss,ensurethesafestorage
+of goods and efficiently locate the product needed. Even the
+minimizationofhumanerrorbecomespossiblethankstotheIoT.In
+optimization of flows (both along the supply chain and within thisscenario(Wangetal.,2015),proposesalayeredarchitecturefor
+complexlogisticshubssuchasintermodalones)and,ontheother the realization of an automation enterprise asset management
+hand,allowforthetraceabilityofgoods(productsorcontainers)in systemusingIoTandRFIDtechnologies,Fig.33.
+real time along the entire supply chain. A further requirement The sustainable and IoT supported business model was dis-
+concernsthecheckofgoodsintegrity.Inthiscontext,itisclearhow cussedin(GaoandLi,2020)forthecaseof thebike-sharingser-
+IoTtechnologiescancontributetotheremotemonitoringofflows vices. Novel framework was developed that links sustainable
+andassets,providingaseriesofinformationusefulfortheirman- indicatorsaswellassocialaspectsofthebusinessconcept.Thecase
+agementandoptimization.Thisispossiblethroughidentification studies for dockless bike-sharing services were discussed and
+(e.g., via RFID or barcode), location (e.g., via GPS), monitoring of presentedforChinaandUK.Practicalfindingsextendedknowledge
+parametersandstatusvariablesoftheassets(e.g.,viasensors)and needed for improvementof the sharingeconomy toachieve sus-
+theirtransmission(e.g.,viaWi-FiorGSM/GPRSnetwork). tainablygoalsthroughIoTenabledsupport.Thework(Zhangetal.,
+TheadventofIoTtechnologiesallowstoorganize,automateand 2016) proposes an inventory management system for a ware-
+controlprocessesremotelyandfromanydeviceconnectedtothe housingcompany.ThesystemadoptstheconceptofIoTusingRFID
+Internet.Bydefinition,anefficientsupplychainisresponsiblefor technologytotrackthematerialandprovidemessagesorwarnings
+deliveringthegoods,fromthemanufacturertotheenduser,atthe when incorrect behaviors are detected. Inparticular, it integrates
+agreedtimeandunderthespecifiedconditions.Throughtheuseof RFID technologyand a self-Adaptivedistributed decision support
+IoT technologies, it is possible to track the entire process in real modelforinboundandoutboundactives,inventorylocationsug-
+time, promoting speed and efficiency in automated processes, gestionsandincidenthandling.In(Gupthaetal.,2018),theauthors
+reducing time and personnel costs. IoT technologies such as sen- design an IoTarchitecture for order picking processes in a ware-
+sors, embedded and mobile devices, and cloud storage systems house that allows the inventory real time tracking and visibility
+allow for the connection of “things” (warehouses, vehicles or intothereductionofwarehouseoperationcosts,improvedsafety
+goods)totheInternetsothatthemanufacturer,thelogisticsservice andreducedtheft.IoTandRFIDtechnologiesareagainexploitedin
+providerandeventheendusercanthoroughlyknowatanytime (Valenteetal.,2017)toimproveproductivityinthevaluechainofa
+thestatusofproducts,theirlocationandestimateddeliverytime. steelmill.Inthiswork,anexistingRFIDsolutionarchitecturebased
+LogisticscanbenefitfromtheuseofIoTtechnologiesinallthe onthereferenceEPCGlobal/GS1frameworkwasmodifiedinorder
+followingsectors: tobeextendedtotheIoTdomain,Fig.34.
+The internet-connected devices collect large amounts of data
+(cid:1) efficientinventoryandwarehousemanagement whichcanbetransmittedtoacentralsystemforfurtheranalysis.In
+(cid:1) automationofinternalbusinessprocesses this context, the integration between IoT and predictive analysis
+(cid:1) fastandefficientdeliveryofproducts(e.g.,routeplanning) systemscanhelpcompaniestocreateeffectivebusinessdevelop-
+(cid:1) conservationandqualityoftransportedgoods(e.g.,monitoring mentstrategies,improvedecision-makingandmanagerisks.Inthe
+ofcoldchain) logisticssector,thisintegrationfindsapplicationtoplanroutesand
+(cid:1) location,monitoringandtrackingofvehiclefleets deliveriesaswellasidentifyvariousdefectsbeforesomethinggoes
+(cid:1) interactive communication between vehicles and manufac- wrong. An integrated framework to track and monitor shipped
+turers/distributorsofgoods packages,Fig.29wasproposedin(Protoetal.,2020).Framework
+(cid:1) certificationofbothdeliveriesandtransportphases reliesonanetworkofIoT-enableddevices,calledREDTags,allowing
+courier employees to easily collect the status of package at each
+Thebasicprinciplesoflogisticsalwaysremainvalid:transferthe deliverystep.Theframeworkprovidesback-endfunctionalitiesfor
+rightproduct,intherightquantityandcondition,attherighttime smart data transmission, management, storage, and analytics. A
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 25
+Fig.33. Layeredarchitectureofproposedautomationenterpriseassetmanagementsystem(Wangetal.,2015).
+dataintheblockchain.Blockchaininfrastructurecanalsorevolu-
+tionizecompanylogisticsinthefieldofdocumentmanagement(i.e.,
+invoices,transportdocuments,etc.),traceabilityofgoods(originof
+products, monitoring of vehicle fleets,etc.), and playa substantial
+roleinfightingcounterfeiting.ImeriandKhadraoui(2018)showeda
+conceptual approach to the securityand traceability of shared in-
+formation in the process of dangerous goods transportation using
+blockchaintechnologybasedonsmartcontracts.IoTandblockchain
+technologiesareexploitedin(Arumugametal.,2018)whereasmart
+logistics solution encapsulating smart contracts, logistics planner
+and condition monitoring of the assets in the supply chain man-
+agement area is presented, Fig. 36. Moreover, a prototype of the
+proposedsolutionisimplemented.
+The block chain-IoT-based food traceability system (BIFTS) to
+integratethenoveldeploymentofblockchain,IoTtechnology,and
+fuzzylogicintoatotaltraceabilityshelflifemanagementsystemfor
+the managing of perishable food, Fig. 37 was proposed in (Tsang
+et al., 2019). Challenges in the adoption of the proposed frame-
+workinthefoodindustryareanalysedandfutureresearchplanned
+toimprovetheproposedwork.
+Taking into account above discusses recent research findings
+furthermainfindingscouldbehighlighted:
+Fig.34. RFID/IoTsolutionarchitectureforsteelmill(Valenteetal.,2017). - The studies analysed previously show how the hardware and
+softwaretechnologiesenablingtheInternetofThingsarelead-
+ingtoadigitaltransformationprocessthataimsatanintelligent
+machine-learning process is included to promptly analyze the and advanced management of the entire logistics and trans-
+features describing event-related data to predict the potential portationsystem.
+breaksofgoodsinthepackages(Fig.35). - Themainscientificchallengesinthisfieldaimtousesensorsin
+Ensuringproductqualityandintegrityisaninterestingchallenge ordertomonitorthestatusofthegoodstransported,toensure
+that in recent years has led to the creation of smart systems that traceabilityandabovealltosafelyandreliablycollecttelemetry
+integrateIoTsolutionsandblockchaintechnology.TheBlockchain data and offer them to Artificial Intelligence modules for
+technologyassociatedwithIoTsensorscouldallowthecreationofa advancedprocessing.
+temporal“stamp”insidewhichaseriesofinformationiskeptsuchas
+- Furthermore, recently the interest has focused on the next
+productdeliverydate,productcharacteristicsandstatus,andorigin generationofblockchainsystems(theso-calledblockchain3.0)
+ofproduct.Bypositioningthesensors,forexample,itispossibleto which aims to apply the benefits of the classic blockchain in
+monitor parameters such as product temperature and humidity, typicalscenariosoftheInternetofThings,suchaslogisticand
+vehiclepositionandphases of thetransportprocess and save this transportations.
+26 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Fig.35. Frameworkarchitecture,(Protoetal.,2020).
+Fig.36. High-levelarchitectureofproposedsolution,(Arumugametal.,2018).
+6. Concludingremarksandfuturedirectionsinthefield limited resources, systems or processes. The main driver for an
+efficientdigitalizationinvarioussectorsisinformationtechnology,
+This review paper discussed and presented latest research i.e., IoT supported smart technologies. In the previous sense, the
+findingsthatwereincludedwithintheJCELPROVSISpliTech2019 energy sector is one of the keysectors where ‘‘energy digitaliza-
+and dedicated to the 4th International Conference on Smart and tion’’hasalreadybeenrapidlydevelopinginvariousenergyrelated
+SustainableTechnologies(SpliTech2019).Thecontributionsaswell fields.Currently,oneofthemostprogressingimplementationareas
+as herein presented knowledge is summarized and discussed in ofIoTtechnologiesisrelatedtotheenergysector.Thedeveloping
+upcomingsections. solutionsarefocusedonsmarthomes,i.e.advancedautomatization
+The Intense digitalization in recent years has allowed for of home energy systems, development of smart and adaptive
+different technological possibilities that have already gradually micro-grids, or advancements in efficient demand-side manage-
+beenchangingthemaineconomicsectorsandsocietiesingeneral. mentofpowersystems.Acirculareconomyconcepthasalsobeen
+Digitalizationindifferenteconomicsectorsenabledvariouspossi- intensivelyworkedonwherevariousconceptshavebeeninvesti-
+bilities for advancements and for a more efficient utilization of gated, which can support smart waste management and help
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 27
+Fig.37. ModularframeworkofBIFTS,(Tsangetal.,2019).
+bridge one of the main challenges in society. Recently, different car concept where different vehicle operating parameters can be
+conceptshavebeentestedwhereIoTtechnologiescouldbeusedfor monitored in an efficient manner. The main advantage is early
+environmental protection, primarily for the monitoring of air detection of severe failures, then regular maintenance, improved
+quality,whichisabigpotentialinthatsense. fuellingandfinallyimprovementofsafetyanddrivingexperience
+Healthcaresystemscanalsobesignificantlyimprovedwiththe ingeneral.ThemostchallengingIoTapplicationareaisinthecase
+application of IoT devices, i.e. via the E-health concept. An ofautonomousvehicles,wheresafetyisthemaingoalandinthat
+improved quality of services and patient safetycould be enabled sense,significantresearchadvancementsareexpectedtooccurin
+withanadvancedIoTsupportedmonitoringsystem.Theprediction thenearfuture.
+oflifethreateningstatescouldbeefficientlydetectedwithabetter ThesmartcityconceptisthemostprogressingIoTapplication
+treatmentofpatients,suchastimelytherapydecisionsandquali- areasincecitieshavebeenvastlypopulated,whichcausessevere
+tativerehabilitation.Ingeneral,largehealthcaresystemscouldalso infrastructuralissues.The mainbenefitofIoTtechnologiesin the
+benefitfromIoT,bothinefficiencyandfromacostaspect,whichis smartcityconceptistobridgesevereinfrastructuralchallengesin
+importantforhospitals.ThecurrentpandemicstatewithCOVID-19 highlypopulatedcities.Theimprovementoflifequalityincitiesis
+allowed for the consideration of different IoTapplications or de- also expected thanks to the efficiency improvement of various
+vicesthatcouldhelpinefficientlymonitoringandcontrollingthe convectional services in cities. The earlydetection of various and
+pandemic,whichprovestheaddedvalueofIoTproducts. common dailyproblems in cities could be efficientlysolved with
+The transportation sector is currently in gradual transition IoTaswithtransportationissues,energyandwatershortagesup-
+whereamixoftransportationvehicletechnologiesisexpectedin plies, security issues, etc. The biggest challenge in the smart city
+upcoming decades with the involvement of electric vehicles pri- concept is directed to the efficient networking and operation of
+marily along with hybrid or hydrogen based vehicles. The main different sensing technologies, which must be followed with the
+advancementsofIoTintransportationarethesupportofthesmart propereducationofthepopulation.
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 29
+AflexibleIoTenergymonitoringsolution.In:20183rdInternationalConference https://doi.org/10.1109/CSCS.2019.00115.
+onSmartandSustainableTechnologies(SpliTech). Douglas,L.S.M.,Rabelo,R.A.L.,Veloso,A.F.S.,Rodrigues,J.J.P.C.,dosReisJunior,Jose
+Bagdadee,A.H.,Zhang,L.,SaddamHossainRemus,M.,2020.Abriefreviewofthe V.,2020.Anadaptivedatacompressionmechanismforsmartmetersconsid-
+IoT-based energy management system in the smart industry. Advances in eringademandsidemanagementscenario.J.Clean.Prod.255,120190.
+IntelligentSystemsandComputing1056,443e459. Duarte, P.A.S.,Barreto, F.M., Aguilar, P.A.C.,Boudy,J., Andrade,R.M.C., Viana,W.,
+Becnel,T.,Tingey,K.,Whitaker,J.,Sayahi,T.,Le^,K.,Goffin,P.,Butterfield,A.,2019. 2018.AALplatformschallengesinIoTera:atertiarystudy.In:201813thAnnual
+Adistributedlow-costpollutionmonitoringplatform.IEEEInternetofThings ConferenceonSystemofSystemsEngineering.SoSE.
+Journal6(6). Duy,T.K.,HuuHanh,H.,Tjoa,A.M.,Quirchmayr,G.,2019.SemIDEA:towardsase-
+Bhagya,N.S.,Murad,K.,Kijun,H.,2018.Towardssustainablesmartcities:areview manticIoTdataanalyticframeworkforfacilitatingenvironmentalprotection.
+of trends, architectures, components, and open challenges in smart cities. In:Proceedings-201919thInternationalSymposiumonCommunicationsand
+SustainableCitiesandSociety38,697e713. InformationTechnologies,ISCIT2019,pp.481e486.Articlenumber8905178.
+Bielski,A.,Zielina,M.,Młyn(cid:3)ska,A.,2020.Analysisofheavymetalsleachingfrom Web source: European Commissions. Ec.europa.eu/growth/tools-databases/dem/
+internalpipecementcoatingintopotablewater.JournalofCleanerProduciton monitor/sites/default/files/DTM_Agriculture%204.0%20IoT%20v1.pdf, (accessed,
+265,121425. April1,2020).
+Biresselioglu,M.E.,Demir,M.H.,DemirbagKaplan,M.,Solak,B.,2020.Individuals, El-Emam,RamiS.,Ozcan,H.,Zamfirescu,C.,2020.Updatesonpromisingthermo-
+collectives, and energy transition: analysing the motivators and barriers of chemicalcyclesforcleanhydrogenproductionusingnuclearenergy.J.Clean.
+European decarbonisation. Energy Research and Social Science 66. Article Prod.262,121424.
+number101493. Fachechi,A.,Mainetti,L.,Palano,L.,Patrono,L.,Stefanizzi,M.L.,Vergallo,R.,Chu,P.,
+Bisio,I.,Garibotto,C.,Lavagetto,F.,Sciarrone,A.,2019.TowardsIoT-basedehealth Gadh,R.,2015.Anewvehicle-to-gridsystemforbatterychargingexploitingIoT
+services:asmartprototypesystemforhomerehabilitation.In:2019IEEEGlobal protocols,2015ProceedingsoftheIEEEInternationalConferenceonIndustrial
+CommunicationsConference,GLOBECOM2019-Proceedings.Articlenumber Technology 2154e2159. https://doi.org/10.1109/ICIT.2015.7125414. art. no.
+9013194. 7125414.
+Web source: Bootloader, “Optiboot Bootloader for Arduino and Atmel AVR”. Fan,Y.V.,Lee,C.T.,Lim,J.S.,Kleme(cid:1)s,J.J.,Le,P.T.K.,2019.Cross-disciplinaryapproaches
+github.com/Optiboot/optiboot,(accessedApril21,2020). towardssmart,resilientandsustainablecirculareconomy.J.Clean.Prod.232,
+Bose,B.K.,2017.Artificialintelligencetechniquesinsmartgridandrenewableen- 1482e1491.
+ergysystemsdsomeexampleapplications.Proc.IEEE105(11). Websource:FoodandagricultureorganizationoftheUnitedNationsfao.org/news/
+Brincat,A.A.,Pacifici,F.,Martinaglia,S.,Mazzola,F.,2019.Theinternetofthingsfor story/en/item/196402/icode/,(accessed,April1,2020).
+intelligenttransportationsystemsinrealsmartcitiesscenarios.In:2019IEEE Farahani,B.,Barzegari,M.,ShamsAliee,F.,Shaik,K.A.,2020.Towardscollaborative
+5thWorldForumonInternetofThings(WF-IoT).https://doi.org/10.1109/WF- intelligentIoTeHealth:fromdevicetofog,andcloud.Microprocess.Microsyst.
+IoT.2019.8767247. Articlenumber102938.
+Bylykbashi,K.,Qafzezi,E.,Ikeda,M.,Matsuo,K.,Barolli,L.,2020.Fuzzy-basedDriver Farooq,M.S.,Riaz,S.,Abid,A.,Umer,T.,Zikria,Y.B.,2020.Roleofiottechnologyin
+MonitoringSystem(FDMS):implementationoftwointelligentFDMSsanda agriculture:Asystematicliteraturereview9(2).Articlenumber319.
+testbedforsafedrivinginVANETs.FutureGenerat.Comput.Syst.105,665e674. Ferrari,F.,Striani,R.,Minosi,S.,DeFazio,R.,Visconti,P.,Patrono,L.,Catarinucci,L.,
+Capuder,T.,Milo(cid:1)sSpr(cid:1)ci(cid:3)c,D.,Zori(cid:1)ci(cid:3)c,D.,Pand(cid:1)zi(cid:3)c,H.,2020.Reviewofchallengesand Corcione,C.E.,Greco,A.,2020.AninnovativeIoT-orientedprototypeplatform
+assessmentofelectricvehiclesintegrationpolicygoals:integratedriskanalysis forthemanagementandvalorisationoftheorganicfractionofmunicipalsolid
+approach.Int.J.Electr.PowerEnergySyst.119.Articlenumber105894. waste.J.Clean.Prod.247,119618.
+Cavalera, G., Conte Rosito, R., Lacasa, V., Mongiello, M., Nocera, F., Patrono, L., Websource:Flashstorage,“FlashStoragelibraryforArduino”,Online:github.com/
+Sergi,I.,2019.AninnovativesmartsystembasedonIoTtechnologiesforfireand cmaglie/FlashStorage,(accessedApril20,2020).
+dangersituations. In: 2019 4th International Conference on Smart and Sus- Web source: Louis Columbus. Forbes.com/sites/louiscolumbus/2018/06/06/10-
+tainableTechnologies(SpliTech). charts-that-will-challenge-your-perspective-of-iots-growth/#79c388e3ecce,
+Chasin,F.,Paukstadt,U.,Gollhardt,T.,Becker,J.,2020.SmartEnergyDrivenBusiness (accessed,March21,2020).
+ModelInnovation:anAnalysisofExistingBusinessModelsandImplicationsfor Gagliano,A.,Tina,G.M.,Aneli,S.,Ni(cid:1)zeti(cid:3)c,S.,2019.Comparativeassessmentsofthe
+BusinessModelChangeintheEnergySector,p.122083.https://doi.org/10.1016/ performances of PV/T and conventional solar plants. J. Clean. Prod. 219,
+j.jclepro.2020.122083(inpress). 304e315.
+Chen,N.,Qin,F.,Zhai,Y.,Cao,H.,Zhang,R.,Cao,F.,2020a.Evaluationofcoordinated Gao,P.,Li,J.,2020.Understandingsustainablebusinessmodel:aframeworkanda
+developmentofforestrymanagementefficiencyandforestecologicalsecurity: casestudyofthebike-sharingindustry.J.Clean.Prod.267,122229.
+aspatiotemporalempiricalstudybasedonChina’sprovinces.J.Clean.Prod.260. Garrido-Hidalgo,C.,Ramirez,F.J.,Olivares,T.,Roda-Sanchez,L.,2020.Theadoption
+Articlenumber121042. ofInternetofThingsinaCircularSupplyChainframeworkfortherecoveryof
+Chen, Y.-Q., Zhou, B., Zhang, M., Chen, C.-M., 2020b. Using IoT technology for WEEE:thecaseofLithium-ionelectricvehiclebatterypacks.WasteManag.103,
+computer-integrated manufacturing systems in the semiconductor industry. 32e44.
+AppliedSoftComputingJournal89.Articlenumber106065. Giama,E.,Papadopoulos,A.M.,2020.Benchmarkingcarbonfootprintandcircularity
+Chen,H.-C.,Putra,K.T.,Tseng,S.-S.,Chen,C.-L.,Lin,J.C.-W.,2020c.Aspatiotemporal in production processes: the case of stonewool and extruded polysterene.
+datacompressionapproachwithlowtransmissioncostandhighdatafidelity J.Clean.Prod.257,120559.
+for an air quality monitoring system. Future Generat. Comput. Syst. 108, Websource:Globalewaste.Globalewaste.org/wp-content/uploads/2018/10/Global-
+488e500. E-waste-Monitor-2017.pdf,(accessed,March25,2020).
+Chou,J.S.,Hsu,S.C.,Ngo,N.T.,Lin,C.W.,Tsui,C.C.,2019.Hybridmachinelearning
+Grubi(cid:1)si(cid:3)c-C(cid:1) abo,F.,Ni(cid:1)zeti(cid:3)c,S.,Marini(cid:3)cKragi(cid:3)c,I.,C(cid:1)
+oko,D.,2019.Furtherprogressin
+systemtoforecastelectricityconsumptionofsmartgrid-basedairconditioners. theresearchoffin-basedpassivecoolingtechniqueforthefree-standingsilicon
+IEEESystemsJournal13(3). photovoltaicpanels.Int.J.EnergyRes.43(8),3475e3495.
+Chugh, A., Jain, C., Mishra, V.P., 2020. IoT-based multifunctional smart toy car. Grycan,W.,2020.Legislativesupportforimprovingsustainableandsmartelec-
+LectureNotesinNetworksandSystems103,455e461. tricityconsumptioninpolishresidentialsector.J.Clean.Prod.266,121995.
+Conti,M.,Kaliyar,P.,Rabbani,M.M.,Ranise,S.,2020.Attestation-enabledsecureand Guptha,C.K.N.,Bhaskar,M.G.,Meghasree,V.,2018.DesignofIoTArchitecturefor
+scalableroutingprotocolforIoTnetworks.AdHocNetw.98.Articlenumber orderpickinginatypicalwarehouse.In:20183rdInternationalConferenceon
+102054. ComputationalSystemsandInformationTechnologyforSustainableSolutions
+Corchado,J.M.,Bajo,J.,Abraham,A.,2008.GerAmi:improvinghealthcaredelivery (CSITSS).https://doi.org/10.1109/CSITSS.2018.8768752.
+ingeriatricresidences.IEEEIntell.Syst.23(2),19e25. Hussain,M.,Butt,A.R.,Uzma,F.,Ahmed,R.,Irshad,S.,Rehman,A.,Yousaf,B.,2020.
+Das,S.,Lee,S.-H.,Kumar,P.,Kim,K.-H.,Lee,S.S.,Bhattacharya,S.S.,2019.Solidwaste Acomprehensivereviewofclimatechangeimpacts,adaptation,andmitigation
+management: scope and the challenge of sustainability. J. Clean. Prod. 228, onenvironmentalandnaturalcalamitiesinPakistan.Articlenumber48Envi-
+658e678. ron.Monit.Assess.192(1).
+Dasari,S.V.,Gvk,S.,Bapat,J.,Das,D.,2019.IoTtestbedforthermalprofilingofa Idwan,S.,Mahmood,I.,Zubairi,J.A.,Matar,I.,2020.Optimalmanagementofsolid
+smart building. In: 2019 IEEE 16th India Council International Conference wasteinsmartcitiesusinginternetofthings.WirelessPers.Commun.110(1),
+(INDICON). 485e501.
+Web source: The World Bank. Data.worldbank.org/indicator/sp.pop.grow?name_ Imeri,A.,Khadraoui,D.,2018.Thesecurityandtraceabilityofsharedinformationin
+desc¼true,(accessed,March26,2020). theprocessoftransportationofdangerousgoods.In:20189thIFIPInternational
+DeFazio,R.,EspositoCorcione,C.,Greco,A.,Ferrari,F.,Striani,R.,Catarinucci,L., ConferenceonNewTechnologies,MobilityandSecurity.NTMS.https://doi.org/
+Chietera,F.P.,Colella,R.,Patrono,L.,Mighali,V.,Sergi,I.,Visconti,P.,Venere,E., 10.1109/NTMS.2018.8328751.
+Pucciarelli,M.,Caiazzo,M.,Pastore,P.,Ivtchenko,O.,Abruzzese,L.,Fornaro,A., Websource:NETSmartIoTSolutions.iot.farsite.com/iot-explained/netbin-fill-level-
+2019.Sensors-basedtreatmentsystemoftheorganicwastewithRFIDidenti- monitoring-for-a-smart-bin/?gclid¼Cj0KCQjwmpb0BRCBARIsAG7y4zY3y-
+ficationandon-cloudtraceability.In:2019IEEE8thInternationalWorkshopon 4cEOz4orGAHPjrDqKFRwVAZOQu6yNGEZlzcU16U2yLotXeQl4aAuqkEALw_
+AdvancesinSensorsandInterfaces(IWASI). wcB,(accessed,April2,2020).
+Dhana Shree, K., Janani, B., Reenadevi, R., Rajesh, R., 2019. Garbage monitoring Irizar-Arrieta, A., Casado-Mansilla, D., Garaizar, P., Lo(cid:3)pez-de-Ipin~a, D., Retegi, A.,
+system using smart bins. International Journal of Scientific and Technology 2020.Userperspectivesinthedesignofinteractiveeverydayobjectsforsus-
+Research11(8),1921e1925. tainablebehaviour.Int.J.Hum.Comput.Stud.137.Articlenumber102393.
+Dobre,C.,Bajenaru,L.,Marinescu,I.A.,Tomescu,M.,2018.Improvingthequalityof Janik,A.,Ryszko,A.,Szafraniec,M.,2020.Scientificlandscapeofsmartandsus-
+lifeforolderpeople:fromsmartsensorstodistributedplatforms.In:201922nd tainablecitiesliterature:abibliometricanalysis.Sustainability12(3).Article
+International Conference on Control Systems and Computer Science. CSCS. number779.
+30 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+John, J., Varkey, M.S., Selvi, M., 2019. Security attacks in s-wbans on iot based foroptimizingenergyusageandcontrollability.In:2018SecondInternational
+healthcare applications. Int. J. Innovative Technol. Explor. Eng. 9 (1), ConferenceonElectronics,CommunicationandAerospaceTechnology(ICECA).
+2088e2097. Marini(cid:3)c-Kragi(cid:3)c,I.,Vu(cid:1)cina,D.,Milas,Z.,2020.ComputationalanalysisofSavonius
+Jonkeren,O.,Francke,J.,Visser,J.,2019.Ashift-sharebasedtoolforassessingthe windturbinemodificationsincludingnovelscooplet-baseddesignattainedvia
+contributionofamodalshifttothedecarbonisationofinlandfreighttransport. smartnumericaloptimization.J.Clean.Prod.262,121310.
+EuropeanTransportResearchReview11(1).Articlenumber8.
+Martín-Lopo,M.M.,Boal,J.,Sa(cid:3)nchez-Miralles,A(cid:3)
+.,2020.AliteraturereviewofIoT
+Kakkavas, G., Gkatzioura, D., Karyotis, V., Papavassiliou, S., 2020. A review of energyplatformsaimedatendusers.Comput.Network.171.Articlenumber
+advanced algebraic approaches enabling network tomography for future 107101.
+networkinfrastructures.FutureInternet12(2).ArticleNumber20. Maskeliunas,R.,Dama(cid:1)sevi(cid:1)cius,R.,Segal,S.,2019.Areviewofinternetofthings
+Kalair, Ali Raza, Naeem, Abas, Qadeer, Ul Hasan, Seyedmahmoudian, Mehdi, technologiesforambientassisted.Livingenvironments.FutureInternet11,259.
+Khan, Nasrullah, 2020. Demand side management in hybrid rooftop photo- https://doi.org/10.3390/fi11120259.
+voltaicintegratedsmartnanogrid.J.Clean.Prod.258,120747. Matuli(cid:3)c,N.,Radica,G.,Barbir,F.,Ni(cid:1)zeti(cid:3)c,S.,2019.Commercialvehicleauxiliaryloads
+Kang,K.D.,Kang,H.,Ilankoon,I.M.S.K.,Chong,C.Y.,2020.Electronicwastecollection poweredbyPEMfuelcell.Int.J.HydrogenEnergy44(20),10082e10090.Issue20.
+systemsusingInternetofThings(IoT):householdelectronicwastemanage- Websource:MCP1700,“MCP1700”,Online:microchip.com/products/en/MCP1700
+mentinMalaysia.J.Clean.Prod.252.Articlenumber119801. (accessed,April21,2020).
+Kaur,K.,Garg,S.,Kaddoum,G.,Bou-Harb,E.,Choo,K.-K.R.,2020.Abigdata-enabled Meinel,L.,Findeisen,M.,Heß,M.,Apitzsch,A.,ìHirtz,G.,2014.Automatedreal-time
+consolidatedframeworkforenergyefficientsoftwaredefineddatacentersin surveillanceforambientassistedlivingusinganomnidirectionalcamera.IEEE
+IoT setups. IEEE Transactions on Industrial Informatics 16 (4), 2687e2697. Int. Conf. Consum. Electron. 396e399. https://doi.org/10.1109/
+Articlenumber8825507. ICCE.2014.6776056.
+Kausmally, M.A., Samson, A.M., Cheng, Y.S., Gobee, S., Durairajah,V., 2020. Har- Mekki, K., Bajic, E., Chaxel, F., Meyer, F., 2019. A comparative study of LPWAN
+vestingwasteenergyfromindustrialchimneyusingthermoelectricgenerator technologiesforlarge-scaleIoTdeployment.ICTexpress5(1),1e7.
+andwindturbinewithbatterystoragesystemintegratedtoIoT.International Mendes,Douglas,L.S.,Rabelo,RicardoA.L.,Veloso,ArturF.S.,RodriguesJoel,J.P.C.,
+JournalofAdvancedScienceandTechnology29(3),2487e2499. dosReisJunior,JoseV.,2020.Anadaptivedatacompressionmechanismfor
+Keng, Z.X., Chong, S., Ng, C.G., Ridzuan, N.I., Hanson, S., Pan, G.-T., Lau, P.L., smartmetersconsideringademandsidemanagementscenario.J.Clean.Prod.
+Supramaniam, C.V., Singh, A., Chin, C.F., Lam, H.L., 2020. Community-scale 255,120190.
+composting for food waste: a life-cycle assessment-supported case study. Mishra, V.P., Jain, C., Chugh, A., 2020. IoT-based data logger for environmental
+J.Clean.Prod.261.Articlenumber121220. monitoring.LectureNotesinNetworksandSystems103,463e471.
+Kim,S.,Cho,J.Y.,Jeon,D.H.,Hwang,W.,Song,Y.,Jeong,S.Y.,Jeong,S.W.,Yoo,H.H., Web source: MKRWAN1300, “MKRWAN1300 High sleep current”, Online:
+Sung,T.H.,2020.Propeller-basedunderwaterpiezoelectricenergyharvesting github.com/arduino-libraries/MKRWAN/issues/30,(accessedApril22,2020).
+systemforanautonomousIoTsensorsystem.J.Kor.Phys.Soc.76(3),251e256. Mohammadian,H.D.,2019.IoEeasolutionforenergymanagementchallenges.In:
+Kleme(cid:1)s,J.J.,Varbanov,P.S.,Ocłon(cid:3),P.,Chin,H.H.,2019.Towardsefficientandclean 2019IEEEGlobalEngineeringEducationConference(EDUCON).
+process integration: utilisation of renewable resources and energy-saving Moniruzzaman,M.,Khezr,S.,Yassine,A.,Benlamri,R.,2020.Blockchainforsmart
+technologies.Energies12(21).Articlenumber4092. homes:reviewofcurrenttrendsandresearchchallenges.Comput.Electr.Eng.
+Kong,X.,Meng,Z.,Meng,L.,Tomiyama,H.,2018.Aprivacyprotectedfalldetection 83.Articlenumber106585.
+IoT system for elderly persons using depth camera. In: 2018 International Morello,R.,DeCapua,C.,Fulco,G.,Mukhopadhyay,S.C.,2017.Asmartpowermeter
+Conference on Advanced Mechatronic Systems. ICAMechS. https://doi.org/ tomonitorenergyflowinsmartgrids:theroleofadvancedsensingandIoTin
+10.1109/ICAMechS.2018.8506987. theelectricgridofthefuture.IEEESensor.J.17(23),7828e7837.
+Kozina,A.,Radica,G.,Ni(cid:1)zeti(cid:3)c,S.,2020.Analysisofmethodstowardsreductionof Mukta,M.Y.,Rahman,M.A.,Asyhari,A.T.,AlamBhuiyan,M.Z.,2020.IoTforenergy
+harmfulpollutantsfromDieselengines.J.Clean.Prod.262,121105. efficient green highway lighting systems: challenges and issues. J. Netw.
+Kumar,B.R.S.,Varalakshmi,N.,Lokeshwari,S.S.,Rohit,K.,Manjunath,Sahana,D.N., Comput.Appl.158.Articlenumber102575.
+2017.Eco-friendlyIOTbasedwastesegregationandmanagement.In:2017In- Muthu, B.A., Sivaparthipan, C.B., Manogaran, G., Sundarasekar, R., Kadry, S.,
+ternational Conference on Electrical, Electronics, Communication, Computer, Shanthini,A.,Dasel,A.,2020.IOTbasedwearablesensorfordiseasesprediction
+and Optimization Techniques. ICEECCOT. https://doi.org/10.1109/ andsymptomanalysisinhealthcaresector.Peer-to-PeerNetworkingandAp-
+iceeccot.2017.8284686. plications.https://doi.org/10.1007/s12083-019-00823-2.
+Li, W.,Logenthiran, T., Phan, V.T.,Woo,W.L., 2018. Implemented IoT-based self- Nayanatara,C.,Divya,S.,Mahalakshmi,E.K.,2018.Micro-gridmanagementstrategy
+learning home management system (SHMS) for Singapore. IEEE Internet of with the integration of renewable energy using IoT. In: 2018 International
+ThingsJournal5(3). ConferenceonComputationofPower,Energy,InformationandCommunication
+Li, J., Feng,S.,Luo, T., Guan, Z.,2020a. Whatdrives the adoptionof sustainable (ICCPEIC).
+productiontechnology?Evidencefromthelarge-scalefarmingsectorinEast Nils,JakobJohannesen,Kolhe,Mohan,Goodwin,Morten,2020.Relativeevaluation
+China.J.Clean.Prod.257.Articlenumber120611. ofregressiontoolsforurbanareaelectricalenergydemandforecasting.J.Clean.
+Li,Y.,Gao,M.,Yang,L.,Zhang,C.,Zhang,B.,Zhao,X.,2020b.Designofandresearch Prod.218,555e564.
+onindustrialmeasuringdevicesbasedonInternetofThingstechnology.AdHoc Nivetha, R., Preethi, S., Priyadharshini, P., Shunmugapriya, B., Paramasivan, B.,
+Netw.102.Articlenumber102072. Naskath,J.,2020.Smarthealthmonitoringsystemusingiotforassistedlivingof
+Li,J.,Han,Y.,Mao,G.,Wang,P.,2020c.Optimizationofexhaustemissionsfrom seniorandchallengedpeople.InternationalJournalofScientificandTechnology
+marine engine fueled with LNG/diesel using response surface methodology. Research9(2),4285e4288.
+EnergySources,PartARecovery,Util.Environ.Eff.42(12),1436e1448. Ni(cid:1)zeti(cid:3)c,S.,2010.Anatmosphericgravitationalvortexasaflowobject:improvement
+Liegeard,J.,Manning,L.,2020.Useofintelligentapplicationstoreducehousehold ofthethree-layermodel.Geofizika27(1),1e20.
+foodwaste.Crit.Rev.FoodSci.Nutr.60(6),1048e1061. Nizetic,S.,Coko,D.,Marasovic,I.,2014.Experimentalstudyonahybridenergy
+Lin,Y.,Lu,X.,Fang,F.,Fan,J.,2013.Personalhealthcaremonitoringandemergency systemwithsmall-andmedium-scaleapplicationsformildclimates.Energy
+response mechanisms. In: First Int. Symp. On Future Information and 75,379e389.
+CommunicationTechnologiesforUbiquitousHealthCare,pp.1e5. Ni(cid:1)zeti(cid:3)c,S.,Djilali,N.,Papadopoulos,A.,Rodrigues,J.J.P.C.,2019.Smarttechnologies
+Lin,Y.-C.,Chi,W.J.,Lin,Y.Q.,2020.Theimprovementofspatial-temporalresolution for promotion of energy efficiency, utilization of sustainable resources and
+ofPM2.5estimationbasedonmicro-airqualitysensorsbyusingdatafusion wastemanagement.J.Clean.Prod.231,565e591.
+technique.Environ.Int.134.Articlenumber105305. Osterrieder,P.,Budde,L.,Friedli,T.,2020.Thesmartfactoryasakeyconstructof
+Luque-Vega, L.F., Michel-Torres, D.A., Lopez-Neri, E., Carlos-Mancilla, M.A., industry 4.0: a systematic literature review. Int. J. Prod. Econ. 221. Article
+Gonza(cid:3)lez-Jime(cid:3)nez, L.E.,2019. Iotsmart parkingsystem based onthe visual- number107476.
+aidedsmartvehiclepresencesensor:SPIN-V.Sensors20(5).Articlenumber Padmaja,B.,NarasimhaRao,P.V.,MadhuBala,M.,RaoPatro,E.K.,2019.In:Proceedings
+1476. oftheInternationalConferenceonI-SMAC(IoTinSocial,Mobile,Analyticsand
+Machorro-Cano, I., Alor-Herna(cid:3)ndez, G., Paredes-Valverde, M.A., Rodríguez- Cloud),I-SMAC2018,26February2019,pp.18e21.Articlenumber8653736.
+Mazahua,L.,Sa(cid:3)nchez-Cervantes,J.L.,Olmedo-Aguirre,J.O.,2020.HEMS-IoT:a Pantelia,C.,Kylilia,A.,Paris,A.,Fokaides,P.,2020.Buildinginformationmodelling
+bigdataandmachinelearning-basedsmarthomesystemforenergysaving. applicationsinsmartbuildings:fromdesigntocommissioningandbeyondA
+Energies13(5).Articlenumber1097. criticalreview.J.Clean.Prod.265,121766.
+Mahmood,Y.,Kama,N.,Azmi,A.,Ya’acob,S.,2020.AnIoTbasedhomeautomation Papa, A., Mital, M., Pisano, P., Del Giudice, M., 2020. E-health and wellbeing
+integratedapproach:impactonsocietyinsustainabledevelopmentperspec- monitoringusingsmarthealthcaredevices:anempiricalinvestigation.Technol.
+tive.Int.J.Adv.Comput.Sci.Appl.11(1),240e250. Forecast.Soc.Change153.Articlenumber119226.
+Mainetti,L.,Patrono,L.,Sergi,I.,2014.Asurveyonindoorpositioningsystems.In: Patel,H.K.,Mody,T.,Goyal,A.,2019.ArduinobasedsmartenergymeterusingGSM.
+22nd International Conference on Software, Telecommunications and Com- In:20194thInternationalConferenceonInternetofThings:SmartInnovation
+puterNetworks.SoftCOM,pp.111e120,2014,art.no.7039067. andUsages(IoT-SIU).
+Mainetti,L.,Patrono,L.,Secco,A.,Sergi,I.,2016.AnIoT-awareAALsystemforelderly Pawar,P.,TarunKumar,M.,Vittal,K.,P.,2020.AnIoTbasedIntelligentSmartEnergy
+people.In:2016InternationalMultidisciplinaryConferenceonComputerand ManagementSystemwithaccurateforecastingandloadstrategyforrenewable
+EnergyScience.SpliTech.https://doi.org/10.1109/SpliTech.2016.7555929. generation.Measurement:JournaloftheInternationalMeasurementConfed-
+Mainetti,L.,Patrono,L.,Secco,A.,Sergi,I.,2017.AnIoT-awareAALsystemtocapture eration152.Articlenumber107187.
+behavioralchangesofelderlypeople.JournalofCommunicationsSoftwareand
+Perkovi(cid:3)c,T.,S(cid:1) oli(cid:3)c,P.,Zargariasl,H.,C(cid:1)
+oko,D.,Rodrigues,J.J.P.C.,2020a.Smartparking
+Systems13(2),68e76. sensors:stateoftheartandperformanceevaluation.J.Clean.Prod.262,121181.
+Majee,A.,Bhatia,M.,GnanaSwathika,O.V.,2018.IoTbasedmicrogridautomation Volume262.
+S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877 31
+Perkovi(cid:3)c, T., Damjanovi(cid:3)c, S., S(cid:1) oli(cid:3)c, P., Patrono, L., Rodrigues, J.J., 2020b. Meeting Web source: Techradarpro.techradar.com/news/rise-of-the-internet-of-things-iot,
+challengesinIoT:sensing,energyefficiency,andtheimplementation.In:Fourth (accessed,March20,2020).
+International Congress on Information and Communication Technology. Web source: Rick Leblanc. Thebalancesmb.com/e-waste-recycling-facts-and-
+Springer,Singapore,pp.419e430. figures-2878189,(accessed,March25,2020).
+Websource:PewResearchCentre.Pewresearch.org/fact-tank/2019/06/17/worlds- Websource:TPL5010,Online:ti.com/lit/ds/symlink/tpl5010.pdf,(accessed,April20,
+population-is-projected-to-nearly-stop-growing-by-the-end-of-the-century/, 2020).
+(accessed,March21,2020). Websource:TPL5110,”AdafruitTPL5110PowerTimerBreakout,”Online:learn.ada-
+Pivac,N.,Ni(cid:1)zeti(cid:3)c,S.,Zanki,V.,Papadopoulos,A.M.,2019.Applicationofwearable fruit.com/adafruit-tpl5110-power-timer-breakout/,(accessed,April22,2020).
+sensorydevicesinpredictingoccupant’sthermalcomfortinofficebuildings Tsang,YungPo,Choy,KingLun,Wu,ChunHo,Ho,GeorgeToSum,Lam,HoiYan,
+during the cooling season. IOP Conf. Ser. Earth Environ. Sci. 410 (1). Article 2019.Blockchain-drivenIoTforfoodtraceabilitywithanintegratedconsensus
+number012092. mechanism. IEEE Access 7, 129000e129017. https://doi.org/10.1109/
+Porru,S.,Misso,F.E.,Pani,F.E.,Repetto,C.,2020.Smartmobilityandpublictrans- ACCESS.2019.2940227.
+port:opportunitiesandchallengesinruralandurbanareas.J.TrafficTransport. Tuballa,M.L.,LochinvarAbundo,M.,2016.AreviewofthedevelopmentofSmart
+Eng.7(1),88e97. Gridtechnologies.Renew.Sustain.EnergyRev.59,710e725.
+Proto, S., Di Corso, E., Apiletti, D., Cagliero, L., Cerquitelli, T., Malnati, G., Websource:Tutorial-Atmega328p,“HowtorunAtmega328pforayearoncoin
+Mazzucchi,D.,2020.REDTag:apredictivemaintenanceframeworkforparcel cell battery,” Online:home-automation-community.com/arduino-low-power-
+delivery services. IEEE Access 8, 14953e14964. https://doi.org/10.1109/ how-to-run-atmega328p-for-a-year-on-coin-cell-battery/, (accessed, April 21,
+ACCESS.2020.2966568. 2020).
+Qiu,B.,Duan,F.b,He,G.,2020.Valueaddingindustrialsolidwastes:impactofin- Web source: Tutorial - Low-power nodes, “Very Low Power Nodes”, Online:
+dustrialsolidwastesuponcopperremovalperformanceofsynthesizedlowcost loratracker.uk/very-low-power-nodes/,(accessed,April22,2020).
+adsorbents.EnergySources,PartARecovery,Util.Environ.Eff.42(7),835e848. Tzankova,Z.,2020.Publicpolicyspilloversfromprivateenergygovernance:new
+Websource:Quamtra.quamtra.com/en/technology/,(accessed,April2,2020). opportunities for the political acceleration of renewable energy transition.
+Rahimi, M., Songhorabadi, M., Kashani, M.H., 2020. Fog-based smart homes: a EnergyResearchandSocialScience67.Articlenumber101504.
+systematicreview.J.Netw.Comput.Appl.153.Articlenumber102531. Websource:UnitedNations.Un.org/development/desa/en/news/population/2018-
+Reena,J.K.,Parameswari,R.,2019.AsmarthealthcaremonitorsysteminIoTbased revision-of-world-urbanization-prospects.html,(accessed,March26,2020).
+humanactivitiesofdailyliving:areview.In:2019InternationalConferenceon Uribe, J.A., Duitama, J.F.,Go(cid:3)mez, N.G.,2011. Personalized messageemission ina
+MachineLearning,BigData,CloudandParallelComputing.COMITCon.https:// mobileapplicationforsupportingtherapeuticadherence.13thInt.Conf.one-
+doi.org/10.1109/COMITCon.2019.8862439. HealthNetworkingApplicationsandServices(Healthcom)15e20.
+Rishav,M.,Maity,R.,Ghosh,D.,Ganesh,V.N.,Sivakumar,2019.Internetofthing Valente,F.J.,Neto,A.C.,2017.IntelligentsteelinventorytrackingwithIoT/RFID.
+based smart power grid for smart city. Int. J. Recent Technol. Eng. 8 (1), IEEE International Conference on RFID Technology & Application (RFID-TA),
+450e453.SpecialIssue4. Warsaw,pp.158e163.https://doi.org/10.1109/RFIDTA.2017.8098639.
+Websource:RTC3231,”ExtremelyAccurateI2C-IntegratedRTC/TCXO/Crystal”,On- Villa-Henriksen, A., Edwards, G.T.C.b, Pesonen, L.A., Green, O., Sørensen, C.A.G.,
+line: https://datasheets.maximintegrated.com/en/ds/DS3231.pdf (accessed 2020. Internet of Things in arable farming: implementation, applications,
+April2020). challengesandpotential.Biosyst.Eng.191,60e84.
+Rushikesh Babu, K., Vyjayanthi, C., 2017. Implementation of net zero energy Villarreal,V.,Fontecha,J.,Herva(cid:3)s,R.,Bravo,J.,2014.Mobileandubiquitousarchi-
+building(NZEB)prototypewithrenewableenergyintegration.In:2017IEEE tectureforthemedicalcontrolofchronicdiseasesthroughtheuseofintelligent
+Region10Symposium(TENSYMP). devices: using the architecture for patients with diabetes. Future Generat.
+Saha,S.,Mondal,S.,Saha,A.,Purkait,P.,2018.DesignandimplementationofIoT Comput.Syst.34,161e175.
+basedsmartenergymeter.In:2018IEEEAppliedSignalProcessingConference Villarrubia,G.,Bajo,J.,dePaz,J.F.,Corchado,J.M.,2014.Monitoringanddetection
+(ASPCON). platform to prevent anomalous situations in home care. Sensors 14 (6),
+Saki,M.,Abolhasan,M.,Lipman,J.E.,2020.Anovelapproachforbigdataclassifi- 9900e9921.
+cationandtransportationinrailnetworks.IEEETrans.Intell.Transport.Syst.21 Voca, N., Ribic, B., 2020. Biofuel production and utilization through smart and
+(3),1239e1249.Articlenumber8701707. sustainablebiowastemanagement.J.Clean.Prod.259,120742.
+Salagare,S.,Prasad,R.,2020.Anoverviewofinternetofdentalthings:newfrontier Vohnout,S.,Engelman,M.,Enikov,E.,2010.MiniatureMEMS-baseddatarecorder
+inadvanceddentistry.WirelessPers.Commun.110(3),1345e1371. for prognostics and health management (PHM). IEEE AUTOTESTCON 1e8.
+Saraj(cid:1)cev,P., Jakus,D.,Vasilj,J., 2020.Optimalschedulingofpowertransformers https://doi.org/10.1109/AUTEST.2010.5613608.
+preventivemaintenancewithBayesianstatisticallearningandinfluencedia- Wang, M., Tan, J., Li, Y., 2015. Design and implementation of enterprise asset
+grams.J.Clean.Prod.258,120850. management system based on IOT technology. In: 2015 IEEE International
+Sathishkumar, D., Karthikeyan, C., 2020. Adaptive power management strategy- ConferenceonCommunicationSoftwareandNetworks(ICCSN).https://doi.org/
+basedoptimizationandestimationofarenewableenergystoragesystemin 10.1109/ICCSN.2015.7296188.
+stand-alone microgrid with machine learning and data monitoring. Int. J. Wang,X.C.,Kleme(cid:1)s,J.J.,Long,X.,Zhang,P.,Sabev-Varbanov,P.,Fan,W.,Dong,X.,
+Wavelets,Multiresolut.Inf.Process.18(1).Articlenumber1941023. Wang,Y.,2020.MeasuringtheenvironmentalperformanceoftheEU27from
+Savari,G.F.,Krishnasamy,V.,Sathik,J.,Ali,Z.M.,AbdelAleem,S.H.E.,2020.Internet theWater-Energy-Carbonnexusperspective.J.Clean.Prod.265.Articlenumber
+ofThingsbasedreal-timeelectricvehicleloadforecastingandchargingstation 121832.
+recommendation.ISA(Instrum.Soc.Am.)Trans.97,431e447. Web source: World Health Organization. Who.int/health-topics/
+Websource:Elsevier.scopus.com,(accessed,March1,2020). coronavirus#tab¼tab_1,(accessed,April2,2020).
+Shafi, U., Mumtaz, R., García-Nieto, J., Hassan, S.A., Zaidi, S.A.R., Iqbal, N., 2020. Wu,C.-M.,Liu,H.-L.,Huang,L.-M.,Lin,J.-F.,Hsu,M.-W.,2019.IntegratingBIMand
+Precisionagriculturetechniquesandpractices:fromconsiderationstoappli- IoT technology in environmental planning and protection of urban utility
+cations.Sensors17(1).Articlenumber3796. tunnelconstruction.In:Proceedingsofthe2018IEEEInternationalConference
+Shamayleh,A.,Awad,M.,Farhat,J.,2020.IoTbasedpredictivemaintenanceman- onAdvancedManufacturing,ICAM2018,pp.198e201.Articlenumber8615004.
+agementofmedicalequipment.J.Med.Syst.44(4).Articlenumber72. Xin,Y.,Tao,F.,2020.Developingclimate-smartagriculturalsystemsintheNorth
+Shen, X., Fantacci, R., Chen, S., 2020. Internet of vehicles. Proc. IEEE 108 (2), ChinaPlain.Agric.Ecosyst.Environ.291.Articlenumber106791.
+242e245.Articlenumber8967259. Xu,Z.,Fan,W.,Dong,X.,Wang,X.-C.,Liu,Y.,Xu,H.,Kleme(cid:1)s,J.J.,2020.Analysisofthe
+SivanageswaraRao,G.,Raviteja,K., Phanindra,G.,Vignesh,D.,2020.Analysisof functionalorientationofagriculturalsystemsfromtheperspectiveofresource
+internet of things concept for the application of smart cities. International circulation.J.Clean.Prod.258.Articlenumber120642.
+JournalofAdvancedScienceandTechnology29(3),3691e3704,2020. Yang,M.,Wang,G.,Ahmed,K.F.,Adugna,B.,Eggen,M.,Atsbeha,E.,You,L.,Koo,J.,
+Stavrakas,V.,Flamos,A.,2020.Amodularhigh-resolutiondemand-sidemanage- Anagnostou, E., 2020. The Role of Climate in the Trend and Variability of
+mentmodeltoquantifybenefitsofdemand-flexibilityintheresidentialsector. Ethiopia’sCerealCropYields,vol.723.Articlenumber137893.
+EnergyConvers.Manag.205.Articlenumber112339. Yapeng,W.,Xu,Y.,Yutian,Z.,Yue,L.,Cuthbert,L.,2013.Bluetoothpositioningusing
+Web source: STM32, “STM32LowPower”, Online: github.com/stm32duino/ RSSI and triangulation methods. IEEE Consumer Communications and
+STM32LowPower(accessedApril22,2020). NetworkingConference(CCNC)837e842.
+Suciu,G.,Necula,L.,Iosu,R.,Usurelu,T.,Ceaparu,M.,2019.In:IoTandCloud-Based Zaidan,A.A.,Zaidan,B.B.,2020.Areviewonintelligentprocessforsmarthome
+EnergyMonitoringandSimulationPlatform11thInternationalSymposiumon applicationsbasedonIoT:coherenttaxonomy,motivation,openchallenges,and
+AdvancedTopicsinElectricalEngineering(ATEE). recommendations.Artif.Intell.Rev.53(1),141e165.
+Sujeeth,S.,GnanaSwathika,O.V.,2018.IoTbasedautomatedprotectionandcontrol Web source: Natalie Gagliordi. Zdnet.com/article/iot-to-drive-growth-in-
+ofDCmicrogrids.In:2018.2ndInternationalConferenceonInventiveSystems connected-devices-through-2022-cisco/,(accessed,March24,2020).
+andControl(ICISC). Zeinalnezhad, M., Gholamzadeh, A., Feybi, C., Goni, A., Kleme(cid:1)s, J.J., 2020. Air
+Tawalbeh, N., Abusamaha, H.M., Al-Salaymeh, A., 2019. Domestic appliances pollutionpredictionusingsemi-experimentalregressionmodelandadaptive
+schedulingusingBPSOandIoT.In:Proceedingsof2019IEEEPESInnovative neuro-fuzzyinferencesystem.J.Clean.Prod.261,121218.
+SmartGridTechnologiesEurope,ISGT-Europe2019,September2019. Article Zhang,L.,Alharbe,N.,Atkins,A.S.,2016.AnIoTapplicationforinventorymanage-
+number8905695. ment with a self-adaptive decision model. In: 2016 IEEE International
+32 S.Ni(cid:1)zeti(cid:3)cetal./JournalofCleanerProduction274(2020)122877
+Conference on Internet of Things (iThings) and IEEE Green Computing and Zheng,C.,Yuan,J.,Zhu,L.,Zhang,Y.,Shao,Q.,2019.Fromdigitaltosustainable:a
+Communications(GreenCom)andIEEECyber,PhysicalandSocialComputing scientometricreviewofsmartcityliteraturebetween1990and2019.J.Clean.
+(CPSCom) and IEEE Smart Data (SmartData). https://doi.org/10.1109/iThings- Prod.258.Articlenumber120689.
+GreenCom-CPSCom-SmartData.2016.77. Zhou,B.,Li,W.,WingChan,K.,Cao,Y.,Kuang,Y.,Liu,X.,Wang,X.,2016.Smarthome
+Zhang,D.,Chan,C.C.,YouZhou,G.,2018.EnablingIndustrialInternetofThings(IIoT) energymanagementsystems:concept,configurations,andschedulingstrate-
+towardsanemergingsmartenergysystem.GlobalEnergyInterconnection1 gies.Renew.Sustain.EnergyRev.61,30e40.
+(1),39e47.
+

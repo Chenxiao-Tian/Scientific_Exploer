@@ -1,0 +1,37 @@
+Extracted Keywords:
+social actors, infrastructure systems, technical elements, social, STN, technical, Socio-technical, Network, systems, infrastructure
+
+Main Topics:
+Environmental Management, The Authors, an open access article, the CC, BY license, http://creativecommons.org/licenses/by/4.0/ ).Socio-technical networks, infrastructure management, Network concepts, integrated management 
+Liliane Mannya, Mario Angstc, Jorg Rieckermannb, Manuel Fischerb, Civil, Environmental and Geomatic Engineering, ETH Zürich, Switzerland 
+bEawag, Swiss Federal Institute, Aquatic Science, Switzerland 
+cDigital Society Initiative, Universit at Zürich, Switzerland 
+dInstitute, Political Science, Switzerland   
+ARTICLE INFO  
+Keywords, Socio-technical relations, wastewater systems, essential services, these services, major transformative processes, integrated management, Such processes, technical changes, infrastructure systems, important social and socio-technical dimensions, this article, a socio-technical network perspective, the ensemble, social actors, technical el
+
+Methodologies:
+Based 
+on these considerations, we suggest analytical methods to study basic network concepts such as density, reci-
+procity, and centrality in a socio-technical network. Using the example of urban wastewater systems, we illustrate an 
+empirical application of our approach. The results of an empirical case study in Switzerland demonstrate the 
+potential of socio-technical networks to promote a deeper understanding of complex socio-technical relations in 
+networked infrastructure systems. We contend that such a deeper understanding could improve management 
+practices of infrastructure systems and is becoming even more important for enabling future data-driven, 
+decentralized, and more integrated infrastructure management.   
+ It has been argued that such a holistic analysis of the 
+socio-technical nature of infrastructure systems is required in order to 
+improve economic and environmental
+
+Research Outcomes:
+Based 
+on these considerations, we suggest analytical methods to study basic network concepts such as density, reci-
+procity, and centrality in a socio-technical network. Using the example of urban wastewater systems, we illustrate an 
+empirical application of our approach. The results of an empirical case study in Switzerland demonstrate the 
+potential of socio-technical networks to promote a deeper understanding of complex socio-technical relations in 
+networked infrastructure systems. We contend that such a deeper understanding could improve management 
+practices of infrastructure systems and is becoming even more important for enabling future data-driven, 
+decentralized, and more integrated infrastructure management.   
+ It has been argued that such a holistic analysis of the 
+socio-technical nature of infrastructure systems is required in order to 
+improve economic and environmental

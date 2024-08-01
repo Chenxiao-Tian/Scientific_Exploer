@@ -1,0 +1,2191 @@
+References:
+
+Annexes/Appendices:
+C434 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+remaining nodes may not be enough to fill it. For simplicity, and because it is often
+the casefor heavy-tailednetworks, weassume the last groupcontainsonly one block.
+This simplifies the task of handling it as a special ca se. We compute excess degree
+for these bulk nodes and then the corresponding wei ght of degree-d bulk nodes for
+Phase 2, wbulk. We also compute the weight of the group, w , according to a special
+d g
+formula, as justified in section 3.6. Finally, we compute the number of nodes needed
+to fill out the final block in the group currently being processed, nfi ∗ll.
+Rather than storing wfill and wbulk directly, it is easier (for the edge generation
+d d
+phase) to have their sum, w , and the ratio of fill n odes, r . Likewise, we do not
+d d
+return nbulk since it can be easily recomputed using n and nfill. We do return i ,
+d d d d
+but this step can be omitted and recomputed if this is more efficient (e.g., reducing
+communication to workers in a parallel setting). Fina lly, we no longer need to keep
+{c } after the preprocessing is complete.
+d
+3.5. Phase 1. Phase 1 creates intrablock links. Each affinity block is modeled
+as an Erd˝os–R´enyi graph. An overwhelming majority of the triangles are formed in
+this phase, and thus we pick the Erd˝os–R´enyi consta nt, ρ, for the block to match
+the target cluster(cid:2)in(cid:3)g coefficient c. A vertex of degree d and clustering coefficient c
+is incident to c· d triangles. Assume this vertex is grouped with other vertices of
+2
+degree d into a block with d+1 vertices, which holds for all homogeneous blocks. If
+we build an Erdo˝s–R´enyi g(cid:2)ra(cid:3)ph of this block with pa rameter ρ, then√this vertex is
+expected to be incident to d ρ3 triangles. Solving fo r ρ yields ρ = 3c. Therefore,
+2 √
+for block b, the connectivity is ρ
+b
+= 3c db, where d
+b
+d enotes the minimum degree in
+the block (since mostblocks are homogeneous, this choice workswell). Note that the
+clustering coefficients of vertices will be higher if we consider only the affinity blocks.
+This is to compensate for the edges that will be add ed in Phase 2 to increase the
+number of wedges—likely without contributing any tr iangles.
+The difficulty in Phase 1 is that we expect a prep onderance of repeat edges be-
+cause edges are generated independently. Consider affinity block b with n nodes
+b
+and connectivity ρ b, meaning that eac(cid:2)h n(cid:3)ode in block b wants internal degree ρ b·d b.
+BTER wants approximately m
+b
+= ρ
+b
+n 2b distinct edg es in block b. Determining the
+number of draws with replacement to get a desired nu mber of distinct items can be
+cast as a coupon collector problem. Specifically, the c oupon collector problem is as
+follows: “Suppose we have a box with x distinct coupons. We draw a coupon and
+return it to the box (sampling with replacement). How many draws do we need to
+findy distinctcoupons?” Ourproblemisslightlydiffer entthanthestandardproblem
+since we want to draw y distinct edges, where y = m may not be integral; this is
+b
+fine since the goal is to achieve m distinct edges in ex pectation. We have developed
+b
+a good approximation for the expected number of edges that need to be inserted:
+(cid:7) (cid:8)
+n
+(3.1) w = b ln(1/(1−ρ ) ).
+b b
+2
+The proof is provided in Appendix A.
+Weillustratetheutilityof(3.1)byanexamplewit hn
+b
+=10nodesandconnectiv-
+ity ρ =0.5, corresponding to m =22.5 edges, on ave rage. In this case, the formula
+b b
+predicts that we need to do w = 31.1916 draws, in expectation, to see the desired
+b
+numberofuniqueedges,inexpectation. Wedo10,000randomexperimentsasfollows.
+For i = 1,...,10(cid:2),00(cid:3)0, the random variable X
+i
+∼ Poiss on(w b) is the number of items
+drawn from the n 2b = 45 possible edges, and Y
+i
+is t he number of those items that
+are unique. A histogram of the Y values is shown in Figure 4. The average number
+i
+of unique items is exactly the desired value.
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C449
+Ofcourse,we shouldlist the limitations ofthe BTERmodel. Firstandforemost,
+we consider only simple graphs. More complex model s would be needed for directed
+and/or weighted graphs. For instance, even capturin g the degree distributions of a
+directedgraphis achallenge[15]. We alsoignorecomp lexcommunity structure,such
+as bipartite or near-bipartite community structure, as well as hierarchical structure,
+which has been observed in real-world applications [40, 12]. Such structure could
+potentially be incorporatedbyadjusting the waythat affinity blocksare linked. Cur-
+rently, affinity blocks link only within themselves and then randomly to other nodes
+in the graphs. To simulate bipartite structure, the a ffinity blocks could be paired.
+To generate hierarchical structure, the affinity blocks could be arranged in that way,
+with excess degree being biased towards blocks that are closer in the hierarchy. We
+do not incorporate node and edge types which woul d be relevant, for instance, in
+an e-commerce graph that represents users and items , connected via purchases and
+ratings of items by users. Finally, although we can generate edges in a streaming
+fashion, the BTER model has no real concept of evolving parameters in time. All of
+these issues are topics for future studies.
+Appendix A. Coupon collector derivation . Consider a universe U of
+objects/coupons, and suppose we pick objects unifo rmly at random with replace-
+ment from U. The following theorem proves the b(cid:2)ou(cid:3)n d used in (3.1), when U is the
+set of possible pairs in an affinity block (so |U|= nb ). This is a simple take on the
+2
+standard coupon collector problem, where we wish to pick up all distinct coupons.
+(We follow the analysis of section 3.6.1 in [36].)
+Theorem A.1. For a given ρ∈(0,1), the expecte d number of independent draws
+required to select ρ|U| distinct coupons from U is |U|l n(1/(1−ρ))+O(1).
+Proof. Forconvenience,weassumethatρ|U|isan integer. Considerasequenceof
+draws. LetX (forinteger0≤i<ρ|U|)bethe random variabledenotingthenumber
+i
+ofdrawsrequiredtogetonemore(distinct)couponaft(cid:4) eridistinctcouponshavebeen
+collected. Observe (cid:4)that the quantity of interest is E[ i<ρ|U|X i], which by linearity
+of expectation is E[X ]. (The usual coupon c ollector analyses consider this
+i<ρ|U| i
+sum for ρ=1.)
+Whenidistinctcouponshavealreadybeencollected,theprobabilitythatasingle
+draw gives a new coupon is exactly 1−i/|U|. Think of this as probability of “fail-
+ure.” The number of draws required for a success (ne w coupon) follows a geometric
+distribution (Chap VI.8 of [17]) and the mean of this i s 1/(1−i/|U|)=|U|/(|U|−i).
+Using this bound, the expected total number of draws can be expressed as follows:
+(cid:5)
+E[X ]=
+(cid:5) |U|
+i |U|−i
+i<ρ|U| i<ρ| (cid:9)U|
+(cid:10)
+(cid:5) (cid:5)
+1 1
+=|U| −
+i i
+(cid:12)i≤|U| i≤(1−ρ)|U|
+(cid:13)
+=|U| ln|U|−ln((1−ρ)|U|)+O(1/|U|) =|U|ln(1/(1−ρ))+O(1).
+(cid:4)
+(We use the standard bound for the Harmonic sum, i≤r1/i = lnr+γ +O(1/r),
+where γ is the Euler–Mascheroniconstant.)
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+
+Body Text:
+SIAMJ.SCI.COMPUT. (cid:2)c 2014SocietyforIndustrialandAppliedMathematics
+Vol.36,No.5,pp.C424–C452
+A SCALABLE GENERATIVE GRAPH MOD EL WITH COMMUNITY
+STRUCTURE∗
+TAMARA G. KOLDA†, ALI PINAR†, TODD PLANTE NGA†, AND C. SESHADHRI†
+Abstract. Network data is ubiquitous and growing, yet we lack realistic generative network
+modelsthatcanbecalibratedtomatchreal-worlddata. Therecentlyproposedblocktwo-levelErdo˝s–
+R´enyi(BTER)modelcanbetunedtocapturetwofundamental properties: degreedistributionand
+clusteringcoefficients. Thelatter isparticularlyimportant for reproducinggraphs withcommunity
+structure, such as social networks. In this paper, we compare BTER to other scalable models and
+showthatitgivesabetterfittorealdata. Weprovideascalab leimplementationthatrequiresonly
+O(dmax)storage,wheredmaxisthemaximumnumberofneighbo rsforasinglenode. Thegeneratoris
+triviallyparallelizable,andweshowresultsforaHadoopMapRe duceimplementationformodelinga
+real-worldWebgraphwithover4.6billionedges. Weproposeth attheBTERmodelcanbeusedasa
+graphgeneratorforbenchmarkingpurposesandprovideidealize ddegreedistributionsandclustering
+coefficientprofilesthatcanbetunedforuserspecifications.
+Keywords. graphgenerator,networkdata,blocktwo-leve lErd˝os–R´enyi(BTER)model,large-
+scalegraphbenchmarks
+AMS subject classifications. 05C80,05C82,90B15
+DOI. 10.1137/130914218
+1. Introduction. Network interaction data is now available from online social
+interactions, computer-to-computer communications, financial transactions, collabo-
+ration networks, telecommunications, and more. A m ajor obstacle to working in the
+field of network science is that access to data is restr icted due to a combination of
+security and privacy concerns; yet models, algorithm s, software, and hardware are
+struggling to keep pace with increasing demands for scalability and relevance. For
+these reasons, network science researchers need scalable generative models for large-
+scale graphs. Ideally, these generative models should capture salient features of the
+networks being modeled.
+Suppose we are givena graphrepresentationof ou r data set. We introduce basic
+terminologyforthoseunfamiliarwithgraphtheory. LetG=(V,E)beanundirected,
+unweighted graph. We let V denote the set of vertices or nodes of the graph, and we
+let E denote the set of edges where (i,j)∈ E means t here is an edge between nodes
+i and j or, equivalently, that nodes i and j are adjace nt. We assume that the graph
+is simple, meaning that the edges are undirected and unweighted and that there are
+no self-edges. LetV ={j |(i,j)∈E} denote the set ofnodes that areadjacentto i;
+i
+thenthedegree ofnodeiisd
+i
+=|V i|. Thetra(cid:2)ns(cid:3)itivity o rclusteringcoefficient ofnodei
+isdefinedasc
+i
+=|{(j,k)∈E |j,k ∈V i}|/ d 2i , andit isameasureoftheproportion
+of triangles that node i participates in compared to th e number of possible triangles
+∗Submittedtothejournal’sSoftwareandHigh-PerformanceComputingsectionMarch25,2013;
+accepted for publication (in revised form) March 28, 2014; published electronically September 25,
+2014. ThisworkwasfundedbytheGRAPHSProgramatDARPAandbytheAppliedMathematics
+ProgramattheU.S.DepartmentofEnergy. SandiaNationalLaboratoriesisamultiprogramlabora-
+torymanaged andoperated bySandiaCorporation,awhollyownedsubsidiaryofLockheed Martin
+Corporation, forthe U.S. Department of Energy’s National Nuclear Security Administrationunder
+contractDE-AC04-94AL85000.
+http://www.siam.org/journals/sisc/36-5/91421.html
+†Sandia National Laboratories, Livermore, CA 94551 (tgko lda@sandia.gov, apinar@sandia.gov,
+tplante@sandia.gov,scomand@sandia.gov).
+C424
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C425
+[50]. Roughly speaking, c captures the social cohesion around node i; for instance,
+i
+in a clique (i.e., a graph in which every node is adjace nt to every other node), every
+node has c =1.
+i
+Inthispaper,weconsiderhowtoreproducetwofun damentalpropertiesofgraphs:
+the degree distribution and the clustering coefficients by degree [49]. Let V =
+d
+{i|d =d}bethesetofnodesofdegreed,anddefinen =|V |. Thedegreedistribu-
+i d d
+tion is specified by the sequence {n d} d∈N. In most re al-world networks representing
+interaction data, there are a few nodes with high deg rees and many nodes with low
+degrees,with asmoothtransitionbetweenthem. Inot her words,the degreedistribu-
+tionisheavy-tailed,andthisfeaturehaslongbeenconsideredcriticalin(cid:4)distinguishing
+real networks from arbitrary sparse networks [2, 13, 43]. Let c = 1 c be the
+d nd i∈Vd i
+average clustering coefficient for nodes of degree d. Th e clustering coefficients by de-
+gree are specified by the sequence {c } . The clus tering coefficients of real-world
+d d∈N
+graphs are much higher than those of random graphs with the same degree distribu-
+tion [18]. Nonetheless, most generative models fail to match clustering coefficients of
+real-worldgraphs [42].
+In previous work by a subset of the authors, we introduce the block two-level
+Erdo˝s–R´enyi (BTER) model [44]. The BTER model can be tuned to capture both
+the degree distribution and degreewise clustering coeffi cients for real-worldnetworks.
+The inputs to the BTER model are the sequences {n } and {c } ; our goal is d d∈N d d∈N
+tocreateagraphwithsimilarbehaviorinthesemeasures. Todothis,BTERworksas
+follows. Thenodesaredividedintoaffinityblocks;seeF igure 1a. Thefactthatwecan
+infer community structure from local clustering coeffi cient measurements is justified
+inthe originalBTERpaper [44] andnowhasaddition al theoreticaljustificationsince
+it has recently been shown that triangle-rich graphs resemble unions of dense blocks
+[22]. Eachnode hasanassigneddegreeinsucha waythat, in expectation, the degree
+distribution matches what it specified by {n d} d∈N. For each node, the links are
+dividedbetweenlocallinkswithintheaffinityblock(P hase1inFigure 1b)andglobal
+links that may connect to any node (Phase 2 in Figur e 1c). The proportion of local
+linksdependsontheclusteringcoefficientsspecifiedby {c } . Edgesaregenerated
+d d∈N
+by choosingendpoints inaprobabilisticway,as isexplainedindetail furtheron. The
+goal of this paper is to explain the specifics of the model and provide a scalable
+implementation. We also provide additional evidence of the model’s usefulness.
+1.1. Contributions. TheBTERmodel[44]was previouslyintroducedasascal-
+able model that can reproduce degree distributions and clustering coefficients. The
+scalability is based on independent edge generation; i.e., there is no knowledge of
+previously generatededges in deciding on the next edg e. However,the original paper
+[44] did not specify implementation details and, more over, recommended an ad hoc
+procedure for some of the parameter choices. In this paper, we make the following
+contributions:
+• We provide a detailed reference implementatio n that clearly explains how to
+choose the BTER parameters to match the specified degree distribution and cluster-
+ing coefficient profile. We note that there is no iterat ive optimization to fit BTER;
+the parameters of the model are directly calculated fr om the inputs. The edges are
+generated independently and in an arbitrary order, s o the BTER generative model
+can potentially be used in streaming scenarios.
+• We present efficient data structures for a scalable implementation, requiring
+only O(d max) storage and O(logd max) operations per edge, where d
+max
+is the maxi-
+mum degree. Since our approach generates all edges independently, it can be easily
+parallelized. We provide examples demonstrating the scalability.
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C426 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+(a)Preprocessing: (b)Phase1: Locallinks (c)Phase2: Globallinks
+Distributionofnodesinto withineachaffinityblock. acrossaffinityblocks.
+affinityblocks.
+Fig. 1. BTER model phases [4 4].
+• We demonstrate that BTER gives good approx imations to the degree distri-
+butions and clustering coefficient behaviors of several large, heavy-tailed, real-world
+graphs. We consider examples from the Laboratory for Web Algorithms [30], in-
+cludinga graphwithover130millionnodes and4.6bi llionedges, the largestpublicly
+availablegraphofwhichweareaware. Wealsocompar eBTERtocompetingmethods
+on a pair of smaller graphs.
+• WeconsiderhowBTERmaybeusedforarbitrarybenchmarkingpurposeswhen
+there is notargetgraphto match. Since the model req uiresadegreedistributionand
+clusteringcoefficientprofileasinput,wefocusonhowt ogeneratethese. Inparticular,
+werecommendthegeneralizedlog-normaldistribution forthedegreesasanalternative
+to the standard power law.
+For very large graphs, the inputs can be expensive to compute, especially the
+clustering coefficients. However, we have recently pro posed a sampling method that
+scales to very large graphs [47, 25].
+1.2. Related work. Since the goal of this pape r is to focus on the implemen-
+tation and scalability of BTER, we limit our discussion to the most salient related
+models. A more thorough discussion of related work can be found in the paper that
+originally proposed the BTER model [44].
+Themajorityofgraphmodelsaddedgesoneatat imeinawaythateachrandom
+edge influences the formation of future edges, maki ng them inherently serial and
+therefore unscalable. The classic example is preferen tial attachment [2], but there
+are a variety of related models; see, e.g., [26, 29]. These models are more focused on
+capturing qualitative propertiesof graphsandtypically are difficult to matchto real-
+world data [42]. Perhaps the most relevant is [21], wh ich creates a graph with power
+law degree distribution and then “rewires” it to impr ove the clustering coefficients.
+The musketeer model starts with a given graph and then does multilevel rewiring
+to attempt to preserve certain features of the original [23]. Another related model,
+the clustering model proposed by Newman [39], assigns “individuals” to “groups”
+(a bipartite graph with individual and group nodes) and then creates a graph of
+connections between individuals by assigning connecti on probabilities to each group;
+in other words, each group is modeled as an Erd˝os–R´e nyigraph.
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C427
+A widely used model for modeling large-scale graphs is the stochastic Kronecker
+graph (SKG) model, also known as R-MAT [8, 28]. T he generation process is easily
+parallelized and can scale to very large graphs. Nota bly, SKG has been selected as
+thegeneratorfortheGraph500SupercomputerBench mark[20]andhasbeenusedin
+avarietyofotherstudies[14,32,35,34,19,15,33,24]. Unfortunately,SKGhassome
+drawbacks: (1) It can be extremely expensive to fit to real data (using KronFit, the
+SKGparameterfitting algorithmproposedbythe SKG inventors),andeventhen the
+fitisimperfect[28]; (2)itcangenerateonlylog-norma ltails(afterasuitableaddition
+of random noise) [46, 45], limiting the degree distribu tions that it can capture; and
+(3) most importantly, it rarely closes wedges, so the clustering coefficients are much
+smaller than what is produced in real data [42, 25].
+Another model of relevance is the Chung–Lu (CL ) model [10, 11, 1]. It is very
+similar to the edge-configuration model of Newman, Watts, and Strogatz [38]. Let
+d denote the desired degree for node i. In the CL mo del, the probability of an edge
+i
+is proportional to the product of the degrees of its endpoints; i.e., the probability
+of edge (i,j) is ∝ d d . Edges can be generated independently by picking endpoints
+i j
+proportional to their desired degrees. If all degrees ar e the same, CL reduces to the
+well-known Erdo˝s–R´enyi model [16]. The CL model is often used as a null model;
+for example, it is the basis of the modularity metric [40]. Graphs generated by the
+CL model and the SKG model are, in fact, very similar [41]. The advantage of the
+CL model is that it can be better tuned to real-world degree distributions. The
+disadvantage of the model is that, like SKG, it rarely closes wedges. CL occurs as a
+special case of BTER when Phase 1 is skipped (see se ction 3). The CL construction
+is a very important part of BTER and will be explai ned in more detail in the next
+section.
+2. Notation and background. Let G = (V, E) be an undirected and un-
+weightedgraph,whereV denotesthesetofverticesand Edenotesthesetofedges. We
+let n=|V| and m=|E| denote the total number of v ertices and edges, respectively.
+The set of node i’s neighbors and the degree of node i are, respectively,
+V ≡{j |(i,j)∈E} and d =|V |.
+i i i
+The set of degree-d nodes and the number of degree-d nodes are, respectively,
+V ={i|d =d} and n = |V |.
+d i d d
+The set {n } defines the degree distribution. Observ e that the degree distribution
+d
+specifies the total number of nodes and edges:
+(cid:5) (cid:5)
+1
+(2.1) n= n and m= d·n .
+d
+2
+d
+d d
+For convenience, we use the notation d =max{d |i∈V }.
+max i
+2.1. Clustering coefficients. We candiscusscl usteringcoefficientsintermsof
+wedges,closedwedges,andtriangles. Awedgeisapat hoflength2. Figure 2showsa
+wedge centeredatnode j; i.e., the pathi-j-k is awedge. We saywedgei-j-k is closed
+if (i,k) ∈ E; otherwise, the wedge is called open. A closed wed(cid:2)ge(cid:3)forms a triangle,
+i.e., a three-cycle. The number of wedges centered at node i is d 2i = d i(d
+i
+−1)/2.
+The clustering coefficient at node i is
+# of closed wedges centered at node i |{(j,k)∈E |j,k ∈V(i)}|
+c = = (cid:2) (cid:3) .
+i # wedges centered at node i di
+2
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C428 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+i
+j
+k
+Fig.2. Wedge centered at node j. The wedge is closed if (i,k)∈E.
+This is the proportion of closed wedges divided by the total number of wedges. For
+BTER, we are specifically interested in clustering coefficient per degree [50], defined
+as
+(cid:5)
+# of closed wedges centered at a node of degree d 1
+c = = c .
+d i
+# wedges centered at a node of deg ree d n
+d i∈Vd
+To summarize an entire graph, it is often convenient t o consider the global clustering
+coefficient (GCC) [50, 3], defined as
+# of closed wedges
+c= .
+# wedges
+Note that this is not the mean of the c ’s. Since every triangle corresponds to three i
+closed wedges, the number of closed wedges is three times the number of triangles.
+2.2. Erd˝os–R´enyi graphs. Asdescribedinsection 3,BTERusesErdo˝s–R´enyi
+tomodel itsaffinityblocks. AnErd˝os–R´enyigraph[16]onnverticeswithconnection
+probability ρ is a graph such that each pair of vertic es is independently connected
+with probability ρ. We refer to ρ as the connectivity. If ρ is a constant, we call this
+a dense Erdo˝s–R´enyi graph; if ρ = O(1/n), then we call this a sparse Erdo˝s–R´enyi
+graph.
+2.3. Chung-Lu graphs. BTER uses a variation on CL for its global links that
+span across affinity blocks. Here we explain salient details that are relevant to the
+implementation discussion.
+The CL model [10, 11, 1] approximates the proba bility that edge (i,j) exists by
+d d
+Pr((i,j)∈E)= i j,
+2m
+where d
+i
+indicates the desired degree of node i. We ca n perform anindependent coin
+flip for each of the possible n2 edges, but this is too e xpensive. We consider a “fast”
+version of the CL model that generates edges by ind ependently choosing endpoints
+proportional to their degrees. Rather than doing an in dependent coin flip for each of
+n2 possible edges, we can do 2m coin flips to pick two random endpoints per edge.
+Each endpoint is picked independently such that the probability of picking node i is
+Pr(i)=d i/2m.
+Hence, the probability (or, more precisely, the expec ted value) of edge (i,j) after
+picking m edges is
+d d
+Pr((i,j)∈E)=m·2·Pr(i)·Pr(j)= i j.
+2m
+The factor of 2 is because (i,j) and (j,i) are equivalen t for an undirected graph.
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C429
+LetD correspondtothe randomvariablethatisthe degreeofnode ifora single
+i
+graph generated according to this procedure. In the “ fast” version, it is easy to see
+that the value of D is Poisson distributed with mea n d [15], so E(D ) = d , i.e.,
+i i i i
+the expected value of D is d . Note that CL admits nonintegral desired degrees. If
+i i
+the desired degree is d = 3.5, then E(D ) = 3.5 even though every realization D is
+i i i
+integral.
+Despite the variation in individual degrees, the d egree distribution is usually a
+good match to the desired one because there is spill-o ver from adjacent degrees. For
+instance, some nodes that were expected to become degree 4 are instead degree 5
+and vice versa. This will not be the case if there are gaps in the degree distribution
+(i.e., n ,n (cid:5) 0 and n = 0). Also, degree-1 nodes may pose a particular problem.
+3 5 4
+According to the calculations in [15], approximately 36% of the pool of potential
+degree-1nodes will not be selected (i.e., have degreeze ro)and another28%will have
+degree 2 or larger. To counteract these problems, [15 ] proposes to increase the pool
+of potential degree-1 nodes while keeping the total probability of potential degree-1
+nodesconstant. Specifically,we“blowup”thesetofdegree-1nodesbyafactorβ ≥1.
+Hence, weadd(β−1)·n
+1
+nodeswithdesireddegreed
+1
+, butweadjusttheprobability
+of picking any individual degree-1 node so that
+(cid:6)
+d /2m if d ≥ 2,
+i i
+Pr(i)=
+β−1/2m if d =1.
+i
+The BTER algorithmhas a similar issue with degree-1 nodes, so the reference imple-
+mentation includes the option to specify a blowup fac tor, β.
+Finally, we note that since each endpoint and each edge is picked independently,
+a graph generated according to fast CL may contain self-edges and repeat edges. We
+have ignored these details in the discussion above because the practical impact has
+been small in our experiments (we simply discard such edges).
+3. BTER generative graph model. We give a high-level overview of BTER
+in section 3.1 and discuss the challenges of a scalable implementation in section 3.2.
+Theremainderofthesectionaddressestheproposedso lutionstothesechallengesand
+presents the implementation.
+3.1. The BTER model. BTER is based on th e premise that a graph with a
+heavy-tailed degree distribution and high clustering c oefficients must contain dense
+Erdo˝s–R´enyi blocks; moreover, the distribution of the sizes of those groups follows
+the same type of distribution of the degrees [44]. Therefore, BTER organizes nodes
+intoaffinityblockssuchthatnodeswithinthe sameaffi nity blockhaveamuchhigher
+chanceofbeingconnectedthannodesatrandom,butB TERalsobehavesliketheCL
+model in that it is able to match an arbitrary degree d istribution.
+The BTER model requires two user-specified inpu ts: (1) the desired degree dis-
+tribution, {n } , and (2) the desired clustering co efficients by degree, {c } .
+d d∈N d d∈N
+These quantities maybe measurementsfromanexisting graphorset arbitrarily,e.g.,
+for benchmark purposes. (We note that the original d escription in [44] did not take
+theoriginalclusteringcoefficientsbutratherafunction todeterminetheconnectivity.)
+Thedesirednumberofnodesandedgescanbecomput edfromthedegreedistribution
+per (2.1). There are three main steps to the graph generation, as described below.
+The steps are depicted in Figure 1.
+Preprocessing. Imagine starting with n isolated ve rtices. Each vertex is assigned
+adegree,basedonthedegreedistribution{n }. Sowe arbitrarilyassignn verticesto
+d 1
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C430 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+have degree 1, n to have degree 2, etc. We then partition the n vertices into affinity
+2
+blocks. For reasons that will be explained in the detai ls that follow, an affinity block
+ideally contains d + 1 vertices that are assigned deg ree d. The idea is that each
+affinity block can potentially form a clique, in which case every node in that block
+has a clustering coefficient of 1. Note that there are many small blocks with vertices
+of low degree, and a few large blocks of high-degree vertices. At this stage, no edges
+have been added.
+Phase 1. This phase adds edges within eachaffini ty block. Eachblock is a dense
+Erdo˝s–R´enyi graph, where the density depends on the size of the block. For a block
+involving degree-d vertices, the density is determined based on c . We show how
+d
+to choose the connectivity within each block to ensure that each vertex achieves its
+desiredclustering coefficientandis notincidentto mor eedgesthanits desireddegree
+(in expectation).
+Phase 2. Thisphaseaddsedgesbetweenthe block s. Considersomevertexi with
+anassigneddegreed . Supposeitisalreadyincidentto d(cid:5) edgesfromPhase1. Weset
+i i
+w =d −d(cid:5) to be the excess degree1 of i. We must create e edges incident to vertex
+i i i i
+i to satisfy its degree requirement. We construct a C L graph with degree sequence
+{w }n to complete the graph construction.
+i i=1
+3.2. Developing a scalable implementation. Our goal is to show that it
+is possible to have a highly scalable implementation of the BTER method. The
+main goal is to have independent edge insertions so th at the edge generation can be
+parallelized.
+Asstated,Phase2edgeinsertionsmusthappenaft erPhase1,becauseweneedto
+knowtheexcessdegrees. Weparallelizethisprocessbycomputingtheexpected excess
+degree. Givenalltheinputparameters,wecanprecomputetheexpectedexcessdegree
+for anyvertex (this requirescompactrepresentationsa nddata structures)during the
+preprocessing. Fromthis, we canprecompute the tota l number of Phase1 andPhase
+2 edges.
+Toperformaparalleledgeinsertion,wefirstdeciderandomlywhetherthisshould
+be a Phase 1 or Phase 2 edge. For a Phase 1 edge, we select a random affinity block
+(with the appropriateprobability)andcreateanedge betweentwodistinct randomly
+selected block members. For a Phase 2 edge, we perfo rm a CL edge insertion based
+onexpectedexcessdegrees. Becauseeveryedgeisgene ratedindependently, therewill
+be duplicates, but these are discarded in the final graph.
+Given the structure of parallel edge insertion, the main challenges in developing
+a scalable implementation are as follows:
+• Preprocessing data structures. A na¨ıve implem entation of the preprocessing
+step would require O(n) variables and storag e by storing the Phase 1 and
+Phase 2 degrees of every node. We design compact representations and data
+structures for the affinity blocks. This contains all the relevant information
+with minimal storage.
+• Repeats in Phase 1. Independent edge genera tion in Phase 1 leads to many
+repeatededgeswithout enoughdistinct edges, andthis affects the overallde-
+greedistributionwhenedgerepeatsareremoved. We showhowtodetermine
+the number of extra Phase 1 edges to be inserted to rectify this.
+1Thisdefinitionofexcessdegreeshouldnotbeconfusedwit hthe“excessdegreedistribution”of
+Newman[37].
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C431
+• Thedegree-1problemofPhase2. AparallelimplementationofPhase2results
+in numerous degree-1 vertices becoming isola ted. We use a fix for this dis-
+cussed in section 2.3, which is different than t he one proposedin the original
+BTER paper [44].
+Once these issues are addressed, we have an embarrassingly parallel edge generation
+algorithmthatrequiresonlyO(logd )workperedge. Theremainderofthissection
+max
+givesanin-depthbutinformalpresentationofourimple mentation. Detailedalgorithm
+specifications at pseudocode level are also provided.
+3.3. Preprocessing. Let d
+i
+denote the (desired ) total degree of vertex i and
+w
+i
+denote its (desired) excess degree. For convenien ce, the nodes are indexed by
+increasingdegreeexcept fordegree-1nodes,whicharein dexedlast. Hence,ifd ,d ≥2
+i j
+and i<j, then d ≤d . For an example, see the numb ering in Figure 3.
+i j
+Degree1 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 ··· 73
+Degree2 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+Degree3 21 22 23 24 25 26 27 28 29 30
+Degree4 31 32 33 34 35 36
+Degree5 37 38 39 40
+Degree6 41 42 43
+Degree7 44 45
+Degree8 46
+Degree9 47
+Fig.3. Example ofaffinityblocksandgroupsforagraph o f73nodes. Connectednodesdenote
+the same affinity block. The same color denotes the same grou p membership. (See online version
+for color.)
+In the preprocessing phase, we assign nodes to affi nity blocks. We let b
+i
+denote
+the block assignmentof node i. For the assignment to affinity blocks, degree-1 nodes
+are ignored. The remaining nodes are assignedto affin ity blocks in order (of degree).
+A homogeneous affinity block has d+1 nodes of degree d. In Figure 3, the blocks
+are denoted by colored ovals, and 4-5-6 is a homogeneous block. The vast majority
+of (low-degree) nodes are assigned to homogeneous a ffinity blocks. However, there
+are not alwaysenoughnodes of degree d to fill in a ho mogeneousblock; therefore, we
+also have a few (at most d ) heterogeneous affinity blocks with nodes of different
+max
+degrees. For instance, in Figure 3, 19-20-21is a hetero geneous block.
+ForPhase1,weleti denotethestartingindexofblockb,d denotetheminimum
+b b
+degree of block b, ρ denote its desired connectivity, n denote the number of nodes,
+b b
+m
+b
+denote the desired number of edges in the affinity block, and w
+b
+denote the block
+weight,whichisthenumberofedgestobeinsertedtha taccountsforexpectedrepeats
+(see section 3.6). Not all this information needs to b e saved. To generate Phase 1
+edges, we need only i , n , and w to know the nodes that are involved with each
+b b b
+block and how many edges to insert. The process will insert w edges which will,
+b
+in expectation, produce m
+b
+unique edges so that ea ch node w(cid:2)ith(cid:3)in the block will
+have expected local (i.e., inside the affinity block) de gree m / nb . However, these
+b 2
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C432 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+threevaluesarenotwhatarestoredsincewecanstoreevenlessinformationformore
+efficiency.
+We can compress the data further since all affini ty blocks of the same size and
+minimum degree can be grouped together into an affi nity group—all blocks in the
+same group share the same block size and weight. In Figure 3, all nodes with the
+same color are in the same affinity group, e.g., 1–21 are in the same affinity group,
+likewise nodes 22–33, etc. The information needed t o store an affinity group boils
+downtofouritemsofinformation: i , the startinginde xofthegroup;b , thenumber
+g g
+ofblocksinthegroup;n ,thesizeofeachblock;andw ,thetotalweightofallblocks
+g g
+in the group. The maximum number of groups is bounded by d , so we store at
+max
+most 4·d values.
+max
+Phase2needsto builda CLmodel usingthe exces sdegrees,{w i}. We note that
+these values are computed in advance and are fixed throughout the entire process.
+We can exploit the homogeneity of nodes of the sam e degree to save space for this
+calculationaswell. Inablockwhereallnodeshavethesamedegree,wesaythenodes
+arebulk nodes. Ina block with nodes ofdiffering degrees,all nodes with degree equal
+to the minimum degree are still bulk nodes. We refer t o the remaining nodes as filler
+nodes. InFigure 3,nodes1–20aredegree-2bulknodes ,nodes22–30aredegree-3bulk
+nodes, nodes 34–36 are degree-4 bulk nodes, and so o n. Node 21 is a degree-3 filler
+node, nodes 31–33 are degree-4 filler nodes, etc. It is possible to have either no bulk
+nodes or no filler nodes for a given degree. In Figure 3, there are no filler degree-2
+nodes and no bulk degree-6 nodes. Observe that all b ulk nodes of degree d (for any
+d) are in blocks of the same size and connectivity (i .e., the same internal degree);
+therefore, they all have the same excess degree. The fi ller nodes of degree d (for any
+d)participateinatmostoneblockandsoallhavethesameexcessdegree. Thismeans
+that there are two possible values for excess degree for the set of nodes with desired
+degree d. Hence, to generate Phase 2 links we need ju st five values for degree d: nfi dll
+and nbulk, the number of filler and bulk nodes; wfill a nd wbulk, the total weight for
+d d d
+filler nodes andfor bulks nodes, whichis exactlythe to tal excessdegreeforeach; and
+the starting index i . Technically, the starting index can be computed from {n },
+d d
+but it reduces the work to store these indices explicitly. However, we actually do not
+store nb dulk since it can be computed using n
+d
+and nfi dll . Additionally, because of how
+they areused, itismoreconvenientto storew
+d
+=w dfill +w dbulk andr
+d
+=w dfill/w
+d
+than
+wfill and wbulk. Hence, the total working storage for P hase 2 information is 5·d
+d d max
+values.
+The total storage(including inputs) needed by the generationroutine is 10·d
+max
+values (the sequence {c } is not retained). It is possible to modify the core data
+d
+structures to store only the distinct degrees instead o f maintaining a continuum of
+degreesthroughd . Thiswouldchangethestorager equirementtoO(d )instead
+max uniq
+of O(d ), where d is the number of distinct degr ees in the graph. However, we
+max uniq
+present our ideas based on O(d ) storage for clarity of presentation.
+max
+For convenience, notation is described in Table 1. The node- and block-level
+variables are not used in the algorithms.
+3.4. Preprocessing algorithm. The BTER setup procedure is described in
+Algorithm 1. Theinputsarethe degreedistribution, { n d}; theclusteringcoefficients
+per degree, {c d}; and the blowup factor for degree-1 n odes, β.
+The method precomputes the index for the first n ode of each degree, {i }, and
+d
+the number of nodes with degree greater than the deg ree d, {n(cid:5) }. The latter is not
+d
+saved after the preprocessing phase.
+Thedegree-1nodesarehandledinaspecialway. Alldegree-1nodesaredesignated
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C433
+Table 1
+Description of variables. A (cid:2) symbol in the second col umn indicates that this variable is
+explicitly computed and stored for use by the sampling procedur e; a × symbol means the variable is
+not explicitly computed. The last column givesthe formula to d erive it from the stored values.
+Scalars (cid:2)
+n Total numberofnodes n= (cid:2)n
+d
+m Total numberofedges m= 1 d·n
+2 d
+w Total numberofedgestoinsert w=w(1)+w(2)
+dmax (cid:2) Largest(desired)degree (cid:2)
+bmax × Total numberofaffinityblocks bmax= gbg
+gmax (cid:2) Total numberofaffinitygroups gmax≤dmax
+β (cid:2) Blowupfactorfordegree-1vertices
+Node level i=1,...,n
+di × Degree(desired)ofnodei
+bi × Blockidfordegreei
+wi × Excess degreeofnodei wi= 1 2[di−(ρ bi·d bi)]
+Block level b=1,...,bmax
+d × Minimumdegreeinblockb
+b √
+nρ b
+b
+×
+×
+C No un mn be ec rtiv ofit ny oo df ed se ig nre be lob
+ckb
+ρ nb b= =d3 bc +(cid:3)db
+1(cid:4)
+m
+wb
+×
+×
+N Wu em igb hter oo ff bu lon ci kqu beedgesinblockb wm
+b
+==(cid:3)ρ
+nb
+b(cid:4)n
+2
+lb
+n(1/(1−ρ ))
+b b 2 b
+Degree level d=1,...,dmax
+n (cid:2) Numberofnodes ofdegreed
+d
+c (cid:2) Meanclusteringcoefficient fornodes ofdegr eed
+d
+i d (cid:2) Indexoffirstdegreeofdegreed (cid:2)
+nn fi(cid:3) d
+ll (cid:2)
+N Nu um mb be er ro of fn fio lld ne os do ef sd oe fg dre ee grg er eea dterthand n(cid:3) d= d(cid:2)>dn(cid:3) d(cid:2)
+nbd
+ulk Numberofbulknodesofdegreed nbulk=n −nfill
+wd
+(cid:2) Excess degreeofnodes ofdegreed
+d d d
+d
+r (cid:2) Ratiooffillexcessdegreefordegreed d
+wfill Excess degreeoffillnodes ofdegreed wfill=r ·w
+wbd
+ulk Excess degreeofbulknodes ofdegreed
+wd bulk=d
+w
+−d
+wfill
+d d d d
+Group level g=1,...,gmax
+ig (cid:2) Indexoffirstnodeingroupg
+bg (cid:2) Numberofaffinityblocksingroupg
+ng (cid:2) Numberofnodes perblockingroupg
+wg (cid:2) Weightofgroupg (includingduplicateedges )
+Phase level k=1,2 (cid:2)
+w(k) Weightofphasek ww( (1 2) )= =(cid:2)g wwg
+d
+as “fill” nodes. The number of candidate degree-1 nod es may be increased using the
+blowupfactor,β. However,iftheblowupisused,them ajorityofthe(desired)degree-
+1 nodes will ultimately have degree 0 and can be remo ved in postprocessing.
+Themainloopwalksthrougheachdegree,determi ningtheinformationforPhases
+1 and 2. It first allocates degree-d nodes as fill nodes for the last incomplete block, if
+needed. The number of nodes necessary to complete the last incomplete block in the
+previous groupis denoted by nfi ∗ll. The excess degreeo f any fill nodes depends on the
+internaldegreeofthe lastincomplete block, denotedb y d∗. Theexcessdegreeisused
+to determine the weight of the degree-d fill nodes for P hase 2, wfill.
+d
+If more nodes of degree d remain, these are allocated as bulk nodes, and a new
+group is formed. The number of bulk nodes of degree d is denoted by nbulk. For the
+d
+new group, we determine the index of the first node, the number of blocks, and the
+size of each block. The very last block of the very la st group is special because the
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C435
+Algorithm 1 BTER setup.
+1: procedure bter setup({n d}, {c d}, β)
+Number nodes from least degree to greatest, except deg ree-1 nodes are last
+2: i 2 ←1
+3: for d=3,...,d max do
+4: i d ←i d−1+n d−1
+5: end for
+6: i 1 ←i dmax +n dmax
+Compute number of nodes with degree greater than d
+7: for d=1,(cid:2)...,d max do
+8: n(cid:3) d ← d(cid:2)>dn(cid:3) d(cid:2)
+9: end for
+Handle degree-1 nodes
+10: nfi 1ll ←β·n 1, w 1 ← 1 2n 1, r 1 ←1
+Main loop
+11: g←0, nfi ∗ll ←0, d∗ ←0
+12: for d=2,...,d max do
+13: if nfi ∗ll >0 then (cid:3) Try tofill inco mplete block from current group
+14: nfi dll ←min(nfi ∗ll,n d)
+15: nfi ∗ll ←nfi ∗ll−nfi dll
+16: w dfill← 1 2nfi dll(d−d∗)
+17: else
+18: nfill ←0, wfill ←0
+19:
+endd
+if
+d
+20: nb dulk←n d−nfi dll
+21: if nbulk>0 then (cid:3) Create a new group for degree-d bulk nodes
+d
+22: g←g+1
+23: i g ←i d+nfi dll
+24: b g ←(cid:3)nb dulk/(d+1)(cid:4)
+25: n g ←d+1
+26: if b g·(d+1)>(n(cid:3) d+nb dulk) then (cid:3) Special handling of last group
+27: if b g (cid:5)=1 then throw error
+28: n g ←(n(cid:3) d+nb dulk)
+29: endif √
+30: ρ∗ ← 3c d
+31: d∗ ←(n g−1)·ρ∗
+32: w dbulk← 1 2nb dulk·(d−d∗)
+33: w g ←b g· 1 2n g(n g−1)·log(1/1−ρ∗)
+34: nfi ∗ll ←(b g·n g)−nb dulk
+35: else
+36: wbulk←0
+d
+37: endif
+3 38 9:
+:
+endw fd o←
+r
+w dfill+w dbulk, r d ←w dfill/w d
+40: return {i d},{w d},{r d},{nfi dll},{w g},{i g},{ b g},{n g}
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C436 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+1400
+1200
+1000
+800
+600
+400
+200
+0
+5 10 15 20 25 3 0 35 40
+Unique Items
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycneuqerF
+n = 10, ρ = 0.5, w = 31.1916
+b b b
+Ideal=22.5
+Average
+Fig.4. Distributionof the number of unique edges on 10,000 random trials.
+From (3.1), we can determ(cid:4)ine the number of extra edges neede(cid:4)d in Phase 1.
+Specifically, we insert w(1) = w edges to get a total of m(1) = m unique
+b b b b
+Phase 1 edges. We let w be the sum of the weights of all its constituent blocks. To
+g
+generate a Phase 1 edge, the process for a single edge proceeds as follows:
+1. Pick an affinity group randomly, where the probability of picking group g is
+proportional to its weight, w .
+g
+2. Picka blockwithin the affinity groupuniformlyatrandom(all blockswithin
+the same group have the same weight).
+3. Pick two nodes uniformly at random without replacement2 from the selected
+block—these two nodes form an edge.
+ThefirststepisaweightedsamplingstepandrequiresO(logg )work,whereg ≤
+max max
+d is the total number of affinity groups. The second and third steps are constant
+max
+time operations.
+3.6. Phase 2. Phase 2 is simply applying the CL model on the expected excess
+degrees. In creating an edge, we choose two nodes independently. Those nodes are
+chosenproportionalto their excessdegree. Fornode i ingroupb, let w = 1[d −(ρ ·
+i 2 i b
+d b)] denote half its exc(cid:4)ess degree. The total number of edges that should be inserted
+in Phase 2 is w(2) = w . Ignoring duplicate edges (which are fairly rare in our
+i i
+experiments), we have m(2) =w(2) Phase 2 edges.
+(cid:4) Let nfi dll and nb dulk be the number of filler and bulk nodes of degree d, let w d =
+w be the weight of all degree-d nodes, and let r be the proportion that are
+i∈Vd i d
+filler nodes. Inserting a Phase 2 edge proceeds as follows:
+1. Pick degree d, where the probability of picking degree d is proportional to
+w .
+d
+2. Pick between filler and bulk nodes by selecting a uniform random number
+x∈[0,1] and choosing filler if x<r and bulk otherwise.
+d
+2The terminology “without replacement” means that the first node is selected uniformly at
+randomfromthen nodesinblockbandthesecondnodeisselecteduniformlyatrandomfromthe
+b
+remaining n −1nodes inblockb.
+b
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C437
+3. Pick a filler or bulk node (as determined in step 2) of degree d, uniformly at
+random.
+The first step is a weighted sampling step and required O(log(d )) work, while the
+max
+other two steps are constant time operations.
+OnecomplicationinPhase2isthatgetting thecorrectnumberofdegree-1nodes
+poses a problem—approximately36%of the pool of potential degree-1nodes will not
+be selected and another 28% will have degree 2 or lar ger. A fix for this problem has
+been proposed in [15], which involves increasing the p ool of degree-1 nodes, without
+changingthe expected number ofedges that will be co nnectedto these vertices. This
+increase in the pool size is controlledby the “blowupf actor,” β ≥1. This is included
+in the setup described in Algorithm 1 (line 10).
+3.7. Independent edge generation. Lastly, we pull everything together to
+explain the independent edge generation. We insert a total of w =w(1)+w(2) edges,
+flipping a weighted coin for each edge to determine if it is Phase 1 or Phase 2. We
+expect to generate a total of m=m(1)+m(2) edges.
+Generating the edges is extremely inexpensive: O (log(d )) per edge. The ex- max
+pensive step is deduplication, where extra copies of repeated edges are removed. The
+same difficulty exists for the current Graph 500 (SKG) benchmark. Some may argue
+that duplicate edges are a useful feature since real dat a also has duplicates, but it is
+not clear that the duplication rates are similar to thos e observed in real data.
+3.8. BTER sampling implementation. BTER edge generation is shown in
+Algorithm 2. The procedure Random Sample does a weighted sampling according
+toaspecifieddiscretedistribution. Forpbins,thecost isO(log(p)). Foreachedge,we
+randomly select between the phases using a weighted coin. A Phase 1 edge requires
+one sample from a discrete distribution of size g and three additional random
+max
+values drawn uniformly from [0,1]. A Phase 2 edge requires two samples from a
+discrete distribution of size d
+max
+and four additional r andom values drawnuniformly
+from[0,1]. Sinceg ≤d , anupperboundonthe costperedgeisthe costofone
+max max
+discrete randomsample ona distributionof size d plus four randomvalues drawn
+max
+uniformly from [0,1].
+In Algorithm 2, we generate each edge independently. It may also be possible
+to “bulk” the computations by first determining the total number of edges for each
+phase and perform the computation for each phase s eparately. Within each phase,
+the procedure itself can be easily vectorized to boos t runtime performance, as in
+MATLAB.
+3.9. Edge deduplication. Any method can be used for deduplication. In gen-
+eral, the simplest procedure is to hash the edges in such a way that (i,j) and (j,i)
+hash to the same key. Then it is easy enough to sort each bucket to remove dupli-
+cates. In a parallel environment, since we are hashing by edge and not vertex, there
+should not be load balancing problems. In fact, hash ing by a single endpoint is not
+recommended because of the heavy-tailed nature of th e graph.
+3.10. Implementations. We have a reference implementation in MATLAB
+that is available at http://www.sandia.gov/∼tgkolda/ feastpack/. We have also im-
+plemented the method in Hadoop MapReduce and u se this version in some of our
+experiments. Since the BTER algorithm generates edges independently, map tasks
+canperformall the workofcreating edges, andreduce tasks simply removeduplicate
+edges; hence, the implementation runs as a single Ma pReduce job. Each map task
+is given the desired degree and clustering coefficient, which is sufficient to compute
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C438 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+Algorithm 2 BTER sample.
+1: procedure (cid:2)bter sample({ (cid:2)n d},{i d},{w d},{r d},{ nfi dll},{w g},{i g},{b g},{n g})
+2 3:
+:
+w E(1 ←) ←
+∅
+gw g, w(2) ← w d, w←w(1)+w(2)
+4: for j =1,...,w do
+5: r∼U[0,1]
+6: if r<w(1)/w then
+7: E ←E ∪ bter sample phase1({w g},{i g },{b g},{n g})
+8: else
+9: E ←E ∪ bter sample phase2({w d},{r d },{n d},{nfi dll},{i d})
+10: endif
+11: end for
+12: return E
+13: procedure bter sample phase1({w g},{i g},{b g} ,{n g})
+14: g← random sample({w g}) (cid:3) Choose group
+15: r 1 ∼U[0,1], δ=i g+(cid:10)r 1·b g(cid:11)·n g (cid:3) Ch oose block and computeits offset
+16: r 2 ∼U[0,1], i←(cid:10)r 2·n g(cid:11)+δ (cid:3) Choose 1st node
+17: r 3 ∼U[0,1], j ←(cid:10)r 3·(n g−1)(cid:11)+δ (cid:3) Choose 2nd node
+18: if j ≥i then
+19: j ←j+1
+20: end if
+21: return (i,j)
+22: procedure bter sample phase2({w d},{r d},{n d} ,{nfi dll},{i d})
+23: i← bter sample phase2 node({w d},{r d},{n d },{nfi dll},{i d})
+24: j ← bter sample phase2 node({w d},{r d},{n d},{nfi dll},{i d})
+25: return (i,j)
+26: procedure bter sample phase2 node({w d},{r d} ,{n d},{nfi dll},{i d})
+2 27 8:
+:
+d
+r
+1← ∼r Ua [0n ,d 1o ],m
+r
+2sa ∼m Upl [0e ,( 1{ ]w d}) (cid:3) Choose degree
+29: if r 1 <r d then
+30: i←(cid:10)r 2·nfi dll(cid:11)+i d (cid:3) Fill node
+31: else
+32: i←(cid:10)r 2·(n d−nfi dll)(cid:11)+(i d+nfi dll) (cid:3) Bulk node
+33: end if
+34: return i
+affinity blocks and sampling probabilities. Each map task uses a different seed for
+random number generation used in creating edges. Map tasks are assigned a fixed
+number of edges to generate. The default is one millio n edges, so a graph of w edges
+requiresw/106 maptasks. ThereisnoHDFSinputfile forthemaptasks;instead,we
+wrote a subclass of org.apache.hadoop.mapreduc e.InputFormat that causes a
+map task to generate a given number of records. For each edge, the map emits a
+key-value pair consisting of a hash value for the edge (based on the two endpoints)
+and the endpoints. Note that there is no assignmen t of specific nodes to specific
+map or reduce tasks. The reducer tasks collect edges with the same hash value and
+remove any duplicates before emitting the final list of all edges. We enable Hadoop
+compression between the map and reduce phases for f aster performance.
+4. Numericalcomparisons. Weconsiderthepe rformanceofBTERonvarious
+real-world data sets, including what is currently the l argest publicly available graph
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+. 511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C439
+modeled in the sense of matching degree distribution. We provide additional plots in
+thesupplementaryonlinematerials,specifically,log-bin neddataaswellascumulative
+degree distributions.
+4.1. Small data. InFigure 5, we presentcompa risonsof BTERwith the state-
+of-the-art scalable generative models SKG [8, 28] and CL [1, 10, 11, 15] on two small
+data sets available from SNAP [48]. We use SKG bec ause it is the current choice as
+the Graph 500 generator [20]. We omit details here and instead refer the reader to
+the references listed above for details of the method and to [46, 45] for an in-depth
+analysis and discussion of problems with SKG. The C L model has been described in
+section 2.3. We treat all edges as undirected and re move any duplicate edges and
+loops. The graphca-AstroPhis acollaborationnetwor kbasedon124months ofdata
+from the astrophysics section of the arXiv preprint server; it has 9,987 nodes and
+25,973 edges. The graph soc-Epinions1 is a who-trusts-whom online social (review)
+network from the Epinions website with 75,879 nodes and 405,740 edges.
+The parametersofSKGarefrom[28]. The inputt o CL isthe degreedistribution
+of the real graph and a blowup factor of β = 10 [1 5]. The inputs to BTER are
+the degree distribution and clustering coefficients per degree (computed exactly by
+counting all wedges and triangles) of the real graph and a blowup factor of β = 10.
+Timings are not reported as they are negligible for all three methods.
+Degreedistribution. Thedegreedistributionsforth eoriginalgraphsandthemod-
+els are shown in Figures 5a and 5d. SKG is known to have oscillations in the degree
+distribution [46, 45], and these oscillations are easily visible in Figure 5d. The os-
+cillations are correctable with an appropriate addition of noise [46, 45] (not shown),
+but even then SKG tends to overestimate the low-degree nodes and miss the highest
+degree nodes. In contrast, both CL and BTER closely match the real data.
+Clustering coefficients. The clustering coefficient s per degree for the original
+graphs and the models are shown in Figures 5a and 5e. The SKG graph model
+has no inherent mechanism for closing triangles and creating a community structure.
+Although a few triangles may close at random, they are insufficient for the SKG-
+generated graph to match the clustering coefficients i n the real data. The situation
+for CL is similar to that for SKG—there is no reason for wedges to close. BTER, on
+the other hand, provides a much closer match to the r eal data.
+Eigenvaluesofadjacencymatrix. Weshowthetop50leadingeigenvalues(inmag-
+nitude) of the adjacency matrix in Figures 5c and 5f. BTER provides a much closer
+match to the real data—especially the first few eigen values. Under certain circum-
+stances, matchingthe degreedistributionshouldprodu ceamatchineigenvalues[31].
+However, based on the observation that the eigenvalu es of a graph with community
+structurearelargerthanthoseofthe CLgraphwiththe samedegreedistribution, we
+conjecture that graphs with community structure require that the triangle structure
+also be matched to obtain a good fit for the eigenvalu es.
+4.2. Large data. We demonstrate that BTER is able to fit large-scale real-
+world data. We do not compare BTER to SKG because it is not possible to fit the
+parametersforsuchlargegraphs. WedonotcompareB TERtotheCLmodelbecause
+we can easily explain the performance: its match in t erms of the degree distribution
+is nearly identical to that of BTER, and its clusterin g coefficients are close to zero
+for the small data. The data sets are described in Table 2(a). We treat all edges as
+undirectedandremoveanyduplicateedgesandloops. Weobtainedreal-worldgraphs
+from the Laboratory for Web Algorithms [30], which compressed the graphs using
+LLP and WebGraph [7, 5]. Briefly, the networks are d escribed as follows:
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C440 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+104
+103
+102
+101
+100
+100 101 102
+Degree
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+tnuoC
+1
+ca−HepTh
+BTER
+SKG
+0.8
+CL
+0.6
+0.4
+0.2
+0
+100 101 102
+Degree
+(a)Degreedistributionfor
+ca-HepTh.
+tneiciffeoC
+gniretsulC
+35
+ca−HepTh
+BTER
+SKG 30
+CL
+25
+20
+15
+10
+5
+0 20 40
+Eigenvalue
+(b)Clusteringcoefficients for
+ca-HepTh.
+edutingaM
+ca−HepTh
+BTER
+SKG
+CL
+(c)Leadingadjacency matrix
+eigenvalues forca-HepTh.
+105
+104
+103
+102
+101
+100
+100 101 102 103 104
+Degree
+tnuoC
+1
+soc−Epinions1
+BTER
+SKG 0.8
+CL
+0.6
+0.4
+0.2
+0
+100 101 102 103 104
+Degree
+(d)Degreedistributionfor
+soc-Epinions1.
+tneiciffeoC
+gniretsulC
+250
+soc−Epinions1
+BTER
+SKG 200
+CL
+150
+100
+50
+0
+0 20 40
+Eigenvalue
+(e)Clusteringcoefficients for
+soc-Epinions1.
+edutingaM
+soc−Epinions1
+BTER
+SKG
+CL
+(f)Leadingadjacencymatrix
+eigenvalues forsoc-Epinions1.
+Fig.5. Comparison of CL, SKG, and BTER on small graphs.
+• amazon-2008 [7, 5]: A graph describing similarity among books as reported
+by the Amazon store.
+• ljournal-2008[9,7,5]: NodesrepresentusersonLiveJournal. Nodexconnects
+to node y if x registered y as a friend.
+• hollywood-2011[7, 5]: This is a graphof actors. Twoactors arejoined by an
+edge whenever they appear in a movie together.
+• twitter-2010 [27, 7, 5]: Nodes are Twitter users, and node x links to node y
+if y follows x.
+• uk-union-2006-06-2007-05 (shortened to uk-union) [6, 7, 5]: Links between
+Web pages on the .uk domain. We ignore the time labeling on the links.
+To the best of our knowledge, uk-union is the largest publicly available graph.
+The smaller graphs(amazon-2008,ljournal-2008,hollywood-2011)are those with
+up to roughly100Medges. These can be easily processedusing MATLAB on an SGI
+Altix UV 10 with 32 cores (4 Xeon 8-core 2.0GHz processors) and 512 GB DDR3
+memory. None of the parallel capabilities of MATLAB are enabled for these studies.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C441
+Table 2
+Network characteristics of original and BTER-generated graphs.
+Graph |V| |E| dmax davg GCC
+amazon-2008 1M 4M 1,077 10 0.260
+ljournal-2008 5M 50M 19,432 18 0.124
+hollywood-2011 2M 114M 13,107 115 0.175
+twitter-2010 40M 1,202M 2,997,487 60 0.001
+uk-union 122M 4,659M 6,366,528 76 0.007
+(a)Largedatasetproperties .
+Graph |V| |E| dmax davg GCC Gen. Dedup.
+amazon-2008 1M 4M 1,052 10 0.253 2.27s 9.25s
+ljournal-2008 5M 49M 18,510 19 0.127 33.81s 126.40s
+hollywood-2011 2M 114M 11,676 115 0.180 88.54s 362.25s
+twitter-2010 38M 1,135M 1,635,823 59 0.004 230s
+uk-union 120M 4,405M 1,497,950 73 0.111 1350s
+(b)PropertiesofBTER-generatedgraphs,includinggenerationandedgededuplication
+time.
+To give a sense of the memory requirements, storing the hollywood-2011 graph as
+a sparse matrix in MATLAB requires 3.4GB of stora ge. Each of the larger graphs
+(twitter-2010,uk-union) has over1B edges. These are processedona Hadoopcluster
+with32computenodes. EachcomputenodehasanInteli7930CPUat2.8GHz(four
+physical cores, HyperThreading enabled), 12 GB of memory, and 4 2TB SATA disks.
+All experiments were run using Apache Hadoop versi on 0.20.203.0.3 The results in
+Table 2(b) were obtained using 132 map and 32 reduc e tasks.
+TheinputstoBTERarethe degreedistributionan dclusteringcoefficientsbyde-
+gree. (Weusedablowupofβ =1fortheexperimentsreportedhere.) Computingthe
+degree distribution is straightforward. However, for the clustering coefficients calcu-
+lations, weusedthe samplingapproachasimplemente din[25] with2000samplesper
+degree, sothe expectederroris (cid:4)=0.05ata confidenc e levelof99.9%. Sampling was
+not requiredfor the smaller graphs, but we used it in a ll experiments for consistency.
+BTER timing. Table 2(b) showsthe details and timings for the graphsproduced
+by BTER. Observe the close match in the characteristics of the graphs in terms of
+numberofnodes,numberofedges,maximumdegree,averagedegree,andglobalclus-
+tering coefficient. For the smallergraphs, weareable t o separatethe edge generation
+and deduplication time. The generationtime is not st rictly proportionalto the num-
+ber of desired edges because we have to generate extr a edges for Phase 1 to account
+for possible duplicates (see section 3.5). The parallelism of Hadoop yields a large
+advantage in terms of time. The twitter-2010 graph has 10 times more edges than
+hollywood-2011, but it takes less than half the time to do the computation on the
+32-node Hadoop cluster.
+Degree distribution. Figure 6 illustratesthe match betweenthe realdata andthe
+BTER graph. BTER cannot easily match discontinuities in the degree distribution
+becauseoftherandomnessincreatingedges. Theissueisthatnodesgenerallydonot
+get exactly the desired degree; in the realization of th e graph, observed degrees may
+deviate by one or two from the expected degree. For a smooth degree distribution,
+neighboring degrees cancel the effect of one another. F or discontinuous distributions,
+3http://hadoop.apache.org/
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C442 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+106
+105
+104
+103
+102
+101
+10 10
+00 101 102 103 104
+Degree
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+tnuoC
+108
+amazon−2008
+BTER 107
+106
+105
+104
+103
+102
+101
+100
+100 101 102 103 104 105
+Degree
+(a)amazon-2008.
+tnuoC
+105
+ljournal−2008
+BTER
+104
+103
+102
+101
+100
+100 101 102 103 104 105
+Degree
+(b)ljournal-2008.
+tnuoC
+hollywood−2011
+BTER
+(c)hollywood-2011.
+(d)twitter-2010. (e)uk-union.
+Fig. 6. Degree distributions of original and BTER-generated graphs.
+theBTERdegreedistributionisa“smoothed”version. Thisisevident,forinstance,in
+theamazon-2008data,wherewecanseeasmoothingeffectonthesharpdiscontinuity
+near degree 10.
+Clustering coefficients. BTER’s strength is its ability to match clustering co-
+efficients and therefore create community structure. Most degree distributions are
+heavy-tailedandhavearelativelyconsistentstructure. The same is nottrue forclus-
+teringcoefficients. Differentprofilescanpotentiallyleadtographswithfundamentally
+differentstructures. Figure 7showstheclusteringcoefficientsoftherealdataandthe
+BTER-generatedgraphs. There is a very close match.
+5. Proposed benchmark parameters and scalability. Thus far we have
+considered how BTER can be used to match real-world data. For benchmarking
+purposes, where there is no specific graph to be matched, “ideal” profiles for degree
+distribution and clustering coefficient by degree are required. In this section, we
+proposesomepossibilities, noting thatthese aretunable for varioustesting scenarios,
+i.e., specifying an average degree, a maximum clustering coefficient, etc. Generating
+an artificial degree distribution can be problematic. For instance, using a straight
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C443
+1
+0.8
+0.6
+0.4
+0.2
+0
+100 101 102 103 104
+Degree
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+tneiciffeoC
+gniretsulC
+1
+amazon−2008
+BTER
+0.8
+0.6
+0.4
+0.2
+0
+100 101 102 103 104 105
+Degree
+(a)amazon-2008.
+tneiciffeoC
+gniretsulC
+1
+ljournal−2008
+BTER
+0.8
+0.6
+0.4
+0.2
+0
+100 101 102 103 104 105
+Degree
+(b)ljournal-2008.
+tneiciffeoC
+gniretsulC
+hollywood−2011
+BTER
+(c)hollywood-2011.
+1
+0.8
+0.6
+0.4
+0.2
+0
+100 101 102 103 104 105 106 107
+Degree
+tneiciffeoC
+gniretsulC
+1
+twitter−2010
+BTER
+0.8
+0.6
+0.4
+0.2
+0
+100 101 102 103 104 105 106 107
+Degree
+(d)twitter-2010.
+tneiciffeoC
+gniretsulC
+uk−union
+BTER
+(e)uk-union.
+Fig.7. Clustering coefficients of original and BTER-generated graphs.
+power law (PL) distribution can lead to impossible situations, such as choosing a
+degree greater than the number of nodes. This necessitates a discrete distribution,
+whichengendersitsownproblems. Afterproposingmethodsforworkingaroundthese
+problems, we use the proposed benchmark in a scalability study for the MapReduce
+implementation of BTER.
+5.1. Idealized degree distribution. Ithasbeenhypothesizedthatdegreedis-
+tribution of real-world networks follows a PL degree distribution, i.e.,
+n
+∝d−γ,
+d
+for some parameter γ [2]. However, our observation is that PL distributions are
+difficulttouseasamodel—apointthatisdiscussedinmoredetailbelow. Ithasbeen
+suggestedthatPLsarenotnecessarilythebestdescriptorsforreal-worldnetworks[43,
+4]. Finally, proving (in a statistical sense) that a single observed degree distribution
+is PL is difficult [13].
+Forbenchmarkingpurposes, ourgoalis tospecify anideal averagedegree,d¯, and
+an absolute bound on maximum degree, d∗. Let f(d) define the desired proportion-
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C444 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+ality of degree d, e.g., f(d) = d−γ for a PL distribution. We then create a discrete
+distribution on d=1,...,d∗ as
+f(d)
+Pr(D =d)= (cid:4) .
+d∗ f(d(cid:5) )
+d(cid:2)=1
+Ideally, the average degree is equal to d¯, and the pro bability of having degree d∗ is
+sufficiently small, i.e.,
+(cid:5)d∗
+d¯= d·f(d) and Pr(D =d∗ )<(cid:4) ,
+tol
+d=1
+where (cid:4)
+tol
+is small enough such that n·(cid:4)
+tol
+(cid:10) 1 (wh ere n is the number of nodes).
+For the power law distribution, it can be difficult to fi nd a value for γ that yields a
+high enough average degree and a low enough probab ility of choosing d∗. Hence, we
+propose instead a generalized log-normal (GLN) distri bution, i.e.,
+(cid:9) (cid:7) (cid:8) (cid:10)
+logd δ
+n ∝exp − ,
+d
+α
+for some parameters α and δ. The supplementary ma terial includes example degree
+distributions that vary α and δ. The shape of the distribution is typical of the real-
+world graphs shown in section 4.
+We consider two scenarios, both with n =107 nod es. We do a parameter search
+on α and δ (fminsearchin MATLAB) to locate the o ptimal parameters. A function
+degdist param search that finds the optimal param eters for either discrete GLN
+(DGLN) or discrete PL (DPL) for user-specified values of d and d is included avg max
+in the reference code to be released at a future date.
+Scenario 1 for degree distribution fitting. In the first scenario, the targets are
+d¯= 16 and d∗ = 106. For DPL, the optimal paramet er is γ = 1.911 with d = 16
+avg
+and Pr(D =d∗) = 1.97×10−12. For DGLN, the opt imal parameters are α = 1.988
+andδ =2.079withd =16andPr(D =d∗)=4.14× 10−26. Realizationsofthetwo
+avg
+distributions are pictured in Figure 8a. For this scenario, both degree distributions
+are reasonable in that there is no sharp dropoff as we get close to the maximum
+allowable degree, d∗.
+Scenario 2 for degree distribution fitting. In the s econd scenario, the targets are
+d¯= 64 and d∗ = 105. For PL, the optimal paramete r is γ = 1.668 with d = 64
+avg
+but Pr(D =d∗)=2.16×10−9 (fairly large). For DGL N, the optimal parameters are
+α=2.171andδ =1.877withd =64andPr(D =d∗)=8.35×10−12. Realizations
+avg
+of the two distributions are pictured in Figure 8b. In t his scenario, the problem with
+PL becomes apparent—near d∗, there are still many degrees with multiple nodes so
+that the cutoff is extremely abrupt. In comparison, D GLN fades more naturally to
+the desired maximum degree.
+5.2. Idealized clustering coefficients. As the re is no definitive structure to
+clustering coefficients, we propose a simple parameterized curve that has some simi-
+larity to real data observations.
+Let {n d} define the specified degree distribution, and let d
+max
+be the maximum
+degree such that n >0. We define c¯ , the mean value for c , as
+d d d
+c¯ =c exp(−(d−1)·ξ) for d≥2,
+d max
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+. 511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C445
+108
+DPL
+107 DGLN
+106
+105
+104
+103
+102
+101
+100
+100 101 102 103 104 105
+(a)Scenario1: d¯=16and (b)Scen ario2: d¯=64and
+d∗=106. d∗=105.
+Fig.8. Example degree distributions from DPL and DGLN for n=107 nodes.
+wherec andξ areparameters. Ifc is specified, t hena simpleparametersearch
+max max
+can be used to fit ξ to a target global clustering coefficient; code to fit the data is
+included in the reference code. The final values for {c } are selected as d
+c
+d
+∼N(c¯ d,min{10−2,c¯ d/2 }).
+The randomness could, of course, be omitted.
+5.3. Example graphs. We generate two examp le graphs per the scenarios be-
+low. Table 3 lists the network characteristics and F igure 9 shows the target and
+BTER-generateddegree distributions and clustering coefficients.
+Table 3
+Network characteristics of BTER-generated graphs forbenchmarking.
+Graph |V| |E| dmax davg GCC Gen. Dedup.
+Scenario1 1M 35M 28,643 72 0.406 35.11s 117.18s
+Scenario2 1M 8M 2,594 17 0.104 5.07s 20.66s
+Scenario 1. Forthefirstsetup, weselectedd¯=75 andd∗ =100,000todefine the
+degree distribution. The parameter search selected α = 2.14 and δ = 1.83. For the
+clustering coefficients, we set c = 0.9 and a target GCC of 0.15. The parameter
+max
+search selected ξ =3.59×10−4 for defining the cluste ring coefficient profile.
+Scenario 2. For the second setup, we selected d¯= 16 and d∗ = 10,000 to define
+the degree distribution. The parameter search selecte d α = 1.98 and δ = 2.08. For
+theclusteringcoefficients,wesetc =0.5andatarg etGCCof0.10. Theparameter
+max
+search selected ξ =0.01 for defining the clustering coe fficient profile.
+5.4. Scalability test. We use the DGLN distrib ution to create targetdistribu-
+tions that define a series of graphsof different sizes bu t similar community structure.
+From these, we generate example graphs with our Hadoop MapReduce implementa-
+tion of BTER and demonstrate scalability of our code.
+Table 4 describes characteristics of the(cid:11)test graph s. We selected d¯= 32 for all
+graphs and maintained d∗ proportional to |V|, a re lation that we often observe in
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C446 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+105
+104
+103
+102
+101
+10 10
+00 101 102 103 104 105
+Degree
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+tnuoC
+106
+Ideal−1
+BTER
+105
+104
+103
+102
+101
+10 10
+00 101 102 103 104
+Degree
+(a)Degreedistributionfor
+Scenario1.
+tnuoC
+Ideal−2
+BTER
+(b)Degreedistributionfor
+Scenario2.
+1
+0.8
+0.6
+0.4
+0.2
+0
+100 101 102 103 104 105
+Degree
+tneiciffeoC
+gniretsulC
+1
+Ideal−1
+BTER
+0.8
+0.6
+0.4
+0.2
+10
+00 101 102 103 104
+Degree
+(c)Clusteringcoefficients for
+Scenario1.
+tneiciffeoC
+gniretsulC
+Ideal−2
+BTER
+(d)Clusteringcoefficients for
+Scenario2.
+Fig.9. Target distributionsand results of BTER-generated graphs.
+socialnetworkgraphs. Thelasttwocolumnsofthetablelistthenumberofgenerated
+(Phase 1 and 2) and unique edges measured from full graphs realized by BTER.
+Target degree distributions were created using the formulas and functions pre-
+sented in section 5.1. Optimal parameters α and δ were computed using MATLAB
+function degdist param search (part of the reference code). The function takes d¯
+and d∗ as inputs, plus the Pr(D =d∗) which we set to 0.001/|V|. Then we com-
+puted a DGLN from α, δ, and the number of nodes |V| listed in the second column
+of Table 4. We created clustering coefficient distributions as in section 5.2, setting
+c =0.5 and GCC=0.15 for all graphs.
+max
+The MapReduce implementation of BTER was executed on a 32-node cluster
+runningApacheHadoopversion0.20.203.0. Eachcompute nodecontainsaquad-core
+processor and four hard drives configured to run independently (no RAID striping).
+Hadoop was configured for a maximum of 128 simultaneous map tasks, effectively
+pairingeachcorewithaharddriveformaximumI/Othroughput. AMapReduce job
+canthereforelaunchup to 128mappers in parallel. Hadoopwasalsoconfiguredfora
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C447
+Table 4
+Graph characteristics for testing BTER scalability.
+Graph |V| d∗ d¯ Gen |E| Unique |E|
+1 1M 50k 32 25M 16M
+2 2M 70k 32 50M 32M
+3 4M 100k 32 101M 64M
+4 8M 140k 32 201M 128M
+5 16M 200k 32 403M 256M
+6 32M 280k 32 808M 512M
+7 64M 400k 32 1,614M 1,024M
+8 128M 570k 32 3,233M 2,047M
+9 256M 800k 32 6,467M 4,096M
+maximum of 128 simultaneous reduce tasks. BTER us es the reduce phase to remove
+duplicate edges, sowe expect this to compete for machine resourceswith BTERmap
+tasks that generate Phase 1 and 2 edges.
+Figure 10a renders the data in Table 4, showing how the computational work
+varies acrosstest graphs. To assessscalability in the w eaksense, we set the workload
+of each map task in BTER to be 1 million edges; he nce, Graph 1 executes with 1
+map task andGraph 9 executes with 256. The number ofreduce tasks wasset to the
+number of map tasks, up to the configured Hadoop limit of 128.
+Figure 10b plots BTER execution time (wall clo ck time) as a function of the
+number of vertices requested. Perfect scalability wou ld appear as a horizontal line.
+We observe excellent scalability up to 32 million verti ces (32 map tasks), and then a
+significantdropoff in parallelperformance. However,map task scalability is excellent
+through 128 tasks, the full capacity of the cluster. Hence, BTER edge generation in
+the mapphase isfully scalableto the availablehardwa re. Removalofduplicate edges
+in the reduce phase is less scalable. Here the edges m ust be sorted on the map task
+node, shuffled across the network to reduce task node s, and merged at the reducers.
+Close examination of Hadoop log files and network traffic suggests that the reduce
+phasesuffers frombandwidthlimitations during the shuffleandfromspillovertodisk
+during the merge. We conjecture that deduplication scalability could be improved
+on a cluster with larger network bandwidth and more physical memory per compute
+node.
+We also show an example of the generatedgraph in Figure 11. This is for Graph
+9 with 256M vertices and 4B edges. We give log-binned results. The BTER model
+is fairly close to the intended distributions for both the degree distribution and the
+clustering coefficient by degree.
+6. Conclusions and future work. This paper demonstrates that the BTER
+generative model is useful for modeling massive netwo rks, especially compared with
+otherscalablemodels. Weprovideadetailedalgorithm alongwithanalysisexplaining
+the workings of the method. The original paper on BTER [44] provided none of the
+implementation details and, in fact, did not directly use the clustering coefficient
+data but rather estimated it via a function. Here we give precise details on the
+implementation, which is nontrivial due to issues such as repeat edges. We are able
+to build a model of a graphwith 120Mnodes and 4.4B edges in less than 25 minutes
+on a 32-node Hadoop cluster.
+The development of a realistic graph model is an important step in developing
+effective “null” models that nonetheless share the pro perties of real-world networks.
+Suchmodelswillbeusefulindetectinganomalies,statis ticalsampling,andcommunity
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C448 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+x 109
+7
+6
+5
+4
+3
+2
+1
+0
+0.5 1 1.5 2 2.5
+Vertices x 108
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+segdE
+1000
+Total edges
+Unique edges
+800
+600
+400
+200
+10
+06 107 108
+Vertices
+(a)Testgraphsizes.
+emiT
+noitucexE
+Total job
+Map tasks
+(b)BTERexecution timein
+seconds.
+Fig.10. Scalability of BTER MapReduce implementation.
+108 1
+Target Target
+107 BTER BTER
+0.8
+106
+105
+0.6
+104
+103 0.4
+102
+0.2
+101
+100 0
+100 101 102 103 104 105 100 101 102 103 104 105
+(a)Degreedistribution (b)Clusteringcoefficients
+(log-binned). (log-binned).
+Fig.11. Exampletargetandactualdegreedistributionsfor256Mnodesusingproposedidealized
+distributions.
+detection. For example, the BTER model does not have larger communities beyond
+the affinity blocks, whereas we might expect that real-world graphs have a richer
+structure such as a hierarchy or other complex behavior.
+The proposedBTER model, along with the proposeddegree and clustering coef-
+ficient distributions, may also boost benchmarking efforts in graph processing. The
+proposed degree distributions capture the essence of degree distributions that we see
+in practice and generate realistic distributions even at large scales (whereas PL has
+a reputation of generating a few degrees that are much larger than observed in prac-
+tice). Moreover, the proposed distribution allows us to modify both the average and
+the maximum degree, which is critical for benchmarking. The proposed clustering
+coefficient curves implicitly embed triangle structure into the graphs, which is a crit-
+ical feature that distinguishes real graphs from arbitrary sparse graphs. Finally, the
+proposed generation algorithm scales to extremely large graphs because it generates
+edges in parallel.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C450 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+REFERENCES
+[1] W.Aiello, F.Chung,andL. Lu,A random graph mode l for power law graphs,Exp.Math.,
+10(2001), pp.53–66, http://projecteuclid.org/euclid.e m/999188420.
+[2] A.-L. Baraba´si and R. Albert, Emergence of scaling in random networks, Science, 286
+(1999), pp.509–512, http://dx.doi.org/10.1126/scienc e.286.5439.509.
+[3] A.BarratandM.Weigt,Ontheproperties of small-world networkmodels,Eur.Phys.J.B
+Condens. Matter,13(2000), pp.547–560, http://dx.doi.org/10.1007/s100510050067.
+[4] Z. Bi, C. Faloutsos, and F. Korn, The “DGX” distribution for mining massive, skewed
+data, in KDD ’01: Proceedings of the Seventh ACM SIGKDD International Confer-
+ence on Knowledge Discovery and Data Mining, ACM, New York, 2001, pp. 17–26,
+http://dx.doi.org/10.1145/502512.502521.
+[5] P.Boldi, M.Rosa, M.Santini,andS.Vigna,Layered label propagation: A multiresolution
+coordinate-free orderingforcompressing socialnetwor ks,inWWW’11: Proceedingsofthe
+20th International World Wide Web Conference, AC M, New York, 2011, pp. 587–596,
+http://dx.doi.org/10.1145/1963405.1963488.
+[6] P. Boldi, M. Santini, and S. Vigna, A large time-aw are graph, ACM SIGIR Forum, 42
+(2008), pp.33–38, http://dx.doi.org/10.1145/1480506 .1480511.
+[7] P. Boldi and S. Vigna, The webgraph framework I: Co mpression techniques, in WWW’04:
+Proceedingsofthe13thInternationalWorldWideWeb Conference,ACM,NewYork,2004,
+pp.595–602, http://dx.doi.org/10.1145/988672.988752 .
+[8] D.Chakrabarti,Y.Zhan,andC.Faloutsos,R-MAT: Arecursivemodelforgraphmining,
+inSDM04: Proceedingsofthe2004SIAMInternationa lConferenceonDataMining,SIAM,
+Philadelphia,2004,pp.442–446, http://dx.doi.org/10 .1137/1.9781611972740.43.
+[9] F.Chierichetti,R.Kumar,S.Lattanzi,M.Mitzenmacher,A.Panconesi,andP.Ragha-
+van,Oncompressingsocialnetworks,inKDD’09: Proceedingsofthe15thACMSIGKDD
+International Conference on Knowledge Discovery and Data Mining, ACM, New York,
+2009, pp.219–228, http://dx.doi.org/10.1145/1557019.1557049.
+[10] F. Chung and L. Lu, The average distances in random graphs with given expected degrees,
+Proc.Natl.Acad.Sci.USA,99(2002), pp.15879–15882, http://dx.doi.org/10.1073/pnas.
+252631999.
+[11] F. Chung and L. Lu, Connected components in ran dom graphs with given degree se-
+quences, Ann. Combin., 6 (2002), pp. 125–145, h ttp://www.combinatorics.net/new/
+Annals/Abstract/6 2125.aspx.
+[12] A.Clauset,C.Moore,andM.Newman,Hierarchicalstr uctureandthepredictionofmissing
+linksinnetworks,Nature,453(2008),pp.98–101,http ://dx.doi.org/10.1038/nature06830.
+[13] A.Clauset,C.R.Shalizi,andM.E.J.Newman,Power -lawdistributionsinempiricaldata,
+SIAMRev.,51(2009), pp.661–703, http://dx.doi.org /10.1137/070710111.
+[14] D.Dominguez-Sal,P.Urbo´n-Bayes,A.Gim´enez-Vano´, S.Go´mez-Villamor,N.Martnez-
+Baza´n,andJ.Larriba-Pey,Surveyof graph databa se performance onthe HPCscalable
+graphanalysisbenchmark,inWeb-AgeInformationMa nagement,H.Shen,J.Pei,M.O¨zsu,
+L. Zou, J. Lu, T.-W. Ling, G. Yu, Y. Zhuang, and J . Shao, eds., Lecture Notes in Com-
+put. Sci. 6185, Springer, Berlin, Heidelberg, 2010, pp. 37–48, http://dx.doi.org/10.1007/
+978-3-642-16720-1 4.
+[15] N. Durak, T. G. Kolda, A. Pinar, and C. Seshadhri, A scalable null model for directed
+graphs matching all degree distributions: In, out, and reciprocal, in Proceedings of the
+2nd IEEE Workshop on Network Science, IEEE Press, Piscataway, NJ, 2013, pp. 23–30,
+http://arxiv.org/abs/1210.5288.
+[16] P.Erdo¨sandA.R´enyi,Ontheevolutionofrandomgrap hs,MagyarTud.Akad.Mat.Kutato´
+Int. K¨ozl,5(1960), pp.17–61, http://www.math-inst .hu/∼perdos/1960-10.pdf.
+[17] W. Feller, An Introduction to Probability Theory and Applications: Vol. I, 3rd ed., John
+WileyandSons,NewYork,1968.
+[18] M. Girvan and M. E. J. Newman, Community structur e in social and biological networks,
+Proc. Natl. Acad. Sci. USA, 99 (2002), pp. 7821–78 26, http://dx.doi.org/10.1073/pnas.
+122653799.
+[19] D. F. Gleich and A. B. Owen, Moment-based estimatio n of stochastic Kronecker graph pa-
+rameters,InternetMath.,8(2012),pp.232–256,http:/ /dx.doi.org/10.1080/15427951.2012.
+680824.
+[20] Graph 500 Benchmark,http://www.graph500.org/specific ations(accessed April2,2014).
+[21] W. Guo and S. Kraines, A random network generator with finely tunable clustering coeffi-
+cientforsmall-worldsocialnetworks,inCASON’09: InternationalConferenceonCompu-
+tationalAspectsofSocialNetworks,IEEEPress,Piscataway,NJ,2009,pp.10–17,http://
+dx.doi.org/10.1109/CASoN.2009.13.
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+ASCALABLEGRAPHMODELWITHCOMMU NITYSTRUCTURE C451
+[22] R. Gupta, T. Roughgarden, and C. Seshadhri, Decom positions of triangle-dense graphs,
+in ITCS’14: Proceedings of the 5th Conference on In novations in Theoretical Computer
+Science,ACM,NewYork,2014,pp.471–482,http://d x.doi.org/10.1145/2554797.2554840.
+[23] A.Gutfraind,L.A.Meyers,andI.Safro,MultiscaleNetworkGeneration,preprint,http://
+arxiv.org/abs/1207.4266,2012.
+[24] J.Kepner,The Kronecker theory of power law graphs, inGraphAlgorithmsintheLanguage
+ofLinearAlgebra,J.KepnerandJ.Gilbert,eds.,SIAM,Philadelphia,2011,pp.205–240.
+[25] T. G.Kolda, A. Pinar,T. Plantenga,C. Seshadhri, and C. Task, Counting triangles in
+massive graphs with MapReduce,SIAMJ.Sci.Comput.,toappear.
+[26] R. Kumar, P. Raghavan, S. Rajagopalan, D. Sivaku mar, A. Tomkins, and E. Upfal,
+Stochastic models forthe web graph, inProceedingsofthe41stAnnualIEEESymposium
+onFoundationsofComputerScience,IEEEPress,Pisc ataway,NJ,2000,pp.57–65,http://
+dx.doi.org/10.1109/SFCS.2000.892065.
+[27] H.Kwak,C.Lee,H.Park,andS.Moon,WhatisTwitter ,asocialnetworkoranewsmedia?,
+inWWW’10: Proceedingsofthe19thInternational W orldWideWebConference, ACM,
+NewYork,2010, pp.591–600, http://dx.doi.org/10.11 45/1772690.1772751.
+[28] J. Leskovec, D. Chakrabarti, J. Kleinberg, C. Falo utsos, and Z. Ghahramani, Kro-
+necker graphs: An approach to modeling networks, J. Mach. Learn. Res., 11 (2010),
+pp.985–1042, http://jmlr.csail.mit.edu/papers/v11/le skovec10a.html.
+[29] J.Leskovec,J.Kleinberg,andC.Faloutsos,Graphev olution: Densificationandshrinking
+diameters,ACMTrans.KnowledgeDiscoveryData,1( 2007),2,http://dx.doi.org/10.1145/
+1217299.1217301.
+[30] LWA: Laboratory for Web Algorithms, http://law.di.unimi.it/datasets.php (accessed April 2,
+2014).
+[31] M. Mihail and C. Papadimitriou, On the eigenvalue power law, in RANDOM 2002: Pro-
+ceedings of Randomization and Approximation Techniques inComputer Science, Lecture
+Notes in Comput. Sci. 2483, Springer, Berlin, Heidelberg, 2002, pp. 254–262, http://dx.
+doi.org/10.1007/3-540-45726-7 20.
+[32] B.Miller,N.Bliss,andP.Wolfe,Subgraphdetectionu singeigenvectorL1 norms,inNIPS
+2010: Advances in Neural Information Processing Sy stems, 2010, pp. 1633–1641, http://
+books.nips.cc/papers/files/nips23/NIPS2010 0954.pdf .
+[33] B. Miller, L. Stephens, and N. Bliss, Goodness-of-fit statistics for anomaly detection in
+Chung-Lu random graphs,inICASSP2012: IEEEInt ernational ConferenceonAcoustics,
+Speech and Signal Processing, IEEE Press,Piscatawa y, NJ, 2012, pp. 3265–3268, http://
+dx.doi.org/10.1109/ICASSP.2012.6288612.
+[34] D. Mir and R. N. Wright, A differentially private esti mator for the stochastic Kronecker
+graphmodel,inEDBT-ICDT’12: Proceedingsofthe2 012JointEDBT/ICDTWorkshops,
+ACM,NewYork,2012,pp.167–176, http://dx.doi.or g/10.1145/2320765.2320818.
+[35] S.Moreno,S.Kirshner,J.Neville,andS.V.N.Vish wanathan,TiedKroneckerproduct
+graphmodelstocapturevarianceinnetworkpopulation s,inProceedingsofthe48thAnnual
+Allerton Conference on Communication, Control, and Computing, 2010, pp. 1137–1144,
+http://dx.doi.org/10.1109/ALLERTON.2010.5707038.
+[36] R. Motwani and P. Raghavan,Randomized Algorithms, CambridgeUniversityPress,Cam-
+bridge,UK,1995.
+[37] M. Newman, Component sizes in networks with arbitrary degree distributions, Phys. Rev. E,
+76(2007), 045101, http://dx.doi.org/10.1103/PhysRevE.76.045101.
+[38] M. Newman, D. Watts, and S. Strogatz, Random gra ph models of social networks, Proc.
+Natl. Acad.Sci.USA,99(2002), pp. 2566–2572, http ://www.pnas.org/content/99/suppl
+1/2566.full.
+[39] M. E. J. Newman, Properties of highly clustered network s, Phys. Rev. E, 68 (2003), 026121,
+http://dx.doi.org/10.1103/PhysRevE.68.026121.
+[40] M.E.J.Newman,Finding community structure innetwo rksusing theeigenvectorsof matri-
+ces,Phys.Rev.E,74(2006), 036104, http://dx.doi.or g/10.1103/PhysRevE.74.036104.
+[41] A. Pinar, C. Seshadhri, and T. G. Kolda, The simi larity between stochastic Kronecker
+and Chung-Lu graph models, in Proceedings of the 2 012 SIAM International Conference
+on Data Mining, SIAM, Philadelphia, 2012, pp. 1071 –1082, http://dx.doi.org/10.1137/1.
+9781611972825.92.
+[42] A.Sala,L.Cao,C.Wilson,R.Zablit,H.Zheng,and B.Y.Zhao,Measurement-calibrated
+graph models for social network experiments, in WWW ’10: Proceedings of the 19th In-
+ternational World Wide Web Conference, 2010, pp. 861–870, http://dx.doi.org/10.1145/
+1772690.1772778.
+[43] A. Sala,S.Gaito, G.P. Rossi, H. Zheng,and B. Y. Zhao,Revisiting Degree Distribution
+Models for Social Graph Analysis,preprint,arXiv:1108.0027,2011.
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+C452 T.G.KOLDA,A.PINAR,T.PLANTENGA,A NDC.SESHADHRI
+[44] C. Seshadhri, T. G. Kolda, and A. Pinar, Commun ity structure and scale-free collec-
+tions of Erd¨os-R´enyi graphs,Phys.Rev.E,85(2012), 056109,http://dx.doi.org/10.1103/
+PhysRevE.85.056109.
+[45] C.Seshadhri,A.Pinar,andT.G.Kolda,Anin-depthstudyofstochasticKroneckergraphs,
+in ICDM 2011: Proceedings of the 2011 IEEE International Conference on Data Mining,
+IEEE Press, Piscataway, NJ, 2011, pp. 587–596, http://dx.doi.org/10.1109/ICDM.2011.
+23.
+[46] C. Seshadhri, A. Pinar, and T. G. Kolda, An in-depth analysis of stochastic Kronecker
+graphs, J.ACM,60(2013), 13,http://dx.doi.org/10.1145/2450142.2450149.
+[47] C.Seshadhri,A.Pinar,andT.G.Kolda,Triadicmeas uresongraphs: Thepowerofwedge
+sampling, in SDM13: Proceedings of the 2013 SIAM International Conference on Data
+Mining,SIAM,Philadelphia,2013,pp.10–18,http://d x.doi.org/10.1137/1.9781611972832.
+2.
+[48] SNAP:StanfordNetworkAnalysisProject,http://snap.sta nford.edu/(accessedApril2,2014).
+[49] J. C. Vivar and D. Banks, Models for networks: A cro ss-disciplinary science, Wiley Inter-
+disciplinaryReviews: ComputationalStatistics,4(201 2),pp.13–27,http://dx.doi.org/10.
+1002/wics.184.
+[50] D. Watts and S. Strogatz, Collective dynamics of ‘s mall-world’ networks, Nature, 393
+(1998), pp.440–442, http://dx.doi.org/10.1038/30918 .
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+ycavirp-smret/gro.mais.sbupe//:sptth
+ees
+;thgirypoc
+ro
+esnecil
+MAIS
+ot
+tcejbus
+noitubirtsideR
+.
+511.042.081.041
+ot
+42/41/20
+dedaolnwoD
+

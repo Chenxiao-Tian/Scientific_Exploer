@@ -1,0 +1,36 @@
+Extracted Keywords:
+street network, road network, Network, Street, Networks, T-type ratio, network pattern, road, Tree-Like Network, street ratio
+
+Main Topics:
+sustainability
+Article
+Classiﬁcation, Urban Street Networks, Tree-Like Network Features
+Baorui, Wanlu Song1and Lisha Ding1
+1Department, (L.D.)
+2Department, Architectural Engineering, Texas A&M University-Kingsville, USA
+*Correspondence, 16 December, 10 January, 15 January, gid00046
+Abstract, their complexity, their hierarchical structure, their tendency, both grid-like and tree-like
+networks, topological indicators, planning parameters, a method, network division, such intermediate networks, the di erences, street network patterns, a tree-like network
+structure, topological principles, the requirements, road planning, this deﬁnition, three other types, street networks, di erent microstructures, the structure variables, selected street networks, the world, ﬁnd several explanatory parameters, the
+relative incidence, cul-de-sacs, and T-type intersections, network
+function, network type, a
+
+Methodologies:
+Using topological indicators based on planning parameters, we develop a method of
+network division that makes classiﬁcation of such intermediate networks possible. However, because the research is based on the 
+statistical analysis of the macro urban structure, the results cannot have an impact on small regional land planning. Developing a method to describe the structural differences of networks by planning indicators 
+is also a difficult issue. However, because the research is based on the
+statistical analysis of the macro urban structure, the results cannot have an impact on small regional
+land planning. Developing a method to describe the structural di erences of networks by planning indicators is
+also a di cult issue. These results show that street network characteristics do play a role in
+road safety outcomes. These results show that street network characteristics do play a role 
+
+Research Outcomes:
+Using topological indicators based on planning parameters, we develop a method of
+network division that makes classiﬁcation of such intermediate networks possible. However, because the research is based on the 
+statistical analysis of the macro urban structure, the results cannot have an impact on small regional land planning. Developing a method to describe the structural differences of networks by planning indicators 
+is also a difficult issue. However, because the research is based on the
+statistical analysis of the macro urban structure, the results cannot have an impact on small regional
+land planning. Developing a method to describe the structural di erences of networks by planning indicators is
+also a di cult issue. These results show that street network characteristics do play a role in
+road safety outcomes. These results show that street network characteristics do play a role 

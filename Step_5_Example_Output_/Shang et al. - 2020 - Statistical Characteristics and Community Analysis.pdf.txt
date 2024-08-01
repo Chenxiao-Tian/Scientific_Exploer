@@ -1,0 +1,35 @@
+Extracted Keywords:
+URNs, Road Networks, Networks, network, Urban road, nodes, transport networks, vol., Urban, Anaheim
+
+Main Topics:
+Research Article, Statistical Characteristics, Community Analysis, Urban
+Road Networks
+Wen-Long Shang, 1Yanyan Chen,1Huibo Bi, 1Haoran Zhang,2Changxi Ma, Washington Y. Ochieng4, Key Laboratory, Traﬃc Engineering, Metropolitan Transportation, Beijing University, China
+2Centre, Spatial Information Science, dT_he University, Japan
+3School, Lanzhou Jiaotong University, China
+4Centre, Transport Studies, Imperial College London, London SW7, UK
+Correspondence, Huibo Bi, 9 September 2020
+Academic
+Editor, Jos Manuel Galn
+Copyright ©2020 Wen-Long Shang, et al, an open access article, the Creative Commons Attribution
+License, unrestricted use, any medium, the original work, Urban road networks, typical complex systems, our society, this study, , topological
+characteristics, a number, urban road networks, physical roads, underlying unique structural features, other types, transport
+networks, these t
+
+Methodologies:
+wO_he results reveal that communities and hierarchy of urban road networks tend to follow a general nature rule.
+ Sienkiewicz and Hołyst [16] ex-plored the public transport network (PTN) systems of 22cities in Poland, and the results show that topologicalcharacteristics of these cities, such as degree and degreedistribution, average path length, and cluster coeﬃcients,tend to follow power-law distribution and exponentialdistribution, and these PTNs also demonstrate signiﬁcantsmall-worldness. [6] explored the public transport networksHindawi
+Complexity
+Volume 2020, Article ID 6025821, 21 pages
+https://doi.org/10.1155/2020/6025821
+(PTNs) in 14 cities, and the results show that these PTNs
+have high clustering coeﬃcients and relatively low averageshortestpaths,whicharetypicalsmall-worldcharacteristics. Following this, correlation analysis betweensometopologicalindicesisinvestigatedinSection4
+
+Research Outcomes:
+wO_he results reveal that communities and hierarchy of urban road networks tend to follow a general nature rule.
+ Sienkiewicz and Hołyst [16] ex-plored the public transport network (PTN) systems of 22cities in Poland, and the results show that topologicalcharacteristics of these cities, such as degree and degreedistribution, average path length, and cluster coeﬃcients,tend to follow power-law distribution and exponentialdistribution, and these PTNs also demonstrate signiﬁcantsmall-worldness. [6] explored the public transport networksHindawi
+Complexity
+Volume 2020, Article ID 6025821, 21 pages
+https://doi.org/10.1155/2020/6025821
+(PTNs) in 14 cities, and the results show that these PTNs
+have high clustering coeﬃcients and relatively low averageshortestpaths,whicharetypicalsmall-worldcharacteristics. Following this, correlation analysis betweensometopologicalindicesisinvestigatedinSection4

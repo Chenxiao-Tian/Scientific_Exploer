@@ -1,0 +1,47 @@
+Extracted Keywords:
+street network, street, Network Science, Applied Network, network, Urban Street, city, Urban, networks, cities
+
+Main Topics:
+street network
+orientation, entropy
+Geoff Boeing
+Correspondence, boeing@usc.edu
+Department, Urban Planning, Spatial Analysis, Sol Price School, Public Policy, Southern
+California, 201B Lewis Hall, Los
+Angeles, USAAbstract
+Street networks, clear organizing principles, their configurations, a city ’s spatial logic, a city ’s streets ’
+order, Past studies, individual cases, broader patterns, This study, street network orientation, 100 cities, the world, OpenStreetMap data, the entropy, street
+bearings, weighted and unweighted network models, each city ’s typical
+street segment length, average circuity, average node degree, the network ’s
+proportions, four-way intersections, a new
+indicator, a city ’s street network, the
+geometric ordering logic, a single grid, A cluster analysis, these study sites, multiple dimensions, Significant statistical relationships, city orientation-order, other
+ind
+
+Methodologies:
+These methods demonstrate automatic, scalable,
+reproducible tools to empirically measure and visualize city spatial order, illustrating
+complex urban transportation system patterns and configurations around the world.
+ Although its data quality
+varies somewhat between countries, in general its streets data are high quality, especially
+in cities (Barrington-Leigh and Millard-Ball 2017 ;B a r r o ne ta l . Analysis
+For each city, we calculate the street network ’s edges ’individual compass bearings with
+OSMnx using two different methods. The first method simplifies the topology of each
+graph such that nodes exist only at intersections and dead-ends; edges thus represent
+street segments (possibly curving, as full spatial geometry is retained) between them
+(ibid.). In this method, the bearing of edge euvequals the compass heading from utov
+and its reciprocal (e.g., if the bearing from utovis
+
+Research Outcomes:
+These methods demonstrate automatic, scalable,
+reproducible tools to empirically measure and visualize city spatial order, illustrating
+complex urban transportation system patterns and configurations around the world.
+ Although its data quality
+varies somewhat between countries, in general its streets data are high quality, especially
+in cities (Barrington-Leigh and Millard-Ball 2017 ;B a r r o ne ta l . Analysis
+For each city, we calculate the street network ’s edges ’individual compass bearings with
+OSMnx using two different methods. The first method simplifies the topology of each
+graph such that nodes exist only at intersections and dead-ends; edges thus represent
+street segments (possibly curving, as full spatial geometry is retained) between them
+(ibid.). In this method, the bearing of edge euvequals the compass heading from utov
+and its reciprocal (e.g., if the bearing from utovis

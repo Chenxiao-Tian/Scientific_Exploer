@@ -1,0 +1,40 @@
+Extracted Keywords:
+San Francisco, street networks, networks, nodes, NETWORK, graph, STREETS, street, dual graphs, degree
+
+Main Topics:
+ 1 
+ 
+THE  NETWORK ANALYSIS, URBAN STREETS, A DUAL APPROACH 
+ 
+SERGIO PORTAa, PAOLO CRUCITTIb, VITO LATORAc, a Dipartimento di Progettazione dell’Architettura, Politecnico di Milano, sergio.porta@polimi.it  
+b Scuola Superiore di Catania, Dipartimento di Fisica e Astronomia, Università di Catania, INFN Sezione di Catania, vito.latora@ct.infn.it  
+ 
+ 
+Abstract, The application, the network approach, the urban case, several questions, metric distances, what kind, graph representation, what kind, the correlation, the structure, the network, the dynamics, the network, the possible contributions, the GIS 
+community, this paper, the authors, a study, six cases, urban street networks char, different patterns, historical roots, The authors, a representation, the street networks, a primal  graph, a second step, a dual graph, an innovative generalisation model, Intersection Continu-, ity Negotiati
+
+Methodologies:
+Dipartimento di Fisica e Astronomia, Università di Catania,  
+and INFN Sezione di Catania, Italy, vito.latora@ct.infn.it  
+ 
+ 
+Abstract 
+The application of the network approach to the urban case poses several questions in terms 
+of how to deal with metric distances, what kind of graph representation to use, what kind of meas-ures to investigate, how to deepen the correlation between measures of the structure of the network 
+and measures of the dynamics on the network, what are the possible contributions from the GIS 
+community. A wide set of network analysis techniques are implemented over the dual graph: in particular the authors show that most of the considered networks have a broad degree distribution typical of scale-free networks and exhibit small-world properties as well.   
+   The main result of this flurry of research in the scientific community has been that systems 
+as diverse 
+
+Research Outcomes:
+Dipartimento di Fisica e Astronomia, Università di Catania,  
+and INFN Sezione di Catania, Italy, vito.latora@ct.infn.it  
+ 
+ 
+Abstract 
+The application of the network approach to the urban case poses several questions in terms 
+of how to deal with metric distances, what kind of graph representation to use, what kind of meas-ures to investigate, how to deepen the correlation between measures of the structure of the network 
+and measures of the dynamics on the network, what are the possible contributions from the GIS 
+community. A wide set of network analysis techniques are implemented over the dual graph: in particular the authors show that most of the considered networks have a broad degree distribution typical of scale-free networks and exhibit small-world properties as well.   
+   The main result of this flurry of research in the scientific community has been that systems 
+as diverse 

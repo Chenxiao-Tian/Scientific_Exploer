@@ -1,0 +1,658 @@
+References:
+StreetNetworkStudies:FromNetworkstoModels... 747
+relationshipswithothercomponentsoftheurbansystem–landmarks,barriers,and
+theirrelationshipsinheterogeneousurbannetworks.Thiswouldbegreatlyassisted
+byagreaterconsistencyinterminology.
+Thirdly, we need greater understanding of the relative strengths and limitations
+ofeachapproachintermsofapplicationstoparticularcontexts,theirmeasuresand
+analyses,andtheirstringentvalidationandevaluationthroughempiricalstudies.This
+iscriticalinordertounderstandhowthedifferentapproachesperformthesameprob-
+lem in different settings, and whether this multitude is enriching the field of urban
+researchorrathercreatingconfusion.Astrengthenedstreetnetworksciencecanthen
+helptoinformapplicationstostreetnetworkstudies,includingnotonlyanalysisbut
+supportingnetworkdesign,planningandmanagement.
+OpenAccess ThisarticleisdistributedunderthetermsoftheCreativeCommonsAttribution4.0Interna-
+tionalLicense(http://creativecommons.org/licenses/by/4.0/),whichpermitsunrestricteduse,distribution,
+andreproductioninanymedium,providedyougiveappropriatecredittotheoriginalauthor(s)andthe
+source,providealinktotheCreativeCommonslicense,andindicateifchangesweremade.
+References
+AndersonS(1978)Onstreets.TheMITPress,CambridgeMassachusetts
+AnezJ,BarraTDL,PerezB(1996)Dualgraphrepresentationoftransportnetworks.TranspResPartB:
+Methodol30(3):209–216.https://doi.org/10.1016/0191-2615(95)00024-0,http://www.sciencedirect.
+com/science/article/pii/0191261595000240
+BarthelemyM(2011)Spatialnetworks.PhysRep499(1–3):1–101.https://doi.org/10.1016/j.physrep.2010.
+11.002http://www.sciencedirect.com/science/article/pii/S037015731000308X
+BattyM(2004a)Anewtheoryofspacesyntax.CASAworkingpapersseriesWP75
+BattyM,RanaS(2004b)Theautomaticdefinitionandgenerationofaxiallinesandaxialmaps.Environ
+PlannB:PlannDes31(4):615–640
+BrandesU,RobinsG,McCranieA,WassermanS(2013)Whatisnetworkscience?NetwSci1(1):1–15
+ButtsCT(2009)Revisitingthefoundationsofnetworkanalysis.Science325(5939):414–416
+CaldwellT(1961)Onfindingminimumroutesinanetworkwithturnpenalties.CommunACM4(2):107–
+108
+CardilloA,ScellatoS,LatoraV,PortaS(2006)Structuralpropertiesofplanargraphsofurbanstreet
+patterns.PhysRevE73(6):066,107.https://doi.org/10.1103/PhysRevE.73.066107,00269
+Courtat T, Gloaguen C, Douady S (2011) Mathematics and morphogenesis of cities: a geometrical
+approach.PhysRevE83(3):036,106
+CrucittiP,LatoraV,PortaS(2006)Centralitymeasuresinspatialnetworksofurbanstreets.PhysRevE
+73(3):036,125:1–036,125:5.https://doi.org/10.1103/PhysRevE.73.036125,00414
+DucruetC,BeauguitteL(2014)Spatialscienceandnetworkscience:Reviewandoutcomesofacomplex
+relationship.NetwSpatEcon14(3-4):297–316
+Figueiredo L (2015a) A unified graph model for line and segment maps. In: Proceedings of the 10th
+International Space Syntax Symposium. University College London, London, pp 146:1–146:11,
+http://www.sss10.bartlett.ucl.ac.uk/wp-content/uploads/2015/07/SSS10Proceedings146.pdf
+Figueiredo L, Amorim L (2005b) Continuity lines in the axial system. In: Proceedings of the 5th
+International Space Syntax Symposium. TU Delft, Delft http://www.spacesyntax.tudelft.nl/media/
+Long
+GarrisonWL,MarbleDF(1962)Thestructureoftransportationnetworks.Technicalreport,Northwestern
+UniversityEvanstonILL
+GehlJ(2011)Lifebetweenbuildings:usingpublicspace.IslandPress,Washington
+GiacominDJ,LevinsonDM(2015)Roadnetworkcircuityinmetropolitanareas.EnvironPlannB:Plann
+Des42(6):1040–1053
+Gil J (2014) Analyzing the Configuration of Multimodal Urban Networks. Geogr Anal 46:368–391.
+https://doi.org/10.1111/gean.12062,http://onlinelibrary.wiley.com/doi/10.1111/gean.12062/abstract
+
+Annexes/Appendices:
+
+Body Text:
+NetworksandSpatialEconomics(2018)18:735–749
+https://doi.org/10.1007/s11067-018-9427-9
+StreetNetworkStudies:fromNetworkstoModelsandtheir
+Representations
+StephenMarshall1 ·JorgeGil2·KarlKropf3·MartinTomko4·LucasFigueiredo5
+Publishedonline:7November2018
+©TheAuthor(s)2018
+Abstract
+Overthelastfiftyyears,researchintostreetnetworkshasgainedprominencewitha
+rapidlygrowingnumberofstudiesacrossdisparatedisciplines.Thesestudiesinves-
+tigate a wide range of phenomena using a wealth of data and diverse analytical
+techniques.Startingwithinthefieldsoftransportorinfrastructureengineering,street
+networks have commonly been treated as sets of more or less homogeneous linear
+elements,connectinglocationsandintersectingatjunctions.Thisviewiscommonly
+representedasagraph,whichprovidesacommonandrigorousformalisationacces-
+sible across disciplines and is particularly well-suited for problems such as flow
+optimisationandrouting.Streetnetworksare,however,complexobjectsofinvestiga-
+tionandthewaywemodelandthenrepresentthemasgraphshasfundamentaleffects
+ontheoutcomesofastudy.Manyapproachestomodellingstreetnetworkshavebeen
+proposed,eachlendingitselftodifferentanalysesandsupportinginsightsintodiverse
+aspects of the urban system. Yet, this plurality and the relation between different
+models remains relatively obscure and unexplored. The motivations for adopting a
+givenmodelofthenetworkarealsonotalwaysclearandoftenseemtofollowdisci-
+plinarytraditions.Thispaperprovidesanoverviewofkeystreetnetworkmodelsand
+the prima facie merits of pertinentalternative approaches. It suggestsgreater atten-
+tion to consistent use of terms and concepts, of graph representations and practical
+applications,andconcludeswithsuggestionsforpossiblewaysforward.
+Keywords Streetnetworks·Modelling·Graphrepresentation
+1 Introduction
+Withtheincreasingurbanisationandtheassociatedrelevanceofurbanstudiesexplor-
+ingtheenvironmental,economic,demographicandsocialdimensionsofcities,street
+(cid:2) StephenMarshall
+s.marshall@ucl.ac.uk
+Extendedauthorinformationavailableonthelastpageofthearticle.
+736 S.Marshalletal.
+networkshavebecomeacentralobjectofglobalscientificinterestoverthelastfifty
+years.Becausestreetnetworkssupportawiderangeofurbanprocessestheyattract
+attentionfromscholarsinmanydisciplines,includingtransportandurbanplanners,
+architects,geographers,environmentalpsychologistsand,recently,physicists.Street
+networkstudiesincludeinvestigationsintonetworkstructure,connectivity,centrality,
+circuity,traversal,hierarchy,typologyandevolution(e.g.,Courtatetal.2011;Crucitti
+etal.2006;GiacominandLevinson2015;JiangandOkabe2014;Lagesseetal.2015;
+LoufandBarthelemy2014;Masuccietal.2014;Stavroulakietal.2017;Stranoetal.
+2012; Xie and Levinson 2007; Yerra and Levinson 2005). This cross-disciplinary
+interestandthepluralityofscholarlyapproachesandpurposesisawelcomesignof
+scientificrelevance.Yetthelackofcommunicationbetweentheseapproachesraises
+a problem of methodological and terminological fragmentation and entrenchment.
+Thereisthentheriskofduplicated,contradictoryorincommensurableresultsanda
+lackofreplicability.
+Thevariousquantitative,computationalstudiesofstreetnetworkspredominantly
+applymethodsbasedongraphtheoryandnetworkscience(Newman2003;Brandes
+et al. 2013; Ducruet and Beauguitte 2014; Kivela¨ et al. 2014). However, as Butts
+(2009: 416) has pointed out, ”To represent an empirical phenomenon as a network
+isatheoreticalact(...)theappropriatechoiceofrepresentationiskeytogettingthe
+correctresult”.Graphsare,inotherwords,onlyamathematicalabstraction,aformal
+representation of a model removed from the physical reality of street environments
+throughaprocessofabstractingandmodelling.Thisinvolvesgeneratingasimplified
+representationofthestreetnetworkbysinglingoutthemainelementsofstudyand
+identifyingtheirrelations.Crucially,itdetermineswhatwillberepresentedasnodes
+(vertices) and links (edges) in a graph and what additional parameters of the street
+network the graph should capture. We call this step network modelling, which is
+normallyembeddedinalargermodelofaspecificphenomenon.
+The plurality of approaches is not always evident in the literature. For instance,
+fromNetworkAnalysisinGeography(HaggettandChorley1969)toarecentreview
+onspatialnetworks(Barthelemy2011),thedominantnetworkmodelisonethatrep-
+resentsthestreetjunctionsasverticesinthegraphandthelinearstreetsegmentsas
+itsedges.Instreetnetworkstudies,thisstepisoftennotcommentedupon,notnec-
+essarily performedasaconsciousmodellingdecision.Yet, itisaselective decision
+that determines analytical possibilities (Anez et al. 1996; Winter 2002; Meeteren
+et al. 2016). Thus, in the network modelling step researchers often simply follow
+disciplinary precedents, unaware of, or unclear about, the diversity of approaches
+available in other fields of urban research. As a result, they may reproduce past
+studiesinconsistentlyandunderdifferentnomenclature.
+Someauthorsacknowledgealternativestreetnetworkmodels,forexample(Anez
+etal.1996;Batty2004a;Winter2002;Portaetal.2006a,b).Thesedifferentmodels
+are,however,oftenpresentedfromanarrow,application-specificperspective.Here,
+wecallforabroaderreflectionontherelativesuitabilityofbroadfamiliesofnetwork
+models.
+We open up this debate by analysing the different approaches to street network
+modelling(Section2),includingtheconsiderationoftheirgraphrepresentationsand
+StreetNetworkStudies:FromNetworkstoModels... 737
+the differences in nomenclature and the roles of topology, geometry, directional-
+ity and weights (Section 3); and the different types of network data used and the
+manipulationsperformedtosupportdiverseanalyses(Section4).Inhighlightingtheir
+purposeandcharacteristics,wefinallyarguethatwideningtherangeofapproaches
+availabletoeachdisciplineandclarifyingtherelationsbetweenthemopensupoppor-
+tunitiesfordevelopingstreetnetworkstudiesmorecomprehensivelyandeffectively
+(Section5).
+2 ModellingStreetNetworks
+2.1 FromTransportNetworkstoSpatialNetworks
+Transportnetworksareaprominentclassofnetworksstudiedintheliterature(Cald-
+well 1961; Kansky 1963; Garrison and Marble 1962; Haggett and Chorley 1969;
+Barthelemy 2011). A given network is generally considered to be an assembly of
+elements and their relations, a transport network is a spatial network of connected
+linearelementswitheitheranenduringpresenceinspace,asinthecaseofroadand
+railnetworks,oranetworkofperiodicpathsbetweenoriginsanddestinationsfixed
+inspace,asinthecaseofairlineandshippingnetworks.Thefocusofthemodelsis
+onlinearpathsformovementfromAtoB andthecostsassociatedwiththismove-
+ment (i.e. time, energy, financial). In the most typical conceptualisation as a graph,
+nodes in a transport network typically represent settlements (such as whole cities,
+regions or any other kind of origin or destination), individual loci of connection or
+access (interchanges, junctions, stations) or any other point of transition or termi-
+nation (including culs-de-sac, network boundary points). Links represent the paths
+of movement (whether fixed and enduring physical infrastructure or periodic paths
+throughtheairorwater)betweenthosenodes.
+Themodellingoftransportnetworksasgraphsisaroutineandavisuallyintuitive
+interpretationwhenthereisageometricsimilaritybetweengeographicalfeaturesand
+graphelements.Thenetworknodescanbeeasilyrepresentedasgraphverticesand
+thelinearlinksasgraphedges.Thisis,however,nottheonlypossiblerepresentation.
+2.2 TheMultifacetedNatureofStreetNetworks
+A road is a physically constructed or demarcated path or channel to accommodate
+flows of people and vehicles. The connectivity of the road network is assured by
+junctions,nodeswheresomeeventmightoccur:achangeofdirection,orconflictsof
+circulationrequiringmanagementtoavoidaccidents.Fromthisperspective,anurban
+streetnetworkissimplyaroadnetworkinanurbanarea:astreetcanbemodelledas
+a linear element providing a path of movement from one end to the other. In urban
+studies,however,theroleofstreetsisperceivedmuchmorecomprehensively.
+Viewedbroadly,astreetisnotjustalinearconduit,butitmayalsobeacontainer
+ofurbanlife,areflectionandexpressionofcivicsociety,aculturalinterface,apolit-
+ical act (Anderson 1978; Gehl 2011; Sadik-Khan 2017). A street is thus a setting
+738 S.Marshalletal.
+for human behaviour; the people and activities that exist there, and their social and
+economic interactions are important characteristics. The physical characteristics of
+streets are not limited to linear length and width, and movement can exist in a 2D
+field of the street surface not confined to its medial axis (Hahmann et al. 2018). It
+can also be influenced by the 3D nature of the street profile or the vistas the street
+affords.Thisisparticularlytruewhendealingwithpedestrians,forwhomastreethas
+amorecontinuoustwo-orthree-dimensionalquality,notlendingitselftorepresenta-
+tionbydiscretelinearelements;andwherethereisanintimaterelationbetweenthe
+pedestrianspaceandadjoiningbuildings(Sta˚hleetal.2005;SevtsukandMekonnen
+2012),andindeedwiththecontiguous’network’ofpedestrianroutesinsidebuildings
+(MandloiandThill2010).
+Astreet–andbyextension,thestreetnetwork–isthusamulti-dimensionalobject
+ofstudyinitsownright,thatcannotbefullyunderstoodifonlyconsideredasalink
+in a transport network like any other. Yet, even if transport is the main focus of a
+study,streetsystemspossessdistinctivefeaturesthatoughttobeconsideredinorder
+toproperlyunderstandthemasnetworks.
+2.3 HierarchicalNatureofStreetNetworks
+Acrucialaspectofurbanroadsandstreetsistheircontinuity:aroadorstreetwillrou-
+tinelybecontinuousthroughjunctions,thatis,haveacontinuousphysicalpresence
+andidentitythataffectsitsfunctionandusebypeople.Wecanthususefullydistin-
+guishbetweenmain(through)roadsandstreetsthatarecontinuousthroughjunctions;
+andsubsidiaryorsidestreetsthatarenot.Thewaythesestreetsareconnected–some
+continuous,othersterminating–directlygivesrisetoaparticularhierarchicalstruc-
+ture typical of road and street networks. This distinction is routinely overlooked in
+conventionalstudiesthatseealllinksassimplyspanningfromonenodetothenext,
+inwhicheverylinkisinessenceidenticalandindividuallinksareonlydistinguished
+bytheirrelativepositionintheoverallnetwork.
+In contrast, if we recognise streets, roads or equivalent paths of movement as
+continuousentities,theymaybedistinguishedfromeachotherbyvirtueofbeingcon-
+tinuousthroughagreaterorlessernumberofintermediatejunctions.Thisgenerates
+aparticularsenseofhierarchythatistypicallynotexplicitinstreetnetworkmodels
+wherealllinkssimplyspanbetweenadjacentnodes.Eventually,asenseofhierarchy
+couldbeobtainedafterinterpretationofspecifickindsofgraphanalysis.Modelling
+streetsascontinuouselements,however,allowsforthedirectdifferentiationoftypes
+ofstreetsbasedonconfiguration(e.g.spinestreet,connector,loop)(Marshall2005;
+Kropf2008).
+Ifwefurtherconsiderstreet-runningpublictransport,continuityalsoplaysarole
+as stops are part of lines (services), and lines are features of specific modes (bus,
+tram,metro,ortrain).Inametronetworkthelocationoftheindividualstation(node)
+has a local impact on the surrounding streets, but the nature of the specific metro
+line (collection of nodes and links) also has an influence on the attractiveness of
+a location, and the metro network as a whole exerts a particular influence that is
+stronger than the presence of only a bus network. These locations have been also
+StreetNetworkStudies:FromNetworkstoModels... 739
+calledtransitionpointsandstronglyrelatetothefunctionalstructureofthecityasa
+whole(TomkoandWinter2013).
+2.4 AlternativeApproachestoModellingStreets
+Astreetorroadcanbeseenasanaggregationofstreetsegments(henceacompos-
+ite,or‘secondorder’element;Courtatetal.2011;Figueiredo2015a);itcanequally
+beconsideredanintegralspatialwholethatisfragmentedintosuccessivestreetseg-
+ments or axial lines, or other finer scale elements. From this latter perspective, a
+street or road is the primary element. The key question then is how to identify and
+distinguishindividualstreetsorstreet-likeelements.
+Several alternative methods have been developed to address this question, with
+a wide application to urban morphological and movement studies in academia
+and practice worldwide. The space syntax community pioneered this approach by
+introducing models based on axial lines (Hillier and Hanson 1984), which can be
+interpreted as street-like elements (Hillier et al. 1993). Later, models based on line
+or street segments became increasingly prominent, not least because of a broad
+availabilityofdata(Turner2007;Peponisetal.2008).
+Inparallel,othermethodsofmodellingthecontinuityofstreetshavebeendevel-
+oped and applied to empirical studies. Approaches that capture the route structure,
+using the route as a primary element (Marshall2005; Kropf 2008); that distinguish
+streets by name (Jiang and Claramunt 2004a, b); or that create street-like elements
+based on the angular continuity of either axial lines or street segments: strokes
+(ThomsonandRichardson1999),continuitylines(FigueiredoandAmorim2005b),
+intersection continuity negotiation (ICN) (Porta et al. 2006a), natural roads (Jiang
+etal.2008;Tomkoetal.2008).(Thesetechniquesarequitesimilarandalwayschoose
+the ”best continuation” (least angle). However, continuity lines and natural streets
+alsoadoptanangularthresholdabovewhichstreetsegmentsorlinesarenotaggre-
+gated.) A further representational approach is that of the line structure – composed
+ofcontinuouslinesandpoints–mathematicallycomparablewithanincidencestruc-
+ture, and interpretable as having a degree of abstraction between network models
+and graphs (Marshall 2016). Each approach is a particular interpretation of a street
+networkandhasparticularpurposes,advantagesandlimitations(Fig.1).
+3 GraphRepresentationsofStreetNetworks
+3.1 FromModeltoRepresentation
+Inordertoapplynetworkanalysisalgorithmsfromgraphtheoryonastreetnetwork
+modelitmustbeconvertedtoagraphrepresentation(Fig.1):amathematicalrepre-
+sentationconsistingofverticesconnectedbyedgesloadedwithweightsorlabels,that
+can be directed or undirected. The representation of the nodes and links of a trans-
+portnetwork(Fig.1,e)asrespectivelytheverticesandedgesinagraph(Fig.1,f)is
+thedominantstreetnetworkgraphrepresentation(Anezetal.1996).Thisisreferred
+740 S.Marshalletal.
+(a) (b) (c) (d)
+basemap streetsurfaces/ roadcentreline generalisedroad
+polygonalpartition centreline
+(e) (f) (g) (h)
+qr 1 p4 13o1s b 2 t q 14r mn 1 l1 10k 1o b 2 p m n
+n 12a c p n13 o as 1 b 2t j 9a c l j k o b p
+x10 jk 9lm w711 i8h6g vf5 e 3 4du x10 jkm l1 91 72 1 wih 8g v5 6f e 43c du t h 7 si 8 6g rf5 e 3 4dq t h si ra g f e dc q
+labellednodesandlinks junctiongraph labelledgeneralised street-segmentgraph
+v=14(22);e=24 nodesandlinks v=12(20);e=19(35)
+(includingboundaryvertices) (includingboundarysegments)
+(i) (j) (k) (l)
+j a b j b h b c b
+i i c
+c a
+c a d h d
+a
+h e d h e d g f e e
+g f g f g f
+axiallines axiallinegraph continuitylines/ICN/ continuityline/ICN/
+v=10;e=17 naturalroads naturalroadgraph
+v=8;e=9
+(m) (n) (o) (p)
+k j a b k a j b c b c
+j b j
+c i d
+i c a a d
+e e d g e i e
+h d h i f g f
+g f g f h h
+namedstreets namedstreetgraph routestructure routegraph
+v=10;e=16 v=10;e=11
+Fig.1 Fromstreetenvironmentdatasets(toprow),tostreetnetworkmodelsandtheirgraphrepresenta-
+tions(second,thirdandfourthrows).Thetoprowa–dshowsdifferentdatasetsusedasinputforcreating
+streetnetworkmodels.Belowareexamplesofdifferentinterpretationsofstreetsasnetworkmodels(first
+andthirdcolumns),withthejunctionslabelledwithnumbersandthestreetsegmentslabelledwithletters.
+Nexttoeachofthese(secondandfourthcolumns)arethecorrespondinggraphrepresentationsusedfor
+analysis,withthegraphverticeslabelledinred.Basemapping©CrownCopyrightandDatabaseRight
+(2018).OrdnanceSurvey(DigimapLicence)
+StreetNetworkStudies:FromNetworkstoModels... 741
+to as the ’node-link’ representation by Steadman (2004), conflating street network
+modelandgraphrepresentationinoneconcept,sincetheconversionfromonetothe
+other is so direct and intuitive. However, since any graph could be interpreted as a
+’node-link’ representation, we propose to call this (Fig. 1, f) thejunction graph, in
+effectadoptingtheconventionthatthetypeofgraphisnamedaftertheentityprimar-
+ilyrepresentedbythevertices.Thisconventionmatchessomeexistingusageandis
+appliedthroughoutFig.1andtherestofthispaper.
+AsisclearfromFig.1,agraphrepresentationneednotequatethelinearpathsof
+movementwithgraphedges.Astreetnetworkanalysismighttakethestreetsthem-
+selves as the primary elements of study, and represent those as vertices in a graph,
+whiletheconnectionsbetweenstreets(i.e.junctionsorintersections)becomeedges
+in the corresponding graph. This representation (Batty 2004a, b), can be seen as
+equally logical and intuitive from its own point of view (Marshall 2016). In trans-
+portation,agraphwherethestreetsegmentisthevertexandthejunctionsareedges
+has been used to include turn costs and restrictions in the model (Caldwell 1961;
+Winter2002).Thiscanbereferredtoasthestreet-segmentgraph(Fig.1,h).
+Similarly,astreetnetworkcouldberepresentedbyanaxialmap(comprisingaxial
+lines, Fig. 1, i) (Hillier and Hanson 1984), and analyses carried out in which those
+axial lines are represented by the vertices in the graph,while intersectionsbetween
+axial lines are represented by edges (Fig. 1, j). Each other kind of network model
+discussedherehasacorrespondinggraph(Fig.1,k–p).
+Whenusinganodeandlinkstreet networkmodel,onecanextractweightsfrom
+the geometry of the network and assign them to the edges of the graph. In the case
+of the conventional junction graph, this weight is typically the length of the links.
+Inthecaseofthestreetsegmentsgraph,thisweightcanbetheangulardeviationof
+the streets incident in a junction, or the sum of half the length of each link (Winter
+2002).Usingtheseweightedgraphsofstreetsegmentsasverticesitispossibletogen-
+erate a range of alternative non-planar graph representations (Gil 2014; Figueiredo
+2015a; Stavroulaki et al. 2017; Tomko et al. 2008) that correspond to continuous
+streetnetworkmodels.
+3.2 ANoteonTerminology
+The dominant representation of street network models as graphs (links as edges,
+nodes as vertices) has been widely referred to as the primal representation (Porta
+et al. 2006b), while the alternative (aggregated streets as vertices, intersections as
+edges)hasbeenreferredtoasthedualgraphofthestreetnetworkmodel(Portaetal.
+2006a).Thisterminologyisnotonlyinconsistentlyusedintheliteraturebecausethe
+choiceofwhichgraphisprimaldependsonthestartingpoint(seeforexampleBatty
+2004ap.5),butisalsounfortunateinparticularduetoassuminganarrowrelationship
+betweenthestreetmodellingprocessandthegraphrepresentation.
+A mathematical dual graph has a precise, symmetrical involution relationship
+implyingthatifdual(A)→B,thendual(B)→A–asisthecaseforplanargraph
+duals,wherethedimensionalityofnodesandedgesarereversed(e.g.,Voronoitessel-
+lationvs.Delaunaytriangulation,Fig.2,a).Becausetherelationshipissymmetrical
+thegraphsaredualsofeachother,andneitherisstrictly’primal’.
+742 S.Marshalletal.
+a) Voronoi - Delaunay duality b) Street Junction - Block duality c) Street Junction - Segment duality
+Fig.2 Differentexamplesofgraphdualrelationships
+This duality may be perceived between the planar junctions graphs of the node
+and link street network model (junctions as vertices, streets as links) and the urban
+block adjacency graph defined by the streets segments as boundaries of polygonal
+areas(Fig.2,b).Thedualitybetweenthejunctionsgraphandstreetsegmentsgraph
+(Fig.2,c)isnotmathematicallythesame,hencethetermpseudo-dualemployedby
+Winter(2002).
+Thisdualrelationshipdoes,however,notholdwiththeso-calleddualmodelsof
+streetnetworksnotedabove(Portaetal.2006a),wheretheinvolutionprocessisnot
+symmetricalandleadstolossofinformation.Thedifferentapproachestomodelling
+street networks based on the continuity of street segments (see Section 3) result in
+mostlynon-planargraphs(Fig.1,rows3to4),andthereforethereisnodualrelation-
+shipaswiththeplanargraphsinFig.2.Alternativeterminologycouldbesuggested
+(Marshall2016)butadefinitiveconclusiononthisissueawaitsadedicatedreviewof
+allrelevantkindsofgraphandtheirrelations.
+4 CreatingandAnalysingStreetNetworkModels
+4.1 CreatingStreetNetworkModels
+The creation of a street network model requires the choice of a data set to support
+itsrepresentation,butthereversecanalsooccur:theavailabilityofastreetnetwork
+datasetsuggeststhechoiceofaspecificstreetnetworkmodel.Thewidelyavailable
+road centre line (RCL) data sets offer a specific representation of street segments
+between intersections (Fig. 1 top row, a-d), thus are directly usable for node-link
+models, and for junctionsor street segment graphs(Fig. 1 row2,e-h). Other levels
+ofrepresentationcanbederivedfromsuchdata,e.g.longcurvilinearstreetsegments
+can be broken into individual line segments (Stavroulaki et al. 2017) or axial lines
+(Fig.1i),orcontiguousstreet segmentscan beaggregated intoalternativecontinu-
+ous street representations (Fig. 1 k, m, o). However, while RCL are common, they
+should not be used without rigorous attention and preparation. They often contain
+StreetNetworkStudies:FromNetworkstoModels... 743
+errors,wheretheprincipleofinterruptingstreetsegmentsatintersectionsisnotkept.
+Theycanalsoincludenumerousroadinfrastructureartefactssuchastrafficislands,
+roundabouts,multiplelanesandsliproadsatinterchanges,thatmaynotbemeaning-
+fulinagivenstreetnetworkmodel.Differentdatasetsavailableforthesamelocation
+maybeavailable–oftenfromthesameprovider–offeringdifferentlevelsofgener-
+alisation(Fig.1d)ofthedatabasedone.g.,cartographicconsiderations.Thesewill
+leadtodistinctanalyticalconclusions.Whilegeneraliseddatasetssimplifythestreet
+network geometry and eliminate undesirable excess detail, they also limit what is
+includedinthenetwork,usuallyexcludingpedestrianpaths,publicspaces,andminor
+roadsthatareofparticularinteresttostreetnetworkstudies.
+Insomestreetnetworkapproachesthestreetnetworkisdrawnmanuallytoachieve
+specific representations of continuity (e.g., the axial map, Fig. 1, i). This approach
+isoftenconsideredsubjectiveandlaborious,limitingthereproducibilityandspatial
+extent of the research. Nevertheless the researcher can choose the level of rep-
+resentation and what to include in the model as required by the purpose of the
+research.
+4.2 AnalysingStreetNetworkModels
+Ultimately,whateverthestreetnetworkmodeladopted,agraphiscreatedconsisting
+of vertices and edges, eventually with some kind of weights (Table 1). This graph
+canthenbeanalysedindifferentwaysdependingonthepurposeofthestudy.Differ-
+entanalyticmethodshavebeenused,stemmingfromdifferentdisciplines–transport
+networkanalysis,networkcentrality,geographicaccessibility,andtypologicalclas-
+sification.Someexamplesofwhatthesemethodsrepresentandhowtheyareapplied
+todifferentstreetnetworkgraphsarenowsuggestedforillustration.
+Traversal Transport network analysis includes traversal problems, such as single
+journeyrouting(e.g.,Caldwell1961),serviceareacalculation(e.g.,OkabeandKita-
+mura 1996; Peponis et al. 2008), origin destination matrix calculation, and other
+route optimisation algorithms such as the travelling salesman problem. These anal-
+yses use the network as a means to get from A to B without measuring properties
+ofthenetworkelementsthemselves.Theyarethereforeverymuchalignedwiththe
+transportnetworkrepresentation,andworkbestwithdisaggregaterepresentationsof
+streetnetworksbecausetheyrelyonindividualroutesandpathsmeanderingthrough
+thenetwork(Cardilloetal.2006).
+Globalimportanceofnetworkelements Networkcentrality,ontheotherhand,con-
+sists of a collection of algorithms from network science, such as degree, closeness,
+betweenness, or eigenvector centrality, that give a measure to every vertex in the
+graph(Newman2003;Crucittietal.2006).Theseareindicatorsoftherelativeimpor-
+tance of graph vertices, as the number of connections (degree) to other vertices, or
+being close (lower average distance) to all others, or between (frequently on short-
+estroutes)allothers.Thesemetricsareanintrinsicpropertyofthenetworkasobject
+ofstudy,andthereforeverycommoninstreetnetworksandurbanstudies.Mostnet-
+workcentralitymeasurescanbecalculatedonanytypeofgraph,irrespectiveofthe
+744 S.Marshalletal.
+sledomkrowtentnereffidhtiwdetaicossashpargfosetubirttA
+1elbaT
+ecruosataD
+detceriD
+sthgieW
+segdE
+secitreV
+ranalP
+)ecnerefer1.giF(noitatneserpeR
+LCR
+elbissoP
+rehto,cirteM
+stnemgeS
+snoitcnuJ
+*oN
+)f(hpargnoitcnuJ
+LCR
+elbissoP
+rehto,ralugna,cirteM
+snoitcnuJ
+stnemgeS
+*oN
+)h(hpargtnemges-teertS
+motsuC
+oN
+lacigolopoT
+snoitcesretnI
+senillaixA
+oN
+)j(hpargenillaixA
+LCRromotsuC
+oN
+lacigolopoT
+snoitcesretnI
+senilytiunitnoC
+oN
+a)l(hpargytiunitnoC
+LCR
+oN
+lacigolopoT
+snoitcesretnI
+sdaorelgnasuounitnoC
+oN
+a)l(hpargNCIrodaorlarutaN
+steertSdemaNroLCR
+oN
+lacigolopoT
+snoitcesretnI
+sdaordemansuounitnoC
+oN
+)n(hpargteertsdemaN
+LCR
+oN
+slebaL
+snoitcnuJ
+setuoR
+*oN
+)p(hpargetuoR
+;hpargehtfoytiranalpehtskaerbsessaprevo/rednu,slennut,segdirbfoecnetsixeeht,ranalpyllaitnetop*:setoN
+)l(1.giFnisa,hpargemasehtybdetneserperpudneyllacipytsesaceseht,yltnereffiddeviredhguohtlAa
+StreetNetworkStudies:FromNetworkstoModels... 745
+streetnetworkrepresentation,aslongasitmeetsrequiredmathematicalcriteria,such
+ashavingasingleconnectedcomponentoraminimummeaningfulsize.Theresults
+and their interpretation are obviously sensitive to the modelling approach adopted
+(Gil2017).
+Networksubgraphs A number of network measures can be calculated as the value
+of a location on the network in relation to opportunities within a cut-off distance
+or threshold, based on metric (e.g., Porta et al. 2006b) or topological (e.g., Hillier
+andHanson1984)distances,time,budget,quantity,sizeorperceivedutility.Theyare
+similartoglobalmeasuresexceptthatthecut-offorthresholdrulecreateasubgraph
+for each node in the system. In some cases they may include other features of the
+urbanenvironmentthatarenotpartofthestreetnetwork,e.g.landuse(Sta˚hleetal.
+2005;SevtsukandMekonnen2012).Aswithsimplertransportnetworkanalysis,this
+type of indicator is most suited for disaggregate representations of street networks,
+andrequiresadiversityofweightsandadditionaldatasets(Miller1999;Okabeand
+Kitamura 1996). However, it can also be performed in aggregated representations,
+suchastheaxialmap,aloneorcombinedwithplots(Sta˚hleetal.2005).
+Typologicalanalysis Finally,othernetworkstudiesusetheresultingmodeltoiden-
+tify typological characteristics of the different elements, streets or junctions. For
+thispurposearangeoftechniquesareused, suchasbased ontheroutestructureor
+geometric characteristics of the network elements (sinuosity of the streets, angles
+between links in junctions) for use in morphological analyses, street layout design
+or conservation planning, e.g. Marshall (2005), Kropf (2017), and Thomson and
+Richardson(1999).
+Itshouldbestressedthatinprincipleeverytypeofanalysiscouldbemadeusing
+every graph, but some are more meaningful than others. The more disaggregated
+representations, consisting of individual street elements such as junctions and seg-
+ments, are perceived as providinga greater level of detail in the analysis, while the
+more aggregated models, combining street elements based on different notions of
+continuity,providedifferenttypesofstructuralpropertiesandaremostlysuitablefor
+topologicalanalysisofglobalpatternsofcentrality.
+5 DiscussionandOutlook
+Inthispaperwehavesketchedoutanumberofissuesthatwebelieveareimportant
+totheongoingpracticeanddevelopmentofstreetnetworkstudies,intermsofrepre-
+sentation,modellingandanalysis.Overandabovedrawingattentiontothedistinctive
+characteristicsofstreetnetworks(asopposedtoothertransportorspatialnetworks),
+akey contributionherewas todiscuss differenttreatmentsof street systems asnet-
+works, models and representations, including different levels of abstraction, and
+representationasdifferentkindsofgraphs.Wehavetriedtoarticulatethesedifferent
+treatmentsinsufficientdetail-commensuratewithaconciseoverview-toalertthe
+readertothepotentialsignificanceandvalueofconsideringthemexplicitlyinstreet
+networkstudies.
+746 S.Marshalletal.
+Treating a street system as a network is of itself a commitment to a paradigm, a
+modellingdecisionthatinfluenceshowthatstreetsystemisanalysed,valuedandulti-
+matelydesignedormanaged.Thereisarangeofmodelsofstreetnetworkstructures
+(Fig. 1), providing alternatives to the conventional model with junctions as nodes
+andstreetsegmentsaslinks.Inturn,thesemodelsmaybedifferentlyrepresentedas
+graphs (Table 1), which lend themselves to analyses for traversal, connectivity,and
+centrality.Theseanalysesinturnrevealarangeoflocalorglobalpropertiesofindi-
+vidualstreetsorjunctions,theiraggregationsincludingroutes,orhelpunderstandthe
+statisticalpropertiesofthewholestreetnetwork.
+While different traditions have established preferences when studying networks,
+weconsideritvaluablethatdifferentdisciplinescanlearnfromeachother,andthat
+all those traditions can consider the approaches noted in this article. We hope this
+will allow for a more informed, purposeful selectivity in street system modelling
+carved from this plurality of choices. Some models benefit from the simple and
+directderivationfromcommondatasources(RCL)usingmainstreamsoftwaretools
+andconsequentlyaredominantinthescholarshiptraditionofnetworkscience.Yet,
+street networks in particular require a wider and more nuanced range of analytical
+approachestocapturethecomplexaspectsofstreetenvironmentsandnotpurelytheir
+statisticalpropertiesasderivedfromjustoneparticularmodelorrepresentation.
+Asawayforward,weargueforamoreunifiedandcomprehensiveattitudetostreet
+networkstudies.First,weargueforagreaterawarenessofthedifferentapproaches
+available.Evenbasedonexistingknowledge,itseemsincumbentonresearchersand
+analysts to be mindful of the different kinds of model and representation already
+available, and that we ought to reflect, specify, and justify our choices in terms of
+modelandanalysismoretransparently.
+Inparticular,wesuggestthatinstreetnetworkstudiesthenetworkmodellingstep
+iscritical,andshouldbetransparent,deliberate,andgroundedinatheory.Asaresult,
+eachstudyshouldbedrivenbyacarefulanddocumentedmodellingmethod.Sucha
+modelisanabstractionofthephysicalstreetnetworkintothecomponentsandprop-
+ertiesdeemedrelevantforthepurposeofthestudybytheanalyst.Thisinvolvesits
+explicittranslationintoagraphrepresentation,includingdefinitionofvertices,edges,
+weights,andthemodel’sboundary,thataredeemedadequatefortheselectedanaly-
+sis,alwaysbearinginmindthatdecisionsleadingtodifferentgraphsareinextricable
+with decisions about the weights or measures of those graphs. This process would
+ideallybeopento,oratleastinformedby,thetraditionsacrosstheurbandisciplines.
+And, if required, it should lead to the adoption of different street network models
+fordifferentaspectsofthestudy,astheyrepresentandprovideinsightintodifferent
+aspectsofstreetnetworks.Thedifferentmodelsmustbeseenascomplementaryand
+notmutuallyexclusive.
+Second, we encourage theoretical consolidation of the field, with more detailed
+comparativetheoreticalanalysesofthesemodelsandanalyticalapproaches,includ-
+ing how they relate to each other and to other traditions in science that study
+networks. This paper can be considered a start, but broader and deeper studies are
+suggested, that could clarify the relationships between the different kinds of street
+networkmodelsanddifferentkindsofgraphrepresentations(Fig.1;Table1)andthe
+analysesforwhichtheyaresuited.Thistheoreticalagendacouldalsobeextendedto
+748 S.Marshalletal.
+GilJ(2017)Streetnetworkanalysis“edgeeffects”:Examiningthesensitivityofcentralitymeasuresto
+boundaryconditions.EnvironPlannB:UrbanAnalCitySci44(5):819–836.https://doi.org/10.1177/
+0265813516650678
+HaggettP,ChorleyRJ(1969)Networkanalysisingeography.EdwardArnold,London
+HahmannS,MikschJ,ReschB,LauerJ,ZipfA(2018)Routingthroughopenspaces–aperformance
+comparisonofalgorithms.Geo-spatialInfSci21(3):247–256
+HillierB,HansonJ(1984)Thesociallogicofspace.CambridgeUniversityPress,Cambridge
+HillierB,PennA,HansonJ,GrajewskiT,XuJ(1993)Naturalmovement:or,configurationandattraction
+inurbanpedestrianmovement.EnvironPlannB:PlannDes20(1):29–66
+JiangB,ClaramuntC(2004a)Astructuralapproachtothemodelgeneralizationofanurbanstreetnetwork.
+GeoInformatica8(2):157–171
+JiangB,ClaramuntC(2004b)Topologicalanalysisofurbanstreetnetworks.EnvironPlannB:PlannDes
+31(1):151–162
+JiangB,ZhaoS,YinJ(2008)Self-organizednaturalroadsforpredictingtrafficflow:asensitivitystudy.
+JStatMech:TheoryExp2008(07):P07,008
+JiangB,OkabeA(2014)Differentwaysofthinkingaboutstreetnetworksandspatialanalysis.Geogr
+Anal46(4):341–344
+Kansky KJ (1963) Structure of transportation networks: relationships between network geometry and
+regionalcharacteristics,Chicago
+Kivela¨ M,ArenasA,BarthelemyM,GleesonJP,MorenoY,PorterMA(2014)Multilayernetworks.J
+ComplNetw2(3):203–271
+KropfK(2008)Routestructureanalysis.UrbanDes105:10–11
+KropfK(2017)Thehandbookofurbanmorphology.Wiley,NewYork
+LagesseC,BordinP,DouadyS(2015)Aspatialmulti-scaleobjecttoanalyzeroadnetworks.NetwSci
+3(1):156–181
+LoufR,BarthelemyM(2014)Atypologyofstreetpatterns.JRoyalSocInterface11(101):20140,924
+MandloiD,ThillJC(2010)Object-orienteddatamodelingofanindoor/outdoorurbantransportationnet-
+work and route planning analysis. In: Geospatial Analysis and Modelling of Urban Structure and
+Dynamics.Springer,pp197–220
+MarshallS(2005)Streetsandpatterns.Routledge,LondonandNewYork
+MarshallS(2016)Linestructurerepresentationforroadnetworkanalysis.JTranspLand9(1):29–64.
+https://doi.org/10.5198/jtlu.2015.744
+Masucci AP, Stanilov K, Batty M (2014) Exploring the evolution of London’s street network in the
+informationspace:adualapproach.PhysRevE89(1):012,805
+Meeteren M, Neal Z, Derudder B (2016) Disentangling agglomeration and network externalities: a
+conceptualtypology.PapRegSci95(1):61–80
+MillerHJ(1999)MeasuringSpace-TimeAccessibilityBenefitswithinTransportationNetworks:Basic
+TheoryandComputationalProcedures.GeogrAnal31(2):187–212.https://doi.org/10.1111/j.1538-4632.
+1999.tb00976.x
+NewmanME(2003)Thestructureandfunctionofcomplexnetworks.SIAMRev45(2):167–256
+OkabeA,KitamuraM(1996)AComputationalMethodforMarketAreaAnalysisonaNetwork.Geogr
+Anal28(4):330–349.https://doi.org/10.1111/j.1538-4632.1996.tb00939.x
+PeponisJ,BafnaS,ZhangZ(2008)Theconnectivityofstreets:reachanddirectionaldistance.Environ
+PlannB:PlannDes35(5):881–901
+PortaS,CrucittiP,LatoraV(2006a)Thenetworkanalysisofurbanstreets:Adualapproach.PhysicaA
+369(2):853–866.http://www.citebase.org/cgi-bin/citations?id=oai:arXiv.org:cond-mat/0411241
+PortaS,CrucittiP,LatoraV(2006b)Thenetworkanalysisofurbanstreets:aprimalapproach.Environ
+PlannB:PlannDes33(5):705–725
+Sadik-KhanJ(2017)Streetfight:handbookforanurbanrevolution.Penguin,Baltimore
+SevtsukA,MekonnenM(2012)Urbannetworkanalysis.RevIntGe´omatique–n287:305
+Sta˚hleA,MarcusL,Karlstro¨mA(2005) PlaceSyntax-GeographicAccessibilitywithAxialLinesin
+GIS.In:Proceedingsofthe5thInternationalSpaceSyntaxSymposium.TUDelft,Delft,pp131–
+144
+Stavroulaki G, Marcus L, Berghauser Pont M, Nilsson L (2017) Representations of Street Networks
+inSpaceSyntax:Towardsflexiblemapsandmultiplegraphs.In:11thInternationalSpaceSyntax
+Symposium,Lisbon.http://www.11ssslisbon.pt/docs/proceedings/papers/174.pdf
+SteadmanP(2004)Developmentsinspacesyntax.EnvironPlannB:PlannDes31(4):483–486
+StreetNetworkStudies:FromNetworkstoModels... 749
+Strano E, Nicosia V, Latora V, Porta S, Barthe´lemy M (2012) Elementary processes governing the
+evolutionofroadnetworks.SciRep2:296
+Thomson RC, Richardson DE (1999) The ‘Good Continuation’ Principle of Perceptual Organization
+applied to the Generalization of Road Networks. In: Proceedings of the ICA 19th International
+CartographicConference,pp1215–1223,00196
+TomkoM,WinterS,ClaramuntC(2008)Experientialhierarchiesofstreets.ComputEnvironUrbanSyst
+32(1):41–52
+TomkoM,WinterS(2013)Describingthefunctionalspatialstructureofurbanenvironments.Comput
+EnvironUrbanSyst41:177–187.https://doi.org/10.1016/j.compenvurbsys.2013.05.002
+TurnerA(2007)Fromaxialtoroad-centrelines:anewrepresentationforspacesyntaxandanewmodel
+ofroutechoicefortransportnetworkanalysis.EnvironPlannB:PlannDes34(3):539–555
+WinterS(2002)Modelingcostsofturnsinrouteplanning.GeoInformatica6(4):345–361
+XieF,LevinsonD(2007)Measuringthestructureofroadnetworks.GeogrAnal39(3):336–356
+YerraBM,LevinsonDM(2005)Theemergenceofhierarchyintransportationnetworks.AnnRegSci
+39(3):541–553
+Affiliations
+StephenMarshall1 ·JorgeGil2·KarlKropf3·MartinTomko4·LucasFigueiredo5
+JorgeGil
+jorge.gil@chalmers.se
+KarlKropf
+kkropf@brookes.ac.uk
+MartinTomko
+tomkom@unimelb.edu.au
+LucasFigueiredo
+lucasfigueiredo@ct.ufpb.br
+1 BartlettSchoolofPlanning,UniversityCollegeLondon(UCL),London,UK
+2 DepartmentofArchitectureandCivilEngineering,ChalmersUniversityofTechnology,
+Go¨teborg,Sweden
+3 OxfordBrookesUniversity,Oxford,UK
+4 TheUniversityofMelbourne,Parkville,Australia
+5 UniversidadeFederaldaPara´ıba(UFPB),Joa˜oPessoa-PB,Brazil
+

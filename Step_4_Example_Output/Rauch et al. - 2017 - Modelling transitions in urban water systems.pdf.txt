@@ -1,0 +1,667 @@
+References:
+Fig.2. eWorkflowforatypicalDAnCE4Watertimestep.Referencesformodeldetailsandapplicationsareincluded.S1andS2arefoundinthesupplementarymaterial(Bachetal.,2015).
+W.Rauchetal./WaterResearch126(2017)501e514
+507
+W.Rauchetal./WaterResearch126(2017)501e514 513
+urbandevelopmentpatterns,waterinfrastructurechangesandthe Doglioni,A.,Primativo,F.,Laucelli,D.,Monno,V.,Khu,S.-T.,Giustolisi,O.,2009.An
+dynamicsofsocio-institutionaltransition.Whilethesimulationsof integratedmodellingapproachfortheassessmentoflandusechangeeffectson
+wastewaterinfrastructures.Environ.Model.Softw.24(12),1522e1528.
+these sub-models were conducted as individual components, as
+Eggimann,S.,Mutzner,L.,Wani,O.,Schneider,M.Y.,Spuhler,D.,MoydeVitry,M.,
+partofacyclicsequencetheyreplicatedthedynamicoftheoverall Beutler,P.,Maurer,M.,2017.Thepotentialofknowingmore:areviewofdata-
+urban water system, and therefore provide a reliable basis for
+drivenurbanwatermanagement.Environ.Sci.Technol.51(5),2538e2553.
+Ferguson,B.C.,Frantzeskaki,N.,Brown,R.R.,2013a.Astrategicprogramfortran-
+exploring the possible development trajectories of urban water sitioningtoaWaterSensitiveCity.Landsc.UrbanPlan.117,32e45.
+systemsunderdifferentfuturescenarios. Ferguson,B.C.,Brown,R.R.,Frantzeskaki,N.,deHaan,F.J.,Deletic,A.,2013b.The
+enablinginstitutionalcontextforintegratedwatermanagement:Lessonsfrom
+Melbourne.WaterRes.47,7300e7314.
+Acknowledgement
+Filatova, T., Verburg, P.H., Parker, D.C., Stannard, C.A., 2013. Spatial agent-based
+models for socio-ecological systems: challenges and prospects. Environ.
+This research is part of a project that is funded by the EU Model.Softw.45,1e7.
+Geels, F.W., Schot, J., 2007. Typology of sociotechnical transitionpathways. Res.
+FrameworkProgramme7PREPARED:EnablingChange(ProjectNo. Policy36,399e417.
+244232) and the Australian Government's Cooperative Research Gersonius,B.,Nasruddin,F.,Ashley,R.,Jeuken,A.,Pathirana,A.,Zevenbergen,C.,
+CentreforWaterSensitiveCities.DrdeHaan'sresearchwas,inpart, 2012.Developingtheevidencebaseformainstreamingadaptationofstorm-
+watersystemstoclimatechange.WaterRes.46(20),6824e6835.
+funded under the Australian Research Council's Linkage Projects
+Henze,M.,Gujer,W.,Mino,T.,VanLoosedrecht,M.,2006.ActivatedSludgeModels
+Scheme (project number LP120100683) for which he was the ASM1,ASM2,ASM2dandASM3.
+recipient of an Australian Research Council Post-doctoral Fellow- Huang, D.-B., Scholz, R.W., Gujer, W., Chitwood, D.E., Loukopoulos, P.,
+shipIndustry(APDI). Schertenleib, R., Siegrist, H., 2007. Discrete event simulation for exploring
+strategies: an urban water management case. Environ. Sci. Technol. 41 (3),
+915e921.
+AppendixA. Supplementarydata Iftekhar,M.S.,Urich,C.,Schilizzi,S.,Deletic,A.,2016.Effectivenessofincentivesto
+promoteadoptionofwatersensitiveurbandesign:acasestudyonrainwater
+harvestingtanks.In:InternationalCongressonEnvironmentalModellingand
+Supplementary data related to this article can be found at Software,ToulouseFrance.
+https://doi.org/10.1016/j.watres.2017.09.039. Lempert,R.J.,Popper,S.W.,Bankes,S.C.,2003.ShapingtheNextOneHundredYears:
+NewMethodsforQuantitative,Long-termPolicyAnalysis.RAND,SantaMonica.
+Lo€we,R.,Urich,C.,Domingo,N.S.,Mark,O.,Deletic,A.,Arnbjerg-Nielsen,K.,2017.
+References Assessment of urban pluvial flood risk and efficiency of adaptation options
+through simulations e a newgeneration of urbanplanning tools. J. Hydrol.
+Alderfer,C.P.,1969.Anempiricaltestofanewtheoryofhumanneeds.Organ.Behav. 355e367.
+Hum.Perform.4(2),142e175. Mair,M.,Mikovits,C.,Sengthaler,M.,Schoepf,M.,Kinzel,H.,Urich,C.,Kleidorfer,M.,
+Ashley,R.M.,Balmforth,D.J.,Saul,A.J.,Blanskby,J.,2005.Floodinginthefuture: Sitzenfrei, R., Rauch, W., 2014b. The application of a Web-geographic infor-
+predicting climate change, risks and responses in urban areas. Water Sci. mationsystemforimprovingurbanwatercyclemodelling.WaterSci.Technol.
+Technol.52,265e273. 70(11),1838e1846.
+Bach, P.M., McCarthy, D.T., Urich, C., Sitzenfrei, R., Kleidorfer, M., Rauch, W., Malekpour,S.,deHaan,F.J.,Brown,R.R.,2016.Amethodologytoenableexploratory
+Deletic, A., 2013. A planning algorithm for quantifying decentralised water thinkinginstrategicplanning.Technol.Forecast.Soc.Change105,192e202.
+managementopportunitiesinurbanenvironments.WaterSci.Technol.68(8), Maslow,A.H.,1943.Atheoryofhumanmotivation.Psychol.Rev.50,370e396.
+1857e1865. Mikovits,C.,Rauch,W.,Kleidorfer,M.,2015.Adynamicurbandevelopmentmodel
+Bach,P.M.,Rauch,W.,Mikkelsen,P.S.,McCarthy,D.T.,Deletic,A.,2014.Acritical designed for purposes in the field of urban water management.
+reviewofintegratedurbanwatermodellingUrbandrainageandbeyond.En- J.Hydroinformatics17(3),390e403.
+viron.Model.Softw.54,88e107. Mikovits, C., Tscheikner-Gratl, F., Jasper-To€nnies, A., Einfalt, T., Huttenlau, M.,
+Bach,P.M.,Mccarthy,D.T.,Deletic,A.,2015Jan1.Canwemodeltheimplementation Scho€pf, M., Kinzel, H., Rauch, W., Kleidorfer, M., 2017. Decision support for
+ofwatersensitiveurbandesigninevolvingcities?WaterSci.Technol.71(1), adaptationplanningofurbandrainagesystems.J.WaterResour.Plan.Manag.
+149e156. 143(12).
+Bankes, S., 1993. Exploratory modeling for policy analysis. Oper. Res. 41 (3), Milly, P.C., Betancourt, J., Falkenmark, M., Hirsch, R.M., Kundzewicz, Z.W.,
+435e449. Lettenmaier, D.P., Stouffer, R.J., 2008. Stationarity is dead: whither water
+Barthel,R.,Janisch,S.,Schwarz,N.,Trifkovic,A.,Nickel,D.,Schulz,C.,Mauser,W., management?Science319(5863),573e574.
+2008.Anintegratedmodellingframeworkforsimulatingregional-scaleactor Müller,P.,Wonka,P.,Haegler,S.,Ulmer,A.,VanGool,L.,2006.Proceduralmodeling
+responsestoglobalchangeinthewaterdomain.Environ.Model.Softw.23(9), ofbuildings.In:ACMSIGGRAPH2006Paperson-SIGGRAPH’06.ACMPress,
+1095e1121. NewYork,NewYork,USA,pp.614e623.
+Batty,M.,2008.Thesize,scale,andshapeofcities.Science319(5864),769e771. Pahl-Wostl,C.,Sendzimir,J.,Jeffrey,P.,Aerts,J.,Berkamp,G.,Cross,K.,2007.Man-
+Brown,R.R.,Farrelly,M.A.,Loorbach,D.A.,2013.Actorsworkingtheinstitutionsin agingchangetowardadaptivewatermanagementthroughsociallearning.Ecol.
+sustainability transitions: the case of Melbourne's stormwater management. Soc.12(2).
+Glob.Environ.Change-Hum.PolicyDimens.23(4),701e718. Patterson,Z.,Bierlaire,M.,2010.DevelopmentofprototypeUrbanSimmodels.En-
+Brown,R.,Keath,N.,Wong,T.,2009.Urbanwatermanagementincities:historical, viron.Plan.B-Plann.Des.37(2),344e366.
+currentandfutureregimes.WaterSci.Technol.59,847e855. Polebitski,A.,Palmer,R.,Waddell,P.,2010.Evaluatingwaterdemandsunderclimate
+Burger, G., Bach, P.M., Urich, C., Leonhardt, G., Kleidorfer, M., Rauch, W., 2016. changeandtransitionsintheurbanenvironment.J.WaterResour.Plan.Manag.
+Designingandimplementingamulti-corecapableintegratedurbandrainage 137,249e257.
+modellingToolkit:lessonsfromCityDrain3.Adv.Eng.Softw.100,277e289. Rossman,L.,2004.StormWaterManagementModel(SWMMVersion5.0)User's
+Clarke,K.C.,Gaydos,L.J.,1998.Loose-couplingacellularautomatonmodelandGIS: Manual.USEnvironmentProtectionAgency.
+long-termurban growthpredictionfor SanFranciscoand Washington/Balti- Rozos,E.,Makropoulos,C.,2013.Sourcetotapurbanwatercyclemodelling.Envi-
+more.Int.J.Geogr.Inf.Sci.12(7),699e714. ron.Model.Softw.41,139e150.
+Crooks,A.,Castle,C.,Batty,M.,2008.Keychallengesinagent-basedmodellingfor Sitzenfrei,R.,Fach,S.,Kleidorfer,M.,Urich,C.,Rauch,W.,2010.Dynamicvirtual
+geo-spatialsimulation.Comput.Environ.UrbanSyst.32,417e430. infrastructurebenchmarking:DynaVIBe.WaterSci.Technol.watersupply10,
+Dawson, R., 2007. Re-engineering cities: a framework for adaptation to global 600e609.
+change.Phil.Trans.R.Soc.a-Math.Phys.Eng.Sci.365(1861),3085e3098. Sitzenfrei,R.,Urich,C.,Moederl,M.,Rauch,W.,2013.Assessingtheefficiencyof
+Dawson,R.J.,Ball,T.,Werritty,J.,Werritty,A.,Hall,J.W.,Roche,N.,2011.Assessing different CSO positions based on network graph characteristics. Water Sci.
+theeffectivenessofnon-structuralfloodmanagementmeasuresintheThames Technol.67(7),1574e1580.
+Estuaryunderconditionsofsocio-economicandenvironmentalchange.Glob. Spiller,M.,Vreeburg,J.H.,Leusbrock,I.,Zeeman,G.,2015.Flexibledesigninwater
+Environ.Change-Hum.PolicyDimens.21(2),628e646. and wastewater engineeringedefinitions, literature and decision guide.
+de Haan, F.J., Rotmans, J., 2011. Patterns in transitions: understanding complex J.Environ.Manag.149,271e281.
+chainsofchange.Technol.Forecast.Soc.Change78(1),90e102. Strahler,A.N.,1957.Quantitativeanalysisofwatershedgeomorphology.Trans.Am.
+de Haan, F.J., Ferguson, B.C., Adamowicz, R.C., Johnstone, P., Brown, R.R., Geophys.Union38,913e920.
+Wong,T.H.F.,2014.Theneedsofsociety:anewunderstandingoftransitions, Thas, O., 2005. Multivariate Dataverwerking. Universiteit Gent, Faculteit Bio-
+sustainabilityandliveability.Technol.Forecast.Soc.Change85,121e132. Ingenieurswetenschappen, Vakgroep Toegepaste Wiskunde, Biometrie en
+deHaan,F.J.,Rogers,B.C.,Brown,R.R.,Deletic,A.,2016.ManyroadstoRome:the Procesregeling,Gent,Belgium.
+emergenceofpathwaysfrompatternsofchangethroughexploratorymodelling Urich,C.,Sitzenfrei,R.,Moederl,M.,Rauch,W.,2010.Anagent-basedapproachfor
+ofsustainabilitytransitions.Environ.Model.Softw.85,279e292. generatingvirtualsewersystems.WaterSci.Technol.62(5),1090e1097.
+Dessai,S.,Hulme,M.,Lempert,R.,Pielke,R.,2009.Doweneedbetterpredictionsto Urich, C., Bach, P.M., Sitzenfrei, R., Kleidorfer, M., McCarthy, D.T., Deletic, A.,
+adapttoachangingclimate?Trans.Am.Geophys.Union90,111e112. Rauch, W., 2013. Modelling cities and water infrastructure dynamics. Eng.
+
+Annexes/Appendices:
+
+Body Text:
+WaterResearch126(2017)501e514
+ContentslistsavailableatScienceDirect
+Water Research
+journal homepage: www.elsevier.com/locate/watres
+Modelling transitions in urban water systems
+W.Rauch a,* ,C.Urich b,c,P.M.Bach b,B.C.Rogers c,d,F.J.deHaan e,R.R.Brown f,M.Maira,
+D.T. McCarthy b, M. Kleidorfera, R. Sitzenfrei a, A. Deletic b
+aUnitofEnvironmentalEngineering,InstituteofInfrastructure,UniversityofInnsbruck,Technikerstr.13,6020Innsbruck,Austria
+bMonashInfrastructure,CivilEngineeringDepartment,MonashUniversity,Australia
+cCooperativeResearchCentreforWaterSensitiveCities,Australia
+dSchoolofSocialSciences,MonashUniversity,Australia
+eMelbourneSchoolofDesign&MelbourneSustainableSocietyInstitute,TheUniversityofMelbourne,Australia
+fMonashSustainableDevelopmentInstitute,MonashUniversity,Australia
+a r t i c l e i n f o a b s t r a c t
+Articlehistory: Long term planning of urban water infrastructure requires acknowledgement that transitions in the
+Received19April2017 watersystemaredrivenbychangesintheurbanenvironment,aswellassocietaldynamics.Inherentto
+Receivedinrevisedform the complexity of these underlying processes is that the dynamics of a system's evolution cannot be
+21September2017
+explainedbylinearcause-effectrelationshipsandcannotbepredictedundernarrowsetsofassumptions.
+Accepted21September2017 Planningthereforeneeds toconsiderthe functionalbehaviourand performanceofintegratedflexible
+Availableonline22September2017
+infrastructuresystemsunderawiderangeoffutureconditions.Thispaperpresentsthefirststeptowards
+a newgeneration of integrated planning tools that take such an exploratory planning approach. The
+Keywords:
+spatially explicit model, denoted DAnCE4Water, integrates urban development patterns, water infra-
+Integratedmodelling
+Transition structurechangesandthedynamicsofsocio-institutionalchanges.Whiletheindividualcomponentsof
+Urbandrainage the DAnCE4Water model (i.e. modules for simulation of urban development, societal dynamics and
+Urbanwatermanagement evolution/performance of water infrastructure) have been developed elsewhere, this paper presents
+Exploratorymodelling theirintegrationintoasinglemodel.WeexplainthemodellingframeworkofDAnCE4Water,itspotential
+Flexibledesign utilityanditssoftwareimplementation.Theintegratedmodelisvalidatedforthecasestudyofanurban
+catchmentlocatedinMelbourne,Australia.
+©2017ElsevierLtd.Allrightsreserved.
+1. Introduction Although it is widely accepted that such models need to
+consider cities and their water infrastructure as interlinked sys-
+In theirlandmark paper, Millyetal. (2008) claim that“statio- tems (Batty, 2008; Dawson, 2007; Pahl-Wostl et al., 2007; Ger-
+narityisdead”forwatermanagementandthatexternalforcesneed sonius et al., 2012), the functional descriptions of these links are
+tobeconsideredinthedesignofinfrastructure.Withintheurban stillintheirinfancy(UrichandRauch,2014a).Thetotalsystemis
+environment,keydriversintermsofnon-stationarityareclimatic typically broken into two major sub-systems; (1) the biophysical
+variation, socio-economic change and most importantly land-use system(comprisingurbandevelopmentandwaterinfrastructure)
+change. Flexible design of infrastructure (Spiller et al., 2015) al- and (2) the societal system. Model development has tended to
+lows systems to cope with changing operational conditions by focus on the integration of water infrastructure with urban
+gradually introducing alternative solutions, many of which are development models, i.e. the biophysical part. This is not sur-
+decentralised and nature-based. To accommodate the complexity prising, since urban planning and infrastructure design involves
+associated with long term planning and flexible infrastructure similarfundamentalthinking,howeveritremainsakeychallenge
+concepts(Brownetal.,2009),reliableandsophisticatedintegrated to link spatial information of the urban form with the network
+urbanwatermodelsareneeded(Bachetal.,2014;Eggimannetal., description of the pipe system. For example, Rozos and
+2017). Makropoulos (2013) and Willuweit and O'Sullivan (2013) use a
+common grid based approach, whileDoglioni et al. (2009), Urich
+and Rauch (2014b) and Mikovits et al. (2017) mix the spatial
+representationofthecitywithexplicitrepresentationofthewater
+* Correspondingauthor.
+E-mailaddress:wolfgang.rauch@uibk.ac.at(W.Rauch). networks.
+https://doi.org/10.1016/j.watres.2017.09.039
+0043-1354/©2017ElsevierLtd.Allrightsreserved.
+502 W.Rauchetal./WaterResearch126(2017)501e514
+Others have taken a different angle (e.g. Huang et al., 2007; havelastingeffectsontheothers.Asaresult,anintegratedmodel
+Bartheletal.,2008;Dawsonetal.,2011),startingfromthesocie- must encompass all three subsystems in the form of a network,
+talsystemandexpandingtowaterinfrastructure.Societalmodels allowinginformationtopassbetweensubsystemsatanygiventime
+frequently apply agent-based approaches to describe functional step. An intuitive approach is tolink the subsystems (denoted in
+relationships.Thelinkwithphysicalrealityisprovidedbycellular thispaperasmodules)toamodelconductorthatactsasacommon
+automata methods, with grid cells representing both the spatial database, manages the information flow and orchestrates the
+representation of the system and the status of the water infra- simulation(Fig.1).
+structure. Agents representing societal stakeholders move on the The key simulation modules are the (1) Urban Development
+gridandcaninteractandshapethecells(i.e.theirenvironment). Module (UDM), (2) Societal Transitions Module (STM) and (3)
+While this allows predictions of the complete city dynamics, the Biophysical Module (BPM). These modules have been developed
+biophysical model description is too coarse to provide for mean- andtestedindividuallyasdiscussedbelow;thekeyinnovationhere
+ingfulsystemplanningtools. istheirintegration.Additionally,anydeterministicmodelneedsto
+Urich and Rauch 2014a suggest that biophysical and societal have boundary conditions along the simulation pathway. The
+systemdescriptionscouldusenodeswithincomplexnetworks.The integrated model is provided with scenarios regarding environ-
+nodesholdattributesofbothsub-systems(e.g.buildingsorsocietal mentalconditions(e.g.dynamicsofwaterresources,meteorolog-
+entities), while links between the nodes include their functional ical conditions, population change, land-use patterns). This
+relationships.Forexample,ifanewbuilding(nodeA)isinserted(in information is prepared by the user as scenarios that are subse-
+response to population increase), it automatically links to the quently linked as an input module to the conductor. The last
+existing catchment (node B) and the functional relationship is module uses state-of-the-art routines to analyse, report and pre-
+updatedtoreflecttheincreasedcatchmentimperviousness.Sucha sent simulation results (e.g. WebGis application in Mair et al.,
+complexnetworkallowsforstructuraladaptationofthetotalsys- 2014b).Informationonthesoftwareimplementationofthecom-
+temandeabovealleforthoseadaptationstobeeasilytracked. pletemodelisfoundinthesupplementarymaterial.
+Theframeworkenablessocietalmodels(Filatovaetal.,2013)tobe Thisframeworkenablesstakeholderstoexplorepossiblefuture
+directly integrated with biophysical city models. However, the scenariosandconsequencesofpoliciesandmanagementactionson
+predictive power of societal models is very limited (Clarke and the development of urbanwater infrastructure for timeframes in
+Gaydos,1998)andvalidationnearimpossible. theorderofdecades.‘What-if’scenariosfortheurbanwatersystem
+Inthispaperweintroduceanintegratedmodelthatdynamically can be investigated in a dynamicallyevolving environment, with
+links societal and biophysical components of a city. The model theaimofidentifyingthemostsustainableandrobustadaptation
+conceptisembeddedinsoftwareknownasDAnCE4Water,which strategies. This approach, denoted as exploratory modelling, is a
+stands for Dynamic Adaptation for eNabling City Evolution for standardplanningmethodforsystemswithnon-stationaryand/or
+Water. The key individual modules of the integrated model have widelyunknownbehaviour.
+beenexplainedandvalidatedelsewhere(UrichandRauch,2014b;
+deHaanetal.,2016;Urichetal.,2013;Bachetal.,2013).Thekey
+innovationpresentedhereistheirintegrationintoasinglemodel 2.2. SocietalTransitionsModule(STM)
+that simulates development of city infrastructure over long time
+periods by representing the synergies between social, urban and TheSocietalTransitionsModule(STM)simulatestheuptakeand
+watersystems.Atthisstagethemodelislimitedtotheevolutionof phasingoutofwaterservicingsolutions,which,inthisapplication
+urban stormwater management, including flood protection of DAnCE4Water, are stormwater management technologies. The
+throughdrainageservicing,runoffwaterqualitymanagementand key factors that precisely drive system transitions are difficult to
+rainwater/stormwater harvesting. (While not yet implemented, identify and there is no consensus within the different fields
+watersupplyinfrastructurewouldbeeasilyincorporatedintothe interestedintransitions(economics,sociology,historyoftechnol-
+model, since the methodology is shown to be valid for both ogyetc.).Thisislargelybecausethereisnodefinitivetheorythat
+drainageandsupplydimensionsofstormwatermanagement.)The elucidatesthemechanismsofatransition.However,itiscommonto
+paper explains the modelling framework of the DAnCE4Water look at the emergence and uptake of innovation in response to
+software,aswellasitsarchitectureandimplementation.Wealso external shocks and trends, within the context of an embedded
+providevalidationofDAnCE4Waterforanurbancatchmentlocated socio-technical regime that embodies the status quo (Geels and
+inMelbourne,Australia. Schot, 2007). For modelling purposes, this dynamic is translated
+The authors are well aware of the uncertainties involved in intoamechanistictheoreticalframeworkeheretheMulti-Pattern
+predicting long-term city transitions under non-stationary Approach(see2.2.1).
+boundary conditions. As such, the model aim is not detailed Following the above, the STM simulations reflect an evolu-
+description of system dynamics but rather toprovide a decision- tionary, societal process of institutionalisation of urban water
+support tool that enables stakeholders to test possible strategies technologies, which understandably entails many uncertainties.
+andmeasures;thisisknownasexploratorymodelling(e.g.Bankes, Therefore,insteadofpredictingamostlikelysingleoutcome,the
+1993;Dessaietal.,2009;Lempertetal.,2003)andisbecominga STM takes an exploratory modelling approach and explores the
+standard approach to plan against uncertainties the future may range of theoretically possible outcomes given a set of state and
+bring(Walkeretal.,2013). boundaryconditions.Asaconsequence,theSTMproducesaport-
+folioofthousandsofpossiblepathwaysofwaterservicingsolution
+2. Methods uptake. These pathways contain many qualitatively similar path-
+ways,sothelargeportfoliocanbereducedtoalimitedsetoftypical
+2.1. Framework pathways,which,inturn,allowsforanappropriateuptakescenario
+tobeselectedasinputtotheotherDAnCE4Watermodules.
+Modelling long-term transitions of urban water management TheSTMwasdesignedtoalsobeusedasastand-alonemodel
+requires consideration of the interactions between water infra- fortransitionpathwaysimulation.Itisacomplexmodelinitsown
+structure,urbandevelopmentandsocietalsystems.Allthreesub- right,aspresentedindeHaanetal.(2016).Theoutlineherewillbe
+systems are closely interlinked and decisions taken for one will asbriefaspossibleanddrawextensivelyonthispublication.
+W.Rauchetal./WaterResearch126(2017)501e514 503
+Fig.1. eOverallframeworkoftheDAnCE4WaterModelanditscomponentmodules.
+2.2.1. STMarchitecture etal.,2014).Thesocietalneedsconsideredinthisapplicationare
+TheSTMisbasedonrecenttheoreticaladvancesintransitions potablewater, public health,non-potablewater,propertyprotec-
+studies, namely the Multi-Pattern Approach (MPA, de Haan and tion (Existence), ecological health, amenity (Relatedness) and
+Rotmans, 2011). The MPA treats service-provision systems, such intergenerationalequity(Growth).
+asurbanwatermanagement,assetsofservicingsolutions(here Allthesedriverseneeds,constraintsandcompetitioneactat
+stormwater management technologies) that are part of institu- thelevelofconstellationsratherthanofindividualsolutions.The
+tional frameworks (rules, regulations etc). Solutions, in their narrativeofneedsandconstraintsdefinestheboundarycondition
+institutionalframe, enable theservice-provision system tomeet foranSTMsimulation.Theinitialconditionsarethecompositionof
+societalneeds.Some solutionsworkwelltogether,becausethey thesystemintermsofitsconstellationsandconstituentsolutions.
+arebasedonsimilartechnologyorbecausetheycanbeoperated Thecompetitiondriveriscomputedfromthesystemstateateach
+underthesameregulations,somelessso.Forthisreason,service- timestep.
+provision systems tend to form sub-systems, which the theory The MPA suggests that several patterns of development are
+refers to as constellations. Constellations are institutionally possible: an adaptation pattern of internally induced change, a
+coherent and can be considered service-provision systems patternofempowermentwhereanalternativeconstellation(with
+themselves (e.g. traditional drainage, sanitation and supply sys- respect to some other constellation) emerges, and a pattern of
+tems are considered constellations within a water management reconstellationthatessentiallymeanstop-downintervention.For
+system). example,government-ledsectorreform(e.g.marketliberalisation)
+Each individual constellation, evolves under the pressure of a isatypicalreconstellationprocess,theemergenceofcommunities
+numberofdrivers(called‘conditions’,inthetheoreticalliterature): of practice around a new technology (e.g. Water Sensitive Urban
+Design,orWSUD)wouldformanempowermentpattern,andthe
+1. NeedseSolutionsaretakenuporphasedoutasaconsequence incorporationofanewwatersourcingtechnologyinawatersupply
+ofun-met,under-metorover-metsocietalneeds. constellation(e.g.seawaterdesalination)wouldformanadaptation
+2. Constraints e Solutions under constraints (e.g. too expensive) pattern.
+arephasedout,possiblyinfavourofothers. Each driver can potentially induce more than one pattern e
+3. CompetitioneWhenconstellationsmeetthesameneeds,they typically because often there is a choice between reinforcing an
+compete for resources or market share, driving uptake and existing approach (corresponding to an adaptation pattern) or
+phasingoutofmoreorlesscompetitivesolutions. investing in an alternative (corresponding to either an empow-
+ermentorreconstellationpattern).Suchachoiceistheresultof
+Societalneedsarebasicallyindividualneedsregardedonsoci- the strategic movements and decisions of actors, i.e. contingent
+etalscales.Asinsometheoriesofhumanneeds(e.g.Maslow,1943), on human agency. As human agency in these processes is pres-
+themodelregardsneedsinahierarchicalfashion.Concretely,this ently not understood at a level sophisticated enough to allow
+meansthatbasic(Existence)needsareprioritisedoverhigherorder deterministic modelling, the STM takes a radically different
+(RelatednessandGrowth)needs(seee.g.Alderfer,1969;deHaan approach.
+504 W.Rauchetal./WaterResearch126(2017)501e514
+2.2.2. Exploratorymodellingofuptakeandphasingoutpathways ontheircharacteristicsusingalocationchoicemodel(potentially
+withSTM including information from the BPM on the performance of the
+The exploratory modelling approach of the STM entails two urban water system). To physically alter the urban environment,
+stages:Firstly,computealltheoreticallyallowedpathways.Ateach the UDM integrates a procedural modelling algorithm to create
+timestep,severalpatternscouldfollow.Asthesearealldirections new parcels according to the zoning regulations (Vanegas et al.,
+the pathway could take, the STM branches each one, effectively 2012) and new buildings according to the planning regulations
+yieldingtheinitialstateofanewpathway.Thesimulationconse- (Mülleretal.,2006).TheUDMevolvestheurbanenvironmentinan
+quently results in a tree structure of pathways with one starting annualtimestep.
+point e the initial condition e and number-of-patterns-to-the- TocalibratetheUDM,detaileddescriptionsof theurbanenvi-
+power-of-time-stepsendstates. ronment at specific points in time are required,including house-
+Secondly, cluster together similar pathways. There are many hold demographic data (e.g. size, number of children, income),
+roads to Rome; many pathways are qualitatively similar, though buildingsandjobs,aswellasbuildingfootprints,parcelsetc.House
+differingindetail.Anagglomerativehierarchicalclusteringmethod pricedatatoidentifyparametersforthelocationchoicemodelare
+isfoundinThas(2005)(seedeHaanetal.(2016)fordetailsonhow also required. If unavailable, data can be stochasticallygenerated
+appropriateclusterdepthisdeterminedandothertechnicalcon- using statistical data; e.g. household data can be estimated from
+siderations). Typically, a handful of clusters are found with very population density, land use and building information (Patterson
+similarpathwayswithineachclusterbutdissimilarpathwaysbe- andBierlaire,2010).
+tween clusters. Clustering in this way helps to explore the vast Asboundaryconditions,themodelrequiresanurbandevelop-
+possibilityspace.Whilstnotmakingassumptionsaboutthelikeli- ment masterplan, which includes population and demographic
+hoodofeachpathway,theclustersgiveanideaofwhichtypesof projections,aswellastheevolutionoflanduse.Thisdataisusually
+pathwaycanbeexpected.Moreover,ifonemust,the(relative)size availablefromtheurbanplanningdepartmentoflocalauthorities
+oftheclusterscanbeinterpretedasthelikelihoodofthattypeof butcanalsobepartoftheuser-definedscenarios.
+pathwaytoeventuate.
+Pathways trace the uptake and phasing out of servicing solu- 2.4. Bio-physicalmodule(BPM)
+tionsovertimeintheconstellationsconsidered.Thelevelofuptake
+ofacertainsolutionisameasureofaconstellations'abilitytomeet This module relates to the planning, design and performance
+associatedsocietalneed,whichcanberegardedasitsrelativepower assessment of urban water infrastructure. A key aspect of the
+compared with another constellation‘s ability to meet the same moduleisthechoicebetweencentralisedanddecentralisedsupply,
+needs.ThisrelativepowerisimportantforhowtheSTM'sresults sanitationandstormwatermanagementsystems(forthepurpose
+are communicated to the rest of the model, particularly BPM. ofthepaperwesummarizedistributedandnaturebasedsolutions
+Relative power is interpreted as the probability of certain tech- as latter systems and denoted them as WSUD technologies) for
+nologies e the ones corresponding tothe STM solutions e being implementation and adaptation. The BPM algorithms on how
+implementedinthesystem.BPMusesthisinformationtoinform drainage networks are placed in developed urban environments
+howmuchinfrastructureistobeimplementedingeneralterms.A are published in Urich et al. (2013). The BPM algorithms on
+directfeedbackofinformationbetweenthesetwomodulesisnot decentralisedWSUDsystemplacementarepublishedinBachetal.
+currentlypossibleastheBPMisspatiallyexplicitwhiletheSTMis (2013).TheintegrationofthesealgorithmsintheBPMisoutlined
+not. below.
+2.3. UrbanDevelopmentModule(UDM) 2.4.1. Modellingplacementofevolvingwaterinfrastructure
+TheBPMfollowsfiveconsecutiveanditerativesteps.Landuse
+Changesinurbanform(e.g.populationdensity,landuse),have andpopulationmapsarefirstprovidedfromtheUDM,aswellas
+significantimplicationsforurbanwaterservices(e.g.Ashleyetal., aggregated STM results on the currentlyavailable and acceptable
+2005; Polebitski et al., 2010; Brown et al., 2009; Mikovits et al., infrastructuresolutions.Climatechangeprojectionsandregulatory
+2015).TheUDMthereforeaimstosimulatetheimpactofpopula- guidelines defined by the user input scenario form additional
+tion projections, zoning policies and planning regulations on the boundaryconditions.Infrastructureplacementisdistinctforcen-
+realisationofthecityenvironmentand,inparticular,urbanwater tralised (network based) infrastructure and decentralised WSUD
+systems.TheUDMemploysanagent-basedmodellingapproach,a technologiesandisbasedon(a)watermanagementobjectives,and
+widelyusedmethodinsimulatingcitydevelopment(Crooksetal., (b)thepreferencesofstakeholderstowardsdecentralisedsolutions
+2008). In particular, the UDM builds upon UrbanSim (Waddell, (STMoutput),forthegiventimestep.
+2002), a well-established urban development model that simu- In the BPM sequence, centralised systems are first adapted. It
+lates actions of governments, households, businesses and de- connects newly populated areas (UDM output) to the existing
+velopersontheurbanenvironment. network based drainage water infrastructure. The placement of
+ThedevelopmentoftheUrbanDevelopmentModule(including new drainage systems is described by an agent-based approach
+itsapplicationfortheCityofInnsbruck,Austria)isfoundinUrich followingattractionfieldsaccordingtoUrichetal.(2010).Pipesizes
+and Rauch (2014b). It is therefore only briefly outlined here. To are based on loading conditions specified by planning rules
+simulatetheurbandevelopment,theUDMfirstemploystheGov- (Sitzenfreietal.,2013).
+ernment agent to introduce zoning policies and planning regula- Toplacedecentralisedinfrastructure,theBPMfirstdividesthe
+tions according to the scenario input. Next the Developer agent model area into a grid of blocks, representing local districts (the
+builds or redevelops residential, commercial and industrial units sizeofwhichispre-definedbytheuser)andtransfersspatialin-
+basedondemand,indicatedbythevacancyrate.Ifthevacancyrate formation (e.g. population, soil and topographic characteristics,
+drops below a defined threshold through population and job weatherpatterns) intoeachblock. Blocks share inherentconnec-
+marketgrowth,Developersevaluatethedevelopmentpotentialof tivity in terms of natural water flow paths, sewage and supply
+availableparcelsandconstructnewbuildings.Finally,newlyadded networksaswellasothergeographicindices(e.g.distancefromthe
+Households(theagentbasedonpopulationprojections)andrelo- citycentreormajoractivitycentres).Theyinteractwitheachother
+catedHouseholdsareassignedtoavailableresidentialunitsbased through these characteristics. The grid blocks also contain the
+W.Rauchetal./WaterResearch126(2017)501e514 505
+information needed for flexible design and expansion of the 2.5. Modelintegration
+infrastructure, such as imperviousness (for stormwater manage-
+ment), roof area (for rainwater harvesting) or occupancies (for TosimulatetheevolutionoftheurbanwatersystemsDAnCE4-
+water demand and wastewater production). In the BPM, these Waterlooselycouplesitsmodulesthroughacommondatabasethat
+characteristicsarespecifiedasurbanformandabstractedfromthe shares information. The modules are executed sequentially,
+inputdataforeachblock,usinginformationfromstatutoryplan- evolving the urbanwater system into the future in time steps of
+ningregulationasadditionalguidance. typically one or several years. Table 1 gives an overview on the
+DAnCE4Water'soverarchingaimistoinvestigatetransitionsin originandtypeofdatausedaswellasonitstransferbetweenthe
+urbanwaterinfrastructureasitshiftstowardsahybridsystemof modules.
+centralised and decentralised solutions, so the BPM allows for a Theworkflowsequenceforanarbitrarytimestepisdepictedin
+likely balance between the two servicing approaches. However, Fig.2.Theboundaryconditionsofthesimulation(populationand
+since decentralised WSUD technology options are manifold land-usechanges,climateprojections,narrativeofsocietalneeds,
+(considering multiple objectives, technologies and spatial scales), regulatory guidelines and targets) are defined by the user as an
+appropriatesystemsmustbeselectedandplacedbasedonurban inputscenarioeanddenotedassuchinFig.2.
+formproperties.Anopportunityassessmentisdonetonarrowthe TheSTMisfirstexecutedtoevolvemanypossiblefuturesbased
+toolboxofWSUDoptionstoidentifytechnologiesthataresuitedto onthenarrativeofsocialneedsasininputscenario.TheSTMresults
+aparticularenvironment.OpportunityischaracterisedintheBPM describe the relative powers of the centralised and decentralised
+as satisfying regulative (compliance with regulatory standards), constellations.Therelativepoweroftheindividualsolutionswithin
+normative (compliance with stakeholder expectations) and the decentralised constellation is used by the BPM to inform
+compatibility(physicalfitwithenvironment)requirements. preferredtechnologiesintheplacementofWSUD.Asthefeedback
+Foreachgridblock(orgroupsofblocksinthecaseoflarger- onperformancefromtheBPMtotheSTMisnotyetimplemented,
+scale systems), a shortlist of potential technologies is created thesemodulesarecurrentlyindependenttheoretically.
+from a toolbox of available options (consisting of bioretention, Next the UDM is executed, evolving the urban form under
+wetlands, ponds and basins, infiltration systems and swales). changesinpopulationandzoningregulationsandincludingfeed-
+Design curves (i.e. expected performance vs. system size) and backfromtheBPMonsystemperformance.Themoduleproduces
+targets(forquantityandqualitysetforthbyregulation)areused household,buildingandparceldataintheformofGISdata.STM
+with site characteristics (obtained from input data) to calculate outputs could potentially inform UDM processes but this is not
+thesystem'sphysicalconfigurationbyfirstdeterminingeffective currentlyincorporated.
+treatment size followed by additional buffer area for landscape Finally,theBPMisexecutedtoadapttheurbanwatersystemto
+integration. Each design option (including combinations of sys- changesintheurbanform(UDMinput)andinresponsetochanges
+tems) is checked for compatibility with the local environment inthesocietalneeds(STMinput).Toplaceanddesigncentralised
+based on urban form and demographics (from previous steps). and decentralised technologies, the BPM first updates the urban
+Depending on technology type, certain scales and locations are formcharacteristics.IfnewareashavebeendevelopedbytheUDM,
+deemedsuitable.Forexample,abioretentionsystemisversatile thecentralisedwaterinfrastructureisexpandedandtheplacement
+and can be implemented in lots, streets and open spaces, of WSUD is driven by the BPM's Opportunities Shortlist. The
+whereas a wetland is limited to larger open space areas. This shortlist considers the updated urban form characteristics (UDM
+procedure creates a final Opportunities Shortlist. Once this is output) and available technology (ST output) to suggest WSUD
+done, layouts comprising combinations of WSUD infrastructure configurations that achieve a user defined target (boundary con-
+are randomly generated using a Monte Carlo approach and dition inputted in the user-defined scenario). A multi-criteria
+spatialanalysis. assessmentthatincludesconsideration ofsolutionpreference(as
+A simple multi-criteria decision-making framework identifies defined by its relative power as an STM output) informs the se-
+technologypreferencescoresbyassessingtheWSUDcombinations lectionandimplementationofasuitablesolutioninthesimulation.
+against four different criteria: technical, economic, environment
+and social (translated from the power distribution of the STM's 3. Scenariosanduserinteraction
+constellationsinthecurrenttimestep).Thefinallayoutischosenat
+random based on the weighted probabilities of the topten most The use of any deterministic model for prediction implies
+preferredoptionsthatsatisfythewatermanagementobjectivesof boundaryconditionsforthemodelevolutionintime.Foraninte-
+thattimestep. grated model as presented herein, different kinds of boundary
+conditions are necessary: natural/technical (e.g. climate pro-
+jections, water resource availability, technology options, urban
+2.4.2. Modellingwaterinfrastructureperformance development patterns) and socio-economic (e.g. personal prefer-
+The performance of the system is quantified with criteria for ences,politicaltrends,economicconstraints).Asthesefactorsare
+bothbio-physicalproperties(e.g.wateravailability,quality,water interlinked,wedefinetheboundaryconditionsinuser-inputsce-
+losses, urban flooding, pollution, health risk, micro-climate) and narios, and DAnCE4Water must enable the translation of these
+socio-economicvalues(e.g.costs,amenity). scenariosintokeymodelinputs.
+The integration of all BPM components is accomplished by Thedevelopmentofthesescenarioinputscanbedoneusinga
+interfacingseveralsub-modelswithonelargerintegratedmodel- range of approaches. For example, in this paper's case study
+ling framework. The CityDrain3 framework (Burger et al., 2016) application, they were derived through historical analyses. How-
+offersamodulardevelopmentenvironmentforintegratedmodels. ever, long-term infrastructure system planning approaches are
+Many sub-algorithms (e.g. ASM for wastewater treatment plant increasingly drawing on participatory methods, such as scenario
+(Henzeetal.,2006)ortheUSTM(Wongetal.,2002)forstormwater analysis, envisioning and policy experimentation, to draw on
+treatment) are implemented in this framework. Alongside City- diverse perspectives and experiences of a wide range of stake-
+Drain3, there is an interface with a hydrodynamic model: EPA holders in defining scenario inputs. The development of process
+SWMM (Rossman, 2004) for modelling drainage networks and methodologies to develop such scenarios (see Ferguson et al.,
+floodassessment. 2013a; Malekpour et al., 2016 for examples) is outside this
+506 W.Rauchetal./WaterResearch126(2017)501e514
+Table1
+Transferanduseofdatainthemodulesandinuserinteraction:Readedatausedasinput;Defineedefineddatatimeseriesexpressingpossiblefutures;Modifyedataof
+modelvariablesmodifiedinsimulation;Createenewinformation.Primaryresultofthemodelistheevolutionofinfrastructureandaccompanyingperformancevalues.
+Information SpatialType Initialcond Scenario(User) STM UDM BMP Result
+Population Aggregated Read Define Modify Read
+LandUse Raster Read Define Modify Read
+Infrastructure Vektor/Raster Read Modify Yes
+Climate Aggregated Define Read Read
+NarrativeSoc.Needs Aggregated Define Read
+GuidelinesandTargets Aggregated Define Read
+Powerofsolution Aggregated Create Read
+Performanceindicator Aggregated Read Read Create Yes
+paper'sscope,howeverwehighlightthatapplicationofDAnCE4- formalvalidationprocesses, we tested the model algorithms in a
+Wateriswellsuitedtosuchparticipatoryprocessessothatinput realworldapplicationwiththeaimofreproducingtheurbanwater
+scenariosmeaningfullyrepresentthebroadstrategicdimensionsof system'shistoricaldevelopmentpatterns.Comparisonofthecase
+anurbanwatersystemthathavesignificantinfluenceonhowde- study'srealinfrastructuredevelopmentoverseveraldecadeswith
+cisionsaremade. scenarios generated by DAnCE4Waterdemonstrates that the tool
+Therearethreewaysofrunningmodelsimulations:continuous, canreplicatethecoevolutionoftheurbansystem,societalsystem
+exploratoryandgamemodes.Thechoicedependsonthemodelling and centralised and decentralised stormwater management
+aims, case study requirements, available information and time systems.
+constraints.
+4.1. Casestudy
+(cid:1) ContinuousSimulationMode:Inputsandparametersareinitially
+provided to the model, which then makes all decisions
+ThecasestudyisacatchmentofMelbourneknownasScotch-
+throughout the entire simulation. The user can investigate all
+man's Creek (Fig. 3 shows the changes in the catchment since
+results,butmustre-runtheentiresimulationtoimplementany
+1972). The area is primarily suburban residential, has a size of
+changes.Thismodeisrelevantiftheaimistoproducepossible
+approximately 10.4 km2 and a current population of 26,000. Ur-
+storylinesandunderstandtheimpactthatdecisionsmadetoday
+banisation has resulted in ~38% impervious area in 2010 and
+may have on future development if there were no policy
+significantlydegradedtheecologicalhealthofScotchman'sCreek,
+interferences.
+which displays typical characteristics for urban streams in Mel-
+(cid:1) ExploratoryBenchmarkingMode:Alargenumberofrealisations
+bourne'seasternsuburbs:raineventscauseflashfloodingbutthere
+aregeneratedthatcanbeanalysedthroughbenchmarking.This
+islowbaseflow;concretechannelliningandlossofthenativeri-
+modeisusefultogetinsightonthesensitivityofinputdataor
+parian vegetation contribute to poor water quality along Scotch-
+therobustnessofinterventions.Notethatthemodeislimitedby
+man'sCreekand furtherdownstream tothe YarraRiverand Port
+computational hardware and is more feasible for smaller en-
+PhillipBay.WSUDtechnologiesthatremovepollutionfromrunoff
+tities(e.g.districtsofalargermetropolis)orspecificproblems.
+before it enters Scotchman's Creek have helped to improve its
+See,forexample,UrichandRauch(2014b)explorationofrain-
+ecologicalhealth.
+water management options for a medium-sized urban
+Thecasestudyspansfrom1960to2010,a50-yearperiodthat
+environment.
+coverskeyphasesofurbandevelopment,centralisedinfrastructure
+(cid:1) Game Mode: The term ‘Game’ implies that the user continu-
+placement and uptake of WSUD technologies (however recon-
+ously interacts with the model. Aftereach evolution step (cy-
+structed data of the urban development was only available from
+cles of 5e10 years), the user may investigate the system state
+1972 onwards). Table 2 provides a synthesised chronological
+and make necessaryadjustments before continuing the simu-
+narrative of the key developments that relate to Melbourne's
+lation.Thismodeallowspolicyinterventionstobeinvestigated
+stormwater management system. Specific developments in the
+and is particularly attractive for participatory modelling exer-
+Scotchman'sCreekcatchmentareframedbythisnarrative,which
+cises,whereinputfromavarietyofstakeholderscanbegath-
+wasdevelopedthroughcontentanalysisofsecondarydatasources,
+ered and constant feedback between model and user is
+as well as oral histories and in-depth interviews with keyactors
+provided.
+fromMelbourne'swatersector.
+Inadditiontourbandevelopment,Fig.3depictstheevolution
+of water infrastructure in the Scotchman's Creek catchment,
+which was largely network based until WSUD technology
+4. ApplicationofDAnCE4Water
+emerged in the 1990s. Most WSUD systems are concentrated in
+the south near the catchment outlet and are predominantly
+Itisevidentthatamodelofsuchcomplexitycannotbeassessed
+large-scale systems.
+by standard practice of systems analysis methods. The sheer
+amountof input and boundary data, as well as the mixof deter-
+ministic and stochastic methods, makes stringent calibration and 4.2. Initialstateandinputscenarios
+validation procedures unsuitable. An additional challenge is that
+DAnCE4Water integrates novel modules with standard software ToreplicateScotchman'sCreekcatchment'shistoricaldevelop-
+toolsthathavealreadybeenrigorouslyvalidated(e.g.EPASWMM, ment,theindividualDAnCE4Watermodulesweresetuptoreflect
+UrbanSim); problems that can arise when mixing different sub- theconditionsin1960 (forthe STM)and1972 (fortheUDMand
+models together are recognised in the literature (Voinov and BPM). For each module, scenarios were derived from historical
+Shugart,2013). data; these drive the urban system's evolution in the simulation
+Validation is still important, however. As an alternative to period1972e2012.
+508 W.Rauchetal./WaterResearch126(2017)501e514
+Fig.3. eDevelopmentofScotchman'sCreekbetween1972and2010(therectanglemarksanareaofintensivedevelopmentoverthetime).
+Table2
+eNarrativeofchangesinMelbourne'sstormwatersystem(Keysources:Brownetal.,2013;Fergusonetal.,2013b).
+Years Narrative
+1960e1969 Rapidpopulationgrowthduetopost-WWIIbabyboomandimmigrationleadtoincreasingimperiousareandincreasingstormwaterrunoffandcausing
+floodingissues.Introductionofdrainagenetworksandmajorroaddrainageinfrastructure.
+1970e1979 Peoplebegantocaremoreaboutecologicalhealthandurbanamenityasaresultoftheenvironmentalmovementbecomingprominentfromthe1960s.
+EstablishmentoftheEPAandintroductionofsewagetreatmentplant.Bythemid-1970s,theenvironmentalmovementwasinfullswingandmobilising
+urbanaestheticvaluesandhumanamenity.
+1980e1989 Waterwayswereincreasinglyvaluedbythecommunity,withGovernmentinvestmentinbicycleandwalkingtrailsalonglocalriversandcreeks.
+ProblemofdiffusesourcepollutionarouselinkedtomorefrequentalgalbloomsinPortPhillipBay.Localfloodingbecameanissueagain,asincreasing
+impermeablesurfaceswithhigherdensitydevelopmentmeantlocaldrainagesystemshadinsufficientcapacity
+1990e1995 Continuedneoliberalemphasisonwaterpolicyandmanagement,withpushforminimisingeconomiccoststoindustryandareluctancetoforcestrong
+regulations.Governmentnotveryinterestedinenvironmentalissues.MelbourneWatercorporatizedin1992,andsplitintowholesaleand3retailersin
+1994.Developmentofinnovativetechnologiesforreducingstormwaterpollutionwithgrosspollutanttrapsandconstructedwetlands.
+1996e1999 AscientificstudyrecommendedreductionofthenitrogenloadfromstormwatertoPortPhillipBay,whichallrelevantactorsagreedto.Aninter-agency
+policycommitteewasestablishedtodevelopbestpracticeguidelinesandsetstormwaterqualityrunofftargets.
+Nationalfundingwassecuredtobuildwetlandsanddemonstratetheirpracticalapplication.Stormwatertreatmenttechnologiesweredemonstratedat
+alarge-scaleinanewresidential.
+2000e2003 AWSUDconferenceserieswasorganisedtoshareknowledgeandinsights.Industryguidelines(stateandnational)weredevelopedbyformalpolicy
+networks.Acomputer-basedtool(MUSIC)wasdevelopedtosupportdesignandassessmentofstormwatersolutions,whichincreasedtransparencyand
+consistencyindecision-making.
+2004e2010 2003/04summermajorflashfloods.Withkeypartners,aninformalpolicynetwork(theABM)proposedaplanningframeworkthatidentifiedstatutory
+mechanismsforinfluencingimplementationofstormwatertreatmenttechnologies.MelbourneWateradoptedthisandlaunchedtheStormwater
+QualityOngoingexperimentationatlocalscalesoccurred,buildingpracticalexperienceandconfidence.Reducedfocusonstormwaterqualitybetween
+2006and08duetoseveredroughtandinvestmentinlarge-scalewatersecuritymeasures.Potentialforstormwaterharvestingemergedinresponseto
+watersupplyshortages,withstormwatertreatmentasecondaryobjective.
+4.2.1. UrbanDevelopmentModule(UDM) Decentralised&GreenDrainage.ChannelisedDrainageroughlycor-
+ToevolvetheScotchman'sCreekurbanenvironment,theUDM responds to centralised solutions, whereas Decentralised & Green
+requires detailed zoning maps at the precinct level (including DrainagecorrespondstoWSUDsolutions.Theboundaryconditions
+proposed land use and additional regulations like allowable fortheSTMwereobtainedbyconvertingthequalitativenarrative
+building densities and number of floors), as well as population (Table2)intoasemi-quantifiedtimeseriesofscenariosofsocietal
+projections.ThedatafortheUDMwerelargelyreconstructedbased needsandconstraints(fordetailsseesupplementarymaterial).
+onaerialorthophotosandcensusdata.Toguidethesimulation,two
+masterplans at different periods (1982 and 2010) were recon-
+4.2.3. BiophysicalModule(BPM)
+structedbasedonaerialphotos(seeFig.S1ofthesupplementary
+Thedrainagenetwork'sinitialstatewasreconstructedwiththe
+material).
+methoddevelopedbyUrichetal.(2010),whichutilizeshistorical
+information.The inputscenariofor theevolution ofWSUD infra-
+4.2.2. Socialtransitionsmodule(STM) structure in Scotchman's Creek catchment draws on five key
+The urban water system for the Scotchman's Creek is repre- milestonesinMelbourne'sWSUDuptakehistory(Table3).Outputs
+sented by two constellations, Channelised Drainage and fromthe STM (averagepowerdistribution of individual servicing
+W.Rauchetal./WaterResearch126(2017)501e514 509
+Table3
+eTranslationofnarrativescenarioinputintoboundaryconditionsforBPM'sdecentralisedtechnologyplacement.
+Year KeyEventinNarrative TranslationintoModelSetup
+1972 Startingyearinthecatchment,currentlynouseofWSUD Delineationof200mblocks,calculationofurbanform,nouseofWSUD
+technologies
+1990 Firstdemonstrationprojectsfornaturaltreatmenttechnologies,emergence Usingfollowingtechnologies:wetlands,ponds,swales
+ofWSUDideas Managementoftotalsuspendedsolids(TSS)pollutiononly(reducingloads
+byapprox.10%for1%ofbasinimperviousarea),mimicstheState
+EnvironmentalProtectionPolicy(SEPP)duringthisperiod
+1999 Newregulationspublished:bestpracticeenvironmentmanagement Sametechnologies,butnewrequirements:80%reductioninTSSloads,45%
+(BPEM)targetsforpollutionloadreductions reductionintotalnitrogen(TN)andtotalphosphorus(TP)loads.Increased
+requiredserviceto10%ofbasinimperviousareaduetoincreasinguptake.
+2004 Bioretentiontechnologyreadyforpracticaladoption Includedbioretentiontechnologyasamodeloption,nochangeinpollution
+managementtargets
+2006 Newregulation:Clause56oftheVictorianPlanningProvisionsprescribes Modelrequiredtomeet1999targetsforallresidentialareasinScotchman's
+achievingBPEMinallnewresidentialdevelopments Creekcatchment(approx.25%ofbasinimperviousarea)
+Present PendingrevisionofBPEM,attestedrevisedBPEMTargetsforstormwater Usingmorestringentloadreductiontargetsof:85%TSS,50%TPand50%TN
+managementinurbanareas reduction.Runoffvolumereductionalsorequiredof20%andincreasedthe
+servicetobeprovidedtoallareasofthecatchment(i.e.100%basin
+imperviousarea)
+solutionsforthebestclusterofhistoricalreproduction)andUDM 4.3.3. Placementandperformanceofthestormwaterinfrastructure
+(land use and population maps) for the specified years of the The BPM's centralised urban drainage infrastructure model
+narrativeareusedasinputstotheBPM'sdecentralisedtechnolo- producedthedrainagenetwork'sevolutionfrom1972to2010(not
+giesplanningalgorithm. includinghouseconnections);Fig.6(top)showsasnapshotofthe
+drainage infrastructure in 1982, with a good visual resemblance
+between the observed system and the generated network for
+4.3. Resultsanddiscussion higherorderpipes.
+Comparisonofthetotallengthoftheurbandrainagepipesfor
+Basedontheinitialstateandinputscenarios,themodelrepli- 80 model realisations and the observed drainage system (Fig. 6
+catedtheobserveddevelopmentoftheScotchman'sCreekcatch- bottom left) shows the satisfactory replication of the network's
+ment over the 50 year study period. The conductor's simulation characteristics. For more detailed comparison, the Strahler Order
+time step is 1 year, but internal calculation steps in individual (SO) (Strahler,1957) classification has been applied. The SO pro-
+modules are shorter according to the algorithms' need. In the vides insights intoa network'sstructure (e.g. its bifurcation ratio
+simulationthemodulesareinterlinkedandexchangeinformation and function). Starting from the outer branches of a drainage
+in each time step; however to outline the model's capability to network(SO¼1),theSOofabranchisincreasedbythevalue1ifat
+reproduce reality, each module's results are analysed here least 2 upstream branches joinwith the same SO. Fig. 6 (bottom
+separately. right)plots-fori¼{1,…,5}-thestatisticalcharacteristicsofthe80
+modelrealisationsfortheparameter:totalnetworklengthforpipes
+withSO(cid:4)SOi.Thecomparisonwiththeobserveddatashowsthat
+4.3.1. Changesinurbanform
+thegeneratednetworksarewithintherangeoftheobservednet-
+Between 1972 and 1982, the UDM developed land in the workscharacteristic(withexceptionofSO<2).
+catchment's north and east to accommodate the catchment's
+The BPM's decentralised infrastructure component evaluated
+growing urban population (Fig. 4). After 1982, further land was
+many different WSUD placement options. Based on the best his-
+developedandcommercialareaswerechangedtoresidentialuse.
+torical reproduction of uptake curves by the STM (Cluster 2, see
+Spatialcomparisonofthenumberofbuildingsandtotalroofareain Fig. 5), the ten most suitable configurations were identified. As
+500(cid:3)500gridcellsoverthecatchmentshowanR2for1972and
+Fig. 7 shows, the integrated model could identify locations for
+1982of0.80(numberofbuildings)andof0.79(roofarea).Asthe
+decentralisedtechnologyplacementsthataresimilartoobserved
+graphatthebottomofFig.4shows,R2improvesto0.87(numberof
+and currently implemented systems. Still, there are two types of
+buildings)and0.87(roofarea)for2010.Theseresultsshowthatthe
+discrepancies in the number of installations. Firstly, a greater
+modelcouldreproduceobservedurbandevelopmentpatterns.
+density of systems present in modelled results is due to the
+enforcedgridsizeof500m(cid:3)500minthespatialplacemental-
+gorithm.Thismayhavelimitedthemaximumsystemsizeorsub-
+4.3.2. Societaluptakeofurbandrainagetechnologies
+divided available open space as WSUD solutions larger than the
+The STM produced six distinctive clusters of possible uptake
+pathways,eachcorrespondingtoaqualitativelydistinct‘historical’ gridcellcannotcurrentlybeplaced.Secondly,therearelocations
+selectedbythemodelthatdonotcontainsystemsintheobserved
+development.Cluster2wasfoundtobestmatchthehistoricalcase
+data.Itisplausiblethat,historically,theimplementationofWSUD
+data(derivedfromthenarrativeinTable2)andtheotherclusters
+measuresinthesespaceswerenotallowed,duetofactorssuchas
+can be considered alternative (theoretically possible) histories.
+policy constraints, planning overlays, site ownership and/or re-
+Cluster2isacloserepresentationoftherecordedinitialuptakeof
+strictions.Assuch,wechosenottoover-constrainthemodeland,
+decentralised technologies around 1970 (Fig. 5), as the societal
+instead,evaluatethevarietyofchoicesitmakes.
+needforecologicalhealthgrewstrongerwithupcomingenviron-
+The model could reproduce general patterns of WSUD imple-
+mentalism. Likewise the uptake of decentralised technologies
+mentationoverthelast10years;forexample,Fig.8showshowan
+around 2005 is correctly reproduced, which is caused by an
+increasing demand for ecological health led to an uptake of bio-
+increasing demand for healthy waterways. The choice of clusters
+retentionsinceitsmainstreamingin2004.Theinterplaybetween
+andtheseresultsarepresentedanddiscussedindetailindeHaan
+ponds and wetlands is more varied (seen in the grey modelled
+etal.(2016).
+510 W.Rauchetal./WaterResearch126(2017)501e514
+Fig.4. -Comparisonofthemodelledandobservedurbandevelopmentin1972and2010foranareaofScotchmen'sCreekcatchment(markedbyredsquareinFig.2)thatun-
+derwentintensivedevelopment(top);Modelledagainstobservedtotalroofarea(bottomleft)andnumberofbuildings(bottomright)for2010.(Forinterpretationofthereferences
+tocolourinthisfigurelegend,thereaderisreferredtothewebversionofthisarticle.)
+bounds), possibly due to their similar classification in the STM. generate urban water management scenarios algorithmically,
+However,apatternthatissimilartotheobserveddataisdiscernible whichenablesplannerstotesttheeffectivenessofpolicy,planning
+intheresults(bluelineinFig.8). andinfrastructureoptionsunderawiderangeoffuturescenarios
+(Sitzenfreietal.,2010).ForexampleUrichandRauch(2014b)and
+4.4. UseofDAnCE4Waterintheplanningprocess Lo€we et al. (2017) discuss the application of the DAnCE4Water
+framework (part of the component modules regarding Fig.1 are
+DAnCE4Waterenables a range ofnewapproaches toplanning used) to coevolve the urban environment and its water infra-
+integrated and flexible infrastructure systems under non- structure totest the impactof land use planning and distributed
+stationary conditions. Its particular strength is its ability to storage solutions in mitigating increased urban flash flood risk
+W.Rauchetal./WaterResearch126(2017)501e514 511
+Fig.5. -StatisticalanalysisofCluster2.Theverticalaxisrepresentstherelativeservicingcapacityofdecentralisedandgreensolutions.Themedianpathwayissatisfactorilycloseto
+thehistoricaldevelopment.Theboundsrepresentthe1stand3rdquartilesandgiveanimpressionofthedispersionofthepathwaysinthecluster(FigureadaptedfromdeHaan
+etal.,2016).(Forinterpretationofthereferencestocolourinthisfigurelegend,thereaderisreferredtothewebversionofthisarticle.)
+Fig.6. -Modelledandobservedcentraliseddrainageinfrastructurein2010(top);Modelledandobservedtotallengthofthedrainagepipenetworkovertime(bottomleft)ethe
+shadedarearepresentsresultsfrom80modelledscenarios;BoxplotandobservedlengthofthedrainagenetworkforeachStrahlerOrder(bottomright).Theboxplotshowsthe
+median,lowertoupperquartilevaluesofthelengthandwhiskers1.5xoftheinterquartilerange.
+512 W.Rauchetal./WaterResearch126(2017)501e514
+Fig.7. eComparisonofspatialplacementofWSUDsystemsbetweenobserveddataandbestmodelrealisation.
+Fig.8. eUptakeofponds,wetlandsandbioretentionasinfrastructuresolution.Bestmodelledrealisationandboundsofalltop-rankingmodelledrealisationsareplottedagainst
+observeddata(redline).(Forinterpretationofthereferencestocolourinthisfigurelegend,thereaderisreferredtothewebversionofthisarticle.)
+underhundredsofdifferentpopulationgrowthandclimatechange development of Scotchman's Creek catchment showed, DAnCE4-
+scenarios,30e50yearsintothefuture.Inapolicysetting,Iftekhar Water could successfully replicate the societal, urban and bio-
+etal.(2016)appliedDAnCE4Watertoinvestigatetheeffectiveness physicaldynamicsovera50-yearcasestudyperiodfrom1960to
+of financial incentives to promote the uptake of rainwater har- 2010,withspatiallyexplicitdynamicsfrom1972.
+vestingtanksunderarangeofscenarios.Notethattheseexamples Notably, many different scenarios needed to be generated by
+resembleboththebenchmarkingandthegamingmodeofopera- DAnCE4Water to replicate the dynamics observed in the Scotch-
+tion(seesection3.) man'sCreekcatchment.Thisisbecausetheunderlyingprocessesin
+However, as these applications show, complex integrated theurbanwatersystemarecomplexandeinpartseevenchaotic,
+models like DAnCE4Water require an enormous amount of data whichmakesitimpossible(undesirableeven)topredictthefuture
+and insight. Development of simplified, more robust and user againstitsdeeplyuncertainnature.
+friendly methods and tools would be beneficial for the uptake of Instead, application of DAnCE4Water for future planning de-
+exploratoryplanning.Zischgetal.(2017)showafirstattempt. cisions requires users to consider the performance of adapted
+infrastructure systemsundermanydifferent scenariostoidentify
+5. Conclusion which can maintain function under a range of future conditions.
+This concept epitomises an exploratory approach to long-term
+In this paper we present a novel integrated model, DAnCE4- planning. The DAnCE4Water model presented here represents a
+Water, and demonstrate its application to simulate transitions in firstdemonstrationofanexploratoryapproachtoplanningthatis
+urban water systems. As the simulation of the historical implemented through a spatially explicit model that integrates
+514 W.Rauchetal./WaterResearch126(2017)501e514
+Sustain.166(ES5),301e308. Walker, W.E., Haasnoot, M., Kwakkel, J.H., 2013. Adapt or perish: a review of
+Urich,C.,Rauch,W.,2014a.Modellingtheurbanwatercycleasanintegratedpartof planningapproachesforadaptationunderdeepuncertainty.Sustainability5
+thecity:areview.WaterSci.Technol.70(11),1857e1872. (3),955e979.
+Urich,C.,Rauch,W.,2014b.Exploringcriticalpathwaysforurbanwatermanage- Willuweit,L.,O'Sullivan,J.J.,2013.Adecisionsupporttoolforsustainableplanning
+ment to identify robust strategies under deep uncertainties. Water Res. 66, of urban water systems: presenting the Dynamic Urban Water Simulation
+374e389. Model.WaterRes.47(20),7206e7220.
+Vanegas,C.A.,Kelly,T.,Weber,B.,Halatsch,J.,Aliaga,D.G.,Müller,P.,2012.Proce- Wong,T.H.,Fletcher,T.D.,Duncan,H.P.,Coleman,J.R.,Jenkins,G.A.,2002.AModel
+dural generation of parcels in urban modeling. Comput. Graph. Forum 31, forUrbanStormwaterImprovementConceptualisation.GlobalSolutions.
+681e690. Zischg, J., Goncalves, M.L., Bacchin, T.K., Leonhardt, G., Viklander, M., van
+Voinov,A.,Shugart,H.H.,2013.'Integronsters',integralandintegratedmodeling. Timmeren, A., Rauch, W., Sitzenfrei, R., 2017. Info-gap robustness pathway
+Environ.Model.Softw.39,149e158. methodfortransitioningofurbandrainagesystemsunderdeepuncertainties.
+Waddell,P.,2002.UrbanSim-modelingurbandevelopmentforlanduse,trans- WaterSci.Technol.76(5),1272e1281.
+portation,andenvironmentalplanning.J.Am.Plan.Assoc.68(3),297e314.
+

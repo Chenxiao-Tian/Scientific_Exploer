@@ -1,0 +1,82 @@
+Cluster 0:
+- A {{Multilayer}} Perspective for the Analysis of Urban Transportation Systems
+- Smart {{Home Energy Management Systems}} in {{Internet}} of {{Things}} Networks for Green Cities Demands and Services
+- Data Quality Challenges in Large-Scale Cyber-Physical Systems: {{A}} Systematic Review
+- Chapter 11 {{Network}} Reliability
+- Spatial Networks
+- The {{New Science}} of {{Cities}}
+- Urban Spatial Order: Street Network Orientation, Configuration, and Entropy
+- Street {{Network Models}} and {{Indicators}} for {{Every Urban Area}} in the {{World}}
+- Topological Evolution of a Metropolitan Rail Transport Network: {{The}} Case of {{Stockholm}}
+- A {{Set}} of {{Measures}} of {{Centrality Based}} on {{Betweenness}}
+- Classification of {{Urban Street Networks Based}} on {{Tree-Like Network Features}}
+- Analyzing the Spatial Network Structure of Agricultural Greenhouse Gases in {{China}}
+- Network and {{Psychological Effects}} in {{Urban Movement}}
+- A {{Structural Approach}} to the {{Model Generalization}} of an {{Urban Street Network}}*
+- Complex {{Network Topology}} of {{Transportation Systems}}
+- Socio-Technical Networks of Infrastructure Management: {{Network}} Concepts and Motifs for Studying Digitalization, Decentralization, and Integrated Management
+- Street {{Network Studies}}: From {{Networks}} to {{Models}} and Their {{Representations}}
+- Internet of {{Things}} ({{IoT}}): {{Opportunities}}, Issues and Challenges towards a Smart and Sustainable Future
+- A Systematic Survey of {{Internet}} of {{Things}} Frameworks for Smart City Applications
+- The Network Analysis of Urban Streets: {{A}} Dual Approach
+- The {{Network Analysis}} of {{Urban Streets}}: {{A Primal Approach}}
+- Modelling Transitions in Urban Water Systems
+- Statistical {{Characteristics}} and {{Community Analysis}} of {{Urban Road Networks}}
+- Resilient Urban Forms: {{A}} Review of Literature on Streets and Street Networks
+- Evaluation of Network Expansion Decisions for Resilient Interdependent Critical Infrastructures with Different Topologies
+
+Cluster 1:
+- Measuring and Modeling Bipartite Graphs with Community Structure
+- A Generative Graph Model for Electrical Infrastructure Networks
+- Applying Deep Reinforcement Learning to Improve the Reliability of an Infrastructure Network
+- Spatial {{Information}} and the {{Legibility}} of {{Urban Form}}: {{Big Data}} in {{Urban Morphology}}
+- The {{Internet}} of {{Things}} for {{Intelligent Transportation Systems}} in {{Real Smart Cities Scenarios}}
+- Neural {{Ordinary Differential Equations}}
+- The Average Distances in Random Graphs with given Expected Degrees
+- Analyzing and Modeling Real-World Phenomena with Complex Networks: A Survey of Applications
+- Traffic {{Graph Convolutional Recurrent Neural Network}}: {{A Deep Learning Framework}} for {{Network-Scale Traffic Learning}} and {{Forecasting}}
+- The Complexity of Counting Cuts and of Computing the Probability That a Graph Is Connected
+- Spatial {{Science}} and {{Network Science}}: {{Review}} and {{Outcomes}} of a {{Complex Relationship}}
+- Forecasting {{Freeway Link Travel Times}} with a {{Multilayer Feedforward Neural Network}} - {{Park}} - 1999 - {{Computer-Aided Civil}} and {{Infrastructure Engineering}} - {{Wiley Online Library}}
+- Adaptive {{Synthesis}} of {{Indoor Scenes}} via {{Activity-Associated Object Relation Graphs}}
+- {{3D-FRONT}}: {{3D Furnished Rooms}} with {{layOuts}} and {{semaNTics}}
+- Data Cube: A Relational Aggregation Operator Generalizing {{GROUP-BY}}, {{CROSS-TAB}}, and {{SUB-TOTALS}}
+- Bipartite Graphs as Models of Complex Networks
+- {{Graph2Plan}}: Learning Floorplan Generation from Layout Graphs
+- Junction {{Tree Variational Autoencoder}} for {{Molecular Graph Generation}}
+- {{SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS}}
+- Semi-{{Supervised Classification}} with {{Graph Convolutional Networks}}
+- A {{Scalable Generative Graph Model}} with {{Community Structure}}
+- Graph {{Evolution}}: {{Densification}} and {{Shrinking Diameters}}
+- Scene {{Graph Generation}} from {{Objects}}, {{Phrases}} and {{Region Captions}}
+- Integrated Optimization Model for Hydrogen Supply Chain Network Design and Hydrogen Fueling Station Planning
+- Representation {{Learning}} of {{Reconstructed Graphs Using Random Walk Graph Convolutional Network}}
+- Analyzing the Robotic Behavior in a Smart City with Deep Enforcement and Imitation Learning Using {{IoRT}}
+- End-to-{{End Optimization}} of {{Scene Layout}}
+- The {{Small-World Problem}}
+- Interaction {{Graphs}} for {{Cascading Failure Analysis}} in {{Power Grids}}: {{A Survey}}
+- Dynamic Graph Convolutional Network for Long-Term Traffic Flow Prediction with Reinforcement Learning
+- The {{Complexity}} of {{Counting Cuts}} and of {{Computing}} the {{Probability}} That a {{Graph}} Is {{Connected}}
+- Research on {{Construction Technology}} of {{Graph Data Model}}
+- A {{Mathematical Programming Solution}} for {{Automatic Generation}} of {{Synthetic Power Flow Cases}}
+- The {{Emerging Field}} of {{Signal Processing}} on {{Graphs}}: {{Extending High-Dimensional Data Analysis}} to {{Networks}} and {{Other Irregular Domains}}
+- Graph {{Transformer GANs}} for {{Graph-Constrained House Generation}}
+- {{PlanIT}}: Planning and Instantiating Indoor Scenes with Relation Graph and Spatial Prior Networks
+- Collective Dynamics of `Small-World' Networks
+- Scene {{Graph Generation}} by {{Iterative Message Passing}}
+- Graph {{Convolutional Policy Network}} for {{Goal-Directed Molecular Graph Generation}}
+- A Customized Deep Learning Approach to Integrate Network-Scale Online Traffic Data Imputation and Prediction
+- Disentangled {{Dynamic Graph Deep Generation}}
+
+Cluster 2:
+- The {{Internet}} of {{Things}}: {{A}} Survey
+- Optimizing {{Complex Event Processing}} over {{RFID Data Streams}}
+- Flowcube: Constructing {{RFID}} Flowcubes for Multi-Dimensional Analysis of Commodity Flows
+- Warehousing and {{Analyzing Massive RFID Data Sets}}
+- Modeling {{Massive RFID Data Sets}}: {{A Gateway-Based Movement Graph Approach}}
+- Mapping Moving Object Events into a Network of Object Flows to Support Decisions
+- Spatiotemporal Periodical Pattern Mining in Traffic Data
+- House-{{GAN}}++: {{Generative Adversarial Layout Refinement Network}} towards {{Intelligent Computational Agent}} for {{Professional Architects}}
+- A Review of Supply Chain Data Mining Publications
+- A {{Framework}} for {{Mining Actionable Navigation Patterns}} from {{In-Store RFID Datasets}} via {{Indoor Mapping}}
+

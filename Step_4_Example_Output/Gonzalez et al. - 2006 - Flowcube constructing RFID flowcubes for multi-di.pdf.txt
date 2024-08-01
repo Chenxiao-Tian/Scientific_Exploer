@@ -1,0 +1,1022 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+FlowCube: Constructing RFID FlowCubes for
+Multi-Dimensional Analysis of Commodity Flows
+∗
+Hector Gonzalez Jiawei Han Xiaolei Li
+University of Illinois at Urbana-Champaign, IL, USA
+{hagonzal, hanj, xli10}@uiuc.edu
+ABSTRACT 1. INTRODUCTION
+With the advent of RFID (Radio Frequency Identification) With the rapid progress of radio frequency identification
+technology,manufacturers,distributors,andretailerswillbe (RFID)technology,itisexpectedthatinafewyears,RFID
+abletotrackthemovementofindividualobjectsthroughout tagswillbeplacedatthepackageorindividualitemlevelfor
+thesupplychain. Thevolumeofdatageneratedbyatypical many products. These tags will be read by a transponder
+RFID application will be enormous as each item will gen- (RFID reader), from a distance and without line of sight.
+erate a complete history of all the individual locations that One or more readings for a single tags will be collected
+it occupied at every point in time, possibly from a specific at every location that the item visits and therefore enor-
+productionlineatagivenfactory,passingthroughmultiple mousamountsofobjecttrackingdatawillberecorded. This
+warehouses,andallthewaytoaparticularcheckoutcounter technology can be readily used in applications such as item
+inastore. ThemovementtrailsofsuchRFIDdataformgi- trackingandinventorymanagement,andthusholdsagreat
+gantic commodity flowgraph representing the locations and promise to streamline supply chain management, facilitate
+durations of the path stages traversed by each item. This routinganddistributionofproducts,andreducecostsbyim-
+commodityflowcontainsrichmulti-dimensionalinformation proving efficiency. However, the enormous amount of data
+on the characteristics, trends, changes and outliers of com- generatedinsuchapplicationsalsoposesgreatchallengeson
+modity movements. efficient analysis.
+Inthispaper,weproposeamethodtoconstructawarehouse Let us examine a typical such scenario. Consider a nation-
+ofcommodityflows,calledflowcube. AsinstandardOLAP, wide retailer that has implemented RFID tags at the pal-
+the model will be composed of cuboids that aggregate item letanditemlevel,andwhosemanagersneedtoanalyzethe
+flowsatagivenabstractionlevel. Theflowcube differsfrom movementofproductsthroughtheentiresupplychain,from
+the traditional data cube in two major ways. First, the the factories producing items, to international distribution
+measure of each cell will not be a scalar aggregate but a centers, regional warehouses, store backrooms, and shelves,
+commodity flowgraph that captures the major movement all the way to checkout counters. Each item will leave a
+trends and significant deviations of the items aggregated trace of readings of the form (EPC, location, time) as it is
+in the cell. Second, each flowgraph itself can be viewed scannedbythereadersateachdistinctlocation1. Ifwecon-
+at multiple levels by changing the level of abstraction of sider that each stores sells tens of thousands of items every
+path stages. In this paper, we motivate the importance of day, and that each item may be scanned hundreds of times
+the model, and present an efficient method to compute it before being sold, the retail operation may generate several
+by (1) performing simultaneous aggregation of paths to all terabytes of RFID data everyday. This information can be
+interesting abstraction levels, (2) pruning low support path analyzed from the perspective of paths and the abstraction
+segmentsalongtheitemandpathstageabstractionlattices, levelatwhichpathstagesappear,andfromtheperspective
+and (3) compressing the cube by removing rarely occurring of items and the abstraction level at which the dimensions
+cells,andcellswhosecommodityflowscanbeinferredfrom that describe an item are studied.
+higher level cells.
+Path view. Thesetoflocationsthatanitemgoesthrough
+∗The work was supported in part by the U.S. National Sci- formsapath. Pathsareinterestingbecausetheyprovidein-
+enceFoundationNSFIIS-03-08215/05-13678andNSFBDI- sightsintothepatternsthatgoverntheflowofitemsinthe
+05-15813. system. Asinglepathcanbepresentedindifferentwaysde-
+pendingonthepersonlookingatthedata. Figure1presents
+a path (seen in the middle of the figure) aggregated to two
+Permissiontocopywithoutfeeallorpartofthismaterialisgrantedpro- different abstraction levels, the path at the top of the fig-
+videdthatthecopiesarenotmadeordistributedfordirectcommercialad- ure shows the individual locations inside a store, while it
+vantage,theVLDBcopyrightnoticeandthetitleofthepublicationandits collapseslocationsthatbelongtotransportation. Thisview
+dateappear,andnoticeisgiventhatcopyingisbypermissionoftheVery may be interesting to a store manager, that requires de-
+LargeDataBaseEndowment. Tocopyotherwise,ortorepublish,topost tailed transition information within the store. The path at
+onserversortoredistributetolists,requiresafeeand/orspecialpermission
+fromthepublisher,ACM.
+VLDB ‘06,September12-15,2006,Seoul,Korea.
+1ElectronicProductCode(EPC)isauniqueidentifierasso-
+Copyright2006VLDBEndowment,ACM1-59593-385-9/06/09 ciated with each RFID tag
+834
+the bottom of the figure on the other hand, collapses loca- 1. Whatarethemosttypicalpaths,withaverageduration
+tions that belong to stores, and keeps individual locations at each stage, that shoes manufactured in China take
+thatbelongtotransportation. Thisviewmaybeinteresting before arriving to the L.A. distribution center, and list
+to transportation manager in the company. themostnotabledeviationsfromthetypicalpathsthat
+significantly increase total lead time before arrival?
+Store View:
+2. Present a summarized view of the movements of elec-
+tronic goods in the northeast region and list the possi-
+transportation backroom shelf checkout
+blecorrelationsbetweenthedurationsspentbyitemsat
+qualitycontrolpointsinthemanufacturingfacilitiesand
+the probability of being returned by customers.
+dist. center truck backroom shelf checkout 3. Presentaworkflowthatsummarizestheitemmovement
+acrossdifferenttransportationfacilitiesfortheyear2006
+inIllinois,andcontrastpathdurationswithhistoricflow
+Transportation View: information for the same region in 2005.
+dist. center truck store
+The measure of each cell in the flowcube is called a flow-
+graph, which is a tree shaped probabilistic workflow, where
+each node records transition probabilities to other nodes,
+Figure 1: Path views: The same path can be seen
+and the distribution of possible durations at the node. Ad-
+at two different abstraction levels.
+ditionallynodeskeepinformationonexceptionstothegen-
+eral transition and duration distributions given a certain
+Item view. An orthogonal view into RFID commodity
+path prefix that has a minimum support (occurs frequently
+flows is related to items themselves. This is a view much
+in the data set). For example, the flowgraph may have a
+closer to traditional data cubes. An item can have a set
+nodeforthefactorylocationthatsaysthatitemscanmove
+of dimensions describing its characteristics, e.g., product,
+to either the warehouse or the store locations with proba-
+brand, manufacturer. Each of these dimensions has an as-
+bility 60% and 40% respectively. But it may indicate that
+sociated concept hierarchy. Figure 2 presents the different
+thisruleisviolatedwhenitemsstayformorethan1weekin
+levels at which a single item may be looked at along the
+the factory in which case they move to the warehouse with
+product dimension. It is possible that a high level manager
+probability 90%.
+ataretailerwillonlylookatproductsatthecategorylevel.
+But that the manager for a particular line of products may
+Computation of the flowgraph for each cell of the flowcube
+look at individual items in that line.
+can be divided into two steps. The first is to collect the
+necessary counts to find the transition and duration proba-
+Category Level Clothing
+bilitiesforeachnode. Thiscanbedoneefficientlyinasingle
+passoverthepathsaggregatedinthecell. Thesecondisto
+compute the flowgraph exceptions, this is a more expensive
+operation as it requires computing all frequent path seg-
+Type Level Outerwear Shoes ments in the cell, and checking if they cause an exception.
+In this paper we will focus on the problem of how to com-
+putefrequentpathsegmentsforeverycellintheflowcubein
+anefficientmanner. Thetechnicalcontributionofthepaper
+Item Level Shirt Jacket ... can be summarized as follows:
+1. Shared computation. We explore efficient computa-
+Figure 2: Item view: A product can be seen at dif-
+tion of the flowcube by sharing the computation of fre-
+ferent levels of abstraction
+quent cells and frequent path segments simultaneously.
+Similar to shared computation of multiple cuboids in
+Thekeychallengeinconstructingadatacubeforadatabase BUC-like computation [4], we propose to compute fre-
+of RFID paths is to devise an efficient method to compute quent cells in the flowcube and frequent path segments
+summariesofcommodityflowsforthoseitemviewsandpath aggregated at every interesting abstraction level simul-
+viewsthatareinterestingtothedifferentdataanalystsuti- taneously. For example, in a single scan of the path
+lizingtheapplication. Fullmaterializationofsuchdatacube database we can collect counts for items at the product
+would be unrealistic as the number of abstraction levels is level and also at the product category level. Further-
+exponentialinthenumberofdimensionsdescribinganitem more, we can collect counts for path stages with loca-
+and describing a path. tionsatthelowestabstractionlevel,andalsowithloca-
+tions aggregated to higher levels. The concrete cuboids
+In this paper we propose flowcube, a data cube model that that need to be computed will be determined based on
+summarizes commodity flows at multiple levels of abstrac- the cube materialization plan derived from application
+tion along the item view and the path view of RFID data. andcardinalityanalysis. Sharedcomputationminimizes
+This model will provide answers to questions such as: thenumberofscansofthepathdatabasebymaximizing
+835
+theamountofinformationcollectedduringeachscan. In of seconds, we could discretize the value by aggregating it
+order to efficiently compute frequent cells and frequent to a higher abstraction level, clustering, or using any other
+path segments we will develop an encoding system that numerosity reduction method.
+transformstheoriginalpathdatabaseintoatransaction
+database,whereitemsencodeinformationontheirlevel Apathdatabaseisacollectionoftuplesoftheform(cid:104)d ,...,d :
+1 m
+along the item dimensions, and stages encode informa- (l ,t )...(l ,t )(cid:105),whereeachd ,...,d arepathindependent
+1 1 k k 1 m
+tionontheirlevelalongthepathviewabstractionlevels. dimensions (the value does not change with the path tra-
+versed by the item) that describe an item, e.g., product,
+2. Pruning of the search space using both the path
+manufacturer,price,purchasedate. Thepair(l ,t )tellsus
+i i
+and item views. To speed up cube computation, we
+that the item was at location l for a duration of t time
+i i
+use pre-counting of high abstraction level itemsets that
+units.
+willhelpusprunealargeportionofthecandidatespace
+withouthavingtocollecttheircounts. Forexampleifwe
+Table 1 presents a path database with 2 path independent
+detectthatthestageshelfisnotfrequentingeneral,we
+dimensions: productandbrand. Thenomenclatureusedfor
+knowthatfornoparticulardurationitcanbefrequent;
+stagelocationsisdfordistributioncenter,tfortruck,w for
+or if a store location is not frequent, no individual loca-
+warehouse, s for store shelf, c for store checkout, and f for
+tion within the store can be frequent. Similarly, if the
+factory.
+clothingcategoryisnotfrequent,noparticularshirtcan
+be frequent. In our proposed method we do not incur id product brand path
+extra scans of the path database for pre-counting, we 1 tennis nike (f,10)(d,2)(t,1)(s,5)(c,0)
+instead integrate this step with the collection of counts 2 tennis nike (f,5)(d,2)(t,1)(s,10)(c,0)
+for a given set of candidates of a given length. 3 sandals nike (f,10)(d,1)(t,2)(s,5)(c,0)
+4 shirt nike (f,10)(t,1)(s,5)(c,0)
+3. Cube compression by removing redundancy and 5 jacket nike (f,10)(t,2)(s,5)(c,1)
+6 jacket nike (f,10)(t,1)(w,5)
+lowsupportcounts. Wereducethesizeoftheflowcube
+7 tennis adidas (f,5)(d,2)(t,2)(s,20)
+byexploringtwostrategies. Thefirstistocomputeonly
+8 tennis adidas (f,5)(d,2)(t,3)(s,10)(d,5)
+thosecellsthatcontainonlyaminimumnumberofpaths
+(iceberg condition). This makes sense as the flowgraph Table 1: Path Database
+isaprobabilisticmodelthatcanbeusedtoconductsta-
+tisticallysignificantanalysisonlyifthereisenoughdata 3. FLOWGRAPHS
+to support it. The second strategy is to compute only Adurationindependentflowgraphisatreewhereeachnode
+flowgraphsthatarenon-redundantgivenhigherabstrac- represents a location and edges correspond to transitions
+tion level flowgraphs. For example, if the flow patterns between locations. All common path prefixes appear in the
+of 2% milk are similar to those of milk (under certain same branch of the tree. Each transition has an associated
+threshold), then by registering just the high level flow- probability, which is the percentage of items that took the
+graph we can infer the one for 2% milk, i.e., we expect transition represented by the edge. For every node we also
+any low level concept to behave in a similar way to its record a termination probability, which is the percentage
+parents, and only when this behavior is truly different, of paths that terminate at the location associated with the
+we register such information in the flowcube. node.
+We have several options to incorporate duration informa-
+The rest of the paper is organized as follows. Section 2
+tionintoadurationindependentflowgraph,themostdirect
+presents the structure of the path database. Section 3 in-
+wayistocreatenodesforeverycombinationoflocationand
+troduces the concept of flowgraphs. Section 4, defines the
+duration. This option has the disadvantage of generating
+flowcube,andtheorganizationofthecuboidsthatcompose
+very large flowgraphs. A second option is to annotate each
+it. Section 5, develops an efficient method to compute fre-
+nodeinthedurationindependentflowgraphwithadistribu-
+quent patterns for every cell of a flowcube. Section 6, re-
+tionofpossibledurationsatthenode. Thisapproachkeeps
+ports on experimental and performance results. We discuss
+thesizeoftheflowgraphmanageableandcapturesduration
+relatedworkinSection7andconcludeourstudyinsection
+information for the case when (i) the duration distribution
+8.
+between locations is independent, e.g., the time that milk
+spends at the shelf is independent to the time it spent in
+2. PATHDATABASE the store backroom; and (ii) transition probabilities are in-
+AnRFIDimplementationusuallygeneratesastreamofdata dependentofduration,e.g.,theprobabilityofaboxofmilk
+of the form (EPC,location,time) where EPC is an elec- totransitionfromtheshelftothecheckoutcounterdoesnot
+tronicproductcodeassociatedwithanitem,locationisthe depend on the time it spent at the backroom.
+placewerethetagwasreadbyascanner,andtimeiswhen
+the reading took place. If we look at all the records associ- Therearecaseswhenconditions(i)and(ii)donothold,e.g.,
+ated to a particular item and sort them on time, they will aproductthatspendsalongtimeataqualitycontrolstation
+formapath. Afterdatacleaning,eachpathwillhavestages mayincreaseitsprobabilityofmovingtothereturncounter
+of the form (location,time in,time out). In order to study location at a retail store. In order to cover these cases we
+the way patterns flow through locations we can discard ab- propose to use a model which we call flowgraph, that not
+solutetimeandonlyfocusonrelativeduration,inthiscase only records duration and transition distributions at each
+thestagesineachpathareoftheform(location,duration). node, but that also stores information on significant devia-
+Furthermore, duration may not need to be at the precision tionsindurationandtransitionprobabilitiesgivenfrequent
+836
+path prefixes to the node. A prefix to a node is a sequence 4. FLOWCUBE
+of(location,duration)pairsthatappearinthesamebranch Thenextstepwetakeinourmodelistocombineflowgraph
+as the node but before it. The construction of a flowgraph analysis with the power of OLAP type operations such as
+requires two parameters, (cid:178) that is the minimum deviation drill-downandroll-up. Itmaybeinterestingforexampleto
+ofadurationortransitionprobabilityrequiredtorecordan lookattheevolutionoftheflowgraphsforacertainproduct
+exception, and δ the minimum support required to record category over a period of time to detect how a change in
+a deviation. The purpose of (cid:178) is to record only deviations suppliers may have affected the probability of returns for a
+thataretrulyinterestinginthattheysignificantlyaffectthe particular item. We could also use multidimensional analy-
+probability distribution induced by the flowgraph; and the sistocomparethespeedatwhichproductsfromtwodiffer-
+purposeofδtopreventtheexceptionsintheflowgraphfrom ent manufacturers move through the system, and use that
+being dominated by statistical noise in the path database. informationtoimproveinventorymanagementpolicies. Fur-
+Figure3presentsaflowgraphforthepathdatabaseinTable thermore, it may be interesting to look at paths traversed
+1. by the items from different perspectives. A transportation
+managermaywanttolookatflowgraphsthatprovidegreat
+dist. center truck detail on truck, distribution centers, and sorting facilities
+...
+1.0
+while ignoring most other locations. A store manager on
+factory 0.6 5 the other hand may be more interested in looking at move-
+ments from backrooms, to shelfs, checkout counters, and
+0.35 truck shelf checkout return counters and largely ignore other locations.
+0.67 1.0
+In this section we will introduce the concept of a flowcube,
+DurationDist. TransitionDist. 0.33 warehouse whichisa datacubecomputedon anRFID pathdatabase,
+5 : 0.38 dist. center : 0.65
+10 : 0.62 truck : 0.35 where each cell summarizes commodity flows at at a given
+terminate : 0.00 abstraction level of the path independent dimensions, and
+pathstages. Themeasurerecordedineachcelloftheflowcube
+isaflowgraphcomputedonthepathsbelongingtothecell.
+Figure 3: Flowgraph
+In the next sections we will explore in detail the different
+components of a flowcube. We will first introduce the con-
+The flowgraph in Figure 3 also registers significant excep-
+cepts of item abstraction lattice and path abstraction lat-
+tions to duration and transition probabilities (not shownin
+tice, which are important to give a more precise definition
+thefigure),e.g.,thetransitionprobabilityfromthetruckto
+of the cuboid structure of a flowcube. We will then study
+the warehouse, coming from the factory, is in general 33%,
+the computational challenges of using flowgraphs as mea-
+but that probability is 50% when we stay for just 1 hour
+sures. Finally we introduce the concepts of non-redundant
+at the truck location. Similarly we can register exceptions
+flowcubes,andicebergflow-cubesasawaytoreducethesize
+for the distribution of durations at a location given previ-
+of the model.
+ous durations, e.g., items in the distribution center spend
+1 hour with probability 20% and 2 hours with probability
+4.1 AbstractionLattice
+80%, but if an item spent 5 hours at the factory the distri-
+butionchangesandtheprobabilityofstayingfor2hoursin Eachdimensionintheflowcubecanhaveanassociatedcon-
+the distribution center becomes 100%. cept hierarchy. A concept hierarchy is a tree where nodes
+correspond to concepts, and edges correspond to is-a re-
+lationships between concepts. The most concrete concepts
+Definition 3.1. (Flowgraph) A Flowgraph is a tuple (V, resideattheleafsofthetree,whilethemostgeneralconcept,
+D,T,X),whereV isthesetofnodes,eachnodecorresponds denoted ‘*’, resides at the apex of the tree and represents
+to a unique path prefix in the path database. D is a set any concept. The level of abstraction of a concept in the
+of multinomial distributions, one per node, each assigns a hierarchy is the level at which the concept is located in the
+probability to each distinct duration at a node. T is a set tree.
+of multinomial distributions, one per node, each assigns a
+probabilitytoeachpossibletransitionfromthenodetoevery ItemLattice. Theabstractionleveloftheitemsinthepath
+other node, including the termination probability. X is the database can be represented by the tuple (l 1,...,l m), where
+setofexceptionstothetransitionanddurationdistributions l i istheabstractionlevelofthepathindependentdimension
+for each node. d i. For our running example we can say that the items in
+thepathdatabasepresentedresideatthelowestabstraction
+level. The set of all item abstraction levels forms a lattice.
+Computing a flowgraph can be done efficiently by: (1) con- A node n is higher in the lattice than a node n , denoted
+1 2
+structing a prefix tree for the path database (2) annotat- n (cid:185)n ifthelevelsalldimensionsinn aresmallerorequal
+1 2 1
+ingeachnodewithdurationandtransitionprobabilities(3) to the ones in n .
+2
+miningthepathdatabaseforfrequentpathswithminimum
+support δ, and checking if those paths create exceptions Table 2 shows the path independent dimension from Table
+that deviate by more than (cid:178) from the general probability. 1 with the product dimension aggregated one level higher
+Steps(1)and(2)canbedonewithasinglescanofthepath in its concept hierarchy. The “path ids” column lists the
+database, and for step (3) we can use any existing frequent pathsinthecell,eachnumbercorrespondstothepathidin
+pattern mining algorithm. Table 1. We can compute a flowgraph on each cell in Table
+837
+2. Figure 4 presents the flowgraph for the cell (outerwear, involvesomeformofnumerosityreductionbasedoncluster-
+nike). ing or other well known methods.
+product brand pathids Aggregation along the path abstraction lattice is new to
+shoes nike 1,2,3 flowcubes and is quite different to the type of aggregation
+shoes adidas 7,8 performedinaregulardatacube. Inadatacube,anaggre-
+outerwear nike 4,5,6
+gated cell contains a measure on the subset of tuples from
+thefacttablethatsharethesamevaluesoneveryaggregated
+Table 2: Aggregated Path Database
+dimension. When we do path aggregation, the dimensions
+fromthefacttableremainunchanged,butitisthemeasure
+shelf checkout
+of the cell itself which changes. This distinct property re-
+factory truck 1.0 quires us to develop new methods to construct a flowcube
+0.67
+that has aggregation for both item and path dimensions.
+1.0
+0.33 warehouse
+Definition 4.1 (Flowcube). A flowcube is a collec-
+tionofcuboids. Acuboidisagroupingofentriesinthefact
+table into cells, such that each cell shares the same values
+on the item dimensions aggregated to an item abstraction
+Figure 4: Flowgraph for cell (outerwear, nike, 99) level I; and the paths in the cell have been aggregated to a
+l
+path abstraction level P. The measure of a cell is a flow-
+l
+Path Lattice. In the same way that items can be associ- graph computed on the paths in the cell. A cuboid can be
+atedwithanabstractionlevel,pathstageswillalsoresideat characterized by the pair (cid:104)I,P(cid:105).
+l l
+somelevelofthelocationanddurationconcepthierarchies.
+Figure 5 presents an example concept hierarchy for the lo- 4.2 Measurecomputation
+cation dimension of the path stages. The shadowed nodes
+We can divide a flowgraph into two components, the first
+aretheconceptsthatareimportantforanalysis;inthiscase
+is the duration and transition probability distributions, the
+the data analyst may be a transportation manager that is
+second is the set of exceptions. In this section we will show
+interesting in seeing the transportation locations at a full
+thatwhilethefirstcomponentisanalgebraicmeasure,and
+levelofdetail,whileaggregatingstoreandfactorylocations
+thuscanbecomputedefficiently,thesecondcomponentisa
+to a higher level. More formally, the path abstraction level
+holistic measure and requires special treatment.
+is defined by the tuple ((cid:104)v ,v ,...,v (cid:105),t) where each v is a
+1 2 k l i
+nodeinthelocationconcepthierarchy,andt thelevelinthe
+l AssumethatwehaveadatasetS thathasbeenpartitioned
+timeconcepthierarchy. Analogouslytotheitemabstraction S
+into k subsets s ,...,s such that S = s and s ∩s =
+lattice definition, we can define a path abstraction lattice. 1 k i i i j
+φ for all i (cid:54)= j. We say that a measure, or function, is
+algebraicifthemeasureforScanbecomputedbycollecting
+In our running example, assuming that time is at the hour
+M (positive bounded integer) values from each subset s .
+level, the path abstraction level corresponding to Figure 5 i
+Forexample,averageisdistributiveaswecancollectcount()
+is ((cid:104)dist. center, truck, warehouse, factory, store(cid:105) ,hour).
+andsum()(M =2)fromeachsubsettocomputetheglobal
+average. Aholisticmeasureontheotherhandisonewhere
+*
+thereisnoconstantboundonthenumberofvaluesthatneed
+to be collected from each subset in order to compute the
+function for S. Median is an example of a holistic function,
+aseachsubsetwillneedtoprovideitsentiresetofvaluesin
+Transportation Factory Store
+order to compute the global median.
+Lemma 4.2. The duration and transition distributions of
+a flowgraph are algebraic measures.
+Dist. Center Truck Warehouse Backroom Shelf Checkout
+Proof Sketch. Each node n in the flowgraph contains a
+Figure 5: Location Concept Hierarchy duration probability distribution d and a transition proba-
+bilitydistributiont. Foreachnodeintheflowgraph,d(t )=
+P i
+Weaggregateapathtoabstractionlevel((cid:104)v ,v ,...,v (cid:105),t) count(t )/ k count(t ), where d(t ) is the probability of
+1 2 k l i i=1 i i
+in two steps. First, we aggregate the location in each stage duration t , count(t ) is the number of items that stayed at
+i i
+to its corresponding node v , and we aggregate its duration thenodefordurationt andk isthenumberofdistinctdu-
+i i
+tothelevelt. Second,wemergeconsecutivelocationsthat rations at the node. We can compute d for each node in a
+l
+havebeenaggregatedtothesameconceptlevel. Themerg- flowgraph whose dataset has been partitioned into subsets,
+ingofconsecutivelocationsrequiresustodefineanewdura- by collecting the following k values count(t ),...,count(t ).
+1 k
+tion for the merged stage. The computation of the merged Similarly we can argue that the transition distribution t
+duration would depend on the application, it could be as can be computed by collecting a fixed number of transition
+simple as just adding the individual durations, or it could counts from each subset. Given that the number of nodes
+838
+anddistinctdurationspernodeinaflowgraphisfixed(after Definition 4.4 (Redundant flowgraph). Let G be
+numerosityreduction),wecancollectaboundednumberof aflowgraphforcellc,letp ,...,p beallthecellsintheitem
+1 n
+counts from each subset to compute the duration and tran- latticethatareaparentofcandthatresideinacuboidatthe
+sition distributions for the flowgraph. same level in the path lattice as c’s cuboid. Let G ,...,G
+1 n
+be the flowgraphs for cells p ,...,p , let ϕ be a flowgraph
+1 n
+The implication of lemma 4.2 is that we can compute a similaritymetric. WesaythatGisredundantifϕ(G,G )>
+i
+flowcube efficiently by constructing high level flowgraphs τ for all i, where τ is the similarity threshold.
+from already materialized low level ones without having to
+go to the path database.
+Aflowcubethatcontainsonlycellswithnon-redundantflow-
+graphsiscalledanon-redundantflowcube. Anon-redundant
+Lemma 4.3. The set of exceptions in a flowgraph is a flowcube can provide significant space savings when com-
+holistic measure. paredtoacompleteflowcube,butmoreinterestingly,itpro-
+videsimportantinsightintotherelationshipofflowpatterns
+fromhightolowlevelsofabstraction,andcanfacilitatethe
+Proof Sketch. Theflowgraphexceptionsarecomputedon
+discovery of exceptions in multi-dimensional space. For ex-
+the frequent itemsets in the collection of paths aggregated
+ample, using a non-redundant flowcube we can quickly de-
+in the cell, thus proving that a function that returns the
+terminethatmilkfromeverymanufacturerhasverysimilar
+frequentitemsetsforacellisnotalgebraicissufficient. As-
+flow patterns, except for the milk from farm A which has
+sume that the set S is the union of s ,...,s , and that the
+1 n significant differences. Using this information the data an-
+sets f ,...,f are the frequent itemsets for each subset s .
+1 n i alyst can drill downand slice on farm A to determine what
+We need to compute F the frequent itemsets for S, assume
+factors make its flowgraph different.
+thatfj isfrequentpatternjinseti,inordertocheckiffj is
+i i
+frequentinS weneedtocollectitscountoneverysubsets ,
+k 4.4 IcebergFlowcube
+and thus we need every subset to provide counts for every
+A flowgraph is a statistical model that describes the flow
+frequentpatternonanyothersubset,thisnumberisclearly
+behavior of objects given a collection of paths. If the data
+unboundedasitdependsonthecharacteristicsofeachdata
+set on which the flowgraph is computed is very small, the
+set.
+flowgraph may not be useful in conducting data analysis.
+Each probability in the model will be supported by such a
+The implication of lemma 4.3 is that we can not compute
+smallnumberofobservationsanditmaynotbeanaccurate
+high level flowgraphs from low level ones by just passing a
+estimate of the true probability. In order to minimize this
+fixedamountofinformationbetweenthelevels. Butwecan
+problem, we will materialize only cells in the flowcube that
+stillminethefrequentpatternsrequiredtodetermineexcep-
+contain at least δ paths (minimum support). For example,
+tionsineachcellinaveryefficientwaybyentirelyavoiding
+if we set the minimum support to 2, the cell (shirt,∗) from
+thelevelbylevelcomputationapproachandinsteadusinga
+Table 1 will not be materialized as it contains only a single
+novelsharedcomputationmethodthatsimultaneouslyfinds
+path.
+frequent patterns for cuboids at every level of abstraction.
+In section 5 we will develop the mining method in detail.
+Definition 4.5 (Iceberg flowcube). Aflowcubethat
+4.3 FlowgraphRedundancy
+contains only cells with a path count larger than δ is called
+The flowgraph registered for a given cell in a flowcube may an Iceberg flowcube.
+not provide new information on the characteristics of the
+data in the cell, if the cells at a higher abstraction level
+on the item lattice, and the same abstraction level on the Icebergflowcubescanbecomputedefficientlybyusingapri-
+pathlattice,canbeusedtoderivetheflowgraphinthecell. oripruningofinfrequentcells. Wecanmaterializethecube
+For example, if we have a flowgraph G for milk, and a from low abstraction levels to high abstraction ones. If at
+1
+flowgraphG frommilk2%(milkisanancestorofmilk2% some point a low level cell is not frequent, we do not need
+2
+in the item abstraction lattice), and G = G we see that tocheckthefrequencyofanyspecializationofthecell. The
+1 2
+G is redundant, as it can be inferred from G . algorithm we develop in the next section will make exten-
+2 1
+siveuseofthispropertytospeedupthecomputationofthe
+Before we give a more formal definition of redundancy we flowcube.
+need a way to determine the similarity of two flowgraphs.
+A similarity metric between two flowgraphs is a function 5. ALGORITHMS
+ϕ: G ×G →R. Informallythevalueofϕ(G ,G )islarge Inthissectionwewilldevelopamethodtocomputeanon-
+1 2 1 2
+iftheG andG aresimilarandsmallotherwise. Thereare redundant iceberg flowcube given an input path database.
+1 2
+many options for ϕ and the one to use should use depends The problem of flowcube construction can be divided into
+ontheparticularRFIDapplicationsemantics. Onepossible two parts. The first is to compute the flowgraph for each
+funtion is to use the KL-Divergence of the probability dis- frequentcellinthecube,andthesecondistopruneuninter-
+tributions induced by two flowgraphs. But other similarity esting cells given higher abstraction level cells. The second
+metrics,basedforexampleonprobabilisticdeterministicfi- problem can be solved once the flowcube has been mate-
+nite automaton (PDFA) distance could be used. Note that rialized, by traversing the cuboid lattice from low to high
+wedonotrequireϕtobearealmetricinthemathematical abstraction levels, while pruning cells that are found to be
+sense, in that the triangle inequality does not necessarily redundant given the parents. In the rest of this paper we
+need to hold. will focus on solving the first problem.
+839
+Thekeycomputationalchallengeinmaterializingaflowcube database we share the counting of frequent patterns at ev-
+is to find the set of frequent path segments, aggregated at ery abstraction level in a single scan. Every item that we
+every interesting abstraction level, for every cell that ap- encounter in a transaction contributes to the support of all
+pears frequently in the path database. Once we have the of its ancestors on either the item or path lattices. For ex-
+counts for every frequent pattern in a cell determining ex- ample, the item 112 (jacket) contributes to its own support
+ceptions can be done efficiently by just checking if counts and the support of its ancestors, namely, 11* (outerwear)
+of these patterns change the duration or transition proba- and 1** (we will later show that this ancestor is not really
+bility distributions for each node. The problem of mining needed). Similarly an item representing a path stage con-
+frequent patterns in the flowcube is very expensive as we tributestothesupportofallofitsancestorsalongthepath
+need to mine frequent paths at every cell, and the number lattice. Forexample,thepathstage(fdts,10)willsupportits
+ofcellsisexponentialinthenumberofitemandpathdimen- own item and items such as (fdts,*), (fTs,10) and (fTs,*),
+sions. Flowcube materialization combines two of the most where f stands for factory, d for distribution center, t for
+expensive methods in data mining, cube computation, and truck, s for shelf, and T for transportation (T is the parent
+frequent pattern mining. The method that we develop in of d, and t, in the location concept hierarchy).
+this section solves these two problems with a modified ver-
+sionoftheApriorialgorithm[3],bycollectingfrequentpat- Shared counting processes patterns from short to long. In
+tern counts at every interesting level of the item and path the first scan of the database we can collect all the pat-
+abstraction lattices simultaneously, while exploiting cross- terns of length 1, at every abstraction level in the item and
+pruning opportunities between these two lattices to reduce path lattices. In the second scan we check the frequency of
+the search space as early as possible. To further improve candidate patterns of length 2 (formed by joining frequent
+performance our algorithm will use partial materialization patterns of length 1). We continue this process until no
+torestrictthesetofcuboidstocompute,tothosemostuse- more frequent patterns are found. Table 4 presents a por-
+ful to each particular application. The algorithm is based tionofthefrequentpatternsoflength1andlength2forthe
+on the following key ideas: transformed path database of Table 3.
+Construction of a transaction database. In order to Length1frequent Length2frequent
+runafrequentpatternalgorithmonboththeitemandpath Itemset Support Itemset Support
+{121} 5 {12*,211} 3
+dimensionsateveryabstractionlevel,weneedtotransform
+{12*} 5 {12*,21*} 3
+theoriginalpathdatabaseintoatransactiondatabase. Val-
+{(f,10)} 5 {211,(f,10)} 4
+ues in the path database need to be transformed into items {(f,*)} 8 {(f,5)(fd,2)} 3
+thatencodetheirconcepthierarchyinformationandthusfa- {(fd,2)} 4 {(f,*),(fd,*)} 3
+cilitate efficient multi-level mining. For example, the value ... ... ... ...
+“jacket” for the product dimension in Table 1, can be en-
+coded as “112”, the first digit indicates that it is a value of Table 4: Frequent Itemsets
+thefirstpathindependentdimension,theseconddigitindi-
+cates that is of type outerwear, and the third digit tells us Pruning of infrequent candidates. When we generate
+thatitisajacket(forbrevityweomittheencodingforprod- candidates of length k +1 based on frequent patterns of
+uct category as all the products in our example belong to length k we can apply several optimization techniques to
+thesamecategory: clothing). Pathstagesrequireaslightly prune large portions of the candidate space:
+different encoding, in addition to recording the concept hi-
+erarchy for the location and time dimensions for the stage,
+each stage should also record the path prefix leading to the • Precountingoffrequentitemsetsathighlevelsof
+stage so that we can do multi-level path aggregation. For abstraction along the item and path lattices. We
+examplethestage(t,1)inthefirstpathofthepathdatabase can take advantage of the fact that infrequent itemsets
+inTable1canbeencodedas(fdt,10),tomeanthatitisthe at high abstraction levels of the item and path lattice
+thirdstageinthepath: factory→dist. center→truck,and can not be frequent at low abstraction levels. We can
+that it has a duration of 10 time units. implement this strategy by, for example, counting fre-
+quent patterns of length 2 at a high abstraction level
+Table 3 presents the transformed database resulting from whilewescanthedatabasetofindthefrequentpatterns
+the path database from Table 1. of length 1. A more general precounting strategy could
+betocounthighabstractionlevelpatternsoflengthk+1
+TID Items when counting the support of length k patterns.
+1 {121,211,(f,10),(fd,2),(fdt,1),(fdts,5),(fdtsc,0)}
+2 {121,211,(f,5),(fd,2),(fdt,1),(fdts,10),(fdtsc,0)} • Pruning of candidates containing two unrelated
+3 {122,211,(f,10),(fd,1),(fdt,2),(fdts,5),(fdtsc,0)} stages. Givenourstageencoding,wecanquicklydeter-
+4 {111,211,(f,10),(ft,1),(fts,5),(ftsc,0)}
+mineiftwostagescanreallyappearinathesamepath,
+5 {112,211,(f,10),(ft,2),(fts,5),(ftsc,1)}
+and prune all those candidates that contain stages that
+6 {112,211,(f,10),(ft,1),(ftw,5)}
+7 {121,221,(f,5),(fd,2),(fdt,2),(fdts,20)} cannotappeartogether. Forexampleweknowthatthe
+8 {121,221,(f,5),(fd,2),(fdt,3),(fdts,10),(fdtsd,5)} stages(fd,2)and(fts,5)canneverappearinthesame
+path, and thus should not be generated as a candidate.
+Table 3: Transformed transaction database
+• Pruning of path independent dimensions aggre-
+Sharedcountingoffrequentpatterns. Inordertomin- gated to the highest abstraction level. We do not
+imize the number of scans of the transformed transaction needtocollectcountsforanitemsuchas1**,thisitem
+840
+reallymeananyvaluefordimension1;anditscountwill Algorithm 1 Shared
+always be the same as the size of the transaction table. Input: A path database D, a minimum support δ
+Thesetypeofitemscanberemovedfromthetransaction Output: Frequentcellsandfrequentpathsegmentsinevery
+database. cell
+Method:
+• Pruning of items and their ancestors in the same
+1: In one scan of the path database compute the trans-
+transaction. This optimization was introduced in [17]
+formed path database into D(cid:48), collect frequent items of
+and is useful for our problem. We do not need to count
+length 1 into L , and pre-count patterns of length > 1
+anitemandanyofitsancestorsinthesamecandidateas 1
+at high abstraction levels into P .
+we know that the ancestor will always appear with the 1
+2: for k=2,L (cid:54)=φ,k++ do
+item. This optimization can be applied to both path k−1
+3: generate C by joining frequent patterns in L
+independent dimension values, and path stages. For k k−1
+4: RemovefromC candidatesthatareinfrequentgiven
+example we should not consider the candidate itemset k
+the pre-counted set P , remove candidates that in-
+{121,12∗} as its count will be the same of the itemset k−1
+clude stages that can not be linked, and remove can-
+{121}.
+didates that contain an item and its ancestor.
+5: for every transaction t in D(cid:48) do
+6: increment the count of candidates in C supported
+Partial Materialization. Even after applying all the op- k
+byt,andcollectthecountsofhighabstractionlevel
+timizationsoutlinedabove,andremovinginfrequentandre-
+patterns of length >k into P
+dundantcellsthesizeofofflowcubecanstillbeverylargein k
+7: end for
+the cases when we have a high dimensional path database.
+8: L = frequent items in C
+Under such conditions we can use the techniques of partial k k
+9: end for
+materializationdevelopedfortraditionaldatacubes[12,11, S
+10: Return L .
+16]. k k
+One strategy that seems especially well suited to our prob-
+lemisthatofpartialmaterializationdescribedin[11],which infrequent in the highest abstraction level cuboid and thus
+suggeststhecomputationofalayerofcuboidsataminimum will be infrequent in every other cuboid, the algorithm will
+abstraction level that is interesting to users, a layer at an repeatedlygeneratethatpathstageasacandidateandcheck
+observation level where most analysis will take place, and itssupportjusttofindthatitisinfrequenteverysingletime.
+the materialization of a few cuboids along popular paths in Anotherdisadvantageofthecubingbasedalgorithmisthat
+between these two layers. ithastokeeplonglistsoftransactionidentifiersasmeasures
+for the cells, when the lists are long, the input output costs
+5.1 Sharedalgorithm ofreadingthemcanbesignificant. Inourexperimentseven
+formoderatelysizeddatasetstheselistswheremuchlarger
+Basedontheoptimizationtechniquesintroducedinthepre-
+than the path database itself. With the algorithm shared,
+vioussection,weproposealgorithmSharedwhichisamod-
+weonlyrecordfrequentpatterns,andthusourinputoutput
+ified version of the Apriori algorithm [3] used to mine fre-
+costs are generally smaller.
+quent itemsets. Shared simultaneously computes the fre-
+quent cells, and the frequent path segments aggregated at
+6. EXPERIMENTALEVALUATION
+every interesting abstraction level along the item and path
+lattices. The output of the algorithm can be used to com- Inthissection,weperformathoroughanalysisourproposed
+pute the flowgraph for every cell that passes the minimum algorithm (shared) and compare its performance against a
+support threshold in the flowcube. baseline algorithm (basic), and against the cubing based
+algorithm (cubing) presented in the previous section. All
+5.2 CubingBasedAlgorithm experiments were implemented using C++ and were con-
+ductedonanIntelPentiumIV2.4GHzSystemwith1GBof
+A natural competitor to the Shared algorithm is an iceberg
+RAM.ThesystemranDebianSargewiththe2.6.13.4kernel
+cubingalgorithmthatcomputesonlycellsthatpasstheice-
+and gcc 4.0.2.
+berg condition on the item dimensions, and that for each
+such cell calls a frequent pattern mining algorithm to find
+frequent path segments in the cell. The precise cubing al- 6.1 DataSynthesis
+gorithm used in this problem is not critical, as long as the The path databases used for our experiments were gener-
+cubecomputationorderisfromhighabstractionleveltolow ated using a synthetic path generator that simulates the
+level,becausesuchorderenablesearlypruningofinfrequent movement of items in a retail operation. We first generate
+portions of the cube. Examples of algorithms that fall into the set of all valid sequences of locations that an item can
+this category are BUC [4] and Star Cubing [20]. take through the system. Each location in a sequence has
+anassociatedconcepthierarchywith2levelsofabstraction.
+Algorithm2takesadvantageofpruningopportunitiesbased Thenumberofdistinctvaluesandskewperlevelarevaried
+onthepathindependentdimensions,i.e.,ifitdetectsthata to change the distribution of frequent path segments. The
+certain value for a given dimension is infrequent, it will not generationofeachentryinthepathdatabaseisdoneintwo
+check that value combined with another dimension because steps. Wefirstgeneratevaluesforthepathindependentdi-
+itisnecessarilyinfrequent. Whatthealgorithmmissesisthe mensions. Each dimension has a 3 level concept hierarchy.
+ability to do pruning based on the path abstraction lattice. Wevarythenumberofdistinctvaluesandtheskewforeach
+It will not, for example, detect that a certain path stage is level to change the distribution of frequent cells. After we
+841
+Algorithm 2 Cubing smaller data sets but as we increase the number of paths
+Input: A path database D, a minimum support δ the runtime of shared increases with a smaller slope than
+Output: Frequentcellsandfrequentpathsegmentsinevery that of cubing. This may be due to the fact that as we
+cell increase the number of paths the data set becomes denser
+Method: BUC slows down. Another influencing factor in the differ-
+1: Divide D into two components D , which contains the enceinslopesisthatasthedatasetsbecomedensercubing
+i
+path independent dimensions, and D which contains needs to invoke the frequent pattern mining algorithm for
+p
+the paths. many more cells, each with a larger number of paths. We
+2: Transform D into a transaction database by encoding wereabletorunthebasicalgorithmfor100,000and200,000
+p
+pathstagesintoitems,andassigntoeachtransactiona paths,forothervaluesthenumberofcandidateswassolarge
+unique identifier. that they could not fit into memory.
+3: Computetheicebergcube C onD ,useasmeasurethe
+i
+list of transaction identifiers aggregated in the cell. 700
+4: for each cell c in C do
+i 5: cp = read the transactions aggregated in the cell. i 600
+6: cf = find frequent patterns in cp by using a frequent
+i i
+pattern mining algorithm
+500
+7: end for
+S 8: return cf.
+i i 400
+300
+have selected the values for the path independent dimen-
+sions,werandomlyselectavalidlocationsequencefromthe
+200
+listofpossibleones,andgenerateapathbyassigningaran-
+dom duration to each location. The values for the levels
+100
+intheconcepthierarchiesforpathindependentdimensions,
+stage locations, and stage durations, are all drawn from a
+0
+Zipf distribution [21] with varying α to simulate different 100 200 300 400 500 600 700 800 900 1000
+degrees of data skew.
+For the experiments we compute frequent patterns for ev-
+ery cell at every abstraction level of the path independent
+dimensions, and for path stages we aggregate locations to
+the level present in the path database and one level higher,
+and we aggregate durations to the level present in the path
+database and to the any (*) level, for a total of 4 path ab-
+straction levels.
+Inmostoftheexperimentswecomparethreemethods: Shared,
+Cubing,andBasic. Sharedisthealgorithmthatwepropose
+insection5.1andthatdoessimultaneousminingoffrequent
+cells and frequent path segments at all abstraction levels.
+For shared we implemented pre-counting of frequent pat-
+terns of length 2 at abstraction level 2, and pre-counting of
+pathstageswithdurationaggregatedtothe’*’level. Cubing
+is an implementation of the algorithm described in section
+5.2, we use a modified version of BUC [4] to compute the
+iceberg cube on the path independent dimensions and then
+calledApriori[3]tominefrequentpathsegmentsineachcell.
+BasicisthesamealgorithmasSharedexceptthatwedonot
+perform any candidate pruning based on the optimizations
+outlined in the previous section. In the figures we will use
+thefollowingnotationtorepresentdifferentdatasetparam-
+eters N for the number of records, δ for minimum support,
+and d for the number of path independent dimensions.
+6.2 Pathdatabasesize
+In this experiment we look at the runtime performance of
+thethreealgorithmswhenvaryingthesizeofpathdatabase,
+from100,000pathsto1,000,000paths(disksizeof6megabytes
+to 65 megabytes respectively). In Figure 6 we can see that
+the performance of shared and cubing is quite close for
+)sdnoces(
+emit
+shared
+cubing basic
+transactions (000)
+Figure 6: Database Size (δ=0.01, d=5)
+6.3 MinimumSupport
+In this experiment we constructed a path database with
+100,000pathsand5pathindependentdimensions. Wevar-
+ied the minimum support from 0.3% to 2.0%. In Figure 7
+wecanseethatsharedoutperformscubingandbasic. Aswe
+increase minimum support the performance of all the algo-
+rithmsimprovesasexpected. Basicimprovesfasterthatthe
+other two, this is due to the fact that fewer candidates are
+generated at higher support levels, and thus optimizations
+based on candidate pruning become less critical. For every
+support level we can see that shared outperforms cubing,
+but what is more important we see that shared improves
+its performance faster than cubing. The reason is that as
+weincreasesupportsharedwillquicklyprunelargeportions
+of the path space, while cubing will repeatedly check this
+portions for every cell it finds to be frequent.
+6.4 NumberofDimensions
+Inthisexperimentwekeptthenumberofpathsconstantat
+100,000 and the support at 1%, and varied the number of
+dimensions from 2 to 10. The datasets used for this exper-
+iment were quite sparse to prevent the number of frequent
+cells to explode at higher dimension cuboids. The sparse
+nature of the datasets makes all the algorithms achieve a
+similarperformancelevel. WecanseeinFigure8thatboth
+shared and cubing are able to prune large portions of the
+cube space very soon, and thus performance was compa-
+rable. Similarly basic was quite efficient as the number of
+candidateswassmallandoptimizationsbasedoncandidate
+842
+200
+180
+160
+140
+120
+100
+80
+60
+40
+20
+0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 1.8 2
+)sdnoces(
+emit
+shared
+cubing
+basic
+minimum support (%)
+Figure 7: Minimum Support (N =100,000, d=5)
+pruningdidnotmakeabigdifferencegiventhatthenumber
+of candidates was small to begin with.
+90
+80
+70
+60
+50
+40
+30
+20
+10
+2 3 4 5 6 7 8 9 10
+)sdnoces(
+emit
+220
+200
+180
+160
+140
+120
+100
+80
+60
+40
+20
+a b c
+shared
+cubing
+basic
+number of dimensions
+Figure 8: Number of Dimensions. (N = 100,000,
+δ=0.01)
+6.5 Density of the path independent dimen-
+sions
+For this experiment we created three datasets with varying
+numbers of distinct values in 5 path independent dimen-
+sions. Dataset a had 2, 2, and 5 distinct values per level
+in every dimension; dataset b has 4, 4, and 6; dataset c has
+5, 5, and 10. In Figure 9 we can see that as we increase
+the number of distinct items, data sparsity increases, and
+fewerfrequentcellsandpathsegmentsarefound,whichsig-
+nificantlyimprovestheperformanceofallthreealgorithms.
+Due to the very large number of candidates we could not
+run the basic algorithm for dataset a.
+6.6 Densityofthepaths
+)sdnoces(
+emit
+shared
+cubing
+basic
+item density
+Figure 9: Item density (N =100,000, δ=0.01, d=5)
+In this experiment we kept the density of the path inde-
+pendent dimensions constant and varied the density of the
+path stages by varying the number of distinct location se-
+quences 10 to 150. We can see in Figure 10 that for small
+numbersofdistinctpathsequences,wehavemanyfrequent
+path fragments and thus mining is more expensive. But
+what is more important is that as the path database be-
+comesdensersharedgainsaverysignificantadvantageover
+cubing. The reason is that in a few scans of the database
+sharedisabletodetecteveryfrequentpathsegmentatevery
+abstractionlevel,whilecubingneedstodofindfrequentpath
+segmentsindependentlyforeachfrequentcell,andgiventhe
+highdensityofpaths,miningoffrequentpathsegmentsisan
+expensive operation. We could not run the basic algorithm
+on this experiment as the number of candidates exploded
+with dense paths.
+300
+250
+200
+150
+100
+50
+5 10 15 20 25 30 35 40 45 50
+)sdnoces(
+emit
+shared
+cubing
+path density
+Figure 10: Path Density (N = 100,000, δ = 0.01, d =
+5)
+843
+6.7 PruningPower
+Thisisexperimentweshowtheeffectivenessoftheoptimiza-
+tionsdescribedinsection5topruneunpromisingcandidates
+from consideration in the mining process. We compare the
+number of candidates that the basic and shared algorithms
+needtocountforeachpatternlength. WecanseeinFigure
+11thatsharedisabletopruneaverysignificantnumberof
+candidatesfromconsideration. Basicontheotherhandhas
+to collect counts for a very large number of patterns that
+end up being infrequent, this increases the memory usage
+andslowsdownthealgorithm. Wecanalsoseeinthefigure
+that shared considers patterns only up to length 8, while
+basic considers patterns all the way to length 12. This is
+because basic is considering long transactions that include
+items and their ancestors.
+250000
+200000
+150000
+100000
+50000
+0
+2 3 4 5 6 7 8 9 10 12
+tnuoc
+etadidnac
+flowinduction,maybetheareaclosesttoourwork,itstud-
+ies the problem of discovering the structure of a workflow
+from event logs represented by a list of tuples of the form
+(case ,activity ) sorted by the time of occurrence; case i j i
+refers to the instance of the process, and activity to the j
+activity executed. [2] first introduced the problem of pro-
+cess mining and proposed a method to discover workflow
+structure, but for the most part their methods assumes no
+duplicateactivitiesintheworkflow,anddoesnottakeactiv-
+ity duration into account, which is a very important aspect
+ofRFIDdata. Anotherareaofresearchveryclosedtoflow-
+graphconstructionisthatofgrammarinduction[5,18],the
+idea is to take as input a set of strings and infer the prob-
+abilistic deterministic finite state automaton (PDFA) that
+generated the strings. This approach differs from ours in
+that it does not consider exceptions to transition probabil-
+ity distributions, or duration distributions at the nodes.
+basic
+shared
+There are several areas of data mining very related to our
+work. Data cubes were introduced in [1] and techniques
+to compute iceberg cubes efficiently studied in [4, 10, 20].
+Flowcubes differ from this line of research in that our mea-
+sureisacomplexprobabilisticmodelandnotjustanscalar
+aggregate such as count or sum, and that our aggregates
+deal with two interrelated abstraction lattices, one for item
+dimensionsandanotherforpathdimensions. Thecomputa-
+tion of frequent patterns in large data sets was introduced
+by [3]; [17] and [9] study the problem of mining multi-level
+association rules, and [13] deals with mining frequent se-
+quencesinamultidimensionalspace. Weborrowideasfrom
+thislineofwork,suchasAprioripruningandconcepthierar-
+chy encoding, but we also differ significantly as we develop
+techniques that deal with paths, which are not present in
+candidate length their data models, and our algorithms are designed to han-
+dle both item and path abstraction lattices.
+Figure 11: Pruning Power (N = 100,000, δ = 0.01,
+8. CONCLUSIONS
+d=5)
+Weintroducedtheproblemofconstructingaflowcubefora
+large collection of paths. The flowcube is data cube model
+In this section we have verified that the ideas of shared
+useful in analyzing item flows in an RFID application by
+computation,simultaneousminingoffrequentpatterns,and
+summarizingitempathsalongthedimensionsthatdescribe
+pruningtechniquesbasedonbothitemandpathabstraction
+theitems,andthedimensionsthatdescribethepathstages.
+lattices are effective in practice and provide significant cost
+We also introduced the flowgraph, a probabilistic workflow
+savings versus alternative algorithms.
+model that is used as the cell measure in the flowcube, and
+that is a concise representation of general flows trends and
+7. RELATEDWORK significant deviations from the trends. Previous work on
+RFID technology has been extensively studied from mostly managementofRFIDdatadidnotconsidertheprobabilistic
+twodistinctareas: theelectronicsandradiocommunication workflow view of commodity flows, and did not study how
+technologies required to construct readers and tags [7]; and to aggregate such flows in a data cube.
+the software architecture required to securely collect and
+manageonlineinformationrelatedtotags[14,15]. Morere- The flowcube is a very useful tool in providing guidance to
+cently a third line of research dealing with mining of RFID users in their analysis process. It facilitates the discovery
+datahasemerged. [6]introducestheideaofcreatingaware- of trends in the movement of items at different abstraction
+house for RFID data, but does not go into the data struc- levels. It also provides views of the data that are tailored
+tureoralgorithmicdetails;[8]presentsaconcretewarehouse to the needs of each user. The flowcube is particularly well
+architecture for RFID data; their model exploits character- suited for the discovery of exceptions in flow trends, as it
+isticsofitemmovementstocreateasummaryoflargeRFID onlystoresnon-redundantflowgraphsthatbydefinitionde-
+data sets, but this summary is based on scalar aggregates viate from their ancestor flowgraphs.
+and does not handle the concept complex measures such as
+flowgraphs. We developed an efficient method to compute the flowcube
+based on the ideas of shared computation of frequent flow
+Induction of flowgraphs from RFID data sets, shares many patterns at every level of abstraction of the item and path
+characteristicswiththeproblemofprocessmining[19]. Work- lattices. Pruning of the search space by taking taking ad-
+844
+vantageoftherelationbetweenthepathandtheitemview [11] J. Han, N. Stefanovic, and K. Koperski. Selective
+on RFID data. Compression of the cube by the removal of materialization: An efficient method for spatial data
+infrequentcells,andredundantflowgraphs. Andpartialma- cube construction. In Proc. 1998 Pacific-Asia Conf.
+terializationofhighdimensionalflowcubesbasedonpopular Knowledge Discovery and Data Mining (PAKDD’98)
+cuboids. [Lecture Notes in Artificial Intelligence, 1394,
+Springer Verlag, 1998].
+Through an empirical study we verify the feasibility of our
+[12] V. Harinarayan, A. Rajaraman, and J. D. Ullman.
+model and materialization methods. We compared the per-
+Implementing data cubes efficiently. In Proc. 1996
+formance of our proposed algorithm with the performance
+ACM-SIGMOD Int. Conf. Management of Data
+of two competing algorithms and showed that our solution
+(SIGMOD’96).
+achievesbetterperformancethanthosemethodsunderava-
+riety data sizes, data distributions, and minimum support
+[13] H. Pinto, J. Han, J. Pei, K. Wang, Q. Chen, and
+considerations.
+U. Dayal. Multi-dimensional sequential pattern
+mining. In Proc. 2001 Int. Conf. Information and
+9. REFERENCES Knowledge Management (CIKM’01), pages 81–88,
+Atlanta, GA, Nov. 2001.
+[1] S. Agarwal, R. Agrawal, P. M. Deshpande, A. Gupta,
+J. F. Naughton, R. Ramakrishnan, and S. Sarawagi. [14] S. Sarma, D. L. Brock, and K. Ashton. The networked
+On the computation of multidimensional aggregates. physical world. White paper, MIT Auto-ID Center,
+In Proc. 1996 Int. Conf. Very Large Data Bases http://archive.epcglobalinc.org/publishedresearch/
+(VLDB’96), pages 506–521. MIT-AUTOID-WH-001.pdf, 2000.
+[2] R. Agrawal, D. Gunopulos, and F. Leymann. Mining [15] S. E. Sarma, S. A. Weis, and D. W. Engels. RFID
+process models from workflow logs. In Sixth systems,security&privacyimplications.Whitepaper,
+International Conference on Extending Database MIT Auto-ID Center, http://archive.epcglobalinc.
+Technology, pages 469–483, 1998. org/publishedresearch/MIT-AUTOID-WH-014.pdf, 2002.
+[16] A. Shukla, P. Deshpande, and J. F. Naughton.
+[3] R. Agrawal and R. Srikant. Fast algorithm for mining
+Materialized view selection for multidimensional
+association rules in large databases. In Research
+datasets. In Proc. 1998 Int. Conf. Very Large Data
+Report RJ 9839, IBM Almaden Research Center, San
+Bases (VLDB’98).
+Jose, CA, June 1994.
+[17] R. Srikant and R. Agrawal. Mining generalized
+[4] K. Beyer and R. Ramakrishnan. Bottom-up
+association rules. In Proc. 1995 Int. Conf. Very Large
+computation of sparse and iceberg cubes. In Proc.
+Data Bases (VLDB’95), pages 407–419, Zurich,
+1999 ACM-SIGMOD Int. Conf. Management of Data
+Switzerland, Sept. 1995.
+(SIGMOD’99).
+[18] F. Thollard, P. Dupont, and C. dela Higuera.
+[5] R. C. Carrasco and J. Oncina. Learning stochastic Probabilistic dfa inference using kullback-leibler
+regular grammars by means of state mergin method. divergence and minimality. In Seventeenth
+In Second International Colloquium on Grammatical International Conference on Machine Learning, pages
+Inference (ICGI’94), pages 139–150, 1994. 975–982, 2000.
+[6] S. Chawathe, V. Krishnamurthy, S. Ramachandran, [19] W. van der Aalst and A. Weijters. Process mining: A
+and S. Sarma. Managing RFID data. In Proc. Intl. research agenda. In Computers in Industry, pages
+Conf. on Very Large Databases (VLDB’04). 231–244, 2004.
+[20] D. Xin, J. Han, X. Li, and B. W. Wah. Star-cubing:
+[7] K. Finkenzeller. RFID Handbook: Fundamentals and
+Computing iceberg cubes by top-down and bottom-up
+Applications in Contactless Smart Cards and
+integration. In Proc. 2003 Int. Conf. Very Large Data
+Identification. John Wiley and Sons, 2003.
+Bases (VLDB’03).
+[8] H. Gonzalez, J. Han, X. Li, and D. Klabjan. [21] G. K. Zipf. Human Behaviour and the Principle of
+Warehousing and analyzing massive RFID data sets. Least-Effort. Addison-Wesley: Cambridge, MA, 1949.
+In International Conference on Data Engineering
+(ICDE’06), 2006.
+[9] J. Han and Y. Fu. Discovery of multiple-level
+association rules from large databases. In Proc. 1995
+Int. Conf. Very Large Data Bases (VLDB’95), pages
+420–431, Zurich, Switzerland, Sept. 1995.
+[10] J. Han, J. Pei, G. Dong, and K. Wang. Efficient
+computation of iceberg cubes with complex measures.
+In Proc. 2001 ACM-SIGMOD Int. Conf. Management
+of Data (SIGMOD’01), pages 1–12.
+845
+

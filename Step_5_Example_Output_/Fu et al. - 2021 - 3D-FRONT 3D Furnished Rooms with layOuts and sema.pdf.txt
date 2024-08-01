@@ -1,0 +1,44 @@
+Extracted Keywords:
+scene, indoor scene, computer vision, IEEE Conference, IEEE Xplore, IEEE, scenes, scene datasets, Rooms, scene synthesis
+
+Main Topics:
+3D-FRONT: 3D, Furnished Rooms, Huan Fu1Bowen Cai1Lin Gao2Ling-Xiao, Zhang2Jiaming Wang1
+Cao Li1Qixun, Sun1Rongfei Jia1Binqiang, Zhang3
+1Tao Technology Department, Alibaba Group
+2Institute, Computing Technology, Chinese Academy, (Graphics U Vision) Lab, Simon Fraser University, binqiang.zhao g@alibaba-inc.com
+fgaolin, zhanglingxiao g@ict.ac.cn haoz@sfu.ca
+Figure, a new, large-scale, comprehensive repository, synthetic indoor scenes, professionally and
+distinctively designed layouts, a large number, 3D furniture objects, high-quality textures, the academic community, (3D Furnished Rooms, a new, large-scale, compre-
+hensive repository, synthetic indoor scenes, professionally designed layouts, a large number, high-quality textured 3D models, style compatibility, individual objects, our dataset, the academic community, 3D-
+FRONT, 6,813 CAD houses, 3D objects, all pub-
+licly available scene da
+
+Methodologies:
+With data-
+driven and learning-based approaches receiving more and
+more attention in recent years, there has been a steady ac-
+cumulation of indoor scene datasets [ 27,36,43,4,19,6,9,
+18,23,49,24] to drive the deep learning revolution that has
+1
+109132021 IEEE/CVF International Conference on Computer Vision (ICCV)
+978-1-6654-2812-5/21/$31.00 ©2021 IEEE
+DOI 10.1109/ICCV48922.2021.010752021 IEEE/CVF International Conference on Computer Vision (ICCV) | 978-1-6654-2812-5/21/$31.00 ©2021 IEEE | DOI: 10.1109/ICCV48922.2021.01075
+Authorized licensed use limited to: Princeton University. For model textures, “Rec. from Scan” is the
+result of reconstruction from raw RGB-D data, while “Amateur” and “Professional” refer to who designed the textures. The 3D scenes, including textured 3D objects, were
+recovered by state-of-the-art 3D reconstruction techniques
+from the raw scans, which are typically no
+
+Research Outcomes:
+With data-
+driven and learning-based approaches receiving more and
+more attention in recent years, there has been a steady ac-
+cumulation of indoor scene datasets [ 27,36,43,4,19,6,9,
+18,23,49,24] to drive the deep learning revolution that has
+1
+109132021 IEEE/CVF International Conference on Computer Vision (ICCV)
+978-1-6654-2812-5/21/$31.00 ©2021 IEEE
+DOI 10.1109/ICCV48922.2021.010752021 IEEE/CVF International Conference on Computer Vision (ICCV) | 978-1-6654-2812-5/21/$31.00 ©2021 IEEE | DOI: 10.1109/ICCV48922.2021.01075
+Authorized licensed use limited to: Princeton University. For model textures, “Rec. from Scan” is the
+result of reconstruction from raw RGB-D data, while “Amateur” and “Professional” refer to who designed the textures. The 3D scenes, including textured 3D objects, were
+recovered by state-of-the-art 3D reconstruction techniques
+from the raw scans, which are typically no

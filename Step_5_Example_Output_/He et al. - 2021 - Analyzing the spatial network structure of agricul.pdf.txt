@@ -1,0 +1,33 @@
+Extracted Keywords:
+agricultural GHG, GHG emissions, GHG, agricultural, emissions, China, Environ Sci, carbon emissions, network, Block
+
+Main Topics:
+RESEARCH ARTICLE, the spatial network structure, agricultural greenhouse
+gases, China
+Yanqiu He1&Xiang, Lan2&Zuoang Zhou2&Fang Wang1
+Received, 30 April, 21 September, Springer-Verlag GmbH Germany, Springer Nature, the regional correlation, agricultural greenhouse gas (GHG) emissions, a
+regional mechanism, the synergistic reduction, chain-like reductions, the traditional
+geographical relationship analysis framework, social network analysis, the regional
+correlations, agricultural GHG emissions, a relational network viewpoint, the network functions, each node, agricultural GHG correlation, a spatial, economic, and technological viewpoint, nonparametric regression, The results, the emission network, a relationship, Central China, the most important region, agricultural GHG networks, the importance, the northeast, (3) influencers, the middle, the
+Yangtze River, the northwest, the
+coastal reg
+
+Methodologies:
+The results indicate that (1) the emission network is stable and there is a relationship of control between regions, (2) Central China
+is the most important region in agricultural GHG networks; however, the importance of the northwest and southwest has
+increased; the northeast has remained relatively independent, (3) influencers are mainly concentrated in the middle of the
+Yangtze River and the northwest, while dependentors are concentrated in municipalities such as Beijing and Tianjin, and the
+coastal regions in the southeast, and (4) the interprovincial agricultural GHG correlation can be enhanced by shortening the
+spatial distance, strengthening economic ties, and increasing the diffusion of technology. Therefore, in this study, we used
+the IPCC estimation method to estimate agricultural GHGemissions in 31 provinces in China from five aspects: agricul-
+tural energy consumption, agricu
+
+Research Outcomes:
+The results indicate that (1) the emission network is stable and there is a relationship of control between regions, (2) Central China
+is the most important region in agricultural GHG networks; however, the importance of the northwest and southwest has
+increased; the northeast has remained relatively independent, (3) influencers are mainly concentrated in the middle of the
+Yangtze River and the northwest, while dependentors are concentrated in municipalities such as Beijing and Tianjin, and the
+coastal regions in the southeast, and (4) the interprovincial agricultural GHG correlation can be enhanced by shortening the
+spatial distance, strengthening economic ties, and increasing the diffusion of technology. Therefore, in this study, we used
+the IPCC estimation method to estimate agricultural GHGemissions in 31 provinces in China from five aspects: agricul-
+tural energy consumption, agricu

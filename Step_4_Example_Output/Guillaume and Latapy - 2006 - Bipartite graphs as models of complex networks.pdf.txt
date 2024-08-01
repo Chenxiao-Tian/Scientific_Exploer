@@ -1,0 +1,1051 @@
+References:
+dense: one could say that real-world bipartite networks are bi-clusterized while random ones
+are not, even if they capture the most common properties.
+There are many directions in which this work may be extended. Solving the previous
+drawback is one of them. This model might also be extended to the case of directed and
+weighted graphs. These problems rely on giving a new definition to the concept of clique
+which can be used in this context.
+Another similar problem occurs when the graph is only partially known. In this case,
+some edges are missing, which might yield to only trivial cliques. A solution to this problem
+could be to study a model with quasi-cliques. Embedding this concept in the bipartite vision
+however is nontrivial and remains to be done.
+One may also use this model to deepen the study of some phenomena of high interest like
+the robustness of networks, the spread of rumors and diseases, etc. The random graph model
+with prescribed degree distribution already led to important advances on these questions
+[19, 20, 52, 58]. They should now be extended to the bipartite models in order to evaluate
+the impact of clustering on these problems. We argue that this is a strength of our approach
+since results on random graphs with prescribed degrees can be directly adapted to our model
+in order to take the clustering into account.
+Finally, let us emphasize on the fact that the study of real-world complex networks is
+only at its beginning. The discovery of their statistical properties, the analysis of the impact
+of these properties, their integration into accurate models, and the use of these models in
+simulation and analysis are key issues for our understanding of real-world complex networks,
+which has crucial fundamental and applicative implications. Our work lies in this context.
+It proposes a solution to the problem of the realistic random modeling of real-world complex
+networks (in the sense of the three main observed properties), and it points out some relevant
+directions for further research.
+Acknowledgments. We thank Annick Lesne, Cl´emence Magnien and James Martin for careful
+reading of preliminary versions and useful comments. We also thank the anonymous referees
+for helpful comments.
+References
+[1] J. Abello, P. Pardalos, and M. Resende. On maximum clique problems in very large graphs.
+External Memory Algorithms, DIMACS Series, AMS, 1999.
+[2] W. Aiello, F.R.K. Chung, and L. Lu. A random graph model for massive graphs. In ACM
+Symposium on Theory of Computing (STOC), pages 171–180,2000.
+[3] R. Albert and A.-L. Baraba´si. Emergence of scaling in random networks. Science, 286:509–512,
+1999.
+[4] R. Albert and A.-L. Baraba´si. Statistical mechanics of complex networks. Reviews of Modern
+Physics 74, 47, 2002.
+[5] R. Albert, H. Jeong, and A.-L. Baraba´si. Diameter of the world wide web. Nature, 401:130–131,
+1999.
+[6] R.Albert,H.Jeong,andA.-L.Baraba´si.Errorandattacktoleranceincomplexnetworks. Nature,
+406:378–382,2000.
+[7] arXiv.org e Print archive. http://arxiv.org/.
+19
+
+Annexes/Appendices:
+
+Body Text:
+1202
+raM
+81
+]hcem-tats.tam-dnoc[
+2v5907030/tam-dnoc:viXra
+Bipartite Graphs as Models of Complex Networks
+Jean-Loup Guillaume and Matthieu Latapy
+liafa – cnrs – Universit´e Paris 7
+2 place Jussieu, 75005 Paris, France.
+(guillaume,latapy)@liafa.jussieu.fr
+Abstract
+It appeared recently that the classical random graph model used to represent real-
+world complex networks does not capture their main properties. Since then, various
+attempts have been made to provide accurate models. We study here a model which
+achieves the following challenges: it produces graphs which have the three main wanted
+properties (clustering, degree distribution, average distance), it is based on some real-
+world observations, and it is sufficiently simple to make it possible to prove its main
+properties. This model consists in sampling a random bipartite graph with prescribed
+degree distribution. Indeed, we show that any complex network may be viewed as a
+bipartite graph with some specific characteristics, and that its main properties may be
+viewed as consequences of this underlying structure. We also propose a growing model
+based on this observation.
+Introduction.
+It has been shown recently that most real-world complex networks have some specific prop-
+erties in common. These properties are not captured by the model generally used before
+this discovery, although they play a central role in many contexts like the robustness of the
+Internet [6, 15, 19, 20, 49], the spread of viruses or rumors over the Internet, the Web or
+other social networks [48, 52, 58], the performance of protocols and algorithms [36, 41, 68],
+and many other.
+This is why a strong effort has been put in the realistic modeling of complex networks
+in the last few years, and much progress has been accomplished in this field. Some models
+achieve the aim of producing graphs which capture some, but not all of the main properties
+of real-world complex networks. Some models obtain all the wanted properties but rely on
+artificial methods which give unrealistic graphs (trees, graphs with uniform degrees, etc).
+Others rely on construction processes which may induce some hidden properties, or are too
+difficult to analyze.
+Inthispaper,weproposetherandombipartitegraphmodelasageneralmodelforcomplex
+networks. We will show that this model produces graphs with many observed properties. It
+relies on real-world observations and gives realistic graphs. Finally, it is simple enough to
+make it possible to prove its main properties. We will also discuss some identified drawbacks
+of this model.
+We will first present an overview of the context in which our work lies. In particular,
+we use some ideas introduced in previous papers, which we need to describe precisely. Then
+1
+we show how all complex networks may be described as bipartite structures. After this,
+we present the random bipartite model and analyze it to show that the main properties of
+complex networksaresomehowaconsequenceoftheirunderlyingbipartitestructure. Wealso
+presenta growing bipartite modelbased on thesame ideas. Finally wediscuss theadvantages
+and limitations of these models.
+1 Context.
+Throughout our presentation, we will use a representative set of complex networks which
+have received much attention and span quite well the variety of contexts in which complex
+networks appear: an Internet graph at router level [16, 32, 33] consisting of physical links
+between routers ; a web graph from Notre Dame university [5, 23] whereweb pages are linked
+by hyperlinks ; a co-occurence graph in which words are linked if they belong to a same
+sentence in a given text [31, 67] ; the actor graph where actors are linked when they have
+played together [24, 70] ; a co-authoring graph from Arxiv [7] where scientists are linked if
+they have signed a paper together [50, 51, 56]; and finally a protein graph where two proteins
+of a given biological system are linked if they influence each other [23, 35].
+Manyothercomplexnetworkshavebeenstudied. Referto[4,26,54]foramoredescriptive
+list of networks and corresponding references. All these networks have some properties in
+common which have been discovered quite recently and have concentrated a large attention
+invariouscommunities. Hereafterwepresentthepropertiesinconcernandsomerecentefforts
+in the modeling of these properties.
+1.1 Statistical properties
+Most real-world complex networks have a number of edges m which scales linearly with the
+number of vertices n: m ∼k·n where k is the average degree (which does not depend on the
+size of the graph). Therefore, these networks have a low density (going to 0 when n grows),
+the density beingdefined as the numberof existing edges over the numberof edges that could
+exist (n(n−1)/2).
+The distance between two vertices, defined as the number of edges on a shortest path
+between these vertices, is low on average. It is a well known property on social networks since
+the work of Stanley Milgram [43] and the notion of “six degrees of separation”. However it
+appearedmorerecently thatallcomplex networks have alow average distancewhichtypically
+scaleslikethelogarithmofthesizeofthegraph. Ithasbeenshownthatthisisactuallytruefor
+anygraphwhichcontains somereasonableamountofrandomness. Actually, underreasonable
+assumptions, the average distance in random graphs scales even slower than the logarithm1
+of their size [13, 18, 21, 28, 39, 55, 56].
+The local clustering, or clustering coefficient [70] is defined for each vertex of degree at
+|{(x,y),x,y∈N(u)}|
+least 2 as the proportion of edges between its neighbors: c(u) = , where d(u)
+(d(u))
+2
+is the degree of vertex u and N(u) is the set of neighbors of u. The clustering of a graph is
+simply the average over all vertices. All real-world complex networks have a high clustering
+which seems to be independent of the size of the network. These graphs are locally dense
+while globally sparse.
+1Typically like log(n)/log(log(n)).
+2
+Internet Web Actors Co-auth Co-occur Protein
+n 75885 325729 392340 16401 9297 2113
+m 357317 1090108 15038083 29552 392066 2203
+density 1.2e-4 2.1e-5 1.9e-4 2.2e-4 9.1e-3 9.9e-4
+c 0.171 0.466 0.785 0.638 0.822 0.153
+α 2.5 2.3 2.2 2.4 1.8 2.4
+d 5.80 7 3.6 7.18 2.13 6.74
+Table1: Themainstatistics forthecomplex networks weuseinthispaper. For each network,
+wegive itsnumberofvertices n,itsnumberoflinksm,itsdensity, thevalueoftheexponentα
+of the power law that fits bestits degree distribution, its clustering c, and its average distance
+d.
+Finally, the degree distribution which is, for each k, the probability p that a randomly
+k
+chosen vertex has degreek, iscompletely differentfromwhatwas expected. Indeedforalmost
+all real-world complex networks, the degree distribution follows a power law: p ∼ k−α, while
+k
+one would have expected an exponential decrease (Poisson-like distributions). The exponent
+αofthepowerlawisgenerallybetween2and3. Suchadistributionmeansthatalthoughmost
+vertices have a small degree, the number of vertices with degree k decays only polynomially
+with k, and therefore there is a significant number of vertices with high degree.
+The main properties of the real-world complex networks we use in this paper are given in
+Table 1. Notice that, as announced, all these real-world complex networks have a very low
+density, a low average distance, a power law distribution of degrees and a high clustering.
+The similarity of these networks concerning unexpected properties has led to the study
+of other properties. The simplest one concerns the degree-degree correlation: what is the
+average degree of the neighbors of a vertex of degree k. Three main behaviors are expected,
+either high-degree vertices tend to connect to high-degree vertices, or to low-degree vertices,
+or to any nodes. These behaviors can be observed using the the slope (increasing, decreasing
+or constant) of theplot whichrelates theaverage degreeof theneighborsof nodes of degree k,
+to k [11, 63, 64], or with a single parameter (assortativity coefficient), which may be positive
+(assortative networks), negative (dissortative networks) or null (neutral networks) [53]. Most
+socialnetworksareassortative(similarverticesareconnected)whiletechnologicalorbiological
+are generally dissortative [53].
+One may also correlate the clustering and the degree by computing the average cluster-
+ing of vertices with a given degree. This also defines assortative (high degree yields high
+clustering), neutral or dissortative networks.
+Finally, other properties have been studied, such as the centrality (how many shortest
+paths contain a given vertex) [51], the distribution of eigenvalues of the adjacency matrix
+[30, 42], etc. All these statistical properties are used to describe a given complex network
+and to study the similarities and differences between several complex networks. They give
+precise insight on what one may expect when considering a complex network having a set of
+properties.
+3
+1.2 Modeling complex networks
+The basic model for complex networks is the Erd¨os-R´enyi (ER) random graph model [13, 29].
+n·(n−1)
+In a random graph with n vertices, each of the possible edges exists with a given
+2
+probability p (this model is know as G ). The average distance of G scales with the
+n,p n,p
+logarithm of n [13]. Moreover, the clustering is equal to the connection probability p since
+each pair of vertices is connected with the same probability independently of the fact that
+they are both linked to a same vertex. If m ∼ k ·n as in real-world complex networks, this
+means that the clustering scales as n−1 and therefore tends to 0 when n grows. Finally, the
+degree distribution follows a Poisson law p ∼
+e−λλk
+[13], which implies in particular that all
+k k!
+vertices have nearly the same degree.
+Therefore, although this model can be considered as relevant concerning the average dis-
+tance, itmisses two main properties of real-world complex networks. Inparticular, thedegree
+distributions are qualitatively different.
+Itishoweverpossibletosampleuniformlyarandomgraphwithagivendegreedistribution
+(in particular a power law) [10, 12, 40, 45, 46] using the configuration model, or Molloy and
+Reed2 (MR) model: for each vertex, draw its degree at random according to the given
+distribution, create as many connection points as its degree and finally connect pairs of
+connection points at random3.
+The power law graphs obtained this way have an average distance which scales slower
+that the logarithm of their size [18, 21, 28, 39, 55, 56]. Moreover, the fact that vertices are
+linked together purely at random (only their number of edges is given) makes it possible to
+study the properties of the obtained graphs, and it indeed seems that it captures some of the
+most important behaviors of complex networks [2, 18, 39, 54, 58]. However, under reasonable
+assumptions on the degree distribution, the clustering of these graphs tends to zero when n
+grows [54].
+This approach could in principle be continued to sample a graph among the ones having
+a given number of nodes, a given degree distribution and a given clustering. However, until
+now, there is no known method to sample uniformly such a graph, and the problem seems
+difficult.
+On the other hand, a large variety of models based on the iteration of a construction
+process inspired from the way complex networks grow in reality have been introduced.
+The first generic model of real-world complex networks, has been introduced in 1998 by
+Watts and Strogatz (WS) [70]. One starts with a ring of n vertices in which each vertex is
+connected to its k nearest neighbors, for a given k. Then, each edge is rewired with a given
+probability p by choosing randomly a new extremity. When p is small the graph is almost a
+ring which have high average distance and high clustering. On the opposite, when p is high,
+the graph is nearly random. For medium values of p, the graph has both a small average
+distance and a high clustering, but the degree distribution of the obtained graphs does not
+follow a power law [25, 70].
+2Despiteithasbeenintroducedin[10]andstudiedin[12],thismodelisoftenreferredtoastheMolloyand
+Reed model since theseauthorsmadeit popularin theircontributions [45,46]. Wewill follow this convention
+here.
+3Notethatthisalgorithmmayinducemultiplelinksandloops. Onemayalsousetechniquestoavoidthem,
+see for instance [38, 44], but thisis out of thescope of this paper.
+4
+Another important step was done with models based on preferential attachment. [3, 27,
+37]. The “rich gets richer” principle can be derived in a model where vertices arrive one by
+one in a graph and choose their neighbors with a probability proportional to the degree of
+these neighbors. This model has been studied intensively and is now well known [4]: the
+degree distribution follows a power law with exponent, the average distance is logarithmic
+in the number of vertices, and the clustering is low, going to 0 when the number of vertices
+grows. Despite this last point, this model has received much attention, in particular because
+it defines growing graphs.
+Both the WS model and the AB one have been introduced to model generic behavior of
+complex networks. If they both fail in producing graphs having each of the three properties
+we cited, they have been widely used as building blocks for more complex models.
+Table 2 shows the performances obtained with the basic models we cited in our practical
+cases. Let us insist on the fact that the models seek qualitative properties (non negligible
+clustering, power law degree distribution, etc). Their aim is not to produce graphs with
+exactlygivenvaluesfortheseproperties. However,evenwiththisinmind,thegraphsobtained
+using these models are significantly different from real-world ones concerning at least one of
+these three points.
+Internet Web Actors Co-auth Co-occur Protein
+n 75885 325729 392340 16401 9297 2113
+m 357317 1090108 15038083 29552 392066 2203
+c 0.171 0.466 0.785 0.638 0.822 0.153
+c 0.0001 0.00002 0.0002 0.0002 0.009 0.001
+ER
+c 0.0694 0.017 0.0057 0.001 0.26 0.007
+MR
+c 0.0024 0.0005 0.0015 0.003 0.028 0
+AB
+c 0.171 0.461 0.74 (*) 0.523 (*) 0.74 (*) 0.06 (*)
+WS
+d 5.80 7 3.6 7.18 2.13 6.74
+d 5.25 5.47 2.97 7.57 2.06 10.4
+ER
+d 3.25 4.48 2.95 5.77 2.36 5.73
+MR
+d 4.15 5.1 2.93 5.5 2.38 8.15
+AB
+d 5.90 11.23 2559 (*) 2269 (*) 55.6 (*) 509 (*)
+WS
+Table 2: Performance of the main generic models for complex networks. For each network,
+we give its number of vertices n, its number of links m, its clustering c, and its average
+distance d. Moreover, we give the values of these parameters for typical graphs with the
+same number of vertices and edges obtained with ER, MR, AB and WS models. Moreover,
+in The cases pointed by a star (*), the real clustering is too large to be obtained with the
+WS model. Therefore we used in these cases the parameters inducingthe maximal clustering,
+which yields very large average distances.
+Many other attempts have been made to reach the goal of obtaining models which give
+graphs having each of the three main properties we have cited. Most of them are described in
+[4,26,62]. Somedeterministicmodels,whichwedonotdetailhere, havealsobeenintroduced
+[8, 22] which produce the wanted properties and are suitable for analysis. However, they
+cannot beconsidered as realistic and theobtained graphs have specificproperties which make
+them very different from real-world complex networks.
+5
+Another model is the Dorogovstev and Mendes (DM) model which generates highly clus-
+terised graphs with a power law degree distribution [26]. In this model, at each step a vertex
+is created, anedgeis chosen atrandomandthenewvertex isconnected tobothextremities of
+the edge. Since high-degree vertices have more edges, they are more likely to be chosen. The
+hidden preferential attachment and the creation of triangles induces the wanted properties.
+However theparameters ofthis modelcannotbetunedandithassomeunexpectedproperties
+(for instance, there is no node of degree 1 and it produces planar graphs4). Therefore we are
+not going to use it hereafter.
+More recent models [9, 59, 60, 61, 65, 66, 69] have been introduced. Some of them use
+the preferential attachement principle, and create some triangles at each step. In [59], for
+each newly created edge, a triangle is built using both extremities of this edge and a neighbor
+of the old vertex. In [69], a step of the algorithm consists either in the creation of a new
+vertex with m edges or in the creation of m edges between neighbors of preferentially chosen
+vertices.
+The model introduced in [60] is an evolution of the configuration model in which both the
+degree distributionand theclustering distributioncan bepre-defined. Connections points are
+createdforeachvertexinthefuturenetworkandafirststepconsistsincreatingtrianglesusing
+these connections points. A second step closes the graph by connecting unused connections.
+In this paper, we propose a solution to the random sampling of graphs which have all
+the three wanted properties. To achieve this, we focus on another property of all real-world
+complex networks, namely theirunderlyingbipartitestructure,inSection2. Wethenpropose
+two models: the random sampling of bipartite graphs with prescribed degree distributions,
+and the growing bipartite model with preferential attachment in Section 3. Indeed, as shown
+in Sections 4 and 5, respectively formally and experimentally, these models induce the three
+wanted properties. This means that they can be viewed as consequences of the underlying
+bipartite structure of all complex networks, which is our main contribution.
+2 Complex networks as bipartite graphs
+A bipartite graph is a triple G = (⊤,⊥,E) where ⊤ and ⊥ are two disjoint sets of vertices,
+respectively the top and bottom vertices, and E ⊆ ⊤×⊥ is the set of edges. The difference
+with classical graphs lies in the fact that edges exist only between top vertices and bottom
+vertices.
+Two degree distributions can naturally be associated to such a graph, namely the top
+|{t∈⊤:d(t)=k}| |{t∈⊥:d(t)=k}|
+degree distribution: ⊤ = andthe bottom degree distribution: ⊥ = .
+k |⊤| k |⊥|
+These two distributions play a central role in the following.
+Natural bipartite structures
+As already noticed for instance in [34, 55], some complex networks display a natural bipartite
+structure. Among our examples, one can view Actors (two actors are linked if they are part
+of a same cast) as a bipartite graph where ⊤ is the set of movies, ⊥ is the set of actors, and
+each actor is linked to the movies he/she played in. Coauthoring can also be viewed this way
+4Agraphisplanariffitcanbeembeddedintheplanesothatnoedgesintersect. Sinceedgesaretransformed
+in triangles, one can easily be convinced that one step of thealgorithm does not create edges intersections.
+6
+with ⊤ being the set of papers and ⊥ being the set of authors, each author being linked to
+the papers he/she (co-)signed. Likewise, in Cooccurrence one can link each sentence to the
+words it contains.
+Given a bipartite graph G = (⊤,⊥,E), one can easily obtain its classical version, also
+called the one-mode or ⊥-projection, defined as G′ = (⊥,E′) where {u,v} is in E′ if u and
+v are both connected to a same (top) node in G. See Figure 1 for an example. From the
+bipartite versions of Actors, Coauthoring andCooccurrence graphs, onecan then recover their
+classical versions. In the ⊥-projection of a bipartite graph, each top vertex induces a clique
+(complete subgraph) between the bottom vertices to which it is linked: all actors of a given
+movie have played together therefore they must be all linked.
+B
+D
+A
+E C F
+A B C D E F
+Figure 1: A bipartite network and its ⊥-projection. Notice that the link {B,C} is obtained
+twice since B and C have two neighbors in common in the bipartite network.
+However, giventhe⊥-projectionofabipartitegraph,itisingeneralnotpossibletorecover
+the bipartite graph from which it has been obtained in an unique way. Similarly if a graph is
+not naturally bipartite there may exist many bipartite versions of it.
+Recovering a bipartite structure
+For the sake of completeness, we now recall anddetail thedecomposition scheme we proposed
+in[34]which,givenagraph,producesabipartitegraphwhose⊥-projectionistheinitialgraph.
+The aim of this scheme is to obtain a bipartite graph whose properties are similar to the ones
+met in natural bipartite graphs, namely the number of top vertices has the same order of
+magnitude as the number of bottom vertices and there are some high-degree top nodes (see
+below and Figure 5).
+First notice that the decomposition scheme is nothing but a clique covering problem: it
+computes a set of cliques (which will correspond to the top nodes in the bipartite graph)
+such that each edge belongs to at least one clique (which ensures that the ⊥-projection of the
+decomposition is exactly the original graph). Simple ideas to cover the graph with cliques
+might be to consider each edge as a clique, or to consider all maximal cliques. However, the
+first approach would not yield large cliques while the second one could yield too many cliques
+(the number of maximal cliques may be exponential).
+To reach our goal, we proposed [34] the following decomposition. We pick for each edge
+a largest clique containing it: a clique whose size is maximal among the ones containing the
+edge. Noticethatthiscliquemaycontainonlytwovertices. Moreover, ifthereareseveralsuch
+cliques for the same edge, we pick one at random. This decomposition ensures the complete
+covering of the graph. Moreover, the number of cliques is at most equal to the number of
+edges, which is of the order of the number of vertices. Finally, since we take largest cliques,
+we expect to find most of the large cliques contained in the graph.
+In the case of Figure 1 we obtain several cliques of size 2 (namely {C,E} and {D,F}),
+and we have to choose at random between {A,B,C} and {B,C,D} when considering the
+7
+edge {B,C}. However, these two cliques are obtained from other edges, and we finally obtain
+a unique decomposition which is nothing but the bipartite graph on the left of the figure.
+The central aim of our decomposition scheme is, given the ⊥-projection of a natural
+bipartite graph, to producean artificial bipartite graph similar to the original bipartite graph
+itself. A way to evaluate it is therefore to decompose the ⊥-projection version of a natural
+bipartite complex network and to compare the obtained bipartite network to the original one.
+This is what we do in Figure 2.
+10000 1000 9000
+8000 Original Coauthoring
+1000 Extracted Extracted 7000
+100 6000
+100 Original 45 00 00 00
+Extracted
+10 Original 3000
+10 2000
+Actors Cooccurence 1000
+1 1 10 100 1 1 10 100 100001 2 3 4 5 6 7 8
+Figure 2: Original clique size distribution for Actors, Cooccurrence and Coauthoring, and
+extracted clique sizes distribution with the decomposition scheme.
+The obtained distributions display some differences for the three graphs decomposed.
+First, the decomposition scheme produces no cliques of size 1 since the smallest extracted
+element is the edge (a 2-clique). Moreover, many 2-cliques have not been found, which means
+thatthese2-cliques arenotmaximalintheoriginalgraph. For cliques ofsizemorethan2,our
+extraction algorithm has been able to find most cliques, or even more. Such new large cliques
+are induced by the overlapping of other cliques. Notice that in the case of Cooccurrence there
+are many new very large cliques which have been created by overlapping, while in Actors and
+Coauthoring this phenomena is very weak. We will discuss more about the overlapping in
+the conclusion. Despite these differences, the obtained size distributions are similar to the
+original ones in the sense that we obtain a nontrivial number of large cliques and a similar
+number of cliques, which are the two main points here.
+Practical computation
+Notice that minimizing the number of cliques leads to the minimal clique covering problem
+which is known to be NP-complete [47, 57]. Computing maximal cliques of a graph is also
+NP-complete [1, 14] and so is the computation of the largest clique containing a given edge
+{u,v}. However, some heuristics make it possible to compute it if the graph is not too large.
+In our case, we use the following remarks. Let us denote the sets of neighbors of a vertex and
+an edge by N(u) = {v ∈ V|{u,v} ∈ E} and N(u,v) = N(u)∩N(v) respectively. The largest
+clique containing {u,v} in G is C∪{u,v}, where C is the largest clique in the sub-graph of G
+induced by N(u,v). Figure 3 illustrates this process.
+Recall that the decomposition process relies on a NP-complete problem in general. How-
+ever, we observed that in real-world complex networks, the sub-graphs induced by N(u,v)
+for all edges {u,v} are in general very dense and very small (Figure 4), which is due to the
+high clustering and to the power law degree distribution, respectively. The small size makes
+it possible to compute the largest clique containing {u,v} very efficiently in practice.
+8
+u v u v
+b c d
+a b c d e b c d
+Figure 3: Given a graph G = (V,E′), we are looking for a largest clique containing the edge
+{u,v}. Thisclique is necessarily contained in thesubgraphinducedbyN(u)∪N(v)∪{u,v} =
+{b,c,d,u,v}. It is actually sufficient to compute the largest clique C in the subgraph induced
+by N(u) ∩ N(v) = N(u,v) = {b,c,d} since the clique we are looking for is nothing but
+C ∪{u,v} which, in our case, gives {u,v,b,c}
+1 1 1
+average density
+0 0 .0.1 1 average density 0.1 0.1 average density
+0.001 size distribution 0.01 0.01
+0.0001 0.001 size distribution
+1e−05 0.0001 0.001 size distribution
+11 ee −− 00 76 Actors 1e−05 Cooccurrence 0.0001 Coauthoring
+1e−08 1 10 100 1000 10000 1e−06 1 10 100 1000 10000 1e−05 1 10 100
+1 1 1
+average density average density
+0.1 0.1 average density
+0.01 0.1
+0.01 size distribution
+0.001
+0.001 size distribution
+0.0001 0.01
+0.0001 Internet 1e−05 Web Proteins size distribution
+1e−05 1 10 100 1000 1e−06 1 10 100 1000 10000 0.001 1 10
+Figure 4: Distribution of the N(u,v) sizes for all edges (u,v), and average density of neigh-
+borhoods of given size.
+Properties of the bipartite graphs
+Given the general decomposition scheme, we can now transform any complex network into
+a bipartite graph. Figure 5 shows the top and bottom degree distribution for the natural
+bipartite networks Actors, Cooccurrence andCoauthoring, and theones obtained for Internet,
+Web and Proteins graphs using our decomposition scheme.
+All these distributions have a property in common: bottom degree distributions fit very
+well power laws in all cases. On the contrary, the top degree distributions are of two kinds:
+while Cooccurrence, Coauthoring, Internet and Proteins ones exhibit a Poisson behavior,
+Actors and Web ones are more heavy tailed.
+These results lead to several remarks. First, the presence of a power law bottom degree
+distribution seems universal, just like the power law distribution in the ⊥-projection of these
+graphs, but the effective exponent is not and depends on the considered complex network.
+Second, the top degree distributions can be qualitatively different and this point is important
+in the use of the bipartite structure for modeling complex networks since it can impact on
+somecharacteristicsofthegeneratedgraphs. FurtherremarkswillbepointedoutinSection6.
+Note also that the degree of a vertex in the ⊥-projection is the sum of the degrees of the
+top vertices to which it is connected in the bipartite graph, minus the number of vertices in
+common in the neighborhood of these vertices. One can easily be convinced that this overlap
+between neighborhoods,ifany, can have agreat impactonthedegree distribution. Todeepen
+this notion of overlap, one can observe the correlation between the bottom vertex degrees in
+9
+1e+06 10000 10000
+top degree top degree top degree
+100000 bottom degree 1000 bottom degree 1000 bottom degree
+10000
+1000 100 100
+100
+10 10
+10 Actors Cooccurrence Coauthoring
+11 10 100 1000 11 10 100 1000 10000 11 10 100
+1e+06 1e+06 10000
+100000 bottt oo mp d de eg gr re ee e 100000 bottt oo mp d de eg gr re ee e 1000 bottt oo mp d de eg gr re ee e
+10000 10000
+1000 1000 100
+100 100
+10
+10 Internet 10 Web Proteins
+11 10 100 1000 11 10 100 1000 10000 11 10 100
+Figure 5: Top and bottom degree distributions for the natural bipartite versions of Actors,
+Cooccurrence, and Coauthoring, and for the bipartite version of Internet, Web, and Proteins
+obtained with the decomposition scheme.
+both bipartite and ⊥-projection (Figure 6). Thereexists nontrivial correlations in both cases,
+which are particularily strong in the case of Cooccurrence. Others remarks on the overlap
+will be discussed further in Section 6.
+eerged
+etitrapib
+700
+600
+500
+400
+300
+200
+100
+00 500 1000 1500 2000 2500 3000 3500 4000
+unipartite degree
+eerged
+etitrapib
+70
+60
+50
+40
+30
+20
+10
+00 50 100 150 200 250 300
+unipartite degree
+eerged
+etitrapib
+100000
+10000
+1000
+100
+10
+11 10 100 1000 10000
+unipartite degree
+Figure 6: Correlations between degrees in the classical network and the bipartite one. From
+left to right: Actors, Coauthoring, and Cooccurrence.
+Finally, we have shown in this section that all complex networks have a nontrivial under-
+lyingbipartite structure, which can becomputed usingour decomposition scheme. This leads
+us to the following question: is it possible to see the main properties of real-world complex
+networks as consequences of their underlying bipartite structure? We answer this question in
+the next sections.
+3 The bipartite models.
+Our aim is now to use the new general property of real-world complex networks discovered
+in the previous section, namely their underlying bipartite structure, as a way to propose a
+model which captures the main wanted properties.
+As discussed in the first section of this paper, there are basically two ways to achieve this
+goal. First, we may try to sample random bipartite graphs with prescribed (top and bottom)
+degree distributions. Second, we may try to propose a construction process similar to the
+ones observed in practice, to obtain a growing model.
+10
+We proposed such models in [34]. In order to deepen the understanding of these models,
+wehererecallanddiscussmoreprecisely theirdefinitions,andweprovideafull(bothanalytic
+and experimental) analysis in the next sections.
+Random sampling of bipartite graphs with prescribed degree distribution
+Onecan sampleuniformlyarandombipartite graphwith prescribed(top and bottom)degree
+distributions in the spirit of the configuration model as follows (see Figure 7) [17, 55, 56]:
+1. generate both top and bottom vertices and assign to each vertex a degree drawn from
+the given distributions,
+2. create for each vertex as many connection points as its degree,
+3. link top and bottom connection points randomly,
+Figure7: Constructionof arandombipartitegraphwithprescribeddegreedistributions: first
+top and bottom vertices are drawn and each vertex is assigned a degree with respect to the
+given distributions, then edges are chosen randomly between the two sets.
+This process generates random bipartite graphs uniformly within the set of bipartite
+graphs with the given degree distributions. However it cannot be used without taking care
+of the following constraints: top and bottom distributions cannot be arbitrary since they
+must allow the total degree of both sets to be equal. Actually one only has to ensure that
+the number of vertices times the mean of the distribution brings the same value for top and
+bottom sets. The second problem arises with the fact that even if the two distributions are
+theoretically consistent, two sets of degrees experimentally drawn from these distributions
+can be inconsistent (the sums of the degrees are different). A classical trick, which induces no
+bias, consists in dropping one top and one bottom vertex at random and redraw their degree
+[55, 56]. This last step may have to be done more than once before one obtains correct values
+but finally the implementation and use of the model is very simple and efficient [17].
+Note that, justlike with the MR model, multiple edges may appear. Again, onecan easily
+show that they can be neglected when the graph is large. Moreover, some approaches exist
+[38, 44] which can easily be modified to obtain random bipartite graphs without multiples
+edges. This is however out of the scope of this paper.
+Growing bipartite model with preferential attachment
+Therandombipartitemodelassumesthattwodistributions,forbothtopandbottomdegrees,
+are explicitly given. One can also use other rules (preferential attachment for instance) to
+definethem implicitly andintroduceagrowingmodel. Indeed,asalready noticed, thebottom
+degree distributions follow a power law. This leads to the following model: at each step, a
+new top vertex is added and its degree d is sampled from a prescribed (top) distribution
+(which qualitatively varies between graphs). Then, for each of the d edges of the new vertex,
+11
+either a new bottom vertex is added (with probability 1 − λ) or one is picked among the
+preexisting ones using preferential attachment (with probability λ). The parameter λ is the
+overlap ratio, defined as the average ratio of preexisting bottom vertices to which a new top
+vertex is connected.
+It is generally not possible to know exactly the order in which cliques are created on real-
+|⊥|
+world bipartite graphs, but the average ratio can be computed globally as λ = 1− . One
+Pd
+⊤
+can compute it and get 0.733 for Actors, 0.877 for Coauthoring and 0.949 for Cooccurrence.
+Notice that 1−λ can be rewritten and is simply the inverse average bottom degree (since
+d = d ), therefore a high overlap ratio yields a high average bottom degree (since only
+⊤ ⊥
+fPew nodePs are created at each time step).
+At each step of the construction process, the bipartite graph has the required degree
+distributions: the prescribed top degree distribution is obtained by construction while the
+power law degree distribution is obtained using preferential attachment, which can be shown
+formally in exactly the same way as in the original AB model [3]. Notice moreover that
+this construction process is very similar to the one observed in some real-world cases. For
+instance, Actors is built exactly this way: when a new movie is produced (which corresponds
+to the addition of a top vertex), it is linked to actors according to their popularity, and to
+some new actors, playing in a movie for the first time.
+We finally have two models to produce bipartite networks similar to the ones obtained
+from real-world complex networks, interms of top and bottom degree distributions. Thenext
+question is toask if theycapturetheother propertiesof interest intheir ⊥-projection, namely
+the average distance, the degree distribution and the clustering. We will answer positively to
+this question with formal arguments and with experimental results in the next sections.
+4 Analysis of the models.
+Our aim in this section is to give formal proofs for the main properties of the ⊥-projection of
+a random bipartite graph with prescribed degree distributions. Some of these properties, and
+others, have been studied independently in [55, 56] with different techniques and a different
+point of view. We however believe that our proofs give new insight on these properties,
+therefore we give them below. In particular, our proof techniques may be considered as more
+mathematically rigorous.
+Since these properties are induced by a typical graph (this is what random sampling
+gives us), this is a way to answer the following question: what properties are induced by
+the underlying bipartite structure? In particular, can we see the main properties of real-
+world complex networks, namely low average distance, power law degree distribution and
+high clustering, as consequences of the underlying bipartite structure?
+We will see that it is indeed the case. Notice that many other properties, like the size
+distribution of the connected components for instance, are of high interest. It is shown in [55]
+that under reasonable conditions on the degree distributions the ⊥-projection is connected,
+or at least has a giant component. In all the practical cases, these conditions are fulfilled,
+therefore we will restrict ourselves to this case.
+12
+Degree distribution
+Let us first consider the degree distribution of the ⊥-projection of a random bipartite graph
+G = (⊤,⊥,E). Given a bottom vertex u, we denote by d(u) the degree of u in the bipartite
+graph, and by d (u) its degree in its ⊥-projection. We want to study the distribution of
+U
+d (u) (we actually deal here with the expected value for a randomly chosen u).
+U
+Lemma 1 Let us consider a bottom vertex u ∈ ⊥. The expected number of bottom vertices
+which have a neighbor (in ⊤) in common with u, i.e. d (u), is:
+U
+d(u) d(u)2
+· d(t)+O · d(t)2 
+|⊤| |⊤|2
+Xt6=u Xt6=u
+ 
+(|⊤|−d(u))
+Proof. The exact expected value of d (u) is given by d (u) = 1− d(t) since
+U U t6=u(cid:18) (|⊤|) (cid:19)
+P d(t)
+the probability that a given bottom vertex t has a top neighbor in common with u depends
+only on the degree of both vertices and the number of top vertices. To simplify this formula,
+(|⊤|−d(u))
+we can approximate the ratio |⊤|−d(u) / |⊤| as follows: d(t) = (|⊤|−d(u))!(|⊤|−d(t))! ∼
+d(t) d(t) (|⊤|) |⊤|!(|⊤|−d(u)−d(t))!
+(cid:0) (cid:1) (cid:0) (cid:1) d(t)
+(|⊤|−d(t))d(u) d(t)d(u) d(t)d(u) 2
+∼ 1− +O .
+|⊤|d(u) |⊤| (cid:18) |⊤| (cid:19)
+(cid:16) (cid:17)
+Therefore: d (u) ∼ d(t)d(u) +O d(t)d(u) 2 ∼ d(u) d(t)+O d(u)2 d(t)2 ,
+⊤ t=6 u(cid:18) |⊤| (cid:18) |⊤| (cid:19)(cid:19) |⊤| t6=u |⊤|2 t=6 u
+(cid:16) (cid:17) (cid:16) (cid:17)
+which is the formulaP of the claim. P P (cid:3)
+Thislemmamakesitpossibletocomputetheprobabilityforavertexuinthe⊥-projection
+graph to have agiven degree k if thebottom degree distribution is a power law with exponent
+β:
+n 1
+P[d (u) = k] ∼ P[d(u) = ·k] ∼ ∼ k−β
+U d(t) ( d(t))·k)β
+t6=u t6=u
+P P
+Therefore, as long as the bottom degree distribution follows a power law, the degree
+distributioninthe⊥-projectionofthegraphalsofollows apowerlaw withthesameexponent,
+which is indeed the case in practice as one can check in Figures 8 and 5. The main reason
+comes from the fact that ⊥-vertices are somehow randomly linked to ⊤-vertices and their
+degree in the projection is therefore strongly correlated with their bipartire degree.
+Average distance
+To study the average distance in the ⊥-projection of a graph obtained with the model, we
+will use a result from L. Lu about the diameter (i.e. the largest distance between any two
+vertices) of some specific random graphs:
+Theorem 1 [39]LetG = (V,E)beagraphwhoseverticesareweightedwithweightsw ,··· ,w ,
+1 n
+such that each edge {i,j} appears with probability w ·w ·p. If the degrees of the vertices in V
+i j
+follow a power law with an exponent β strictly greater than 2, then the diameter of the graph
+G is almost surely Θ(log(n))5.
+5f =Θ(g)if and only if f =O(g) and g=O(f)i.
+13
+This theorem, together with the one presented above on the degree distribution of the
+⊥-projection of the graph, leads to the following result:
+Theorem 2 Let G = (⊤,⊥,E) be a bipartite graph such that the bottom degree distribution
+follows a power law with an exponent greater than 2. Then the diameter of the ⊥-projection
+of G is almost surely Θ(log(|⊥|)).
+Proof. Given two bottom vertices u and v in ⊥, the probability that they are connected in
+the ⊥-projection is equal to the probability that they are both linked to a same top vertex
+in G. This probability is exactly proportional to d (u) · d (v). Therefore we can apply
+⊥ ⊥
+Theorem 1 considering that the weight of each vertex is its degree and so the connection
+probability is ensured, and as long as bottom degree distribution follows a power law with an
+exponent β strictly greater than 2. The diameter of the ⊥-projection of the graph therefore
+is almost surely Θ(log(|⊥|)). (cid:3)
+Since the diameter is an upper bound for the average distance, this theorem implies that
+the average distance of the ⊥-projection scales at most as fast as the logarithm of its number
+of nodes. Notice that, as in the case of random networks [13, 18, 21, 28, 39, 55, 56], the
+average distance may grow even slower.
+Clustering
+Recall that the clustering of a vertex v of degree at least 2 in a graph is the probability that
+two of its neighbors are linked [70], i.e. the number of triangles to which v belongs over the
+|△(v)|
+number of connected triples centered on it: c(v) = . Then the clustering of the graph
+|∧(v)|
+is defined as: 1 c(v). We define the clustering of a vertex restricted to a part of its
+N v,d(v)>1
+neighborhood asPits clustering in the subgraph induced by this part of its neighborhood.
+Hereafter we give a lower boundfor the clustering of a graph G′ which is the ⊥-projection
+ofabipartitegraphG = (⊤,⊥,E)obtainedusingtherandombipartitemodel. Weshowthat,
+under reasonable assumptions on the top and bottom degree distributions, it is boundedby a
+value independent of the size of the graph. This shows that the model produces graphs with
+nontrivial clustering.
+Before entering in the core of this section, note that an approximation formula for the
+clustering of such a graph is given in [55, 56]. Here we give an exact formula for a lower
+bound. Both are interesting since the first one gives an expected value which is indeed very
+close to the real value, while the second one gives a guaranty that the exact value is above
+the given quantity. We used this approach because we seek qualitative results only, and so it
+is sufficient for us to show that the clustering does not tend to 0 when the size of the graph
+grows. The lower bound achieves this goal.
+First, the probability for two top vertices to have more than one bottom vertex in com-
+mon in their neighborhood tends to zero when the size of the graph grows. We therefore
+consider any vertex b in the ⊥-projection of the graph and we suppose that its neighborhood
+is composed of a set of disjoint cliques. We will prove the following:
+• the effect of the number of top vertices of degree 2 to which b is connected on its
+clustering is negligible, and
+14
+• the clustering of b can be bounded by a value which depends only on its degree.
+Lemma 2 Let ⊤ denote the set of top neighbors of b in G with degree strictly greater than
+>2
+2, and ⊥ denote the set of bottom neighbors of ⊤ . Let p be the fraction of neighbors of b
+>2 >2
+which belong to ⊥ , and α be the clustering of b (in G′) restricted to ⊥ .
+>2 >2
+Then the clustering of b in G′ scales as p2·α.
+Proof. The fact that the clustering of b restricted to ⊥ is α implies that |△ (b)| =
+>2 ⊥>2
+α · p·d . If we consider the whole neighborhood of b, instead of just ⊥ , the number of
+2 >2
+(cid:0) (cid:1) α·(p·d)
+triangles does not change while the number of connected triples increases: c(b) = 2 =
+(d)
+2
+α· p·d((p·d−1) ∼ p2·α which is the formula of the claim. (cid:3)
+d(d−1)
+Therefore, as long as p is a constant, one can neglect the top vertices of degree 2 when
+computing the clustering of a given vertex. Now let us prove that the clustering of a bottom
+vertex can be related to its degree.
+Lemma 3 If b is connected only to top vertices of degree at least 3 in G, then:
+1
+c(b) ≥
+2·d(b)−1
+Proof. Suppose that b is connected to two top vertices, t and t , of degree at least 3 (we
+1 2
+(d(t1)−1)+(d(t2)−1)
+deal with thegeneral case below). Thentheclustering of b is c(b) = 2 2 Suppose
+(d(t1)+d(t2)−2)
+2
+now that b is connected to t and t′ such that d(t′) = d(t )+1, then the clustering of b is
+2 1 1 1
+c′(b) =
+(d(t1) 2+1−1)+(d(t2 2)−1)
+and c′(b) − c(b) = 2·(d(t2)−1) > 0, which means
+(d(t1)+d(t2)−1) (d(t1)+d(t2)−2)·(d(t1)+d(t2)−3)
+2
+that the clustering grows with the degree of t and t . A lower bound for the clustering of b
+1 2
+can therefore be obtained when both t and t have the smallest possible degree: 3.
+1 2
+This can be extended to the case where b has more than two top neighbors to obtain the
+P (d(ti)−1) P (3−1)
+following lower bound c(b) = ti 2 ≥ ti 2 ≥ 1 , which is the formula of the
+(Pti(d(ti)−1)) (Pti(3−1)) 2·d(b)−1
+claim. 2 2 (cid:3)
+The clustering of the ⊥-projection G′ can now be easily approximated:
+1 1
+c(G′)∼
+N 2d(b)−1
+bX∈⊥
+As long as there is a linear number c·N of vertices b of degree 2, the sum scales linearly
+with N: 1 ≥ 1 = c·N (we could have considered vertices of any
+b∈⊥ 2·d(b)−1 b,d(b)=2 2·2−1 3
+(cid:16) (cid:17)
+constant Pdegree k insteadPof 2). Therefore the lower bound for the clustering is independent
+of N. This holds in particular for power law networks since the number of vertices of degree
+2 is of the order of N ·2−α.
+Since we do notconsider top vertices of degree 2 in the last formula (due to Lemma 2), we
+must also ensure that the number of such top neighbors represent at most a constant fraction
+15
+(not tending to 1) of the neighbors. This is indeed the case for most distributions and in
+particular for the ones met in practice. We finally obtain that the clustering of the graph
+is larger than a non-zero constant independently of the size of the graph. The idea behind
+the proof is that each node belongs to a small number of cliques and even if these cliques are
+disjoint, the clustering is still high.
+5 Experimental results
+Theformalresultsoftheprevioussection give apreciseintuition onhowtherandombipartite
+graph model with prescribed degree distributions behaves. We can also check its properties
+experimentally by generating graphs using this model and the same parameters as the ones
+measured on real-world complex networks. This is what we do in this section with our six
+examples, for the purely random bipartite model as well as for the one with preferential
+attachment.
+More precisely, the networks are generated using the models presented in section 3 with
+⊤ and ⊥ distributions obtained either from the real graphs when they are known or from the
+decomposition scheme introduced in section 2.
+Table3and4givethevaluesobtainedfortheaveragedistanceandtheclustering. Figure8
+shows a comparison between the degree distributions of the original graphs, and the ones
+obtained with the two bipartite models.
+Internet Web Actors Co-auth Co-occur Protein
+d 5.80 7 3.6 7.18 2.13 6.74
+d 2.97 3.2 3.06 5.07 2.06 5.8
+rb
+d 2.81 3.53 2.83 3.98 2.6 5.45
+gb
+Table 3: Averagedistance ofthe commonlyusedmodels andthe bipartite models. Foreachnetwork,
+we give its actual average distance, and the one obtained with the random bipartite model with
+prescribed degree distributions d , and the growing one with preferential attachment d .
+rb gb
+Internet Web Actors Co-auth Co-occur Protein
+c 0.171 0.466 0.785 0.638 0.822 0.153
+c 0.32 0.663 0.767 0.542 0.831 0.187
+rb
+c 0.65 0.708 0.793 0.632 0.768 0.244
+gb
+Table 4: Clustering obtained with the commonly used models and the bipartite models. For each
+network, we give its actual clustering and the clustering obtained with the random bipartite model
+with prescribed degree distributions c , and the growing one with preferential attachment c .
+rb gb
+As expected from the previous section, the graphs obtained with the random bipartite
+model have a power law distribution of degrees, a small average distance and a high cluster-
+ing. Moreover, by definition, they have the same distribution of cliques size as the original
+network. Therefore the model is qualitatively accurate for the modeling of general real-world
+complex networks: the simulations fit real-world values qualitatively well for both clustering
+and average distance, which proves the relevance of the underlying bipartite structure as an
+essential property to characterize real-world complex networks.
+16
+100000 1000 10000
+Original Original Original
+10000 R Pra en fd . . a tb ti .p. R Pra en fd . . a tb ti .p. 1000 R Pra en fd . . a tb ti .p.
+100
+1000
+100
+100
+10
+10 Actors Cooccurence 10 Coauthoring
+11 10 100 1000 10000 100000 1 1 10 100 1000 10000 11 10 100 1000
+1e+06 1e+06 10000
+Original Original Original
+100000 Rand. bip. 100000 Rand. bip. Rand. bip.
+Pref. att. Pref. att. 1000 Pref. att.
+10000 10000
+1000 1000 100
+100 100
+10
+10 Internet 10 Web Proteins
+11 10 100 1000 10000 11 10 100 1000 10000 100000 11 10 100
+Figure8: Theoriginaldegreedistributionofoursixexamples,togetherwiththeonesobtained
+with the random bipartite model and with the growing bipartite model.
+There are however differences between the values obtained from the bipartite models and
+real-world networks. They are consequences of the following fact: in the original bipartite
+networks (both natural ones and the ones obtained from the decomposition), many top nodes
+have a large neighborhood intersection. In other words, the overlap between cliques is large
+(if two cliques have one neighbor in common, they certainly have many). This behavior can
+be viewed as a bipartite clustering and is not captured by the bipartite models. The random
+linking implies that most cliques have only one vertex in common, if any. This is responsible
+for both the inaccuracy of the models concerning some clusterings and for the irregularities
+one can observe on some distributions. Figure 9 plots the distribution of the overlap between
+cliques. This overlap is very small for all random bipartite graphs while it is non trivial for
+the original graphs.
+1e+08 1e+08 1e+06
+1e+07 Actors 1e+07 Cooccurence
+1e+06 1e+06 100000 Coauthoring
+100000 100000 10000 Original
+10000 Original 10000
+1000 1000 1000
+1 10 00 Rand. bip. 1 10 00 Rand. bip. Original 100 Rand. bip.
+1 1 10 100 1 1 10 100 10 1 10 100
+1e+08 1e+09 100000
+1e+07 Internet 1e+08 Web Protein
+1e+06 1e+07 10000
+1 10 00 00 00 00 1 1 0e 0+ 00 06 0 1000 Original
+1000 1 10 00 00 00
+Original
+100
+100 Rand. bip. Original 100 Rand. bip. 10 Rand. bip.
+10 10
+1 1 10 100 1 1 10 100 1 1 10
+Figure9: Distributionofthesizeoftheoverlap betweencliques(i.e.intersections ofneighbors
+of top nodes) for both original networks (or decomposed ones) and random bipartite ones.
+More precisely, in the case of Internet, we noticed the presence of a sub-graph of only 94
+vertices which contains all the 494 cliques of size 14 and more. This very dense sub-graph
+implies that the clustering of each of the 94 nodes is very high. However, they have almost no
+impact on the clustering of the whole graph (due to the average). On the other hand, in the
+⊥-projection of random bipartite networks, these large cliques are disseminated all over the
+graph which brings two artifacts: there are a lot of vertices having a degree between 14 and
+17
+29 which explains the bump on degree distribution (a similar phenomenon can be observed
+on Web), and the number of vertices with high clustering is drastically increased because of
+their presence in large cliques (from 94 to 50,000).
+These experimental results should also be compared to the ones obtained with the cur-
+rently most used models, presented in Section 1. This comparison gives evidence for the fact
+that the models we propose may be considered as an important step towards the realistic
+modeling of complex networks.
+All theseremarks holdbothfor thegrowing bipartitemodeland fortherandom one. This
+is worth to notice, since it may be very important in some contexts that the model produces
+growing graphs with realistic properties, and in other contexts that the obtained graphs are
+representative of a precise class of graphs.
+6 Conclusion and discussion
+In this paper, we propose bipartite graphs as a general tool for the modeling of real-world
+complex networks. They make it possible to achieve the following challenges:
+• the obtained networks have the three main wanted properties (logarithmic average dis-
+tance, high clustering and power law degree distribution),
+• the models are based on a realistic construction process representative of what happens
+in some real-world cases, and
+• their definitions are simple enough to make it possible to give some intuition and some
+proofs of their properties.
+Moreover, they can be derived in two versions: one which relies on random sampling among
+a class of graphs, and one which relies on an iterative construction process. This makes them
+suitable for a wide variety of usages. Moreover, it is very simple to obtain graphs using this
+model(weprovideageneratorat[17]),whichmakesithighlysuitableforsimulationpurposes.
+The model is based on the discovery that all real-world complex networks have an under-
+lying bipartite structure. Some networks naturally have this structure and, for the others, we
+show that they can be decomposed into cliques which make such a structure emerge. This
+shows that the main properties of complex networks can be viewed as consequences of this
+bipartite structure, and that the model captures a general behavior of complex systems.
+However, as already stressed in previous sections, the overlapping between cliques is not
+taken into account by the bipartite model which in some way distributes cliques all over
+the networks independently of the nodes implied. On the contrary, it seems obvious that
+graphs such as Actors are not randomly constructed: actors from a same country are more
+likely to play together, for instance. This lack of overlapping can also be described on the
+bipartite graphs: if two top nodes have more than one bottom node in the intersection of
+their neighborhood, then this yields a non trivial bipartite clique. On the other hand, for the
+graphs generated with both bipartite models, most of these bipartite cliques are trivial ones
+(as long as there are no too many cliques).
+An analogy can be made with the clustering in random graphs (ER graphs for instance),
+in which neighborhoods of vertices are very sparse while real-world neighborhoods are quite
+18
+[8] A.-L. Baraba´si, E. Ravasz, and T. Vicsek. Deterministic scale-free networks. Physica A 299,
+(3-4), pages 559–564,2001.
+[9] A. Barrat and R. Pastor-Satorras. Rate equation approach for correlations in growing network
+models. Phys. Rev. E., 71, 2005. 036127.
+[10] E.A. Bender and E.R. Canfield. The asymptotic number of labeled graphs with given degree
+sequences. J. Combin. Theory Ser. A, 24:296–307,1978.
+[11] M.Boguna,R.Pastor-Satorras,andA.Vespignani. Epidemicspreadingincomplexnetworkswith
+degreecorrelations. InalJ.M.Rubiet, editor, XVIII Sitges Conference ”Statistical Mechanics of
+Complex Networks”. Springer Verlag, 2003.
+[12] B. Bollob´as. A probabilistic proof of an asymptotic formula for the number of labelled regular
+graphs. Europ. J Combinatorics, 1:311–316,1980.
+[13] B. Bollob´as. Random Graphs. Academic Press, 1985.
+[14] I. Bomze, M. Budinich, P. Pardalos, and M. Pelillo. The maximum clique problem. In D.-Z.
+Du and P. M. Pardalos, editors, Handbook of Combinatorial Optimization, volume 4. Kluwer
+Academic Publishers, Boston, MA, 1999.
+[15] D.S.Callaway,M.E.J.Newman,S.H.Strogatz,andD.J.Watts. Networkrobustnessandfragility:
+Percolationon random graphs. Phys. Rev. Lett., 85:5468–5471,2000.
+[16] Q. Chen, H. Chang, R. Govindan, S. Jamin, S. Shenker, and W. Willinger. The origin of power
+laws in internet topologies revisited. In INFOCOM, 2002.
+[17] Sourcecodefortherandombipartitegraphgenerator.http://jlguillaume.free.fr/www/programs.php.
+[18] R. Cohen, D. ben Avraham, and S. Havlin. Handbook of graphs and networks, chapter 4: Struc-
+tural properties of scale free networks. Wiley-VCH, 2002.
+[19] R. Cohen, K. Erez, D. ben Avraham, and S. Havlin. Resilience of the internet to random break-
+down. Phys. Rev. Lett., 85:4626–4628,2000.
+[20] R.Cohen,K.Erez,D. benAvraham,andS.Havlin. Breakdownofthe internetunder intentional
+attack. Phys. Rev. Lett., 86:3682–3685,2001.
+[21] R. Cohen and S. Havlin. Scale free networks are ultrasmall. Phys. Rev. Lett., 90, 2003.
+[22] F. Comellas, G. Fertin, and A. Raspaud. Vertex labeling and routing in recursive clique-trees,
+a new family of small-world scale-free graphs. In Sirocco 2003 - The 10th Int. Colloquium on
+Structural Information and Communication Complexity, pages 73–87.
+[23] Self-Organized Networks Database. http://www.nd.edu/~networks/database/index.html.
+[24] The Internet Movie Database. http://www.imdb.com/.
+[25] S.N. Dorogovtsev and J.F.F. Mendes. Exactly solvable small-world network. Euro. phys. Lett.,
+50 (1):1–7, 2000.
+[26] S.N. Dorogovtsev and J.F.F. Mendes. Evolution of networks. Adv. Phys. 51, 1079-1187, 2002.
+[27] S.N. Dorogovtsev, J.F.F. Mendes, and A.N. Samukhin. Structure of growing networks with
+preferential linking. Phys. Rev. Lett. 85, pages 4633–4636,2000.
+[28] S.N. Dorogovtsev, J.F.F. Mendes, and A.N. Samukhin. Metric structure of random networks.
+Nucl. Phys. B 653, 307, 2003.
+[29] P. Erdo¨s and A. R´enyi. On random graphs I. Publ. Math. Debrecen, 6:290–297,1959.
+[30] M.Faloutsos,P.Faloutsos,andC.Faloutsos. Onpower-lawrelationshipsoftheinternettopology.
+In SIGCOMM, pages 251–262,1999.
+20
+[31] R.FerrerandR.V.Sol´e. Thesmall-worldofhumanlanguage. InProceedings of the Royal Society
+of London, volume B268, pages 2261–2265,2001.
+[32] Internet Maps from Mercator. http://www.isi.edu/div7/scan/mercator/maps.html.
+[33] R.GovindanandH.Tangmunarunkit. Heuristicsforinternetmapdiscovery. InIEEE INFOCOM
+2000, pages 1371–1380,Tel Aviv, Israel, March 2000. IEEE.
+[34] Jean-Loup Guillaume and Matthieu Latapy. Bipartite structure of all complex networks. Infor-
+mation Processing Letters (IPL), 90(5):215–221,2004.
+[35] H. Jeong, B. Tombor, R. Albert, Z. Oltvai, and A.-L. Baraba´si. The large-scale organization of
+metabolic networks. Nature, 407, 651, 2000.
+[36] B.J. Kim, C.N. Yoon, S.K. Han, and H. Jeong. Path finding strategies in scale-free networks.
+Phys. Rev. E 65, 027103., 2002.
+[37] R. Kumar, P. Raghavan, S. Rajagopalan, D. Sivakumar, A. Tomkins, and E. Upfal. Stochastic
+models for the web graph. Proceedings of the 41th IEEE Symp. on Foundations of Computer
+Science, 2000.
+[38] M. Latapy and F. Viger. Random generation of large connected simple graphs with prescribed
+degreedistribution. Inproceedings of the 11-th international conference on Computing and Com-
+binatorics COCOON’05, 2005.
+[39] L. Lu. The diameter of random massive graphs. In ACM-SIAM, editor, 12th Ann. Symp. on
+Discrete Algorithms (SODA), pages 912–921,2001.
+[40] T.Luczak. Sparserandomgraphswithagivendegreesequence,inRandomGraphs,vol.2. A.M.
+Frieze, T. Luczak eds. Wiley, New York, 1992. pages. 165-182.
+[41] D. Magoni and J.-J. Pansiot. Influence of network topology on protocol simulation. In ICN’01 -
+1st IEEE International Conference on Networking, volume Lecture Notes in Computer Science,
+pages 762–770,July 9-13, 2001.
+[42] M. Mihail and C. Papadimitriou. the eigenvalue power law, 2002.
+[43] S. Milgram. The small world problem. Psychology today, 1:61–67,1967.
+[44] R. Milo, N. Kashtan, S. Itzkovitz, M.E.J. Newman, and U. Alon. On the uniform generation of
+random graphs with prescribed degree sequences, 2003. cond-mat/0312028.
+[45] M.MolloyandB.Reed. Acriticalpointforrandomgraphswithagivendegreesequence. Random
+Structures and Algorithms, pages 161–179,1995.
+[46] M. Molloy and B. Reed. The size of the giantcomponent of a randomgraph with a givendegree
+sequence. Combin. Probab. Comput., pages 295–305,1998.
+[47] S.D. Monson, N.J. Pullman, and R. Rees. A survey of clique and biclique coverings and factor-
+izations of (0,1)-matrices. Bull. Inst. Combin. Appl., 14:17–86,1995.
+[48] C. Moore and M.E.J. Newman. Epidemics and percolationin small-worlds networks. Phys. Rev.
+E, 61:5678–5682,2000.
+[49] Adilson E. Motter and Ying-Cheng Lai. Cascade-based attacks on complex networks. Physical
+Review E 66, 2002.
+[50] M.E.J. Newman. Scientific collaboration networks: I. Network construction and fundamental
+results. Phys. Rev. E, 64, 2001.
+[51] M.E.J. Newman. Scientific collaboration networks: II. Shortest paths, weighted networks, and
+centrality. Phys. Rev. E, 64, 2001.
+[52] M.E.J. Newman. The spread of epidemic disease on networks. Phys. Rev. E, 66, 2002.
+21
+[53] M.E.J. Newman. mixing patterns in networks. Phy. Rev. E, 67, 2003. cond-mat/0209450.
+[54] M.E.J.Newman. The structureandfunctionofcomplexnetworks. SIAM Review, 45(2):167–256,
+2003.
+[55] M.E.J. Newman, D.J. Watts, and S.H. Strogatz. Random graphs with arbitrary degree distribu-
+tions and their applications. Phys. Rev. E, 2001.
+[56] M.E.J.Newman, D.J.Watts, andS.H.Strogatz. Randomgraphmodels ofsocialnetworks. Proc.
+Natl. Acad. Sci. USA, 99 (Suppl. 1):2566–2572,2002.
+[57] J.Orlin. Contentmentingraphtheory: Coveringgraphswithcliques. Indigationes Mathematicae,
+80:406–424,1977.
+[58] R. Pastor-Satorras and A. Vespignani. Epidemic spreading in scale-free networks. Phys. Rev.
+Lett., 86:3200–3203,2001.
+[59] P.Holme and B.J. Kim. Growing scale-free networks with tunable clustering. Phys. Rev. E, 65,
+2002. 026107.
+[60] M.A. Serrano and M. Bogu na`. Tuning clustering in random networks with arbitrary degree
+distributions. Phys. Rev. E., 72, 2005. 036133.
+[61] M.A. Serrano, M. Bogu na`, and A. D´ıaz Guilera. Competition and adaptation in an internet
+evolution model. Phys. Rev. Lett., 94, 2005. 038701.
+[62] S.H. Strogatz. Exploring complex networks. Nature 410, 2001.
+[63] LakshminarayananSubramanian, SharadAgarwal,Jennifer Rexford, and Randy H. Katz. Char-
+acterizingtheinternethierarchyfrommultiplevantagepoints. InProc.ofIEEEINFOCOM2002,
+New York, NY, Jun 2002.
+[64] H. Tangmunarunkit, R. Govindan, S. Jamin, S. Shenker, and W. Willinger. On characteriz-
+ing network hierarchy. Technical Report 03-782, Computer Science Department, University of
+Southern California, 2001. submitted.
+[65] A.Vazquez. Growingnetworkwithlocalrules: Preferentialattachment,clusteringhierarchy,and
+degree correlations. Phys. Rev. E., 67, 2003. 056104.
+[66] A. Vazquez, A. Flammini, A. Maritan, and A. Vespignani. Modeling of protein interaction net-
+works. ComplexUs 1, 38, 2003.
+[67] Bible Today New International Version. http://www.tniv.info/bible/.
+[68] T. Walsh. Search in a small world. In IJCAI, pages 1172–1177,1999.
+[69] B. Wang, H. Tang, Z. Zhang, and Z. Xiu. Evolving scale-free network model with tunable
+clustering. Int. J. Mod. Phys. B, 19(26):3951–3959,2005.
+[70] D.J.WattsandS.H.Strogatz. Collectivedynamicsofsmall-worldnetworks. Nature,393:440–442,
+1998.
+22
+

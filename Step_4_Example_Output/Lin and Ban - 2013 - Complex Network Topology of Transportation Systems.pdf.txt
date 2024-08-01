@@ -1,0 +1,1150 @@
+References:
+682 J. Linand Y.Ban
+thananyonecouldexpect,suchasthewidelypresentsmall-worldeffectandscale-
+free distribution. On the other hand, different functions, sizes, representation
+spaces, and geographical scales all impose impacts on the results. For example,
+the scale-free structure is very common for urban public transport systems in the
+L-space representation, but almost ruled out for those in the P-space. These com-
+parisons and summarizations provide meaningful inspiration for planners on the
+transportationsystemdesignandoptimization.
+Complexnetworktheoryhasundergonerapiddevelopmentsinthelastdecade;
+much work lies ahead in this field. There is still a long way to go to apply all
+achievements in transport practice. First, exploring network cellular structures
+is of utmost importance to understanding the planarity of grounded transpor-
+tation systems and coping with modern traffic dilemmas. More geographic con-
+straints and urban attributes, such as population density distribution and
+land-use structures, should be considered for general contexts. Second, with the
+availability of GPS and various mobile devices, recognizing and tracking
+human mobility patterns is becoming a hot issue in many research areas.
+Undoubtedly, exploring the relationship between the underlying topological
+structure of transportation systems and human movements on them is much
+more challenging, demanding that transport researchers have a good capacity
+to handle gigantic amounts of data. Admittedly, many studies reviewed in this
+article are still in the theoretical stage. More efforts should be made to explore
+potential applications and meanings for practical transport planning, especially
+when different characteristics for different transport systems are considered.
+Much progress can be expected with morecollaboration among different subject
+areas in thefuture.
+Acknowledgements
+The author thanks Dr. Bin Jiang for his helpful suggestions on this work. Many
+sincere thanks to the threereviewers for their valuable comments, which helped
+toimprovethe manuscript.
+References
+Anez,J.,delaBarra,T.,&Perez,B.(1996).Dualgraphrepresentationoftransportnetworks.Transport
+Research,30(3),209–216.
+Bagler,G.(2008).AnalysisoftheairportnetworkofIndiaasacomplexweightednetwork.PhysicaA,
+387,2972–2980.
+Baraba´si,A.L.,&Albert,R.(1999).Emergenceofscalinginrandomnetworks.Science,286,509–512.
+Barrat, A., Barthelemy, M.,& Vespignani,A.(2004).Modelingtheevolutionof weightednetworks.
+PhysicalReviewE,70,066149.
+Barthelemy,M.(2004).Betweennesscentralityinlargecomplexnetworks.TheEuropeanPhysicalJournal
+B,38,163–168.
+Barthelemy,M.(2011).Spatialnetworks.PhysicsReport,449,1–101.
+Barthelemy,M.,&Flammini,A.(2008).Modelingurbanstreetpatterns.PhysicalReviewLetters,100,
+138702.
+Batty,M.(2004).Anewtheoryofspacesyntax(CASAworkingpaperNO.75).Retrievedfromhttp://
+www.casa.ucl.ac.uk/publications/full_list.htm
+Black,W.R.(2003).Transportation:Ageographicalanalysis.NewYork,NY:Guilford.
+Boccaletti,S.,Latora,V.,Moreno,Y.,Chavez,M.,&Hwang,D.U.(2006).Complexnetworks:Structure
+anddynamics.PhysicalReports,424,175–308.
+
+Annexes/Appendices:
+
+Body Text:
+Transport Reviews
+A Transnational Transdisciplinary Journal
+ISSN: 0144-1647 (Print) 1464-5327 (Online) Journal homepage: https://www.tandfonline.com/loi/ttrv20
+Complex Network Topology of Transportation
+Systems
+Jingyi Lin & Yifang Ban
+To cite this article: Jingyi Lin & Yifang Ban (2013) Complex Network Topology of Transportation
+Systems, Transport Reviews, 33:6, 658-685, DOI: 10.1080/01441647.2013.848955
+To link to this article: https://doi.org/10.1080/01441647.2013.848955
+Published online: 29 Oct 2013.
+Submit your article to this journal
+Article views: 3148
+View related articles
+Citing articles: 45 View citing articles
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=ttrv20
+TransportReviews,2013
+Vol.33,No.6,658–685,http://dx.doi.org/10.1080/01441647.2013.848955
+Complex Network Topology of Transportation Systems
+JINGYI LIN§ AND YIFANG BAN
+DepartmentofUrbanPlanningandEnvironment,RoyalInstituteofTechnology,Drottning
+Kristinasva¨g30,10044Stockholm,Sweden
+(Received18February2013;revised28August2013;accepted23September2013)
+ABSTRACT Asastrategicfactorforacountrytosurviveintheglobalcompetition,transportation
+systemshaveattractedextensiveattentionfromdifferentdisciplinesforalongtime.Sincetheintro-
+ductionofcomplexnetwork theoryinthelast decade,however,studieson transport systemshave
+witnessed dramatic progress. Most roads, streets, and rails are organized as a network pattern,
+while link flows, travel time, or geographical distance areregarded as weights. In this article, the
+authors will present the current state of topological research on transportation systems under a
+complex network framework, as well as the efforts and challenges that have been made in the last
+decade.First,differentkindsoftransportationsystemsshouldbegeneralizedasnetworksindifferent
+ways,whichwillbeexplainedinthefirstpartofthispaper.Wefollowthisbysummarizingnetwork
+measuresthatdescribe topologicalcharacteristicsoftransportation networks.Thenwediscussthe
+empirical observations from the last decade on real transportation systems at a variety of spatial
+scales.Thispaperconcludeswithsomeimportantchallengesandopenresearchfrontiersinthisfield.
+Keywords:complexnetwork;transportation;review;topology;urbansystems
+1. Introduction
+Complex network theory is a science that studies the connection and interaction
+between components in a system. It is an emerging field, developing at a rapid
+pace. Particularly in the last decade, the proposing of small-world and scale-
+free models has brought about comprehensive research and interest on this
+subject from different disciplines, which shows that the structures of networks
+existing in various domains are more similar than one would have expected.
+Transportationsystems,whichtaketheformofnetworks,havebeenahotresearch
+topic in complex network studies. A great deal of progress has been made in
+various disciplines, including physics, sociology, transport geography — not to
+mentiontheresearchobjectsrangingfromgroundedpublictransportationtomar-
+itime systems to aviation systems and so forth. In this case, bridging the gaps
+among different perspectives and constructing an overall understanding of
+complex transport networks, especially with the availability of gigantic data
+sets on large transport systems, becomes the foremost challenge for transport
+researchers,andthemotivationforthisarticle.Totheseends,theauthorssystem-
+aticallyreviewtheresultsmainlyfromthelastdecade,coveringmostresearchon
+§Correspondingauthor.Email:jingyilin2008@gmail.com
+#2013Taylor&Francis
+Complex Network Topology 659
+transport systems with a complex network perspective from various fields. The
+detailed structureof thisarticle will be explained in Section 1.2.
+1.1 Network Analysisin Early Transport Studies
+Networkanalysisisacommonandeffectiveapproach,consideringitselegancein
+reflecting spatial structures, to study river systems, channel patterns, and road
+networks (Haggett & Chorley, 1969). Many elementary topological measures are
+familiar to researchers, who divided networks, in terms of the topology, into
+branchingnetworks,circuitnetworks,barriernetworks,andthelike.Thehistori-
+cal notable Ko¨nigsberg’s Bridges Problem, solved by Euler in 1735, can be
+regarded as a simplified and the earliest transportation optimization. It not only
+laidafoundationforgraphtheory,butalsointroducedpreliminarynetworktop-
+ologyintotransportationstudies.Withthedevelopmentofgraphtheoryinthelast
+century, network analysis also became a core concept in transportation studies
+(Black,2003).Itdevelopedatopologicalandmathematicexplanationfortransport
+systems. Furthermore, the network data model is considered the most efficient
+way to extract and reference transport systems in a computer (geographic infor-
+mation system) environment. A set of indicators is developed to quantify trans-
+port networks, for example, connectivity, cyclomatic number, diameter, and
+accessibility (Rodrigue, Comtois, & Slack, 2009). Some of them are analogical to
+measures in complex network theory. Although many efforts have been made
+innetworkanalysisinearlytransportresearch,theabsenceofasystematictheor-
+eticalschemeisstillaprominentproblemtobeaddressed,forwhichtheemerging
+of complex network theory could offer some enlightened insights.
+1.2 Aim and StructureofthisArticle
+The primary aim of this article is to offer a comprehensive review of topological
+representations, measures, and case studies of transport systems from a
+complex network perspective. However, it is worth mentioning that the authors
+not only summarize these works simply,but also comparevarious definitions in
+awiderangeofreferences,classifythemaccordingtotheirmutualrelationships,
+anddelineateaclearschemeofthissubjectforreaders.Ontheotherhand,empha-
+sis should be shed on the practical significance of this review work. Network
+measuresincludedinthisarticlecanbeappliedwidelyintransportationpractice
+to identify critical nodes and links in a system, which can provide necessary
+warning for potential attacks orfaults. Moreover,human behaviors aretoo com-
+plicated to be fully captured. Fortunately, they are affected to a large extent by
+the structure of underlying networks topology from an interconnected perspec-
+tive is the first step to identify human movement patterns, and will contribute
+greatly to solving modern traffic problems, including congestion, navigation,
+searching, etc.
+Theremainderofthispaperisarrangedasfollows.Section2introducesvarious
+representationsfordifferentsystemsandresearchaims.InSection3,thelocaland
+globalmeasuresarecompared;thecellpropertiesofplanarnetworksalsoaredis-
+cussed. Section 4 summarizes the empirical analysis in this field in terms of five
+kinds of real systems. Section 5 concludes thepaperand points to futurework.
+660 J. Linand Y.Ban
+2. Representation ofTransport Systems
+2.1 Basic Network Representation
+According to graph theory (Diestel, 2005), the basic representation of a
+network can be generalized as G ¼(N, E), which means that it is composed
+of a node (vertex) set N and an edge (link) set E (Figure 1(a)). Besides, in
+order to store and calculate a network in a computer environment much
+more easily, the adjacent matrix is introduced (Figure 1(b)). For an n-node
+∗
+network, its adjacent matrix would be an n n matrix. If there is an edge
+between two nodes, then the entry element in the matrix equals to 1; other-
+wise it is 0.
+A directed network can be defined by differentiating the direction of a link
+(Figure 1(a)). Moreover, if the different importances of edges in the network are
+considered, a weighted network will be generated. In this sense, an unweighted
+network can be regarded as a special case when every link presents the same
+importance.
+2.2 Representationof Non-Planar TransportationNetworks
+First,weshallclarifytwoconcepts:planarandnon-planargraphs.Astheirnames
+imply,planargraphsareembeddedintheEuclideanspace,andtheiredgesnever
+intersect with each other if there is no channel or bridge (Wilson, 2010). On the
+contrary, the edges of non-planar graphs can meet each other without forming a
+node within aplane.
+In contrast to other ground transportation systems, aviation networks and
+maritime transport networks present more non-planar characteristics. They
+possess a relatively straightforward representation by taking stops as nodes
+and the routes between them as links. The directed and weighted networks
+can be obtained by considering the directions and differences of routes. It is
+worth noting that because of the existence of intersections between links, the
+degrees in non-planar networks could be much bigger than those in planar net-
+works.
+Figure1. (a)Networkrepresentationofasystemwithfivenodesandsevendirectededges;(b)its
+correspondingadjacentmatrix.
+Complex Network Topology 661
+2.3 Representation of Urban Road Networks
+Urban streets and roads constitute the skeleton of a city, and therefore play a
+crucial role in shaping the configuration of urban forms. Street networks are
+typical spatial planar graphs and also are a crucial subject to researchers on
+space syntax. Typically, there are two common ways to extract planar networks:
+the primal approach and the dual representation. The primal representation is a
+naturalandintuitionalapproach,takingroutesegmentsaslinks,andintersections
+orendsofthemasnodes(Crucitti,Latora,&Porta,2006;Porta,Crucitti,&Latora,
+2006b;Scellato,Cardillo,Latora,&Porta,2006).Thismethodretainsthegeometric
+patterns and geographical properties of transportation systems. It is this reason
+that makes the primal approach the acknowledged data model for geo-spatial
+data sets andcomputer simulation.
+After Hiller and Hanson (1984) introduced the topological perspective into
+space syntax in the mid-1980s, the dual representation of spaces came into our
+sights (Batty, 2004; Jiang & Claramunt, 2002). This approach focuses on the top-
+ology of transportation networks by taking roads or routes as vertices and inter-
+sections as links (Jiang, 2007; Porta, Crucitti, & Latora, 2006a). In this sense, it
+reflects the functional structure of networks, whereas the Euclidean coordinates
+of nodes and spatial distances of edges are neglected. This representation offers
+a higher degree of abstraction and presents a better picture of road hierarchy.
+Therefore, it is conducive to navigation in street networks. Walkers can get a
+local connectivity graph even in a very long street, but unfortunately it could
+notguaranteetheoptimaloptionbecauseoftheabsenceofdistanceinformation.
+Toavoidthis shortcoming, researchers (Hu,Jiang, Wang,&Wu,2009; Hu,Jiang,
+Wu,Wang,&Wu,2008;Zeng,Guo,Zhu,Mitrovic,&Tadic,2009)introducedthe
+holding capacity and turning ability to combine the motion and navigation in a
+dualgraph.Itisfoundthatawell-plannedlatticeroadnetworkismuchmoreeffi-
+cientthanaself-organizedonewhenthereisacrisisorcongestion;thisdiscovery
+offersameaningfulreference for transport planners.
+Intheprocessofconstructingadualnetwork,theimplicationofnodes—thatis,
+thealignmentofroadsegments—isakeyfactortosubsequentanalysis.Jiangand
+Claramunt (2004) considered named streets as vertices (Kalapala, Sanwalani,
+Clauset, & Moore, 2006) (Figure 2(b)). However, Porta et al. (2006a) argued that
+this method would introduce some subjectivity into the analysis; instead they
+used the intersection continuity negotiation (ICN) model by examining the
+good continuation among all pairs of incident edges in the street networks
+(Figure2).Somefurtherimprovementsaremadebasedonthesetwoapproaches
+by considering the deflecting angle (Masucci, Smith, Crooks, & Batty, 2009) and
+different join principles in terms of every-best-fit, self-best-fit, and self-fit to
+connect neighboring segments (Jiang, Yin, & Zhao, 2009). Different methods
+may generate different strategies for searchingfor theshortest path length.
+Thereareintrinsiccorrelationsbetweenprimalanddualrepresentations(Batty,
+2004),althoughtheyseemcontradictorybecauseofoppositegeneralizationrules.
+Notethatthedualmodelhereisnotthedualofplanargraphs,whichtakesfaces
+as vertices, but shares some similarities with the linear dual of planar graphs
+(Anez, de la Barra, & Perez, 1996; Barthelemy, 2011). In transport practice, a
+dual graph can easily represent various operators, for example, turning restric-
+tions and multiple transit routes. Therefore it can reduce the complexity and
+time for transport computation, including shortest path search, capacity,
+662 J. Linand Y.Ban
+Figure2. Differentrepresentationsinnetworkanalysis.Column1indicatesthefictionurbanstreet
+network,column2istheprimalgraphsbasedondifferentnominationmechanisms,andcolumn3rep-
+resentsthecorrespondingdualconnectivitygraph.RowArepresentstheaxialmap,rowBistheresult
+basedonthenamedstreetrepresentation(Jiang&Claramunt,2004);androwCisobtainedfromthe
+ICNprocess.Source:Portaetal.(2006a).
+assignmentalgorithms,etc.Wecannotelaboratetheapplicationsbecauseofspace
+limitations, but interested readers can referto researchby Mozes (2013).
+2.4 Representationof Public Transport Systems
+In general, public transportation systems consist of metro, bus, or railway net-
+works and so on. These systems comprise a set of routes with distributed stops
+or stations. With the availability of databases of real networks and rapidly
+growingcomputercapacity,moreandmoreeffortshavebeenmadetounderstand
+public transport systems because of their importance to ourdaily lives.Progress
+has been obtained in representing them in distinct L-space and P-space (Ferber,
+Holovatch, Holovatch, & Palchykov, 2007; Sienkiewicz & Holyst, 2005; Xu, Hu,
+Liu,&Liu,2007b),anddifferenttopologicalcharacteristicsgeneratedbyrepresen-
+tations alsoare discussed.
+L-space depicts the original configuration of real-life transport networks, in
+which stops or stations are vertices. Two vertices are connected if they are con-
+secutive on an arbitrary route (Figure 3(b)) (Sienkiewicz & Holyst, 2005; Wang,
+Complex Network Topology 663
+Figure3. (a)Twosimplifiedpublicbusroutesandtherepresentationsin(b)L-spaceand(c)P-space.
+Jiang, Wu, Wang, & Wu, 2008). Sometimes it could be referred to as the space of
+stopsor space ofstations (Kurant & Thiran, 2006).
+In comparison, Sen et al. (2003) introduced P-space as a new representation
+pattern. All of the stops of a route can be connected because a directed line can
+bedetectedbetweenoneanother;thatistosay,ifthereisatleastonelineconnect-
+ingtwonodes,thenalinkwillbeconstructedbetweenthem.Consequently,afully
+connectedgraphcanbeestablishedforaroutebytakingallthestopsontheroute
+asnodes(Figure3(c)).Inthissense,thepathlengthbetweentwonodesindicates
+the required transfer times during travel, so that the P-space is also called the
+spaceoftransfer(Kurant&Thiran,2006).Forexample,inFigure3(c),passengers
+needtotakeonlyonetransferfromnodeHtonodeD,althoughthereare,infact,
+many stops between them.
+Additionally, the bipartite viewpoint also is introduced by mapping vehicles
+andstationsastwosetsofvertices,andavehiclecanbeconnectedtoallstations
+it passes through. This method is useful in analyzing cooperation transport net-
+works (Ferber, Holovatch, Holovatch, & Palchykov, 2009; Seaton & Hackett,
+2004). With such a representation, the underlying physical infrastructure and
+trafficflowsarestudiedseparately,whilebothroutesandstationsareconsidered
+as nodes (Latora & Marchiori, 2002; Wang, Hu, Wu, & Niu, 2009). Derrible and
+Kennedy (2009) recently introduced another approach by considering several
+types of vertices and planarity. More details can be found in their series of
+studies(Derrible & Kennedy,2010a,2010b).
+3. Basic Measures
+3.1 Node Centrality
+Centrality is afundamental conceptfor network topological analysis. Itwasfirst
+proposedinsociology(Freeman,1977,1979)andquicklyadoptedbyawiderange
+of otherdisciplines.
+3.1.1 Degree. Nodedegreeisthemoststraightforwardindextoquantifytheindi-
+vidual centrality. It is believed that the most important node must be the most
+active one, so degree indicates the number of edges connected to a node, which
+is definedbased on an adjacent matrix as
+(cid:2)
+k = a , (1)
+i ij
+j[V
+664 J. Linand Y.Ban
+Vrepresentstheneighborsetofnodei,anda istheentryvalueintheadjacent
+ij
+matrix. In essence, node degree equals the connectivity in space syntax. If a
+directed network is considered, then the degree can be extended to in-degree
+and out-degree, which respectively calculate the number of links ending in or
+starting fromthenode. They arewritten as
+(cid:2)
+ki = a , (2)
+ji
+in
+j[V
+(cid:2)
+ki = a . (3)
+out ij
+j[V
+The well-known scale-free network is based on the degree definitions. If the
+degree of a graph follows a power-law distribution — that is, p(k)/1/km —
+then it can be generalized as scale-free (Baraba´si & Albert, 1999). It indicates
+that there is a huge heterogeneity in the network; a few nodes are highly con-
+nected hubs, whereas most of the rest are very poorly connected. This pattern
+imposes important consequences for dynamic processes on transport networks;
+therefore,ithas attracted much attention since itwasproposed.
+3.1.2 Betweenness centrality. Betweenness quantifies the level of intermediate
+importance of a node in the interaction between other nodes (Freeman, 1977,
+1979)(Figure4(1)). The node betweenness can be defined as
+(cid:2)
+n (i)
+CB = jg , (4)
+i n
+j=g jg
+where n (i) is thenumberof theshortest paths between nodej and g,which are
+jg
+passing through node i, while n is the number of all shortest paths between
+jg
+them. Analogically, edge betweenness can be obtained, which is useful to detect
+the community structure of networks (Scellato et al., 2006). It is worth noting
+that in real transportation systems, these nodes with a high betweenness would
+impose critical impacts onnetwork security (Barthelemy,2004)
+3.1.3 Closenesscentrality. Asthenameshows,closenesscentralitycalculateshow
+far itis from agiven node to all other nodes ina network (Figure4(2)).
+1
+CC =(cid:3) . (5)
+i d
+j=i ij
+Here,d istheshortest pathlengthbetweeniandj.Foranon-valuedgraph,it
+ij
+becomes the geodesic distance. However, it works only in a connected graph.
+Whenthedistancebetweentwonodesequals0,theformulawouldbecomeinfinite.
+3.1.4 Straightness centrality. Straightness centrality is an important measure
+fornavigatingtransportnetworks.Itintroducesthespatialdistanceandpresents
+to what extent the shortest path between node pairs in the network deviates
+Complex Network Topology 665
+Figure4. Fourcentralitymeasures(1)closeness,(2)betweenness,(3)straightnessand(4)information
+centralityintheprimalrepresentationofVenice.Source:Crucittietal.(2006).
+from their geographical distance (Crucitti et al., 2006; Porta et al., 2009)
+(Figure4(3)).
+(cid:2) dEucl
+CS = ij , (6)
+i j=i d
+ij
+wheredEucl representstheEuclideandistancebetweeniandj,andd istheshort-
+ij ij
+est path length inthe network.
+3.1.5 Weight and Strength. Most real networks present a high degree of hetero-
+geneity in the intensity of communications (Boccaletti, Latora, Moreno, Chavez,
+&Hwang,2006).Asasupplement,edgeweightwasproposedtomeasurethecen-
+tralityofconnectionsbetweennodepairsinnetworks.Forrealtransportsystems,
+theweightcan bethetraffic flow,traveltime,geographicdistance,orthelike,of
+666 J. Linand Y.Ban
+the link. Therefore, the node strength s can be generalized in terms of the defi-
+i
+nition of node degree.
+(cid:2)
+s = w . (7)
+i ij
+j[V
+Similarly,Vrepresentstheneighborsetofnodei,andw describestheweightof
+ij
+theedgebetweeniandj.Foradirectednetwork,in-strengthandout-strengthofa
+noderespectivelyestimatetheweightsofedgesthatgoinordepartfromit.They
+can be calculated analogousto thein-degreeand out-degree.
+(cid:2)
+si = w , (8)
+ji
+in
+j[V
+(cid:2)
+si = w . (9)
+ji
+in
+j[V
+Weighted networks provide a good description and explanation for the rich
+dynamics observed in real transportation.
+3.2 Clustering
+3.2.1 Clusteringcoefficient. Theclusteringcoefficientisusedtoquantifythedegree
+ofclusteringofagraph.Itiscalculatedastheprobabilitythattwoneighborsofa
+nodearelikelytobeconnectedthemselves,whichcanbefurtherdefinedas
+2m
+c = i , (10)
+i k(k −1)
+i i
+wherem indicatesthenumberofedgesbetweenthefirstneighborsofnodei,andk
+i i
+denotesthenodedegreeofi.Thisdefinitionconsidersonlytheimmediateneigh-
+bors of nodes; sometimes it is also necessary to consider the n-neighborhood for
+navigationandoptimizationintransportsystems(Jiang,2004).Tothisaim,then-
+clusteringcoefficientisproposedas
+2m(n)
+c(n) = i . (11)
+i k(n)(k(n)−1)
+i i
+ThenEquation(6)canberegardedasaspecialcaseofEquation(7)whenn¼ 1.
+Given a weighted network, the clustering coefficient should be rewritten as
+(Barrat, Barthelemy,& Vespignani, 2004)
+1 (cid:2) w +w
+cw = ij ih a a a . (12)
+i s(k −1) 2 ij ih jh
+i i j,h[V
+Here, a is the entry element in the adjacent matrix for node i and j. If cw .c
+ij i i
+holds, then these edges with larger weights in the graph are more likely to form
+Complex Network Topology 667
+interconnected triplets. This phenomenon is called rich-club. In the opposite,
+cw ,c indicates these larger-weight edges are not included in interconnected
+i i
+triplets.
+3.2.2 Degree-degree correlation. Another quantity used to probe the networks’
+localarchitectureis the average degree ofnearestneighbors, k (i):
+nn
+(cid:2)
+1
+k (i)= k, (13)
+nn j
+k
+i j[V
+wherek isthedegreeofnodei.Thedegreecorrelationreflectinganode’sconnec-
+i
+tionpreferencecanbeprobed.Ifhigh-degreenodestendtolinkwitheachother,
+this tendency is regarded as assortativity;otherwise, disassortativity is detected.
+3.3 Global Network Measures
+3.3.1 Characteristic path length. Characteristic path length is a global property
+important to the communication in networks. It reflects the internal structure of
+a network by containing theinternal separations of all node pairs.
+(cid:2)
+1
+L= d , (14)
+N(N−1) ij
+i=j
+whereNisthenumberofvertices,andd indicatesthedistancebetweentwoarbi-
+ij
+traryvertices inthenetwork(Boccalettietal.,2006).Foranon-valued graph,the
+distanceequalsthegeodesiclength.However,itconfrontsthedivergenceproblem
+for non-connected graphs.
+In particular, a small-world network can be characterized by a big clustering
+coefficient and short average path length (Watts & Strogatz, 1998). That is to
+say, any randomly selected nodes can be reachable by a small number of hops
+despite the large size of the network. A small-world network bridges the
+random network, which presents a short path length, and the regular network
+with a high clustering extent. Therefore, it has been acknowledged as one of the
+most important propertiesofnetworks andhasbeenverified bymanyempirical
+studies, including social, technological, information, and biological networks
+(Newman, 2003).
+3.3.2 Efficiency. Latora and Marchiori (2001) proposed an index to measure the
+performanceoftheinformationexchangeofnetworksbyassumingthatthecom-
+munication efficiency inside a network depends on the shortest path length
+between node pairs. In this case, the efficiency is estimated as
+(cid:2)
+1 1
+E= . (15)
+N(N−1) d
+i=j ij
+It is calculated from the inverse of path distance between nodes, therefore
+avoiding the meaningless definition in non-connected graphs. Furthermore, it
+can be divided into global efficiency when all nodes in the network are con-
+668 J. Linand Y.Ban
+sidered and local efficiency when taking the average of efficiency values of sub-
+graphs.
+However, for congested transport networks, passengers will select their
+routes in terms of real-time flows and cost; therefore, another efficiency
+measure was proposed in the context of network equilibrium (Nagurney &
+Qiang, 2007). Given the set of origin/destination (O/D) pairs R, including the
+N O/D routes in the network, and the real-time demand on an O/D route f,
+r r
+theefficiency is
+(cid:3)
+E′ = r[R f r/h r, (16)
+N
+r
+where h is the equilibrium disutility, representing the minimum equilibrium
+r
+travel cost of the route. This measure does not count routes without associated
+demand and it can be extended in continuous time and discrete time versions
+(Nagurney & Qiang, 2008). It offers meaningful implications to evaluate the
+robustness of congested networks. On the other hand, it has a high requirement
+for evolutionary traffic data, so has not been discussed widely in empirical
+analysis.
+3.3.3 Information centrality. Based on their network efficiency definition, Latora
+and Marchiori (2007) proposed information centrality, which also occurred in a
+series of subsequent analyses conducted by their research group (Crucitti et al.,
+2006; Porta et al., 2006a, 2006b). It is quantified by the relative difference of
+network efficiency caused by removingnode ifromgraph g.
+E(g)−E(g′
+)
+CI = . (17)
+i E(g)
+′
+Here, g corresponds to the network after deleting node i and its incident edges.
+Analogously, it also can be applied to a group of points or an edge (Scellato
+etal.,2006).Informationcentralitycanhelpusdistinguishthosecriticalintersec-
+tionsorroadsintransportsystemsatagloballevel,thusimprovingtheresponse
+toemergencyattacks (Figure4(4)).
+3.4 Cell Properties
+3.4.1 Cellandconnectivity. Inplanarnetworks,acellisdefinedasaclosedcircuit
+thatcontainsatleastthreeverticesandthreeedges(Haggett&Chorley,1969).In
+this case, for a planar graph including N vertices and E edges, Euler’s formula
+gives thenumberof its cells Fas
+F=E−N+1. (18)
+Actually, early in the 1960s, a series of indices for transport network analysis
+was developed (Garrisoon & Marble, 1962; Kansky, 1963). The alpha index (a),
+Complex Network Topology 669
+which is also called the meshedness coefficient, is a measure of the structure of
+cyclesin planargraphs.
+F E−N+1
+a= = . (19)
+F 2N−5
+max
+The value ofacan vary from 0 to 1, corresponding to the tree structure to the
+complete graph.
+TheBetaindex(b)isthemoststraightforwardmeasureoftheconnectivityofa
+network,and abigger value indicates a greaterconnectivity.
+E
+b= . (20)
+N
+The gamma index (g) calculates the ratio of the actual number of edges to the
+numberof all possible edges, which is given as
+E
+g= . (21)
+3(N−2)
+Thevalue ofthegamma index isbetween0and1,and1indicates afullycon-
+nectedgraph.
+3.4.2 Planarity. Furthermore, researchers have also developed many other
+measures to reveal thoroughly topological structures of real planar networks.
+For example, Xie and Levinson (2007, 2009) proposed treeness and circuitness
+in terms of two different connection patterns of road networks. The treeness is
+definedas
+L
+f = t , (22)
+tree L
+g
+whereL isthelengthoflinksinthepartofthetreestructureandL isthetotal
+t g
+length of all segments in the network. Then the circuitness is equal to
+f =1−f . More detailed works about eta index, theta index, ringness,
+circuit tree
+webness, beltness, etc. can be found in studies by Levinson (Levinson, 2012; Xie
+& Levinson,2007, 2009,2011).
+Notethatthetopologicalmeasuresweintroducedintheabovesectionsalsocan
+be extended for cell properties, such as cell degree, cell area, and so on (Barthel-
+emy & Flammini, 2008; Chan, Donner, & La¨mmer, 2011). Furthermore, consider-
+ing the two-dimensional characteristics of transportation systems, the form
+factor, which describes the shape of cellular structures, is also useful. It is
+definedastheratiooftheareaofarealcelltotheareaofitscircumscribedcircle,
+S 4S
+f = = , (23)
+f S pl2
+cir max
+where S represents the real area of the given cell, and l is the maximum cell
+max
+diameter.Theformfactorofcellsintransportsystemsshouldbetheconsequence
+670 J. Linand Y.Ban
+of interactions between urban land use, population density, economy inequality,
+andotherimportant urban elements.
+4. Empirical Analysis
+4.1 Railway Networks
+Fromthissection,thefocuswillbeshiftedfromtheoreticalfoundationstoempiri-
+calanalyses.Railwaysystemsareanimportantpartofnationalinfrastructureand
+play a critical role in inter-city commuting. However, a railway system usually
+covers a huge areaand involves a large number of stations and routes, so that it
+is very difficult to collect high-quality research data. It is for this reason that
+there have not been many studies on real railway networks.
+Senetal.(2003)firstexploredthestructureoftheIndianrailwaynetworkbased
+onacomplexnetworkperspective.TheyconstructthenetworkinP-spacebyiden-
+tifyingstationsasnodesandatrainthatstopsatanytwostationsaslinks.Based
+onthis,thesmall-worldeffectandanexponentialdegreedistributionaredetected.
+The same result is also observed from the Japanese railway network around
+Tokyo Metropolitan, based on the P-space representation (Majima, Katuhara, &
+Takadama,2007).
+In comparison, the Chinese railway network, a much larger data set including
+3915 stations and 22,259 railways, exhibits power-law distributions on both
+degreeandstrength(Li&Cai,2007),andasmall-worldproperty.Disassortativity
+is also detected when the correlations between different measures are explored
+(Figure 5(a)). From a totally different perspective, Guo and Cai (2008) extracted
+China’s railway network in the L-space and considered the utilized efficiency of
+stations as a new weight measurement. Consequently, they concluded that
+China’srailwaynetworkisanassortativescale-freenetwork(Figure5(b)).Further-
+more,Wangetal.(2008)mergedstationsinthesamecityintoanodeaccordingtothe
+geographiccoarse-grainingand,therefore,gotaG-spacerepresentationbyconsid-
+eringcitiesasnodesandtrainroutesbetweenthemaslinks.Theyfitthecumulative
+degreedistributionofin-degreeandout-degreebyashiftedpowerlawasfollows:
+p(x)=a(x+b)a. (24)
+It is worth noting that in the three works about the weighted Chinese railway
+network, they all detected the correlation between node strength and degree as
+ascaling relation(Table 1).
+To separate the underlying infrastructure and surface traffic flows in railway
+systems, a multi-layer viewpoint is also introduced. Kurant and Thiran (2006)
+created two layers of undirected physical graph Gf and the logic graph Gl for
+three railway systems, and they found a very weak correlation between degree
+kf and real load l or the betweenness bf and l. In the studies of Wang, Zhou,
+Shi, Wang, He (2009), stations and trains are considered separate layers, and a
+train is connected to all stations where it stops. Comparatively, Zou, Zhou, Liu,
+Xu, and He (2010) take the L-space and P-space representations of China’s
+railway system as two layers. They insist that the two layers reflect different
+aspects of transportation systems and that combining them is helpful to under-
+standthe“networkofnetworks”.Finally,theyconcludethatdegreeorclustering
+coefficient intwo layers both display high correlations.
+Complex Network Topology 671
+Figure5. DegreedistributionsofChinarailwaynetworkrespectivelyin(a)P-space(Li&Cai,2007)
+and(b)L-space(Guo&Cai,2008).
+4.2 Urban Public Transport Networks
+4.2.1 Centrality. In general, the scale-free structure is very common for urban
+public transport systems in the space of L (Ferber et al., 2007), but almost ruled
+out for the space of P. The reason for this phenomenon is that connections
+between stations are highly correlated in L-space, whereas the routes are linked
+nearly randomly in P-space. Only Ferber et al. (2007, 2009) reported three
+exceptions — London, Paris, and Los Angeles — of which the routes are
+evolved inacorrelatedwayduring theirevolution process.
+Betweennesscouldbeconsideredanotherindicationofthetopologicalcentral-
+ityfortransportsystems.Researchers(Sienkiewicz&Holyst,2005)comparedthe
+betweenness of 22 Polish public transport networks in different spaces. The
+scaling relation between betweenness and degree can be detected in L-space,
+672 J. Linand Y.Ban
+Table 1. A summary ofempirical studies onrailwaynetworks
+Name N D ,C. L P(k) Space
+Indianrailwaynetwork(Senetal.,2003) 587 5 0.69 2.16 Exponential P
+Chinarailwaynetwork(Li&Cai,2007) 3915 5 0.835 3.5 Scale-free P
+Japanrailwaynetwork(Majimaetal.,2007) 371 – – – Scale-free L
+6 0.92 2.6 Exponential P
+Chinarailwaynetwork(Wangetal.,2008) 3110 – 0.2798 11.18 Shiftedpowerlaw L
+298 – 0.3778 5.21 Shiftedpowerlaw G
+Chinarailwaynetwork(Guo&Cai,2008) 3467 – – – Scale-free L
+Polishrailwaynetwork(Kurant&Thiran, 1533 76 0.1681 19 Unclear L
+2006) 4 0.6829 2.3 Exponential P
+Swissrailwaynetwork(Kurant&Thiran, 1613 61 0.0949 16.3 Unclear L
+2006) 8 0.9095 3.6 Exponential P
+CentralEuroperailwaynetwork(Kurant& 4853 48 0.3401 12.6 Unclear L
+Thiran,2006) 8 0.7347 3.7 Exponential P
+Notes:Ndenotesthenumberofnodes;disthediameter;,C.istheaverageclusteringcoefficient
+whileListhecharacteristicpathlengthofthenetwork.P(k)describesthenodedegreedistributionand
+“Space”indicatesinwhichkindofspacethenetworkisrepresented.Thesamedefinitionsapplyto
+Tables2–4.
+butonlyforlargerdegreesinP-space.Fromalargerscale,betweennesscentrality
+wasdiscussedbystudying28worldwidemetrotransitsystems(Derrible,2012);a
+process of democratization was detected, which means the centrality becomes
+moreevenly distributed with network size.
+4.2.2 Small-worldproperty. FromTable2,wecansummarizethatthesmall-world
+propertyismorevisibleinP-spacethaninL-spaceforallurbanpublictransport
+systems.Itisreasonableifwetakedifferentrepresentationapproachesexplained
+in Section 2.3 into considerations. It is also consistent with the results of Roth,
+Kang, Batty, and Barthelemy (2012), in which they studied the 14 largest metro
+systems in the world. But they take it a further step forward by mixing spatial
+andtopological propertiesinan evolution perspective.
+A rich-club phenomenon, which means edges with a higher weight are more
+likely to be clustered, can be detected by comparing the topological clustering
+coefficient and the weighted clustering coefficient (Montis, Barthelemy, Chessa,
+&Vespignani,2007;Sohetal.,2010).Thatistosay,iftheweightedclusteringcoef-
+ficient is larger than the topological one, the interconnected groups in the traffic
+network areformed morelikely by routeswith high traffics, and vice versa.
+4.2.3 Weightandstrength. Inadditiontotheabove-mentionedtopologicalcharac-
+teristics, dynamic traffic flows usually are considered the weight between two
+stations in weighted public transport systems. Soh et al. (2010) even noticed the
+divergences of traffic flows between weekdays and the weekend by adopting a
+moredetailed database.
+In L-space, Lee, Jung, Park, and Chio (2008) found that distributions of the
+weight and strength of Seoul subway system exhibit totally different trends.
+Thestrengthdistributionfollowsalog-normaltrendwithapeak.Theydiscovered
+thatthenumberofpassengersarrivingatordepartingfromsinglestationshasa
+characteristic size, whereas the passenger flows themselves do not (Soh et al.,
+Table2. A summary ofempirical studies on public transport networks
+Name N ,k. ,C. L P(k) Space
+Bostonsubwaynetwork(Latora&Marchiori,2002) 124 – – 15.55 – L
+Bostonsubwaynetwork(Seaton&Hackett,2004) 124 27.60 0.927 1.811 – P
+Viennasubwaynetwork(Seaton&Hackett,2004) 76 20.66 0.945 1.865 – P
+22Polishpublictransportnetwork(Sienkiewicz&Holyst,2005) 152–2811 2.48–3.08 0.032–0.161 6.83–21.52 Power-law L
+32.94–90.93 0.682–0.847 1.71–2.90 Exponential P
+3Chinesepublictransportnetworks(Lu&Shi,2007) 192–495 2.26–3.06 0.01–0.16 10.41–11.38 Nouniversalpattern L
+23.59–45.54 0.73–0.89 2.00–2.18 Nouniversalpattern P
+4Chinesebustransportnetworks(Chen,Li,&He,2007) 827–4374 44.46–84.01 0.73–0.78 2.53–2.89 Exponential P
+3Chinesebus-transportnetworks(Xuetal.,2007b) 1150–3938 2.88–3.22 0.09–0.21 7.13–12.56 Power-law L
+41.06–94.19 0.73–0.78 2.54–2.66 Exponential P
+14urbanpublictransportnetworks(Ferberetal.,2007) 1544–46244 – 0.01–0.13 7.08–85.84 Heavy-tail L
+– 0.69–0.95 2.26–4.79 Heavy-tail P
+Seoulsubwaysystem(Leeetal.,2008) 380 – 0.0064 20 – L
+Wuhanpublictransportnetwork(Wangetal.,2009) 1229 82.31 0.76 1.94 Exponential P
+Qingdaopublictransportnetwork(Liu,Li,Shao,&Sun,2009) 864 80 0.433 2.135 Exponential P
+Singaporepublictransportationsystem(Sohetal.,2010) 4130/4139 103.172/87.03 0.562/0.534 2.54/2.57 Exponential P
+Note:,k.istheaveragedegreeofthenetwork.
+Complex
+Network
+Topology
+673
+674 J. Linand Y.Ban
+Table 3. A summary ofempiricalstudieson aviation networks
+Name N E ,C. L P(k)
+USflightnetwork(Chietal.,2003) 215 116725 0.618 2.403 Two-regimepower-law
+World-wideairportnetwork 3883 531574 0.62 4.4 Truncatedpower-law
+(Guimera&Amaral,2004,2005)
+Chinaairportnetwork 128 1165 0.733 2.067 Two-regimepowerlaw
+(Li&Cai,2004)
+World-wideairportnetwork 3880 18810 – 4.37 Scale-freewithan
+(Barratetal.,2004) exponentialcut-off
+Italianairportnetwork 42 310 0.07–0.10 1.98–2.14 Two-regimepower-law
+(Guida&Maria,2007)
+Indianairportnetwork 79 228 0.733 2.067 Scale-free
+(Bagler,2008)
+USairtransportationnetwork 272 6566 0.73–0.78 1.84–1.93 Truncatedpower-law
+(Xu&Harriss,2008)
+Chinaairportnetwork 121 1378 0.748 2.263 Two-regimepower-law
+(Liuetal.,2009)
+USairportnetwork 657 5488 0.45 3.38 Two-regimepower-law
+(Palearietal.,2010)
+Europeairportnetwork 467 5544 0.38 2.80 Two-regimepower-law
+(Palearietal.,2010)
+Chinaairportnetwork 144 1329 0.49 2.34 Two-regimepower-law
+(Palearietal.,2010)
+Indianairportnetwork 84 13909 0.645 2.17 Scale-free
+(Sapre&Parekh,2011)
+Chinaairtransportnetwork 144 1018 0.69 2.23 Exponential
+(Wangetal.,2011)
+China’saviationnetwork 140 1044 0.737 2.108 Two-regimepower-law
+(Lin,2012)
+Note:Edenotesthenumberofedgesinthenetwork.
+2010).Incontrast,ifeachrouteisconsideredasanode,twonodeshaveaninter-
+sectionwhenthetworoutesintersecteachother;thentheweightfitsapower-law
+Table 4. A summary of empirical studies on maritime networks
+Name N ,k. ,C. L ,w. P(k) Space
+China’sship-transportnetwork(Xu 162 3.11 0.54 5.86 25.06 Scale-free L
+etal.,2007b) 162 8.27 0.83 3.87 47.01 Truncated P
+power-law
+Worldwidemaritimetransportation 878 9.04 0.40 3.60 – Truncated L
+network(Hu&Zhu,2009) power-law
+878 28.44 0.71 2.66 – Exponential P
+Globalcargo-shipnetwork(Kaluza 951 76.4 0.49 2.5 – Right-skewed L
+etal.,2010)
+Containershipsnetwork(Kaluza 378 32.4 0,52 2.76 – Right-skewed L
+etal.,2010)
+Bulkdrycarriersnetwork(Kaluza 616 44.6 0.43 2.57 – Right-skewed L
+etal.,2010)
+Oiltankersnetwork(Kaluzaetal., 505 33.3 0.44 2.74 – Right-skewed L
+2010)
+Note:,k.istheaveragedegree;,w.representstheaverageweightofthenetwork.
+Complex Network Topology 675
+Figure6. (a)Thescalingcorrelationbetweenthedegreekandstrengths(k)and(b)probabilitydistri-
+butionsofdegreep(k)andstrengthp(s),forSingaporebustransportationnetworkinP-space.Source:
+Sohetal.(2010).
+distribution, whereas the strength might display two-regime power laws with
+differentexponents,whichisalsocalledthedoubleParetolaw(Xuetal.,2007b).
+Although there is a positive correlation between the degree and the
+strength (Figure 6(a)), they, respectively, possess different distribution patterns
+676 J. Linand Y.Ban
+(Figure 6(b)). The strength distribution in P-space always conforms to a power-
+law distribution, in contrast to the exponential trend of degree. Therefore,
+althoughtheconnectionbetweennodesmaybeconstructedrandomly,themagni-
+tudes ofthe travel flows are not.
+4.2.4 Efficiency. Fromtheinitialstage,researchershaverealizedthattheultimate
+aim of studying public transport systems is to improve the efficiency of travels
+and optimize underlying structures. The Boston subway system is considered to
+achieve 63% of the global efficiency of the ideal subway, whereas the local effi-
+ciency is only 3%. This result implies that the network has a low degree of fault
+tolerance (Latora & Marchiori, 2002). However, Lee et al. (2008) held that
+network efficiency should be calculated based on physical distance rather than
+on network distance because realistic networks could not have all-to-all connec-
+tions between stations or stops. In this case, the number of real links should be
+far fewerthan thefull-connected value of N(N21).
+4.3 Aviation Networks
+4.3.1 Small-worldeffects. Composedofairportsandroutes,aviationnetworksare
+relativelysimpleexamplesoftransportationsystemsbecauseoftheirnon-planar
+properties. Many real airport systems present distinct topological properties,
+although there are some common architectures. Either for national aviation
+systems, such as Italian (Guida & Maria, 2007), Indian (Bagler, 2008), Chinese
+(Li & Cai, 2004; Lin, 2012; Wang, Mo, Wang, & Jin, 2011), USA (Paleari,
+Redondi, & Malighetti, 2010), and so on, or for some regional (Paleari et al.,
+2010; Sapre & Parekh, 2011) and worldwide aviation systems (Guimera` &
+Amaral, 2004, 2005), the small-world structure is detected (Table 3), although
+different results emerged as to the degree distributions. To some extent, the
+small-world structure is acknowledged to be efficient for aviation networks (Chi
+etal., 2003; Liu & Zhou, 2007).
+4.3.2 Degree distribution and correlation. In aviation networks, the highly con-
+nected nodes are not necessarily the most central ones in traffic because of the
+multi-community structure of networks, resulting in some cities with high
+degrees presenting low betweenness centrality (Guida & Maria, 2007; Guimera`,
+Mossa, Turtschi, & Amaral, 2005). Most airport networks do not display a strict
+power-law degree distribution; instead, the truncated or two-regime power-
+laws (double Pareto law) are found (Table 3). Clauset, Shalizi, and Newman
+(2009) explained in detail about the detection and characterization of power-law
+distributions in empirical analysis. Readers who are interested in the two-
+regime power law could refer Reed’s work about the Pareto law (Reed, 2003;
+Reed & Jorgensen, 2004).
+If an aviation network is considered as directed, there will be a strong corre-
+lation between its in-degree and out-degree (Li & Cai, 2004; Rocha, 2009). It is
+natural for aviation networks because each airport should maintain the balance
+ofitstrafficflow.Besides,theheterogeneousdegreecorrelationsalsoarediscussed
+widely.Fortheworldwideaviationnetwork,assortativityemergesonlyforcities
+whose degree is smaller than 10 (Barrat et al., 2004). Comparatively, for some
+national airport networks, disassortativity is detected after certain threshold
+values of degree (Li & Cai, 2004; Wang etal., 2011).
+Complex Network Topology 677
+4.3.3 Efficiency. In aviation networks, the path length represents the number of
+transfer times a passenger needs to take from origin to destination. Li and Cai
+(2004) defined the diameter and efficiency of a sub-cluster and proved that a
+shorter diameter indicates a more efficient network (Figure 7). In the Indian
+airport network, around 99% of paths are reachable by changing a maximum of
+twoflights(Bagler,2008).Besidesthepathlength,traveltimealsoneedstobecon-
+sideredtoevaluatetheperformanceofaviationnetworks.Throughacomparative
+studyofaccessibilityandshortesttraveltime,whichincludesthewaitingtimeat
+intermediateairports,China’snetworkwasfoundtoprovidethehighestspeeds,
+whiletheUSnetworkisconsideredasthemostcoordinated,ifweconsiderindir-
+ectflights(Palearietal,2010;Wangetal.,2011).Unfortunately,becauseitisdiffi-
+culttocollectdataonthewaitingtimebetweendifferentflights,thereisnotmuch
+progress onthis topic.
+4.3.4 Evolution of aviation networks. It is necessary and interesting to study the
+evolution of the topological structures in terms of the time scale; unfortunately,
+only a few works exist in this direction because there are little data available.
+The Brazilian airport network experienced overall growth during the time
+period of 1995–2006, when some routes shrank (Rocha, 2009). However, there
+was no clear fluctuation for the clustering coefficient or the average path length
+during those years. Similar results also were concluded from the Chinese
+airport network (Zhang, Cao, Du, & Cai, 2010).
+Figure7. TheoverallrelationbetweendiameterD andefficiencyE ofsub-clustersoftheairport
+sc sc
+networkofChina.r isthedensityofconnectivityofasub-cluster.Source:LiandCai(2004).
+dc
+678 J. Linand Y.Ban
+Inaddition,theevolutionofacountry’saviationnetworkcouldreflecttheevol-
+utionofitsimportantcitiestosomeextent.MaandTimerlake(2008)studiedsome
+centrality measures of China’s inter-city airport network to identify and explain
+thechange processof leading cities between 1990 and2005 in China.
+4.4 Maritime TransportationNetworks
+Another important part of the transport systems is ship-transport networks,
+which carry 90% of the world’s trade (Kaluza, Kolzsch, Gastner, & Blasius,
+2010). Strictly speaking, maritime transportation networks belong to the class of
+non-planar graphs; however, they are still constrained by geographical embed-
+ding. Xu, Hu, and Liu (2007a) first analyzed China’s ship-transport network,
+which comprises 42 seaports, 120 river ports, and a large number of passenger
+liners.Theyfoundthedisassortativemixingandapower-lawdegreedistribution
+inL-space,butassortativemixingandtruncatedpowerlawinP-space.However,
+thesmall-worldpropertyisapplicableinbothrepresentations,althoughitismuch
+more visible in P-space. Besides, a hierarchical structure also is detected by con-
+firming a scaling relation between the clustering coefficient and node degree of
+the network. If considering the traffic flow between two ports as edge weight,
+the weighted ship-transport network is symmetric, but the weight distribution
+indicates a high level of heterogeneity, which is similar to aviation networks
+(Guimera` & Amaral, 2004; Li & Cai, 2004).
+Subsequently, a global perspective has been adopted. Hu and Zhu (2009)
+probed the worldwide maritime transport network with links being container
+liners, and found a small-world network with power-law behavior (Table 4). It
+is not surprising that there are strong correlations between degree and degree,
+strength and degree, or betweenness and degree, no matter whether they were
+inthespaceLorP(Figure8).Besides,theyalsocalculatedtheweightedclustering
+coefficient and the normalized rich-club coefficient of the network. Like the
+railway networks in Table 1, the clustering coefficient in P-space is much larger
+thantheoneinL-space.Whatisinterestingisthattheseweightedclusteringcoef-
+ficientsarealsolargerthanunweightedonesinbothspaces,implyinghightraffic
+edges betweeninterconnectedvertices.
+Shortly after this work, Kaluza et al. (2010) enlarged the dataset to take into
+account the bulk dry carriers, container ships, and oil tankers of global cargo
+ships.Theydidnotcareaboutdifferentrepresentationsbutcomparedmovement
+patterns of different ship types and group ports into sub-clusters by optimizing
+themodularity.
+Majimaetal.(2007)consideredthecombinationofrailway,subway,andwater-
+bus networks in Tokyo. They proved that local efficiency has increased with the
+combination. More importantly, the robustness and centrality around stations to
+which the waterbus connects have increased.
+4.5 Urban StreetNetworks
+4.5.1 Self-organized and planned evolution patterns. Cities could be developed in
+distinct ways, including self-organized (bottom-up) and planned (top-down)
+evolutions. Differentiating and comparing the resultant street systems under
+different growing mechanisms is of utmost importance for city planners and
+policy-makers (Jiang, Duan, Lu, Yang, & Zhao, 2013). Scellato et al. (2006) calcu-
+Complex Network Topology 679
+Figure8. Correlationbetween(a)in-degreeandout-degree,(b)betweennessCBanddegreek,(c)in-
+strengthS andout-strengthS ,(d)undirectedstrengthS andundirecteddegreek inL-spaceand
+in out un un
+P-spacefortheworldwidemaritimenetwork.Source:HuandZhu(2009).
+lated the edge betweenness and node information centrality of urban street
+systems for Bologna and San Francisco, which are respectively representative
+of self-organized and planned cities. They built the betweenness-based and
+information-based maximum centrality spanning trees and the minimum length
+spanning trees for two cities. Results showed that the shortest length performs
+more effectively for simulating planned urban fabrics than self-organized ones,
+whereas gathering people or resources is typical of the latter patterns. In terms
+of some largerdatabases, the universal power law could be regardedas a signa-
+ture of self-organized cities in most cases, although some exceptions still exist
+(Crucitti et al., 2006; Scellato et al., 2006), while the cities under strict planning
+are supposed to present an exponential (Crucitti et al., 2006) or two-regime cen-
+trality distribution (Jiang, 2007).
+4.5.2 Heterogeneity of urban street networks. Almost in the same period, some
+researchersnoticedthatinanurbanstreetnetwork,onlyaveryfewstreetsinter-
+sectwithalargenumberofotherstreets,whilemoststreetspossessveryfewinter-
+sections.TakingVeneziaasanexample;just4outof783streetsoccupytheupper
+20%intervalofthedegreerangeofvalues,whilethe674streetsfallintothelower
+20%(Portaetal.,2006a).Jiang(2009)evenbelievedthatlessthan1%ofstreets,out
+of the upper 20%, could form a backbone of the total street system. Lammer,
+Gehlsen, and Helbing (2006) revealed an extreme concentration of traffic on
+680 J. Linand Y.Ban
+most important intersections, and introduced the Gini index to quantify the
+betweenness centrality distribution of road networks. In Figure 9, the Gini
+index of Dresden equals 0.870, signifying a high inequality. Almost 80% of the
+traffic volume is concentrated on fewer than 10% of the streets. It is worth men-
+tioning that such a broad heterogeneity may lead to traffic congestions on the
+systems.
+4.5.3 Planarity and cellular structures. Urban streetnetworks, asthemost funda-
+mentalpartofinfrastructuresincities,presentstrictplanarity.Ifwebuildastreet
+networkinaprimalapproach,itwouldshownoorlittleclusteringbecauseroads
+tend tobe parallel morethan forming triangles.
+Themeshednessvaluesofrealsystemsareconsiderablyvariable,from0.009for
+theElAgustinodistrictofPeru(Buhletal.,2006)to0.348forNewYork(Cardillo,
+Scellato,Latora,&Porta,2006).Undoubtedly,thehigheracity’smeshednesscoef-
+ficient is, themorecomplexity its urban form presents.It also coincides with the
+resultsofstudiesbasedonthe50largestmetropolitanareasintheUSA(Levinson,
+2012),thata,b,gindexesincreasewiththecitysize.Incomparison,thecircuitness
+is relatively stable, while the treeness decreases with the city size. It is easy to
+understand this conclusion. The bigger a city is, the less dendritic it looks. With
+economic and industrial developments, a large city or a large metropolitan will
+evolve into a polycentric structure in the real world; it is also a critical issue
+that needs tobe considered during the transport planning process.
+Moreover,thelengthandtheareaofcellsarealsointerestingtoresearchers.The
+former refers to the number of edges or vertices of a cell. Masucci et al. (2009)
+foundthatintheLondonstreetnetwork,cellsoflength4and5aremorenumer-
+ousthanonesoflength3.Thisconclusionperfectlycoincideswiththelowcluster-
+inginstreetnetworks.Studiesonareadistributionofcellsshowthatpowerlawis
+Figure9. HeterogeneityofthestreetnetworksofDresden,withthewidthofstreetsindicatingthecor-
+respondingbetweennessvalues.Source:Lammeretal.(2006).
+Complex Network Topology 681
+universal for real systems and random graphs. (Lammer et al., 2006; Masucci
+et al., 2009).
+Analogicalwith node degree, theneighborhooddegree(k ) ofacell for planar
+c
+streetnetworks,whichindicatedthenumberofadjacentcells,isalsoinvestigated.
+Itisfoundthatmostofthecellshavethreetosixneighbors,andthedegreeoffour
+isthemostfrequent.Thenwecanconjecturethatthecorrespondingformfactors
+of urban street networks, which estimate the diversity of each cell shape, might
+vary from0.4 to0.6 based on thefollowing deduction:
+√(cid:4)(cid:4)
+3 3
+fmin(k =3)= ≈0.41, (25)
+f c 4p
+8
+fmax(k =4)= ≈0.64. (26)
+f c 4p
+Indeed,formfactorsofurbanstreetnetworksfromthe20largestGermanycities
+fallmostlyintherangefrom0.3to0.6(Chanetal.,2011;Lammeretal.,2006),in
+goodagreementwiththeabovetheoreticalconjecture.Recently,Chanetal.(2011)
+have made a big step forward in understanding the interrelations between cell
+areas, cell degrees, and form factors by adopting the same database of Lammer
+et al. (2006).
+5. Summary and Conclusions
+This paper has reviewed research works that were produced during the last
+decade on the topological structure of transport networks from a complex
+network perspective. Generally, the representations for non-planar networks are
+muchmorestraightforwardthanthoseofplanarnetworks.Forplanarnetworks,
+the primal representation maintains the geometric patterns and geographical
+properties of transportation systems, while the dual approach focuses on their
+functional structures. As for urban public transportation systems, slight differ-
+ences between representation approaches in L-space and P-space to extract
+characteristics of stops, stations, and routes can cause distinct results on the
+same system.
+Withsignificantprogressincomplexnetworktheoryinthelastdecade,ahuge
+numberofmeasureshavebeenpresentedtoestimatethedegreeofimportanceof
+nodes, edges, and communities in networks. In this work, the authors classified
+measures by comparing them among different scales. For a single node or an
+edge, degree, betweenness, closeness, straightness, and strength centrality can
+reveal respectively distinct features of a real transport network. Besides, from a
+larger scale, the regional clustering and global measures are further discussed.
+The last partin this section is allocated tocellular structure.
+Followingthetheoreticalresearch,empiricalanalysesaredefinitelyanindispen-
+sablesupplement.Herewesummarizedahugenumberofempiricalstudiesfrom
+various subjects in terms of different kinds of transportation systems, including
+railway systems, urban public transportation networks, aviation networks, mari-
+time networks, and urban street networks. Results show that the complex
+network theory discloses many more similar properties in real transport systems
+Complex Network Topology 683
+Buhl,J.,Gautrais,J.,Reeves,N.,Sole,R.V.,Valverde,S.,Kuntz,P.,&Theraulaz,G.(2006).Topological
+patternsinstreetnetworksofself-organizedurbansettlements.TheEuropeanPhysicalJournalB,49,
+513–522.
+Cardillo,A.,Scellato,S.,Latora,V.,&Porta,S.(2006).Structuralpropertiesofplanargraphsofurban
+streetpatterns.PhysicalReviewE,73,066107.
+Chan,S.H.Y.,Donner,R.V.,&La¨mmer,S.(2011).Urbanroadnetworks—spatialnetworkswithuni-
+versalgeometricfeatures?AcasestudyonGermany’slargestcities.TheEuropeanPhysicalJournalB,
+84,563–577.
+Chen,Y.Z.,Li,N.,&He,D.R.(2007).Astudyonsomeurbanbustransportnetworks.PhysicaA,376,
+747–754.
+Chi,L.P.,Wang,R.,Su,H.,Xu,X.P.,Zhao,J.S.,Li,W.,&Cai,X.(2003).StructuralpropertiesofUSflight
+network.ChinesePhysicsLetters,20,1393–1396.
+Clauset,A.,Shalizi,C.R.,&Newman,M.E.J.(2009).Power-lawdistributionsinempiricaldata.Society
+forIndustrialandAppliedMathematicsReview,51(4),661–703.
+Crucitti,P.,Latora,V.,&Porta,S.(2006).Centralitymeasuresinspatialnetworksofurbanstreets.Phys-
+icalReviewE,73,036125.
+Derrible,S.(2012).NetworkCentralityofMetroSystems.PloSONE,7(7),e40575.
+Derrible,S.,&Kennedy,C.(2009).Networkanalysisofsubwaysystemsintheworldusingupdated
+graphtheory.TransportationResearchRecord,2112,17–25.
+Derrible,S.,&Kennedy,C.(2010a).Thecomplexityandrobustnessofmetronetworks.PhysicaA,389,
+3678–3691.
+Derrible,S.,&Kennedy,C.(2010b).Characterizingmetronetworks:States,form,andstructure.Trans-
+portation,37,275–297.
+Diestel,R.(2005).Graphtheory.NewYork,NY:Springer-VerlagHeidelberg.
+Ferber,C.V.,Holovatch,T.,Holovatch,Y.,&Palchykov,V.(2007).Networkharness:Metropolispublic
+transport.PhysicaA,380,585–591.
+Ferber,C.V.,Holovatch,T.,Holovatch,Y.,&Palchykov,V.(2009).Publictransportnetwork:Empirical
+analysisandmodeling.TheEuropeanPhysicalJournalB,68,261–275.
+Freeman,L.C.(1977).Asetofmeasuresofcentralitybaseduponbetweenness.Sociometry,40,35–41.
+Freeman,L.C.(1979).Centralityinsocialnetworks:Conceptualclarification.SocialNetworks,1(3),215–
+239.
+Garrisoon,W.,&Marble,D.(1962).Thestructureoftransportationnetwork.Chicago,IL:TheTranspor-
+tationCenter,NorthwesternUniversity.
+Guida,M.,&Maria,F.(2007).TopologyoftheItalianairportnetwork:Ascale-freesmall-worldnetwork
+withafractalstructure?Chaos,Solitons&Fractals,31(3),527–536.
+Guimera`,R.,&Amaral,L.A.N.(2004).Modelingtheworld-wideairportnetwork.TheEuropeanPhys-
+icalJournalB,38,381–385.
+Guimera`,R.,&Amaral,L.A.N.(2005).Functionalcartographyofcomplexmetabolicnetworks.Nature,
+433,895–900.
+Guimera`, R., Mossa, S., Turtschi, A., & Amaral, L. A. N. (2005). The worldwide air transportation
+network: Anomalous centrality, community structure, and cities’ global roles. Proceedings of the
+NationalAcademyofSciences,USA,102,7794–7799.
+Guo,L.,&Cai,X.(2008).DegreeandweightedpropertiesofthedirectedChinarailwaynetwork.Inter-
+nationalJournalofModernPhysicsC,19,1909–1918.
+Haggett,P.,&Chorley,R.J.(1969).Networkanalysisingeography.London:EdwardArnold.
+Hiller,B.,&Hanson,J.(1984).Thesociallogicofspace.Oxford:CambridgeUniversityPress.
+Hu,M.B.,Jiang,R.,Wang,R.L.,&Wu,Q.S.(2009).Urbantrafficsimulatedfromthedualrepresen-
+tation:Flow,crisisandcongestion.PhysicsLetterA,373,2007–2011.
+Hu,M.B.,Jiang,R.,Wu,Y.H.,Wang,W.X.,&Wu,Q.S.(2008).Urbantrafficfromtheperspectiveof
+dualgraph.TheEuropeanPhysicalJournalB,63,127–133.
+Hu,Y.H.,&Zhu,D.L.(2009).Empiricalanalysisoftheworldwidemaritimetransportationnetwork.
+PhysicaA,388,2061–2071.
+Jiang,B.(2004).Topologicalanalysisofurbanstreetnetworks.EnvironmentandPlanningB:Planningand
+Design,31,151–162.
+Jiang,B.(2007).Atopologicalpatternofurbanstreetnetworks:Universalityandpeculiarity.PhysicaA,
+384,647–655.
+Jiang,B.(2009).Street hierarchies:Aminorityofstreetsaccountforamajorityoftrafficflow.Inter-
+nationalJournalofGeographicalInformationScience,23(8),1033–1048.
+684 J. Linand Y.Ban
+Jiang,B.,&Claramunt,C.(2002).IntegrationofspacesyntaxintoGIS:Newperspectivesforurbanmor-
+phology.TransactionsinGIS,6(3),295–309.
+Jiang,B.,&Claramunt,C.(2004).Astructuralapproachtothemodelgeneralizationofanurbanstreet
+network.Geoinformatica,8(2),157–171.
+Jiang,B.,Duan,Y.,Lu,F.,Yang,T.,&Zhao,J.(2013).Topologicalstructureofurbanstreetnetworkfrom
+theperspectiveofdegreecorrelations.PreprintarXiv:1308.1533.
+Jiang,B.,Yin,J.,&Zhao,S.(2009).Characterizinghumanmobilitypatternsinalargestreetnetwork.
+PhysicalReviewE,80,021136.
+Kalapala,V.,Sanwalani,V.,Clauset,A.,&Moore,C.(2006).Scaleinvarianceinroadnetworks.Physical
+ReviewE,73,026130.
+Kaluza,P.,Kolzsch,A.,Gastner,M.T.,&Blasius,B.(2010).Thecomplexnetworkofglobalcargoship
+movements.JournaloftheRoyalSocietyInterface,7,1093–1103.
+Kansky,K.(1963).Structureoftransportationnetworks.Chicago,IL:UniversityofChicagoPress.
+Kurant,M.,&Thiran,P.(2006).Trainspotting:Extractionandanalysisoftrafficandtopologiesoftrans-
+portationnetworks.PhysicalReviewE,74,036114.
+Lammer,S.,Gehlsen,B.,&Helbing,D.(2006).Scalinglawsinthespatialstructureofurbanroadnet-
+works.PhysicaA,361,89–95.
+Latora,V.,&Marchiori,M.(2001).Efficientbehaviorofsmall-worldnetworks.PhysicalReviewLetters,
+87,198701.
+Latora,V.,&Marchiori,M.(2002).IstheBostonsubwayasmall-worldnetwork?PhysicaA,314,109–113.
+Latora,V.,&Marchiori,M.(2007).Ameasureofcentralitybasedonnetworkefficiency.NewJournalof
+Physics,9,188.
+Lee,K.,Jung,W.S.,Park,J.S.,&Chio,M.Y.(2008).StatisticalanalysisofthemetropolitanSeoulsubway
+system:Networkstructureandpassengerflows.PhysicaA,387,6231–6234.
+Levinson,D.(2012).Networkstructureandcitysize.PloSONE,7,e29721.
+Li,W.,&Cai,X.(2004).StatisticalanalysisofairportnetworkofChina.PhysicalReviewE,69,046106.
+Li, W., & Cai, X. (2007). Empirical analysisof a scale-free railway network in China. Physica A, 382,
+693–703.
+Lin,J.Y.(2012).NetworkanalysisofChina’saviationsystem,statisticalandspatialstructure.Journalof
+TransportGeography,22,109–117.
+Liu,H.K.,&Zhou,T.(2007).EmpiricalstudyofChinacityairlinenetwork.ActaPhysicaSinica,56(1),
+106–112(inChinese).
+Liu,L.,Li,R.,Shao,F.J.,&Sun,R.C.(2009).ComplexityanalysisofQingdao’spublictransportnetwork.
+ProceedingsoftheInternationalSymposiumonIntelligentInformationSystemsandApplications,
+Qingdao,P.R.China,300–303.
+Lu,H.P.,&Shi,Y.(2007).Complexityofpublictransportnetworks.TsinghuaScienceandTechnology,
+12(2):204–213.
+Ma,X.L.,&Timberlake,M.F.(2008).IdentifyingChina’sleadingworldcity:Anetworkapproach.Geo-
+Journal,71,19–35.
+Majima,T.,Katuhara,M.,&Takadama,K.(2007).Analysisontransportnetworkofrailway,subway
+andwaterbusinJapan.StudiesinComputationalIntelligence,56,99–113.
+Masucci,A.P.,Smith,D.,Crooks,A.,&Batty,M.(2009).RandomplanargraphsandtheLondonstreet
+network.TheEuropeanPhysicalJournalB,71,259–271.
+Montis,A.D.,Barthelemy,M.,Chessa,A.,&Vespignani,A.(2007).Thestructureofinter-urbantraffic:
+Aweightednetworkanalysis.EnvironmentandPlanningB:PlanningandDesign,34(5),905–924.
+Mozes,S.(2013).Efficientalgorithmsforshortest-pathandmaximum-flowproblemsinplanargraphs(PhD
+thesis).BrownUniversity,USA.
+Nagurney,A.,&Qiang,Q.(2007).Anetworkefficiencymeasureforcongestednetworks.Europhysics
+Letter,79,1–5.
+Nagurney,A.,&Qiang,Q.(2008).Anefficiencymeasurefordynamicnetworksmodeledasevolution-
+aryvariationalinequalitieswithapplicationtotheinternetandvulnerabilityanalysis.Netnomics,9,
+1–20.
+Newman,M.E.J.(2003).Thestructureandfunctionofcomplexnetworks.SIAMReviews,45,167–256.
+Paleari,S.,Redondi,R.,&Malighetti,P.(2010).AcomparativestudyofairportconnectivityinChina,
+EuropeandUS:Whichnetworkprovidesthebestservicetopassengers?TransportationResearchPart
+E,46,198–210.
+Porta,S.,Crucitti,P.,&Latora,V.(2006a).Thenetworkanalysisofurbanstreets:Adualapproach.
+PhysicaA,369,853–866.
+Complex Network Topology 685
+Porta,S.,Crucitti,P.,&Latora,V.(2006b).Thenetworkanalysisofurbanstreets:Aprimalapproach.
+EnvironmentandPlanningB:PlanningandDesign,33(5),705–725.
+Porta,S.,Latora,V.,Wang,F.H.,Strano,E.,Cardillo,A.,Scellato,S.,Iacoviello,V.,&Messora,R.(2009).
+StreetcentralityanddensitiesofretailandservicesinBologna,Italy.EnvironmentandPlanningB:
+PlanningandDesign,36,450–465.
+Reed,W.J.(2003).TheParetolawofincomes—anexplanationandanextension.PhysicaA,319,469–486.
+Reed,W.J.,&Jorgensen,M.(2004).Thedoublepareto-lognormaldistribution—anewparametric
+modelforsizedistributions.CommunicationsinStatistics—TheoryandMethods,33,1733–1753.
+Rocha,L.E.C.D.(2009).StructuralevolutionofBrazilianairportnetwork.JournalofStatisticalMech-
+anics:TheoryandExperiment,4,P04020.
+Rodrigue, J.-P., Comtois, C., & Slack, B. (2009). The geography of transport systems. New York, NY:
+Routledge.
+Roth,C.,Kang,S.M.,Batty,M.,&Barthelemy,M.(2012).Along-timelimitforworldsubwaynetworks.
+JournalofRoyalSocietyInterface,9(75),2540–2550.
+Sapre,M.,&Parekh,N.(2011).AnalysisofcentralitymeasuresofairportnetworkofChina.PatternRec-
+ognitionandMachineIntelligence,6744,376–381.
+Scellato,S.,Cardillo,A.,Latora,V.,&Porta,S.(2006).Thebackboneofacity.TheEuropeanPhysical
+JournalB,50,221–225.
+Seaton, K. A., & Hackett, L. M. (2004). Stations, trains and small-world networks. Physica A, 339,
+635–644.
+Sen,P.,Dasgupta,S.,Chatterjee,A.,Sreeram,P.A.,Mukherjee,G.,&Manna,S.S.(2003).Small-world
+propertiesoftheIndianRailwaynetwork.PhysicalReviewE,67,036106.
+Sienkiewicz,J.,&Holyst,J.A.(2005).Statisticalanalysesof22publictransportnetworksinPoland.
+PhysicalReviewE,72,046127.
+Soh,H.,Lim,S.,Zhang,T.Y.,Fu,X.J.,Lee,G.K.K.,Hung,T.G.G.,Di,P.,Prakasam,S.,&Wong,L.
+(2010).WeightedcomplexnetworkanalysisoftravelroutesontheSingaporepublictransportation
+system.PhysicaA,389,5852–5863.
+Wang,J.E.,Mo,H.H.,Wang,F.H.,&Jin,F.J.(2011).Exploringthenetworkstructureandnodalcentrality
+ofChina’sairtransportnetwork:Anetworkapproach.JournalofTransportGeography,19,712–721.
+Wang,M.,Hu,B.Q.,Wu,X.,&Niu,Y.Q.(2009).Thetopologicalandstatisticalanalysisofpublictrans-
+portnetworkbasedonfuzzyclustering.AdvancesinIntelligentandSoftComputing,62,1183–1191.
+Wang,R.,Tan,J.X.,Wang,X.,Wang,D.J.,&Cai,X.(2008).Geographiccoarsegraininganalysisofthe
+railwaynetworkofChina.PhysicaA,387,5639–5646.
+Wang,Y.L.,Zhou,T.,Shi,J.J.,Wang,J.,&He,D.R.(2009).Empiricalanalysisofdependencebetween
+stationsinChineserailwaynetwork.PhysicaA,388,2949–2955.
+Watts,D.J.,&Strogatz,S.H.(1998).Collectivedynamicsof“small-world”network.Nature,393,440–442.
+Wilson,R.J.(2010).Introductiontographtheory.Harlow:PrenticeHall.
+Xie, F., & Levinson, D. (2007). Measuring the structure of road networks. Geographical Analysis, 39,
+336–356.
+Xie, F., & Levinson, D. (2009). Modeling the growth of transportation networks: A comprehensive
+review.NetworksandSpatialEconomics,9(3),291–307.
+Xie,F.,&Levinson,D.(2011).Evolvingtransportationnetworks.NewYork,NY:Springer.
+Xu,X.P.,Hu,J.H.,&Liu,F.(2007a).Empriricalanalysisoftheship-transportnetworkofChina.Chaos,
+17,023129.
+Xu,X.P.,Hu,J.H.,Liu,F.,&Liu,L.S.(2007b).Scalingandcorrelationsinthreebus-transportnetworks
+ofChina.PhysciaA,374,411–448.
+Xu,Z.,&Harriss,R.(2008).ExploringthestructureoftheU.S.intercitypassengerairtransportation
+network:Aweightedcomplexnetworkapproach.GeoJournal,73,87–102.
+Zeng,H.L.,Guo,Y.D.,Zhu,C.P.,Mitrovic,M.,&Tadic,B.(2009).Congestionpatternsoftrafficstudiedon
+Nanjingcitydualgraph.Proceedingsofthe16thInternationalConferenceonDigitalSignalProcessing,
+982–989.
+Zhang,J.,Cao,X.B.,Du,W.B.,&Cai,K.Q.(2010).EvolutionofChineseairportnetwork.PhysicaA,389,
+3922–3931.
+Zou,S.R.,Zhou,T.,Liu,A.F.,Xu,X.L.,&He,D.R.(2010).Topologicalrelationoflayeredcomplex
+networks.PhysicsLettersA,374,4406–4410.
+

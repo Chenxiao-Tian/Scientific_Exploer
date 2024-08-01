@@ -1,0 +1,631 @@
+References:
+References [14] Abhijit Kundu, Yin Li, and James M Rehg. 3d-rcnn:
+Instance-level 3d object reconstruction via render-and-
+[1] Peter Anderson, Basura Fernando, Mark Johnson, and compare. In Proceedings of the IEEE conference on com-
+Stephen Gould. Spice: Semantic propositional image cap- puter vision and pattern recognition, pages 3559–3568,
+tion evaluation. In European Conference on Computer Vi- 2018. 2
+sion,pages382–398.Springer,2016. 2 [15] Tzu-MaoLi,MiikaAittala,Fre´doDurand,andJaakkoLehti-
+[2] Angel Chang, Will Monroe, Manolis Savva, Christopher nen. Differentiable monte carlo ray tracing through edge
+Potts, and Christopher D Manning. Text to 3d scene sampling. InSIGGRAPHAsia2018TechnicalPapers,page
+generation with rich lexical grounding. arXiv preprint 222.ACM,2018. 2
+arXiv:1505.06289,2015. 2
+[16] Wenbin Li, Sajad Saeedi, John McCormac, Ronald Clark,
+[3] YilunDu, ZhijianLiu, HectorBasevi, AlesLeonardis, Bill DimosTzoumanikas, QingYe, YuzhongHuang, RuiTang,
+Freeman,JoshTenenbaum,andJiajunWu. Learningtoex- and Stefan Leutenegger. Interiornet: Mega-scale multi-
+ploit stability for 3d scene parsing. In Advances in Neural sensorphoto-realisticindoorscenesdataset. arXivpreprint
+InformationProcessingSystems,pages1726–1736,2018. 7 arXiv:1809.00716,2018. 2
+[4] Matthew Fisher, Daniel Ritchie, Manolis Savva, Thomas [17] YikangLi,WanliOuyang,BoleiZhou,KunWang,andXi-
+Funkhouser, and Pat Hanrahan. Example-based synthesis aogangWang. Scenegraphgenerationfromobjects,phrases
+of3dobjectarrangements. ACMTransactionsonGraphics and region captions. In Proceedings of the IEEE Interna-
+(TOG),31(6):135,2012. 2 tional Conference on Computer Vision, pages 1261–1270,
+[5] MatthewFisher,ManolisSavva,YangyanLi,PatHanrahan, 2017. 2
+and Matthias Nießner. Activity-centric scene synthesis for [18] ShichenLiu,TianyeLi,WeikaiChen,andHaoLi. Softras-
+functional3dscenemodeling.ACMTransactionsonGraph- terizer:Adifferentiablerendererforimage-based3dreason-
+ics(TOG),34(6):179,2015. 2 ing. arXivpreprintarXiv:1904.01786,2019. 2
+[6] Paul Henderson and Vittorio Ferrari. Learning to generate [19] Matthew M Loper and Michael J Black. Opendr: An ap-
+andreconstruct3dmesheswithonly2dsupervision. arXiv proximatedifferentiablerenderer. InEuropeanConference
+preprintarXiv:1807.09259,2018. 2 onComputerVision,pages154–169.Springer,2014. 2
+[7] Seunghoon Hong, Dingdong Yang, Jongwook Choi, and [20] John McCormac, Ankur Handa, Stefan Leutenegger, and
+HonglakLee.Inferringsemanticlayoutforhierarchicaltext- AndrewJDavison. Scenenetrgb-d: Can5msyntheticim-
+to-imagesynthesis. InProceedingsoftheIEEEConference agesbeatgenericimagenetpre-trainingonindoorsegmenta-
+on Computer Vision and Pattern Recognition, pages 7986– tion? InProceedingsoftheIEEEInternationalConference
+7994,2018. 2 onComputerVision,pages2678–2687,2017. 2
+[8] Siyuan Huang, Siyuan Qi, Yinxue Xiao, Yixin Zhu, [21] AlejandroNewellandJiaDeng.Pixelstographsbyassocia-
+Ying Nian Wu, and Song-Chun Zhu. Cooperative holistic tiveembedding. InAdvancesinneuralinformationprocess-
+sceneunderstanding: Unifying3dobject, layout, andcam- ingsystems,pages2171–2180,2017. 2
+eraposeestimation.InAdvancesinNeuralInformationPro-
+[22] TaesungPark,Ming-YuLiu,Ting-ChunWang,andJun-Yan
+cessingSystems,pages207–218,2018. 8
+Zhu. Semanticimagesynthesiswithspatially-adaptivenor-
+[9] SiyuanHuang,SiyuanQi,YixinZhu,YinxueXiao,Yuanlu malization.InProceedingsoftheIEEEConferenceonCom-
+Xu,andSong-ChunZhu. Holistic3dsceneparsingandre- puter Vision and Pattern Recognition, pages 2337–2346,
+constructionfromasinglergbimage. InECCV,2018. 2 2019. 7,8
+[10] Chenfanfu Jiang, Siyuan Qi, Yixin Zhu, Siyuan Huang, [23] SiyuanQi,YixinZhu,SiyuanHuang,ChenfanfuJiang,and
+Jenny Lin, Lap-Fai Yu, Demetri Terzopoulos, and Song- Song-ChunZhu. Human-centricindoorscenesynthesisus-
+Chun Zhu. Configurable 3d scene synthesis and 2d im- ing stochastic grammar. In Proceedings of the IEEE Con-
+age rendering with per-pixel ground truth using stochas- ferenceonComputerVisionandPatternRecognition,pages
+tic grammars. International Journal of Computer Vision, 5899–5908,2018. 2,4
+126(9):920–941,2018. 2
+[24] Daniel Ritchie, Kai Wang, and Yu-an Lin. Fast and flexi-
+[11] JustinJohnson,AgrimGupta,andLiFei-Fei. Imagegener- bleindoorscenesynthesisviadeepconvolutionalgenerative
+ationfromscenegraphs. InProceedingsoftheIEEECon- models. In Proceedings of the IEEE Conference on Com-
+ferenceonComputerVisionandPatternRecognition,pages puter Vision and Pattern Recognition, pages 6182–6190,
+1219–1228,2018. 2,5,7 2019. 2
+[12] Justin Johnson, Ranjay Krishna, Michael Stark, Li-Jia Li, [25] Sebastian Schuster, Ranjay Krishna, Angel Chang, Li Fei-
+DavidShamma, MichaelBernstein, andLiFei-Fei. Image Fei, and Christopher D Manning. Generating semantically
+retrievalusingscenegraphs.InProceedingsoftheIEEEcon- precisescenegraphsfromtextualdescriptionsforimproved
+ference on computer vision and pattern recognition, pages image retrieval. In Proceedings of the fourth workshop on
+3668–3678,2015. 2 visionandlanguage,pages70–80,2015. 2
+[13] HiroharuKato,YoshitakaUshiku,andTatsuyaHarada.Neu- [26] Kihyuk Sohn, Honglak Lee, and Xinchen Yan. Learning
+ral3dmeshrenderer.InProceedingsoftheIEEEConference structuredoutputrepresentationusingdeepconditionalgen-
+on Computer Vision and Pattern Recognition, pages 3907– erativemodels. InAdvancesinneuralinformationprocess-
+3916,2018. 2,3 ingsystems,pages3483–3491,2015. 2
+3761
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+
+Annexes/Appendices:
+
+Body Text:
+2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+End-to-End Optimization of Scene Layout
+Andrew Luo1 Zhoutong Zhang2 Jiajun Wu3 Joshua B. Tenenbaum2
+1Carnegie Mellon University 2Massachusetts Institute of Technology 3Stanford University
+Abstract
+(cid:410)(cid:286)(cid:367)(cid:286)(cid:448)(cid:349)(cid:400)(cid:349)(cid:381)(cid:374) (cid:271)(cid:286)(cid:282) (cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410)
+Weproposeanend-to-endvariationalgenerativemodel (cid:381)(cid:374) (cid:271)(cid:286)(cid:346)(cid:349)(cid:374)(cid:282) (cid:367)(cid:286)(cid:296)(cid:410)(cid:3)(cid:381)(cid:296)
+forscenelayoutsynthesisconditionedonscenegraphs.Un-
+(cid:282)(cid:286)(cid:400)(cid:364) (cid:47)(cid:374)(cid:3)(cid:296)(cid:396)(cid:381)(cid:374)(cid:410)(cid:3)(cid:381)(cid:296) (cid:272)(cid:346)(cid:258)(cid:349)(cid:396)
+like unconditional scene layout generation, we use scene
+(a) input scene graph (b) (c)
+graphs as an abstract but general representation to guide
+the synthesis of diverse scene layouts that satisfy relation-
+ships included in the scene graph. This gives rise to more
+flexible control over the synthesis process, allowing vari-
+ous forms of inputs such as scene layouts extracted from
+sentencesorinferredfromasinglecolorimage. Usingour (d) (e) (f) (g)
+conditionallayoutsynthesizer,wecangeneratevariouslay- Figure 1: Conditional scene synthesis. (a) The input is a
+outsthatsharethesamestructureoftheinputexample. In scenegraphdescribingobjectrelationships.(b)–(g)Diverse
+additiontothisconditionalgenerationdesign,wealsointe- layoutssynthesizedconformingtotheinputscenegraph.
+grateadifferentiablerenderingmodulethatenableslayout
+the generated content, as users can directly manipulate the
+refinement using only 2D projections of the scene. Given
+input scene graph, it also serves as a general intermediate
+a depth and a semantics map, the differentiable render-
+representationbetweenvariousmodalitiesofscenedescrip-
+ing module enables optimizing over the synthesized layout
+tions,suchastext-baseddescriptionsandexemplarimages.
+to fit the given input in an analysis-by-synthesis fashion.
+Manypreviousmethodshaveusedscenegraphsasanin-
+Experiments suggest that our model achieves higher accu-
+termediaterepresentationfordownstreamvisiontaskssuch
+racyanddiversityinconditionalscenesynthesisandallows
+asimagesynthesis, wheretheymostlyformulatetheprob-
+exemplar-basedscenegenerationfromvariousinputforms.
+lem in a deterministic manner. In contrast, our model re-
+spectsthestochasticnatureoftheactualscenelayoutcon-
+ditioned on the abstract description of a scene graph. The
+1. Introduction
+modelweintroduce,named3DSceneLayoutNetwork(3D-
+Interior scene layout generation is primarily concerned SLN), is a general framework for scene layout synthesis
+withthepositioningofobjectsthatarecommonlyencoun- from scene graphs. 3D-SLN combines a variational au-
+teredindoors,suchasfurnitureandappliances. Itisofgreat toencoder with a graph convolutional network to generate
+interest due to its important role in simulated navigation, diverseandplausiblelayoutsthataredescribedbytherela-
+homeautomation,andinteriordesign. Thepredominantap- tionshipsgiveninthe3Dscenegraph,asshowninFigure1.
+proachistoperformunconditionedlayoutgenerationusing Wefurtherdemonstratehowadifferentiablerenderercan
+implicitlikelihoodmodels[34]. Theseunconditionalmod- be used to refine the generated layout using a single 2.5D
+elscanproducediversepossiblelayouts,butoftenlackthe sketch (depth/surface normal) and the semantic map of a
+fine-grainedcontrolthatallowsausertospecifyadditional 3Dscene. Inaddition,ourframeworkcanbeappliedtoper-
+requirementsormodifythescene. Incontrasttotheuncon- form exemplar-based layout generation, where we synthe-
+ditionalmodels,conditionallayoutgenerationusesvarious sizedifferentscenelayoutsthatsharethesamescenegraph
+types of inputs, such as activity traces, partial layouts, or extractedfromtextorinferredfromareferenceimage.
+text-baseddescriptions,enablingmoreflexiblesynthesis. In summary, our contributions are threefold. First, we
+Inthiswork,weusethe3Dscenegraphrepresentationas introduce 3D-SLN, a conditional variational autoencoder–
+a high-level abstraction, with the graph not only encoding basednetworkthatgeneratesdiverseandrealisticscenelay-
+objectattributesandidentities,butalso3Dspatialrelation- outsconditionedonascenegraph. Second,wedemonstrate
+ships. Not only does this design enable more control over our model can be fine-tuned to generate 3D scene layouts
+2575-7075/20/$31.00 ©2020 IEEE 3753
+DOI 10.1109/CVPR42600.2020.00381
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+that match the given depth and semantic information. Fi- erateonscenegraphs. Wefirstuseagraphconvolutionnet-
+nally, we showed that our model can be useful for several worktomodeltheposteriordistributionofthelayoutcondi-
+applications, such as exemplar-based layout synthesis and tionedonthegivenscenegraph. Then,wegeneratediverse
+scenegraph–basedimagesynthesis. scene layouts, which includes each object’s size, location
+androtation,bysamplingfromthepriordistribution.
+2. Related Work
+3.1.SceneLayoutGenerator
+Ourmethodisrelatedtothemultipleareasincomputer
+While previous methods generate 2D bounding boxes
+visionandgraphics,includingscenegraphrepresentations,
+fromascenegraph[11]ortextdescriptions[7],ourmodel
+scenesynthesis,anddifferentiablerendering.
+generates 3D scene layouts, consisting of the 3D bound-
+Scene graphs. Scenes can be represented as scene
+ingboxandrotationalongtheverticalaxisforeachobject.
+graphs—directedgraphswhosenodesareobjectsandedges
+Inaddition,weaugmenttraditional2Dscenegraphsto3D
+arerelationshipsbetweenobjects. Scenegraphshavefound
+scenegraphs,encodingobjectrelationshipsin3Dspace.
+wide applications such as image retrieval [12] and image
+Specifically, we define the X and Y axis to span the
+captioning [1]. There have also been attempts to generate
+plane consisting of the room’s floor, and an up-direction
+scene graphs from text [25], images [32, 21, 17], and par-
+Z for objects above the floor. Under such definition, the
+tially completed graphs [30]. In this paper, we use scene
+relationship ‘left of’ constraints the X and Y coordinates
+graphstoguideoursynthesisof3Dindoorscenelayout.
+between pairs of objects, while the relationship ‘on’ con-
+Scenesynthesis. Incomputergraphics,therehasbeenex- straints the Z coordinate between them. Each node in the
+tensive research on indoor scene synthesis. Much of this scenegraphwillnotonlydefinewhattypeofobjectitis,it
+work is associated with producing plausible layouts con- may optionally define object’s attributes regarding the ob-
+strained by a statistical prior learned from data. Typical jectheight(tall,short)butalsovolume(large,small). The
+techniques used include probabilistic models [4, 5, 34], scenegraphyisrepresentedbyasetofrelationshiptriplets,
+stochastic grammar [23], and recently, convolutional net- where each triplet is in the form of (o i,p,o j). Here p de-
+works[31,24]. notesthespatialrelationshipando idenotesthei-thobject’s
+Manyoftheseapproachesbuildupontherecentadvance- typeandattributes.
+ment of large-scale scene repositories [28, 20, 36] and in- In order to operate on the input graph and to generate
+door scene rendering methods [35, 16, 10]. These meth- multiple scenes from the same input, we propose a novel
+ods typically focus on modeling the possible distribution framework, named 3D Scene Layout Network (3D-SLN),
+of objects given a particular room type (e.g., bedrooms). combiningagraphconvolutionnetwork(GCN)[11]witha
+Somerecentpapers[2]havestudied3Dscenelayoutgener- conditionalvariationalautoencoder(cVAE)[26].Thearchi-
+ation directly from text. Some concurrent work also uses tectureisshowninFigure2. Duringtraining,theencoderis
+relational graphs for modelling scenes, however our ap- taskedtogeneratetheposteriordistributionofagivenscene
+proach is capable of single-pass scene synthesis in a fully layoutconditioned onthe correspondingscenegraph. The
+differentiable manner, where as [30] tries to generate the encoderthereforetakesascenegraphandanexemplarlay-
+scene graph in an autoregressive fashion, and has an non- outasinput,andoutputstheposteriordistributionforeach
+differentiablesamplingstep. object,representedbythemeanandlog-varianceofadiag-
+Differentiable rendering. Traditional graphics engines onalGaussiandistribution. Alatentvectoristhensampled
+donotproduceusablegradientsforoptimizationpurposes. fromtheGaussianforeachobject. Thedecoderthentakes
+A variety of renderers that allow for end-to-end differen- thesampledlatentvectorsandthescenegraphasinputand
+tiation have been proposed [19, 15, 13, 18]. These dif- generates a scene layout, represented by the 3D bounding
+ferentiable renderers have been used for texture optimiza- boxanditsrotationforeachobject.
+tion [13], face inference [29], single image mesh recon- We define x to be the input scene graph, y to be a ex-
+struction [6], and scene parsing [9]. Additionally non- emplar layout, yˆ to be the generated layout, and θ e,θ d to
+differentiable rendering has been used with approximated betheweightsoftheencoderP θ anddecoderQ θ of3D-
+e d
+gradients[14]forinstancelevel3Dconstruction. Weutilize SLN,respectively. Eachelementiny iinlayoutyisdefined
+theneuralmeshrenderer[13],whichallowsustomanipu- bya7-tuple,representingtheboundingboxandtherotation
+latethelayoutandrotationofindividualobjectsgivendepth ofeachobjecti:
+andsemanticmapsasreference.
+y i =(min Xi,min Yi,min Zi,max Xi,max Yi,max Zi,ω i), (1)
+3. Methods
+where min X ,min Y ,min Z ,max X ,max Y ,max Z de-
+i i i i i i
+We propose 3D Scene Layout Networks (3D-SLN), a notesthe3Dboundingboxcoordinates,andω i denotesthe
+conditionalvariationalautoencodernetworktailoredtoop- rotationaroundtheZ axis.
+3754
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+x Input scene graph (cid:47)(cid:374)(cid:393)(cid:437)(cid:410)
+y Ground truth layout (cid:94)(cid:272)(cid:286)(cid:374)(cid:286)
+(cid:468) Predicted layout (cid:39)(cid:396)(cid:258)(cid:393)(cid:346) (cid:39)(cid:39)(cid:396)(cid:396)(cid:258)(cid:258)(cid:393)(cid:393)(cid:346)(cid:346) (cid:87)(cid:396)(cid:286)(cid:282)(cid:349)(cid:272)(cid:410)(cid:286)(cid:282)
+(cid:18)(cid:18)(cid:381)(cid:381)(cid:374)(cid:374)(cid:448)(cid:448)(cid:381)(cid:381)(cid:367)(cid:367)(cid:437)(cid:437)(cid:410)(cid:410)(cid:349)(cid:349)(cid:381)(cid:381)(cid:374)(cid:374)(cid:258)(cid:258)(cid:367) (cid:68)(cid:62)(cid:87)
+z Latent during training (cid:62)(cid:258)(cid:455)(cid:381)(cid:437)(cid:410)
+(cid:94)(cid:258)(cid:373)(cid:393)(cid:367)(cid:286)(cid:282) (cid:69)(cid:286)(cid:410)(cid:449)(cid:381)(cid:396)(cid:364)
+z Latent during testing
+(cid:62)(cid:258)(cid:455)(cid:381)(cid:437)(cid:410)
+Embedding Layer (cid:62)(cid:258)(cid:410)(cid:286)(cid:374)(cid:410) (a) Testing
+Sample from distribution
+(cid:47)(cid:374)(cid:393)(cid:437)(cid:410) (cid:47)(cid:374)(cid:393)(cid:437)(cid:410)
+(cid:94)(cid:272)(cid:286)(cid:374)(cid:286) (cid:94)(cid:272)(cid:286)(cid:374)(cid:286)
+(cid:39)(cid:396)(cid:258)(cid:393)(cid:346) (cid:39)(cid:39)(cid:396)(cid:396)(cid:258)(cid:258)(cid:393)(cid:393)(cid:346)(cid:346) (cid:39)(cid:396)(cid:258)(cid:393)(cid:346) (cid:39)(cid:39)(cid:396)(cid:396)(cid:258)(cid:258)(cid:393)(cid:393)(cid:346)(cid:346)
+(cid:87)(cid:396)(cid:286)(cid:282)(cid:349)(cid:272)(cid:410)(cid:286)(cid:282)
+(cid:18)(cid:18)(cid:381)(cid:381)(cid:374)(cid:374)(cid:448)(cid:448)(cid:381)(cid:381)(cid:367)(cid:367)(cid:437)(cid:437)(cid:410)(cid:410)(cid:349)(cid:349)(cid:381)(cid:381)(cid:374)(cid:374)(cid:258)(cid:258)(cid:367) (cid:68)(cid:62)(cid:87) (cid:18)(cid:18)(cid:381)(cid:381)(cid:374)(cid:374)(cid:448)(cid:448)(cid:381)(cid:381)(cid:367)(cid:367)(cid:437)(cid:437)(cid:410)(cid:410)(cid:349)(cid:349)(cid:381)(cid:381)(cid:374)(cid:374)(cid:258)(cid:258)(cid:367) (cid:68)(cid:62)(cid:87)
+(cid:62)(cid:258)(cid:455)(cid:381)(cid:437)(cid:410)
+(cid:39)(cid:396)(cid:381)(cid:437)(cid:374)(cid:282) (cid:69)(cid:286)(cid:410)(cid:449)(cid:381)(cid:396)(cid:364) (cid:62)(cid:286)(cid:258)(cid:396)(cid:374)(cid:286)(cid:282) (cid:69)(cid:286)(cid:410)(cid:449)(cid:381)(cid:396)(cid:364)
+(cid:100)(cid:396)(cid:437)(cid:410)(cid:346) (cid:62)(cid:258)(cid:455)(cid:381)(cid:437)(cid:410)
+(cid:62)(cid:258)(cid:455)(cid:381)(cid:437)(cid:410) (cid:62)(cid:258)(cid:410)(cid:286)(cid:374)(cid:410) (b) Training
+Figure 2: Network architecture of the scene layout generator. (a) At test time, a latent code is sampled from a learned
+distributionandissenttoadecoderwiththescenegraphtogeneratescenelayout. (b)Duringtraining,anencoderconverts
+thegroundtruthscenelayoutandthescenegraphintoadistribution,fromwhichthelatentcodeissampledanddecoded.
+Totrain thegraph-basedconditionalvariational autoen-
+meshes from the SUNCG dataset to construct a complete
+coderdescribedabove,weoptimize scene model. Specifically, for each object i in the gener-
+L(x,y;θ)=λD KL(P θe(z|x,y)|p(z|x))+L layout(Q θd(x,z),y), atedlayout,weretrieveits3DmodelM i fromtheSUNCG
+(2) datasetbyfindingthemodelswiththemostsimilarbound-
+where λ is the weight of the Kullback-Liebler divergence, ingboxparameterswithinitsclass.
+p(z|x) is the prior distribution of the latent vectors, which Afterinstantiatingafull3Dscenemodel,wethenutilize
+ismodeledasdiagonalGaussiandistribution,andL is adifferentiablerenderer[13]Rtorenderthecorresponding
+layout
+the loss function defined over layouts. L consists two semantic image S(cid:2) and the depth image D(cid:2) from the scene.
+layout
+parts: L andL . L isdefinedastheL1loss Therenderedimagesarethenusedtocomparewiththetar-
+position rotation position
+over each object’s bounding box parameters. For the rota- getsemanticsanddepthimage. Thisprovidesthegradients
+tion, we first discretize the range of the rotation angles to toupdateboththesampledlatentvectorsandtheweightsof
+24 bins, and define L as the negative log-likelihood the decoder, making the generated 3D layout to be consis-
+rotation
+loss between the discretized angles for all the objects. We tentwiththeinputsemanticsanddepth.
+applylearnedembeddinglayerstoprocessobjecttype,rota- Specifically,wenotetheentiregenerateprocessas
+tion,attribute,andrelations;andalinearlayertoprocessthe S(cid:2)=R S(yˆ 1,M 1,yˆ 2,M 2,...,yˆ N,M N), (3)
+bounding box. The rotation and box embeddings are used
+fortheencoderonly. Theobjecttype, boundingbox, rota- D(cid:2) =R D(yˆ 1,M 1,yˆ 2,M 2,...,yˆ N,M N), (4)
+tion, attribute, and relational embeddings have dimensions yˆ=Q θ (x,z), (5)
+[48,48,16,16,128]. Embeddings are computed separately d
+fortheencoderanddecoder. Theintermediatelatentrepre- whereR S denotestherenderedsemanticmap,R D denotes
+therendereddepthmap,yˆdenotesthegeneratedlayout,and
+sentation is a 64 dimensional vector for each object. Both
+N denotesthenumberofobjectsinthescenegraphx.
+theencoderanddecodercontainfivegraphconvolutionlay-
+To optimize the decoder and the latent vectors, we aim
+erswithaveragepoolingandbatchnormalization.
+to calculate the gradient of D(cid:2) and S(cid:2) with respect to z and
+At test time, we use the decoder to sample scene lay-
+outsfromscenegraphs. Wefirstsamplelatentvectorsfrom θ d. Notethatsincetheoutputofω i iny i isdiscretizedinto
+the prior distribution, modeled as a Gaussian distribution. 24 bins, i.e. ω i = bink, where k = argmax k({ω ik|k ∈
+[1,2,...24]}), the entire rendering process is not differen-
+Given the sampled latent vectors and the 3D scene graph,
+tiableduetotheargmaxoperator. Toovercomethis,weuse
+thedecoderthengeneratesmultiplepossiblelayouts.
+asoftmax-basedapproximationtocomputetheangleforthe
+3.2.Gradient-BasedLayoutRefinement i-thobject,definedas(assumingak-wayprediction)
+Hereweconsiderthecasewherewewouldliketogen- (cid:3)k eω ik
+x = 1, ω = (cid:4) ,
+e dr ea pt te ha imla ay go eu Dt t wha itt hfi ct os rra est pa org ne dt inl gay so eu mt, anre tip cr se Sse .n Ute sd ina gs oa un
+r
+k
+n (cid:3)=1
+ik keω ik
+ω = (ω ×x )−1.0.
+scene graph and an inferred layout, we first retrieve object i ik k
+3755
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+(cid:75)(cid:271)(cid:361)(cid:286)(cid:272)(cid:410)(cid:3)(cid:100)(cid:455)(cid:393)(cid:286)
+(cid:94)(cid:349)(cid:460)(cid:286)(cid:400)
+(cid:38)
+(cid:87)(cid:381)(cid:400)(cid:349)(cid:410)(cid:349)(cid:381)(cid:374)(cid:400)
+(cid:90)(cid:381)(cid:410)(cid:258)(cid:410)(cid:349)(cid:381)(cid:374)(cid:400)
+(cid:62)(cid:381)(cid:400)(cid:400)
+(cid:396)(cid:286)(cid:396)(cid:286)(cid:282)(cid:374)(cid:286)(cid:90)(cid:3)(cid:286)(cid:367)(cid:271)(cid:258)(cid:349)(cid:410)(cid:374)(cid:286)(cid:396)(cid:286)(cid:296)(cid:296)(cid:349)(cid:24)
+(cid:90)(cid:286)(cid:410)(cid:396)(cid:349)(cid:286)(cid:448)(cid:286) contributestoitsperformance. Finally,wedemonstrateour
+(cid:75)(cid:271)(cid:361)(cid:3)(cid:68)(cid:286)(cid:400)(cid:346)
+(cid:1006)(cid:856)(cid:1009)(cid:24)(cid:3)(cid:94)(cid:364)(cid:286)(cid:410)(cid:272)(cid:346) algorithmalsoenablesexemplarbasedlayoutsynthesisand
+refinement.
+(cid:94)(cid:272)(cid:286)(cid:374)(cid:286)
+(cid:39)(cid:396)(cid:258)(cid:393)(cid:346)
+4.1.Setup
+(cid:38)(cid:349)(cid:374)(cid:286)(cid:3)(cid:410)(cid:437)(cid:374)(cid:286)
+For layout generation, we learn from bedroom layouts
+(cid:94)(cid:258)(cid:373)(cid:393)(cid:367)(cid:286)(cid:282) (cid:62)(cid:62)(cid:258)(cid:258)(cid:455)(cid:455)(cid:381)(cid:381)(cid:437)(cid:437)(cid:410)(cid:410) (cid:87)(cid:396)(cid:286)(cid:282)(cid:349)(cid:272)(cid:410)(cid:286)(cid:282)
+(cid:62)(cid:258)(cid:410)(cid:286)(cid:374)(cid:410) (cid:24)(cid:286)(cid:272)(cid:381)(cid:282)(cid:286)(cid:396) (cid:62)(cid:258)(cid:455)(cid:381)(cid:437)(cid:410) in SUNCG [28]. The training dataset consists of 53,860
+(cid:17)(cid:258)(cid:272)(cid:364) bedroom scenes with 13.15 objects in each scene on aver-
+(cid:87)(cid:396)(cid:381)(cid:393) age. During training, we use synthetic scene graphs sam-
+Figure3: Wecanfine-tuneobjectpositions,sizes,androta- pled from the ground truth scene layout, which can avoid
+tionsbycomputingthedifferenceinestimatedandground- human labeling and also serve as data augmentation. At
+truth2.5Dsketchesandback-propagatingthegradients. testtime,wecaneitherusehuman-createdscenegraphsor
+samplescenegraphsfromthevalidationsetasmodelinput.
+B bey twd eo ei nng ths eo, rew nde ec rea dn it mak ae geg sra D(cid:2)di ,e S(cid:2)nts ano df tt hh ee tl ao rs gs etfu imnc at gio en
+s
+batT chh ee sc ,V wA hE ich3D takg era sp ah ron ue ntw do 6r 4k his ot ur ra sin we id thon aa sit no gta lelo Tf i6 t0 a0 nk
+D
+L
+2, (S D. ,DA (cid:2))si +m Lple crol so s-s es ntrf ou pyn (c Sti ,o S(cid:2)n ).can Tb he isd he ofi wne ed vea r,s lL et ao dta sl =
+to
+X inp g. rF ato er oe fac 1h 0−b 4at ic sh uw see ds wam itp hle th1 e2 A8 ds ac mene opg tr ia mp ih zs e. r.A Wl eea urn se-
+highly unstable gradients in practice. To stabilize the lay- three losses with the following weights: λ pos = 1,λ rot =
+out refinement process, we calculate the loss between the 1,andλ
+KL
+=0.1.
+depth images in a per-class manner. More specifically, for
+each class c, we calculate its class-conditioned depth map 4.2.SceneLayoutSynthesis
+D C as
+Wefirstevaluateour3D-SLNonscenelayoutsynthesis
+D c[S ==c]=D⊗S[S ==c], (6) from a scene graph. We sample 10 layouts per scene, and
+D c[S (cid:4)=c]=mean(D c[S ==c]). (7) calculatetheaveragestandarddeviationforobjectsize,po-
+sition, and rotation. Layout synthesis alone during testing
+Thatis,wekeepthedepthvaluesthatlieswithinaparticular ishighlyefficient,takingabout70msonaGPUforabatch
+semanticclassc,andfilltherestofthevalueswiththemean
+of128graphs.
+d Le dp ept th ho =f(cid:4)thi cs Lcl 2a (s Ds (cid:2). cT ,Dhe cr )e .fore,werewritethedepthlossas
+B ara ts se cl ein ne es l. ayoW ue tsc yo nm thp ea sr ie sao lu gr orm ito hd me ,l Dw eit eh pSth ye nts hta [t 3e 1-o ].f- Fth oe l--
+This can be understood as a class-wise isolation of the
+lowing Qi et al. [23], we also include two additional base-
+depthgradient,andcanpreventspuriousoptimaduringthe
+lines: Random,whereeveryobjectisdistributedrandomly
+layoutrefinementprocess. Wealsoimposeasoftconstraint
+inaroom;andPerturbed,whereweperturbobjectpositions
+onthechangeinobjectsizeswithanadditionalL 1 penalty againsttheirgroundtruthpositionswithavarianceof0.1on
+on the size of each object during optimization at a given theirspatiallocation(alllocationsarenormalizedto[0,1])
+time step s(cid:2) t compared to the original size s(cid:2) 0. To facil- andwithastandarddeviationof3binsontheirrotation(ap-
+itate the optimization process when target and proposed
+proximately0.785radians).
+layouts may not have an exact match in shape, we apply
+Metrics. We analyze both the accuracy and diversity of
+multi-scale average pooling on both the candidate and tar-
+theresultsthroughthreemetrics:
+get. Thetotalrefinementlosswithrespecttoatargetdepth
+andsemanticisL
+total
+= αL
+size
++βL
+depth
++γL sem, where • Scene graph accuracy measures the percentage of
+α, β, and (cid:4)γ are hyper-parameters, and L
+size
+= |s(cid:2) t,s(cid:2) 0| 1, scenegraphrelationshipsagivenlayoutrespects, and
+L
+depth
+= c|D(cid:2) c,D c|2 2,andL
+sem
+=L cross-entropy(S(cid:2),S). isametricthatmeasuresinput-outputalignment.
+Thisallowsustoobtainmeaningfulgradientsfromaex- • L 1 loss of the proposed and ground truth bounding
+emplar2Dprojectionofascenetooptimizeyˆbycalculating
+boxes. Itshouldbenotedthatsincethegoalisthegen-
+a gradient with respect to the sampled latent vector z and eratemultipleplausiblelayouts,L 1isnotnecessarilya
+the decoder. The framework for our gradient based layout meaningfulmetricandisprovidedforreferenceonly.
+refinementisshowninFigure3. • The standard deviation of the size, position, and ro-
+tation of objects in predicted scene layouts. Because
+4. Experiments
+DeepSynthproduceslayoutsinanautoregressivefash-
+ion, a particular object of interest (e.g., a bed) might
+In this section, we compare our approach with state-of-
+appear at various steps across multiple trials. Due to
+the-artscenelayoutsynthesisalgorithmstodemonstratethe
+the lack of correspondence, we can only compute the
+qualityanddiversityofoursynthesizedscenes. Additional
+standarddeviationforallobjectswithineachsemantic
+ablation studies show that each component in our model
+3756
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+Model SceneGraphAcc. (%) L 1 boxloss STD(size) STD(position) STD(rotation)
+RandomLayout 57.1 0.317 0.000 0.244 6.48
+PerturbedLayout 82.6 0.080 0.000 0.100 3.00
+DeepSynth N/A N/A N/A 0.129 2.27
+GCN 86.3 0.111 0.000 0.000 0.00
+GCN+noise 86.9 0.109 0.001 0.002 0.18
+3D-SLN(Ours) 94.3 0.148 0.026 0.078 4.77
+Table1: Quantitativeresultsonscenelayoutgeneration. WeusescenegraphaccuracyandL 1 boundingboxlosstoevaluate
+theaccuracyofgeneratedscenelayouts. Standarddeviationofboxesandanglesareusedtomeasurethediversityofscene
+layouts. Intheaboveevaluation,boundingboxesarenormalizedintherange[0,1],whileanglesarerepresentedasintegers
+rangingfrom0to23. DeepSynth[31]isusedasabaseline.
+category,andaveragethestandarddeviationsacrossall
+Metrics Pre-Finetune Post-Finetune Improve(%)
+categories. For our model and the random/perturbed
+layout models, we calculate standard deviations for 3DIoU 0.2353 0.3035 28.9
+eachobjectofinterestandcomputetheirmean. DepthMSE 0.0525 0.0480 8.64
+SemanticCE 2.9471 2.8504 3.28
+Results. Table 1 shows that our model has the highest
+Table 2: Quantitative results on finetuning with 2.5D
+scenegraphaccuracyanddiversity. Thisindicatesthatour
+sketches of a target layout. We measure the Intersection-
+model has successfully learned to position objects accord-
+over-Union(IoU)ofthe3Dboundingboxes,class-specific
+ingtoadistributionratherthanapproximatingafixedloca-
+meansquarederror(MSE)ofthedepthmaps,aswellasthe
+tion. While DeepSynth has a higher standard deviation in
+cross-entropyloss(CE)onsemanticmaps.
+object positions, it has a lower standard deviation in rota-
+tions. Italsodoesnotallowfine-grainedcontrolofthesyn-
+scene layout from a scene graph. We perform optimiza-
+thesisprocess. Although‘PerturbedLayout’hasthelowest
+tion over 150 randomly selected scene graphs. Here, for
+L 1 loss,ithasasignificantlylowerscenegraphaccuracy. samplingdifferentscenelayoutsfromourstochasticmodel,
+4.3.AblationStudy we use the latent sampled from the ground truth bounding
+boxesofagivenscene. Topreventcaseswhenwallorob-
+We perform ablation studies on our scene layout gener- jectocclusionnegativelyimpactoptimizationperformance,
+ation network. By utilizing a graph convolution network we takesix attemptsat a givenscene graph, andselect the
+combinedwithaVAE,itisabletogeneratemultipleplau- best. Theanalysis-by-synthesisprocessrequiresaforward
+siblelayoutsfromagivenscenegraph. (rendering)passtoproducedepthandsemanticmaps,then
+Baselines. Following Johnson et al. [11], we run an ab- abackwardspasstoproducegradients. Weoptimizefor60
+lated version of our network (denoted as GCN) that con- steps,takingthreeminutesforeachsceneonaverage.
+sistsofasinglegraphconvolutionnetworkfollowedbyan Metrics. Weusethreemetricsforthisproblem: Thefirst
+MLP to predict the layout conditioned on a scene graph. isdonein3D,andcapturestheIntersection-over-Union(3D
+This baseline is deterministic. We also propose a different IoU)ofobjectsandtheirtargetafteralltransformations(ro-
+method, GCN+noise, which samples noises from N(0,1) tationsandtranslations)areapplied. Thelattertwoareper-
+toperturbthelayoutoftheGCNbaseline. formed inthe 2D projection: wecalculate a mean-squared
+Results. Table 1 shows that our full model (3D-SLN) error(MSE)onthepredictedandground-truthdepthmaps;
+achieves the highest scene graph accuracy, indicating that wealsocalculatethecross-entropy(CE)lossofourcurrent
+mostofthesynthesizedscenelayoutsindeedfollowthein- proposedlayoutagainstthetargetlayout.
+put scene graph. Our full model also achieves the highest Results. TheresultscanbeseeninTable2. Wealsoper-
+diversity,asmeasuredinthestandarddeviationinthesize, formqualitativeevaluationsonlayoutsinFigure4. Asex-
+position,androtationofobjectsinthesynthesizedscene. pected, the initial proposed layout shares the same scene
+graph with the target layout, the action location of the ob-
+4.4.End-to-EndLayoutRefinement
+jects can be different from the target, because our layout
+We now demonstrate that our model can be guided by synthesis is conditioned on scene graph only. After opti-
+2.5D sketches and semantic maps when synthesizing 3D mization,weareabletofitthetargetlayoutreasonablywell.
+MultipleviewsofsynthesizedscenesareshowninFigure5.
+3757
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+Proposal Target Post Finetune Proposal Target Post Finetune
+(a)
+(b)
+(c)
+(d)
+Figure4:Eachrowshowsatestcaseforexemplar-basedlayoutfine-tuning.Theleftthreecolumnsrepresentthe2Dsemantic
+mapoftheinitiallyproposedlayout,thegroundtruthtarget,andthesemanticmapafterlayoutoptimization. Therightthree
+columnsrepresentthe2.5Ddepthmapsimilarly. (a)Afterfine-tuning,thebedhasmovedtothecenterasinthetarget,and
+thetwonightstandsbecomemoreprominent;(b)Thelamp(inlightblue)hasmoveddownwards;(c)Thedeskhasmoved
+totherightafteroptimizationandthebedhasbecomecloser;(d)Thebedhasmovedclosertothesofa.
+1
+enecS
+2
+enecS
+Figure5: Multipleviewsofsynthesizedscenes.
+Analyzingthelatentspace. Weexaminethelatentrepre-
+sentationofthescenelayouts. InFigure6,wedemonstrate
+thatthelayoutofobjectscansmoothlychangeasweinter-
+polate two random latent vectors. In Figure 8, we demon-
+stratetheeffectofmanipulatingdimension11and62ofthe
+latentvectorforthebedobject.
+User study. We randomly sample 300 scene graphs and,
+foreach,generatefivelayoutsusingtheGCN+noisemodel
+1
+noitalopretnI
+2
+noitalopretnI
+Figure6: Topdownvisualizationofaroomaswelinearly
+interpolate between the latent vector representing layouts
+forthesamescenegraph.
+and five using our 3D-SLN model, respectively. We then
+presentthelayoutsinatopdownviewalongwiththescene
+graphinsentencestosubjectsonAmazonMechanicalTurk,
+askingthemwhichsetoflayoutsismorediverse. Eachsub-
+jectisshowntwelvescenegraphs. 78.9%ofresponsessug-
+gestedlayoutsgeneratedby3D-SLNbemorediverse.
+3758
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+(cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:349)(cid:374)(cid:3)(cid:296)(cid:396)(cid:381)(cid:374)(cid:410)(cid:3)(cid:381)(cid:296) (cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:410)(cid:286)(cid:367)(cid:286)(cid:448)(cid:349)(cid:400)(cid:349)(cid:381)(cid:374) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410)
+(cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:282)(cid:286)(cid:400)(cid:364) (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282) (cid:381)(cid:374) (cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410) (cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410) (cid:349)(cid:374)(cid:3)(cid:296)(cid:396)(cid:381)(cid:374)(cid:410)(cid:3)(cid:381)(cid:296) (cid:271)(cid:286)(cid:282) (cid:381)(cid:374) (cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410) (cid:271)(cid:286)(cid:346)(cid:349)(cid:374)(cid:282)
+(cid:271)(cid:286)(cid:346)(cid:349)(cid:374)(cid:282) (cid:282)(cid:396)(cid:286)(cid:400)(cid:400)(cid:286)(cid:396) (cid:272)(cid:346)(cid:258)(cid:349)(cid:396) (cid:367)(cid:286)(cid:296)(cid:410)(cid:3)(cid:381)(cid:296) (cid:271)(cid:286)(cid:282) (cid:271)(cid:286)(cid:346)(cid:349)(cid:374)(cid:282) (cid:367)(cid:286)(cid:296)(cid:410)(cid:3)(cid:381)(cid:296) (cid:410)(cid:286)(cid:367)(cid:286)(cid:448)(cid:349)(cid:400)(cid:349)(cid:381)(cid:374) (cid:271)(cid:286)(cid:346)(cid:349)(cid:374)(cid:282) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:349)(cid:374)(cid:3)(cid:296)(cid:396)(cid:381)(cid:374)(cid:410)(cid:3)(cid:381)(cid:296) (cid:410)(cid:286)(cid:367)(cid:286)(cid:448)(cid:349)(cid:400)(cid:349)(cid:381)(cid:374) (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282)
+(cid:282)(cid:396)(cid:286)(cid:400)(cid:400)(cid:286)(cid:396) (cid:271)(cid:286)(cid:346)(cid:349)(cid:374)(cid:282) (cid:271)(cid:286)(cid:282) (cid:271)(cid:286)(cid:282) (cid:349)(cid:374)(cid:3)(cid:296)(cid:396)(cid:381)(cid:374)(cid:410)(cid:3)(cid:381)(cid:296) (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282) (cid:349)(cid:374)(cid:3)(cid:296)(cid:396)(cid:381)(cid:374)(cid:410)(cid:3)(cid:381)(cid:296) (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282) (cid:271)(cid:286)(cid:282) (cid:367)(cid:286)(cid:296)(cid:410)(cid:3)(cid:381)(cid:296) (cid:410)(cid:286)(cid:367)(cid:286)(cid:448)(cid:349)(cid:400)(cid:349)(cid:381)(cid:374) (cid:272)(cid:258)(cid:271)(cid:349)(cid:374)(cid:286)(cid:410) (cid:381)(cid:374) (cid:367)(cid:286)(cid:296)(cid:410)(cid:3)(cid:381)(cid:296) (cid:271)(cid:286)(cid:282)
+(cid:894)(cid:258)(cid:895)
+(cid:894)(cid:271)(cid:895)
+Figure 7: Qualitative results for conditional image synthesis. Top: input scene graph; Middle: images generated by our
+model;Bottom: imagesgeneratedbyJohnsonetal.[11],whichdoesnotincorporate3Dinformation. Ourmodelgenerates
+betterresultsviaitsunderstandingof3Dscenelayout.
+11
+noisnemiD
+26
+noisnemiD
+Figure 8: Top down visualization of a room as we manip-
+ulate individual dimensions of latent vector for bed object
+(orange). Fordimension11,notebedelongation.
+sesac
+eruliaF
+sesac
+lufsseccuS
+we show results on scene graph–based image synthesis,
+sentence-basedscenelayoutsynthesis,andexemplar-based
+scenelayoutsynthesis.
+5.1.SceneGraph–BasedImageSynthesis
+As our model produces not only 3D scene layouts, but
+also 2.5D sketches and semantic maps, we train an image
+translationnetwork,SPADE[22],thattakesindepthandse-
+manticmapsandsynthesizesanRGBimage. Trainingdata
+for the SPADE model, including RGB, depth, and seman-
+tic maps, are all taken from the Structured3D dataset [36],
+and are randomly cropped to 256×256 after we resize the
+longestedgeto480pixels. Thetrainingdatasetconsistsof
+82,838imagestotal. Wecompareourmodelwiththestate-
+of-the-art,scenegraph-to-imagemodel[11].
+ResultsareshowninFigure7. Theimagesgeneratedby
+ourmodelaresharpandphoto-realistic,withcomplexlight-
+ing. Meanwhile,thebaseline[11]canonlygenerateblurry
+Figure 9: Top down visualization of failure cases (left of
+images, where sometimes the objects are hardly recogniz-
+dottedline)comparedtoagoodlayout. Alllayoutsaresyn-
+ableandfailtopreservethe3Dstructure.
+thesizedfromthesamescenegraph.
+5.2.Sentence-BasedSceneLayoutSynthesis
+Failurecases. AsshowninFigure9,scenesynthesisper-
+Conventionaltext-to-imagesynthesismethodsuseatext
+formancedecreaseswhenagraphcontainstoomanyobjects
+encoder to convert an input sentence into a latent code,
+thatmightoverlap. Aspartoffuturework,thiscouldbeim-
+whichisthenfedintoaconditionalGANtogenerateanim-
+provedduringtrainingbyaddinganadversarialloss,ordur-
+age. However existing methods only work when the input
+inginferencebyrejectingimplausiblelayoutswiththeuse
+sentence has only one or a few objects. The task becomes
+of physical simulation as in [3], or by performing simple
+more challenging when input text consists of multiple ob-
+collisiondetectionongeneratedlayouts.
+jectsandcontainscomplexrelationships. Wecompareour
+approachagainstAttnGAN[33], thestate-of-the-artimage
+5. Applications
+synthesisalgorithmthattakesinsentencesasinput.
+Our scene graph–based layout synthesis algorithm en- QualitativeresultsareshowninFigure10. AsAttnGAN
+ables many downstream applications. In this section, suffersfromdeteriorationwhentherearetoomanyobjects,
+3759
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+a tall television is on a short a tall wooden bed is behind a short fabric bed is in front of the second tall fabric bed is on
+wooden cabinet, a short fabric touching a short fabric chair, a large fabric desk, the desk is the left of a small television, a
+bed is in front of a small the chair is front touching the behind a large wooden cabinet, large wooden desk is behind the
+wooden desk, the bed is on the bed the cabinet is left touching the first tall fabric bed, a tall
+right of the television, the bed wooden cabinet is on the right
+television is in front of a tall of the second bed, the cabinet is
+wooden chair, the chair is in on the right of the first bed, the
+front of the desk cabinet is in front of the desk
+Figure10: ComparisonwithAttnGAN[33]. Theimagesonthetoprowaregeneratedbyourmodel,whiletheimagesonthe
+bottomrowaregeneratedbyAttnGAN[33]. Incomparison,ourmodelgenerateshigher-qualityscenes.
+we have constricted each individual description to have at
+mostfivesentences. Our3D-SLNgeneratesmorerealistic (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282) (cid:381)(cid:374)
+imagescomparedwithAttnGAN. (cid:367)(cid:286)(cid:296)(cid:410)(cid:3)(cid:381)(cid:296) (cid:367)(cid:258)(cid:373)(cid:393)
+(cid:271)(cid:286)(cid:282)
+5.3.Exemplar-BasedSceneLayoutSynthesis
+(cid:271)(cid:286)(cid:282) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296)
+Ourmodelcanalsobeusedtoreconstructandcreatenew (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282) (cid:381)(cid:374)
+layouts based on an example image. We use Cooperative (cid:282)(cid:396)(cid:286)(cid:400)(cid:400)(cid:286)(cid:396) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:367)(cid:258)(cid:373)(cid:393)
+SceneParsing[8]topredictobjectclassesand3Dbounding
+(cid:271)(cid:286)(cid:282) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:367)(cid:258)(cid:373)(cid:393) (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282)
+boxesfromanimage.Forourpurposes,wetestonbedroom
+(cid:367)(cid:286)(cid:296)(cid:410)(cid:3)(cid:381)(cid:296) (cid:374)(cid:349)(cid:336)(cid:346)(cid:410)(cid:400)(cid:410)(cid:258)(cid:374)(cid:282) (cid:381)(cid:374) (cid:381)(cid:374)
+imagessampledfromtheSUNRGB-Ddataset[27]. After
+(cid:282)(cid:396)(cid:286)(cid:400)(cid:400)(cid:286)(cid:396) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:396)(cid:349)(cid:336)(cid:346)(cid:410)(cid:3)(cid:381)(cid:296) (cid:367)(cid:258)(cid:373)(cid:393)
+extracting 3D bounding boxes for each object, we infer a
+3D scene graph with the same object classes and relation- Figure11: Ontheleftmostcolumnareimagesoftheclass
+shipsthatourmodelistrainedon. Thisscenegraphissent ‘bedroom’fromtheSUNRGB-Ddataset[27]. 3Dbound-
+toourmodeltogeneratelayoutsthatobservetherelational ing boxes are calculated per object, and are fed to a rule-
+constraintspresentinthescenegraph. basedparser,whichgeneratestherelationshipsandcreates
+We present some qualitative results in Figure 11. Our ascenegraph. Thescenegraphisthenfedtoour3D-SLN
+modelisnotonlycapableofrecoveringtheoriginallayout togeneratediverselayouts. Finalimagesarerenderedwith
+in the example image, but it can also create new layouts SPADE[22].
+accordingtothescenegraph(noticethedifferentlocations
+layouts compared with baselines. Our model can also be
+androtationsofthebedandnightstand).
+integratedwithadifferentiablerenderertorefine3Dlayout
+conditionedonasingleexample. Ourmodelfindswideap-
+6. Conclusion
+plicationsindownstreamscenelayoutandimagesynthesis
+In this paper, we have introduced a novel, stochas- tasks. Wehopeourworkwillinspirefutureworkincondi-
+tic scene layout synthesis algorithm conditioned on scene tionalscenegeneration.
+graphs.Usingscenegraphsasinputallowsflexibleandcon-
+Acknowledgements. This work is supported by NSF
+trollable scene generation. Experiments demonstrate that
+#1447476,ONRMURIN00014-16-1-2007,andNIHT90-
+our model generates more accurate and diverse 3D scene
+DA022762.
+3760
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+[27] Shuran Song, Samuel P Lichtenberg, and Jianxiong Xiao.
+Sunrgb-d:Argb-dsceneunderstandingbenchmarksuite.In
+ProceedingsoftheIEEEconferenceoncomputervisionand
+patternrecognition,pages567–576,2015. 8
+[28] ShuranSong,FisherYu,AndyZeng,AngelXChang,Mano-
+lis Savva, and Thomas Funkhouser. Semantic scene com-
+pletion from a single depth image. In Proceedings of the
+IEEEConferenceonComputerVisionandPatternRecogni-
+tion,pages1746–1754,2017. 2,4
+[29] Ayush Tewari, Michael Zollho¨fer, Pablo Garrido, Florian
+Bernard, Hyeongwoo Kim, Patrick Pe´rez, and Christian
+Theobalt. Self-supervised multi-level face model learning
+for monocular reconstruction at over 250 hz. In Proceed-
+ingsoftheIEEEConferenceonComputerVisionandPattern
+Recognition,pages2549–2559,2018. 2
+[30] KaiWang,Yu-AnLin,BenWeissmann,ManolisSavva,An-
+gelXChang, andDanielRitchie. Planit: Planningandin-
+stantiatingindoorsceneswithrelationgraphandspatialprior
+networks.ACMTransactionsonGraphics(TOG),38(4):132,
+2019. 2
+[31] Kai Wang, Manolis Savva, Angel X Chang, and Daniel
+Ritchie. Deepconvolutionalpriorsforindoorscenesynthe-
+sis. ACMTransactionsonGraphics(TOG),37(4):70,2018.
+2,4,5
+[32] DanfeiXu,YukeZhu,ChristopherBChoy,andLiFei-Fei.
+Scenegraphgenerationbyiterativemessagepassing.InPro-
+ceedings of the IEEE Conference on Computer Vision and
+PatternRecognition,pages5410–5419,2017. 2
+[33] Tao Xu, Pengchuan Zhang, Qiuyuan Huang, Han Zhang,
+ZheGan,XiaoleiHuang,andXiaodongHe. Attngan: Fine-
+grainedtexttoimagegenerationwithattentionalgenerative
+adversarial networks. In Proceedings of the IEEE Confer-
+ence on Computer Vision and Pattern Recognition, pages
+1316–1324,2018. 7,8
+[34] Lap-FaiYu, SaiKitYeung, Chi-KeungTang, DemetriTer-
+zopoulos,TonyFChan,andStanleyOsher. Makeithome:
+automatic optimization of furniture arrangement. ACM
+Trans.Graph.,30(4):86,2011. 1,2
+[35] Yinda Zhang, Shuran Song, Ersin Yumer, Manolis Savva,
+Joon-Young Lee, Hailin Jin, and Thomas Funkhouser.
+Physically-based rendering for indoor scene understanding
+usingconvolutionalneuralnetworks. InProceedingsofthe
+IEEEConferenceonComputerVisionandPatternRecogni-
+tion,pages5287–5295,2017. 2
+[36] Jia Zheng, Junfei Zhang, Jing Li, Rui Tang, Shenghua
+Gao, and Zihan Zhou. Structured3d: A large photo-
+realisticdatasetforstructured3dmodeling. arXivpreprint
+arXiv:1908.00222,2019. 2,7
+3762
+Authorized licensed use limited to: Princeton University. Downloaded on February 15,2024 at 00:23:21 UTC from IEEE Xplore. Restrictions apply.
+

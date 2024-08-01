@@ -1,0 +1,938 @@
+References:
+SpatialScienceandNetworkScience:ReviewandOutcomes 311
+package combining spatial statistics, GIS, graph visualization, and network analysis
+“all inone”. Theextenttowhich nodesinaclusteraregeographicneighboursand/or
+share similar socio-economic profiles has been poorly studied. The importance of
+distance is thus often taken for granted by geographers, while physicists directly
+measureitsroleinnetworks.Dynamicclusteringtechniquescouldalsobefurtherused
+by geographers in their study of regionalization and globalization processes. In other
+words, the added value of geographers in (complex) network analysis is their core
+interestfor spatial matters,while mostnetworksare actuallyspatially and territorially
+embedded.Furtherengagementinthevisualisationofspatialnetworksthroughactive
+collaboration between geographers and computer scientists has already started, how-
+ever (see Lambert et al. 2013). Perhaps, after a phase of rather passive application of
+existingmethods,geographersshouldgofurtherintheconceptualizationandanalysis
+ofnetworks,bycollaboratingfurtherwithotherdisciplinesandscientificfields.
+Acknowledgments TheresearchleadingtotheseresultshasreceivedfundingfromtheEuropeanResearch
+CouncilundertheEuropeanUnion’sSeventhFrameworkProgramme(FP/2007-2013)/ERCGrantAgreement
+n.[313847]“WorldSeastems”.
+References
+Alderson DL (2008) Catching the “network science” bug: Insight and opportunity for the operations
+researcher.OperRes56(5):1047–1065
+Amiel M, Rozenblat C andMélançon G (2005) Réseaux multi-niveaux: l’exemple deséchangesaériens
+mondiauxdepassagers.M@ppemonde,3:http://mappemonde.mgm.fr/num7/articles/art05302.html
+AnderssonC,HellervikA,LindgrenK(2005)Aspatialnetworkexplanationforahierarchyofurbanpower
+laws.PhysicaA345(1–2):227–244
+AnderssonC,FrenkenK,HellervikA(2006)Acomplexnetworkapproachtourbangrowth.EnvironPlanA
+38(10):1951–1964
+BarabásiAL,AlbertR(1999)Emergenceofscalinginrandomnetworks.Science286(5439):509–512
+Barber MJ, Fischer MM, Scherngell T (2011) The community structure of research and develop-
+ment cooperation in Europe: evidence from a social network perspective. Geogr Anal 43(4):
+415–432
+BarnettL,DiPaoloI,BullockS(2007)Spatiallyembeddedrandomnetworks.PhysRevE76(5):056115
+Barrat A, Barthélemy M and Vespignani A (2005) The effects of spatial constraints on the evolution of
+weightedcomplexnetworks.JournalofStatisticalMechanics:TheoryandExperiment,P05003
+BarthélemyM(2003)Crossoverfromscale-freetospatialnetworks.EurophysLett63:915
+BarthélemyM(2010)Spatialnetworks.PhysRep499:1–101
+BarthélemyM,FlamminiA(2009)Co-evolutionofdensityandtopologyinasimplemodelofcityformation.
+NetworksSpatEcon9(3):401–425
+Batty M (2008) Cities as Complex Systems: Scaling, Interactions, Networks, Dynamics and Urban
+Morphologies.UCLCenterforSpatialAnalysis,paper131(63pages)
+Beauguitte L (2010) Looking for European Union in the Word-System: A multi-graph approach, Paper
+presented at the European Regional Science Association Conference, http://www-sre.wu.ac.at/ersa/
+ersaconfs/ersa10/ERSA2010finalpaper698.pdf
+BéguinHandThomasI(1997)Theshapeofthetransportationnetworkandtheoptimallocationoffacilities.
+How to measure the shape of a network? Cybergeo Eur J Geogr 26: http://cybergeo.revues.org/
+index2189.html(inFrench)
+BerroirS,CattanN,GuéroisM,PaulusFandVacchiani-MarcuzzoC(2012)Lessystèmesurbainsfrançais,
+SynthèseDATAR,TravauxenLignen°10
+BlondelVD,KringsGMandThomasI(2010)RegionsandbordersofmobiletelephonyinBelgiumand
+around Brussels, Brussels Studies, 42, http://perso.uclouvain.be/vincent.blondel/publications/10B.pdf
+(AccessedJune2012)
+
+Annexes/Appendices:
+
+Body Text:
+NetwSpatEcon(2014)14:297–316
+DOI10.1007/s11067-013-9222-6
+Spatial Science and Network Science: Review
+and Outcomes of a Complex Relationship
+CésarDucruet&LaurentBeauguitte
+Publishedonline:23December2013
+#SpringerScience+BusinessMediaNewYork2013
+Abstract Fordecades,thespatialapproachtonetworkanalysishasprincipallyfocused
+onplanarandtechnicalnetworksfromaclassicgraphtheoryperspective.Referenceto
+models and methods developed by other disciplines on non-planar networks, such as
+sociology and physics, is recent, limited, and dispersed. Conversely, the physics
+literature that developed the popular scale-free and small-world models pays an
+increasing attention to the spatial dimension of networks. Reviewing how complex
+network research has been integrated into geography and regional science reveals a
+highheterogeneityamongspatialscientistsaswellaskeydirectionsforincreasingtheir
+roleinsidemultidisciplinaryresearchesonnetworks.
+Keywords Complexnetwork.Scale-freenetwork.Small-worldnetwork.Geography.
+Regionalscience.Spatialnetwork
+1Introduction
+A rapid surge of interest in networks in the late 1990s throughout natural and social
+scienceshaswitnessedtheemergenceanddiffusionofnewconceptsandmeasures.The
+suddeninterestbyphysicistsinnetworkanalysisinthelate1990sprincipallyprovided
+modelsofnetworksbasedontwomaindimensions:thesmall-worldnetwork(hereafter
+SWN), based on average distance path and density of neighborhoods (Watts and
+Strogatz 1998; Watts2003),and the scale-freenetwork (SFN)based onthe hierarchy
+ofhubs(BarabásiandAlbert1999).SFNandSWNhavequicklyspreadacrossvarious
+disciplines and scientific fields (Newman et al. 2006). While physicists have increas-
+ingly integrated the spatial dimension in their works (Barthélemy 2010), geographers
+and regional scientists seem to have so far paid rather limited attention to complex
+C.Ducruet(*)
+FrenchNationalCentreforScientificResearch(CNRS),UMR8054Géographie-Cités,Paris,France
+e-mail:cdu@parisgeo.cnrs.fr
+L.Beauguitte
+UMR6266IDEES,Rouen,France
+e-mail:beauguittelaurent@hotmail.com
+298 C. Ducruet,L. Beauguitte
+networks research. Farfrominterpretingthisstate ofaffairs asa weakness, thispaper
+proposesareviewofexistingapplications.
+This review takes its inspiration from earlier ones by Borgatti et al. (2009) and
+Crossley (2005, 2008) about sociology as well as Alderson (2008) on operations
+research and Ducruet and Lugo (2013a) on transport networks and systems of cities.
+We examine how the most popular theoretical models of networks proposed by
+physicists (i.e. scale-free and small-world) have been integrated in the works of
+geographers and regional scientists, assess what have been the benefits and speculate
+whethersuchconceptsarelikelytoincreasetheirinfluenceinfurtherworks.Inafirst
+attempt to evaluate the benefits of these approaches in geography, Rozenblat and
+Mélançon(2007)noticedthat“thistypeofempiricalapproachcombiningaconceptual
+approach of ‘small world theory’ and dedicated tools has not been developed in
+geography”. Although more recent contributions from regional science do support
+the necessity for further bridging “spatial economic science” with “network science”
+(Reggiani 2011), little has been done in classifying existing applications of complex
+networktheoryingeographicalresearch.
+Thestructureofthepaperisasfollows.Thefirstsectionbrieflyrecallstheevolution
+of network analysis in geography and regional science. Secondly, we provide a short
+reviewontheemergenceofcomplexnetworkresearch,followedbyamorescrutinizing
+look at the influence of space in the works of physicists. The third section examines
+howgeographersandregionalscientistshaveusedthesemeasuresandconceptsintheir
+works either independently or through collaborations with physicists and computer
+scientists.Inconclusion,wediscussdifferencesinrespectiveapproachesandpotential
+pathsforfurtherresearch.
+2NetworkAnalysisinGeographyandRegionalScience
+Withoutbeing exhaustive,thisreviewwillconsiderthe evolutionofnetworkanalysis
+in geography as a whole in the last few decades before addressing current issues and
+challenges.Sincethequantitativerevolutionofthe1960s,networkanalysisingeogra-
+phyhasremainedrathersimple.Networkanalysisismainlyusedbytransportgeogra-
+pherswhoapplygraphtheorytoplanar–anetworkiscalledplanarwhenitsedges(or
+lines) do not cross each other – and technical networks (e.g. roads and railways, see
+Kansky 1963; Haggett and Chorley 1969; Dupuy 1988; Mathis 2003). The wider
+paradigmshiftfromstructuraltobehavioralapproachesisseenbyWaters(2006)asa
+main cause for the declining interest in spatial analysis as a whole, where network
+analysis ‘remained somewhat of a backwater’ notably due to limited data availability
+andcomputationalpower(XieandLevinson2009)anddespiteimprovementsprovided
+by Geographical Information Systems (GIS) since the 1980s. Following an early
+methodological transfer from mathematics and notably from French mathematician
+Berge(Kansky1963:10–13),severalmeasureskeptbeingusedbygeographersunder
+differentnamesthaninotherdisciplines,thusreflectinguponlimitedinterdisciplinary
+discussions(e.g.α,β,andγindices).AccordingtoGormanetal.(2004),fewscholars
+have improved existing connectivity indices (i.e. indices that measure the quality of
+connection between nodes), because such progress remained hindered by a lack of
+knowledgeaboutthehistoryanddevelopmentofnetworkanalysisingeographyandin
+SpatialScienceandNetworkScience:ReviewandOutcomes 299
+other disciplines (Waters 2006). The review of indices was recently updated by
+Melançonand Rozenblat (2013) intheir effort for further bridging computersciences
+andgeography.
+Thissituationalsoappliestosoftwarepackagesdedicatedtonetworkanalysiswhere
+graphnonplanarity–hereedgescancrosseachother–isconsideredasanorm,andthe
+aforementioned indices are generally unknown1. Indeed, such classic graph theory
+measureshavebeencriticizedduetotheiroutdatedcharacter(Waters2006)andlackof
+robustness for comparing different network topologies (Béguin and Thomas 1997;
+KurantandThiran2006),buttheyarestillusednowadaystodescribetheevolutionof
+onegivennetwork(Scottetal.2005;Bretagnolle2009;XieandLevinson2007,2009;
+Wang et al. 2009). Such measures were also successfully applied by geographers to
+manyplanarnetworksinearlyworkssuchasthedensityofnetworksallovertheworld
+(Garrison 1960), the growth of the French railway network (Dancoisne 1984), the
+connectivity of the Parisian subway network (Cicéri et al. 1977), and the hierarchical
+structure of river networks (see also Haggett and Chorley 1969). Other contributions
+about the modeling of transport network evolution (Taaffe et al. 1963) had great
+influence on port geography research for instance (Ng and Ducruet forthcoming).
+Thischaracterizationhas changed inthe 1990s when geographers startedtorepresent
+and analyze non-planar networks, thereby stepping out of ‘classic’ graph theory and
+thusneedingmoreadvancedtoolstorepresentandanalyzesuchnetworks.Studiesof
+the European urban system progressively integrated a network dimension with the
+worksofCattan(1995a,b)onairlinesandrailways,andRozenblatandPumain(1993)
+on multinational firms, thereby opening new ways considering systems of cities (see
+alsoBatty2008).
+Relations between geographers, spatial scientists, and Social Network Analysts
+(SNA)remainlimitedalthoughsociologistsdevelopedtheirtoolsfromthe1930swhile
+focusing exclusively on non-planar graphs (Wasserman and Faust 1994). It is true
+however that SNA remained marginal until the late 1960s throughout sociology
+(Freeman 2004: 83–86), while the geographical tradition regarding network analysis
+remained rather stable, thus contributing to limited dialogues between them. The
+famousexperienceofStanleyMilgram(1967)hadverylimiteddiffusioningeography
+exceptfromapaperbyStoneham(1977).Verybriefly,theaimofthisexperiencewas
+toinvestigatethenumberofrelationsneededtoconnectrandomlychosenindividuals
+intheUnitedStates:participantsfromasmalltowninNebraskawereaskedtosenda
+lettertoapersontheycalledbyname,theobjectivebeingtoreachatargetontheEast
+coast. If many participants gave up, letters reaching their goal needed in average 5
+intermediaries. This quickly became a popular expression: six degrees of separation
+(i.e.sixpersonsonly)areneededtoconnectanycoupleofpersonsintheworld.Indeed,
+SocialNetworkAnalysishasbeenlittlenoticedbygeographersuntilrecently(Grabher
+2006; Ter Wal and Boschma 2009; Radil et al. 2010) as sociologists increasingly
+considertheinfluenceofspaceintheirworks.Theroleofspatialinteractioninasocial
+network was for instance tested by Illenberger et al. (2013) showing that spatial
+proximityonlyaffectedthespatialstructureofthenetworkbutnotitstopology.
+1Withoutbeingexhaustive,thefollowingsoftwarepackagesdonotknowthealpha,beta,etc.indices:Ucinet,
+Pajek,Tulip,Gephi,igraph(Rpackage),statnet(Rpackage),andblockmodeling(Rpackage).
+300 C. Ducruet,L. Beauguitte
+Inaddition,moststudiesoftransportationnetworksinsocialsciencesdonotreferto
+complexnetworksbutratheruseothermethodologiesderivedfromgraphtheory(seea
+reviewbyDucruetandLugo2013b),suchasglobalindicesandsinglelinkageanalysis
+tomapnodal regions(Cattan 1995a;Grubesicetal. 2008).Notably, the widefield of
+spatialanalysisbarelymentionscomplexnetworksasitratherputsstrongemphasison
+econometrics,GIS-T(GeographicalInformationSystemsforTransportation),autocor-
+relation, optimization, modelling and accessibility issues traditionally in a transporta-
+tionnetwork(Miller1999; Thomas2002;Reggianietal. 2011a).Spatialanalysishas
+developed its own approaches based on some seminal works on spatial interaction
+principlesbutwithoutexplicitlymentioningnetworksperse(Tobler1970).According
+to Ducruet and Lugo (2013a), this also applies to the New Economic Geography
+(NEG) where flows, networks, and distances are not introduced per se in existing
+models,where,forinstance,citiesandregionsremainequallyspacedacrossanabstract
+space. In parallel to those developments, the concept of network in geography has
+witnessed increasing importance in many discussions on global production networks,
+commodity,value,andsupplychains,corporatenetworks,butfromtheperspectiveof
+actors,strategies,andterritorialcontextsratherthananalyzingnetworktopologiesper
+se(Jacobsetal.2010).
+3ComplexNetworksandSpace
+3.1GeneralProperties
+Theconceptsof‘small-worldnetwork’and‘scale-freenetwork’werefirstproposedby
+the respective works of Watts and Strogatz (1998) and Barabási and Albert (1999).
+Their goal was to define models of network organization differing from random
+networks(ErdösandRényi1959).Inthislastmodel,linksbetweennodesarerandomly
+distributed,therebyprovidinganormaldegreedistribution–thenodedegreebeingthe
+number of links adjacent to it. As mentioned above in the case of geography, most
+research in graph theory and network analysis in general has long been focused
+primarily on regular and random networks – a network is called k-regular when each
+nodehasthesamedegreeequaltok.Ifrandomnetworkswereimportantfordevelop-
+mentofnetworkanalysis,theyhadnoimpactongeographicalstudies.
+SWNs exhibit a small average path length between pairs of nodes – few links
+separate node pairs on average - and a high local clustering coefficient – also called
+transitivity by sociologists: probability for nodes that their adjacent neighbours are
+linked. Thelatterdimensioncomes fromthe popular expressionbywhich myfriends
+arealsofriendsor,inotherwords,ifAisconnectedwithBandC,thentheprobability
+forBandCtobealsoconnectedishigh.Oneofthemaindrawbacksofthisdefinition
+isitsextensiveness:ifweexcepttreegraph(graphwithoutcycle:impossibilitytofinda
+waybacktothestartingnode),nearlyallgraphsissuedfromempiricalstudiesareSW,
+eventechnicalones(oneofthecurrentexampleregardingphysicistsliteratureistheUS
+power grid). SFNs contain few large degree nodes and a majority of small degree
+nodes,resultinginastronghierarchicalstructure.Plottingthenodedegreedistribution
+reveals a power-law structure. This structure gets strong similarities with power-law
+characteristics previously discovered in various fields, including urban geography. It
+SpatialScienceandNetworkScience:ReviewandOutcomes 301
+appeared however as something innovative in the network field as previous studied
+networkpresentedratheraGaussiandegreedistribution.
+SWNsandSFNshaveincommonseveralfeatures(seeNewman2010forauseful
+synthesis). Theyare moreefficientintermsofeaseofcirculationwithinthe network,
+which can be measured by the average shortest path length, as those networks allow
+limitingthenumberofstopsbetweentwonodesonaverage.Inaddition,theyinclude
+many hubs (bridge nodes) and isthmuses (crucial links) between densely and tightly
+connected communities or ‘clusters’, based on the idea of cliques (Wasserman and
+Faust1994).Thesehubsandisthmusespresentgenerally ahighlevelofbetweenness
+centrality – many paths in the network have to pass through these nodes (for a
+mathematicaldefinition,seeWassermanandFaust1994).Butsuchnetworksalsohave
+some important differences. SFNs are less ‘clustered’ than SWNs due to the stronger
+influence of large degree nodes, which lowers the clustering coefficient. SFNs seem
+more efficient as the presence of hubs provides optimal circulation and less friction.
+SWNsare denserthanSFNsbecause removingfew hubswould resultinthe identifi-
+cationofcommunities.Yet, largedegreenodes tendtoformcliques in SFNsand this
+canbemeasuredbytherich-clubcoefficient(densityoflinksmeasuredamongnodes
+withhighdegree).
+Usually,thestructureofSFNsisdescribedbyplottingnodefrequencyoverdegree
+distributioninalog-logdiagram.Theslope(exponent)ofthepower-lawlinegivesan
+indicationwhetherthenetworkisscale-free,i.e.whenvaluesoftheexponentareover1
+or even 2 (this threshold not being clearly defined). The existence of scale-free
+networks is explained by a dynamic process called preferential attachment: when
+new nodes are added to the network, they primarily connect the already large nodes,
+thereby reinforcing the hierarchical structure (Internet is a nice example of this phe-
+nomenon:a newwebsite onany subjectprimarily creates links towards mostpopular
+websitesinthe samefield). SuchpropertiesinherenttoSWNsand SFNs wereinfact
+alreadyexpressedinanumberofrelatedconceptsandgrowthmodels,asunderlinedby
+the recent review provided by Zaidi (2011) on complex networks. Firstly, the power-
+law structure and the preferential attachment process were already described by the
+Yuleprocess,theGibratlaw,andtherank-sizerule,amongothers.Secondly,theworks
+of Milgram (1967) as well as Travers and Milgram (1969) were in fact the first to
+demonstrate the topological proximity among distant individuals and to label it as
+‘small-worldphenomenon’.Earlier,firstproposedtheconceptoftriadtodepictmutual
+acquaintances in a social network, and how they are likely to evolve. In geography,
+Gibrat’smodelwasappliedtosystemsofcities(Robson1973;Pumain1982)aswellas
+to urban economics (Gabaix and Ioannides 2004) to examine the evolution of urban
+growththroughcitysizedistributions.
+In fact, the merit of recent works by Watts and Strogatz (1998) and Barabási and
+Albert (1999) has been to reincorporate such ideas into clearly defined models of
+network structure and evolution, together with associated measures and methods
+directly usable for empirical research. Several measures have been proposed to high-
+light the properties of networks, such as the aforementioned power-law coefficient,
+transitivity (clustering coefficient), and average shortest path length, together with
+assortativity (degree-degree correlation). In the end, physicists have mostly relied on
+existingmeasures,buttheyhavealsomodifiedandimprovedtheminordertotakethe
+weightsintoaccount,whichhaslongremainedadrawbackofgraphtheory(Opsahland
+302 C. Ducruet,L. Beauguitte
+Panzarasa 2009). Weighting, for instance, the clustering coefficient and the rich-club
+coefficientprovidesveryusefulanswerstothequestionwhetherlargernodesaremore
+stronglyinterconnectedwitheachotherthanwithsmallernodes,i.e.whetherhubsform
+cliquesinthegraph.Ifweightistakenintoaccount,directionalityisbarelyconsidered
+by physicists, even when links are obviously directed (cf. Barábasi’s studies of the
+Internet structure). A number of measures, however, are simply revisited without
+referring to their background in graph theory and geography. This is the case of the
+“rich-club coefficient” and the “greedytriangulation” being respectiveapplicationsof
+the Gamma and Alpha indices proposed by Kansky (1963) - the first one is the ratio
+betweentheactualandthepossiblenumberofedgesinagraph,thesecondoneisthe
+ratiobetweentheactualandthepossiblenumberofcyclesinagraph.
+Arecentbutpromisingtrendisthegrowinginterestofphysicistsinso-called‘spatial
+networks’. Before examining what geographers did with these two models and the
+associated measures, it appears necessary to look at this recent spatial perspective
+proposedbyphysicists.
+3.2TheSpatialDimension
+A large number of research papers seeking small-world and scale-free properties in
+networks of all kinds has been produced in the last two decades at exponential pace,
+thusmakingreviewingthefieldexhaustivelydifficult.Giventhesimilarityofmethods
+and measures from one case study to the other, we review a number of works
+principallyfocusingonthespatialdimensionofSFNsandSWNs.
+Natural scientists have themselves criticized mainstream research on networks due
+tothe non-inclusion ofthe spatial, socialoreconomic dimension ingeneral measures
+and models (Watts 2003: p.29 and 67; Evans 2010). In this respect, similar criticism
+emergedabouttheActor-NetworkTheory(ANT)originatingfromsociologyandoften
+neglecting the importance of space in the position of actors and its influence on their
+relations (Bosco 2006). The material and geographical embedding of some networks
+appears only implicitly in the small-world model, while it is absent of the scale-free
+model2.Inaddition,Watts(1999)foundthatpreferentialattachmentoftenoccursover
+shorter distances.A distinctcategoryofspatial networks3 thusemerged inanexplicit
+way in the physics literature, which actually applies to a majority of real-world
+networks in contrast with theoretical models of networks (Gastner and Newman
+2006)andnon-spatialnetworks(e.g.socialnetwork,worldwideweb).Thegeograph-
+icaldimensionofsocialnetworkshas,however,beendiscussedregularlyasshownin
+anextensivereviewpublishedbypsychologistsinaphysicsjournal(Wongetal.2006).
+They demonstrate the importance of distance in random graphs by means of Monte
+Carlo simulation methods, where main results underline a decreasing probability for
+densityandcommunityformationasdistanceincreases.Similarresultswerefoundon
+thebasisofsocialdistance(Bogunaetal.2004).
+2Barabási (2002) recognized that cities connecting thousands of highways simply do not exist, thereby
+recognizingimplicitlyphysicalconstraintstonetworkgrowth.
+3Spatialnetworksarealsocoinedgeographicalnetworks,technologicalnetworks,infrastructurenetworks,ad-
+hocnetworks,orphysicalnetworksintheliterature.
+SpatialScienceandNetworkScience:ReviewandOutcomes 303
+Yet, many works on spatial networks do not specifically measure their spatial
+dimension,astheyonlylookattheirtopologicaldimensionasinthecaseofmaritime
+networks (Hu and Zhu 2009) and commuter flows (De Montis et al. 2010; Reggiani
+etal.2011b;CaschiliandDeMontis2013)wheredistanceparametersarenotincluded.
+Spatial networks are defined by physicists (Barthélemy 2010) through some funda-
+mental properties: physical embedding and interaction range. Physical embedding
+refersto nodes and/or links being grounded in a physical(Euclidian) space, which in
+turnconstrainsthemultiplicationoflinksandorientatesthelayoutofthenetwork,with
+the crucial importance of borders. Interaction range means that distance metrics (and
+related costs) play a central role in the emergence, distribution, and weight of links,
+sincespatialproximityisonedominantfactorfavouringshort-rangeversuslong-range
+interaction.
+Several scholars have thus explored the influence of spatial structure on network
+topology in static and dynamics ways (Waters 2006). Among the earliest attempts to
+validatethisidea,Barthélemy(2003and2010)showedthatspatialnetworksingeneral
+exhibit higherclusteringcoefficientsthan non-spatial networksdue tothe importance
+ofproximityinnodeconnectivity(seealsoKaiserandHilgetag2004).Furtherresults
+were provided by Barrat et al. (2005) based on the case of air transport highlighting
+several other properties of spatial networks such as: fewer global hubs and more
+regionalhubs,higherdisassortativityasthenetworkgrows(nodeshavingahighdegree
+tend to connect preferentially with nodes having a low degree), higher correlation
+betweendegreeandbetweenness,increasedinfluenceofthebarycentreonbetweenness
+values, and increased cliquishness. However, the fundamental difference between
+planar and non-planar networks is not always considered by physicists. For instance,
+planarspatialnetworksaremorephysicallyconstrainedandthusaremoreassortative,
+with a higher probability to contain a giant component (i.e. connected subgraph
+including a majority of the nodes), while non-planar spatial networks are more likely
+toexhibitscale-freeproperties(Bullocketal.2010).Spatialorgeographicalnetworks
+arealsolessvulnerabletorandomattacksonhubswhileaddingmorelocallinksfurther
+eliminates such vulnerability (Hayashi and Matsukubo 2006; Gosak et al. 2011).
+Lambiotte etal. (2008) haveargued, however, thatalthoughspatialnetworksvalidate
+the gravity model, they are also made of crucial long-distance links deforming the
+predictions. A study of the evolution of the Swiss road and railway networks (Erath
+et al. 2009) also discussed the limited accuracy of complex network measures for
+studying spatial, planar networks, thereby complementing them with local network
+densitymeasures.
+Methods used for testing the influence of spatial embedding range from the
+inclusion of simple distance parameters to the simulation and modelling of
+complex networks embedded in two-dimensional space (for an early review
+see Boccaletti et al. 2006, pp. 205-212), based on the hypothesis that connec-
+tivity is a function of distance (Barnett et al. 2007). Notably, Crucitti et al.
+(2006) take into account physical distance in their calculation of node central-
+ity, arguing that their results may be more useful to urban planning and design.
+In the same vein, Cardillo et al. (2005) include metric distance in their analysis
+of urban streets, notably comparing observed and optimal efficiency, while
+Gattuso and Miriello (2005) reviewed the possible measures to analyze metro
+networks topologically and geographically. Andersson et al. (2005) tested the
+304 C. Ducruet,L. Beauguitte
+influence of various parameters, such as transport costs, on the emergence of
+power-laws in land values. Other works adopted a node redundancy approach
+to study the influence of spatial structure on cascading failures (Huang et al.
+2005), arguing that stronger geographical constraints foster the ‘reservoir effect’
+of hubs (i.e. redistribution of traffic from smaller nodes to larger nodes situated
+in close proximity), while such spatial networks face higher risks of becoming
+disconnected due to their higher density. Expert et al. (2011) adapted a mod-
+ularity function – modularity being a measure of clustering quality – to spatial
+networks in order to better understand the influence of the spatial factor on
+network structure, with an application to Belgian mobile phone communication
+flows between individuals. They particularly revealed the regionalization of the
+network based on an extension of the modularity algorithm. When it comes to
+the simultaneous analysis of several spatial networks, Parshani et al. (2010)
+notably demonstrated that location matters in the inter-similarity of networks,
+based on ports and airports’ geographical coordinates. One last point must be
+made: the planarity of graphs has never been a great subject of concern except
+in geography, the most obvious example being the manual from Haggett and
+Chorley where non-planar graphs are mentioned twice only (1969: p.4 and 7).
+More recently, efforts have been made to model the growth of urban streets to
+reveal historical paths (Barthélemy and Flammini 2009; Strano et al. 2012).
+If physicists, computer scientists, but also other disciplines (see Davis et al. 2003;
+Flemingetal.2007),integratemoreandmorespaceintheirnetworkstudies,howhave
+geographers integrated these new models and measures? The next section proposes a
+reviewofrecentgeographicalresearchesonnetworks. Regionalsciencebeinga quite
+autonomousfieldnowadaysingeographicalscience,wewillmentionsomeauthorsand
+papersbutwithoutpretendingtobeexhaustive.
+4ComplexNetworksinGeographicalResearch
+4.1ClassificationofExistingStudies
+Areviewofrecentapplicationsofscale-freeandsmall-worldnetworksbygeographers
+and regionalscientists provides a somewhat balanced picture of the varied outcomes.
+Often through cross-disciplinary collaborations4, scholars proposed to refine and test
+furthersomemethodsandmeasures,basedontheirknowledgeofthethematicfieldand
+their higher interest for local level issues than for global level structure. Because the
+conceptsofspatialnetworkandcomplexitydoappearinseveralworkswithoutexplicit
+reference to complex networks, we limited the review to those explicitly mentioning
+and/orusingconceptsandmethodsfromcomplexnetworktheory.Thoseareclassified
+4SeeforinstancetheSPANGEOIproject(SpatialNetworksinGeography)basedonactivecollaboration
+betweengeographersandcomputerscientistsaroundtheTULIPsoftware(http://s4.csregistry.org/SpanGeo).It
+is currently followed up through the SPANGEO II project (http://www.unil.ch/igul/page82579.html), with
+moreemphasisonsimulationmethods.TheFMRResearchGrouponnetworksorganizesayearlyseminar
+welcomingspecialistsofnetworksaswellasyoungscholarsfromallacademicdisciplinessince2010(http://
+halshs.archives-ouvertes.fr/view_by_stamp.php?label=FMR&action_todo=home&langue=en)
+SpatialScienceandNetworkScience:ReviewandOutcomes 305
+among six main research areas, which also constitute future fields of investigation of
+furtherworks.
+4.1.1LocalDeterminantsofCentrality
+Theeasiestwaytointegratecomplexnetworkmethodshasbeentoapplyseriesofnew
+measures to various graphs. One dominant outcome of geographical research is to
+underline significant statistical correlations between different centrality measures (i.e.
+degree, betweenness, and closeness – average distance, measured in number oflinks,
+between a node and all the other nodes in a network) of cities in Internet and airline
+networkswithlocal/urbansocio-economicdatasuchaspopulation,andgrossregional
+domesticproduct(GRDP)(Wangetal.2011;Choietal.2006),therebyconfirmingthe
+importanceofterritorialaspects.Mostofsuchapproacheshaveconsistedinproviding
+newrankingsofcitiesasintheworksoftheGlobalizationandWorldCities(GaWC)
+researchgroup,butoftenwithoutadirectengagementwithexistingnetworkanalytical
+methods.Affinitiesbetweencentralityandlocaldevelopmentwasalsoverifiedthrough
+cross-disciplinaryworkincludingsociologyusingmoreadvancedtools,suchasEagle
+et al. (2010) demonstrating the strong interdependency between the diversity of
+connections and the economic well-being of localities in the UK communication
+network. Other works also demonstrated inadequacies between network topologies
+and local development when looking at knowledge networks across urban agglomer-
+ationssuchasco-authorshipsonaworld level (Matthiessenetal.2006) and in China
+(Liefner and Hennemann 2011). In addition, Ducruet et al. (2011a) compared the
+betweenness centrality of cities in air and sea flows separately and jointly, revealing
+the importance of the regional setting versus general laws by which more diversified
+cities would always dominate more specialized cities. At the intra-city level, street
+centralitywas found to have strongaffinitieswithretail and service concentrationsin
+Bologna(Portaetal.2009)andBarcelona(Produitetal.2010;Portaetal.2012).
+4.1.2TheRoleofDistance
+Surprisingly,distanceparametersarebarelyintroducedbygeographersintheirstudyof
+networks. This stems from the belief and implicit claim by geographers that space
+alwaysmatters:theythereforedonotseektoprovethisassumptionbutratherlookat
+how other dimensions (social, political, historical) are reflected across space. It was
+found, however, that seaports with larger degree connect over longer kilometric
+distances on average based on worldwide inter-port maritime links, based on the
+average length of the longest links at each degree value (Ducruet and Zaidi 2012).
+While the shortest maritime links concentrate the highest proportion of all global
+shippingflows (DucruetandNotteboom2012),theaverageand maximumkilometric
+distances through which ports connect each other have a strong influence on port
+throughputs(Ducruetetal.2011b).Inthesameveinbutbasedonmultiplecommodity
+flows, Ducruet (2013a) demonstratedthe strong influence ofphysicaldistance on the
+diversityofmaritimetrafficsamongportsoftheworld:morediversifiedportsconnect
+over longer distances on average, but more diversified links are shorter because the
+probability of carrying various sorts of goods decreases as distance increases. When
+studyingtheIndianapolisroadnetwork,Gleyze(2007)proposedtodistinguishamong
+306 C. Ducruet,L. Beauguitte
+networks effects and spatial effects inthe measurementofbetweenness centralityand
+eccentricity (node tendency to be apart from the whole network), so as to reveal the
+influence of friction on centrality measures, just like, more recently, in the work of
+VitaliandBattiston(2011)onEuropeanfirmsbutwithoutreferringtosameliteratures.
+Jiang and Claramunt (2004) offered a very original approach to urban streets by
+considering streets as nodes and crossroads as links in their analysis of small-world
+dimensionsand centralities, inthe tradition ofthe space syntaxapproachtonetworks
+(seeHillierandHanson1984)alsodevelopedbyPortaetal.(2006)ingeography.
+4.1.3ComplementaryMethods
+Aseriesofstudieshavecomplementedacomplexnetworkapproachbyothermethods
+inregionalscienceandsociology(SNA).Forinstance,Patuellietal.(2007)combined
+complex networks and Spatial Interaction Models (SIM), and Gorman and Kulkarni
+(2004) applied SNAmethods (e.g. structuralequivalence) intheir analysisofInternet
+backbonenetworksintheUS.Gormanetal.(2007)alsocomparedtheresultsobtained
+from spatial interaction methods (i.e. the gravity model) and complex networks
+methodsabouttheroadnetworkandcommutingflowsstructureinGermany,conclud-
+ingthatsuchmethodsarewellcomplementarytoeachother.Inthesamevein,Ducruet
+etal.(2011a)measuredthescale-freedimensionofthenetworkandappliedaMultiple
+RegressionQuadratic AssignmentProcedure(QAP) torevealthe correlation between
+networktopologiesondifferentlevelsofnodeaggregation.Thisapplicationonairand
+sea global networks notably contributed to the fast-growing research field of coupled
+infrastructure networks developed in recent years (see Vespignani 2010). Andersson
+et al. (2006) discussed the benefits of using complex networks in conjunction with
+spatial interaction models and multiplicative growth models in the analysis of urban
+growth, while Schintler et al. (2007) proposed to link raster-based Geographic
+Information Systems (GIS), graph theory, and complex networks theory to analyze
+theroadandrailwaynetworksofFlorida.AlthoughtheworkofBarberetal.(2011)on
+theidentificationofcommunitieswithintheEuropeannetworkofresearchanddevel-
+opmentcollaboration shows more affinity withSocial Network Analysis, it alsoused
+themodularityalgorithmproposedbyphysics.
+4.1.4Clusters,Communities,Regions
+Fourth,geographershavebeenparticularlyinterestedinthemulti-levelorganizationof
+networks. This has led to the refinement of clustering methods when studying the
+worldwide airline network of intercity passenger flows based on strength clustering
+(Amiel et al. 2005; Rozenblat et al. 2013) or the Atlantic liner shipping network
+looking at the correspondence between spatial proximity among seaports and their
+belonging to same clusters based on the bisecting k-means method (Ducruet et al.
+2010).AnotherexampleistheanalysisbyRozenblat(2010)ofthelocationallogicsof
+multinational firms led both within and among cities. In order to propose new delin-
+eations of urban metropolitan areas, Tissandier et al. (2013) also applied the strength
+clustering method to commuter flows in France, while Drevelle (2013) applied
+blockmodelingtothegraphofcommuterflowsintheMontpellierurbanareatodetect
+the emergence of secondary poles in the suburbs. The analysis of mobile phone
+SpatialScienceandNetworkScience:ReviewandOutcomes 307
+communication networks rightfully demonstrated the importance of geographic prox-
+imity in the emergence of communities, notwithstanding the influence of borders
+(Blondel et al. 2010), thereby echoing former studies of this kind based on simpler
+techniques (Nystuen and Dacey 1961; Cattan 1995a, b). Other approaches have
+clustered and mapped vehicle trajectories so as to reveal traffic regions in Athens
+(Guoetal.2010).Itisverysurprisingthatthisresearchdirectionhasthelowestnumber
+of works, given the traditional endeavor by geographers to reveal regional structures.
+Yet, the role of physical distance in the formation of clusters and regions remains
+indirectlytested,exceptbyGleyze(2013)discussingmethodsoftopologicalclustering
+onspatialnetworks.
+4.1.5InterdependentNetworks
+Despite the lack of mathematical formalization of multigraphs and multiplex graphs
+(i.e. graph where several types of links exist between nodes), several works have
+recently focused on networks characterized by multiple relations among the nodes,
+notably in physics (Buldyrev et al. 2010; Parshani et al. 2010; Rosato et al. 2008;
+Vespignani2010).Someofthememploystatisticalmeasuresontimeseriestostudythe
+co-evolutionofvariousnodesand linksovertime(Bogart2009)whileothersapplied
+moreconventionalgraphtheoreticmethodstothecombinationofvariouslinksamong
+French cities to reveal regional urban systems (Berroir et al. 2012) as well as social
+network analysis methods such as blockmodeling (i.e. clustering method based on
+directionality) to trade and diplomatic relations among world countries to reveal the
+emergence of a European entity (Beauguitte 2010). While geographers and regional
+scientistsclearlyrecognizedtheneedtoenvisagethesimultaneityofmultiplerelations
+among nodes (Zhang et al. 2005), they provided efforts mostly at the local level in
+ordertoevaluatethespecializationlevelofnodesinmultiplenetworks.Severalstudies
+haveaddressedtheconceptualandmethodologicalchallengesbroughtbytheanalysis
+of multiple networks in various contexts, such as airlines and Internet networks
+(Devriendt et al. 2010; Tranos 2011), airlines and corporate networks (Liu et al.
+2013). Another example is Ducruet et al. (2011a) who compared the betweenness
+centrality of cities in the combined global network of air and sea flows with their
+centrality in each single network. They also applied a single linkage analysis to the
+couplednetworkinordertodemonstratetheinfluenceoftheregionalcontextbywhich
+dominant European cities remain highly specialized (i.e. being central in either air or
+sea flows) while in the rest of the world, diversified cities (i.e. having a balanced
+positioninairandseaflows)tendtopolarizeothercities.Insuchworksaswellasfor
+physicists, the geographical criteria are fundamental to study the interdependence of
+networksbasedontheirphysicalcorrespondencethroughspatiallyembeddednodes.
+4.1.6EvolutionandDynamicsofNetworks
+Geographers have paid particular attention to the evolution of networks, in more
+concrete ways than physicists due to the use of real-world empirical time-series data.
+Notably, Vinciguerra et al. (2010) tested the influence of geographical distance and
+country borders on the evolution of the European Internet backbone network, with
+reference to the Barabási-Albert model of preferential attachment. The evolution of
+308 C. Ducruet,L. Beauguitte
+inter-city scientific research partnerships was studied by Comin (2009) to reveal the
+reinforcedpositionoflargercitiesinthenetworkovertimedespitethemultiplicationof
+linkstowardssecond-tiercities.Thediachronicdimensionisindeedmuchneglectedby
+physicists when it comes to actual data rather than simulation models. This research
+direction remains, however, little explored by geographers as most of their contribu-
+tions remain highly static. Most of the time, one same network is mapped and/or
+visualizedatdifferenttimeperiodswithoutquestioningtheunderlyingmechanismsof
+theobserveddynamics.Simulationexperimentsareoftenappliedtoasetoflocations
+such as cities but among which the links remain implicit (Bretagnolle and Pumain
+2010).Anotherrecentexample,ishowever,providedbyLugo(2013)whomodeleda
+system of cities connected by road as a planar spatial network and proposed a
+preferential attachment process based on the size of cities and infrastructure data.
+Othereffortsarebeingmadetomapandanalyzetheevolutionoftheglobalmaritime
+networkofmerchantvesselflowssincethe18thcenturyinrelationwithglobalization,
+urbanizationandregionalizationprocesses(Ducruet2013b).
+4.2Collaborationpatterns
+So as to better situate geographers in the wider research community on complex
+networks, Fig. 1 proposesan overviewof collaborationsin the form ofa graphwhere
+nodesare articleauthorsanddisciplineshavedifferentcolours.This sampleof articles
+comprises the aforementioned works on complex networks including at least one
+geographer and/or regional scientist besides other scholars belonging to other social
+sciences (e.g. sociology, history, psychology, etc.), physics, computer science, and
+engineering. One clearly observes distinct combinations of scientific expertise in the
+integration between complex network methods and geographical issues, as well as a
+numberofconnectedcomponentswithnolinksbetweenthem.Physicistswereincluded
+inonlyfourresearchgroupscontaininggeographers,andthreeofthosegroupsarethe
+largestintermsofthenumberofauthors.Thissuggeststhenecessityforgeographersto
+have attained sufficient critical mass before attracting people from natural sciences.
+ExceptforthegroupledbyGormanthatdoesnotincludephysicists,thefouraforemen-
+tioned groups contain at least one scholar from other social sciences as well as from
+computer science and engineering. Innovation in geography thus necessitated wide
+collaborationsacross differentfields. Othergroups without physicists and/or computer
+scientistsremainsmallerinsizeandboundtoasingleteamspecializedinonetopic.In
+addition,theroleofgeographersdiffersamongthegroups:itcanberelativelyperipheral
+(i.e. mobile phone networks, urban streets) or very central (i.e. air and sea networks,
+urban growth). In the two latter cases, geographers have thus been either followers/
+externalexpertsorleaders/launchersofrelatedresearchprojects.Amongthetwolarge
+groups where geographers dominate by their number, one remains specialized in eco-
+nomicswhiletheotherincludesphysicistsandcomputerscientists.Althoughsuchgroups
+mightinrealitynotrefertoformalresearchteams,theirconfiguration,overall,pointsata
+rarecentralroleofgeographers,i.e.inonlyoneofthegroups,theonespecializedinair
+andseanetworksandcities.Allgroupsremainratherlocked-inandnoscholaryetactsas
+bridgeamongthosegroups,shoulditbefromnaturalorsocialsciences.
+Basedonthisreview,oneconcludestoaveryfragmentedbodyofresearchwhenit
+comestointegrategeographicalresearchwithcomplexnetworksresearch.Thelinking
+SpatialScienceandNetworkScience:ReviewandOutcomes 309
+Andersson C.
+Jiang B. Scellato S. Cardillo A.
+Frenken K.
+Claramunt C.
+Crucitti P.
+Vinciguerra S.
+Chessa A. Latora V.
+Latora L.
+Campagna M.
+Iacoviello V. Valente M.
+Messora R. Porta S.
+De Plano G. De Montis A. Rueda S. Wang F. Barber M.
+Cormenzana B. Schengell T.
+Caschili S.
+Cardenas F.
+Belli E.
+Strano E.
+Joost S.
+Evans T.
+De Kerchove C. Fischer M.
+Lambiotte R. Produit T.
+Lachance-Bernard N.
+Van Dooren P.
+Melançon G.
+Expert P. Smoreda Z.
+Amiel M.
+Blondel V. Prieur C.
+Huens E.
+Rozenblat C.
+Zaidi F.
+Thomas I. Krings G.
+Havlin S.
+Parshani R.
+Nijkamp P.
+Gorman S. Reggiani A. Ducruet C. Ietri D.
+Stough R.
+Kulkarni R. Geography & regional science
+Other social sciences
+Bade F.
+Notteboom T. Computer science & engineering
+Schintler L. Haag G. Patuelli R.
+Physics
+Fig.1 Graphofcollaborationsinthefieldofcomplexnetworksresearchincludinggeographersandregional
+scientists
+oftheunconnectedresearchcommunitiesthatappearedinFig.1isnotlikelytohappen
+given the scattered approaches, respective specializations as well as research focus.
+Contrarytowhathappenedinthe1960swhenasmallgroupofAmericangeographers
+led the innovation by importing graph theory into geography, the current picture
+remains rather disorganized and made of peripheral and episodic contributions to the
+field.
+5DiscussionandConclusion
+Thispaperhasreviewedanumberofclassicandnovelapproachestonetworkanalysis
+bybothnaturalandsocialsciencesaroundtheconceptofspace.Theratherlimitedand
+fragmenteddimensionofrecentworksreferringtocomplexnetworksingeographyand
+310 C. Ducruet,L. Beauguitte
+regional science is one main conclusion which may have various causes. On the one
+hand, the shift away from structural approaches in the 1970s can be seen as one of
+them. The concept of network has gained unprecedented importance in geographical
+thought,butthishasoccurredfromaconceptualratherthanamethodologicalperspec-
+tive, with a strong emphasis on actors, scales, innovation, and power relations across
+space (Pflieger and Rozenblat 2010). Yet, this cannot explain why quantitative geog-
+raphers have not been faster in adopting SFNs and SWNs, as they did in the 1960s
+when integrating graph theory. One major difference with the context of the 1960s
+remains the difficulty for geographers to access and handle large-scale datasets and
+thus,tomasterrelatedmethodsofanalysisinthefieldsofdataminingandstatistics.On
+the other hand, one likely reason is the limited innovation brought by complex
+networks research to geography, the power law distribution being for example an
+obvious non-discovery (Reggiani and Vinciguerra 2011), but again, no geographer
+hasclearlyexpressedsuchcritiqueinaformalreviewofthefieldasitwasdonebythe
+aforementioned sociologists. More likely are direct applications of network measures
+andindiceswithoutanyreferencetowiderreflectionsoncomplexitytheory,although
+the bridge between complexity, geography, and spatial economics has been firmly
+made in both conceptual and empirical ways (Lane et al. 2009). Further progress in
+thecross-fertilizationbetweennetworkscienceandspatialscienceshouldthenbeboth
+conceptualandpractical:whatarewemeasuring?Whatdotheresultsmean?Whatdo
+welearnnew,toanswerwhichquestion(s)?
+Many tools exist nowadays (e.g., GIS, R packages) which can provide a valuable
+help to test measures and methods on networks. Geographers focusing on migration,
+economy, political geography, without mentioning transport geography, could surely
+examinefurthertherelevanceoftheseinnovations.Questioningtheirrelevancecannot
+bedonewithouttestingthesemeasures.Inaddition,geographershavetheopportunity
+to improve the integration of space (and time) in network research, which has many
+concreteapplicationsandisbeingadoptedbydecision-makersasarelevantapproachto
+theirproblems.Theworksofphysicistsindeedstillhassomeweaknessesdespitetheir
+abundant(andsometimesredundant)production:absenceofcriticaldiscussionondata
+quality and relevance, limited knowledge on the specific study field, problems of
+graphical semiotics in cartographic expression, and shortage of results’ interpretation
+andpolicyimplications.
+Theseweaknessescouldalsobeconsideredasadvantages:beinglessconstrainedby
+data viability or conceptual discussions, results are produced faster and with less
+production lag. Such drawbacks, combined with the trend to rediscover well-known
+measuresbygivingthemanewname(themostobviousbeingthetransitivityrenamed
+globalclusteringcoefficient),stillcannotfullyerodethepotentialbenefitsofSFNand
+SWNmodels.Inouropinion,furtherresearchingeographymayinsistonthenecessity
+toanalyzenetworksaselementsofwiderterritorialstructures.Canweidentifysocio-
+economicinvariantsinthehierarchyofplacesandintheemergenceofdensecommu-
+nitiesinthenetwork?Aretheredeterminantsofnetworkevolutionbeyondthesolerole
+ofcostsandEuclidiandistances?Investigationofsuchquestionswouldprovefruitful,
+inparticular,forthefurtherstudyontheinternal(meso)organizationofnetworks,with
+regard to the emergence of clusters/communities (of places, firms, actors, etc.).
+Distance and other kinds of spatial frictions can be better integrated in the graph
+partitioning and clustering techniques, but no software proposes yet an integrated
+312 C. Ducruet,L. Beauguitte
+BoccalettiS,LatoraV,MorenoY,ChavezM,HwangDU(2006)Complexnetworks:structureanddynamics.
+PhysRep424(4–5):175–308
+BogartD(2009)Inter-modalnetworkexternalitiesandtransportdevelopment:Evidencefromroads,canals,
+andportsduringtheEnglishIndustrialRevolution.NetworksSpatEcon9(3):309–338
+BogunaM,Pastor-SatorrasR,Diaz-GuileraA,ArenasA(2004)Modelsofsocialnetworksbasedonsocial
+distanceattachment.PhysRevE70:056122
+Borgatti SP, Mehra A, Brass DJ, Labianca G (2009) Network analysis in the social sciences. Science
+323(5916):892–985
+BoscoFJ(2006)Actor-networktheory,networks,andrelationalapproachesinhumangeography,inAitkenS
+andValentineG(Eds)ApproachestoHumanGeography,SAGEPublications,pp.136–146
+Bretagnolle A (2009) Analyse morphodynamique du réseau des routes de poste en France (XVIe-XIXe
+siècles),inBléton-RugetA,CommerçonNandVannierM(Eds)Réseauxenquestion:utopies,pratiques
+etprospective,InstitutderechercheduValdeSaône-Maconnais,pp.117–138.
+BretagnolleA,PumainD(2010)Simulatingurbannetworksthroughmultiscalarspace-timedynamics:Europe
+andtheUnitedStates,17th-20thcenturies.UrbanStud47(13):2819–2839
+BuldyrevSV,ParshaniR,PaulG,StanleyHE,HavlinS(2010)Catastrophiccascadeoffailuresininterde-
+pendentnetworks.Nature464:1025–1028
+Bullock S, Barnett L, Di Paolo E (2010) Spatial embedding and the structure of complex networks.
+Complexity16(2):20–28
+CardilloA,ScellatoS,LatoraV,PortaS(2005)Structuralpropertiesofplanargraphsofurbanstreetpatterns.
+PhysRevE73(6):066107
+CaschiliS,DeMontisA(2013)AccessibilityandcomplexnetworkanalysisoftheU.S.commutingsystem.
+Cities30:4–17
+CattanN(1995a)AttractivityandinternationalisationofmajorEuropeancities:theexampleofairtraffic.
+UrbanStud32(2):303–312
+CattanN(1995b)Barriereffects:thecaseofairandrailflows.InternationalPoliticalScienceReview16(3):237–248
+Choi JH, Barnett JA, Chon BS (2006) Comparing world city networks: a network analysis of internet
+backboneandairtransportintercitylinkages.GlobalNetworks6(1):81–99
+CicériMF,MarchandB,RimbertS(1977)Introductionàl’analysedel’espace.Masson,Paris
+CominMN(2009)NetworksofcitiesandnetworksofinnovationinEurope:thestructuringoftheEuropean
+systemofcitiesthrough researchnetworks dedicatedto converging technologies, PhDdissertation in
+Geography,UniversityofParisI(724pages)
+Crossley N (2005) Review article: the new social physics and the science of small world networks.
+SociologicalReview53(2):351–359
+CrossleyN(2008)Small-worldnetworks,complexsystemsandsociology.Sociology42(2):261–277
+CrucittiP,LatoraV,PortaS(2006)Centralitymeasuresinspatialnetworksofurbanstreets.PhysRevE73(3):
+0361251-5
+DancoisneP(1984)Théoriedesgraphesetconstitutionduréseauferréfrançais,UnpublishedPhDdissertation
+inGeography,Paris:UniversitéParisI
+DavisGF,YooM,BakerWE(2003)ThesmallworldoftheAmericancorporateelite,1982–2001.Strateg
+Organ1(3):301–326
+DeMontisA,ChessaA,CaschiliS,CampagnaM,DeplanoG(2010)Modelingcommutingsystemsthrougha
+complexnetworkanalysis:astudyoftheItalianislandsofSardiniaandSicily.JournalofTransportand
+LandUse2(3/4):39–55
+DevriendtL,DerudderB,WitloxF(2010)Conceptualizingdigitalandphysicalconnectivity:thepositionof
+Europeancitiesininternetbackboneandairtrafficflows.TelecommunPolicy34(8):417–429
+Drevelle M (2013) Structure des navettes domicile-travail et polarités secondaires autour de Montpellier.
+Mappemonde110(2):http://mappemonde.mgm.fr/num35/articles/art12304.html
+DucruetC(2013a)Networkdiversityandmaritimeflows.JTranspGeogr30:77–88
+Ducruet C (2013b)Mappingglobalurbaninteractions: Maritime flowsandporthierarchiessincethe late
+nineteenthcentury,GlobalisationandWorldCitiesResearchBulletin,http://www.lboro.ac.uk/gawc/rb/
+rb429.html
+DucruetC,LugoI(2013a)Citiesandtransportnetworksinshippingandlogisticsresearch.AsianJournalof
+ShippingandLogistics29(2):145–166
+Ducruet C and Lugo I (2013b) Structure and dynamics of transport networks: concepts, models, and
+applications, in Rodrigue JP, Notteboom TE and Shaw J (eds.), The SAGE Handbook of Transport
+Studies,SAGEPublicationsLtd.,pp.347–364
+DucruetC,NotteboomTE(2012)Theworldwidemaritimenetworkofcontainershipping:spatialstructure
+andregionaldynamics.GlobalNetworks12(3):395–423
+SpatialScienceandNetworkScience:ReviewandOutcomes 313
+Ducruet C, Zaidi F (2012) Maritime constellations: a complex network approach to shipping and ports.
+MaritimePolicyandManagement39(2):159–168
+DucruetC,RozenblatC,ZaidiF(2010)Portsinmulti-levelmaritimenetworks:evidencefromtheAtlantic
+(1996–2006).JTranspGeogr18(4):508–518
+Ducruet C,IetriD andRozenblatC (2011a) Citiesinworldwide air andseaflows: A multiple networks
+analysis.CybergeoEurJGeogr528:http://cybergeo.revues.org/23603
+Ducruet C, Lee SW, Song JM (2011b) Network position and throughput performance of seaports. In:
+NotteboomTE(ed)Currentissuesinshipping,ports,andlogistics.ASPPublishers,Brussels,pp185–201
+DupuyG(ed.)(1988)Réseauxterritoriaux.Caen,Paradigme(286pages)
+EagleN,MacyM,ClaxtonR(2010)Networkdiversityandeconomicdevelopment.Science328(5981):1029–
+1031
+ErathA,LöchlM,AxhausenKW(2009)Graph-theoreticalanalysisoftheSwissroadandrailwaynetworks
+overtime.NetworksandSpatialEconomics9(3):379–400
+ErdösP,RényiA(1959)Onrandomgraphs.PublicationesMathematicae6:290–297
+EvansAJ(2010)Complexspatialnetworksinapplication.Complexity16(2):11–19
+ExpertP,EvansTS,BlondelVD,LambiotteR(2011)Uncoveringspace-independentcommunitiesinspatial
+networks.ProceedingsoftheNationalAcademyofSciencesoftheUnitedStatesofAmerica(PNAS)
+108(19):7663–7668
+FlemingL,KingC,JudaA(2007)Smallworldsandregionalinnovation.OrganSci18(6):938–954
+FreemanL(2004)Thedevelopmentofsocialnetworkanalysis:astudyinthesociologyofscience.Empirical
+Press,Vancouver,218pages
+GabaixXandIoannidesY(2004)Theevolutionofcitysizedistributions,inHendersonJVandThisseJF(eds)
+HandbookofRegionalandUrbanEconomics,pp.2341–2378
+GarrisonWL(1960)Connectivityoftheinterstatehighwaysystem.RegionalScienceAssociation,Papersand
+Proceedings6:121–137
+GastnerMT,NewmanMEJ(2006)Optimaldesignofspatialdistributionnetworks.PhysRevE74(1):16117
+GattusoD,MirielloE(2005)Comparedanalysisofmetronetworkssupportedbygraphtheory.Networksand
+SpatialEconomics5(4):395–414
+GleyzeJF(2007)Makingallowancesforspatialandnetworkeffectswhenassessingindicatorsoninfrastruc-
+turenetworknodes.CybergeoEurJGeogr370http://cybergeo.revues.org/index5532.html
+GleyzeJF(2013)Topologicalclusteringforgeographicalnetworks,inRozenblatCandMelançonG(eds),
+MethodsforMultilevelAnalysisandVisualizationofGeographicalNetworks,Springer,pp.33–53
+GormanSP,KulkarniR(2004)Spatialsmallworlds:newgeographicpatternsforaninformationeconomy.
+EnvironmentandPlanningB31(2):273–296
+GormanSP, Schintler L,Kulkarni R, Stough R (2004)The revenge ofdistance:vulnerability analysis of
+criticalinformationinfrastructure.JournalofContingenciesandCrisisManagement12(2):48–63
+Gorman SP, Patuelli R, Reggiani A, Nijkamp P, Kulkarni R, Haag G (2007) An application of complex
+networktheorytoGermancommutingpatterns.In:FrieszTL(ed)NetworkScience,nonlinearscience
+andinfrastructuresystems.Springer,NewYork,pp167–185
+GosakM,KorosakD,MarhlM(2011)Topologicallydeterminedoptimalstochasticresonanceresponsesof
+spatiallyembeddednetworks.NewJPhys13:013012
+Grabher G (2006) Trading routes, bypasses, and risky intersections: mapping the travels of ‘networks’
+betweeneconomicsociologyandeconomicgeography.ProgHumGeogr30(2):1–27
+GrubesicTH,MatisziwTC,ZookMA(2008)Globalairlinenetworksandnodalregions.GeoJournal71(1):
+53–66
+GuoD,LiuS,JinH(2010)Agraph-basedapproachtovehicletrajectoryanalysis.JournalofLocationBased
+Services4(3–4):183–199
+HaggettP,ChorleyR(1969)Networkanalysisingeography.EdwardArnold,London,348pages
+Hayashi Y, Matsukubo J (2006) Geographical effects on the path length and the robustness in complex
+networks.PhysRevE73:066113
+HillierB,HansonJ(1984)Thesociallogicofspace.CambridgeUniversityPress,Cambridge
+Hu Y, Zhu D (2009) Empirical analysis of the worldwide maritime transportation network. Physica A
+388(101):2061–2071
+HuangL,YangL,YangK(2005)Geographicaleffectsoncascadingbreakdownsofscale-freenetworks.Phys
+RevE73(3):036102
+IllenbergerJ,NagelK,FlötterödG(2013)Theroleofspatialinteractioninsocialnetworks.Networksand
+SpatialEconomics13(3):255–282
+JacobsW,DucruetC,DeLangenPW(2010)Integratingworldcitiesintoproductionnetworks:thecaseof
+portcities.GlobalNetworks10(1):92–113
+314 C. Ducruet,L. Beauguitte
+JiangB,ClaramuntC(2004)Topologicalanalysisofurbanstreets.EnvironmentandPlanningB:Planning
+andDesign31(1):151–162
+KaiserM,HilgetagCC(2004)Spatialgrowthofreal-worldnetworks.PhysRevE69:036103
+KanskyKJ(1963)Structureoftransportationnetworks:Relationshipbetweennetworkgeometryandregional
+characteristics.UniversityofChicagoPress,Chicago,155pages
+KurantM,ThiranP(2006)Extractionandanalysisoftrafficandtopologiesoftransportationnetworks.Phys
+RevE74(3):36114
+LambertA,BourquiRandAubertD(2013)Graphvisualizationforgeography,inRozenblatCandMelançon
+G(eds),MethodsforMultilevelAnalysisandVisualizationofGeographicalNetworks,Springer,pp.81–
+102
+LambiotteR,BlondelVD,deKerchoveC,HuensE,PrieurC,SmoredaZ,VanDoorenP(2008)Geographical
+dispersalofmobilecommunicationnetworks.PhysicaA387(21):5317–5325
+LaneD,vanderLeeuwS,PumainDandWestG(2009)ComplexityPerspectivesinInnovationandSocial
+Change,MethodosSeries7,Springer(492pages)
+LiefnerI,HennemannS(2011)Structuralholesandnewdimensionsofdistance:thespatialconfigurationof
+the scientific knowledge network of China’s optical technology sector. Environment and Planning A
+43(4):810–829
+LiuX,DerudderB,GagoGarciaC(2013)Exploringtheco-evolutionofthegeographiesofairtransport
+aviationandcorporatenetworks.JTranspGeogr30:26–36
+LugoI(2013)Spatialexternalitiesapproachtomodellingthepreferentialattachmentprocessinurbansystems,
+ProceedingsoftheEuropeanConferenceofComplexSystems2012,LectureNotesinComputerScience,
+Springer(forthcoming)
+MathisP(ed.)(2003)Graphesetréseaux.Modélisationmulti-niveaux.Paris:Lavoisier(361pages)
+MatthiessenCW,SchwarzAW,FindS(2006)Worldcitiesofknowledge:researchstrength,networksand
+nodality.JKnowlManag10(5):14–25
+MelançonGandRozenblatC(2013)Structuralanalysisofnetworks,inRozenblatCandMelançonG(eds),
+MethodsforMultilevelAnalysisandVisualizationofGeographicalNetworks,Springer,pp.69–80
+MilgramS(1967)Thesmallworldproblem.PsychologyToday2:60–67
+Miller HJ (1999) Potential contributions of spatial analysis to Geographic Information Systems for
+Transportation(GIS-T).GeogrAnal31(4):373–399
+NewmanMEJ(2010)Networks:anintroduction.OxfordUniversityPress,Oxford,784pages
+NewmanMEJ,BarabásiALandWattsD(eds)(2006)TheStructureandDynamicsofNetworks.Princeton:
+PrincetonUniversityPress(624pages)
+NgAKYandDucruetC(forthcoming)Thechangingtidesofportgeography(1950-2012).ProgHumGeogr
+NystuenJD,DaceyMF(1961)Agraphtheoryinterpretationofnodalregions.PapRegSci7(1):29–42
+OpsahlT,PanzarasaP(2009)Clusteringinweightednetworks.SocNetworks31(2):155–163
+Parshani R,RozenblatC,Ietri D,DucruetC,HavlinS(2010)Inter-similaritybetweencouplednetworks.
+EurophysLett92:68002
+Patuelli R, Reggiani A, Gorman S, Nijkamp P, Bade F (2007) Network analysis of commuting flows: a
+comparativestaticapproachtoGermandata.NetworksandSpatialEconomics7(4):315–331
+PfliegerG,RozenblatC(2010)Introduction.Urbannetworksandnetworktheory:Thecityastheconnectorof
+multiplenetworks,UrbanStudies47(13):2723–2735
+PortaS,CrucittiP,LatoraV(2006)Thenetworkanalysisofurbanstreets:aprimalapproach.Environment
+andPlanningB33(5):705–725
+PortaS,StranoE,IacovielloV,MessoraR,LatoraV,CardilloA,WangF,ScellatoS(2009)Streetcentrality
+anddensitiesofretailandservicesinBologna.Italy,EnvironmentandPlanningB36:450–465
+PortaS,LatoraV,WangF,RuedaS,StranoE,ScellatoS,CardilloA,BelliE,CardenasF,CormenzanaB,
+LatoraL(2012)StreetcentralityandthelocationofeconomicactivitiesinBarcelona.UrbanStud49(7):
+1471–1488
+ProduitT,Lachance-BernardN,StranoE,PortaS,JoostS(2010)AnetworkbasedKerneldensityestimator
+appliedtoBarcelonaeconomicactivities.LectNotesComputSci6016:32–45
+PumainD(1982)Ladynamiquedesvilles.Economica,Paris
+RadilSM,FlintC,TitaGE(2010)Spatializingsocialnetworks:usingsocialnetworkanalysistoinvestigate
+geographiesofgangrivalry,territoriality,andviolenceinLosAngeles.AnnAssocAmGeogr100(2):
+307–326
+Reggiani A (2011) Accessibility and resilience in complex networks, Paper presented at West Virginia
+University,28April2011
+ReggianiAandVinciguerraS(2011)Networkconnectivitymodels:Anoverviewandempiricalapplications,
+inFrieszT(ed),NetworkScience,NonlinearScienceandInfrastructureSystems,Springer,pp.147–165
+SpatialScienceandNetworkScience:ReviewandOutcomes 315
+ReggianiA,BucciP,RussoG,HaasA,NijkampP(2011a)Regionallabourmarketsandjobaccessibilityin
+citynetworksystemsinGermany.JTranspGeogr19(4):528–536
+Reggiani A, Bucci P, Russo G (2011b) Accessibility and network structures in the German commuting.
+NetworksandSpatialEconomics11(4):621–641
+RobsonBT(1973)Urbangrowth,anapproach.Methuen,London
+RosatoV,IssacharoffL,TiriticcoF,MeloniS,DePorcellinisS,SetolaR(2008)Modellinginterdependent
+infrastructuresusinginteractingdynamicalmodels.InternationalJournalofCriticalInfrastructures4(1–2):
+63–79
+RozenblatC(2010)Openingtheblackboxofagglomerationeconomiesformeasuringcities’competitiveness
+throughinternationalfirmnetworks.UrbanStud74(13):2841–2865
+RozenblatCandMélançonG(2007)Asmallworldperspectiveonurbansystems.HandbookofTheoretical
+andQuantitativeGeography,Lausanne:Univ.ofLausanneEd.,pp.431–467
+RozenblatC,PumainD(1993)ThelocationofmultinationalfirmsintheEuropeanurbansystem.Urban
+studies30(10):1691–1709
+RozenblatC, Melançon G, Bourqui R and Auber D (2013) Comparing multilevel clustering methods on
+weightedgraphs:Thecaseofworldwideairpassengertraffic2000-2004,inRozenblatCandMelançonG
+(eds),MethodsforMultilevelAnalysisandVisualizationofGeographicalNetworks,Springer,pp.141–
+154
+SchintlerLA,KulkarniR,GormanS,StoughR(2007)Usingraster-basedGISandgraphtheorytoanalyze
+complexnetworks.NetworksandSpatialEconomics7(4):301–313
+Scott DW, Novak D, Aultman-Hall M and Guo F (2005) Network robustness index: A new method for
+identifyingcriticallinksandevaluatingtheperformanceoftransportationnetworks.WorkingPaper9,
+Centre for Spatial Analysis, Hamilton, Canada: http://www.science.mcmaster.ca/cspa/papers/CSpA%
+20WP%20009.pdf
+StonehamAKM(1977)Thesmall-worldprobleminaspatialcontext.EnvironmentandPlanningA9(2):185–
+195
+StranoE,NicosiaV,LatoraV,PortaS,BarthélemyM(2012)Elementaryprocessesgoverningtheevolutionof
+roadnetworks.ScientificReports2:296
+TaaffeEJ,MorrillRL,GouldPR(1963)Transportexpansioninunderdevelopedcountries:acomparative
+analysis.GeogrRev4:503–529
+TerWalALJ,BoschmaRA(2009)Applyingsocialnetworkanalysisineconomicgeography:framingsome
+keyanalyticissues.AnnRegSci43(3):739–756
+ThomasI(2002)Transportationnetworksandtheoptimallocationofhumanactivities:anumericalgeography
+approach.EdwardElgarPublishing,Northampton
+TissandierP,PhanQuangTTandArchambaultD(2013)Definingpolycentricurbanareasthroughcommuting
+cohesion in France, in Rozenblat C and Melançon G (eds), Methods for Multilevel Analysis and
+VisualizationofGeographicalNetworks,Springer,pp.189–206
+ToblerW(1970)AcomputermoviesimulatingurbangrowthintheDetroitregion.EconGeogr46(2):234–
+240
+TranosE(2011)ThetopologyandtheemergingurbangeographiesoftheInternetbackboneandaviation
+networksinEurope:acomparativestudy.EnvironmentandPlanningA43:378–392
+TraversJ,MilgramS(1969)Anexperimentalstudyofthesmallworldproblem.Sociometry32(4):425-443
+VespignaniA(2010)Complexnetworks:thefragilityofinterdependency.Nature464:984–985
+Vinciguerra S, Frenken K, Valente M (2010) The geography of Internet infrastructure: an evolutionary
+simulationapproachbasedonpreferentialattachment.UrbanStud47(9):1969–1984
+VitaliS,BattistonS(2011)GeographyversustopologyintheEuropeanownershipnetwork.NewJPhys13:
+063021
+WangJ,JinF,MoH,WangF(2009)SpatiotemporalevolutionofChina’srailwaynetworkinthe20thcentury:
+Anaccessibilityapproach.TranspResA43(8):765–778
+WangJ,MoH,WangF,JinF(2011)ExploringthenetworkstructureandnodalcentralityofChina’sair
+transportnetwork:acomplexnetworkapproach.JTranspGeogr19(4):712–721
+Wasserman S, Faust K (1994) Social network analysis: methods and applications. Cambridge University
+Press,Cambridge,857pages
+Waters N (2006) Network and Nodal Indices. Measures of Complexity and Redundancy: A Review. In:
+Reggiani A, Nijkamp P (eds) Spatial dynamics, networks and modelling. Edward Elgar Publishing,
+Northampton,pp13–33
+WattsDJ(2003)Sixdegrees.thescienceofaconnectedage.W.W.Norton&Company,New-York,368pages
+WattsDJ,StrogatzSH(1998)Collectivedynamicsof‘small-world’networks.Nat393:440–442
+WongLH,PattisonP,RobinsG(2006)Aspatialmodelforsocialnetworks.PhysicaA360:99–120
+316 C. Ducruet,L. Beauguitte
+XieF,LevinsonD(2007)Measuringthestructureofroadnetworks.GeogrAnal39:336–356
+Xie F, Levinson D (2009) Modeling the growth of transportation networks: a comprehensive review.
+NetworksandSpatialEconomics9(3):291–307
+Zaidi F (2011) Analysis, structureandorganizationof complexnetworks. LambertAcademic Publishing,
+Saarbrucken,156pages
+ZhangPC,PeetaS,FrieszT(2005)Dynamicgametheoreticmodelofmulti-layerinfrastructurenetworks.
+NetworksandSpatialEconomics5:147–178
+

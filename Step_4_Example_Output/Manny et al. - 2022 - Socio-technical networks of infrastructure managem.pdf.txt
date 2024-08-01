@@ -1,0 +1,1053 @@
+References:
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+review & editing. Mario Angst: Writing - review & editing. Jo¨rg Carvalho, L., 2015. Smart cities from scratch? A socio-technical perspective. Camb. J.
+Rieckermann: Funding acquisition; Project administration; Supervi- Reg. Econ. Soc. 8 (1), 43–60. https://doi.org/10.1093/cjres/rsu010.
+Cassidy, A., Nehorai, A., 2014. Modeling Smart Grid Adoption via a Social Network
+sion; Writing - review & editing. Manuel Fischer: Conceptualization; Model. IEEE PES General Meeting | Conference & Exposition, pp. 1–5. https://doi.
+Supervision; Writing - original draft; Writing - review & editing. org/10.1109/PESGM.2014.6938910, 2014.
+Chopra, S.S., Khanna, V., 2014. Understanding resilience in industrial symbiosis
+networks: insights from network analysis. J. Environ. Manag. 141, 86–94. https://
+doi.org/10.1016/j.jenvman.2013.12.038.
+Declaration of competing interest
+Cohen-Shacham, E., Walters, G., Janzen, C., Maginnis, S., 2016. Nature-based Solutions
+to Address Global Societal Challenges, vol. 97. IUCN, Gland, Switzerland.
+The authors declare that they have no known competing financial Cvitanovic, C., McDonald, J., Hobday, A.J., 2016. From science to action: principles for
+undertaking environmental research that enables knowledge exchange and
+interests or personal relationships that could have appeared to influence evidence-based decision-making. J. Environ. Manag. 183, 864–874. https://doi.org/
+the work reported in this paper. 10.1016/j.jenvman.2016.09.038.
+Dai, X., Wang, L., Tao, M., Huang, C., Sun, J., Wang, S., 2021. Assessing the ecological
+balance between supply and demand of blue-green infrastructure. J. Environ.
+Acknowledgments Manag. 288, 112454 https://doi.org/10.1016/j.jenvman.2021.112454.
+Dam, K.H.v., Nikolic, I., Lukszo, Z., 2013. Agent-based Modelling of Socio-Technical
+Our thanks go to Kukka Ilmanen who has contributed extensively Systems. In: Deguchi, Hiroshi (Ed.), Agent-Based Social Systems, vol. 9. Springer
+Netherlands.
+during the entire process of data collection. We further acknowledge all
+de Haan, F.J., Ferguson, B.C., Deletic, A., Brown, R.R., 2013. A socio-technical model to
+survey participants and interview partners who spent their valuable explore urban water systems scenarios. Water Sci. Technol. 68 (3), 714–721. https://
+time answering our questions. We would like to thank Max Maurer, doi.org/10.2166/wst.2013.299.
+de Reuver, M., van der Lei, T., Lukszo, Z., 2016. How should grid operators govern smart
+Arthur Petersen, Christian Binz, Thomas Bolognesi and two anonymous
+grid innovation projects? An embedded case study approach. Energy Pol. 97,
+reviewers for their constructive comments and feedback on the manu- 628–635. https://doi.org/10.1016/j.enpol.2016.07.011.
+script. This work was supported by the Federal Office for the Environ- Donati, G.F.A., Bolliger, J., Psomas, A., Maurer, M., Bach, P.M., 2022. Reconciling cities
+with nature: identifying local Blue-Green Infrastructure interventions for regional
+ment Switzerland (Grant no. 16.0070.PJ/R182-1359).
+biodiversity enhancement. J. Environ. Manag. 316 https://doi.org/10.1016/j.
+jenvman.2022.115254.
+Supplementary Materials. Supplementary Materials Dunn, S., Fu, G., Wilkinson, S., Dawson, R., 2013. Network theory for infrastructure
+systems modelling. Proc. Inst. Civ. Eng. Eng. Sustain. 166 (5), 281–292. https://doi.
+org/10.1680/ensu.12.00039.
+Supplementary materials to this article can be found online at Dunn, S., Wilkinson, S.M., 2013. Identifying critical components in infrastructure
+https://doi.org/10.1016/j.jenvman.2022.115596. networks using network topology. J. Infrastruct. Syst. 19 (2), 157–165. https://doi.
+org/10.1061/(ASCE)IS.1943-555X.0000120.
+Eggimann, S., Mutzner, L., Wani, O., Schneider, M.Y., Spuhler, D., Moy de Vitry, M.,
+References et al., 2017. The potential of knowing more: a review of data-driven urban water
+management. Environ. Sci. Technol. 51 (5), 2538–2553. https://doi.org/10.1021/
+acs.est.6b04267.
+Aksoy, S.G., Purvine, E., Cotilla-Sanchez, E., Halappanavar, M., 2018. A generative graph
+Eisenberg, D.A., Park, J., Seager, T.P., 2017. Sociotechnical network analysis for power
+model for electrical infrastructure networks. J. Compl. Netw. 7 (1), 128–162. grid resilience in South Korea. Complexity 1–14. https://doi.org/10.1155/2017/
+https://doi.org/10.1093/comnet/cny016.
+3597010, 2017.
+Angst, M., Seppelt, T., 2020. Motifr: Motif Analysis in Multi-Level Networks. -. R package
+Elmqvist, T., Andersson, E., McPhearson, T., Bai, X., Bettencourt, L., Brondizio, E., et al.,
+version 1.0.0.
+2021. Urbanization in and for the anthropocene. npj Urban Sustain. 1 (1) https://
+Angst, M., Widmer, A., Fischer, M., Ingold, K., 2018. Connectors and coordinators in
+doi.org/10.1038/s42949-021-00018-w.
+natural resource governance: insights from Swiss water supply. Ecol. Soc. 23 (2)
+Elzen, B., Enserink, B., Smit, W.A., 1996. Socio-technical networks: how a technology
+https://doi.org/10.5751/es-10030-230201.
+studies approach may help to solve problems related to technical change. Soc. Stud.
+Barn gs o, vS e.,
+r
+nC ao ns cg er .a v Ue r,
+b
+E a. n, A Pocu l.t o R,
+e
+M
+s.
+. 3, 5M (c 1N ),e i 2ll 0, –D 3. 1, .2 h0 t1 tp7 s. :/D /i dg oit ia .ol ri gn /fr 1a 0s .t 1ru 0c 8t 0u /r es and urban Sci. 26 (1), 95–141. https://doi.org/10.1177/030631296026001006.
+Finger, M., Groenwegen, J., Künneke, R., 2005. The quest for coherence between
+08111146.2016.1235032. institutions and technologies in infrastructure. J. Netw. Ind. 6 (4), 227–260. https://
+Benedetti, L., Dirckx, G., Bixio, D., Thoeye, C., Vanrolleghem, P.A., 2008. Environmental
+doi.org/10.1177/178359170500600402.
+and economic performance assessment of the integrated urban wastewater system.
+Fischer, M., Ingold, K., 2020. Networks in Water Governance (Palgrave Studies in Water
+J. Environ. Manag. 88 (4), 1262–1272. https://doi.org/10.1016/j.
+Governance: Policy and Practice). Palgrave Macmillan, Cham.
+jenvman.2007.06.020.
+Fischer, M., Ingold, K., Sciarini, P., Varone, F., 2012. Impacts of market liberalization on
+Berardo, R., Fischer, M., Hamilton, M., 2020. Collaborative governance and the
+challenges of network-based research. Am. Rev. Publ. Adm. 50 (8), 898–913. regulatory network: a longitudinal analysis of the Swiss telecommunications sector.
+Pol. Stud. J. 40 (3) https://doi.org/10.1111/j.1541-0072.2012.00460.x.
+https://doi.org/10.1177/0275074020927792.
+Fischer, M., Leifeld, P., 2015. Policy forums: why do they exist and what are they used
+Berglund, E.Z., 2015. Using agent-based modeling for water resources planning and for? Pol. Sci. 48, 363–382. https://doi.org/10.1007/s11077-015-9224-y.
+management. J. Water Resour. Plann. Manag. 141 (11) https://doi.org/10.1061/
+Fischer, M., Sciarini, P., 2016. Drivers of collaboration in political decision making: a
+(asce)wr.1943-5452.0000544. cross-sector perspective. J. Polit. 78 (1), 63–74. https://doi.org/10.1086/683061.
+Berkes, F., Folke, C., Colding, J., 2000. Linking Social and Ecological Systems:
+Freeman, L.C., 1978. Centrality in social networks conceptual clarification. Soc.
+Management Practices and Social Mechanisms for Building Resilience. Cambridge Network. 1 (3), 215–239. https://doi.org/10.1016/0378-8733(78)90021-7.
+University Press.
+Fu, G., Butler, D., Khu, S.-T., 2008. Multiple objective optimal control of integrated urban
+Bird, C., Nagappan, N., Gall, H., Murphy, B., Devanbu, P., 2009. Putting it all together: wastewater systems. Environ. Model. Software 23 (2), 225–234. https://doi.org/
+using socio-technical networks to predict failures. In: 20th International Symposium
+10.1016/j.envsoft.2007.06.003.
+on Software Reliability Engineering. https://doi.org/10.1109/ISSRE.2009.17.
+Fuenfschilling, L., Truffer, B., 2016. The interplay of institutions, actors and technologies
+Bird, R., 1994. Decentralizing Infrastructure: for Good or Ill? Policy Research Working in socio-technical systems — an analysis of transformations in the Australian urban
+Pap ¨er Series 1258. The World Bank. water sector. Technol. Forecast. Soc. Change 103, 298–312. https://doi.org/
+Bodin, O., 2017. Collaborative environmental governance: achieving collective action in
+10.1016/j.techfore.2015.11.023.
+social-ecological systems. Science 357 (6352). https://doi.org/10.1126/science.
+Ghaffari, K., Lagzian, M., Kazemi, M., Malekzadeh, G., 2019. A socio-technical analysis of
+aan1114.
+¨ internet of things development: an interplay of technologies, tasks, structures and
+Bodi 2n 0, 1O 9. ., IA mle px ra on vd ine gr, nS e.M tw. o, rB ka g ag pi po r,
+o
+J a. c, hB ea sr n toe s t,
+h
+M
+e
+. sL tu.,
+d
+B ye ora
+f
+r cd oo m, R pl. e, xC u som cm iali –n eg c, oG lo.S g. i,
+c
+e at
+l
+al., actors. Foresight 21 (6), 640–653. https://doi.org/10.1108/fs-05-2019-0037.
+interdependencies. Nat. Sustain. 2 (7), 551–559. https://doi.org/10.1038/s41893- Gilar cd oi m, F p. a, r2 a0 ti0 v2 e. eP mol pic iry
+i
+cc ar le d anib ai ll yit sy
+is
+a
+.
+n Jd
+.
+Ed ue rle
+.
+g Pa ut bio l.n Pt oo
+l
+i
+.
+n 9d e (6p )e ,n 8d 7e 3n –t 8re 9g 3u
+.
+l ha tt to pr sy
+:
+/a /g de on ic .oie rs g:
+/
+a
+019-0308-0.
+Bodin, O¨ ., Tengo¨, M., 2012. Disentangling intangible social–ecological systems. Global 10.1080/1350176022000046409.
+Environ. Change 22 (2), 430–439. https://doi.org/10.1016/j. Gilardi, F., 2009. Delegation in the Regulatory State: Independent Regulatory Agencies in
+Western Europe. Edward Elgar Publishing.
+gloenvcha.2012.01.005.
+Goldthau, A., 2014. Rethinking the governance of energy infrastructure: scale,
+Bolo Dgn ise cs li o, sT u. r,
+e
+P Bfl ii ae sg ee sr
+.
+, RG e. g, u2 l0 a1 ti9 o.
+n
+I n &: GTh oe
+v
+eS rh na ad no cw
+e.
+hof
+t
+tS pu s:n /s /h di on ie
+.o
+R rge /g 1u 0la .1ti 1o 1n 1: /E rx ep gl oa .i 1n 2in 2g
+8 6.
+decentralization and polycentrism. Energy Res. Social Sci. 1, 134–140. https://doi.
+org/10.1016/j.erss.2014.02.009.
+Bolton, R., Foxon, T.J., 2015. Infrastructure transformation as a socio-technical process
+Gonzalez, E.B., Easdale, M.H., Sacchero, D.M., 2021. Socio-technical networks modulate
+— implications for the governance of energy distribution networks in the UK.
+Technol. Forecast. Soc. Change 90, 538–550. https://doi.org/10.1016/j. o An rg-f ea nr tm
+in
+t ae
+.
+c Jh .n Ro ulo rg ai
+l
+c Sa tl
+u
+i dn .n 8o 3v ,a t 3i 0o –n 3s 6in
+.
+hw tto po sl
+:
+/p /r do od iu .oc rt gio /n
+1
+0o .f
+1
+0N 1o 6r /th
+j.
+Patagonia,
+techfore.2014.02.017.
+jrurstud.2021.02.015.
+Callon, M., 1990. Techno-economic networks and irreversibility. Socio. Rev. 38,
+132–161. https://doi.org/10.1111/j.1467-954X.1990.tb03351.x.
+12
+
+Annexes/Appendices:
+
+Body Text:
+JournalofEnvironmentalManagement318(2022)115596
+Contents lists available at ScienceDirect
+Journal of Environmental Management
+journal homepage: www.elsevier.com/locate/jenvman
+Socio-technical networks of infrastructure management: Network concepts
+and motifs for studying digitalization, decentralization, and
+integrated management
+Liliane Mannya,b,*, Mario Angstc, Jo¨ rg Rieckermannb, Manuel Fischerb,d
+aInstitute of Civil, Environmental and Geomatic Engineering, ETH Zürich, Stefano-Franscini-Platz 5, 8093, Zürich, Switzerland
+bEawag, Swiss Federal Institute of Aquatic Science and Technology, Überlandstrasse 133, 8600, Dübendorf, Switzerland
+cDigital Society Initiative, Universita¨t Zürich, Ra¨mistrasse 69, 8001, Zürich, Switzerland
+dInstitute of Political Science, University of Bern, Fabrikstrasse 8, 3012, Bern, Switzerland
+A R T I C L E I N F O A B S T R A C T
+Keywords: Networked infrastructure systems — including energy, transportation, water, and wastewater systems — provide
+Socio-technical networks essential services to society. Globally, these services are undergoing major transformative processes such as
+Multi-level networks digitalization, decentralization, or integrated management. Such processes not only depend on technical changes
+Socio-technical relations
+in infrastructure systems but also include important social and socio-technical dimensions. In this article, we
+Infrastructure management
+propose a socio-technical network perspective to study the ensemble of social actors and technical elements
+Urban wastewater management
+involved in an infrastructure system, and their complex relations. We conceptualize structurally explicit socio-
+technical networks of networked infrastructure systems based on methodological considerations from network
+analysis and draw on concepts from socio-technical system theories and social-ecological network studies. Based
+on these considerations, we suggest analytical methods to study basic network concepts such as density, reci-
+procity, and centrality in a socio-technical network. We illustrate socio-technical motifs, i.e., meaningful sub-
+structures in socio-technical networks of infrastructure management. Drawing on these, we describe how
+infrastructure systems can be analyzed in terms of digitalization, decentralization, and integrated management
+from a socio-technical network perspective. Using the example of urban wastewater systems, we illustrate an
+empirical application of our approach. The results of an empirical case study in Switzerland demonstrate the
+potential of socio-technical networks to promote a deeper understanding of complex socio-technical relations in
+networked infrastructure systems. We contend that such a deeper understanding could improve management
+practices of infrastructure systems and is becoming even more important for enabling future data-driven,
+decentralized, and more integrated infrastructure management.
+1. Introduction these challenges and deficits, solutions such as digitalized in-
+frastructures (Barns et al., 2017; Zimmerman and Horan, 2004),
+Globally, infrastructure systems are facing multiple challenges. De- decentralization of infrastructure systems (R. Bird, 1994; Levaggi et al.,
+mographic change, rapidly growing urban areas, and climate change 2018; Libralato et al., 2012), or integrated infrastructure management
+affect technical infrastructure systems and their performance in many (Halfawy, 2008; Roelich et al., 2015; Saidi et al., 2018) have been
+ways (Wilbanks and Fernandez, 2012; Zimmerman and Faris, 2010). In proposed in the academic and grey literature.
+this context, infrastructure systems show several deficits, for example, However, given entrenched and path-dependent systems, both
+inefficient operation and management (Roelich et al., 2015), ineffec- technical and social transitions towards these potential solutions are not
+tively implemented regulations (Bolognesi and Pflieger, 2019; Sherman easy to achieve (Bolton and Foxon, 2015; Hodson and Marvin, 2010;
+et al., 2020), or insufficient evidence of system performance (Benedetti Wihlborg et al., 2019). Any actions, strategies, processes, or policies
+et al., 2008; Mugisha, 2007; Oswald et al., 2011). In order to address aiming at addressing challenges, overcoming deficits, and developing
+Abbreviations: STN, socio-technical network; UWS, urban wastewater system.
+* Corresponding author. Eawag, Swiss Federal Institute of Aquatic Science and Technology, Überlandstrasse 133, 8600, Dübendorf, Switzerland.
+E-mail address: liliane.manny@eawag.ch (L. Manny).
+https://doi.org/10.1016/j.jenvman.2022.115596
+Received 16 August 2021; Received in revised form 18 May 2022; Accepted 19 June 2022
+Availableonline8July2022
+0301-4797/©2022TheAuthors.PublishedbyElsevierLtd.ThisisanopenaccessarticleundertheCCBYlicense(http://creativecommons.org/licenses/by/4.0/).
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+solutions require an understanding of both social and technical di- corresponding social information exchange network. This is especially
+mensions of infrastructures. Accordingly, infrastructure systems have relevant if we consider that the performance outcome of an infrastruc-
+been studied from a socio-technical perspective, including social, tech- ture system is dependent on how social and technical subsystems are
+nical, and intertwined socio-technical elements (Finger et al., 2005; aligned (i.e., socio-technical fit (Guerrero et al., 2015)).
+Ottens et al., 2006). It has been argued that such a holistic analysis of the Third, applying STN to networked infrastructure systems favors
+socio-technical nature of infrastructure systems is required in order to systematic analysis, comparability, replicability, and knowledge accu-
+improve economic and environmental outcomes (Markolf et al., 2018). mulation between cases of socio-technical systems. It can further serve
+The respective literatures have relied on socio-technical system theories as a tool for science-policy exchanges, as barriers or potential gaps in the
+(Bolton and Foxon, 2015; de Haan et al., 2013; Fuenfschilling and STN may be illustrated and discussed with relevant stakeholders. As a
+Truffer, 2016; Guy et al., 2011; Ottens et al., 2006; Jensen et al., 2015), result, infrastructure management practices and related information
+system dynamics approaches (Prouty et al., 2020; Whyte et al., 2020) or exchange among actors could be improved.
+agent-based modeling (Berglund, 2015; Dam et al., 2013; Panebianco This article proceeds with a theoretical discussion of socio-technical
+and Pahl-Wostl, 2006). systems, related infrastructure trends, and the idea of networks in socio-
+Socio-technical systems have further been studied using the concept technical systems. In the third section, the STN approach is formally
+of socio-technical networks (STNs) (Elzen et al., 1996; Hu et al., 2010), introduced, and different analytical concepts are proposed. In section
+related to a variety of conceptual considerations and different types of four, conceptual considerations are applied to the case of urban waste-
+network operationalizations (C. Bird et al., 2009; Kling et al., 2003; water systems. Section five discusses how infrastructure management
+Schweber and Harty, 2010). For example, C. Bird et al. (2009) represent and relevant research questions can benefit from the STN approach. The
+software component networks as a STN in order to predict software final section concludes that the STN approach is of theoretical, con-
+failures. Schweber and Harty (2010) draw on a STN operationalization ceptual, empirical, and practical relevance to the scientific community
+to explore the adoption of an innovative technology in the construction as well as to practice.
+sector. In the context of networked infrastructure systems, STNs have
+often been represented in a structurally implicit or qualitative form 2. Infrastructures as socio-technical systems
+(Elzen et al., 1996; Guy et al., 2011; Lamb et al., 2000). Only three
+recent studies provide a more structurally explicit approach but lack a 2.1. Analyzing relations between social and technical systems
+generic terminology based on network analysis to describe respective
+STNs’ operationalizations (Eisenberg et al., 2017; Gonzalez et al., 2021; While technological developments can improve infrastructure sys-
+Weerasinghe et al., 2021). tems, their implementation within social structures is often challenging.
+This article presents a structurally explicit description and applica- A socio-technical perspective on infrastructure systems comprises two
+tion of the STN approach to study interrelated social actors and technical subsystems, a social subsystem and a technical subsystem, and empha-
+elements of managing networked infrastructure systems, such as energy, sizes the interdependencies between both subsystems. Socio-technical
+transportation, water, or wastewater systems. To do so, we draw on system theories provide generic conceptualizations of socio-technical
+concepts from the literature on social-ecological networks (Bodin, 2017; systems that have also been applied in the context of infrastructure
+Bodin et al., 2019; Sayles et al., 2019) that we combine with theories of systems. For example, Ottens et al. (2006) point to the importance of
+socio-technical systems (Ottens et al., 2006) and related literature. We including rule-like social elements such as regulations, laws, standards,
+conceptualize STNs of infrastructure systems as an empirically groun- or culture, into the conceptualization of infrastructures as
+ded, quantitative network representation that includes social actors (i.e., socio-technical systems by exploring intelligent transport systems in the
+stakeholders) and technical infrastructure elements as network nodes, Netherlands. Focusing on the transformation of Australia’s urban water
+and multiple relations in-between these nodes as network edges (social, sector, Fuenfschilling and Truffer (2016) adopt a socio-technical systems
+technical, social-technical, and technical-social relations). We apply our perspective by developing the concept of institutional work in the
+framing of analyzing socio-technical aspects of infrastructure manage- empirical context of seawater desalination technology. Socio-technical
+ment as a STN to the example of urban wastewater systems. Urban system studies tend to be mostly interested in more macro-level socie-
+wastewater management is a good application case as it is a strongly tal processes around radical technical change or transitions and seldom
+engineering-dominated field that shows slow transformations despite a specify and operationalize the interfaces between technical and social
+large number of technical innovations over the last decades (Kiparsky systems at the micro-level.
+et al., 2013). Urban wastewater systems have been studied using
+socio-technical system perspectives before (de Haan et al., 2013; Jensen 2.2. Digitalization, decentralization, and integrated management of
+et al., 2015; Panebianco and Pahl-Wostl, 2006), but not with a struc- infrastructure systems
+turally explicit STN approach.
+The approach, as discussed in this article, makes several contribu- Among the different types of infrastructure systems, our focus lies on
+tions to the literature and addresses related industrial and research gaps. technical infrastructure networks such as energy, transportation, water,
+First, analyzing the STN of infrastructure systems can help identify or wastewater systems. Compared to social infrastructures, such as
+socio-technical barriers, for example toward digitalization. Barriers can health or education systems, or green infrastructures, technical infra-
+be technical (e.g., insufficient data quality (Langeveld et al., 2013) or structure networks are characterized by capital-intensive fixed physical
+absent data standards (Eggimann et al., 2017)) or social (e.g., lack of assets, which often have a lifespan of several decades and are func-
+vision or resources of relevant actors (Manny et al., 2021)), but also tionally interlinked. Examples of such technical infrastructure networks
+socio-technical (Mao et al., 2020), e.g., if data transfer between tech- are power plants, transportation terminals, or (waste) water treatment
+nical infrastructure elements and social actors is hindered by ill-defined plants, which are physically connected through power lines, streets,
+responsibilities. In this case, STN can provide information about railway lines, and drinking water or sewer pipes.
+whether social actors who operate technical elements do also receive Among the most important trends related to these technical infra-
+data from these elements. structure systems are digitalization, decentralization, and integrated
+Second, the analysis of STN can help to assess how social actors ex- management, which have been previously studied from a social (Barns
+change information related to a technical infrastructure system. For et al., 2017; Goldthau, 2014), a technical (Eggimann et al., 2017;
+example, a STN analysis can uncover whether the trends of decentral- Libralato et al., 2012), or a socio-technical (Carvalho, 2015; de Haan
+ization or integrated management of a technical infrastructure network et al., 2013) perspective. In the following, we briefly describe how a
+are reflected in the form of a more decentralized or more integrated conceptualization of infrastructure systems as a STN can help to
+2
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+disentangle and assess socio-technical complexities underlying all three potentially strong dependencies and interactions among technical ele-
+trends. ments. Therefore, the technical elements cannot be operated indepen-
+dently from another (Künneke et al., 2010). There has been a trend in
+2.2.1. Digitalization both discourse and practice toward an integrated management of
+The ongoing trend of digitalization and digital transformation re- infrastructure systems (Hansman et al., 2006; Roelich et al., 2015; Saidi
+flects an embedding of digital technologies and evidence-based utiliza- et al., 2018). This trend goes beyond single infrastructure systems.
+tion of data and information for managing infrastructure systems (de Recognizing dependencies between different infrastructure systems (e.
+Reuver et al., 2016; Kerkez et al., 2016; Zimmerman and Horan, 2004). g., water and energy systems) has resulted in more integrated perspec-
+Digital technologies may offer new opportunities due to lower trans- tives such as the water-energy-nexus (Hamiche et al., 2016). Over-
+action costs, and thus impacting modes of organization among social coming fragmented organizations would benefit from a better
+actors (Künneke et al., 2010). However, the successful implementation understanding of potential relations or even relational barriers that
+of digital technologies within infrastructure systems requires both their hinder a more effective, integrated management of infrastructure sys-
+actual technical installation and respective social adaptations of the tems. Such an integrated management would incorporate geographical
+surrounding social system (Ghaffari et al., 2019). A socio-technical aspects through spatial integration as well as separated sectors through
+perspective on digital transformation comprises a relational perspec- horizontal integration.
+tive on both social and technical levels at the same time. For example,
+technical elements may be equipped with digital technologies, but 2.3. The idea of networks in socio-technical systems
+relevant social actors need to have access to data obtained with these
+digital technologies in order to make use of it. Recognizing the According to the widespread recognition that technical and social
+socio-technical nature of infrastructure systems makes it possible to systems are interdependent, network approaches and concepts have
+evaluate the progress of digital transformation in a socio-technical way. been previously used for the analyses of infrastructure systems. For
+example, techno-economic networks (Callon, 1990) consider the com-
+2.2.2. Decentralization bined dynamics of social and technical change, but focus on a set of
+At the technical level, decentralization is an important trend and heterogeneous actors only as network elements, without considering the
+potential future solution to address ageing infrastructure, improving technical system as a network. Elzen et al. (1996) introduce the term
+sustainability, or the fast and flexible adaptation to demand fluctuations, socio-technical network (STN) to study problems that emerge in the
+e.g., related to growing cities or renewable energy. For example, elec- course of technical change using the example of the development of the
+tricity supply is complemented by an increasing multiplicity of distrib- European Fighter Aircraft. While they consider structurally explicit ac-
+uted generation units that locally feed into the existing distribution tors as nodes of a social network, technical elements are seen rather as
+network, thereby enhancing the technical complexity of the electricity technical artifacts that can move between actors (Elzen et al., 1996).
+system (Goldthau, 2014). In a similar way, traditional centralized urban Lamb et al. (2000) define STNs as heterogeneous arrangements that
+wastewater systems are more and more challenged by decentralized consist of interactions between social units (e.g., individuals, organiza-
+technological solutions such as stormwater harvesting or greywater tions, and institutions) and technical units (i.e., technologies). However,
+recycling (Larsen et al., 2016; Moglia et al., 2011). The literature implies they do not explicitly operationalize the concept through network
+that mixed systems, which are partly (de)centralized, are even more analysis. More applied research was conducted by Eisenberg et al.
+complex than either fully centralized or fully decentralized (2017) who investigated the resilience of power grids in South Korea by
+infrastructures. analyzing a STN consisting of the power grid as a technical network, as
+The increasing complexity of infrastructure systems in their technical well as the social network of power companies and emergency man-
+dimensions goes hand in hand with an increasing number of social actors agement headquarters. Their results suggest that response in case of
+that participate, challenge, and transform how infrastructure systems blackouts improves if owners and operators of associated power plants
+are managed (Elmqvist et al., 2021; Goldthau, 2014). Over the recent are connected to other important stakeholders, e.g., emergency man-
+decades, infrastructure systems that were historically vertically inte- agement organizations. Cassidy and Nehorai (2014) use a social
+grated monopolies have been increasingly separated into different en- network-based model to analyze smart grid adoption, i.e., a user’s de-
+tities in order to allow for competition (Künneke et al., 2010). cision to switch from a conventional energy grid to a smart grid. They
+Accordingly, liberalization processes have also multiplied the number determine important influencing factors, e.g., pricing, knowledge, and
+and diversity of public and private actors with regulating and density of communities, on the probability of smart grid adoption.
+decision-making competencies. Chopra and Khanna (2014) study industrial symbiosis networks and
+Exploiting economies of scale, infrastructure systems are expanding their resilience. They use centrality measures, which capture the
+and have to be coordinated across a large geographic area involving importance of a node (e.g., water resources or industries) to an overall
+different technologies and standards, as well as numerous actors with network, to analyze how vulnerable given nodes in the network are.
+different resources and interests (Finger et al., 2005). Additionally, in Their case addresses a water synergy system (across resources, i.e.,
+order to coordinate and regulate liberalized infrastructure sectors, reg- across water resources, power plants, and aquatic environment). Most of
+ulatory agencies have been introduced as new actors in the course of these examples rather rely on structurally implicit network concepts —
+liberalization processes (Fischer et al., 2012; Gilardi, 2002, 2009; without explicitly assessing the entire diversity of relevant nodes and
+Thatcher, 2002). With respect to decentralization, new actors on the edges — to study socio-technical systems (Scott and Ulibarri, 2019). In
+demand-side have also been joining the traditional supply-side oriented the following, by contrast, we propose structurally explicit network
+actor-network. For example, local communities may now autonomously methods in order to systematically connect the social and technical
+produce and distribute electricity through their own microgrids (War- systems and analyze them jointly.
+neryd et al., 2020).
+3. Socio-technical networks of infrastructure management
+2.2.3. Integrated management
+The management of infrastructure systems is often fragmented into The approach to operationalizing STNs is borrowed from the litera-
+different geographical or sectoral systems. The multiplicity of involved ture on social-ecological networks. The concept of social-ecological
+actors and organizations requires coordination, collaboration, or infor- networks was introduced in order to conceptualize, operationalize and
+mation exchange. Yet, since the components of infrastructures are in one analyze complex interdependencies in social-ecological systems (Bodin
+way or another connected through a physical network, there are and Tengo¨, 2012; Bodin et al., 2019). Similar to socio-technical systems,
+3
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+the social-ecological systems concept posits that understanding the dy- Opposite to the set of social-technical relations (EST), the set of technical-
+namics and outcomes of ecological systems needs to take into account social relations ETS contains directed relations from technical elements t
+the social system linked to the ecological system, and vice versa (Berkes
+to social actors s, thereby
+tE→TSs.
+We differentiate between EST and ETS
+et al., 2000; Ostrom, 2010). The advantage of the network approach is
+because these cross-level relations have two conceptually different
+that both the ecological system and the social system are assessed
+meanings. EST describes directed relations from social actors to technical
+through the same lens. The common denominator of network ap-
+elements and, therefore, accredits agency to social actors. By contrast,
+proaches is that they consist of different components (nodes) that
+for ETS we assume that technical elements can provide a certain medium
+interact in different ways (edges) (Wasserman and Faust, 1994).
+(e.g., data) to social actors. Consequently, the socio-technical edge sets
+Furthermore, the network approach provides a shared terminology and
+are divided into social-technical and technical-social edges allowing for
+a common conceptualization of complex systems such as
+different conceptual representations of respective cross-level relations.
+social-ecological or socio-technical systems.
+If we partition the entire multi-level network based on its edge sets,
+we obtain four sub-networks. These represent a unipartite technical
+3.1. Formal representation of a socio-technical network (STN)
+(GT), a unipartite social (GS), a bipartite social-technical (GST), and a
+bipartite technical-social (GTS)network within the entire STN.
+We can alternatively describe these networks in a sociometric form if
+The proposed STN conceptualization frames social actors as nodes of
+we consider their adjacency matrices.1 For example, in the adjacency
+a social network and includes technical nodes of an infrastructure sys-
+tem. We conceptualize relations between social actors and technical
+matrix of GS, the entries esi,sj either take the value 1 (if an edge is
+elements at multiple levels: relations among social actors (social-social
+present between nodes si and sj) or 0 (if an edge is absent). The adja-
+relations), relations among technical elements (technical-technical re- cency matrix entries eti,tj, esi,tj and eti,sj are defined analogously forGT,
+lations), and relations among social actors and technical elements and GST, and GTS. In Table 1, we provide an overview of these four networks
+vice versa (social-technical and technical-social relations, respectively). and link them individually to previous studies or suggested examples in
+The STN representation (s. Fig. 1) considers social-social relations the context of infrastructure systems.
+among social actors, e.g., private and public actors responsible for given
+infrastructure elements, as well as physical dependencies between 3.2. Socio-technical network (STN) concepts
+relevant technical infrastructure elements, e.g., power stations, (waste)
+water treatment plants or transportation terminals. Crucially, the Using the formalized description of a STN, we suggest methods to
+approach further considers social-technical relations such as compe- analyze the STN of infrastructure management. We label these methods
+tencies for operation or ownership, or technical-social relations such as as STN concepts. Drawing on descriptive concepts often used in network
+data transfer. Other social-technical or technical-social relations are analysis, we provide adapted concepts that fit the properties of the STN
+possible, depending on the infrastructure system under study. structure of infrastructure systems.
+The proposed STN represents a multi-level network connecting social The STN concepts are divided into three categories. First, we make
+and technical levels. It is, however, not a multi-level network in the use of certain commonly used basic concepts in network analysis and
+sense of hierarchically nested social structure (as in multi-level social apply these to STNs. Second, we illustrate the potential of studying
+networks; see Lomi et al. (2016)). Instead, our usage of multi-level ter- meaningful sub-structures in a STN. Third, based on the first two cate-
+minology in networks that extend beyond social networks uses the term gories, we suggest how the STN of infrastructure management can be
+levels to describe different systems, i.e., the social and the technical analyzed in terms of digitalization, decentralization, and integrated
+systems. management.
+In the following, we present a formal description of our conceptu-
+alization of a STN in the context of networked infrastructure systems (s. 3.2.1. Density, reciprocity, and (degree) centrality in a STN
+Fig. 2). We define two sets of nodes (also known as ‘vertices’) VT and VS. Table A.1 in Supplementary Materials A presents a comparison of
+VT contains technical elements t of an infrastructure system, thus VT = three descriptive concepts, namely density,2 reciprocity,3 and (degree)
+{t1, t2, …, tn}. Each social actor s, who is involved in managing the centrality,4 for social networks and adapted to a STN. We consider all
+infrastructure system, belongs to the second set VS ={s1, s2,…, sm}. four networks in the STN (s. Table A1) and describe density individually
+To fully describe the STN, we additionally define four edge sets. Two for each of them (dS, dT, dST, dTS). The densities of the social and
+of these edge sets, ET and ES, are homogenous as edges occur only with technical networks in the STN can be determined, similarly to the social
+nodes of the same set, i.e., VT or VS. The two other edge sets, EST and network density, by calculating the ratio of actually present, observed
+ETS, are heterogeneous sets, as they comprise cross-level edges between network edges to the number of all possible edges, given the network
+nodes from different sets, e.g., edges between nodes of VT and nodes of nodes. For the cross-level social-technical and technical-social networks
+VS. (GST and GTS), we need to include both technical nodes |VT|as well as
+ET contains all technically given connections between technical el- social nodes |VS| in the denominator to calculate the number of all
+ements t, i.e., it forms a technical network. Thus, ET represents the set of possible edges between technical elements and social actors (s.
+edges between pairs of nodes of VT. In the same way, ES contains re- Table A1).
+lations between social actors s, i.e., between pairs of nodes of VS. Here, For the concept of reciprocity, we specify two equations. The first
+it is assumed that technical-technical relations (ET) are directed, i.e., go
+from one technical element to the other. Infrastructure systems often
+transport a medium (e.g., water, wastewater, energy) into one direction, 1 An adjacency matrix of a network is a square matrix where the matrix en-
+that is, from one technical node to the next. However, ET can also be tries indicate whether two nodes are adjacent (i.e., connected) or not (Was-
+conceived of as undirected, e.g., in the case of transportation systems serman and Faust, 1994).
+where technical edges would describe traffic between two nodes, inde- 2 Density refers to the ratio of edges that are actually present in a network to
+pendently of the direction of the traffic. Social-social relations (ES) can the maximum number of edges that are possible given the number of nodes
+take either directed (for example measuring the exchange of information (Wasserman and Faust, 1994) (s. also Table A1).
+between actors) or undirected (such as collaboration between actors) 3 Reciprocity describes that a directed edge from node A to node B is recip-
+rocated, so there is a directed edge from node B to node A as well.
+forms.
+4 Centrality is best described for an individual node that is central in the
+EST contains directed relations between social actors s and technical
+network. In the case of degree centrality, a (degree) central node has a high
+elements t. Note that for set EST the direction is defined from s to t
+(sE→STt).
+number of (in-coming and out-going) edges.
+4
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+Fig. 1. Socio-technical network consisting of social actors at the social level and technical infrastructure elements at the technical level and multiple relations
+in between.
+Fig. 2. Representation of a socio-technical network (STN) as a multi-level network.
+socio-technical perspective. With the term socio-technical reciprocity
+Table 1
+Four networks (GT,GS,GST,GTS) within the socio-technical network (STN).
+we refer to a social-technical edge esi,tj between two nodes si and tj that
+is also present in the technical-social network (etj,si). Reciprocity can be
+Networks within the STN Previous studies and suggested examples for
+assessed for a pair of nodes or for the entire network. For the latter, we
+infrastructure systems
+summarize all observed reciprocated socio-technical relations
+GT = ET( )VT, T nee tc whn oi rc ka l -
+e
+-
+tE
+W
+ale al.c
+t
+et 2r r0i c d1a
+i8
+sl
+)
+ti rn ibfr ua ts it or nu c st yu sr te
+e
+mne
+s
+t (w Do ur nk ns a(A ndk soy ( te|E cS hT n↔ icaE l-T sS o|)
+c
+iaa ln d
+e
+dd gi ev si d (e
+|
+Eb TSy
+| )
+th toe dsu em
+te
+rmof
+i
+ns eo c ti ha el- te soch cin oi -c ta el
+c
+h( n|E icS aT| l) ra en cid
+-
+Wilkinson 2013) procity rst.
+- Infrastructure systems in general (Dunn et al. (Degree) centrality is an important concept that serves for the
+2013) identification of central nodes (Wasserman and Faust, 1994). In a STN,
+GS = (VS, Social network - Information exchange (Haythornthwaite
+central nodes can be central technical elements or central social actors. If
+ES) 1996; Leifeld and Schneider 2012)
+central nodes have a high number of edges, they are considered to be
+- Collaboration (Angst et al. 2018; Lienert et al.
+2013) degree central. Degree centrality can be either defined by looking at
+- Financial transactions (Pan et al. 2020) social or technical edges or at cross-level social-technical or
+GST = (VS, Social-technical - Ownership technical-social edges. Further, the degree centrality can be calculated
+VT,EST) network - Operation
+for in-coming edges, i.e., edges directed towards a node (in-degree
+- Financial responsibility
+GTS = (VT, Technical-social - Data transfer centrality cD(cid:0) ), or for out-going edges, i.e., edges directed away from a
+VS,ETS) network node (out-degree centrality cD+), or both (degree centrality cD).
+Taking the social-technical network (GST) as an example, the concept
+of degree centrality can help determine whether a social actor is related
+equation concerns reciprocity in the social network GS, i.e., social-social
+to many technical elements (social-technical out-degree centrality
+relations that are reciprocated between two social actors. The second
+equation reflects our conceptual understanding of reciprocity from a
+CS DT +(si)). Considering the opposing direction of edges in the technical-
+5
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+social network (GTS), we can find out similar circumstances, i.e., a 3.2.3. STNs and digitalization, decentralization, and integrated
+technical element being related to either a single, to few or to many management of infrastructures
+social actors (technical-social out-degree centrality CT DS +(ti)). Based on the descriptive concepts in Table A1 and the socio-technical
+The equations for degree centrality as presented in the respective motifs in Table 2, we provide interpretations of entire STN structures
+column in Table A1 allow for the identification of central social actors related to the trends of digitalization, decentralization, and integrated
+and central technical elements in a STN. management in Table C1 in Supplementary Materials C.
+In Table C1, we illustrate exemplary STN configurations and suggest
+3.2.2. Socio-technical motifs mathematical equations to determine the degrees of digitalization,
+Besides studying individual nodes or pairs of nodes (i.e., so-called decentralization, and integrated management from a STN perspective.
+dyads), we illustrate the potential of studying meaningful sub- For example, an infrastructure system can be either socio-technical
+structures with three nodes (i.e., triads) and with four nodes (i.e., cy- digital or not socio-technical digital or somewhere in-between. In the
+cles) in Table 2. Adapting terminology from social-ecological network same way, an infrastructure system can be rather centralized or more
+theory (Bodin et al., 2019), we label these sub-structures “socio-- decentralized. By considering social-social relations as well as social-
+technical motifs” and provide respective socio-technical interpretations technical relations, we can further determine whether an infrastruc-
+(s. Table 2). These socio-technical motifs include one technical element ture system is managed in a fragmented or integrated way. Overall, the
+and two social actors in the case of socio-technical triads or two tech- proposed equations may prove useful for comparing different STNs of
+nical elements and two social actors for socio-technical cycles. The il- infrastructure management in an analytical and formal way.
+lustrations of socio-technical motifs in Table 2 demonstrate that
+multiple relations are taken into account as well. 4. Application to the management of urban wastewater systems
+For example, motif A or “socio-technical alignment with recipro-
+cated social-social relation” represents a sub-structure where social ac- We take urban wastewater systems (UWS) as our case study to
+tors interact with reciprocating social actors who are related to technical demonstrate the applicability of the STN approach. We do so by out-
+elements (or vice versa) which are connected at the technical level. This lining the social and technical characteristics of UWS and describing
+socio-technical cycle takes into account three types of edges: the tech- how they can be studied from a STN perspective. We then provide a
+nical, the social, and either the social-technical or the technical-social. concrete operationalization of nodes and edges that is guided by a
+Motifs B and C differ from motif A in the form of social edges, as motif visualization. Based on our operationalization choices, we designed an
+A includes reciprocated social-social relations between social actors, and empirical case study of a regional unit of an UWS in Switzerland and
+motifs B and C do not feature this reciprocity. Motif D represents a socio- collected STN data through a context interview, document analysis, and
+technical triad, where two social actors are related to the same technical a survey. Using the obtained case study data, we apply selected STN
+element. Table 2 shows four selected simple socio-technical motifs out of concepts from Tables A1, 2 and C.1, and conduct a preliminary analysis
+a number of potential further examples as presented in Supplementary and interpretation of respective descriptive results. Our empirical
+Materials B. application of STN is guided by the general research question: “What is
+The conceptual objective of socio-technical motifs is to analyze them the structure of a STN in urban wastewater systems and how can
+descriptively, i.e., by counting the number of observed motifs in a STN. knowledge about this structure inform researchers and practitioners
+Socio-technical motifs can also be interpreted in a normative way, e.g., about governance and infrastructure challenges?”
+by assuming that the presence of numerous motifs A, B and C in a STN
+implies a well-functioning infrastructure management from a STN
+4.1. Empirical case study: technical elements and social actors in Swiss
+perspective.
+UWS management
+Centralized UWS consist of multiple technical elements that are
+Table 2
+Selected socio-technical motifs within socio-technical networks.
+Motif Motif description Motif representations Socio-technical interpretation
+Cross-level edges represent Cross-level edges represent
+social-technical relations (e.g., technical-social relations (e.
+operation/ownership) g., data transfer)
+A Socio-technical alignment with Tendency of social actors to interact with reciprocating
+reciprocated social-social relation (socio- social actors who are related to technical elements (or
+technical cycle) vice versa) which are connected at the technical level
+B Socio-technical alignment with same Tendency of social actors to interact with social actors
+direction of social-social and technical- who are related to technical elements (or vice versa)
+technical relations (socio-technical cycle) which are connected at the technical level
+(social-social relation has same direction as technical-
+technical relation)
+C Socio-technical alignment with opposing Tendency of social actors to interact with social actors
+direction of social-social and technical- who are related to technical elements (or vice versa)
+technical relations (socio-technical cycle) which are connected at the technical level
+(social-social relation has opposite direction as technical-
+technical relation)
+D Socio-technical transitive closure (socio- Tendency of social actors to interact with reciprocating
+technical triad) social actors who are related to the same technical
+element
+Note: Circles denote social actors and squares denote technical elements. Lines denote social-social relations, technical-technical relations, social-technical relations
+and technical-social relations.
+6
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+arranged in a way that stormwater is drained from impervious city areas, ments in the catchment area were added based on a check of all websites
+and wastewater from individual households is directed to a wastewater from municipalities active within the catchment area as well as available
+treatment plant (WWTP). The WWTP discharges the treated water into planning documents. The resulting list of social actors was then again
+nearby surface waters, e.g., creeks, rivers, or lakes. validated by the context interviewee and can be found together with the
+At the social level, many different actors and organizations are list of all technical elements included in the analysis in Supplementary
+involved in the management of UWS, e.g., operators, planners, and Materials E. With respect to the system boundaries, we represent tech-
+authorities (Lienert et al., 2013). Yet, organizational fragmentation may nical elements of a WWTP and its main trunk sewer. For the latter, we
+result in inefficient operation and management (Roelich et al., 2015; consider the following technical elements: combined sewer overflows
+Worthington, 2014), absence of system-wide performance assessment (CSO), and CSO tanks (CSO T), as well as pumping stations (P). The
+(Benedetti et al., 2008; Fu et al., 2008), slow innovation (Kiparsky et al., representation excludes the rest of the collection system and minor el-
+2013), or even negative environmental impacts in the long run (Kim ements such as manholes. The technical elements are chosen based on
+et al., 2015). their relevance to the investigated infrastructure trends and three con-
+The example of UWS illustrates the importance of socio-technical siderations. First, they are equitable with digital technologies, which
+dependencies, as socio-technical configurations can influence the tech- potentially transfer data to social actors. Second, they are important
+nical performance of an infrastructure system. Such dependencies elements in terms of urban wastewater management and water protec-
+become especially relevant when it comes to changes at the technical or tion. Third, they need to be actively operated, planned, and monitored
+socio-technical level. Examples are the integration of digital technolo- by social actors. The correct representation of the technical network GT
+gies (e.g., sensors) within existing infrastructure systems (i.e., digitali- consisting of the technical elements and the technical-technical relations
+zation), transitions towards more decentralized infrastructure systems was validated by the key stakeholder with whom we conducted the
+(i.e., decentralization), or more system-wide management of regional context interview and a representative of the authority.
+system units (i.e., integrated management). When it comes to the system boundaries for the social network, we
+In Switzerland, UWS are managed by public entities such as mu- focus on the organizational level. Our case study UWS is owned and
+nicipalities or wastewater associations.5 Most of the regulative and ex- operated by public entities, i.e., by six municipalities. Social actors have
+ecutive competencies are situated at the sub-state level and provided by one of the following roles: WWTP operator, wastewater association
+public administrations (Luís-Manso, 2005). While the trends of decen- president, municipal president, municipal council, municipal adminis-
+tralization and integrated management are currently on the agenda of tration, municipal works, engineer, or authority. In other cases, social
+the national Swiss wastewater association, they are only sporadically actors should be selected based on their relevance to managing technical
+addressed and implemented in practice (Lienert et al., 2006). In terms of elements of an infrastructure system. There are different ways to oper-
+digitalization, the 26 sub-states are in different stages, with the sub-state ationalize social-social edges in a STN, depending on the aspects of
+Zurich being rather advanced, for example (Manny et al., 2021). infrastructure management that researchers decide to analyze, such as
+Our case study UWS is located in the sub-state Zurich,6 thereby collaboration (Angst et al., 2018; Lienert et al., 2013) or financial
+representing one out of 62 UWS in the entire sub-state area. The case transactions (Pan et al., 2020) (s. also Table 1). In our case study UWS,
+study UWS was chosen based on two considerations. First, the catch- we rely on an explicit operationalization of relations in the STN. All four
+ment area of the case study UWS includes six municipalities with their types of relations are deduced based on their representativeness related
+respective technical elements, which are connected to the central to the three trends of digitalization, decentralization, and integrated
+WWTP. Based on a survey conducted in 2017 (Manny et al., 2018), we management. We define social-social relations between social actors as
+identified a median of 6 municipalities per wastewater association in information exchange (Haythornthwaite, 1996; Leifeld and Schneider,
+Switzerland. Therefore, the selected case study UWS is comparative to 2012) and technical-technical relations as technical connections in the
+many other UWS in terms of its size. Second, the region where the case form of physical dependencies (Aksoy et al., 2018; Dunn and Wilkinson,
+study UWS is located reflects a typical Swiss peri-urban region. In total, 2013). Social-technical relations are represented as operation, i.e., the
+around 28′000 inhabitants are connected to the WWTP of the catchment competence to operate technical elements. This operationalization al-
+area. A first impression of the area, the systems’ technical elements, and lows us to study the trends of decentralization and integrated manage-
+social actors was achieved by conducting a context interview with a key ment. Technical-social relations describe data transfer from a technical
+stakeholder that had a broad knowledge of the case in June 2020. Based element to a social actor, thus providing socio-technical information on
+on the context interview, we classify the empirical case study UWS as the trend of digitalization. In order to illustrate our STN operationali-
+rather not advanced in terms of digitalization, decentralization, and zation, we provide a visualization in the form of a simple example — not
+integrated management. based on any empirical data — in Fig. 3.
+Using an online survey, we gathered STN data from March to May
+2021 with a response rate of 97 percent (31 out of 32 social actors
+4.2. STN operationalization and data collection
+represented). The obtained STN dataset contains data on technical ele-
+ments and social actors as well as relational data on information ex-
+Drawing on the context interview and complementary document
+change, operation, and data transfer. For example, we provided survey
+analysis, we identified all relevant technical elements, the technical-
+participants with a list of social actors who are active in the case study
+technical relations, and all social actors who are involved in the man-
+area and asked them with whom they were exchanging information on
+agement of the UWS. We used a technical infrastructure map of the UWS
+urban water management issues during the past two years.7 Survey
+given to us by the context interviewee to identify technical elements and
+participants were allowed to identify up to ten additional actors with
+technical connections (i.e., technical-technical relations). The context
+whom they exchange information. However, only at most two additional
+interviewee also provided us with information on all municipalities,
+social actors were added by survey participants. Therefore, we decided
+engineers, and authority representatives involved in managing the UWS.
+to exclude these additionally stated actors as each name was only
+Additional social actors relevant to the management of technical ele-
+mentioned once. We assume that additionally stated actors are rather
+personal contacts and not relevant for all social actors in the catchment
+5 A wastewater association is an organizational form of inter-municipal area in terms of information exchange.
+cooperation where several municipalities join forces to operate technical ele-
+ments of the UWS.
+6 We refrain from presenting the actual location to protect the anonymity of 7 We provide a complete version of the survey questionnaire in Supplemen-
+social actors. tary Materials D.
+7
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+Fig. 3. Operationalization of a simple example of a socio-technical network (STN) of an urban wastewater system (UWS).
+All relational data was converted to matrix format in order to apply — as compared to higher densities in networks related to an established
+network analysis tools.8 For the purpose of reproducibility, we give a issue such as urban wastewater management. These exemplary com-
+more detailed description on STN data collection and data analysis in parisons with published network studies validate the structure of our
+Supplementary Materials F. Based on the network matrices, we visualize social network in terms of one of the most basic and important network
+the empirical STN of the case study UWS in Fig. 4.9 The figure reflects an indicators, i.e., network density.
+empirical observation in network format, assessed based on empirical At the socio-technical level, the densities of the operation and data
+information from a context interview, document analysis, and a survey. transfer networks are generally dependent on the number of social ac-
+The empirical STN consists of 31 social actors and 42 technical elements. tors and technical elements. The social-technical network of operation
+In total, there are 285 information exchange edges, 41 technical shows a higher density (dST=0.19)than the technical-social network of
+connection edges, 249 operation edges, and 7 data transfer edges (s. data transfer (dTS = 0.005). We assume that theoretically, it is more
+Table 3). likely that a single social actor operates many technical elements and
+that data transfer rather occurs from one technical element to a few
+4.3. Descriptive results from the STN analysis specific social actors than to all. This likely explains the observation in
+the empirical STN that the density of the operation network is higher
+In the following, we present results that reflect a selection of our than the density of the data transfer network.
+suggested descriptive STN concepts in section 3.2. Based on the number With respect to reciprocity, we determine both the reciprocity within
+of social actors and technical elements as well as the number of different the social network rS=0.6 and the socio-technical reciprocity rst =
+edges, we determine the densities of the four networks GS, GT, GST, and 0.005. The latter is very low due to the minor presence of only seven
+GTS (s. Table 3). The density of the social information exchange network data transfer edges, i.e., only a few social actors who operate technical
+is 0.31. This value is in line with what we observe in similar networks. elements receive data from them. More advancement in digitalization
+For example, the densities of collaboration networks among actors being could result in higher socio-technical reciprocity, where ideally, data
+involved in 11 policy processes on the Swiss national level range from from technical elements would be available to those social actors
+0.27 to 0.43, with most values being right above or below 0.30 (Fischer operating them. Further, the social reciprocity rS=0.6 indicates that
+and Sciarini, 2016). In information exchange networks on hydraulic some information exchange edges are reciprocated while others remain
+fracturing politics in Swiss sub-states, information exchange network one-way forms of information “forwarding”. This is interesting as social
+densities range between 0.11 and 0.20 (Ingold and Fischer, 2016). actors have different roles (e.g., municipal administration, engineer,
+Indeed, we would expect to see lower density values for networks authority) that include organizational hierarchies and, therefore, may
+dealing with hydraulic fracturing — a new issue on the political agenda also compromise forms of one-way reporting instead of reciprocal in-
+formation exchange.
+8 Data on social and technical nodes can be found in Supplementary Materials
+E. The analysis of the STN was performed in R studio using, for example, the
+packages graphlayouts (Schoch, 2020) and motifr (Angst and Seppelt, 2020).
+9 While Fig. 3 illustrates a simple example not based on any empirical data of
+our representation of the nodes and edges of a STN (i.e. including a technical
+infrastructure map and respective symbols of technical elements and social
+actors), Fig. 4 is based on empirically validated information and visualizes the
+empirical STN of a real-world UWS.
+8
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+Fig. 4. Socio-technical network (STN) of an urban wastewater system (UWS) in Switzerland. Social actors are at the top, technical elements are at the lower level and
+colored based on their affiliation to a municipality. Information exchange edges are blue, technical connection edges are red, operation and data transfer edges are
+both colored grey. This STN was visualized using graphlayouts (Schoch, 2020) in R studio. (For interpretation of the references to color in this figure legend, the
+reader is referred to the Web version of this article.)
+Based on the determination of degree centrality10, the empirical STN UWS. In terms of data transfer, CSO tank 1 is the most degree central
+study reveals that the municipal council representative 2 of municipality technical element, as data is transferred to the maximum number of four
+1 who also has the role of the president of the wastewater association is social actors.
+most degree central11 in the information exchange network, i.e., ex- For the operation network, we counted 754 socio-technical motifs A
+changes information with most other social actors (degree centrality: 39 (socio-technical cycle) and 366 socio-technical motifs D (socio-technical
+edges). We further identify two degree central social actors12 in terms of triad). The quantitative assessment is more informative if multiple
+operation: the WWTP operator as well as the municipal council repre- different empirical STNs are compared, which is out of the scope of this
+sentative 2 of municipality 1 (i.e., the president of the wastewater as- article. However, looking at particular socio-technical motifs within the
+sociation). These two social actors are degree central in the sense that STN allows for a more qualitative identification of social actors or
+they are involved in the operation of the highest number of technical technical elements that are in fact part of such motifs. For example, most
+elements (in total 38 out of 42 technical elements). This implies that of the appearances of socio-technical motif A in the operation network
+they are critical social actors for the entire operation of the case study include the municipal council representative 2 of municipality 1 (i.e.,
+the president of the wastewater association) (part of 150 socio-technical
+motifs A) and the WWTP operator (part of 125 socio-technical motifs A)
+(s. Table H.1 in Supplementary Materials H).
+10 Besides degree centrality, several different centrality parameters can be By contrast, social actors and technical elements that are not part of
+applied to evaluate the importance of a network node, for example, between- such motifs can be determined, which would be useful to detect certain
+ness, closeness or eigenvector centrality (Freeman, 1978). Here, we base our governance gaps or misfits (Angst and Seppelt, 2020). Relating to
+interpretation on degree centrality. However, we provide additional results for socio-technical motif A in the operation network for example, we
+betweenness, closeness, and eigenvector centrality in the social network in
+identified 453 configurations, where two social actors who operate two
+Supplementary Materials G along with information on in- and out-degree
+connected technical elements do not exchange information. In
+centrality.
+11 Here, degree central social actors in the information exchange network are Table H.1, we determine a ratio of socio-technical motifs A where social
+actors do not exchange information (i.e., “open socio-technical cycles”)
+those social actors that show the highest count of in-coming and out-going
+information exchange edges (social-social relations). Degree central social ac- to socio-technical motifs where social actors do exchange information (i.
+tors are those who exchange information with most other social actors and e., “closed socio-technical cycles”) in the operation network. Based on
+many social actors indicated that they exchange information with them (s. also the ratio values for each social actor, we found that particularly two
+Table A1 for the differentiation between in-degree (in-coming edges for a node) engineers and three municipal works representatives should exchange
+and out-degree (out-going edges from a node) centralities. Degree centrality is information with more social actors. For example, in order to close the
+the sum of in- and out-degree centralities for a node. socio-technical cycle, the municipal works representative of munici-
+12 We base our interpretation of central social actors for the operation of the pality 4 should exchange information with engineer 3.
+UWS on degree centrality, while other centrality parameters could be relevant
+With respect to the social-technical motifs D (socio-technical triads)
+as well (s. also footnote 10 and Supplementary Materials G).
+9
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+Table 3 by comparing the density value to observations in similar studies. Social
+Socio-technical network analysis of the empirical STN as visualized in Fig. 4. and technical nodes of the social-technical and technical-social networks
+Concept Description Result were validated as they are part of the social and technical networks. In
+order to validate edges in the social-technical operation network, we
+|| VV TS|
+|
+N Nu um mb be er
+r
+oo ff ts eo cc hia nl
+i
+ca ac lt o er ls
+e ments
+43 21
+checked whether operation edges between social actors from different
+|ES| Number of social-social relations 285 municipalities and technical elements associated with these municipal-
+(here: information exchange) ities were present. For example, we tested whether technical elements
+|ET| Number of technical-technical 41 owned by municipality 1 showed social-technical edges to social actors
+relations (here: technical connection)
+affiliated with municipality 1. Analogously, we examined all munici-
+|EST| Number of social-technical 249
+relations (here: operation) palities and found that each municipality was represented and operation
+|ETS| Number of technical-social 7 edges were present for all technical elements owned by the respective
+relations (here: data transfer) municipality. The technical-social data transfer edges were validated
+dS Social network density (directed) 0.31 based on information about technical elements that are equipped with a
+(information exchange density)
+sensor (in total 3 technical elements) and that, therefore, can potentially
+dT Technical network density 0.05
+(undirected) transfer data. We observed that those technical elements that are
+dST Social-technical network density 0.19 equipped with a sensor (i.e., the WWTP, CSO tank 1, and CSO tank 13)
+(operation network density) transfer data to at least one social actor, validating the technical-social
+dTS Technical-social network density 0.005
+edges.
+(data transfer network density)
+rS Social network reciprocity 0.6 A further issue related to validation is missing data. Indeed, missing
+rst Socio-technical reciprocity 0.005 data is an extremely common problem with surveys and can have an
+max(CS DT+) Most central social actor(s) based WWTP operator; municipal influence on the correct representation of the network (Berardo et al.,
+on social-technical network (central council 2 of municipality 1 (i.e., 2020). Yet, in our case, we have an exceptionally high survey response
+in terms of operation of technical wastewater association
+rate of 97 percent, i.e., only one actor did not respond to our survey (a
+elements) president)
+max(CS DT+) Most central technical element CSO tank 1 second WWTP operator for the same WWTP).
+based on technical-social network Two additional strategies could contribute both to the validation of
+(central in terms of data transfer to the STN as well as to more in-depth analytical insights. First, the analysis
+social actors)
+could benefit from quantitative results being combined with more
+motif A Count of socio-technical motif A 754
+qualitative insights, deriving, namely, from context interviews. For
+(socio-technical cycle)
+Count of socio-technical motif A 453 example, the interviewee stated that “most infrastructure elements are
+without social-social relations not equipped with sensors” and consequently cannot transfer data to
+motif D Count of socio-technical motif D 366 social actors. In addition, the interviewee tried to bring social actors
+(socio-technical triad) together to “sensitize them to an integrated management of the entire
+ddigital S do igc ii to a- lt ie zc ah tin oi nc al degree of 0.41
+urban wastewater system”, which suggests that the system is still
+ddecentral Socio-technical degree of 0.1 managed in a fragmented way. A quantitative analysis based on the STN
+decentralization concepts might inform stakeholders about where such fragmentation
+dintegrated Socio-technical degree of 0.24
+still exists, and how it might be addressed.
+integrated management
+Second, comparing the case study UWS to other empirical STNs
+could provide benefits in terms of validation as well as additional in-
+sights. In terms of validation, we were only able to compare the structure
+of our networks to other networks from other sectors, but not to UWS
+in the operation network, we identified information exchange gaps be-
+networks in other cases. As for additional insights, for example, different
+tween the municipal council representative 1 of municipality 1 and the
+network densities in different cases, or different actors that take central
+WWTP operator as well as the municipal works representative of mu-
+roles, might enable us to better grasp why different systems differ in
+nicipality 1. Further, by exchanging information with the WWTP oper-
+their performance or adaptation capacity.
+ator as well as the municipal council representative of municipality 2,
+Our STN analysis has provided accurate findings on the challenges in
+engineer 5 could bridge important information exchange gaps.
+existing UWS. For example, we identified municipal council represen-
+Finally, the determined degrees of digitalization, decentralization,
+tative 2 of municipality 1 (i.e., the president of the wastewater associ-
+and integrated management demonstrate that the case study UWS can
+be seen as rather not socio-technical digital (ddigital = 0.41), socio- ation) and the WWTP operator as central social actors either in terms of
+technical centralized (ddecentral = 0.1), and managed in a fragmented information exchange or operation. This finding emphasizes that
+way (dintegrated = 0.24). The value interval for all three degrees is be- different social actors play important roles depending on their social and
+socio-technical relations. Such a finding accurately represents the
+tween 0 and 1, where values close to 1 imply socio-technical digital,
+functioning of Swiss local governance, where public, semi-private, and
+socio-technical decentralized, or integrated management (s. also Sup-
+private actors collaborate and jointly fulfill functions related to the
+plementary Materials C).
+management, development, implementation, and innovation within
+infrastructure systems. Systematic knowledge about these roles can be
+5. Discussion
+crucial to understanding the functioning of an UWS and its capacity for
+transformation in light of trends such as digitalization, decentralization,
+The analysis of the case study UWS demonstrates the applicability of
+or integrated management. Also, in our empirical illustration, we
+the STN approach to empirical cases and illustrates the use of network
+counted 754 configurations of the socio-technical motif A where recip-
+concepts such as density, reciprocity, and (degree) centrality. STNs are a
+rocal information exchange is present compared to 453 of the same
+useful approach if the findings are valid and accurate. Regarding val-
+configuration with absent information exchange edges. The latter
+idity, we have discussed that a STN should be validated depending on
+configuration describes a form of governance gap or socio-technical
+the operationalization of network nodes and edges, most easily based on
+misfit that could be resolved by supporting the formation of informa-
+separate validation approaches for different parts of the STN. In this
+tion exchange edges between identified social actors. Again, this finding
+article, two experts confirmed the correct representation of the technical
+accurately represents the empirical reality where some actors have long-
+network. The structure of the social information network was validated
+established and trustful relations, while others lack these relations due
+10
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+to different system understandings (Herzog and Ingold, 2019), different practical relevance. First, STNs combine insights from several theoret-
+policy preferences and values (Metz et al., 2019), or sectoral or ical strands within social sciences as well as interdisciplinary literature
+administrative boundaries (Fischer and Ingold, 2020; Fischer and on infrastructure management and beyond. More specifically, studies on
+Sciarini, 2016). digitalization (Barns et al., 2017; Zimmerman and Horan, 2004),
+Even though UWS have been previously studied from socio-technical decentralization (R. Bird, 1994; Levaggi et al., 2018; Libralato et al.,
+system perspectives (de Haan et al., 2013; Jensen et al., 2015; Pan- 2012), integrated management (Halfawy, 2008; Roelich et al., 2015;
+ebianco and Pahl-Wostl, 2006), we have demonstrated that a STN Saidi et al., 2018), among others, will benefit from this approach as it
+approach reveals relevant insights as interrelated technical elements and provides them with a systematic and formalized tool for analysis. Based
+social actors are jointly analyzed based on detailed empirical informa- on this tool, answers to important questions about socio-technical fit
+tion on each social and technical node, and different edges between within infrastructure systems, or around central social actors or tech-
+these nodes. Compared to system dynamics (Prouty et al., 2020; Whyte nical elements, as discussed above, can be explored. Second, STNs are of
+et al., 2020) or agent-based modeling (Berglund, 2015; Dam et al., 2013; conceptual relevance as we propose a structurally explicit operational-
+Panebianco and Pahl-Wostl, 2006; Williams, 2018) approaches, STNs do ization of the concept of STN in the context of infrastructure systems.
+not capture dynamic changes, but create a conceptual and methodo- The concept is not new to the literature (Elzen et al., 1996), but the
+logical basis to achieve a deeper understanding of socio-technical actual network has mostly been dealt with implicitly, without oper-
+infrastructure systems. ationalizing each network node and edge (Kluger et al., 2020; Scott and
+First, researchers working with a STN approach could ask questions Ulibarri, 2019). Third, STNs are of empirical relevance as they allow for
+about central social actors or central technical elements. This could be a detailed analysis of the functioning of specific infrastructure systems,
+important for understanding which technical elements are most crucial as well as propositions on how to adapt those systems and induce
+for integrated management (as they, e.g., connect different parts of the transformations in order to adapt to challenging and dynamic contexts,
+STN), or which social actors could play an important role in pushing for example, related to digitalization, decentralization, or integrated
+towards decentralization or digitalization (Hoolohan et al., 2021; Mer- management. Fourth, STNs have a high potential for practical relevance.
+gel et al., 2019). A question allowing for a more detailed analytical Not only does stakeholder knowledge provide crucial information for
+insight into infrastructure systems would ask whether the STN is highly assessing the different nodes and edges, but the resulting networks could
+fragmented, or whether it is well integrated (s. Table C1). This infor- be used as a tool for discussion with stakeholders. For example, dis-
+mation again could provide hints on where more efforts towards inte- cussions could focus on whether they perceive the interdependencies
+grated infrastructure management might be needed. similar to those represented in the STN, or whether STNs allow stake-
+Second, a STN approach could help to identify social or socio- holders to identify potential governance gaps or misfits (Angst and
+technical barriers toward digitalization, decentralization, or integrated Seppelt, 2020). A STN of infrastructure systems is thus also a potential
+management of infrastructure systems (Manny et al., 2021). For tool to be used in stakeholder interactions and could be beneficial in
+example, related to digitalization, even though digital technologies are instances of science-policy exchange (Cvitanovic et al., 2016).
+already available, barriers may hinder their adoption if the social system The STN approach as presented in this article relies on a few as-
+is lagging behind in developing and implementing fitting forms of co- sumptions that, if modified, would change the structure of the network
+ordination, cooperation, or collaboration (Guy et al., 2011; Marchant as well as findings. First, we assume that any ecological and natural
+et al., 2013). By coupling social and technical systems, data and infor- elements of the environment are not part of the STN. Indeed, including
+mation flows between technical elements and social actors can be these elements would increase the network complexity. However, in
+studied in combination. future studies, the environment could be included within an even more
+Third, in terms of the entire infrastructure performance, the litera- holistic “social-ecological-technological network”, as infrastructures
+ture has emphasized critical transactions essential for the functioning of have been considered as social, ecological, and technological systems
+infrastructures (Künneke et al., 2010). The successful restructuring of (Markolf et al., 2018). Such an extended approach could be useful for
+infrastructures requires the capacity to align technical functions and explicitly addressing innovative concepts such as blue-green infra-
+modes of organization. Identifying critical transactions, such as relevant structure (Dai et al., 2021; Donati et al., 2022; Thorne et al., 2018) and
+information exchange relations between social actors, could be sup- nature-based solutions (Cohen-Shacham et al., 2016). Second, we as-
+ported by the idea of socio-technical fit. This would be achieved if sume that only social actors are part of the social side of the
+important connections at the technical level are aligned with respective socio-technical systems, but we disregard important other social ele-
+connections at the social level, as illustrated with the example of two ments such as institutions or forums (Fischer and Leifeld, 2015) that
+social actors, who are responsible for two technically connected tech- could support the coordination among actors, or ideas and discursive
+nical elements and exchange information (s. socio-technical motif A in elements (Heiberg et al., 2022). In addition, our operationalization re-
+Table 2). lies on a single representation of social-social relations in the form of
+Finally, infrastructure trends such as digitalization, decentralization, information exchange, however, other types of relations, such as
+or integrated management require the implementation of policy in- collaboration (Angst et al., 2018) or financial transactions (Pan et al.,
+struments (Soutar, 2021). However, identifying the right policy in- 2020) could be included as well. Taking these elements and relations
+struments involves complex decisions. Understanding the relations into account could provide additional insights into how coordination
+among social and technical levels at the micro-level of their individual within a STN works, and provide different results with respect to central
+elements, potential opportunities for action may become transparent actors. Third, we assume that our conceptualization of a STN as a
+(Prager and Pfeifer, 2015). A STN approach might thus help to identify “snapshot” view of data gathered at one point in time indicates a real-
+fitting policy instruments by specifying how these act on different istic representation of a socio-technical system that in reality is dynamic,
+related technical and social elements, such as e.g., actor coordination, in with different elements of the network dynamically changing and
+infrastructure systems. These policy instruments are also needed to adapting over time. Such a dynamic network evolution can be studied by
+address challenges affecting infrastructure systems such as demographic comparing consecutive STNs at different points in time, but data gath-
+change, rapidly growing urban areas, and climate change mitigation. ering and analysis would again add complexity to such an endeavor.
+6. Conclusions Credit author
+Socio-technical networks of networked infrastructure systems, as Liliane Manny: Conceptualization; Data curation; Formal analysis;
+presented in this article, are of theoretical, conceptual, empirical, and Methodology; Software; Visualization; Writing - original draft; Writing -
+11
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+Guerrero, A.M., Bodin, O¨ ., McAllister, R.R.J., Wilson, K.A., 2015. Achieving social- processes. J. Environ. Manag. 125, 134–148. https://doi.org/10.1016/j.
+ecological fit through bottom-up collaborative governance: an empirical jenvman.2013.03.052.
+investigation. Ecol. Soc. 20 (4). Lomi, A., Robins, G., Tranmer, M., 2016. Introduction to multilevel social networks. Soc.
+Guy, S., Marvin, S., Medd, W., Moss, T., 2011. Shaping Urban Infrastructures: Network. 44, 266–268. https://doi.org/10.1016/j.socnet.2015.10.006.
+Intermediaries and the Governance of Socio-Technical Networks. Earthscan, New Luís-Manso, P., 2005. Water Institutions and Management in Switzerland. CDM Working
+York. Papers Series. EPFL, Lausanne.
+Halfawy, M.R., 2008. Integration of municipal infrastructure asset management Manny, L., Duygan, M., Fischer, M., Rieckermann, J., 2021. Barriers to the digital
+processes: challenges and solutions. J. Comput. Civ. Eng. 22 (3), 216–229. https:// transformation of infrastructure sectors. Pol. Sci. 54 (4), 943–983. https://doi.org/
+doi.org/10.1061/(ASCE)0887-3801 (2008)22:3(216). 10.1007/s11077-021-09438-y.
+Hamiche, A.M., Stambouli, A.B., Flazi, S., 2016. A review of the water-energy nexus. Manny, L., Fischer, M., Rieckermann, J., 2018. Policy analysis for better protection of
+Renew. Sustain. Energy Rev. 65, 319–331. https://doi.org/10.1016/j. receiving waters during wet weather. In: 11th International Conference on Urban
+rser.2016.07.020. Drainage Modelling (UDM 2018). Palermo, Italy.
+Hansman, R.J., Magee, C., De Neufville, R., Robins, R., Roos, D., 2006. Research agenda Mao, F., Khamis, K., Clark, J., Krause, S., Buytaert, W., Ochoa-Tocachi, B.F., et al., 2020.
+for an integrated approach to infrastructure planning, design and management. Int. Moving beyond the technology: a socio-technical roadmap for low-cost water sensor
+J. Crit. Infrastruct. 2 (2–3), 146–159. https://doi.org/10.1504/IJCIS.2006.009434. network applications. Environ. Sci. Technol. 54 (15), 9145–9158. https://doi.org/
+Haythornthwaite, K., 1996. Social network analysis an approach and technique for the 10.1021/acs.est.9b07125.
+study of information exchange. LISR 18, 323–343. Marchant, G.E., Abbott, K.W., Allenby, B., 2013. Innovative Governance Models for
+Heiberg, J., Truffer, B., Binz, C., 2022. Assessing transitions through socio-technical Emerging Technologies. Edward Elgar Publishing Limited.
+configuration analysis – a methodological framework and a case study in the water Markolf, S.A., Chester, M.V., Eisenberg, D.A., Iwaniec, D.M., Davidson, C.I.,
+sector. Res. Pol. 51 (1), 104363 https://doi.org/10.1016/j.respol.2021.104363. Zimmerman, R., et al., 2018. Interdependent infrastructure as linked social,
+Herzog, L.M., Ingold, K., 2019. Threats to common-pool resources and the importance of ecological, and technological systems (SETSs) to address lock-in and enhance
+forums: on the emergence of cooperation in CPR problem settings. Pol. Stud. J. 47 resilience. Earth’s Future 6 (12), 1638–1659. https://doi.org/10.1029/
+(1), 77–113. https://doi.org/10.1111/psj.12308. 2018ef000926.
+Hodson, M., Marvin, S., 2010. Can cities shape socio-technical transitions and how would Mergel, I., Edelmann, N., Haug, N., 2019. Defining digital transformation: results from
+we know if they were? Res. Pol. 39 (4), 477–485. https://doi.org/10.1016/j. expert interviews. Govern. Inf. Q. 36 (4) https://doi.org/10.1016/j.giq.2019.06.002.
+respol.2010.01.020. Metz, F., Leifeld, P., Ingold, K., 2019. Interdependent policy instrument preferences: a
+Hoolohan, C., Amankwaa, G., Browne, A.L., Clear, A., Holstead, K., Machen, R., et al., two-mode network approach. J. Publ. Pol. 39 (4), 609–636. https://doi.org/
+2021. Resocializing digital water transformations: outlining social science 10.1017/S0143814X18000181.
+perspectives on the digital water journey. WIREs Water. https://doi.org/10.1002/ Moglia, M., Alexander, K.S., Sharma, A., 2011. Discussion of the enabling environments
+wat2.1512. for decentralised water systems. Water Sci. Technol. 63 (10), 2331–2339. https://
+Hu, F., Mostashari, A., Xie, J., 2010. Socio-Technical Networks: Science and Engineering doi.org/10.2166/wst.2011.443.
+Design. CRC Press, Inc. Mugisha, S., 2007. Performance assessment and monitoring of water infrastructure: an
+Ingold, K., Fischer, M., 2016. Belief conflicts and coalition structures driving subnational empirical case study of benchmarking in Uganda. Water Pol. 9 (5), 475–491. https://
+policy responses: the case of Swiss regulation of unconventional gas development. doi.org/10.2166/wp.2007.022.
+In: Weible, C.M., Heikkila, T., Ingold, K., Fischer, M. (Eds.), Policy Debates on Ostrom, E., 2010. Polycentric systems for coping with collective action and global
+Hydraulic Fracturing: Comparing Coalition Politics in North America and Europe. environmental change. Global Environ. Change 20 (4), 550–557.
+Palgrave Macmillan US, New York, pp. 201–237. Oswald, M., Li, Q., McNeil, S., Trimbath, S., 2011. Measuring infrastructure performance:
+Jensen, J.S., Fratini, C.F., Cashmore, M.A., 2015. Socio-technical systems as place- development of a national infrastructure index. Publ. Works Manag. Pol. 16 (4),
+specific matters of concern: the role of urban governance in the transition of the 373–394. https://doi.org/10.1177/1087724x11410071.
+wastewater system in Denmark. J. Environ. Pol. Plann. 18 (2), 234–252. https://doi. Ottens, M., Franssen, M., Kroes, P., Van De Poel, I., 2006. Modelling infrastructures as
+org/10.1080/1523908x.2015.1074062. socio-technical systems. Int. J. Crit. Infrastruct. 2 (2–3), 133–145. https://doi.org/
+Kerkez, B., Gruden, C., Lewis, M., Montestruque, L., Quigley, M., Wong, B., et al., 2016. 10.1504/IJCIS.2006.009433.
+Smarter stormwater systems. Environ. Sci. Technol. 50 (14), 7267–7273. https:// Pan, F., Bi, W., Liu, X., Sigler, T., 2020. Exploring financial centre networks through
+doi.org/10.1021/acs.est.5b05870. inter-urban collaboration in high-end financial transactions in China. Reg. Stud. 54
+Kim, J.H., Keane, T.D., Bernard, E.A., 2015. Fragmented local governance and water (2), 162–172. https://doi.org/10.1080/00343404.2018.1475728.
+resource management outcomes. J. Environ. Manag. 150, 378–386. https://doi.org/ Panebianco, S., Pahl-Wostl, C., 2006. Modelling socio-technical transformations in
+10.1016/j.jenvman.2014.12.002. wastewater treatment—a methodological proposal. Technovation 26 (9),
+Kiparsky, M., Sedlak, D.L., Thompson Jr., B.H., Truffer, B., 2013. The innovation deficit 1090–1100. https://doi.org/10.1016/j.technovation.2005.09.017.
+in urban water: the need for an integrated perspective on institutions, organizations, Prager, S.D., Pfeifer, C., 2015. Network approaches for understanding rainwater
+and technology. Environ. Eng. Sci. 30 (8), 395–408. https://doi.org/10.1089/ management from a social-ecological systems perspective. Ecol. Soc. 20 (4) https://
+ees.2012.0427. doi.org/10.5751/ES-07950-200413.
+Kling, R., McKim, G., King, A., 2003. A bit more to it scholarly communication forums as Prouty, C., Mohebbi, S., Zhang, Q., 2020. Extreme weather events and wastewater
+socio-technical interaction networks. J. Am. Soc. Inf. Sci. Technol. 54 (1), 47–67. infrastructure: a system dynamics model of a multi-level, socio-technical transition.
+Kluger, L.C., Gorris, P., Kochalski, S., Mueller, M.S., Romagnoni, G., Ban, N., 2020. Sci. Total Environ. 714, 136685 https://doi.org/10.1016/j.scitotenv.2020.136685.
+Studying human–nature relationships through a network lens: a systematic review. Roelich, K., Knoeri, C., Steinberger, J.K., Varga, L., Blythe, P.T., Butler, D., et al., 2015.
+People Nat. https://doi.org/10.1002/pan3.10136. Towards resource-efficient and service-oriented integrated infrastructure operation.
+Künneke, R., Groenewegen, J., M´enard, C., 2010. Aligning modes of organization with Technol. Forecast. Soc. Change 92, 40–52. https://doi.org/10.1016/j.
+technology: critical transactions in the reform of infrastructures. J. Econ. Behav. techfore.2014.11.008.
+Organ. 75 (3), 494–505. https://doi.org/10.1016/j.jebo.2010.05.009. Saidi, S., Kattan, L., Jayasinghe, P., Hettiaratchi, P., Taron, J., 2018. Integrated
+Lamb, R., Sawyer, S., Kling, R., 2000. A social informatics perspective on socio-technical infrastructure systems—a review. Sustain. Cities Soc. 36, 1–11. https://doi.org/
+networks. AMCIS 2000 Proc. 10.1016/j.scs.2017.09.022.
+Langeveld, J., Nopens, I., Schilperoort, R., Benedetti, L., de Klein, J., Amerlinck, Y., et al., Sayles, J.S., Mancilla Garcia, M., Hamilton, M., Alexander, S.M., Baggio, J.A., Fischer, A.
+2013. On data requirements for calibration of integrated models for urban water P., et al., 2019. Social-ecological network analysis for sustainability sciences: a
+systems. Water Sci. Technol. 68 (3), 728–736. https://doi.org/10.2166/ systematic review and innovative research agenda for the future. Environ. Res. Lett.
+wst.2013.301. 14 (9) https://doi.org/10.1088/1748-9326/ab2619.
+Larsen, T.A., Hoffmann, S., Lüthi, C., Truffer, B., Maurer, M., 2016. Emerging solutions to Schoch, D., 2020. graphlayouts. -. R package version 0.7.1.
+the water challenges of an urbanizing world. Science 352 (6288). https://doi.org/ Schweber, L., Harty, C., 2010. Actors and objects: a socio-technical networks approach to
+10.1126/science.aad8641. technology uptake in the construction sector. Construct. Manag. Econ. 28 (6),
+Leifeld, P., Schneider, V., 2012. Information exchange in policy networks. Am. J. Polit. 657–674. https://doi.org/10.1080/01446191003702468.
+Sci. 56 (3), 731–744. https://doi.org/10.1111/j.1540-5907.2011.00580.x. Scott, T.A., Ulibarri, N., 2019. Taking network analysis seriously: methodological
+Levaggi, L., Levaggi, R., Trecroci, C., 2018. Decentralisation and waste flows: a welfare improvements for governance network scholarship. Perspect. Publ. Manag. Govern.
+approach. J. Environ. Manag. 217, 969–979. https://doi.org/10.1016/j. 2 (2), 89–101. https://doi.org/10.1093/ppmgov/gvy011.
+jenvman.2018.03.067. Sherman, L., Cantor, A., Milman, A., Kiparsky, M., 2020. Examining the complex
+Libralato, G., Volpi Ghirardini, A., Avezzù, F., 2012. To centralise or to decentralise: an relationship between innovation and regulation through a survey of wastewater
+overview of the most recent trends in wastewater treatment management. utility managers. J. Environ. Manag. 260, 110025 https://doi.org/10.1016/j.
+J. Environ. Manag. 94 (1), 61–68. https://doi.org/10.1016/j.jenvman.2011.07.010. jenvman.2019.110025.
+Lienert, J., Monstadt, J., Truffer, B., 2006. Future scenarios for a sustainable water Soutar, I., 2021. Dancing with complexity: making sense of decarbonisation,
+sector: a case study from Switzerland. Environ. Sci. Technol. 40 (2), 436–442. decentralisation, digitalisation and democratisation. Energy Res. Social Sci. 80,
+https://doi.org/10.1021/es0514139. 102230 https://doi.org/10.1016/j.erss.2021.102230.
+Lienert, J., Schnetzer, F., Ingold, K., 2013. Stakeholder analysis combined with social
+network analysis provides fine-grained insights into water infrastructure planning
+13
+L. Manny et al. J o u r n a l o f E n v i r o n m e n t a l M a n a g e m e n t 318(2022)115596
+Thatcher, M., 2002. Regulation after delegation: independent regulatory agencies in Wihlborg, M., So¨rensen, J., Alkan Olsson, J., 2019. Assessment of barriers and drivers for
+Europe. J. Eur. Publ. Pol. 9 (6), 954–972. https://doi.org/10.1080/ implementation of blue-green solutions in Swedish municipalities. J. Environ.
+1350176022000046445. Manag. 233, 706–718. https://doi.org/10.1016/j.jenvman.2018.12.018.
+Thorne, C.R., Lawson, E.C., Ozawa, C., Hamlin, S.L., Smith, L.A., 2018. Overcoming Wilbanks, T., Fernandez, S., 2012. Climate Change and Infrastructure, Urban Systems,
+uncertainty and barriers to adoption of Blue-Green Infrastructure for urban flood risk and Vulnerabilities. Technical Report for the U.S. Department of Energy in Support of the
+management. J. Flood Risk Manag. 11 (S2), S960–S972. https://doi.org/10.1111/ National Climate Assessment. Island Press, Washington DC.
+jfr3.12218. Williams, R.A., 2018. Lessons learned on development and application of agent-based
+Warneryd, M., Håkansson, M., Karltorp, K., 2020. Unpacking the complexity of models of complex dynamical systems. Simulat. Model. Pract. Theor. 83, 201–212.
+community microgrids: a review of institutions’ roles for development of microgrids. https://doi.org/10.1016/j.simpat.2017.11.001.
+Renew. Sustain. Energy Rev. 121, 109690 https://doi.org/10.1016/j. Worthington, A.C., 2014. A review of frontier approaches to efficiency and productivity
+rser.2019.109690. measurement in urban water utilities. Urban Water J. 11 (1), 55–73. https://doi.org/
+Wasserman, S., Faust, K., 1994. Social Network Analysis: Methods and Applications. 10.1080/1573062X.2013.765488.
+Cambridge University Press, Cambridge. Zimmerman, R., Faris, C., 2010. Infrastructure impacts and adaptation challenges. Ann.
+Weerasinghe, R.P.N.P., Yang, R.J., Too, E., Le, T., 2021. Renewable energy adoption in N. Y. Acad. Sci. 1196, 63–86.
+the built environment: a sociotechnical network approach. Intell. Build. Int. 13 (1), Zimmerman, R., Horan, T., 2004. Digital Infrastructures: Enabling Civil and
+33–50. https://doi.org/10.1080/17508975.2020.1752134. Environmental Systems through Information Technology. Routledge, London.
+Whyte, J., Mijic, A., Myers, R.J., Angeloudis, P., Cardin, M.-A., Stettler, M.E.J., et al.,
+2020. A research agenda on systems approaches to infrastructure. Civ. Eng. Environ.
+Syst. 37 (4), 214–233. https://doi.org/10.1080/10286608.2020.1827396.
+14
+

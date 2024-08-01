@@ -1,0 +1,35 @@
+Extracted Keywords:
+street network, network, street, graph, networks, street segments, network model, Network Analysis, streets, Fig.
+
+Main Topics:
+NetworksandSpatialEconomics(2018)18:735–749
+https://doi.org/10.1007/s11067-018-9427-9
+StreetNetworkStudies, fromNetworkstoModelsandtheir
+Representations
+StephenMarshall1·JorgeGil2·KarlKropf3·MartinTomko4·LucasFigueiredo5, the last fifty years, street networks, a
+rapidly growing number, disparate disciplines, These studies, a wide range, a wealth, diverse analyticaltechniques, the fields, transport or infrastructure engineering, street
+networks, more or less homogeneous linear
+elements, connecting locations, This view, a graph, flow
+optimisation, Street networks, , complex objects, the way, fundamental effects, the outcomes, a study, Many approaches, modelling street networks, different analyses, the urban system, this plurality, the relation, different
+models, The motivations, a
+given model, the network, disci-plinary traditions, This paper, an overview, key street network models, thepri
+
+Methodologies:
+Street networks are, however, complex objects of investiga-tion and the way we model and then represent them as graphs has fundamental effects
+on the outcomes of a study. Many approaches to modelling street networks have been
+proposed, each lending itself to different analyses and supporting insights into diverseaspects of the urban system. This paper provides an overview of key street network models and
+theprima facie merits of pertinent alternative approaches. This cross-disciplinary
+interest and the plurality of scholarly approaches and purposes is a welcome sign ofscientific relevance. Yet the lack of communication between these approaches raises
+a problem of methodological and terminological fragmentation and entrenchment.
+ There is then the risk of duplicated, contradictory or incommensurable results and alack of replicability.
+ The various quantitative, computational studies of st
+
+Research Outcomes:
+Street networks are, however, complex objects of investiga-tion and the way we model and then represent them as graphs has fundamental effects
+on the outcomes of a study. Many approaches to modelling street networks have been
+proposed, each lending itself to different analyses and supporting insights into diverseaspects of the urban system. This paper provides an overview of key street network models and
+theprima facie merits of pertinent alternative approaches. This cross-disciplinary
+interest and the plurality of scholarly approaches and purposes is a welcome sign ofscientific relevance. Yet the lack of communication between these approaches raises
+a problem of methodological and terminological fragmentation and entrenchment.
+ There is then the risk of duplicated, contradictory or incommensurable results and alack of replicability.
+ The various quantitative, computational studies of st

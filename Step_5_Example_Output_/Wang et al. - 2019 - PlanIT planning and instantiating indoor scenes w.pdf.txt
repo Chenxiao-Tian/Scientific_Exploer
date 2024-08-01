@@ -1,0 +1,40 @@
+Extracted Keywords:
+Graph, scene, scene synthesis, graphs, Scenes, scene graph, Relation Graph, relationship graphs, Indoor Scenes, object
+
+Main Topics:
+Planning and Instantiating Indoor Scenes, Relation Graph, Spatial Prior Networks
+KAI WANG, AN LIN, Brown University
+MANOLIS SAVVA, Simon Fraser University
+ANGEL X. CHANG, Simon Fraser University
+DANIEL RITCHIE, Brown University
+Fig, a scene synthesis framework, high-level planning, scene structure, a generative model, relation graphs, lower-level spatial instantiation, neural-guided search, spatial neural network modules, a relation graph, the nodes, spatial or semantic relations, the edges, the graph structure, a concrete 3D scene, a new framework, interior scene synthesis, a
+high-level relation graph representation, spatial prior neural networks, prior work, scene synthesis, two camps, object-oriented approaches, the set, a scene, their configurations, space-oriented approaches, what objects, what regions, Our insight, the
+object-oriented paradigm excels, high-level planning, a room, t
+
+Methodologies:
+We observe that prior work on scene synthesis is divided into two camps:
+object-oriented approaches (which reason about the set of objects in a scene
+and their configurations) and space-oriented approaches (which reason
+about what objects occupy what regions of space). We observe that prior work on scene synthesis is divided into two camps:
+object-oriented approaches (which reason about the set of objects in a scene
+and their configurations) and space-oriented approaches (which reason
+about what objects occupy what regions of space). By decomposing the problem in
+this way, PlanIT generates scenes of comparable quality to those generated
+by prior approaches (as judged by both people and learned classifiers), while
+also providing the modeling flexibility of the intermediate relationship graph
+Authors’ addresses: Kai Wang, Brown University; Yu-an Lin, Brown University; Ben
+Weissmann, Brown 
+
+Research Outcomes:
+We observe that prior work on scene synthesis is divided into two camps:
+object-oriented approaches (which reason about the set of objects in a scene
+and their configurations) and space-oriented approaches (which reason
+about what objects occupy what regions of space). We observe that prior work on scene synthesis is divided into two camps:
+object-oriented approaches (which reason about the set of objects in a scene
+and their configurations) and space-oriented approaches (which reason
+about what objects occupy what regions of space). By decomposing the problem in
+this way, PlanIT generates scenes of comparable quality to those generated
+by prior approaches (as judged by both people and learned classifiers), while
+also providing the modeling flexibility of the intermediate relationship graph
+Authors’ addresses: Kai Wang, Brown University; Yu-an Lin, Brown University; Ben
+Weissmann, Brown 

@@ -1,0 +1,28 @@
+Extracted Keywords:
+log, log log, Random graph, average distance, power law, graph, degree, expected degree, graphs, random
+
+Main Topics:
+The average distances, random graphs, expected degrees
+Fan Chung, Linyuan Lu
+Department, San Diego, La Jolla, CA 92093-0112
+Communicated, Ronald L. Graham, San Diego, La Jolla, Random graph theory, the ‘‘small-world phe-
+nomenon, any two strangers, a short chainof mutual acquaintances, certain families, given expected degrees, the average distanceis, order log, the weighted
+average, the sum, the expected degrees, Ofparticular interest, power law random graphs, some
+ﬁxed exponent, the case, the average
+distance, the power law graphs, order logn/H20862logd˜.However, many Internet, citation networks, power law graphs, the range, average distance, almost surelyof order log log, order log, some mild constraints, the average distance and maxi-mum degree, these graphs, a dense subgraph, the core, c/H20862log log nvertices, Almost all vertices, distance log log, the core, distance log, the core,
+
+Methodologies:
+Another useful tool is the following result on the expected
+sizes of connected components in random graphs with givenexpected degree sequences (21).
+ Using a result in (22),the diameter of this subgraph is at most (log n/H11032/H20862logpn/H11032)/H11005(1/H11001
+o(1))(log n/H20862((3/H11002
+/H9252) log t))/H11005O(log log n).
+
+
+Research Outcomes:
+Another useful tool is the following result on the expected
+sizes of connected components in random graphs with givenexpected degree sequences (21).
+ Using a result in (22),the diameter of this subgraph is at most (log n/H11032/H20862logpn/H11032)/H11005(1/H11001
+o(1))(log n/H20862((3/H11002
+/H9252) log t))/H11005O(log log n).
+

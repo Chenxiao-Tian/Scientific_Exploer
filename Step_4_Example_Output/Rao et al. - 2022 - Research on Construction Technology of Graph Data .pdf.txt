@@ -1,0 +1,412 @@
+References:
+ResearchonConstructionTechnologyofGraphDataModel 53
+3) The challenge of data visualization and information transmission. Electric power
+datavisualizationcaneffectivelyconveythevalueofdata.Electricpowerdatacon-
+tains the laws and characteristics of power production and economic and social
+development,whicharegenerallyabstractanddifficulttodiscover.Visualanalysis
+of big data will make it easy to mine and analyze the laws contained in big data,
+whichisconducivetotransferringdatavalueandsharingknowledge.
+4) Challengesofbigdatastorageandprocessing.Electricpowerbigdatarequireshuge
+data storage and computing capabilities. Power big data analyzes and processes
+structured and unstructured data from multiple data sources, and needs to store
+massiveamountsofdataandprovidefastcomputingcapabilities.Distributeddata
+storage and calculation is an effective way to solve power big data storage and
+calculation.
+7 Conclusion
+Thispapersummarizesthedomesticandforeignresearchstatusofgraphdatamodelcon-
+structiontechnology,introducesgraphdatabasescommonlyusedingraphdatamodel
+construction, expounds the relevant steps of using graph databases for data modeling,
+andsummarizesfourcommonlyuseddatamodelsandtheirrespectivecharacteristics.
+Inthefuture,thescalabilityofNeo4jdatabasecanbeusedtocombineandapplycom-
+monlyuseddatamodelstosolvecomplexproblemsindifferentscenarios.Finally,the
+challenges of graph data model in data quality, multi-data fusion, data visualization
+information,storageandprocessingareexplained.
+Acknowledgements. Wewouldliketothanktheanonymousreviewersfortheircommentsand
+constructivesuggestionsthathaveimprovedthepaper.ThesubjectissponsoredbytheScience
+andTechnologyProjectofStateGridCorporationofChina(No.5700-202058480A-0-0-00).
+References
+1. Pan, Z., Jing, Z.: Modeling methods of big data for power grid based on graph database,
+pp.4340–4348(2018)
+2. Pavkovic´,V.,Cˇapko,D.,Vukmirovic´,S.,Erdeljan,A.:Modelingpowersystemdatausing
+nosqldatabase.In:201725thTelecommunicationForum(TELFOR),pp.1–4.IEEE(2017)
+3. Hu,J.,Zhao,S.,Nie,Q.:Researchonmodelingofpowergridinformationsystembasedon
+knowledgegraph.In:2021IEEEInternationalConferenceonPowerElectronics,Computer
+Applications(ICPECA),pp.648–651.IEEE(2021)
+4. Gonzalez,H.,Han,J.,Cheng,H.,Li,X.,Klabjan,D.,Wu,T.:Modelingmassiverfiddatasets:
+agateway-basedmovementgraphapproach.IEEETrans.Knowl.DataEng.22(1),90–104
+(2009)
+5. Risi,M.,Sessa,M.I.,Tucci,M.,Tortora,G.:Codemodelingofgraphcompositionfordata
+warehousereportvisualization.IEEETrans.Knowl.DataEng.26(3),563–576(2013)
+6. Xue,C.:Methodforconstructingdatamodelofenterpriserelationshipgraphbasedonindus-
+trialandcommercialdata.In:20194thInternationalConferenceonMechanical,Controland
+ComputerEngineering(ICMCCE),pp.876–8763.IEEE(2019)
+
+Annexes/Appendices:
+
+Body Text:
+Research on Construction Technology of Graph
+Data Model
+B
+WeiRao1( ),FanYang1,ZeyangTang1,andJunjieWang2
+1 StateGridHubeiElectricPowerCo.Ltd,ElectricPowerResearchInstitute,
+Wuhan430077,China
+310714175@qq.com
+2 CollegeofAutomation,NanjingUniversity
+ofPostsTelecommunications,Nanjing210003,China
+Abstract. As the scale of the power grid continues to expand, the traditional
+distributionnetworkmanagementmodelcannotmeettherequirementsofpower
+griddevelopmentunderthenewsituation.Thecurrentdistributionnetworkoper-
+ationinspectionstilllacksindatacollection,anditisimpossibletoestablishan
+informativeandintelligentoperationinspectionmanagementsystem.Theupper-
+levelproductionmanagementsystemisalsounabletointegrateduetothelackof
+operationinspectionmarketingdata.Aimingattheperformanceproblemofthe
+visualizationoftopologydatainthedistributionnetworkoperationandinspec-
+tion,thispaperusesthegraphdatamodeltobuildknowledge,designsgraphic
+elementsfordatamigration,andformsatopologymapfortheintelligentopera-
+tionandinspectionofthedistributionnetwork.Theresearchclearlyandintuitively
+displaysthespecificinformationofthepowersystemequipmentandthephys-
+icalrelationshipbetweentheequipment,thusformingadatamodelofthegrid
+diagram.
+Keywords: Graphdatabase·Topologicalgraph·Graphdatamodelforpower
+grid·Distributionnetworkinspection
+1 Introduction
+The distributionnetwork is at the end of the power system and has the characteristics
+ofwidearea,largescale,manytypes,andmultipleconnections.Withtheurbanization
+constructionandthegrowthofelectricitydemand,thescaleofthedistributionnetworkis
+constantlyexpandingwhileconstantlytransformingandexpanding.Withtheexpansion
+of the power grid and the increase in the amount of topology management data, the
+attributedimensionofthedatawillalsoincrease.Thetraditionaldistributionnetwork
+management model can no longer meet the requirements of power reform and smart
+grid development under the new situation. The current distribution network operation
+inspectionstilllacksindatacollection,anditisimpossibletoestablishaninformativeand
+intelligentoperationinspectionmanagementsystem.Theupperproductionmanagement
+systemisalsounabletointegrateduetothelackofoperationinspectionmarketingdata,
+©TheAuthor(s),underexclusivelicensetoSpringerNatureSingaporePteLtd.2022
+S.YangandH.Lu(Eds.):ISAIR2022,CCIS1700,pp.43–54,2022.
+https://doi.org/10.1007/978-981-19-7946-0_5
+44 W.Raoetal.
+which makes it impossible to achieve fault research and judgment and fault location
+basedonmultipledata.Weshouldusetheapplicationlayertostrengthentheapplication
+ofbigdata,fromthetraditional“passiverepair”to“activeoperationandmaintenance”.
+Atthesametime,dataanalysisandprocessingtechnologiesaredevelopingrapidly,
+and non-relational databases (NoSQL, Not Only SQL) are leading the database tech-
+nologyrevolution.Thispaperanalyzesandstudiestheknowledgeofgraphdatamodel
+construction, designs graph elements for data migration, forms topological graphs for
+intelligentoperationandinspectionofdistributionnetworks,andconstructsgridgraph
+database models. A storage method which uses a graph database is proposed to com-
+bine the grid big data with the grid’s own network topology characteristics, so as to
+effectivelyusegraphtheoryandtopologytheorytoanalyzeandoptimizethepowergrid
+underthepowerofbigdata.Becausedifferentdatamodelsinthegraphdatabasedeal
+withdifferentproblems,theefficiencydifferenceisobvious.Therefore,itisnecessary
+tostudydifferentmodelingmethodsandtheirapplicableconditions.
+The rest of this paper is organized as follows: The first part describes the current
+researchstatusofgraphdatamodelconstructionathomeandabroad.Thesecondpart
+analyzes the methods and advantages of Neo4j graph data model and GraphX graph
+databasemodelconstruction.Thethirdpartanalyzesthedesignofgraphdatamodelfor
+intelligentoperationandinspectionofdistributionnetwork.Thefourthpartintroduces
+theCIMmodel,thedatamodelwithelectricalnodesasdomainentities,thedatamodelof
+materializedattributes,theapplicationscenariosofthematerializedtimedatamodeland
+theirrespectiveperformance.Thefifthpartproposesthefutureprospectsandchallenges
+ofgraphdatamodelconstruction.
+2 RelatedWork
+Pan et al. [1] proposed the principle of grid data modeling based on domain model-
+ing theory and following the CIM model. According to these principles, some power
+grid data models and their applicable occasions are proposed, as well as methods to
+convertthesemodelstoeachother.Finally,threegraphicaldatabasemodelsareestab-
+lishedusingthemodelingmethodproposedinthispaper.Thegraphicdatabasemodel
+proposed in this paper can greatly improve the retrieval efficiency, which proves the
+effectiveness of the modeling method and the effectiveness of the graphic database in
+specificretrieval.Pavkovicetal.[2]introducedtheuseofNeo4jgraphdatabasetomodel
+andmanagepowersystemdata.Huetal.[3]regardsthedatamodelasanentityinthe
+knowledgegraph,andcombinessemanticanalysistechnologyandentitysimilaritycal-
+culation technology for the data model in the power grid field, and proposes a model
+diagnosis method based on the knowledge graph. Consistency of sex and diagnosis.
+Researchshowsthatthismethodcanmorefullyutilizetherelevantinformationofthe
+datamodelandexpandthethinkingoftraditionaldiagnosticmethods.Gonzalezetal.
+[4]showsthatthemotiongraphmodelcanbebetterorganizedaroundgatewaynodes,
+whichactasabridgetoconnectdifferentareasofthemotiongraph.Thegraph-based
+object moving cube can be constructed by merging and collapsing nodes and edges
+accordingtotheapplication-orientedtopology.Risietal.[5]proposedamethodusing
+visuallanguagecodingbasedonlogicparadigm.CoDeallowsvisualizationtobeorga-
+nizedthroughtheCoDemodel,whichgraphicallyrepresentstherelationshipbetween
+ResearchonConstructionTechnologyofGraphDataModel 45
+informationitemsandcanberegardedasaconceptualdiagramoftheview.Xueetal.
+[6]reliesonthecommercialbanksystemarchitecture,reusestheexternalbusinessdata
+queryserviceofthecommercialbanksystem,integratesthedataprocessingcapabilities
+of the data warehouse, provides related data for the map display tool, and builds the
+corporaterelationshipmapdatamodel,whichhelpstoimprovethebank¡¯sacquisition
+ofnewTheabilityofcustomers,aswellasfullyunderstandexistingcustomers,establish
+customerprofiles,andhelpbankspreventgrouprisksfromgroupcustomers.Wuetal.
+[7]proposesafastgraphconstructionmethodbasedontheexistingSG-CIMmodeldata
+oftheStateGridInterconnectionDepartment.Itcanfullysupportthecompany’svari-
+ousanalysisandrecommendationapplicationsbasedontheunifiedknowledgegraph.
+Scarsellietal.[8]proposed anew neuralnetwork model,called thegraphneural net-
+work(GNN)model,whichextendstheexistingneuralnetworkmethodtoprocessthe
+data represented in the graph domain. In order to deal with the graph uncertainty in
+thespatialandtopologicalrelationshipsbetweenobjectsinthegraph,Majumdaretal.
+[9]proposedanobject-orientedgraphtheoreticalmodelforrepresentinggraphs,which
+allowstheuseoftheconceptof(fuzzy)graphmatchingtoassessthesimilaritybetween
+the graphs. Compared with traditional relational databases, graph databases can natu-
+rallyfitthecharacteristicsofgriddataduetothesimilarityofbasicstructures,showing
+their potential advantages in processing power system data and performing real-time
+data analysis and calculation. Lee et al. [10] uses a path ranking algorithm to extract
+relationalpathsfromtheknowledgegraphandusesittoconstructtrainingdata.Inorder
+tolearnthecharacteristicsoftherelationship,theextractedrelationshippathisusedto
+createacircuitouspathbetweennodesastrainingdata.Combietal.[11]proposedthe
+MultimediaTimeGraphicalModel(MTGM),whichrepresentedaclinicaldatabaseof
+cardiacpatientsundergoingcardioangiography,andthendescribeditinaformalway.
+DesignedandimplementedaprototypebasedonXMLnativedatabasesystem.Zhang
+etal.[12]proposedamethodofexpressinghigh-orderfeaturesofgraph-baseddepen-
+dentanalyticalmodelsdependingonlanguagemodelsandbeamsearch,whichsolved
+theproblemofenrichinghigh-orderfeatureswithoutincreasingdecodingcomplexity.
+HuiminLuetal.[13]proposeafuzzyattentionbasedDenseNet-BiLSTMChineseimage
+captioningmethodtosolvesomeChineseimagedescriptiongenerationtasks.HuiminLu
+etal.[14]proposeanovelhashingmethodtermeddeepfuzzyhashingnetwork(DFHN)
+toovercometheshortcomingsofexistingdeephashingapproachesforefficientimage
+retrieval.Qi Ge et al. [15] propose a graph regularized Bayesian tensor factorization
+basedonKDSDLmodeltosolvetheproblemthatexistingmatrixfactorizationmethods
+cannotdealwiththenon-i.i.doutliersandthenon-uniformincoherencewell.
+3 GraphDatabase
+NoSQLdatabasesnotonlyallowstoringrelationaldatamodels,butalsoallowtostore
+othermodels,themostprominentofwhichisthegraphdatabase.Thegraphdatabase
+modelisbasedongraphtheory,andprovidesdatastoragebyintroducingtheconcepts
+of nodes and relationships, where the relationship is the most important element in
+thegraphdatamodel.Eachnodedirectlycontainsarelationshiplist,whichstoresthe
+relationshiprecordsbetweenthenodeandothernodes.Therelationshiprecordsinthe
+46 W.Raoetal.
+graphorganizeallnodesbytypeanddirection,andattributescanbeaddedintonodes
+andrelationships.Thegraphdatabaseimplementsalltheoperationsofthedatabaseon
+thisstructure.Whenthegraphdatabaseperformsaconnectionoperationwhichissimilar
+to a relational database, it uses the relation list to directly access the connected node,
+withoutsearchingforrecordsandcalculatingmatchingoperations.
+3.1 Neo4jGraphDatabase
+Neo4jisanopensourceNoSQLgraphdatabaseimplementedinJava.Thearchitecture
+of Neo4j graph database is designed to optimize the rapid management, storage and
+traversalofnodesandrelationships.Neo4jhasstrongscalability,enablingittobeable
+to process large-scale and complex relational graph data on one machine, and it can
+alsosupportparallelprocessingonmultiplemachines.Comparedwithotherrelational
+databases,Neo4jhasbetterperformancetodealwithalargeamountofcomplex,related
+andstructuredsparsedata.ThegraphdatabasemodelisshowninFig.1.
+3.2 GraphXDatabase
+GraphXisagraphcomputingframeworkbuiltonSpark.GraphXdescribesadirected
+graphwithvertexattributesandedgeattributes.GraphXprovidesthreeviews:Vertex,
+Edge,andEdgeTriplet.VariousgraphoperationsofGraphXarealsocompletedonthree
+views. It uses Resilient Distributed Data Set (RDD) to store graph data and provides
+practical graph manipulation methods. RDD is a partitioned data structure, which is
+processed by calculation primitives provided by Spark Core. Each Spark application
+canbedeployedinacluster.Accordingtothecharacteristicsofelasticdistributeddata
+sets,GraphXcanefficientlyrealizedistributedstorageandproceedingofgraphs,andcan
+beappliedintolarge-scalegraphcomputingscenariossuchassocialnetworks.GraphX
+hasoptimizedthestorageofgraphvertexinformationandedgeinformation,sothatthe
+performanceofthegraphcomputingframeworkcanbegreatlyimprovedcomparedto
+thenativeRDDimplementation,whichisclosetotheperformanceofprofessionalgraph
+computingplatformssuchasGraphLab.GraphXgraphdatabasearchitectureisshown
+inFig.2.
+ResearchonConstructionTechnologyofGraphDataModel 47
+Fig.1. Neo4jgraphdatabasemodel.
+Fig.2. GraphXgraphdatabasearchitecture.
+4 ModelDesign
+4.1 DataAnalysisFrameworkofPowerGridTopology
+In order to transform the abstract grid topology data into an intuitive graph database
+thatishelpfultoanalyzeandunderstand,thispaperdesignsagridtopologygraphdata
+analysisframeworkbasedonthecharacteristicsofthegraphdataofthepowersystem,
+which mainly includes data collection and processing, data storage, There are several
+levelsofdataanalysis,asshowninFig.3.
+(1) Thecollectionandprocessinglayermainlycollectsvarioustopologicaldataofthe
+power system, physical equipment, connection lines, equipment operation data,
+historicaldata,etc.Atthesametime,thecollecteddataisclassifiedandscreened,
+themissingdataiscountedorreported,andgraphdatamodelingisperformedbased
+48 W.Raoetal.
+Fig.3. Datamodelanalysisframeworkofpowergriddiagram.
+onthecollecteddata.Thecollectionandprocessinglayerplaysavitalroleinthe
+stableoperationandmaintenanceofthepowersystem.
+(2) The data storage layer uses CIM/E files and lightweight file databases as model
+data solidification storage media, and different data information is stored in dif-
+ferentsystems.TheCIM/Efilemainlystoresthecross-sectionmodelextractedby
+theoperating system.Thelightweightfiledatabase mainlyusestwo-dimensional
+tablesforstructuredstorageofhistoricalandfutureversionofthegridmodeldata,
+providingsupportfortherecallandviewingofhistoricaldata.
+(3) Thepurposeofthedataanalysislayertobuildthegridgraphdatabasemodelistouse
+somealgorithmframeworktoanalyzethegraphdatabase,findoutthecorrelation,
+potentialproblemsandoperatingconditionsbetweenthegridequipment,andensure
+thestableoperationofthepowersystem.
+4.2 PowerGridDataModelConstruction
+The construction of the data model of the grid diagram includes four steps: data
+acquisition,dataprocessing,dataimport,anddatamanagement,asshowninFig.4.
+Fig.4. Modelingflowchart.
+ResearchonConstructionTechnologyofGraphDataModel 49
+Accordingtothecorrelationofthebigdatacollectedbythepowersystem,thefeature
+weightsofthenodesareextracted,andthepriorityisdividedaccordingtothefeature
+weights to form a topological structure diagram. Then we use the Pearson product-
+momentcorrelationcoefficientmethodtojudgethecorrelationbetweenequipmentand
+equipment,andformatopologicalcorrelationdiagram.Theestablishmentofapower
+gridmodelmustbecompleteandconsistent.Themodelmustbeabletofullydescribethe
+characteristicsofthepowersystemobjects,andbeconsistentwithexistingdefinitions
+as much as possible; in addition, the power grid model must also efficiently adapt to
+the characteristics of the graph database to improve the efficiency of data access. The
+basic principle of establishing a power grid model based on a graph database must
+follow the CIM/E standard. In the graph database, power system equipment such as
+generators,loads,andlinesaredefinedasvertices.Duetothelargenumberofswitches
+andequipments,theswitchesandtheconnectinglinebetweeneachdeviceisdefinedas
+anedge,andanattributestructurediagramisgenerated.
+The number of vertices and edges in the grid database is greatly reduced, which
+improvesthequeryaccessefficiencyofthegraphdatabase.
+5 GraphDataModel
+5.1 CIMModel
+Inordertomakethedistributionnetworkdatamodelunique,applicableandshareable
+amongvariousapplicationsandcompanies,astandardmethodfordescribingthesedata
+must be provided. The most commonly used and generally accepted standard for the
+datamodelofpowersystemdataistheCIMstandard.CIMwasintroducedbytheIEC
+(InternationalElectrotechnicalCommission)andisdefinedaspartoftheIEC61970-301
+standard[16].
+The CIM model is an abstract object model that represents all the main entities
+andtheirrelationshipsinthepowersystem,transmissionanddistributionnetworks.All
+objectsfromthedistributionnetwork(suchascurrenttransformers,generators,etc.)are
+displayedintheformofcorrespondingtypesintheCIMmodel.Allentitiesofthedistri-
+butionnetworkuseidentificationobjects,equipment,equipmentcontainers,conductive
+equipment,powersystemresources,PSRType,andterminaltypesfordatamodelingin
+CIM.Atthetopofthetypehierarchy,therearedefinedobjectclasses,andothertypesin
+CIMarederivedfromthedefinedobjecttypes.Theequipmenttypedescribesalldistribu-
+tionnetworkequipment,whicharegroupedincontainersrepresentedbytheequipment
+containerclass.Theconductiveequipmentcategoryrepresentsallconductiveequipment.
+Thepartsoftheequipmentthatcanbeoperatedasfollows:suchasswitches,busbarsand
+otherrelatedconductiveequipment.Thereisaspecialcategoryinthemodel,namelythe
+PSRTypeclass.ThemainfunctionofthePSRTypeclassistoclassifyinstancesofthe
+sameclass,thatallowsasmallamountofnon-standardmodificationstotheCIMmodel
+without changing the model. In the modeling of the distribution network, in addition
+tobasicentities,itisalsonecessarytoprovideamechanismforconnectingconductive
+equipment. This is done through the terminal and CIM connection node class. These
+classesdonotperformdatamodelingontheresourcesofthedistributionnetwork,but
+provideinformationaboutthephysicalconnectionsoftheequipment.Theconnection
+50 W.Raoetal.
+nodeclassconnectstwoormorepartsoftheconductivedevicethroughtheterminalclass
+(describestheaccesspointthatconnectstwoormoreconnectionnodes)[17].Sinceall
+devicesaremodeledasobjectsoftheclass,andtherelationshipbetweenthemisrelated,
+as shown in the figure, by representing objects as nodes, representing relationships as
+relationships,andrepresentingallobjectdataasattributes,itcanbeeasytomapittothe
+surface.UsingCIMtorepresentpowersystemdatahastheadvantageofusingtheGen-
+eralDataAccess(GDA)standarddefinedinIEC61970-403fordataexchange.Some
+methods of general data access standards are executed on this graph model as query
+operations.TheCIMtopologymodelisshowninFig.5.
+5.2 DataModelwithElectricalNodesasDomainEntities
+The network structure of the power grid is the basis of the analysis of the power grid
+topology.Inordertoreflectthestructureofthepowergrid,thispaperproposesadata
+model with electrical nodes as domain entities. The electrical node is the connection
+pointofphysicalequipment,whichcombinesthetopologyandphysicalcharacteristics
+oftheelectricalconnectionpointandthephysicalbus[18].Theelectricalnodeisused
+asthenodeofthegraphdatabase,thestraightlineisusedastherelationship,andthe
+physicalpropertiesofthetwoareusedastherespectiveproperty.Inaddition,othertypes
+ofdataintopologyanalysisarealsostoredinthegraphdatabase,butinthisarticle,by
+definingdifferent"nodelabels",theseirrelevantdatacanbestoredinthedatabaseinan
+"otherdimension"manner.
+Thismodelcanfullyrestorethetopologicalstructureofthepowergrid,itfacilitates
+therapidtopologyanalysisofthepowergridanditisconvenienttointroducegraphtheory
+relatedalgorithms,suchastheshortestpathalgorithm,themaximumflowalgorithm,and
+soon.Bycombiningequationsolvingtheorywithgraphtheory,calculationsrelatedtothe
+networkstructurecanbequicklyperformed,suchaspowerflowcalculations.Therefore,
+themodelprovidesstrongsupportwhenusinggridtopologyforgridanalysis.Byusing
+this model, the power industry-related algorithms based on graph theory can also be
+effectivelycalculatedandverified[19].Theadvantageofthismodelisthatitcanusethe
+topology structure to store data, which facilitates grid topology analysis. However, in
+thestorageprocess,irrelevantdataisplacedinanotherdimensionorbeignored,which
+isequivalenttohidingswitches,circuitbreakers,generators,etc.,sothismodelisnot
+suitablewithanalyzingproblemsrelatedtotheabovementionedequipment.
+ResearchonConstructionTechnologyofGraphDataModel 51
+Fig.5. CIMtopologymodel.
+5.3 DataModelofMaterializedAttributes
+Thispaperproposesadatamodelwithmaterializedattributes,whenthegridattributes
+occupythemainpartoftheanalysis,themainattributescanbematerializedasdomain
+entities, and some attributes can be stored as database nodes. The model is based on
+a data model with electrical nodes as domain entities, and mathematical modeling is
+performed. For example, when calculating the power flow of the power grid, you can
+usethesparsityoftheJacobianmatrixandusethegraphtheorysolvingalgorithmofthe
+sparsematrixtosolvetheproblem.
+The data model of materialized attributes refers to storing the attributes as nodes,
+andthencalculatingandanalyzingthegraphsbasedontheattributes.Therefore,when
+analyzing problems such as power flow calculation and reactive power optimization
+based on Newton’s method or pre-return method, the model can make full use of the
+performanceofthegraphdatabase.Thismodelisamathematicalmodelandhasalmost
+nophysicalmeaning.Thismodelemphasizestheattributesinthegrid,soitcanbeused
+in scenarios where specific problems are analyzed or grid calculations are performed.
+However,thismodelalsochangesthetopologyofthemeshitself,soitisnotsuitable
+fortopologyanalysis.
+52 W.Raoetal.
+5.4 MaterializedTimeDataModel
+Intraditionalmodelingmethods,timeisusuallyusedastheattributeoftheevent.Time
+isaspecialattribute,becausesomephysicalquantitieschangedynamicallyatanytime,
+whilesomearerelativelyfixed.Thispaperproposesapowerdatamodelthatmaterializes
+timeattributes,whichusestimeasthedatabasenode,andconnectstheeventsthatoccur
+atthistimethroughrelationship.
+Thematerializedtimedatamodelissuitableforstoring"events"becauseeventdata
+has unstructured characteristics that are difficult to describe with fixed fields. Time is
+an important characteristic when an event occurs. Therefore, when recording events
+thatoccuronanode,adatamodelofmaterializedtimecanbeused.Thematerialized
+timemodelseparatestimefromevents,butisalsorelatedtoeachother.Differenttimes
+arealsorelated toeach other,sothekey events of thetimenodes inthegriddata can
+be quickly retrieved. There are two main modeling methods: timeline tree and linked
+list. The timeline tree model is suitable for retrieving a time period within a specific
+range,suchaswithinamonthorayear,andsoon.Thelinkedlistmodelissuitablefor
+continuoustimeretrieval.
+6 ProspectsandChallengesofGraphDataModelConstruction
+BasedonthedomainmodelingtheoryandtheCIMmodel,thispaperproposestheprin-
+cipleofgriddatamodelingandtheprincipleofusingNeo4jtomodelthepowergriddata
+graphdatabase.Accordingtothisprinciple,fourbasicgraphdatabasemodelsarepro-
+posed.Withtherapiddevelopmentofsociety,astheamountoftopologicalmanagement
+dataincreases,theattributedimensionofthedatawillalsoincrease.Asingledatamodel
+no longer has the ability to handle complex data. This is bound to change the model
+primitives.Changesofthemodelprimitivescaneasilycausetheinstabilityofthegraph
+model.Inthefuture,whenanalyzingdataprocessingproblemsindifferentscenariosfor
+thedistributionnetwork, thefourbasicmodels can becombined orexpanded toform
+a new optimal model. The model construction of graph data also faces the following
+challenges.
+1) Thechallengeofdataquality.High-qualitydataisthekeytogoodapplicationofgrid
+graphdataanditensuresthehighqualityofgraphdata.Theaccuracy,completeness,
+andreal-timeofthedatahaveagreatinfluenceontheresultsofdecisionanalysis,
+andevengivewrongsuggestions.
+2) Thechallengeofmulti-datafusion.Datafusionisthekeytotheapplicationofelectric
+powerbigdata.Informationdatafusionisthemulti-levelprocessingofmulti-source
+data, each level represents a different degree of abstraction of the original data,
+whichincludesdatadetection,correlation,estimation,andcombinationprocessing.
+Accordingtothedegreeofabstractioninthedataprocessinglevel,datafusioncanbe
+dividedintothreelevels:data-levelfusion(beforefeatureextraction),feature-level
+fusion (before attribute description), and decision-level fusion (after independent
+attributedescriptionofeachsensordata).
+54 W.Raoetal.
+7. Wu,G.,etal.:Anautomaticandrapidknowledgegraphconstructionmethodofsg-cimmodel.
+In:2020IEEEInternationalConferenceonSmartCloud(SmartCloud),pp.193–198.IEEE
+(2020)
+8. Scarselli, F., Gori, M., Tsoi, A.C., Hagenbuchner, M., Monfardini, G.: The graph neural
+networkmodel.IEEETrans.NeuralNetworks20(1),61–80(2008)
+9. Majumdar, A.K., Bhattacharya, I., Saha, A.K.: An object-oriented fuzzy data model for
+similaritydetection in image databases. IEEETrans.Knowl. Data Eng.14(5), 1186–1189
+(2002)
+10. Lee,W.K.,etal.:Apath-basedrelationnetworksmodelforknowledgegraphcompletion.
+ExpertSyst.Appl.182,115273(2021)
+11. Combi,C.,Oliboni,B.,Rossato,R.:Mergingmultimediapresentationsandsemistructured
+temporaldata:agraph-basedmodelanditsapplicationtoclinicalinformation.Artif.Intell.
+Med.34(2),89–112(2005)
+12. Zhang, M., Chen, W., Duan, X., Zhang, R.: Improving graph-based dependency parsing
+modelswithdependencylanguagemodels.IEEETrans.AudioSpeechLang.Process.21(11),
+2313–2323(2013)
+13. Lu,H.,Yang,R.,Deng,Z.,Zhang,Y.,Gao,G.,Lan,R.:Chineseimagecaptioningviafuzzy
+attention-baseddensenet-bilstm.ACMTrans.MultimediaComput.Commun.Appl.(TOMM)
+17(1),1–18(2021)
+14. Lu,H.,Zhang,M.,Xu,X.,Li,Y.,Shen,H.T.:Deepfuzzyhashingnetworkforefficientimage
+retrieval.IEEETrans.FuzzySyst.29(1),166–176(2020)
+15. Ge,Q.,Gao,G.,Shao,W.,Wang,L.,Wu,F.:Graphregularizedbayesiantensorfactorization
+basedonkronecker-decomposabledictionary.Comput.Electr.Eng.90,106968(2021)
+16. IEC61970,D.:Energymanagementsystemapplicationprograminterface(emsapi)part301:
+Commoninformationmodel(cim)base.Geneva,Switzerland:IEC(2003)
+17. McMorran,A.W.:Anintroductiontoiec61970–301&61968–11:thecommoninformation
+model.UniversityStrathclyde93,124(2007)
+18. Wenchuan,W.,Boming,Z.:Agraphicdatabasebasednetworktopologyanditsapplication.
+PowerSyst.Technol.-Beijing-26(2),14–18(2002)
+19. Liu,K.,Liu,G.,Xie,K.,Wang,Z.:Afasternon-lineariterationsolverusinggraphcomputing
+anditsapplicationinpowerflowcalculation.EnergyProcedia142,2534–2540(2017)
+20. Lu, H., Li, Y., Chen, M., Kim, H., Serikawa, S.: Brain Intelligence: Go beyond Artificial
+Intelligence.Mob.NetworksAppl.23(2),368–375(2017).https://doi.org/10.1007/s11036-
+017-0932-8
+21. Huimin, L., Zhang, Y., Li, Y., et al.: User-Oriented virtual mobile network resource man-
+agement for vehicle communications. IEEE Trans. Intell. Transp. Syst. 22(6), 3521–3532
+(2021)
+

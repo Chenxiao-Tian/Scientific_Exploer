@@ -1,0 +1,462 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+2019 IEEE 5th World Forum on Internet of Things (WF-IoT)
+The Internet of Things for Intelligent Transportation
+Systems in Real Smart Cities Scenarios
+Alberto Attilio Brincat Federico Pacifici Stefano Martinaglia Francesco Mazzola
+T.Net S.p.A. T.Net S.p.A. T.Net S.p.A. T.Net S.p.A.
+Catania, Italy Catania, Italy M i l a n , I t a l y Milan, Italy
+abrincat@tnet.it fpacifici@tnet.it s m a r t i n a g l i a @ t net.it fmazzola@tnet.it
+Abstract — This paper represents an overview on activities The infrastructure monitoring that includes inclinometers
+done in real Smart Cities scenarios using IoT Technologies for and probes (i.e. for humidity, water on the road surface, etc.) can
+Intelligent Transportation Systems (ITS). Nowadays, there are enable prescriptive maintenance and alert driver or autonomous
+several use cases related to IoT for ITS, such as connected and car for event-based driving. Predictions and prescriptions can be
+autonomous vehicles, cooperative transportation networks and done in a real-time fashion, considering heterogeneous networks
+smart roads in order to improve data propagation, create in a homogeneous environment plus standardized metrics that
+heterogeneous connectivity and low latency applications in high compared with the sensed ones ensure zero error on the
+capacity environments. ITS techniques can be also applied on
+measurement. In this scenario, prescriptive maintenance is an
+logistics, so accuracy on delivery and timing can be improved
+increasing sector for smart cities, it consists on a trained artificial
+consider all the involved ecosystems, baseline and standardized
+intelligence network that monitors and detects anomalies to
+architectures in interconnected Smart Cities for future
+recognize how and when an anomaly may occur. Machine
+development and integration. Secure correlations between vehicles
+learning plays a fundamental role in these kind of algorithms that
+and smart roads can optimize road safety and traffic flow, reduce
+represents the natural evolution of predictive algorithms.
+incidents, avoid congestions etc. These technologies comprise also
+Several activities should be planned to optimize algorithms and
+V2X (Vehicle to Everything). In this scenario, the cloud-based
+LoRa (Long Range) and mesh networks technologies, can play an techniques enabling new high value services.
+important role for the propagation of intelligent sensed data and
+The communication protocols adopted for these purposes are
+localization. The Smart Roads scenario is considered as one of the
+mainly wireless, due to several emerging solutions that allow to
+most attractive field in a Smart City environment. The right choice
+improve the performance of radio connections even in harsh
+on technology, delay and frequency represents an important factor
+environment, non-optimal conditions and long distances. The
+to be considered for standardization and engineering activities.
+main wireless technologies proposed for real Smart Cities
+scenarios for ITS are: LoRaWAN (Long Range Wide Area
+Keywords—ITS, V2X, Smart Cities, Smart Roads, IoT, Cloud,
+LoRa, 6LoW, Prescriptive Maintenance, Machine Learning Network) long range and battery saver, mesh networks for
+extend wireless coverage and protocols related to the 6LoWs
+I. INTRODUCTION (IPv6 over Low Power Network) family, WLAN-based IEEE
+802.11p for V2V (Vehicle to Vehicle) and V2I (Vehicle to
+Intelligent Transportation Systems (ITS) can improve
+Infrastructure) [2]. These components can be used in a real
+mobility and logistics. IoT (Internet of Things) techniques [1]
+Smart Cities environment where smart roads and connected
+applied to mobility or vehicular traffic, can introduce many
+intelligent vehicles can play a crucial role. The goal is therefore
+benefits such as reducing the number of accidents, optimize the
+to create networks that integrate the various components and
+road traffic and avoid pollution in Smart Cities.
+manage the information coming from IoT based sensors towards
+Several use cases can be applicable in logistics, where intelligent transportation systems (ITS).
+transport of goods on autonomous vehicles can be done in secure
+The sections of this paper are structured as follows, in section
+monitored infrastructures in order to reduce product delivery
+2 the main IoT communication protocols proposed for ITS and
+time choosing optimal routes for packages and goods
+Smart Roads in Smart Cities are showed, with a particular focus
+destination. These use cases comprise road traffic solutions with
+on LoRa and how this technology can be used for a more
+cloud-based systems and sensors installed on road surface and/or
+accurate devices localization, 6LoW technologies for mesh
+guard rail that count, classify and detect vehicles through
+networks, IEEE 802.11 for V2V and V2I. Section 3 shows the
+advanced machine learning techniques, artificial neural
+applicable machine learning algorithms and how they can
+networks and data mining that learn and avoid congestions and
+improve efficiency in real scenarios. Finally Section 4 shows a
+accidents. The framework outperforms on high density corridors
+reference architectures and a table that summarize several ITS
+where the secure road side unit (RSU) enable an enhanced way
+use cases related to real smart cities scenarios.
+to forward packets to the network through low latency
+algorithms that prevent unexpected accidents and enable a
+priority and secure route through VPN (Virtual Private Network)
+tunneling.
+978-1-5386-4980-0/19/$31.00 ©2019 IEEE
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:35:51 UTC from IEEE Xplore. Restrictions apply.
+978-1-5386-4980-0/19/$31.00 ©2019 IEEE 128
+2019 IEEE 5th World Forum on Internet of Things (WF-IoT)
+II. COMMUNICATION TECHNOLOGIES FOR ITS d) IEEE 1609.4 deals with providing further processing to
+MAC 802.11 in order to operate according to WAVE and offers
+In this section the main communication technologies
+an abstraction of the physical layer at the higher layers.
+adopted for V2X communication, 6Low and LoRaWAN will be
+discussed. The main operating characteristics are showed with C. LoRaWAN
+their pros and cons. Furthermore, a focus on devices localization
+LoRa stands for Long Range and addresses long-distance
+is given, evaluating how the introduced technologies could
+wireless modulation technology with low battery consumption.
+improve the current state of art.
+For these reasons, this protocol is often used in the IoT field and
+A. IEEE 802.11p therefore in ITS for Smart Roads in Smart Cities mainly. Being
+a low power technology, it’s composed by FSK (Frequency Shift
+The IEEE 802.11 standard is one of the main protocols
+Keying) modulation at PHY layer that guarantees efficiency and
+adopted in wireless communications.
+low consumption, with chirp spread spectrum that allows to
+In order to meet the communications requirements between improve the communication range while maintaining the
+vehicles (V2V) and between vehicles and infrastructures (V2I), characteristics of a traditional FSK. These PHY layer features
+in 1992 the DSRC (Dedicated Short Range Communications) are extended to higher layers by LoRaWAN standard that
+protocol [2] was introduced for ITS low and medium-range establishes communication protocols, system architecture and
+communications in a band of amplitude around 75 MHz to 5.9 network for Low Power Wide Area Network (LPWAN).
+GHz (5.850-5.925 GHz) divided into 7 channels of 10 MHz
+LoRaWAN technology provides bidirectional communication
+amplitude for each one. Most of these channels are accessible to
+and star of stars topology. The topology choice is justified by the
+individual users, but there are some reserved such as the CCH
+possibility of long range communications, moreover one or more
+(Control Channel) reserved only for security communications
+gateways can be reached by a node. In fact, within a LoRaWAN
+and the last two channels at the end of the dedicated portion of
+network each node is not associated with a specific gateway, so
+the spectrum, reserved for future developments. With these
+multiple gateways can receive the same information transmitted
+physical layer specifications, the signal is optimal for vehicular
+by a single node.
+communications, and allows further propagation in case of
+several multipath inside a smart city, such as vehicles, building, The main components of a typical LoRaWAN network are the
+etc. [3]. following:
+For adapt the DSRC to the existing IEEE 802.11a 1) End nodes: sensors or actuators that exchange compatible
+infrastructure, in 2004 the WAVE (Wireless Access in Vehicular data with LoRaWAN technology to gateways;
+Environments) amendment was introduced. One of the
+2) Gateway: collect and forward the information from the
+substantial changes introduced is IEEE 802.11 MAC layer
+various sensors and send them to the Network Server through
+optimization for high-speed and low latency communications
+the backhaul following a cloud based approach. Gateway can be
+with potential safety contents, typical of ITS communications.
+set as packet-forwarder and/or LoRa Gateway Bridge;
+In particular, the association procedure prior to the
+communication of a node to its own BSS (Base Service Set) is 3) Network Server: provides intelligence to the network,
+simplified. Some variants of these are introduced, called WBSS, typically manages the received data and eliminates any
+that is WAVE BSS, which allow a node to communicate after redundancy;
+receiving only one signaling message, i.e. considering a
+compatible BSS, it is possible for each node to receive or 4) Application Server: they are connected to the Network
+transmit a message without belonging to a specific BSS. Servers through TCP / IP connections and allow access to the
+LoRaWAN network to the end users;
+The reference architecture is showed in [4]. IEEE 802.11p is
+mainly associated to the PHY and MAC layers. The highest 5) Geolocation Solver: communicates with Application Server
+layers are managed by the IEEE 1609.x standards family. and Network Server and provides positional information.
+B. IEEE 1609.x standards In order to keep energy consumption low and increase
+potential network scalability, the data rate management is
+As seen in [3], the IEEE 1609.x standards deal extending
+optimized through configurable up links and down links.
+WAVE to the higher layers, with the IEEE 802.11p standard as
+End nodes in a network can be heterogeneous, so they can be
+a reference for the lower layers as seen above. IEEE 1609.x
+implemented to belong to different classes. Each class differs
+consists of 4 standards that define the architecture, the
+from the others for the management of the down link and up-
+communication model, even in contexts where safety and the
+link, in order to create versatile devices adapted to different
+offered services at transport layer are required:
+application needs. There are 3 devices classes:
+a) IEEE 1609.1 is the reference standard for the APP layer,
+1) Class A: each device up link is followed by two down
+regulates the interfaces and resources to be used and the
+links chosen by each end node in an autonomous way, the most
+messages format
+constrained devices belong to this class;
+b) IEEE 1609.2 defines the safety messages format and when
+2) Class B: in addition to what standardized for class A
+they must be used
+devices, in this class there are over time extra scheduled down
+c) IEEE 1609.3 regulates the transport and network layer link slots;
+through the WSMP (WAVE Short Messages Protocol)
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:35:51 UTC from IEEE Xplore. Restrictions apply.
+129
+2019 IEEE 5th World Forum on Internet of Things (WF-IoT)
+3) Class C: devices belonging to this category always keep An example is 6LoWPAN, that is a communication protocol
+the downlink window active, inactivating it during the uplink used within wireless personal area networks. The main purpose
+of the latter is to carry out a link between the IPv6 addressing
+phase, clearly this class is the most complex in terms of energy
+and the IEEE 802.15.4 standard which precisely defines the
+consumption.
+PHY and MAC layers of the WPANs.
+The wasted power therefore change according to the Considering the characteristics of the devices belonging to
+belonging class. There are also some PHY parameters to WPANs, IPv4 addressing can be very consuming for such
+consider, for example the spreading factor, that is the ratio devices. 6LoWPAN breaks down these barriers by providing ad
+between number of chip per second and symbol rate. As shown hoc optimization for constrained devices. It can be considered as
+in [5], with increasing spreading factor and with the same an intermediate layer within the IEEE 802.15.4 stack that is
+distance, the output power decreases. interposed between the MAC and IPv6 layers, which provides a
+compression of the latter to make it more efficient at the
+In addition to the already listed features, an important
+underlying layers.
+application of LoRaWAN is geolocation.
+The main optimization concerns the compression of the IPv6
+In fact, the current GPS (Global Positioning System) technology
+header by reducing the redundancy of some elements that can be
+is potentially inadequate in particular contexts for IoT LPWANs
+deduced from the link layer.
+application in Smart Cities for indoor and outdoor localization,
+where the energy saving is one of the main problems in the In ITS field, 6LoWPAN [9] can be one of the main technologies
+communication phase. One of the choice of using LoRaWAN as for smart roads where sensor nodes in high density network are
+an alternative protocol for low power devices geolocation is the connected to other components of the network exchanging
+greater bandwidth than other IoT LPWANs technologies. intelligent vehicle data.
+In [6] there is an example of geolocation implementation
+III. MACHINE LEARNING TECHNIQUES FOR ITS
+using LoRaWAN and an analysis of the main localization
+Machine Learning (ML) techniques is also a way to optimize
+techniques for this kind of networks.
+and create powerful and advanced ITS. Its main scope is to
+In order to estimate the position of a node, a localization extract patterns from a set of data and based on a specific event
+technique called multilateration is usually used, which consists to make decisions independently.
+in locating a device calculating the different energy waves
+Future ITS environments are going to be always richer of these
+arrival time, typically RF with known propagation speed, from
+ML algorithms, especially regarding autonomous driving, which
+a transmitter source to one or more receivers. The difference
+according to some forecasts, will reach a level of reliability
+between the various signal arrival times is typically indicated by
+higher to human driving in 2030 [10].
+TDOA (Time Difference of Arrivals). This localization is only
+possible if the signal transmitted by the source is received by In addition to autonomous driving, Machine Learning
+three or more receivers. For these reasons, LoRaWAN is able to algorithms are often applied to connected vehicles that are
+satisfy the requests necessary to provide a multilateration human-driven vehicles that exchange information with a smart
+localization. sensor network. There are several applications of Machine
+Learning to Intelligent Transportation Systems such as smart
+One of the reference LoRa localization architecture is seen
+management of a traffic intersection via a sensor network [11],
+in [7], where each gateway receives simultaneously the same
+pedestrian and accident detection [12] [13].
+synchronization uplink message from an end node and
+determines its location with the principle of multilateration. Machine learning techniques widely used in this field are object
+Moreover, thanks to its intrinsic properties, the LoRa signal at recognition and prescriptive maintenance.
+PHY level is able to easily overcome obstacles, making it
+suitable for potential indoor localization. The first consists in detecting and recognizing objects of
+different nature, from the vehicle to a pedestrian to a simple
+LoRaWAN geolocation is influenced by several factors that obstacle. This is implemented using ad-hoc deep neural
+determine its accuracy, such as the sensitivity of each gateway's networks, that have multiple levels of complexity, called CNN
+clock, the problem of multi-path in environments where there (Convolutional Neural Network) [14]. The input of these
+are obstacles between the source and the destination of the signal networks are an image with relative label of the expected output.
+[8], gateway density in reference area, the position algorithm The image is first subjected to a convolution operation, which
+used by Geolocation Solver and placement of gateways and end- consists in submitting it to filtering in which certain features will
+devices. The optimization of these factors is therefore necessary be extracted.
+in order to improve the accuracy of the positioning. A practical
+use case can be imaging overlapping and machine learning Therefore, the convolution output is subjected to an activation
+techniques applied to improve localization. function, usually non-linear, which only allows to some
+extracted feature being transported to the following layers.
+D. 6LoW
+This process is repeated for a number of times defined in the
+6LoWs is a family of protocols that adapt IPv6 addressing to
+design phase of the neural network. The more layer are present,
+contexts where this addressing mode is not present natively.
+the more accuracy is obtained on output result.
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:35:51 UTC from IEEE Xplore. Restrictions apply.
+130
+At this point, after various pooling operations, the result is
+submitted to the fully connected layers, which will provide the
+final result, which corresponds to the prediction of the image
+content.
+The second ML techniques, prescriptive maintenance is an
+evolution of predictive algorithms, or those classes of algorithms
+that aim to detect anomalies or predict specific behaviors.
+Prescriptive maintenance not only predicts, but is also able to
+independently establish certain actions when they occurs in case
+of an event and / or an anomaly. A similar algorithm can be
+composed by two sub-modules of machine learning that
+cooperate with each other.
+Fig 2. Smart Cities Architecture.
+Unsupervised Supervised
+Features Learning Anomalies Learning Output Behavior Focusing on Smart Roads, as depicted in Figure 3, the data flow
+Algorithm Algorithm
+can be represented with three main blocks.
+The first block collects information from sensors of various
+Expected Behavior categories such as in-vehicle data, environmental models and
+traffic monitoring.
+Fig. 1. Prescriptive maintenance algorithm schema.
+The second block process the information with AI (Artificial
+Intelligence) techniques or with RF (Radio Frequency) based
+measurements.
+The first performs an unsupervised learning on input features by
+The latter block provides the outputs for a smart city control
+detecting the anomaly. The latter is a supervised learning
+center or connected vehicles considering the intelligence
+algorithm, for example an SVM (Support Vector Machine)
+provided by the previous blocks.
+classifier [15], which is trained on the basis of the anomaly and
+the correlated target behavior to ensure that the expected result
+is obtained. Figure 1 shows a block diagram for prescriptive
+analysis and maintenance.
+IV. REAL SMART CITIES SCENARIOS AND SMART ROADS
+Real Smart cities scenarios can follow the architecture
+represented in Figure 2. In this context, the higher levels provide
+a representation of information obtained from the lowest levels,
+including data statistics. About lower layer, special attention
+should be done on InfoBroker and IAM (Identity Access
+Manager) layers. The first collects managed information from
+multiple data sources and applies several security control, such
+as end-to-end encryption of transmitted data, information
+decentralization and many other user’s security improvements
+like authentication and location privacy. The second one creates
+user roles and manage them providing data integrity protection
+and avoiding potentially attacks like Sybil [16]. Fig 3. Smart Roads Data Flow in Smart Cities Scenarios.
+This architecture can be the reference of further future
+A sensor network for real smart road is considered using the
+developments on Smart Cities WG. In this context, smart roads
+communication protocols discussed in the previous sections,
+cover a strategic role towards the development of advanced
+sends and receives information from vehicles in a V2X (Vehicle
+Intelligent Transportation Systems (ITS) powered by the
+to Everything) context.
+Internet of Things (IoT) technologies.
+Table 1 shows the main requirements classified according to the
+type of some environments and applications already available in
+such a context.
+2019 IEEE 5th World Forum on Internet of Things (WF-IoT)
+Predictive Analysis Prescriptive Analysis
+Traffic Management
+Localization
+(GPS/LoRa) Artificial Intelligence A Trd av fa fin cc Fed lo I wn f Cor om nta rt oio l n
+Module
+C No etn wtr oo rl kle (r
+C
+A Ar Nea
+)
+P Pr re ed scic rit piv tie
+v
+a en Ad
+n alysis
+V Ne eth wic ol re
+k
+I d Oe pn tt ii mfi ic za at ti io on
+n
+Object Recognition
+Enhanced Traffic Flow
+Environment Models Violation and Alert
+Detection
+MW oisi tn ud r, e T , Pem re p sse ura retu , r Re a, in A Reu ag lm itye n inte td er/m aci tx ioe nd Ro au nte
+d
+P
+S
+l aa fn en tyi ng
+Pollution Model Traffic Congestion
+Prevention
+Pollution Reduction
+M To rn afi ft io cr i Fn lg
+o
+wM
+s
+o ad ne dl s RF
+E
+vM enE tA BS aU
+se
+R dE DM rivE iN ngT S I ncident Reduction
+Infrastructure Enhanced Traffic Flow
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:35:51 UTC from IEEE Xplore. Restrictions apply.
+131
+2019 IEEE 5th World Forum on Internet of Things (WF-IoT)
+TABLE I. INTELLIGENT SMART ROADS SENSORS PARAMETERS IN REAL REFERENCES
+SMART CITIES SCENARIOS
+[1] Luigi Atzori, Antonio Iera, Giacomo Morabito, “The Internet of Things:
+A survey”, Computer Networks, 2010, pp. 2787-2805.
+Variable Frequency Protocols Delay
+[2] Vikas Taliwal, Daniel Jiang, Heiko Mangold, Chi Chen, and Raja
+Temperature,
+Event based, LoRaWAN Sengupta. 2004. Empirical determination of channel characteristics for
+humidity,
+Road surface min two times a /IEEE ≥100 ms DSRC vehicle-to-vehicle communication. In Proceedings of the 1st ACM
+weigh in
+day 802.11/6LoW international workshop on Vehicular ad hoc networks (VANET '04).
+motion
+ACM, New York, NY, USA, 88-88.
+Vibration, Event based, LoRaWAN
+Road [3] Sebastian Grafling, Petri Mahonen, Janne Riihijarvi,"Performance
+vehicle min two times a /802.11/6Lo ≥100 ms
+barriers
+distances day W
+evaluation of IEEE 1609 WAVE and IEEE 802.11p for vehicular
+communications", 2010, Second International Conference on Ubiquitous
+IEEE
+Vibrations, Event based, and Future Networks (ICUFN), pp. 344–348.
+802.15.4
+Bridge inclinations, min two times a /LoRaWAN ≤200ms [4] D. Jiang and L. Delgrossi, "IEEE 802.11p: Towards an International
+movements day /6LoW Standard for Wireless Access in Vehicular Environments," VTC Spring
+IEEE 2008 - IEEE Vehicular Technology Conference, Singapore, 2008, pp.
+Event based, 2036-2040.
+Pressure, 802.15.4
+Tunnel min two times a ≤200ms
+movements /LoRaWAN [5] Bouguera T, Diouris JF, Chaillout JJ, Jaouadi R, Andrieux G. Energy
+day
+/6LoW Consumption Model for Sensor Nodes Based on LoRa and LoRaWAN.
+Noise levels, IEEE Sensors (Basel). 2018;18(7):2104. Published 2018 Jun 30.
+Event based,
+Environment CO, CO 2,
+min two times a
+802.15.4
+≤500ms
+[6] B. C. Fargas and M. N. Petersen, "GPS-free geolocation using LoRa in
+NO, NO 2,
+day
+/LoRaWAN low-power WANs," 2017 Global Internet of Things Summit (GIoTS),
+brightness /6LoW Geneva, 2017, pp. 1-6.
+Vehicle Event based, IEEE [7] LoRaWAN geolocation white paper, https://lora-
+Parking counting, min two times a 802.15.4 ≤200ms alliance.org/sites/default/files/2018-04/geolocation_whitepaper.pdf
+Area Parking Slots /802.11
+day [8] Link-labs LoRa localization, https://www.link-labs.com/blog/lora-
+availability /LoRaWAN
+localization.
+IEEE
+Event based, 802.15.4 [9] Nikshepa, Pai V., Shenoy U.K.K. (2019) “6LowPan—Performance
+Geolocation Analysis on Low Power Networks”, International Conference on
+Road Works min two times a /802.11 ≤1ms
+Management Computer Networks and Communication Technologies. Lecture Notes on
+day /LoRaWAN
+Data Engineering and Communications Technologies, vol 15. Springer,
+/6LoW
+Singapore.
+Traffic data,
+safety [10] Todd Litman, “Autonomous Vehicle Implementation Predictions -
+events, plate Event based, IEEE 802.11 Implications for Transport Planning”, 2018, Victoria Transport Policy
+Traffic flow recognition, min two times a /HyperLan ≤10ms Institute.
+day /Fiber Optic
+weigh in [11] Mahmoud Pourmehrab, Lily Elefteriadou, Sanjay Ranka, Marilo Martin-
+motion Gasulla, “Optimizing Signalized Intersections Performance under
+Conventional and Automated Vehicles Traffic”, 2017, Cornell
+University.
+For each of them the main variables are highlighted, in addition
+[12] E. Chen, X. Tang and B. Fu, "A Modified Pedestrian Retrieval Method
+to the communication protocol, the frequency and the delay for Based on Faster R-CNN with Integration of Pedestrian Detection and Re-
+some communications. As seen in Table 1, most sensors use Identification," 2018 International Conference on Audio, Language and
+wireless technologies, with the exception of traffic flow sensors, Image Processing (ICALIP), Shanghai, 2018, pp. 63-66.
+which could also use wired infrastructures. [13] Huang, Xiaohui & He, Pan & Rangarajan, Anand & Ranka, Sanjay.
+(2019). Intelligent Intersection: Two-Stream Convolutional Networks for
+Delay requirements are in most cases from 100 to 500 ms, except Real-time Near Accident Detection in Traffic Video.
+for road works or traffic flow sensors that require real time [14] Jiuxiang Gu, Zhenhua Wang, Jason Kuen, Lianyang Ma, Amir
+information, subjected to selected QoS and nodes density. In the Shahroudy, Bing Shuai, Ting Liu, Xingxing Wang, Gang Wang, Jianfei
+Cai, Tsuhan Chen, “Recent advances in convolutional neural networks”,
+most highlighted cases event based communications are
+Pattern Recognition, Volume 77, 2018, pp. 354-377.
+required.
+[15] Ibrahim Aljarah, Ala’ M. Al-Zoubi, Hossam Faris, Mohammad A.
+Hassonah, Seyedali Mirjalili, Heba Saadeh, “Simultaneous Feature
+Selection and Support Vector Machine Optimization Using the
+V. CONCLUSIONS Grasshopper Optimization Algorithm”, Cognitive Computation, 2018,
+Volume 10, Number 3.
+In this paper the main IoT technologies for ITS in the main Smart
+Cities scenarios are evaluated. A main overview on [16] A. K. Mishra, A. K. Tripathy, D. Puthal and L. T. Yang, "Analytical
+Model for Sybil Attack Phases in Internet of Things," in IEEE Internet of
+communication protocols and innovative machine learning
+Things Journal, vol. 6, no. 1, pp. 379-387, Feb. 2019.
+technologies that play an important role in this field is provided.
+Finally, additional analysis is conducted in practical scenarios.
+Future tasks on this topic will be on the optimization of
+LoRaWAN localization and power management, integration of
+further smart cities technologies in different scenarios and an
+improved analysis on complexity of event based and periodic
+measurements for roads requirements.
+Authorized licensed use limited to: Princeton University. Downloaded on February 06,2024 at 16:35:51 UTC from IEEE Xplore. Restrictions apply.
+132
+

@@ -1,0 +1,1032 @@
+References:
+722 SPorta,P Crucitti,VLatora
+Finally, our work also shows that centrality is not just one single thing in spatial
+systems.Centralityisamultifacetedconceptthat,inordertomeasurethe‘importance’
+of single actors, organizations, or places in complex networks, has led to a number of
+different indices. We show that such indices, at least those mentioned in this paper,
+belong to four different concepts of being central as being near, being between, being
+straightto,andbeingcriticalfortheothers:thediversityofthese‘families’iswitnessed
+by the consistentlydifferent distributions of centrality scores in considered cases, both
+in terms of spatial flows as mapped in red-and-blue layouts and in terms of statistical
+distributionsasshownincumulativeplots.Wealsoshowthatsuchindices,whenapplied
+to geographic networks, capture different ways for a place to be central, ways that
+seem to be always working together, often in reciprocal contradiction, in shaping our
+perception, cognition, and usage of urban spaces.
+A new approach to the network analysis of centralities in geographic systems
+is therefore appearing. Its three pillars are (1) primal graphs; (2) metric distance;
+(3) manydifferent indices ofcentrality. As such, we may well name it multiple central-
+ity assessment. Offering a set of multifaceted pictures of reality, rather than just one,
+MCA leads to more argumentative, thus less assertive, indications for action.
+On this basis, further research may well proceed in three directions. First, signifi-
+cant achievements are likely to be gained after establishing correlations between
+centralities of the networks and dynamics on the networks (such as land uses, real-
+estate values, the location of social groups, crime rates, community retail vitality, and
+pedestrianandvehicularflows(cid:246)thatis,by recodingcentrality indices inthe contextof
+spatialnetworks(Crucittiet al,2006).Finally,aneffortshouldbemadeto applyMCA
+to systems at different scales, from the macroregional to the microarchitectural.
+References
+AlbertR,Baraba¤siAL,2002,‘‘Statisticalmechanicsofcomplexnetworks’’ReviewofModern
+Physics7447^97
+AlexanderC,1998TheNatureofOrder(OxfordUniversityPress,Oxford)
+AltmanM,1993,‘Reinterpretingnetworkmeasuresformodelsofdiseasetransmission’’Social
+Networks151^17
+AnthonisseJM,1971TheRushinaGraphUniversityofAmsterdamMathematicalCentre,
+Amsterdam,ND
+Baraba¤siAL,2002Linked:TheNewScienceofNetworks(Perseus,Cambridge,MA)
+BattyM,2001,‘‘Exploringisovistfields:spaceandshapeinarchitecturalandurbanmorphology’’
+EnvironmentandPlanning B:PlanningandDesign28123^150
+BattyM,2003,‘‘Networkgeography’’,WP 63,CenterforAdvancedSpatialAnalysis,University
+College,London,http://www.casa.ucl.ac.uk/publications
+BattyM,2004a,‘‘Anewtheoryofspacesyntax’’,WP 75,CenterforAdvancedSpatialAnalysis,
+UniversityCollege,London,http://www.casa.ucl.ac.uk/publications
+BattyM,2004b,‘‘Distanceinspacesyntax’’,WP 80,CenterforAdvancedSpatialAnalysis,
+UniversityCollege,London,http://www.casa.ucl.ac.uk/publications
+BattyM,LongleyP,1994FractalCities(AcademicPress,London)
+BattyM,RanaS,2002,‘‘Reformulatingspacesyntax:theautomaticdefinitionandgeneration
+ofaxiallinesandaxialmaps’’,WP 58,CenterforAdvancedSpatialAnalysis,University
+College,London,http://www.casa.ucl.ac.uk/publications
+BavelasA,1948,‘‘Amathematicalmodelforgroupstructures’’HumanOrganization716^30
+BavelasA,1950,‘‘Communicationpatternsintaskorientedgroups’’JournaloftheAcoustical
+SocietyofAmerica22271^282
+BellCD,AtkinsonJS,CarlsonJ,1999,‘‘Centralitymeasuresfordiseasetransmissionnetworks’’
+SocialNetworks211^21
+BollandJM,1988,‘‘Sortingoutcentrality:ananalysisoftheperformanceoffourcentrality
+modelsinrealandsimulatednetworks’’SocialNetworks10233^253
+BonacichP,1972,‘‘Factoringandweightingapproachestostatusscoresandcliqueidentification’’
+JournalofMathematicalSociology2113^120
+
+Annexes/Appendices:
+
+Body Text:
+EnvironmentandPlanningB:PlanningandDesign 2006, volume 33, pages 705^725
+DOI:10.1068/b32045
+The network analysis of urban streets: a primal approach
+Sergio Porta
+Dipartimento di Progettazione dell’Architettura, Politecnico di Milano,Via Golgi 39,
+Milano 20133, Italy; e-mail: sergio.porta@polimi.it
+Paolo Crucitti
+Scuola Superiore di Catania, Catania, Italy; e-mail: pacrucitti@ssc.unict.it
+Vito Latora
+DipartimentodiFisicaeAstronomia,Universita' diCataniaandINFNSezionediCatania,Italy;
+e-mail: vito.latora@ct.infn.it
+Received 3 March 2005; in revised form 7 September 2005
+Abstract.The network metaphor in the analysis of urban and territorial cases has a long tradition,
+especially in transportation or land-use planning and economic geography. More recently, urban
+design has brought its contribution by means of the ‘space syntax’ methodology. All these
+approaches(cid:246)though under different terms like‘accessibility’,‘proximity’,‘integration’ ‘connectivity’,
+‘cost’, or ‘effort’(cid:246)focus on the idea that some places (or streets) are more important than others
+because they are more central. The study of centrality in complex systems, however, originated in
+otherscientificareas,namelyinstructuralsociology,wellbeforeitsuseinurbanstudies;moreover,as
+a structural property of the system, centrality has never been extensively investigated metrically
+in geographic networks as it has been topologically in a wide range of other relational networks such
+associal,biological,ortechnologicalones.Afterapreviousworkonsomestructuralpropertiesofthe
+primalgraphrepresentationofurbanstreetnetworks,inthispaperweprovideanin-depthinvestiga-
+tion of centrality in the primal approach as compared with the dual one. We introduce multiple
+centrality assessment (MCA), a methodology for geographic network analysis, which is defined and
+implementedon four1-square-mileurbanstreetsystems.MCAprovidesadifferentperspectivefrom
+space syntax in that: (1) it is based on primal, rather than dual, street graphs; (2) it works within a
+metric, rather than topological, framework; (3) it investigates a plurality of peer centrality indices
+rather thanasingleindex.Weshowthat,intheMCAprimalapproach,much morethan in thedual
+approach, some centrality indices nicely capture the ‘skeleton’of the urban structure that impacts
+so much on spatial cognition and collective behaviours. Moreover, the distributions of centrality in
+self-organizedcitiesaredifferentfromthoseinplannedcities.
+1 Introduction: which order for urban street patterns?
+Since the dawn of modernity the power of Euclidean geometry has been immensely
+influential for ‘‘certain man using reason’’ (Descartes, 1994, page 27) such as an
+architect or urban designer, and it is almost an axiom when it comes to the design of
+streets, towns, and cities. Against uneven and windy street patterns [‘‘le chemin des
+a“nes’’(therouteofasses),LeCorbusier,1994,pages 5^7]modernityhasbeendiffusing
+grid-likeandgeometric structures [‘‘le chemin des Hommes’’ (the route ofmen)] as the
+signofanewera.Stilltodayoldneighborhoodsareoftenunderestimatedintheir most
+fundamental values: they might be considered picturesque, even attractive, but their
+structure is not so valuable: it is disordered. Against this modernist stigmatization, a
+whole stream of counterarguments have been raised since the early1960s in the name
+ofthe‘magic’ofoldcities(Jacobs,1993).Theclaimwasnotjustaboutaesthetics:itwas
+about livability. The modern city is hard to live in. The social success of an urban
+settlement emerges from the complex, uncoordinated interaction of countless different
+routes and experiences in a suitable environment. Is this a nostalgic claim to a
+prescientific era? Jane Jacobs argued, following Weaver (Jacobs, 1961; Weaver, 1948),
+706 SPorta,P Crucitti,VLatora
+that cities are complex-organized problems and, as such, in order to be understood,
+they requiretobe approachedwith anewscience:onlyby means ofthe newscience of
+complexity can the ‘marvelous’complex order of the old city be revealed that, unlike
+the Euclidean geometry, is not visible at a first glance, is not imposed by any central
+agency, but, rather, sprouts out from the uncoordinated contribution of countless
+agents in time.That order, Jacobs concluded, is the orderof life: that is why it fosters
+human life in cities; it is that order which builds the sustainable city of the future
+(Newman and Kenworthy,1999).
+So long evocated, clues to the complex order of life are now revealed. Following
+structuralstudies inbiologyand sociology, new insightshavebeen gainedwhichreveal
+thatthemostdiverseofsuchsystemsdoshareastonishinglysimilartopologicalproper-
+ties (Albert and Baraba¤si, 2002; Baraba¤si, 2002; Watts and Strogatz, 1998). Among
+others, our studies on urban street networks (Crucitti et al, 2006) have shown that the
+same properties actually rule those cases as well. These achievements allow us to
+acknowledge, under the seeming disorder of self-organized cities, a rule of preferential
+attachment and hierarchical topology that operates, in an embedded way, in the most
+diverse climatic, geographic, economic, social, and cultural conditions(cid:246)an order
+shared with most nongeographic natural, biological, and social systems (Portugali,
+2000; Ravasz and Baraba¤si, 2003; Salingaros, 2003).
+Herewemake astep forwardbydefiningthe multiplecentralityassessment(MCA),
+a methodology for the primal analysis of centralities on urban street systems. In
+section 2 a short review of centrality indices since the early 1950s is presented; a
+comparison is then addressed between ‘space syntax’, a well-known methodology for
+the dual analysis of street systems, and previously defined indices of centrality, which
+leads to the understanding of space syntax in the light of a broader framework and to
+the acknowledgement of its historical roots. In section 3 a brief discussion of the two
+different approaches(cid:246)the primal and the dual(cid:246)to the graph representation of urban
+street systems is presented. In section 4 selected indices of centrality are investigated
+over fourcases ofurbanstreetnetworksspatially, throughthe presentation ofthematic
+maps, and statistically, by plotting their cumulative distributions. The main message
+of this paper is then presented in section 5: the proposed MCA, grounded on a set of
+different centrality indices investigated over a primal, metric representation of street
+networks leads to an extended comprehension of the ‘hidden orders’ that underlie the
+structure of real, geographic spatial systems.
+2 From structural sociology to space syntax: defining centrality indices
+The basic idea in structural sociology is to represent a group of people as a network
+whose nodes arethe individuals andwhose edges arerelationshipsbetween individuals
+(Wasserman and Faust,1994). Bavelas was the first to realize that a central location in
+the network structure corresponds to power in terms of independence, influence, and
+control on the others (Bavelas,1948). Freeman’s masterworks on centrality (Freeman,
+1977; 1979) reviewed and coordinated under the same roof previous researches
+addressed since the early 1950s (Bavelas, 1948; 1950; Leavitt, 1951; Shaw, 1954; 1964;
+Shimbel, 1953), and defined a first set of indices: degree (CD), closeness (CC), and
+betweenness (CB) centralities.
+More recently, new evidence has been obtained that complex networks in many
+different economic, social, natural, and man-made systems share some common struc-
+tural properties. A first shared property is related todistanceand clustering: in fact, it
+hasbeen shown that mostofthose networks exhibitthesmall-worldproperty, meaning
+that the average topological distance between a couple of nodes is small compared
+with the size of the network, despite the fact that the network exhibits a large local
+The network analysis ofurban streets 707
+clustering typical of regular lattices (Watts and Strogatz, 1998). A second shared
+property is more related to centrality(cid:246)that is, the distribution of a node’s degree.
+The node’s degree k is the number of its connections, nothing other than a centrality
+measure CD. The study of a large number of complex systems, including networks
+as diverse as man-made systems such as the World Wide Web and the Internet
+(Pastor-Satorras and Vespignani, 2004), social networks such as the movie actors
+collaboration network or networks of sexual contacts (Liljeros et al, 2001), and many
+biological networks (Albert and Baraba¤si, 2002), has shown that, in most of such
+cases, the degree distribution follows, for large degree k, a power law scaling
+P(k) (cid:136) N =N(cid:24)k(cid:255)g, with the exponent g being between 2 and 3, and where N is
+k k
+the number of nodes having k links, and N is the total number of nodes. Networks
+withsuchadegreedistributionhavebeennamedscalefree(AlbertandBaraba¤si,2002).
+The results found are particularly interesting in contrast with what is expected for
+random graphs (Erdo«s and Re¤nyi, 1959). In fact, a random graph with N nodes and
+K edges (an average of k(cid:22)per node)(cid:246)that is, a graph obtained by randomly selecting
+theKcouplesofnodestobeconnected(cid:246)exhibitsaPoissondegreedistributioncentred
+(cid:22)
+at k, with an exponential behavior and not a power law behavior for large values of k.
+In formal terms a network can be represented as a graph G (cid:136) (N,K), a mathe-
+matical entity defined by two sets, N and K. The first set, N, is a nonempty set of N
+elements called nodes, vertices, or points, and K is a set of K elements containing
+unordered pairs of different nodes called links or edges. In the following discussion a
+node will be referred to by its order i in the set N, with 14i4N. If there is an edge
+between nodes i and j, the edge being indicated as (i,j), the two nodes are said to be
+adjacent or connected. Sometimes it is useful to consider a valued, or weighted graph
+G (cid:136) (N,K,O), defined by three pairs of sets N, K, and O. The set O is a set of K
+elements,beingthenumericalvaluesattachedtotheedges,andmeasuringthestrengths
+of the tie. A graph G (cid:136) (N,K) can be described by a single matrix, the so-called
+adjacency matrix A (cid:136) fa g, an N(cid:2)N square matrixwhose element a is equal to1if
+ij ij
+(i,j) belongs to K, and 0 otherwise. A weighted graph G (cid:136) (N,K,O) can be
+described by giving two matrices, the adjacency matrix A, defined as above, and a
+matrix Wcontainingthe edgeweights. Intheparticularcase ofa spatial(orgeographic)
+graph(cid:246)that is, a graph whose nodes have a precise position in a two-dimensional or
+three-dimensional Euclidean space and whose links are real physical connections(cid:246)we
+find ituseful toworkwith lengths in place ofweights,suchthat,insteadofthe weights
+matrixW,wewillconsiderthelengthsmatrixL (cid:136) fl g,anN(cid:2)N matrixwhoseentry
+ij
+l is the metric length of the link connecting i and j (a quantity inversely proportional
+ij
+to the weight associated with the edge). In a valued graph the shortest path length d
+ij
+between i and j is defined as the smallest sum of the edge lengths throughout all the
+possible paths in the graph from i to j, whereas in a nonvalued graph itis simplygiven
+by the smallest number of steps required to go from i to j.
+ThecharacteristicpathlengthL(WattsandStrogatz,1998)isdefinedastheaverage
+length of the shortest paths (with the average being calculated over all the couples of
+nodes in the network):
+1 X
+L (cid:136) d . (1)
+N(cid:133)N(cid:255)1(cid:134) ij
+i;j2N;i6(cid:136)j
+Lis agood measureofthe connectivity properties ofthe network. However, this index
+is not well defined for nonconnected graphs, unless we make the artificial assumption
+ofafinitevaluefor d alsowhenthereisnopathconnecting nodes iandj.Thusanew
+ij
+index, the global efficiency E (Latora and Marchiori, 2001), has been defined. As
+glob
+with the characteristic path length L, E is a measure of how well the nodes
+glob
+708 SPorta,P Crucitti,VLatora
+communicateoverthenetwork,anditisbasedontheassumptionthattheefficiency e
+ij
+in the communication between two generic nodes i and j of the graph is inversely
+proportional to the shortest path length connecting the nodes(cid:246)that is, e (cid:136) 1=d .
+ij ij
+In the case that G is unconnected and there is no path linking i and j, d (cid:136) 1 and,
+ij
+consequently, e (cid:136) 0.The global efficiency of graph G is defined as the average of e
+ij ij
+over all the couples of nodes:
+1 X 1 X 1
+Eglob(cid:133)G(cid:134) (cid:136) e (cid:136) . (2)
+N(cid:133)N(cid:255)1(cid:134) ij N(cid:133)N(cid:255)1(cid:134) d
+i;j2N;i6(cid:136)j i;j2N;i6(cid:136)j ij
+The global efficiency is correlated to 1=L, with a high characteristic path length
+corresponding to a low efficiency (Latora and Marchiori, 2003). By definition, in the
+topological (nonvalued graph) case, Eglob takesvalues inthe interval [0,1], and is equal
+to1for the complete graph [agraphwith all the possible N(N(cid:255)1)=2 edges]. In metric
+systems (translated into valued graphs), however, it is possible to normalize (Latora
+and Marchiori, 2001; 2002) such a quantity by dividing Eglob(G) by the efficiency
+Eglob(Gideal) of an ideal complete system in which the edge connecting the generic
+coupleofnodes i,jispresentandhasalengthequaltotheEuclideandistancebetween
+i and j:
+1 X 1
+Eglob(cid:133)Gideal(cid:134) (cid:136) , (3)
+N(cid:133)N(cid:255)1(cid:134) dEucl
+i6(cid:136)j2N ij
+where dEucl is the Euclidean distance between nodes i and j along a straight line(cid:246)
+ij
+that is, the length of a virtual direct connection i^j. In this way we have
+Eglob(G) (cid:136) Eglob(cid:133)G)=Eglob(cid:133)Gideal). A different normalization has been proposed in
+1
+Vragov|'c et al (2004):
+!,
+X dEucl
+Eglob(cid:133)G(cid:134) (cid:136) ij N(cid:133)N(cid:255)1(cid:134). (4)
+2 d
+i;j2N;i6(cid:136)j ij
+We now have the setup to define and discuss the various measures of centrality. The
+three indicesofcentralityreportedinFreeman (1977;1979)canberoughlydivided into
+two different families (Latora and Marchiori, 2004). Both CD and CC can be seen as
+belonging to the same concept of being central as being near others (Freeman, 1977;
+1979; Nieminen, 1974; Sabidussi, 1966; Scott, 2003; Shimbel, 1953), and CB measures
+canbeviewedasbeingcentralintermsofbeingbetween(thatisbeingtheintermediary
+of others (Anthonisse, 1971; Freeman, 1977; 1979; Freeman et al, 1991; Newman and
+Girvan,2003). Afteranumberofrevisions and applications through over fourdecades
+(Altman, 1993; Bonacich, 1972; 1987; 1991; Stephenson and Zelen, 1989), such indices
+havebeenchangedandextendedtodifferentcases,butthebasicfamilieshavenotbeen
+changed so much. In transportation planning, for instance, the accessibility of a place
+is still intended to mean its ‘ability’ to be accessed within a short time from all other
+places, which is in essence(cid:246)other than the fact that distance is measured by a much
+more complex notion of transportation cost(cid:246)a kind of CC.
+The growth of interest in the network analysis of complex systems has led to new
+indices of centrality. For the purposes of this paper three of them, namely efficiency,
+straightness, and information, all based on global efficiency, are relevant. Efficiency
+centrality CE, a kind of closeness, when applied to geographic graphs and normalized
+bycomparingthelengthofshortestpathswiththatofvirtualstraightlinesbetweenthe
+same nodes (Vragov|'c et al, 2004), turns out to capture a new, inherently geographic
+concept that we term straightness centrality, CS: being central as being more directly
+reachable by all others in the network. Information centrality CI embeds both CC and
+The network analysis ofurban streets 709
+CB in a single quantity (Latora and Marchiori, 2004), and leads to another distinct
+concept of being central as being critical forothers.
+2.1 Being near others: degree and closeness centrality
+Degree centrality isbasedonthe ideathatimportantnodeshavethelargestnumberof
+ties to other nodes in the graph.The degree of a node is the number of edges incident
+with the node, the number of first neighbours of the node.The degree k of node i is
+P i
+defined in terms of the adjacency matrix as k (cid:136) a . The degree centrality (CD)
+i ij
+j2N
+of i is defined as (Freeman,1979; Nieminen,1974):
+X
+a
+ij
+k
+CD (cid:136) i (cid:136) j2N . (6)
+i N(cid:255)1 N(cid:255)1
+The normalization adopted is such that CC takes on values between 0 and 1, and is
+equal to 1 when a node is connected to all the other nodes of the graph. Degree
+centrality is not relevant in the primal representations, in which a node’s degree
+(the number of streets incident in that intersection) is substantially limited by spatial
+constraints.
+The simplest notion of closeness is based on the concept of minimum distance or
+geodesic d (cid:246)that is, the smallest sum of the edge lengths throughout all the possible
+ij
+paths in the graph from i to j in a weighted graph, or the minimum number of edges
+traversed in a topological graph. The closeness centrality of pointi (Freeman, 1979;
+Sabidussi,1966;Wasserman and Faust,1994) is:
+N(cid:255)1
+CC (cid:136) L(cid:255)1 (cid:136) X , (7)
+i i d
+ij
+j2N;j6(cid:136)i
+where L is the average distance from node i to other nodes. Such an index is mean-
+i
+ingful for connected graphs only, unless one artificially assumes d to be equal to a
+ij
+finite value when there is no path between two nodes i and j, and to take on values
+between 0 and1in the case of nonvalued graphs.
+2.2 Being between others: betweenness centrality
+Interactionsbetween two nonadjacentnodes might depend on intermediate nodes that
+can have a strategic control or influence on them.This concept can be simply quanti-
+fiedbyassumingthatcommunicationtravelsalongonlygeodesics. Namely,if n isthe
+jk
+numberofgeodesics linking the two nodes j and k, and n is the numberofgeodesics
+jk
+linking the two nodes j and k that contain node i, the betweenness centralityof node i
+is defined as (Freeman,1979):
+1 X n (cid:133)i(cid:134)
+CB (cid:136) jk . (8)
+i (cid:133)N(cid:255)1(cid:134)(cid:133)N(cid:255)2(cid:134) n
+j;k2N;j6(cid:136)k; j;k6(cid:136)i jk
+CB takes on values between 0 and 1 and reaches its maximum when node i falls on
+i
+all geodesics. Here we just mention two other indices of betweenness that include
+contributions from nongeodesic paths: the flow betweenness and the random paths
+betweenness; however, in this study, we use the shortest paths betweenness defined in
+equation (8).
+2.3 Being direct to the others: efficiencyand straightness centrality
+Efficiencyand straightness centralities originatefromtheideathatthe efficiencyinthe
+communication between two nodes i and j is equal to the inverse of the shortest path
+710 SPorta,P Crucitti,VLatora
+length d (Latora and Marchiori, 2001).Thus, the efficiency centrality of node i is:
+ij !, !
+X 1 X 1
+CE (cid:136) . (9)
+i d dEucl
+j2N;j6(cid:136)i ij j2N;j6(cid:136)i ij
+Straightness centrality is a variant of efficiency centrality, and originates from a
+different normalization (Vragov|'c et al, 2004).The straightness of node i is:
+!,
+X dEucl
+CS (cid:136) ij (cid:133)N(cid:255)1(cid:134). (10)
+i d
+j2N;j6(cid:136)i ij
+This measure captures how much the connecting routes from node ito all other nodes
+in the graph deviate from the virtual straight routes.
+2.4 Being critical for all the others: information centrality
+The information centrality of a node i is defined as the relative drop in the network
+efficiency caused by the removal from G of the edges incident in i:
+DEglob Eglob(cid:133)G(cid:134)(cid:255)Eglob(cid:133)G0(cid:134)
+CI (cid:136) 2 (cid:136) 2 2 , (11)
+i Eglob Eglob(cid:133)G(cid:134)
+2 2
+where by G0 we indicate the network with N points and K(cid:255)k edges obtained by
+i
+removing from G the edges incident in the node i. Here we use the efficiency defined
+in equation (4). However, a generic performance parameter can be used in its place.
+The removal of some of the edges affects the communication between some of the
+nodes of the graph, thereby increasing the length of the shortest paths. Consequently,
+the efficiency of the new graph Eglob(G0) is smaller than Eglob(G). The index CI is
+2 2 i
+normalized by definition to take values in the interval [0,1]. It can immediately be
+seenthat CI is correlatedto all the other three standard centrality indices CD, CC, and
+i i i
+CB. However, CI also depends on the lengths of the new geodesics, the alternative
+i i
+paths that are used once the node i is deactivated(cid:246)no information about such new
+geodesics is contained in the other indices.
+2.5 Space syntax in the field of centrality: integration andCC
+The network approach has been broadly used in urban studies. Since the early 1960s
+much research has been spent trying to model land uses, market behavior, or traffic
+flows on several topological and geometric characteristics of traffic channels (Larson,
+1981; Wilson, 2000), or even the exchanges of goods and habitats between historical
+settlements in geographic space (Byrd, 1994; Peregrine, 1991; Pitts, 1965; 1979). The
+contributionofurbandesignhasbeen mainlytheoretical(Alexander,1998;Batty,2003;
+Batty and Longley,1994; Salingaros,1998) with one relevant exception: after the semi-
+nal work of Hillier and Hanson (1984), a consistent application of the network
+approach to cities, neighbourhoods, streets, and even single buildings has been devel-
+oped under the notion of ‘space syntax’, thereby establishing a significant correlation
+between the topological accessibility of streets and phenomena as diverse as their
+popularity (pedestrian and vehicular flows), human wayfinding, safety against micro-
+criminality, retail commerce vitality, activity separation, and pollution (Penn and
+Turner, 2003). Though not limited to it alone, the core of the space syntax method-
+ology, when applied to street networks, is the integration index, which is stated to be
+‘‘so fundamental that it is probably in itself the key to most aspects of human spatial
+organization’’ (Hillier,1996, page 33).The integration ofone streethasbeen defined as
+the ‘‘shortest journey routes between each link [or space] and all of the others in the
+network (defining ‘shortest’ in terms of fewest changes in direction’’ (Hillier, 1998,
+page 36). As such, integration turns out to be nothing other than a normalized close-
+ness centrality (Jiang and Claramunt, 2004a), the above-mentioned closeness index
+The network analysis ofurban streets 711
+defined in the early 1950s by structural sociologists and reviewed by Freeman in the
+late1970s. A short comparison between formal definitions of integration(cid:246)Hillier and
+Hanson(1984,page108),Teklenburget al(1993,page 35),Hillier(1996,page 36),Jiang
+and Claramunt (2002, pages 298^299), and many others(cid:246)and that of CC presented
+above in equation (7), fully confirms the assumption.
+3 Primal versus dual: the 1-square-mile research
+Networks of streets and intersections can be represented by spatial graphs in which
+zero-dimensional geographic entities (such as intersections) are turned into zero-
+dimensional graph entities (nodes) placed into a two-dimensional Euclidean space,
+and one-dimensional geographic entities (such as streets) are turned into one-dimen-
+sional graph entities (edges or links). Because of the coherence between the dimension
+of geographic and graph entities, this kind of representation is hereby termed ‘direct’,
+or primal; analogously, representations in which streets are turned into nodes and
+intersections are turned into edges, are hereby defined ‘indirect’, or dual(cid:246)that is, the
+case of conventional space syntax analysis (Hillier, 1996; Hillier and Hanson, 1984).
+The network analysis, applied to territorial cases, has mostly followed a primal
+approach, which seems to be the most intuitive for systems in which distance has to
+be measured not just in topological terms (steps)(cid:246)such as, for instance, in social
+systems(cid:246)but rather in spatial terms (meters), such as in urban street systems. Traffic
+engineers and economic geographers or even geoarcheologists have mostly, if not
+always, followed the primal approach.The primal approach is also the world standard
+in geospatial dataset construction and diffusion: to date, an immense amount of
+information has been marketed already following the road-centerline-between-nodes
+rule, such as the huge TIGER (topologically integrated geographic encoding and
+referencing) database developed at the US Census Bureau. It might appear paradox-
+ical, though, that space syntax, the flagship application of urban design, led in the
+opposite direction, being based on a dual representation of urban street patterns. In
+this representation, axial lines that representgeneralized streets (more exactly:‘lines of
+sight’or‘linesofunobstructedmovement’alongmappedstreets)areturnedintonodes,
+and intersections between pairs of axial lines are turned into edges. Shortcomings as
+well as benefits of this approach have been often remarked (Batty, 2004a; 2004b;
+Crucitti et al, 2006; Desyllas and Duxbury, 2001; Hillier and Penn, 2004; Jiang and
+Claramunt, 2002, Ratti, 2004).
+3.1 The 1-square-mile research
+Recently we addressed a systematic evaluation of different centrality indices distribu-
+tionsovereighteen1-square-milesamplesofurbanfabricsdrawnfromapreviouswork
+ofAllanJacobs(1993)inaprimalgeographicframework(Crucitti et al,2006). Fourof
+those cases [figure1(a)^(d), panel1, over], namely Ahmedabad, Venice, Richmond,
+CA, and Walnut Creek, CA, arehere given closer focus in order toframe the compar-
+ison between the primal and the dual approach. Moreover, whereas Ahmedabad and
+Venice are typical self-organized patterns, in that they ‘spontaneously’emerged from a
+historical process outside of any central coordination, Richmond and Walnut Creek
+are planned patterns, developed following one coordinating layout in a relatively short
+periodoftime.Intheprimalapproachcentralityscoresarecalculatedonnodesoverthe
+primal graphs. Primal graphs [figure1(a)^(d), panel 2] are constructed by following a
+road-centerline-between-nodes rule: real intersections areturned into graph nodes and
+real streets are turned into graph edges; all graph edges are defined by two nodes (the
+endpoints of the arc) and, possibly, several vertices (intermediate points of linear
+discontinuity); intersections among edges are always located at nodes; edges follow
+712 SPorta,P Crucitti,VLatora
+(a) (b) (a) (b)
+(c) (d) (c) (d)
+Panel 1 Panel 2
+(a) (b)
+(c) (d)
+Panel 3
+Figure1. Four 1-square-mile cases of urban patterns as they appear in original maps [(a)^(d),
+panel1], reduced to primal road-centerline-between-nodes graphs [(a)^(d), panel 2], and dual
+generalized graphs [(a)^(d), panel 3]. Two cases [(a) Ahmedabad; (b) Venice] are mostly self-
+organized patterns, while the other two cases [(c) Richmond, CA; (d) Walnut Creek, CA] are
+predominantlyplannedpatterns.However,allcasesarestrikinglydifferentafterallothereconomic,
+historical,cultural,functional,andgeoclimaticconditionsareconsidered.Inparticular,Ahmedabad
+is a densely interwoven, uninterrupted urban fabric, whereas Venice is dominated by the Grand
+Canalseparationwhichiscrossedinjusttwopoints(theRialtoandAccademiabridges);moreover,
+RichmondshowsatraditionalgridironstructurewhereasWalnutCreekhasaconventional‘lollipop’
+layout typical of postwar suburbs. These geographic peculiarities, which are well featured in the
+primalvalued(metric)representation,getlostinthedualrepresentation,inwhichjustthetopological
+propertiesofthesystemsare retained.
+the footprint of real streets as they appear on the source map; all distances are
+calculated metrically. After the computation of centrality scores on primal nodes,
+analogous primal layouts (red-and-blue maps) are produced with reference either to
+node or edge centrality; in the latter case, because in the primal graph one edge is
+defined by just one pair of ending nodes by which the edge ‘participates’ in the
+topology of the network as a whole, centrality on one edge is simply equated to
+The network analysis ofurban streets 713
+theaverageofthecentralitiesofitsdefiningpairofnodes.Anexampleofnode-referenced
+layoutisgiveninfigure 3,andinfigure 4anedge-referencedlayoutisoffered.Botharethe
+result of the same MCA primal approach.
+In the dual approach centrality scores are calculated on nodes over the dual graph
+[figure1(a)^(d), panel 3]; here, streets are turned into nodes and intersections are
+turnedintoedgesofthedualgraph;thedistancebetweentwonodes(streets)isequated
+to the number of intervening edges (intersections) along the shortest connecting path:
+it is atopological, nonmetric concept ofdistance which accounts for how many ‘steps’
+onenodeispositionedfromanother,nomatterthelengthofthosesteps.Subsequently,
+color-coded primal layouts (red-and-blue maps) are drawn from the dual graph, in
+which, because nodes in the dual graph represent streets, the centrality scores of a
+dual node are associated with the corresponding street in the primal layout. Beside
+some dissimilarities, including a different generalization model, this is a conventional
+space-syntax approach.
+3.2 Generalized versus direct graph representation
+A key question in the dual representation of street patterns is whether a ‘principle of
+continuity’canbefoundtoextendtheidentityofastreetoverapluralityofedges;thiscan
+be referred to as a problem of ‘generalization’. A generalization model is a process of
+complexity reduction used by cartographers when reducing the scale of a map; in a first
+step,thisisbasedonmergingsinglestreetsegmentsintolonger‘strokes’(Thomson,2004).
+Inspacesyntaxresearch,axialmappingactsasageneralization modelinwhichthe
+principle of continuity is the linearity of the street spaces [figure 2, row (a), over].
+However, Batty and Rana (2002) found nine different methodologies for axial map-
+ping, each generating different results, which pose a problem of subjectivity. Jiang and
+Claramunt, after a first primal attempt based on characteristic nodes and visibility
+(Jiang and Claramunt, 2002), have recently proposed a dual model under a ‘named-
+street approach’ (Jiang and Claramunt, 2004a; 2004b) in which the principle of
+continuity is the street name [figure 2, row (b)]: two different arcs of the original
+network are assigned the same street identity if they share the same street name.The
+main problem with this approach is that it introduces a nominalistic component in a
+pure spatial context, which results in a loss of coherence of the process as a whole:
+streetnamesarenotalwaysmeaningful norreliable,and street-namedatabasesarenot
+always available in all cases or at all scales; moreover, the process of embedding and
+updating street names into geographical information systems seems rather costly for
+large datasets.
+In building our dual graphs, we introduce a generalization model based on a
+different principle of continuity, one of ‘good continuation’ (Thomson, 2004), which
+is based on the preference to go straight at intersections, a well-known cognitive
+property of human wayfinding (Conroy Dalton, 2003; Dalton, 2001; Dalton et al,
+2003). The model [figure 2, row (c)], which we term intersection continuity negotiation
+(ICN), ispurelyspatial inthe sensethatitexcludes anything thatcannotbe derivedby
+the sole geometric analysis of the primal graph itself. ICN runs in three steps:
+(1)Allnodesareexaminedinturn,beginningatrandom.Ateachnodethecontinuityof
+streetidentityisnegotiatedamongallpairsofincidentedges:thetwoedgesformingthe
+largest convex angle are assigned the highest continuity and are coupled together;
+the two edges with the second largest convex angle are assigned the second largest
+continuity and are coupled together, and so forth; in nodes with an odd number of
+edges, the remaining edge is given the lowest continuity value.
+(2) A streetidentification code is assigned to the edge and, atrelevantintersections,to
+the adjacent edges coupled in the first step.
+714 SPorta,P Crucitti,VLatora
+(1) (2) (3)
+(a)
+(b)
+(c)
+(d)
+Figure 2. A comparison of various mapping approaches for a fictive urban system [column(1)],
+showingtheresultantprimalnetworkmodels[column (2)]anddualconnectivitygraphs[column
+(3), exceptfor row(d)].The numbers arethe identitycodes ofnetworkedges in column (2), and
+in column (3) they correspond to nodes in the dual graphs and to edges in the primal graphs.
+(a)Thedual,space-syntaxapproach,afterHillierandHanson(1984).(b)Thedual,named-street
+approach, after Jiang and Claramunt (2004a; 2004b). (c) The dual, intersection continuity
+negotiation (ICN) approach inwhichthe direct representation ofthe urban network is properly
+agraph,suchthatintersectionsareturnedintonodesandstreetarcsintoedges;edgesfollowthe
+footprint of real mapped streets (a linear discontinuity does not generate a vertex); the ICN
+process assigns the concatenation of street identities throughout nodes following a principle of
+‘good continuation’ (Thomson, 2004). (d) The primal nongeneralized approach and its direct
+representation [columns (2) and (3)] in a primal graph: columns (2) and (3) are identical; the
+nongeneralized graph gets much more fragmented. This is the traditional geomapping way,
+the world standard in transportation planning. Immense information resources are currently
+available and continuously updated in this format. The approaches shown in rows (c) and (d)
+were the formatsused for the dual and primal cases, respectively, in the presentresearch.
+(3) The dual graph is constructed and overlaying double edges in the dual graphs are
+eliminated.The main scope of ICN, in this context, is to make itpossible to derive the
+dual case from the same source graph of the primal, which allows comparison.
+3.3 Metric versus step distance
+In the process of building the dual graph, which means reducing streets into nodes,
+whatgetslostissomethingveryrelevant(cid:246)asidefromitssomehowquestionableimpor-
+tance for the human cognitive experience of spaces (Penn, 2003)(cid:246)for any human
+sensorial experience of space (Hall, 1966): distance. No matter its real length, one
+street will be represented in the dual graph as one point. Moreover, as long as
+a generalization model is run and the ‘identity’ of one real street is extended over a
+conceptuallyunlimitednumberofrealintersections,inthedualgraphonenode(street)
+can exhibit a conceptually unlimited number of edges (intersections), a number which
+The network analysis ofurban streets 715
+heavilydependsonthelengthofthestreet.Thus,thelongerthestreetinreality,themore
+central (by degree) it is likely to be in the dual graph, which counters the experiential
+concept of accessibility that is conversely related to how close a destination is to all
+origins, such as in transportation models. Moreover, the dual-generalized reduction
+makes it impossible to account for the variations that so often characterize one
+generalized street, variations that may become very significant for lengthy streets that
+cross large urban areas; this is the case, for instance, for the via Etnea in Catania,
+Sicily, a roughly 3 km long, perfectly straight 17th-century street that runs from the
+baroque city core to the countryside beneath the Etna volcano, a street that exhibits
+radicallydifferentsocial,economic,demographic,andenvironmentalconditionsacross
+seemingly all possible urban landscapes on Earth.
+In more structural terms metric distance has been recognized as the key feature of
+road networks, which, exactly because of this fact, need to be dealt with as a new,
+specific family of networks (Gastner and Newman, 2004); the crucial nature of geo-
+graphic Euclidean distance at the core of such systems leads to other key features,
+namelytheplanar natureandtheextremelyreducedvarianceofanode’sdegree,whose
+distribution can neverrecall any particularscale-freebehavior. However, as mentioned
+above,whenprocessedthroughthedualrepresentationandageneralization model,the
+same road network is freed ofsuch limitations: the loss ofanylimitation to the degree
+of a node in the dual graph makes the dual-generalized street systems structurally
+analogous to all other topological systems recently investigated in other fields, systems
+which in fact do not exhibit any geographic constraint; this leads, for instance, to the
+recognition of scaling rules in the degree distribution (Jiang and Claramunt, 2004a;
+Rosvall et al,2005). Hence, the dual representation and the generalization model(cid:246)the
+two pillars of the space-syntax castle(cid:246)actually push urban street systems, in strict
+structural terms, out of the geographic domain. Though other means can be investi-
+gated in order to introduce geographic distance into such a dual representation (Batty,
+2004b;Salheen,2003;SalheenandForsyth,2001),ifaroletogeographicdistancehasto
+berecognizedinastraightandplain mannertheprimalroad-centerline-between-nodes
+representation of street patterns appears the most valuable option.
+3.4 Manycentrality indices, or how to overcome the CC border effect
+Implemented on primal graphs, the spatial flow of CC is dominated by the so-called
+‘border effect’, in the sense that higher CC scores consistently group around the geo-
+metric center of the image. To some extent less evident in less dense cases such as
+Walnut Creek, the border effect is overwhelming in denser urban fabrics such as those
+of Ahmedabad and Venice [figures 3 and 4(a) (over)]. However, in all cases the border
+effect affects CC spatial flow enough to disable the emergence both of central routes
+and of focal spots in the city fabric(cid:246)a crucial feature for urban analysis(cid:246)such that it
+leads to results which are, to a large extent, meaningless.
+Though the border effect dominates the primal representation, it is somehow
+minimized in the dual approach [figure 4(b) (over)], owing to the combined impact
+both of the loss of metrics and, on the other hand, of the generalization model, which
+makesthenetworklessfragmented.Insodoing,thegeneralizationmodelactuallyplays
+avital role in that it allows us to limit, to some extent, the border effect. On the other
+hand, the identification of continuous routes across the urban fabric is performed
+before centrality analysis rather than being one of its outcomes: as such, the results
+of centrality analysis get deeply affected by principles that do not belong to any
+concept of centrality, but belong rather to the algorithm embedded in the general-
+ization model (straightness at intersections in ICN, uninterrupted linearity in axial
+mapping, or others).Thus our dual analysis, like that of space syntax, can be referred
+716 SPorta,P Crucitti,VLatora
+(a) (b) (c)
+Figure 3.Theprimalapproach.Closenesscentrality(CC)spatialflowinAhmedabad:scoresare
+calculated on the nodes of the primal weighted graph, where weights are the metric lengths of
+edges. (a) Global closeness: CC is calculated on the whole network; (b) local closeness: CC is
+calculated on the subnetwork of nodes at distance d<400 meters from each node; (c) local
+closeness: CCis calculated on the subnetwork of nodes at distance d<200 meters from each
+node.Here color nodesareattributedtothe centralityofnodes, though in othercasesitmaybe
+preferable to code the centralityofedges, as in figure 4(a).
+CC CB CS CI
+(1)
+(2)
+(3)
+(4)
+(a)
+Figure 4. Comparisonoftheprimal(a)anddual(b)approachesthroughtheuseoffourdifferent
+indices of centrality (CC denotes closeness; CB denotes betweenness; CS denotes straightness;
+and CI denotes information) for four 1-square-mile sample cases [(1) Ahmedabad, (2) Venice,
+(3) Richmond, CA, and (4) Walnut Creek, CA].
+The network analysis ofurban streets 717
+toasthecombinedresultoftwodiverseandautonomousrationales,thefirstdrivesthe
+generalization process, andthe second drives the spatialflowofcentrality.This finding
+confirms that of a previous work in which a conventional space-syntax dual analysis,
+appliedwithoutanygeneralization modelon a segmentallyrepresented streetnetwork,
+was found to be misleading for the overwhelming impact of the border effect (Dalton
+et al, 2003). Again, this effect is not due to some hidden structure of the urban
+phenomenon, but to the inherent character of the chosen index: integration, or CC, is
+quite affected by theborder effect as a resultof its deep-seated nature; it does notlead
+by itself to any legible description of urban routes or focal areas unless the system
+is artificially defragmented throughout a generalization process and the study area is
+widened in order to leave the most border-affected parts out of the picture, which
+seems a scarcely efficient(cid:246)though truly effective(cid:246)solution.
+In the light of this evidence one has two options. The first option: we can persist
+with the dual-generalized approach [figure 2, rows (a)^(c)] and stress to its limits the
+empowerment of the generalization model(cid:246)that is, by automating axial mapping
+in the new field of ‘visibility analysis’ (Batty, 2001; 2004a; 2004b; Batty and Rana,
+2002; Carvalho and Batty, 2004; Dalton et al, 2003; Fisher-Gewirtzman et al, 2005;
+Turneret al,2001)(cid:246)orbynewprinciplesofstreetidentity(JiangandClaramunt,2000;
+2004b; Penn et al,1997); this is going to be fertile to the extent that it finds a solution
+CC CB CS CI
+(1)
+(2)
+(3)
+(4)
+(b)
+Figure 4 (continued).
+718 SPorta,P Crucitti,VLatora
+tothe persisting problemofsubjectivism.The secondoption:we canembraceaprimal
+approach[figure 2,row(d)],therebyrivetingeverythingtometricdistanceasmeasured
+onaroad-centerline-between-nodesgraph.Thislatteroptionwouldallow ustoreacha
+much finer characterization of even the longest streets; to abandon generalization
+models, with a relevant advantage in process feasibility, objectivity, and legibility; to
+access endless readily available and constantly updated information resources. This
+approach would also lead to a great enhancement in the realism of calculations and
+representations, in the sense that it pairs the topological properties with the metric
+properties of the system, thus comprehending both the cognitive and the proxemic
+dimension of collective behaviors in space. These are evidently striking benefits. But
+there is one problem and one question.
+The problem: as we have just shown, the CC integration index simply does not
+work on such primal graphs because CC is vulnerable to the border effect; moreover,
+primalgraphsaremuch morefragmentedthandualgeneralized.ButCC isnottheonly
+option(cid:246)centrality is a multifold concept and we have many indices at hand.Thus, to
+overcome this problem we can limit the analysis of CC to a local scale, at which it
+maintains a good potential (figure 3), and simplybegin to test other centrality indices,
+suchasthepreviouslymentionedCB,CS,andCI.Areviewofourfindingsisofferedin
+the next section.
+The question: we know that the more general stream of the network analysis of
+complex real-world systems has found a particular scale-free order recursively emerg-
+ing in the distribution of node degree centrality CD, and we also know that in our
+primal approach to streetsystems we face a strong limitation ofthe same CD range of
+variance to scores between 3 and 6 (roughly the number of streets per intersection in
+real urban patterns); is the primal approach therefore pushing the network analysis of
+road systems out of the larger domain of the‘newsciences of networks’? Again, CD is
+also not the only option(cid:246)we will show that, once the analysis of the statistical
+distribution of centrality over the network is extended from CD to the other centrality
+indices, consistent scaling behaviors come to light that provide a much deeper insight
+into the complex nature of real street networks (and into geographic systems in
+general).
+Theevaluationofmultiple centralityconceptsandmeasures,itturnsout,isthekey
+to being able both to perform a pure, primal road-centerline-between-nodes spatial
+analysisandtoreenterthenetworkanalysisofgeographicsystemsintothemainstream
+of the‘new sciences of networks’.
+4 Spatial flow and statistical distribution of centrality indices
+Differences and correlations among the many indices of centrality in social networks
+have been investigated in a significant flurry of literature over the last decades (Bell
+et al, 1999; Bolland, 1988; Cook et al, 1983; Donninger, 1986; Markovsky et al, 1988;
+Mullen et al, 1991; Nakao, 1990; Poulin et al, 2000; Rothenberg et al, 1995; see, for
+a review,Wasserman and Faust,1994). The goal was to understand the real nature of
+those indices when applied to human groups or organizations. The implementation
+of centrality indices in territory-related cases(cid:246)though not always geographic(cid:246)has
+been, in this respect, much less tested, with some exceptions (Byrd, 1994; Faust et al,
+1999;Irwin,1978;Irwin-Williams,1977;Peregrine,1991;Pitts,1965;1979;Rothman,1987;
+Smith and Timberlake, 1995). In space syntax, for instance, the link between the
+CCintegration core index (as well as the ancillary CDconnectivity index) and centralities
+insocialnetworkshasbeenonlyveryrecentlyacknowledged(HillierandIida,2005;Jiang
+andClaramunt,2004b),thusthereisapparentlyapoorcomparisonwithotherfamiliesof
+centrality indices.
+The network analysis ofurban streets 719
+Our primal studies on 1-square-mile samples of urban street networks (Crucitti
+et al, 2006) reveal that the four families of centrality(cid:246) ‘being near’ (CC), ‘being
+between’ (CB), ‘being direct (CS), and ‘being critical’ (CI)(cid:246)exhibit highly diverse
+spatial flow patterns [figure 4(a)]. In this sense two conclusions occur. On one hand,
+no single index gives the whole picture, as they tell strikingly different stories; on the
+other hand, CI emerges as the most comprehensive single index of the whole set, and
+gathers properties of all the other indices that we have taken into consideration
+(section 2.4).Viewed in greater detail, CC (performed globally) fails to individuate a
+hierarchy of central routes or areas and is therefore of no help in urban analysis: the
+border effect overwhelms it unless the system itself is isolated in the urban context,
+such that borders carry a real territorial meaning (an island, an external campus, a
+hamlet in the desert, etc); CB is mostly effective in letting centrality emerge along even
+lengthier urban routes, but is still being affected, to some extent, by the border effect;
+CS gives themostunexpectedresults,clearlymappingareasofhighercentralityaswell
+as central routes, and has no apparent problems with the border effect; CI nicely
+captures the criticality of edges that play a ‘bridging’ role in keeping the network
+connected, and at the same time partially retains the behavior of CB. In general, the
+particular effectiveness of the analysis to account for the variations in centrality levels
+within the same route, as in the case of CB in Venice, CS in Ahmedabad, or CI in
+Richmond, should be highlighted, especially considering that those routes emerge
+‘naturally’ as a pure convergence of centrality across street segments, without any
+exogenousinterventionofrationalesofadifferentkind,suchasthatofageneralization
+model. As such, MCA suggests that centrality can play a distinct role in the ‘organic’
+formation of a ‘skeleton’ of most practiced routes as the cognitive framework for
+wayfinding in a complex urban environment (Kuipers et al, 2003).
+In figure 4(b) an analogous assessment of a dual-generalized representation of the
+same cases is presented. The analysis of CC gives one good result, which is for
+Ahmedabad; however, it clearly appears to be affected by the border effect as the
+street pattern, as in the case of Venice, becomes more fragmented. The ICN-driven
+construction of generalized streets, which is preliminary to the process of centrality
+calculation, deeply impacts on the final results in all cases, and leads to a more
+artificial picture of real systems and to less differentiated information among indices.
+Although in the primal approach continuous routes or subareas emerge in the urban
+fabric as a resultofthe natural‘convergence’ofcentralityover a chain ofsingle streets
+across a number of intersections, in the dual approach we have routes that are identi-
+fied before centralityenters the scene and arethen attributed avalue ofcentrality.This
+leads to less univocal results, in the sense that it is impossible to distinguish the actual
+centralityofa single street from thatofthe whole generalizedunit (named street, axial
+line, etc) with which it has been associated in the course of the generalization process.
+The primal representations display consistent behaviors for the same index
+across both cases, though different behaviors emerge for different indices (figure 5,
+top panel, see over). P(CC) and P(CS) are mainly linear; P(CB) has a single scale
+and the dashed lines in the linear^logarithmic plot show an exponential distribution
+P(C)(cid:24)exp((cid:255)C=s) for self-organized cities (such as Ahmedabad, s (cid:136) 0:016),
+Ahm
+and a Gaussian distribution P(C)(cid:24)exp((cid:255)1=2C2s2) for mainly planned ones (such
+asRichmond,s (cid:136) 0:049).SuchdistinctionismoreemphasizedinCI,whichfollowsa
+Rich
+power-law distribution P(C)(cid:24)C(cid:255)g in self-organized cities (g (cid:136) 2:74), and
+Ahm
+an exponential distribution P(C)(cid:24)exp((cid:255)C=s) in planned cases (s (cid:136) 0:002).
+Rich
+The dual representations P(CC) and P(CS) (figure 5, bottom panel), are S-shaped in
+a linear^linear scale. Both CB and CI exhibit many-scale distributions in Ahmedabad
+andsingle-scaledistributionsinRichmond.Although itispossibletointuitthekindof
+CC CB CS CI
+1.0 100 1.0 100
+0.8 10(cid:255)1 0.8 10(cid:255)1
+0.6 0.6
+(a) 10(cid:255)2 10(cid:255)2
+0.4 0.4
+0.2
+10(cid:255)3
+0.2
+10(cid:255)3
+0.0 10(cid:255)4 0.0 10(cid:255)4
+0.0005 0.0010 0.0015 0.00 0.05 0.10 0.15 0.20 0.75 0.80 0.85 10(cid:255)3 10(cid:255)2
+1.0 100 1.0 100
+0.8 0.8
+10(cid:255)1 10(cid:255)1
+0.6 0.6
+(b)
+0.4 10(cid:255)2 0.4 10(cid:255)2
+0.2 0.2
+0.0 10(cid:255)3 0.0 10(cid:255)3
+0.0005 0.0010 0.0015 0.00 0.05 0.10 0.15 0.20 0.70 0.75 0.80 0.85 0.01 0.02
+1.0 100 1.0 100
+0.8 0.8 exponent (cid:136) 2:3
+10(cid:255)1 10(cid:255)1
+0.6 0.6
+(a)
+0.4 exponent (cid:136) 0:9 10(cid:255)2 0.4 10(cid:255)2
+0.2 0.2
+0.0 10(cid:255)3 0.0 10(cid:255)3
+0.1 0.2 0.3 0.4 10(cid:255)5 10(cid:255)3 10(cid:255)1 0.1 0.2 0.3 0.4 10(cid:255)3 10(cid:255)2 10(cid:255)1
+1.0 100 1.0 100
+0.8 0.8
+10(cid:255)1 10(cid:255)1
+0.6 0.6
+(b)
+0.4 10(cid:255)2 0.4 10(cid:255)2
+0.2 0.2 exponent (cid:136) 2:5
+0.0 10(cid:255)3 0.0 10(cid:255)3
+0.2 0.3 0.4 0.5 0.00 0.05 0.10 0.15 0.20 0.2 0.3 0.4 0.5 0.01 0.10
+Figure5.Thecumulativedistributionofthefourindicesofcentrality(CC(cid:246)closenesscentrality,CB(cid:246)betweennesscentrality,CS(cid:246)straightnesscentrality,
+CI(cid:246)information centrality) in the primal (top panel) and in the dual (bottom panel) graph representations of Ahmedabad (a) and Richmond
+(cid:132)1
+(b). Cumulative centralitydistribution P(C) are defined by P(C) (cid:136) N =NdC0 where N is the numberofnodes having centralityequal to C.
+C C
+C
+720
+SPorta,P
+Crucitti,VLatora
+N:/psfiles/epb3305w/
+The network analysis ofurban streets 721
+law that would better represent each distribution, the deviation from the analytic
+curves is often very large. In short, the statistical analysis of centrality distributions
+on primal graphs confirms that the cumulative distributions of CC, CB, CS, and CI
+consistentlyfollowcharacteristicbehaviours;aninterestingresultcomesfromCI,which
+is distributed according to an exponential curve for planned cities, whereas for
+self-organized cities it follows a power law.
+Homogeneity and heterogeneity in the allocation ofthe centrality ‘resource’among
+nodes, investigated by the calculation of the Gini coefficient (Dagum, 1980) of each
+centrality distribution, have been demonstrated to be sufficient for a broad classifica-
+tion ofdifferentcitiesthroughaclusteranalysis thatgroupstogethercitieswithsimilar
+urban patterns (Crucitti et al, 2006). This confirms that, by means of the primal
+representation and a set of different centrality indices, it is possible to capture basic
+crucialpropertiesofrealurbanstreetsystemsforanappropriateclassificationofcities.
+Contrary to the case of the primal approach, in dual-generalized graphs the
+statistical distribution of CD is a relevant feature because the number of intersections
+per street is conceptually unlimited. However, centrality analysis is hereby extended to
+the other centrality indices (figure 5, bottom panel), and reveals that, as in the primal
+representation,CC andCS haveanS-shapeddistributioninthedualapproach,CB and
+CI seem to follow many-scale distributions for Ahmedabad and single-scale distribu-
+tions for Richmond. Nevertheless, in the dual-generalized analysis, distributions are
+much less clear than in the primal analysis (notice for instance the deviation from the
+analytic fit in the CI of Ahmedabad), thereby confirming once more that the primal
+representation has a greater capability to extract such hidden order from urban
+patterns.
+5 Conclusions: benefits of the primal approach and multiple centrality assessment
+A network analysis of four 1-square-mile samples of urban street systems has been
+performed over primal and dual graphs. The results show that it is possible to dis-
+tinguish between homogeneous and heterogeneous patterns(cid:246)that is, planned versus
+self-organized cities(cid:246)although it is worth noting that the particular dimensional
+limitations of the chosen samples suggest we may have to wait for conclusive con-
+siderations. However, within the limits of this study, findings strongly support the
+primal approach as a more comprehensive, objective, realistic, and feasible method-
+ology for the network analysis of geographic systems such as those of streets and
+intersections. Being based on a world standard data format, the primal approach is
+suitablefor makingthebestuseofhugeinformationresourcesdevelopedandavailable
+in abroad varietyof different fields.This, in turn, significantly reduces subjectivism(cid:246)
+and enhances feasibility(cid:246)in data processing by excluding the implementation of any
+generalization model. Although, in the dual-generalized approach, centrality statistical
+distributions, aside from the case of CD in systems of relevant size, exhibit curves that
+significantly deviate from analytical fits, such rules clearly and consistently emerge in
+the primal approach. In particular, scaling behaviors emerge for CI in self-organized
+urban patterns, whereas in planned patterns they do not(cid:246)a feature which parallels
+some of the major achievements in the studyof nongeographic self-organized complex
+systems to date.This seems to be inherently linked to what is by far the most relevant
+difference between the primal and the dual approaches: whereas the primal approach
+allows a metric computation ofdistance without abandoning thetopologyofthe system,
+thedual-generalizedapproachleadstoonlyatopologicalcomputationofdistance,which
+makesindicesandprocessesfundamentallymoreabstract,inthesensethattheyappearto
+miss a relevant part of the causal factors of collective behaviors in space.
+The network analysis ofurban streets 723
+BonacichP,1987,‘‘Powerandcentrality:afamilyofmeasures’’AmericanJournalofSociology
+921170^1182
+BonacichP,1991,‘‘Simultaneousgroupandindividualcentralities’’SocialNetworks13155^168
+ByrdBF,1994,‘‘Publicandprivate,domesticandcorporate:theemergenceofthesouthwest
+Asianvillage’’AmericanAntiquity59639^666
+CarvalhoR,BattyM,2004,‘‘Encodinggeometricinformationinroadnetworksextractedfrom
+binaryimages’’EnvironmentandPlanning B:PlanningandDesign32179^190
+ConroyDaltonR,2003,‘‘Thesecretistofollowyournose:routepathselectionandangularity’’
+EnvironmentandBehavior35107^131
+CookK,EmersonR,GilmoreM,YamagishiT,1983,‘‘Thedistributionofpowerinexchange
+networks:theoryandexperimentalresults’’AmericanJournalofSociology89275^305
+CrucittiP,LatoraV,PortaS,2006,‘‘Centralitymeasuresinspatialnetworksofurbanstreets’’
+PhysicalReview E731^5
+DagumC,1980,‘‘Thegenerationanddistributionofincome,theLorenzcurveandtheGiniratio’’
+EŁconomieApplique¤e33327^367
+DaltonN,2001,‘‘FractionalconfigurationalanalysisandasolutiontotheManhattanproblem’’,
+inProceedings3rdInternationalSpaceSyntaxSymposiumAtlanta,GA,
+http://undertow.arch.gatech.edu/homepages/3sss
+DaltonN,PeoponisJ,DaltonR,2003,‘‘Totameatigeronehastoknowitsnature:extending
+weightedangularintegrationanalysistothedescriptionofGISroad-centerlinedatafor
+largescaleurbananalysis’’,inProceedings4thInternationalSpaceSyntaxSymposium
+London,http://www.spacesyntax.net/SSS4
+DescartesR,1994DiscoursdelaMe¤thode:PourBienConduiresaRaisonetChercherlaVerite¤
+danslesSciences:ABilingualEdition,andInterpretationofRene¤ Descartes’Philosophyof
+Method(UniversityofNotreDamePress,NotreDame,IN);originallywrittenc1637
+DesyllasJ,DuxburyE,2001,‘‘Axialmapsandvisibilityanalysis:acomparisonoftheir
+methodologyanduseinmodelsofurbanpedestrianmovement’’,inProceedings3rd
+InternationalSpaceSyntaxSymposiumAtlanta,GA,http://undertow.arch.gatech.edu/
+homepages/3sss
+DonningerC,1986,‘‘Thedistributionofcentralityinsocialnetworks’’SocialNetworks8191^203
+Erdo«sP,Re¤nyiA,1959,‘‘Onrandomgraphs’’PublicationesMathematicae6290^297
+FaustK,EntwisleB,RindfussR,WalshS,SawangdeeY,1999,‘‘Spatialarrangementofsocial
+andeconomicnetworksamongvillagesinNangRongdistrictThailand’’SocialNetworks21
+311^337
+Fisher-GewirtzmanD,ShachPinslyD,WagnerIA,BurtM,2005,‘‘View-orientedthree-dimensional
+visualanalysismodelsfortheurbanenvironment’’UrbanDesignInternational1023^37
+FreemanLC,1977,‘‘Asetofmeasuresofcentralitybasedonbetweenness’’Sociometry4035^41
+FreemanLC,1979,‘‘Centralityinsocialnetworks:conceptualclarification’’SocialNetworks1
+215^239
+FreemanLC,BorgattiSP,WhiteDR,1991,‘‘Centralityinvaluedgraphs:ameasureof
+betweennessbasedonnetwork’’SocialNetworks13141^154
+GastnerMT,NewmanMEJ,2004,‘‘Thespatialstructureofnetworks’’,http://arxiv.org/abs/
+cord-mat/0407680
+HallET,1966TheHiddenDimension(Doubleday,NewYork)
+HillierB,1996SpaceistheMachine:AConfigurationalTheoryofArchitecture(CambridgeUniversity
+Press,Cambridge)
+HillierB,1998,‘‘Fromresearchtodesigner-engineeringthespaceinTrafalgarSquare’’Urban
+DesignQuarterly6835^37
+HillierB,HansonJ,1984TheSocialLogicofSpace(CambridgeUniversityPress,Cambridge)
+HillierB,IidaS,2005,‘Networkandpsychologicaleffectsinurbanmovement’’,inProceedings
+ofSpatialInformationTheory:InternationalConference,COSIT 2005Ellicottsville,NY,
+14^18SeptemberLectureNotesinComputerScienceNumber3693,Eds AG Cohn,
+DMMark(Springer,Berlin)pp 475^490
+HillierB,PennA,2004,‘RejoindertoCarloRatti’’EnvironmentandPlanning B:Planningand
+Design31501^511
+IrwinGJ,1978,‘‘Potsandentrepots:astudyofsettlement,tradeandthedevelopmentofeconomic
+specializationinPapuanprehistory’’WorldArchaeology9299^319
+Irwin-WilliamsC,1977,‘‘Anetworkmodelfortheanalysisofprehistorictrade’’,inExchange
+SystemsinPrehistoryEdsTEarle,JEricson(AcademicPress,NewYork)pp141^151
+JacobsA,1993GreatStreets(MITPress,Cambridge,MA)
+724 SPorta,P Crucitti,VLatora
+JacobsJ,1961TheDeathandLifeofGreatAmericanCities(RandomHouse,NewYork)
+JiangB,ClaramuntC,2000,‘‘Extendingspacesyntaxtowardsanalternativemodelofspace
+withinGIS’’,paperpresentedat3rdEuropeanAgileConferenceonGeographic
+InformationScience,Helsinki,Finland
+JiangB,ClaramuntC,2002,‘‘IntegrationofspacesyntaxintoGIS:newperspectivesforurban
+morphology’’TransactionsinGIS6151^162
+JiangB,ClaramuntC,2004a,‘‘Astructuralapproachtothemodelgeneralizationofanurban
+streetnetwork’’GeoInformatica8157^171
+JiangB,ClaramuntC,2004b,‘‘Topologicalanalysisofurbanstreetnetworks’’Environmentand
+Planning B:PlanningandDesign31151^162
+KuipersB,TecuciD,StankiewiczB,2003,‘‘Theskeletoninthecognitivemap:acomputational
+andempiricalexploration’’EnvironmentandBehavior3581^106
+LarsonR,1981UrbanOperationsResearch(Prentice-Hall,EnglewoodCliffs,NJ)
+LatoraV,MarchioriM,2001,‘‘Efficientbehaviorofsmall-worldnetworks’’PhysicalReview
+Letters87198701
+LatoraV,MarchioriM,2002,‘‘IstheBostonsubwayasmall-worldnetwork?’’PhysicaA314
+109^113
+LatoraV,MarchioriM,2003,‘‘Economicsmall-worldbehaviorinweightednetworks’’European
+PhysicalJournal B87198701
+LatoraV,MarchioriM,2004,‘‘Ameasureofcentralitybasedonnetworkefficiency’’,
+http://arxiv.org/abs/cond-mat/0402050
+LeavittHJ,1951,‘‘Someeffectsofcertaincommunicationpatternsongroupperformance’’
+JournalofAbnormalandSocialPsychology4638^50
+LeCorbusier,1994Urbanisme(Flammarion,Paris);originallypublished1925
+LilijerosFL,EdlingCR,AmaralN,StanleyHE,AbergY,2001,‘‘Thewebofhumansexual
+contacts’’Nature411907^908
+MarkovskyB,PattonT,WillerD,1988,‘‘Powerrelationsinexchangenetworks’’American
+SociologicalReview53220^236
+MullenB,JohnsonC,SalasE,1991,‘‘Effectsofcommunicationnetworkstructure:components
+ofpositionalcentrality’’SocialNetworks13169^186
+NakaoK,1990,‘‘Distributionofmeasuresofcentrality:enumerateddistributionsofFreeman’s
+graphcentralitymeasures’’Connections1310^22
+NewmanMEJ,GirvanM,2003,‘‘Findingandevaluatingcommunitystructureinnetworks’’,
+http://arxiv.org/abs/cond-mat/0308217
+NewmanP,KenworthyJ,1999SustainabilityandCities:OvercomingAutomobileDependence
+(IslandPress,Washingtion,DC)
+NieminenJ,1974,‘‘Oncentralityinagraph’’ScandinavianJournalofPsychology15322^336
+Pastor-SatorrasR,VespignaniA,2004EvolutionandStructureoftheInternet(Cambridge
+UniversityPress,Cambridge)
+PennA,2003,‘‘Spacesyntaxandspatialcognition:orwhytheaxialline?’’Environmentand
+Behavior3530^65
+PennA,TurnerA,2003,‘‘Spacelayoutaffectssearchefficiencyforagentswithvision’’,inProceedings
+4thInternationalSpaceSyntaxSymposiumLondon,http://www.spacesyntax.net/SSS4
+PennA,ConroyR,DaltonN,DekkerL,MottramC,TurnerA,1997,‘‘Intelligentarchitecture:new
+toolsforthreedimensionalanalysisofspaceandbuiltform’’,inProceedings1stInternational
+SpaceSyntaxSymposiumLondon,copyavailablefromProfessorA Penn,UniversityCollege
+London,London
+PeregrineP,1991,‘‘AgraphtheoreticapproachtotheevolutionofCahokia’’AmericanAntiquity
+5666^75
+PittsFR,1965,‘‘Agraphtheoreticapproachtohistoricalgeography’’TheProfessionalGeographer
+1715^20
+PittsFR,1979,‘‘ThemedievalrivertradenetworkofRussiarevisited’’SocialNetworks1285^292
+PortugaliJ,2000Self-organizationandtheCity(Springer,Berlin)
+PoulinR,BoilyMC,MasseBR,2000,‘‘Dynamicalsystemstodefinecentralityinsocial
+networks’’SocialNetworks22187^220
+RattiC,2004,‘‘Spacesyntax:someinconsistencies’’EnvironmentandPlanning B:Planningand
+Design31487^499
+RavaszE,Baraba¤siAL,2003,‘Hierarchicalorganizationincomplexnetworks’’PhysicalReview
+Letters67026112
+The network analysis ofurban streets 725
+RosvallM,TrusinaA,MinnhagenP,SneppenK,2005,‘‘Networksandcities:aninformation
+perspective’’PhysicalReviewLetters94028701
+RothenbergRB,PotteratJJ,WoodhouseDE,DarrowWW,MuthSQ,KlovdahlAS,1995,
+‘‘Choosingacentralitymeasure:epidemiologiccorrelatesintheColoradoSpringsstudyof
+socialnetworks’’SocialNetworks17273^297
+RothmanM,1987,‘‘Graphtheoryandtheinterpretationofregionalsurveydata’’Paleorient13
+73^91
+SabidussiG,1966,‘‘Thecentralityindexofagraph’’Psychometrika31581^603
+SalheenM,2003,‘‘Anapplicationofuniversaldistanceusingspacesyntaxanalysis’’,inProceedings
+4thInternationalSpaceSyntaxSymposiumLondon,http://www.spacesyntax.net/SSS4
+SalheenM,ForsythL,2001,‘‘Addressingdistanceinthespacesyntaxsyntacticalmodel’’Urban
+DesignInternational693^106
+SalingarosNA,1998,‘Theoryoftheurbanweb’’JournalofUrbanDesign353^71
+SalingarosNA,2003,‘‘Connectingthefractalcity’’,Keynotespeech,5thBiennialofTownsand
+TownPlannersinEurope,Barcelona,April,http://www.math.utsa.edu/sphere/salingar/
+connecting.html
+ScottJ,2003SocialNetworksAnalysis2ndedition(Sage,London)
+ShawME,1954,‘‘Someeffectsofunequaldistributionofinformationupongroupperformance
+invariouscommunicationnets’’JournalofAbnormalandSocialPsychology49547^553
+ShawME,1964,‘‘Communicationnetworks’’,inAdvancesinExperimentalSocialPsychology
+volume6,Ed.LBerkovitz(AcademicPress,NewYork)pp111^147
+ShimbelA,1953,‘‘Structuralparametersofcommunicationnetworks’’BulletinofMathematical
+Biophysics15501^507
+SmithD,TimberlakeM,1995,‘‘Conceptualisingandmappingthestructureoftheworldsystem’s
+citysystem’’UrbanStudies32287^302
+StephensonK,ZelenM,1989,‘‘Rethinkingcentrality:methodsandexamples’’SocialNetworks
+111^27
+TeklenburgJ,TimmermansH,vanWagenbergA,1993,‘‘Spacesyntax:standardizedintegration
+measuresandsomesimulations’’EnvironmentandPlanning B:PlanningandDesign20347^357
+ThomsonRC,2004,‘‘Bendingtheaxialline:smoothlycontinuousroadcentre-linesegmentsas
+abasisforroadnetworkanalysis’’,inProceedings4thInternationalSpaceSyntax
+SymposiumLondon,http://www.spacesyntax.net/SSS4
+TurnerA,DoxaM,O’SullivanD,PennA,2001,‘‘Fromisoviststovisibilitygraphs:amethodology
+fortheanalysisofarchitecturalspace’’EnvironmentandPlanning B:PlanningandDesign28
+103^121
+Vragov|'cI,LouisE,Diaz-GuileraA,2004,‘‘Efficiencyofinformationaltransfersinregularand
+complexnetworks’’,http://orxiv.org/abs/cond-mat/0410174
+WassermanS,FaustK,1994SocialNetworksAnalysis(CambridgeUniversityPress,Cambridge)
+WattsDJ,StrogatzSH,1998,‘‘Collectivedynamicsofsmall-worldnetworks’’Nature393440^442
+WeaverW,1948,‘‘Scienceandcomplexity’’AmericanScientist36536^544
+WilsonGA,2000ComplexSpatialSystems:TheModellingFoundationsofUrbanandRegional
+Analysis(Prentice-Hall,EnglewoodCliffs,NJ)
+

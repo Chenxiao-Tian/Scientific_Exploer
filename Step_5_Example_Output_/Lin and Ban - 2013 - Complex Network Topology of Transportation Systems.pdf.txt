@@ -1,0 +1,38 @@
+Extracted Keywords:
+Network, networks, Complex Network, Network Topology, transport networks, railway network, airport network, Street networks, Network Analysis, transport systems
+
+Main Topics:
+Full Terms, Transnational Transdisciplinary Journal, https://www.tandfonline.com/loi/ttrv20
+Complex Network Topology, Transportation
+Systems
+Jingyi Lin, Yifang Ban, this article, Jingyi Lin, Yifang Ban, 2013) Complex Network Topology, Transportation
+Systems, Transport Reviews, this article, 29 Oct, your article, this journal 
+Article views, 3148
+View related articles, Citing articles, 45 View, Transportation Systems, JINGYI LIN§AND YIFANG BAN
+Department, Urban Planning, Drottning
+Kristinas va, ¨g 30, 100 44 Stockholm, a strategic factor, a country, the global competition, transportation
+systems, extensive attention, different disciplines, a long time, the intro-duction, complex network theory, the last decade, transport systems, dramatic progress, Most roads, a network pattern, link ﬂows, travel time, geographical distance, this article, the current state, topological research, transport
+
+Methodologies:
+To these ends, the authors system-
+atically review the results mainly from the last decade, covering most research on
+§Corresponding author. 1.1 Network Analysis in Early Transport Studies
+Network analysis is a common and effective approach, considering its elegance in
+reﬂecting spatial structures, to study river systems, channel patterns, and road
+networks (Haggett & Chorley, 1969). Typically, there are two common ways to extract planar networks:the primal approach and the dual representation. The primal representation is a
+natural and intuitional approach, taking route segments as links, and intersections
+or ends of them as nodes (Crucitti, Latora, & Porta, 2006; Porta, Crucitti, & Latora,2006b; Scellato, Cardillo, Latora, & Porta, 2006). This method retains the geometric
+patterns and geographical properties of transportation systems. It is this reason
+that makes the primal approach th
+
+Research Outcomes:
+To these ends, the authors system-
+atically review the results mainly from the last decade, covering most research on
+§Corresponding author. 1.1 Network Analysis in Early Transport Studies
+Network analysis is a common and effective approach, considering its elegance in
+reﬂecting spatial structures, to study river systems, channel patterns, and road
+networks (Haggett & Chorley, 1969). Typically, there are two common ways to extract planar networks:the primal approach and the dual representation. The primal representation is a
+natural and intuitional approach, taking route segments as links, and intersections
+or ends of them as nodes (Crucitti, Latora, & Porta, 2006; Porta, Crucitti, & Latora,2006b; Scellato, Cardillo, Latora, & Porta, 2006). This method retains the geometric
+patterns and geographical properties of transportation systems. It is this reason
+that makes the primal approach th

@@ -1,0 +1,690 @@
+References:
+9 Acknowledgements
+WethankWenyiWangandGeoffRoederforhelpwithproofs,andDanielDuckworth,EthanFetaya,
+Hossein Soleimani, Eldad Haber, Ken Caluwaerts, and Daniel Flam-Shepherd for feedback. We
+thankChrisRackauckas,DougalMaclaurin,andMatthewJamesJohnsonforhelpfuldiscussions.
+References
+MauricioAÁlvarezandNeilDLawrence. Computationallyefficientconvolvedmultipleoutput
+Gaussianprocesses. JournalofMachineLearningResearch,12(May):1459–1500,2011.
+BrandonAmosandJZicoKolter. OptNet: Differentiableoptimizationasalayerinneuralnetworks.
+InInternationalConferenceonMachineLearning,pages136–145,2017.
+JoelAndersson. Ageneral-purposesoftwareframeworkfordynamicoptimization. PhDthesis,2013.
+JoelAEAndersson,JorisGillis,GregHorn,JamesBRawlings,andMoritzDiehl. CasADi–A
+softwareframeworkfornonlinearoptimizationandoptimalcontrol. MathematicalProgramming
+Computation,InPress,2018.
+AtilimGunesBaydin,BarakAPearlmutter,AlexeyAndreyevichRadul,andJeffreyMarkSiskind.
+Automaticdifferentiationinmachinelearning: asurvey. Journalofmachinelearningresearch,18
+(153):1–153,2018.
+Rianne van den Berg, Leonard Hasenclever, Jakub M Tomczak, and Max Welling. Sylvester
+normalizingflowsforvariationalinference. arXivpreprintarXiv:1803.05649,2018.
+BobCarpenter,MatthewDHoffman,MarcusBrubaker,DanielLee,PeterLi,andMichaelBetan-
+court. The Stan math library: Reverse-mode automatic differentiation in c++. arXiv preprint
+arXiv:1509.07164,2015.
+BoChang,LiliMeng,EldadHaber,LarsRuthotto,DavidBegert,andElliotHoltham. Reversible
+architecturesforarbitrarilydeepresidualneuralnetworks. arXivpreprintarXiv:1709.03698,2017.
+BoChang,LiliMeng,EldadHaber,FrederickTung,andDavidBegert. Multi-levelresidualnetworks
+fromdynamicalsystemsview. InInternationalConferenceonLearningRepresentations,2018.
+URL�����������������������������������������.
+ZhengpingChe,SanjayPurushotham,KyunghyunCho,DavidSontag,andYanLiu. Recurrentneural
+networksformultivariatetimeserieswithmissingvalues. ScientificReports, 8(1):6085,2018.
+URL������������������������������������������.
+Edward Choi, Mohammad Taha Bahadori, Andy Schuetz, Walter F. Stewart, and Jimeng Sun.
+Doctor AI: Predicting clinical events via recurrent neural networks. In Proceedings of the 1st
+MachineLearningforHealthcareConference,volume56ofProceedingsofMachineLearning
+Research,pages301–318.PMLR,18–19Aug2016. URL�����������������������������
+���������������.
+EarlACoddingtonandNormanLevinson. Theoryofordinarydifferentialequations. TataMcGraw-
+HillEducation,1955.
+Laurent Dinh, David Krueger, and Yoshua Bengio. NICE: Non-linear independent components
+estimation. arXivpreprintarXiv:1410.8516,2014.
+NanDu,HanjunDai,RakshitTrivedi,UtkarshUpadhyay,ManuelGomez-Rodriguez,andLeSong.
+Recurrentmarkedtemporalpointprocesses: Embeddingeventhistorytovector. InInternational
+ConferenceonKnowledgeDiscoveryandDataMining,pages1555–1564.ACM,2016.
+PatrickFarrell,DavidHam,SimonFunke,andMarieRognes. Automatedderivationoftheadjointof
+high-leveltransientfiniteelementprograms. SIAMJournalonScientificComputing,2013.
+MichaelFigurnov,MaxwellDCollins,YukunZhu,LiZhang,JonathanHuang,DmitryVetrov,and
+RuslanSalakhutdinov. Spatiallyadaptivecomputationtimeforresidualnetworks. arXivpreprint,
+2017.
+10
+
+Annexes/Appendices:
+Thevector-Jacobianproductsa(t)T∂f anda(t)T∂f in(4)and(5)canbeefficientlyevaluatedby
+∂z ∂θ
+automaticdifferentiation,atatimecostsimilartothatofevaluatingf. Allintegralsforsolvingz,a
+and ∂L canbecomputedinasinglecalltoanODEsolver,whichconcatenatestheoriginalstate,the
+∂θ
+adjoint,andtheotherpartialderivativesintoasinglevector. Algorithm1showshowtoconstructthe
+necessarydynamics,andcallanODEsolvertocomputeallgradientsatonce.
+Algorithm1Reverse-modederivativeofanODEinitialvalueproblem
+Input: dynamicsparametersθ,starttimet 0,stoptimet 1,finalstatez(t 1),lossgradient∂L/∂z(t1)
+s =[z(t ), ∂L ,0 ] �Defineinitialaugmentedstate
+0 1 ∂z(t1) |θ
+|
+defaug_dynamics([z(t),a(t), ],t,θ): �Definedynamicsonaugmentedstate
+·
+return[f(z(t),t,θ), a(t)T∂f, a(t)T∂f] �Computevector-Jacobianproducts
+− ∂z − ∂θ
+[z(t ), ∂L ,∂L]=ODESolve(s ,aug_dynamics,t ,t ,θ) �Solvereverse-timeODE
+0 ∂z(t0) ∂θ 0 1 0
+return ∂L ,∂L �Returngradients
+∂z(t0) ∂θ
+MostODEsolvershavetheoptiontooutputthestatez(t)atmultipletimes. Whenthelossdepends
+ontheseintermediatestates,thereverse-modederivativemustbebrokenintoasequenceofseparate
+solves,onebetweeneachconsecutivepairofoutputtimes(Figure2). Ateachobservation,theadjoint
+mustbeadjustedinthedirectionofthecorrespondingpartialderivative∂L/∂z(ti).
+The results above extend those of Stapor et al. (2018, section 2.4.2). An extended version of
+Algorithm1includingderivativesw.r.t.t andt canbefoundinAppendixC.Detailedderivations
+0 1
+areprovidedinAppendixB.AppendixDprovidesPythoncodewhichcomputesallderivativesfor
+����������������������byextendingthe��������automaticdifferentiationpackage. This
+code also supports all higher-order derivatives. We have since released a PyTorch (Paszke et al.,
+2017)implementation,includingGPU-basedimplementationsofseveralstandardODEsolversat
+�������������������������������.
+3 Replacingresidual networkswithODEsforsupervised learning
+Inthissection,weexperimentallyinvestigatethetrainingofneuralODEsforsupervisedlearning.
+Software TosolveODEinitialvalueproblemsnumerically,weusetheimplicitAdamsmethod
+implementedinLSODEandVODEandinterfacedthroughthe���������������package. Being
+animplicitmethod,ithasbetterguaranteesthanexplicitmethodssuchasRunge-Kuttabutrequires
+solvinganonlinearoptimizationproblemateverystep. Thissetupmakesdirectbackpropagation
+throughtheintegratordifficult. WeimplementtheadjointsensitivitymethodinPython’s��������
+framework(Maclaurinetal.,2015). Fortheexperimentsinthissection,weevaluatedthehidden
+statedynamicsandtheirderivativesontheGPUusingTensorflow,whichwerethencalledfromthe
+FortranODEsolvers,whichwerecalledfromPython��������code.
+ModelArchitectures Weexperimentwitha Table1: PerformanceonMNIST. †FromLeCun
+smallresidualnetworkwhichdownsamplesthe etal.(1998).
+input twice then applies 6 standard residual
+blocks He et al. (2016b), which are replaced TestError #Params Memory Time
+byanODESolvemoduleintheODE-Netvari- 1-LayerMLP† 1.60% 0.24M - -
+ant. Wealsotestanetworkwiththesamearchi- ResNet 0.41% 0.60M (L) (L)
+tecturebutwheregradientsarebackpropagated RK-Net 0.47% 0.22M O (L˜) O (L˜)
+directly through a Runge-Kutta integrator, re- ODE-Net 0.42% 0.22M OO (1) O O(L˜)
+ferredtoasRK-Net. Table1showstesterror,numberofparameters,andmemorycost. Ldenotes
+thenumberoflayersintheResNet,andL˜ isthenumberoffunctionevaluationsthattheODEsolver
+requestsinasingleforwardpass,whichcanbeinterpretedasanimplicitnumberoflayers.
+WefindthatODE-NetsandRK-NetscanachievearoundthesameperformanceastheResNet,while
+usingfewerparameters. Forreference,aneuralnetwithasinglehiddenlayerof300unitshasaround
+thesamenumberofparametersastheODE-NetandRK-Netarchitecturethatwetested.
+3
+ErrorControlinODE-Nets ODEsolverscanapproximatelyensurethattheoutputiswithina
+giventoleranceofthetruesolution. Changingthistolerancechangesthebehaviorofthenetwork.
+WefirstverifythaterrorcanindeedbecontrolledinFigure3a. Thetimespentbytheforwardcallis
+proportionaltothenumberoffunctionevaluations(Figure3b),sotuningthetolerancegivesusa
+trade-offbetweenaccuracyandcomputationalcost. Onecouldtrainwithhighaccuracy,butswitchto
+aloweraccuracyattesttime.
+Figure3: StatisticsofatrainedODE-Net. (NFE=numberoffunctionevaluations.)
+Figure 3c) shows a surprising result: the number of evaluations in the backward pass is roughly
+halfoftheforwardpass. Thissuggeststhattheadjointsensitivitymethodisnotonlymorememory
+efficient,butalsomorecomputationallyefficientthandirectlybackpropagatingthroughtheintegrator,
+becausethelatterapproachwillneedtobackpropthrougheachfunctionevaluationintheforward
+pass.
+NetworkDepth It’snotclearhowtodefinethe‘depth‘ofanODEsolution. Arelatedquantityis
+thenumberofevaluationsofthehiddenstatedynamicsrequired,adetaildelegatedtotheODEsolver
+anddependentontheinitialstateorinput. Figure3dshowsthathenumberoffunctionevaluations
+increasesthroughouttraining,presumablyadaptingtoincreasingcomplexityofthemodel.
+4 ContinuousNormalizing Flows
+Thediscretizedequation(1)alsoappearsinnormalizingflows(RezendeandMohamed,2015)and
+theNICEframework(Dinhetal.,2014). Thesemethodsusethechangeofvariablestheoremto
+computeexactchangesinprobabilityifsamplesaretransformedthroughabijectivefunctionf:
+∂f
+z =f(z ) = logp(z )=logp(z ) log det (6)
+1 0 1 0
+⇒ − ∂z
+� 0�
+� �
+Anexampleistheplanarnormalizingflow(RezendeandMohamed,�2015): �
+� �
+∂h
+z(t+1)=z(t)+uh(wTz(t)+b), logp(z(t+1))=logp(z(t)) log 1+uT (7)
+− ∂z
+� �
+� �
+� �
+Generally,themainbottlenecktousingthechangeofvariablesformulaiscomp�utingofthe�deter-
+minantoftheJacobian∂f/∂z, whichhasacubiccostineitherthedimensionofz, orthenumber
+ofhiddenunits. Recentworkexploresthetradeoffbetweentheexpressivenessofnormalizingflow
+layersandcomputationalcost(Kingmaetal.,2016;TomczakandWelling,2016;Bergetal.,2018).
+Surprisingly, moving from a discrete set of layers to a continuous transformation simplifies the
+computationofthechangeinnormalizingconstant:
+Theorem1(InstantaneousChangeofVariables). Letz(t)beafinitecontinuousrandomvariable
+withprobabilityp(z(t))dependentontime. Let dz =f(z(t),t)beadifferentialequationdescribing
+dt
+acontinuous-in-timetransformationofz(t). Assumingthatf isuniformlyLipschitzcontinuousinz
+andcontinuousint,thenthechangeinlogprobabilityalsofollowsadifferentialequation,
+∂logp(z(t)) df
+= tr (8)
+∂t − dz(t)
+� �
+ProofinAppendixA.Insteadofthelogdeterminantin(6),wenowonlyrequireatraceoperation.
+Alsounlikestandardfiniteflows,thedifferentialequationf doesnotneedtobebijective,sinceif
+uniquenessissatisfied,thentheentiretransformationisautomaticallybijective.
+4
+ytisneD
+5% 20% 40% 60% 80% 100%
+selpmaS
+FN
+Target
+(a)TwoCircles
+ytisneD
+5% 20% 40% 60% 80% 100%
+selpmaS
+FN
+Target
+(b)TwoMoons
+Figure5: Visualizingthetransformationfromnoisetodata. Continuous-timenormalizingflows
+arereversible,sowecantrainonadensityestimationtaskandstillbeabletosamplefromthelearned
+densityefficiently.
+maximumlikelihoodestimation, whichmaximizesEp(x)[logq(x)] whereq() iscomputedusing
+·
+theappropriatechangeofvariablestheorem,thenafterwardsreversetheCNFtogeneraterandom
+samplesfromq(x).
+Forthistask,weuse64hiddenunitsforCNF,and64stackedone-hidden-unitlayersforNF.Figure5
+showsthelearneddynamics. InsteadofshowingtheinitialGaussiandistribution,wedisplaythe
+transformeddistributionafterasmallamountoftimewhichshowsthelocationsoftheinitialplanar
+flows. Interestingly, to fit the Two Circles distribution, the CNF rotates the planar flows so that
+the particles can be evenly spread into circles. While the CNF transformations are smooth and
+interpretable,wefindthatNFtransformationsareveryunintuitiveandthismodelhasdifficultyfitting
+thetwomoonsdatasetinFigure5b.
+5 Agenerativelatent functiontime-seriesmodel
+Applyingneuralnetworkstoirregularly-sampleddatasuchasmedicalrecords,networktraffic,or
+neuralspikingdataisdifficult. Typically,observationsareputintobinsoffixedduration,andthe
+latentdynamicsarediscretizedinthesameway. Thisleadstodifficultieswithmissingdataandill-
+definedlatentvariables. Missingdatacanbeaddressedusinggenerativetime-seriesmodels(Álvarez
+andLawrence,2011;Futomaetal.,2017;MeiandEisner,2017;Soleimanietal.,2017a)ordata
+imputation (Cheetal.,2018). Anotherapproachconcatenatestime-stampinformationtotheinputof
+anRNN(Choietal.,2016;Liptonetal.,2016;Duetal.,2016;Li,2017).
+Wepresentacontinuous-time,generativeapproachtomodelingtimeseries. Ourmodelrepresents
+eachtimeseriesbyalatenttrajectory. Eachtrajectoryisdeterminedfromalocalinitialstate,z ,and
+t0
+aglobalsetoflatentdynamicssharedacrossalltimeseries. Givenobservationtimest ,t ,...,t
+0 1 N
+andaninitialstatez ,anODEsolverproducesz ,...,z ,whichdescribethelatentstateateach
+t0 t1 tN
+observation.Wedefinethisgenerativemodelformallythroughasamplingprocedure:
+z p(z ) (11)
+t0
+∼
+t0
+z ,z ,...,z =ODESolve(z ,f,θ ,t ,...,t ) (12)
+t1 t2 tN t0 f 0 N
+each x p(xz ,θ ) (13)
+ti
+∼ |
+ti x
+Functionf isatime-invariantfunctionthattakesthevaluezatthecurrenttimestepandoutputsthe
+gradient: ∂z(t)/∂t=f(z(t),θ f). Weparametrizethisfunctionusinganeuralnet. Becausef istime-
+invariant,givenanylatentstatez(t),theentirelatenttrajectoryisuniquelydefined. Extrapolating
+thislatenttrajectoryletsusmakepredictionsarbitrarilyfarforwardsorbackwardsintime.
+Training and Prediction We can train this latent-variable model as a variational autoen-
+coder(KingmaandWelling,2014;Rezendeetal.,2014),withsequence-valuedobservations. Our
+recognition net is an RNN, which consumes the data sequentially backwards in time, and out-
+putsq (z x ,x ,...,x ). AdetailedalgorithmcanbefoundinAppendixE.UsingODEsasa
+φ 0 1 2 N
+|
+generativemodelallowsustomakepredictionsforarbitrarytimepointst ...t onacontinuous
+1 M
+timeline.
+6
+Figure 9: Data-space trajectories decoded from varying one dimension of z . Color indicates
+t0
+progressionthroughtime,startingatpurpleandendingatred. Notethatthetrajectoriesontheleft
+arecounter-clockwise,whilethetrajectoriesontherightareclockwise.
+todata-space. ExampleswithvaryingnumberoftimepointsareshowninAppendixF.Weobserved
+thatreconstructionsandextrapolationsareconsistentwiththegroundtruthregardlessofnumberof
+observedpointsanddespitethenoise.
+Latentspaceinterpolation Figure8cshows
+latent trajectories projected onto the first two
+dimensions of the latent space. The trajecto-
+ries form two separate clusters of trajectories,
+onedecodingtoclockwisespirals,theotherto
+counter-clockwise. Figure9showsthatthela-
+tenttrajectorieschangesmoothlyasafunction
+oftheinitialpointz(t ),switchingfromaclock-
+0
+wisetoacounter-clockwisespiral. (a)RecurrentNeuralNetwork
+6 ScopeandLimitations
+Minibatching Theuseofmini-batchesisless
+straightforward than for standard neural net-
+works. Onecanstillbatchtogetherevaluations
+through the ODE solver by concatenating the (b)LatentNeuralOrdinaryDifferentialEquation
+statesofeachbatchelementtogether,creatinga
+combinedODEwithdimensionD K.Insome ������������
+cases,controllingerroronallbatch× elementsto- �����������
+����������
+gether might require evaluating the combined
+�������������
+systemK timesmoreoftenthanifeachsystem
+wassolvedindividually. However, in practice
+thenumberofevaluationsdidnotincreasesub-
+(c)LatentTrajectories
+stantiallywhenusingminibatches.
+Figure 8: (a): Reconstruction and extrapolation
+Uniqueness When do continuous dynamics ofspiralswithirregulartimepointsbyarecurrent
+haveauniquesolution? Picard’sexistencethe- neuralnetwork. (b): Reconstructionsandextrapo-
+orem(CoddingtonandLevinson,1955)states lationsbyalatentneuralODE.Bluecurveshows
+thatthesolutiontoaninitialvalueproblemex- modelprediction. Redshowsextrapolation. (c)A
+istsandisuniqueifthedifferentialequationis projectionofinferred4-dimensionallatentODE
+uniformlyLipschitzcontinuousinzandcontin- trajectoriesontotheirfirsttwodimensions. Color
+uousint. Thistheoremholdsforourmodelif indicatesthedirectionofthecorrespondingtrajec-
+theneuralnetworkhasfiniteweightsanduses tory.Themodelhaslearnedlatentdynamicswhich
+Lipshitznonlinearities,suchas����or����. distinguishesthetwodirections.
+Settingtolerances Ourframeworkallowstheusertotradeoffspeedforprecision,butrequires
+theusertochooseanerrortoleranceonboththeforwardandreversepassesduringtraining. For
+sequencemodeling,thedefaultvalueof������wasused.Intheclassificationanddensityestimation
+experiments,wewereabletoreducethetoleranceto����and����,respectively,withoutdegrading
+performance.
+Reconstructingforwardtrajectories Reconstructingthestatetrajectorybyrunningthedynamics
+backwards can introduce extra numerical error if the reconstructed trajectory diverges from the
+original. Thisproblemcanbeaddressedbycheckpointing: storingintermediatevaluesofzonthe
+8
+
+Body Text:
+Neural Ordinary Differential Equations
+RickyT.Q.Chen*,YuliaRubanova*,JesseBettencourt*,DavidDuvenaud
+UniversityofToronto,VectorInstitute
+���������� ��������� ���������� ������������������������
+Abstract
+Weintroduceanewfamilyofdeepneuralnetworkmodels. Insteadofspecifyinga
+discretesequenceofhiddenlayers,weparameterizethederivativeofthehidden
+stateusinganeuralnetwork. Theoutputofthenetworkiscomputedusingablack-
+boxdifferentialequation solver. Thesecontinuous-depthmodels haveconstant
+memorycost,adapttheirevaluationstrategytoeachinput,andcanexplicitlytrade
+numericalprecisionforspeed.Wedemonstratethesepropertiesincontinuous-depth
+residualnetworksandcontinuous-timelatentvariablemodels. Wealsoconstruct
+continuous normalizing flows, a generative model that can train by maximum
+likelihood,withoutpartitioningororderingthedatadimensions. Fortraining,we
+showhowtoscalablybackpropagatethroughanyODEsolver,withoutaccesstoits
+internaloperations. Thisallowsend-to-endtrainingofODEswithinlargermodels.
+1 Introduction
+ResidualNetwork ODENetwork
+�
+�
+�
+�
+�
+�
+� � �
+�������������������
+�����
+�
+�
+�
+�
+�
+�
+� � �
+�������������������
+�����
+Modelssuchasresidualnetworks,recurrentneural
+networkdecoders,andnormalizingflowsbuildcom-
+plicatedtransformationsbycomposingasequenceof
+transformationstoahiddenstate:
+h =h +f(h ,θ ) (1)
+t+1 t t t
+wheret 0...T andh
+t
+RD. Theseiterative
+∈ { } ∈
+updates can be seen as an Euler discretization of a
+continuous transformation (Lu et al., 2017; Haber
+andRuthotto,2017;RuthottoandHaber,2018).
+Whathappensasweaddmorelayersandtakesmaller Figure1: Left: AResidualnetworkdefinesa
+steps? Inthelimit,weparameterizethecontinuous discrete sequence of finite transformations.
+dynamicsofhiddenunitsusinganordinarydifferen- Right: A ODE network defines a vector
+tialequation(ODE)specifiedbyaneuralnetwork: field,whichcontinuouslytransformsthestate.
+dh(t) Both: Circlesrepresentevaluationlocations.
+=f(h(t),t,θ) (2)
+dt
+Startingfromtheinputlayerh(0), wecandefinetheoutputlayerh(T)tobethesolutiontothis
+ODEinitialvalueproblematsometimeT. Thisvaluecanbecomputedbyablack-boxdifferential
+equationsolver,whichevaluatesthehiddenunitdynamicsf wherevernecessarytodeterminethe
+solutionwiththedesiredaccuracy. Figure1contraststhesetwoapproaches.
+DefiningandevaluatingmodelsusingODEsolvershasseveralbenefits:
+Memoryefficiency InSection2,weshowhowtocomputegradientsofascalar-valuedlosswith
+respecttoallinputsofanyODEsolver,withoutbackpropagatingthroughtheoperationsofthesolver.
+Notstoringanyintermediatequantitiesoftheforwardpassallowsustotrainourmodelswithconstant
+memorycostasafunctionofdepth,amajorbottleneckoftrainingdeepmodels.
+32ndConferenceonNeuralInformationProcessingSystems(NeurIPS2018),Montréal,Canada.
+Adaptivecomputation Euler’smethodisperhapsthesimplestmethodforsolvingODEs. There
+havesincebeenmorethan120yearsofdevelopmentofefficientandaccurateODEsolvers(Runge,
+1895;Kutta,1901;Haireretal.,1987). ModernODEsolversprovideguaranteesaboutthegrowth
+ofapproximationerror,monitortheleveloferror,andadapttheirevaluationstrategyontheflyto
+achievetherequestedlevelofaccuracy. Thisallowsthecostofevaluatingamodeltoscalewith
+problemcomplexity. Aftertraining,accuracycanbereducedforreal-timeorlow-powerapplications.
+Parameterefficiency Whenthehiddenunitdynamicsareparameterizedasacontinuousfunction
+oftime,theparametersofnearby“layers”areautomaticallytiedtogether. InSection3,weshowthat
+thisreducesthenumberofparametersrequiredonasupervisedlearningtask.
+Scalableandinvertiblenormalizingflows Anunexpectedside-benefitofcontinuoustransforma-
+tionsisthatthechangeofvariablesformulabecomeseasiertocompute. InSection4,wederive
+thisresultanduseittoconstructanewclassofinvertibledensitymodelsthatavoidsthesingle-unit
+bottleneckofnormalizingflows,andcanbetraineddirectlybymaximumlikelihood.
+Continuous time-series models Unlike recurrent neural networks, which require discretizing
+observationandemissionintervals,continuously-defineddynamicscannaturallyincorporatedata
+whicharrivesatarbitrarytimes. InSection5,weconstructanddemonstratesuchamodel.
+2 Reverse-modeautomatic differentiationofODEsolutions
+The main technical difficulty in training continuous-depth networks is performing reverse-mode
+differentiation(alsoknownasbackpropagation)throughtheODEsolver. Differentiatingthrough
+theoperationsoftheforwardpassisstraightforward,butincursahighmemorycostandintroduces
+additionalnumericalerror.
+We treat the ODE solver as a black box, and compute gradients using the adjoint sensitivity
+method (Pontryagin et al., 1962). This approach computes gradients by solving a second, aug-
+mentedODEbackwardsintime,andisapplicabletoallODEsolvers. Thisapproachscaleslinearly
+withproblemsize,haslowmemorycost,andexplicitlycontrolsnumericalerror.
+Consideroptimizingascalar-valuedlossfunctionL(),whoseinputistheresultofanODEsolver:
+t1
+L(z(t ))=L z(t )+ f(z(t),t,θ)dt =L(ODESolve(z(t ),f,t ,t ,θ)) (3)
+1 0 0 0 1
+� �t0 �
+TooptimizeL,werequiregradientswithrespect
+to θ. The first step is to determining how the
+gradientofthelossdependsonthehiddenstate
+z(t)ateachinstant. Thisquantityiscalledthe
+adjointa(t)=∂L/∂z(t). Itsdynamicsaregiven
+byanotherODE,whichcanbethoughtofasthe
+�����
+instantaneousanalogofthechainrule:
+�������������
+da(t) ∂f(z(t),t,θ)
+= a(t)T (4)
+dt − ∂z
+Wecancompute∂L/∂z(t0)byanothercalltoan
+ODE solver. This solver must run backwards,
+startingfromtheinitialvalueof∂L/∂z(t1). One
+complicationisthatsolvingthisODErequires
+the knowing value of z(t) along its entire tra-
+Figure2: Reverse-modedifferentiationofanODE
+jectory. However, we can simply recompute
+solution. The adjoint sensitivity method solves
+z(t)backwardsintimetogetherwiththeadjoint,
+anaugmentedODEbackwardsintime. Theaug-
+startingfromitsfinalvaluez(t ).
+mentedsystemcontainsboththeoriginalstateand 1
+thesensitivityofthelosswithrespecttothestate. Computingthegradientswithrespecttothepa-
+Ifthelossdependsdirectlyonthestateatmulti- rametersθ requiresevaluatingathirdintegral,
+ple observation times, the adjoint state must be whichdependsonbothz(t)anda(t):
+updatedinthedirectionofthepartialderivativeof
+dL t0 ∂f(z(t),t,θ)
+thelosswithrespecttoeachobservation. = a(t)T dt (5)
+dθ ∂θ
+�t1
+2
+Asanexampleapplicationoftheinstantaneouschangeofvariables,wecanexaminethecontinuous
+analogoftheplanarflow,anditschangeinnormalizationconstant:
+dz(t) ∂logp(z(t)) ∂h
+=uh(wTz(t)+b), = uT (9)
+dt ∂t − ∂z(t)
+Givenaninitialdistributionp(z(0)),wecansamplefromp(z(t))andevaluateitsdensitybysolving
+thiscombinedODE.
+Usingmultiplehiddenunitswithlinearcost Whiledetisnotalinearfunction,thetracefunction
+is,whichimpliestr( J )= tr(J ). Thusifourdynamicsisgivenbyasumoffunctionsthen
+n n n n
+thedifferentialequationforthelogdensityisalsoasum:
+� �
+M M
+dz(t) dlogp(z(t)) ∂f
+n
+= f (z(t)), = tr (10)
+n
+dt dt ∂z
+n=1 n=1 � �
+� �
+Thismeanswecancheaplyevaluateflowmodelshavingmanyhiddenunits,withacostonlylinearin
+thenumberofhiddenunitsM. Evaluatingsuch‘wide’flowlayersusingstandardnormalizingflows
+costs (M3),meaningthatstandardNFarchitecturesusemanylayersofonlyasinglehiddenunit.
+O
+Time-dependentdynamics Wecanspecifytheparametersofaflowasafunctionoft,makingthe
+differentialequationf(z(t),t)changewitht. Thisisparameterizationisakindofhypernetwork(Ha
+et al., 2016). We also introduce a gating mechanism for each hidden unit, dz = σ (t)f (z)
+dt n n n
+whereσ (t) (0,1)isaneuralnetworkthatlearnswhenthedynamicf (z)shouldbeapplied. We
+n n
+callthesemo∈ delscontinuousnormalizingflows(CNF). �
+4.1 ExperimentswithContinuousNormalizingFlows
+Wefirstcomparecontinuousanddiscreteplanarflowsatlearningtosamplefromaknowndistribution.
+WeshowthataplanarCNFwithM hiddenunitscanbeatleastasexpressiveasaplanarNFwith
+K =M layers,andsometimesmuchmoreexpressive.
+Density matching We configure the CNF as described above, and train for 10,000 iterations
+using Adam (Kingma and Ba, 2014). In contrast, the NF is trained for 500,000 iterations using
+RMSprop(Hintonetal.,2012),assuggestedbyRezendeandMohamed(2015). Forthistask,we
+minimizeKL(q(x) p(x))asthelossfunctionwhereqistheflowmodelandthetargetdensityp()
+� ·
+canbeevaluated. Figure4showsthatCNFgenerallyachieveslowerloss.
+MaximumLikelihoodTraining Ausefulpropertyofcontinuous-timenormalizingflowsisthat
+wecancomputethereversetransformationforaboutthesamecostastheforwardpass,whichcannot
+besaidfornormalizingflows. Thisletsustraintheflowonadensityestimationtaskbyperforming
+K=2 K=8 K=32 M=2 M=8 M=32
+���
+��
+1
+�� �� ��
+���
+��
+2
+�� �� ��
+���
+��
+3
+�� �� ��
+(a)Target (b)NF (c)CNF (d)Lossvs.K/M
+Figure4:Comparisonofnormalizingflowsversuscontinuousnormalizingflows. Themodelcapacity
+ofnormalizingflowsisdeterminedbytheirdepth(K),whilecontinuousnormalizingflowscanalso
+increasecapacitybyincreasingwidth(M),makingthemeasiertotrain.
+5
+ODESolve(z ,f,θ ,t ,...,t )
+t0 f 0 M
+h t0 h
+t1���������� h�
+tN
+q(z t0|x µt0...x tNz)
+t 0
+z
+t 1 z t N
+z
+t N+1
+z
+t M
+�
+� σ
+������������
+����������
+x(t) xˆ(t)
+����
+t 0 t 1 t N t N+1 t M t 0 t 1 t N t N+1 t M
+�������� ���������� ���������� �������������
+Figure6: ComputationgraphofthelatentODEmodel.
+)t(λ
+PoissonProcesslikelihoods Thefactthatanobservationoc-
+curredoftentellsussomethingaboutthelatentstate. Forex-
+ample, apatientmaybemorelikelytotakeamedicaltestif
+they are sick. The rate of events can be parameterized by a
+functionofthelatentstate: p(eventattimet z(t))=λ(z(t)).
+| t
+Given this rate function, the likelihood of a set of indepen-
+dentobservationtimesintheinterval[t ,t ]isgivenbyan Figure7: FittingalatentODEdy-
+start end
+inhomogeneousPoissonprocess(Palm,1943): namicsmodelwithaPoissonpro-
+cess likelihood. Dots show event
+N tend times. Thelineisthelearnedinten-
+logp(t ...t t ,t )= logλ(z(t )) λ(z(t))dt
+1 N start end i sityλ(t)ofthePoissonprocess.
+| −
+i=1 �tstart
+�
+Wecanparameterizeλ()usinganotherneuralnetwork. Con-
+·
+veniently, we can evaluate both the latent trajectory and the
+PoissonprocesslikelihoodtogetherinasinglecalltoanODEsolver. Figure7showstheeventrate
+learnedbysuchamodelonatoydataset.
+APoissonprocesslikelihoodonobservationtimescanbecombinedwithadatalikelihoodtojointly
+modelallobservationsandthetimesatwhichtheyweremade.
+5.1 Time-seriesLatentODEExperiments
+WeinvestigatetheabilityofthelatentODEmodeltofitandextrapolatetimeseries. Therecognition
+networkisanRNNwith25hiddenunits. Weusea4-dimensionallatentspace. Weparameterizethe
+dynamicsfunctionf withaone-hidden-layernetworkwith20hiddenunits. Thedecodercomputing
+p(x z )isanotherneuralnetworkwithonehiddenlayerwith20hiddenunits. Ourbaselinewasa
+ti| ti
+recurrentneuralnetwith25hiddenunitstrainedtominimizenegativeGaussianlog-likelihood. We
+trainedasecondversionofthisRNNwhoseinputswereconcatenatedwiththetimedifferencetothe
+nextobservationtoaidRNNwithirregularobservations.
+Table2: PredictiveRMSEontestset
+Bi-directionalspiraldataset Wegenerateda
+datasetof10002-dimensionalspirals,eachstart-
+#Observations 30/100 50/100 100/100
+ingatadifferentpoint,sampledat100equally-
+spaced timesteps. The dataset contains two RNN 0.3937 0.3202 0.1813
+types of spirals: half are clockwise while the LatentODE 0.1642 0.1502 0.1346
+otherhalfcounter-clockwise. Tomakethetask
+morerealistic,weaddgaussiannoisetotheobservations.
+Timeserieswithirregulartimepoints Togenerateirregulartimestamps,werandomlysample
+points from each trajectory without replacement (n = 30,50,100 ). We report predictive root-
+{ }
+mean-squarederror(RMSE)on100timepointsextendingbeyondthosethatwereusedfortraining.
+Table2showsthatthelatentODEhassubstantiallylowerpredictiveRMSE.
+Figure8showsexamplesofspiralreconstructionswith30sub-sampledpoints. Reconstructionsfrom
+thelatentODEwereobtainedbysamplingfromtheposterioroverlatenttrajectoriesanddecodingit
+7
+forwardpass,andreconstructingtheexactforwardtrajectorybyre-integratingfromthosepoints. We
+didnotfindthistobeapracticalproblem,andweinformallycheckedthatreversingmanylayersof
+continuousnormalizingflowswithdefaulttolerancesrecoveredtheinitialstates.
+7 RelatedWork
+The use of the adjoint method for training continuous-time neural networks was previously pro-
+posed (LeCun et al., 1988; Pearlmutter, 1995), though was not demonstrated practically. The
+interpretationofresidualnetworksHeetal.(2016a)asapproximateODEsolversspurredresearch
+intoexploitingreversibilityandapproximatecomputationinResNets(Changetal.,2017;Luetal.,
+2017). WedemonstratethesesamepropertiesinmoregeneralitybydirectlyusinganODEsolver.
+Adaptivecomputation Onecanadaptcomputationtimebytrainingsecondaryneuralnetworks
+tochoosethenumberofevaluationsofrecurrentorresidualnetworks(Graves,2016;Jerniteetal.,
+2016;Figurnovetal.,2017;Changetal.,2018). However,thisintroducesoverheadbothattraining
+andtesttime,andextraparametersthatneedtobefit. Incontrast,ODEsolversofferwell-studied,
+computationallycheap,andgeneralizablerulesforadaptingtheamountofcomputation.
+Constantmemorybackpropthroughreversibility Recentworkdevelopedreversibleversions
+ofresidualnetworks(Gomezetal.,2017;HaberandRuthotto,2017;Changetal.,2017),whichgives
+thesameconstantmemoryadvantageasourapproach. However,thesemethodsrequirerestricted
+architectures,whichpartitionthehiddenunits. Ourapproachdoesnothavetheserestrictions.
+Learningdifferentialequations Muchrecentworkhasproposedlearningdifferentialequations
+fromdata. Onecantrainfeed-forwardorrecurrentneuralnetworkstoapproximateadifferential
+equation (Raissi and Karniadakis, 2018; Raissi et al., 2018a; Long et al., 2017), with applica-
+tionssuchasfluidsimulation(Wieweletal.,2018). Thereisalsosignificantworkonconnecting
+GaussianProcesses(GPs)andODEsolvers(Schoberetal.,2014). GPshavebeenadaptedtofit
+differential equations (Raissi et al., 2018b) and can naturally model continuous-time effects and
+interventions(Soleimanietal.,2017b;SchulamandSaria,2017). Ryderetal.(2018)usestochastic
+variationalinferencetorecoverthesolutionofagivenstochasticdifferentialequation.
+DifferentiatingthroughODEsolvers The������library(Farrelletal.,2013)implementsadjoint
+computationforgeneralODEandPDEsolutions,butonlybybackpropagatingthroughtheindividual
+operations of the forward solver. The Stan library (Carpenter et al., 2015) implements gradient
+estimationthroughODEsolutionsusingforwardsensitivityanalysis. However,forwardsensitivity
+analysis is quadratic-time in the number of variables, whereas the adjoint sensitivity analysis is
+linear (Carpenter et al., 2015; Zhang and Sandu, 2014). Melicher et al. (2017) used the adjoint
+methodtotrainbespokelatentdynamicmodels.
+Incontrast,byprovidingagenericvector-Jacobianproduct,weallowanODEsolvertobetrained
+end-to-endwithanyotherdifferentiablemodelcomponents. Whileuseofvector-Jacobianproducts
+forsolvingtheadjointmethodhasbeenexploredinoptimalcontrol(Andersson,2013;Andersson
+etal.,InPress,2018),wehighlightthepotentialofageneralintegrationofblack-boxODEsolvers
+intoautomaticdifferentiation(Baydinetal.,2018)fordeeplearningandgenerativemodeling.
+8 Conclusion
+Weinvestigatedtheuseofblack-boxODEsolversasamodelcomponent,developingnewmodels
+fortime-seriesmodeling,supervisedlearning,anddensityestimation. Thesemodelsareevaluated
+adaptively, and allow explicit control of the tradeoff between computation speed and accuracy.
+Finally, we derived an instantaneous version of the change of variables formula, and developed
+continuous-timenormalizingflows,whichcanscaletolargelayersizes.
+9
+J.Futoma,S.Hariharan,andK.Heller. LearningtoDetectSepsiswithaMultitaskGaussianProcess
+RNNClassifier. ArXive-prints,2017.
+AidanNGomez,MengyeRen,RaquelUrtasun,andRogerBGrosse.Thereversibleresidualnetwork:
+Backpropagation without storing activations. In Advances in Neural Information Processing
+Systems,pages2211–2221,2017.
+Alex Graves. Adaptive computation time for recurrent neural networks. arXiv preprint
+arXiv:1603.08983,2016.
+DavidHa,AndrewDai,andQuocVLe. Hypernetworks. arXivpreprintarXiv:1609.09106,2016.
+EldadHaberandLarsRuthotto. Stablearchitecturesfordeepneuralnetworks. InverseProblems,34
+(1):014004,2017.
+E.Hairer,S.P.Nørsett,andG.Wanner. SolvingOrdinaryDifferentialEquationsI–NonstiffProblems.
+Springer,1987.
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image
+recognition. InProceedingsoftheIEEEconferenceoncomputervisionandpatternrecognition,
+pages770–778,2016a.
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Identity mappings in deep residual
+networks. InEuropeanconferenceoncomputervision,pages630–645.Springer,2016b.
+GeoffreyHinton,NitishSrivastava,andKevinSwersky. Neuralnetworksformachinelearninglecture
+6aoverviewofmini-batchgradientdescent,2012.
+Yacine Jernite, Edouard Grave, Armand Joulin, and Tomas Mikolov. Variable computation in
+recurrentneuralnetworks. arXivpreprintarXiv:1611.06188,2016.
+DiederikPKingmaandJimmyBa. Adam: Amethodforstochasticoptimization. arXivpreprint
+arXiv:1412.6980,2014.
+DiederikP.KingmaandMaxWelling. Auto-encodingvariationalBayes. InternationalConference
+onLearningRepresentations,2014.
+DiederikPKingma,TimSalimans,RafalJozefowicz,XiChen,IlyaSutskever,andMaxWelling.
+Improvedvariationalinferencewithinverseautoregressiveflow.InAdvancesinNeuralInformation
+ProcessingSystems,pages4743–4751,2016.
+W.Kutta. BeitragzurnäherungsweisenIntegrationtotalerDifferentialgleichungen. Zeitschriftfür
+MathematikundPhysik,46:435–453,1901.
+YannLeCun,DTouresky,GHinton,andTSejnowski. Atheoreticalframeworkforback-propagation.
+InProceedingsofthe1988connectionistmodelssummerschool,volume1,pages21–28.CMU,
+Pittsburgh,Pa: MorganKaufmann,1988.
+YannLeCun,LéonBottou,YoshuaBengio,andPatrickHaffner. Gradient-basedlearningappliedto
+documentrecognition. ProceedingsoftheIEEE,86(11):2278–2324,1998.
+Yang Li. Time-dependent representation for neural event sequence prediction. arXiv preprint
+arXiv:1708.00065,2017.
+ZacharyCLipton,DavidKale,andRandallWetzel.Directlymodelingmissingdatainsequenceswith
+RNNs: Improvedclassificationofclinicaltimeseries. InProceedingsofthe1stMachineLearning
+forHealthcareConference,volume56ofProceedingsofMachineLearningResearch,pages253–
+270.PMLR,18–19Aug2016. URL����������������������������������������������.
+Z.Long,Y.Lu,X.Ma,andB.Dong. PDE-Net: LearningPDEsfromData. ArXive-prints,2017.
+Yiping Lu, Aoxiao Zhong, Quanzheng Li, and Bin Dong. Beyond finite layer neural networks:
+Bridgingdeeparchitecturesandnumericaldifferentialequations. arXivpreprintarXiv:1710.10121,
+2017.
+11
+DougalMaclaurin,DavidDuvenaud,andRyanPAdams. Autograd: Reverse-modedifferentiationof
+nativePython. InICMLworkshoponAutomaticMachineLearning,2015.
+Hongyuan Mei and Jason M Eisner. The neural Hawkes process: A neurally self-modulating
+multivariatepointprocess. InAdvancesinNeuralInformationProcessingSystems,pages6757–
+6767,2017.
+ValdemarMelicher,TomHaber,andWimVanroose. Fastderivativesoflikelihoodfunctionalsfor
+ODEbasedmodelsusingadjoint-statemethod. ComputationalStatistics,32(4):1621–1643,2017.
+ConnyPalm. Intensitätsschwankungenimfernsprechverker. EricssonTechnics,1943.
+Adam Paszke, Sam Gross, Soumith Chintala, Gregory Chanan, Edward Yang, Zachary DeVito,
+Zeming Lin, Alban Desmaison, Luca Antiga, and Adam Lerer. Automatic differentiation in
+pytorch. 2017.
+BarakAPearlmutter. Gradientcalculationsfordynamicrecurrentneuralnetworks: Asurvey. IEEE
+TransactionsonNeuralnetworks,6(5):1212–1228,1995.
+LevSemenovichPontryagin,EFMishchenko,VGBoltyanskii,andRVGamkrelidze. Themathemat-
+icaltheoryofoptimalprocesses. 1962.
+M.RaissiandG.E.Karniadakis. Hiddenphysicsmodels: Machinelearningofnonlinearpartial
+differentialequations. JournalofComputationalPhysics,pages125–141,2018.
+MaziarRaissi,ParisPerdikaris,andGeorgeEmKarniadakis. Multistepneuralnetworksfordata-
+drivendiscoveryofnonlineardynamicalsystems. arXivpreprintarXiv:1801.01236,2018a.
+MaziarRaissi, ParisPerdikaris, andGeorgeEmKarniadakis. NumericalGaussianprocessesfor
+time-dependentandnonlinearpartialdifferentialequations. SIAMJournalonScientificComputing,
+40(1):A172–A198,2018b.
+DaniloJRezende,ShakirMohamed,andDaanWierstra.Stochasticbackpropagationandapproximate
+inference in deep generative models. In Proceedings of the 31st International Conference on
+MachineLearning,pages1278–1286,2014.
+DaniloJimenezRezendeandShakirMohamed. Variationalinferencewithnormalizingflows. arXiv
+preprintarXiv:1505.05770,2015.
+C.Runge. ÜberdienumerischeAuflösungvonDifferentialgleichungen. MathematischeAnnalen,46:
+167–178,1895.
+LarsRuthottoandEldadHaber. Deepneuralnetworksmotivatedbypartialdifferentialequations.
+arXivpreprintarXiv:1804.04272,2018.
+T. Ryder, A. Golightly, A. S. McGough, and D. Prangle. Black-box Variational Inference for
+StochasticDifferentialEquations. ArXive-prints,2018.
+MichaelSchober,DavidDuvenaud,andPhilippHennig. ProbabilisticODEsolverswithRunge-Kutta
+means. InAdvancesinNeuralInformationProcessingSystems25,2014.
+PeterSchulamandSuchiSaria. What-ifreasoningwithcounterfactualGaussianprocesses. arXiv
+preprintarXiv:1703.10651,2017.
+HosseinSoleimani,JamesHensman,andSuchiSaria. Scalablejointmodelsforreliableuncertainty-
+awareeventprediction. IEEEtransactionsonpatternanalysisandmachineintelligence,2017a.
+HosseinSoleimani,AdarshSubbaswamy,andSuchiSaria. Treatment-responsemodelsforcoun-
+terfactual reasoning with continuous-time, continuous-valued interventions. arXiv preprint
+arXiv:1704.02038,2017b.
+JosStam. Stablefluids. InProceedingsofthe26thannualconferenceonComputergraphicsand
+interactivetechniques,pages121–128.ACMPress/Addison-WesleyPublishingCo.,1999.
+12
+PaulStapor,FabianFroehlich,andJanHasenauer. OptimizationanduncertaintyanalysisofODE
+modelsusingsecondorderadjointsensitivityanalysis. bioRxiv,page272005,2018.
+JakubMTomczakandMaxWelling. Improvingvariationalauto-encodersusingHouseholderflow.
+arXivpreprintarXiv:1611.09630,2016.
+Steffen Wiewel, Moritz Becher, and Nils Thuerey. Latent-space physics: Towards learning the
+temporalevolutionoffluidflow. arXivpreprintarXiv:1802.10123,2018.
+HongZhangandAdrianSandu. Fatode: alibraryforforward,adjoint,andtangentlinearintegration
+ofODEs. SIAMJournalonScientificComputing,36(5):C504–C523,2014.
+13
+

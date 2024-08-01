@@ -1,0 +1,263 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+letters to nature
+typically slower than
+,1kms-1)
+might differ significantly from
+what is assumed by current modelling efforts27. The expected
+Collectivedynamicsof
+equation-of-statedifferencesamongsmallbodies(iceversusrock,
+forinstance)presentsanotherdimensionofstudy;havingrecently
+‘small-world’networks
+adaptedourcodeformassivelyparallelarchitectures(K.M.Olson
+andE.A,manuscriptinpreparation),wearenowreadytoperforma
+morecomprehensiveanalysis. DuncanJ.Watts*&StevenH.Strogatz 8
+Theexploratorysimulationspresentedheresuggestthatwhena DepartmentofTheoreticalandAppliedMechanics,KimballHall,
+young,non-porousasteroid(ifsuchexist)suffersextensiveimpact CornellUniversity,Ithaca,NewYork14853,USA
+damage,theresultingfracturepatternlargelydefinestheasteroid’s .........................................................................................................................
+response to future impacts. The stochastic nature of collisions Networksofcoupleddynamicalsystemshavebeenusedtomodel
+implies that small asteroid interiors may be as diverse as their biological oscillators1–4, Josephson junction arrays5,6, excitable
+shapesandspinstates.Detailednumericalsimulationsofimpacts, media7, neural networks8–10, spatial games11, genetic control
+using accurate shape models and rheologies, could shed light on networks12 and many other self-organizing systems. Ordinarily,
+howasteroidcollisionalresponsedependsoninternalconfiguration the connection topology is assumed to be either completely
+and shape, and hence on how planetesimals evolve. Detailed regularorcompletelyrandom.Butmanybiological,technological
+simulationsarealsorequiredbeforeonecanpredictthequantitative andsocialnetworksliesomewherebetweenthesetwoextremes.
+effects of nuclear explosions on Earth-crossing comets and Here we explore simple models of networks that can be tuned
+asteroids, either for hazard mitigation28 through disruption and throughthismiddleground:regularnetworks‘rewired’tointro-
+deflection, or for resource exploitation29. Such predictions would duceincreasingamountsofdisorder.Wefindthatthesesystems
+require detailed reconnaissance concerning the composition and can be highly clustered, like regular lattices, yet have small
+internalstructureofthetargetedobject. M characteristic path lengths, like random graphs. We call them
+‘small-world’ networks, by analogy with the small-world
+Received4February;accepted18March1998. phenomenon13,14(popularlyknownassixdegreesofseparation15).
+1. Asphaug,E.&Melosh,H.J.TheStickneyimpactofPhobos:Adynamicalmodel.Icarus101,144–164 The neural network of the worm Caenorhabditis elegans, the
+(1993).
+power grid of the western United States, and the collaboration
+2. Asphaug,E.etal.MechanicalandgeologicaleffectsofimpactcrateringonIda.Icarus120,158–184
+(1996). graph of film actors are shown to be small-world networks.
+3. Nolan,M.C.,Asphaug,E.,Melosh,H.J.&Greenberg,R.Impactcratersonasteroids:Doesstrengthor Modelsofdynamicalsystemswithsmall-worldcouplingdisplay
+gravitycontroltheirsize?Icarus124,359–371(1996).
+4. Love,S.J.&Ahrens,T.J.Catastrophicimpactsongravitydominatedasteroids.Icarus124,141–155 enhanced signal-propagation speed, computational power, and
+(1996). synchronizability. Inparticular,infectious diseasesspreadmore
+5. Melosh,H.J.&Ryan,E.V.Asteroids:Shatteredbutnotdispersed.Icarus129,562–564(1997).
+easilyinsmall-worldnetworksthaninregularlattices.
+6. Housen,K.R.,Schmidt,R.M.&Holsapple,K.A.Craterejectascalinglaws:Fundamentalformsbased
+ondimensionalanalysis.J.Geophys.Res.88,2485–2499(1983). To interpolate between regular and random networks, we con-
+7. Holsapple,K.A.&Schmidt,R.M.Pointsourcesolutionsandcouplingparametersincratering sider the following random rewiring procedure (Fig. 1). Starting
+mechanics.J.Geophys.Res.92,6350–6376(1987).
+8. Housen,K.R.&Holsapple,K.A.Onthefragmentationofasteroidsandplanetarysatellites.Icarus84, fromaringlatticewithnverticesandkedgespervertex,werewire
+226–253(1990). eachedgeatrandomwithprobabilityp.Thisconstructionallowsus
+9. Benz,W.&Asphaug,E.Simulationsofbrittlesolidsusingsmoothparticlehydrodynamics.Comput.
+to‘tune’thegraphbetweenregularity(p¼0)anddisorder(p¼1),
+Phys.Commun.87,253–265(1995).
+10.Asphaug,E.etal.MechanicalandgeologicaleffectsofimpactcrateringonIda.Icarus120,158–184 and thereby to probe the intermediate region 0,p,1, about
+(1996). whichlittleisknown.
+11.Hudson,R.S.&Ostro,S.J.Shapeofasteroid4769Castalia(1989PB)frominversionofradarimages.
+Science263,940–943(1994). We quantify the structural properties of these graphs by their
+12.Ostro,S.J.etal.Asteroidradarastrometry.Astron.J.102,1490–1502(1991). characteristic path length L(p) and clustering coefficient C(p), as
+13.Ahrens,T.J.&O’Keefe,J.D.inImpactandExplosionCratering(edsRoddy,D.J.,Pepin,R.O.&
+definedinFig.2legend.HereL(p)measuresthetypicalseparation
+Merrill,R.B.)639–656(Pergamon,NewYork,1977).
+14.Tillotson,J.H.Metallicequationsofstateforhypervelocityimpact.(GeneralAtomicReportGA-3216, betweentwoverticesinthegraph(aglobalproperty),whereasC(p)
+SanDiego,1962). measures the cliquishness of a typical neighbourhood (a local
+15.Nakamura,A.&Fujiwara,A.Velocitydistributionoffragmentsformedinasimulatedcollisional
+disruption.Icarus92,132–146(1991). property). The networks of interest to us have many vertices
+16.Benz,W.&Asphaug,E.Simulationsofbrittlesolidsusingsmoothparticlehydrodynamics.Comput. with sparse connections, but not so sparse that the graph is in
+Phys.Commun.87,253–265(1995).
+danger of becoming disconnected. Specifically, we require
+17.Bottke,W.F.,Nolan,M.C.,Greenberg,R.&Kolvoord,R.A.Velocitydistributionsamongcolliding
+asteroids.Icarus107,255–268(1994). nqkqlnðnÞq1, where kqlnðnÞ guarantees that a random
+18.Belton,M.J.S.etal.Galileoencounterwith951Gaspra—Firstpicturesofanasteroid.Science257, graph will be connected16. In this regime, we find that
+1647–1652(1992).
+19.Belton,M.J.S.etal.Galileo’sencounterwith243Ida:Anoverviewoftheimagingexperiment.Icarus L,n=2kq1 and C,3=4 as p!0, while L<L random,lnðnÞ=lnðkÞ
+120,1–19(1996). andC<C ,k=np1asp!1.Thustheregularlatticeatp¼0
+20.Asphaug,E.&Melosh,H.J.TheStickneyimpactofPhobos:Adynamicalmodel.Icarus101,144–164 random
+is a highly clustered, large world where L grows linearly with n,
+(1993).
+21.Asphaug,E.etal.MechanicalandgeologicaleffectsofimpactcrateringonIda.Icarus120,158–184 whereastherandomnetworkatp¼1isapoorlyclustered,small
+(1996). world where L grows only logarithmically with n. These limiting
+22.Housen,K.R.,Schmidt,R.M.&Holsapple,K.A.Craterejectascalinglaws:Fundamentalformsbased
+ondimensionalanalysis.J.Geophys.Res.88,2485–2499(1983). casesmightleadonetosuspectthatlargeCisalwaysassociatedwith
+23.Veverka,J.etal.NEAR’sflybyof253Mathilde:ImagesofaCasteroid.Science278,2109–2112(1997). largeL,andsmallCwithsmallL.
+24.Asphaug,E.etal.Impactevolutionoficyregoliths.LunarPlanet.Sci.Conf.(Abstr.)XXVIII,63–64
+Onthecontrary,Fig.2revealsthatthereisabroadintervalofp
+(1997).
+25.Love,S.G.,Ho¨rz,F.&Brownlee,D.E.Targetporosityeffectsinimpactcrateringandcollisional over which L(p) is almost as small as L yet CðpÞqC .
+random random
+disruption.Icarus105,216–224(1993). Thesesmall-worldnetworksresultfromtheimmediatedropinL(p)
+26.Fujiwara,A.,Cerroni,P.,Davis,D.R.,Ryan,E.V.&DiMartino,M.inAsteroidsII(edsBinzel,R.P.,
+Gehrels,T.&Matthews,A.S.)240–265(Univ.ArizonaPress,Tucson,1989). causedbytheintroductionofafewlong-rangeedges.Such‘short
+27.Davis,D.R.&Farinella,P.CollisionalevolutionofEdgeworth-KuiperBeltobjects.Icarus125,50–60 cuts’connectverticesthatwouldotherwisebemuchfartherapart
+(1997).
+thanL .Forsmallp,eachshortcuthasahighlynonlineareffect
+28.Ahrens,T.J.&Harris,A.W.Deflectionandfragmentationofnear-Earthasteroids.Nature360,429– random
+433(1992). onL,contractingthedistancenotjustbetweenthepairofvertices
+29.ResourcesofNear-EarthSpace(edsLewis,J.S.,Matthews,M.S.&Guerrieri,M.L.)(Univ.Arizona that it connects, but between their immediate neighbourhoods,
+Press,Tucson,1993).
+neighbourhoodsofneighbourhoodsandsoon.Bycontrast,anedge
+Acknowledgements.ThisworkwassupportedbyNASA’sPlanetaryGeologyandGeophysicsProgram.
+CorrespondenceandrequestsformaterialsshouldbeaddressedtoE.A.(e-mail:asphaug@earthsci.ucsc. *Presentaddress:PaulF.LazarsfeldCenterfortheSocialSciences,ColumbiaUniversity,812SIPA
+edu). Building,420W118St,NewYork,NewYork10027,USA.
+440 Nature © Macmillan Publishers Ltd 1998 NATURE|VOL393|4JUNE1998
+letters to nature
+removedfromaclusteredneighbourhoodtomakeashortcuthas,at model—it is probably generic for many large, sparse networks
+most,alineareffectonC;henceC(p)remainspracticallyunchanged foundinnature.
+forsmallpeventhoughL(p)dropsrapidly.Theimportantimplica- We now investigate the functional significance of small-world
+tionhereisthatatthelocallevel(asreflectedbyC(p)),thetransition connectivity fordynamicalsystems.Our testcaseisadeliberately
+toasmallworldisalmostundetectable.Tochecktherobustnessof simplified model for the spread of an infectious disease. The
+theseresults,wehavetestedmanydifferenttypesofinitialregular populationstructureismodelledbythefamilyofgraphsdescribed
+graphs,aswellasdifferentalgorithmsforrandomrewiring,andall inFig.1.Attimet ¼0,asingleinfectiveindividualisintroduce8d
+givequalitatively similar results. Theonly requirementis that the into an otherwise healthy population. Infective individuals are
+rewirededgesmusttypicallyconnectverticesthatwouldotherwise removed permanently (by immunity or death) after a period of
+bemuchfartherapartthanL . sicknessthatlastsoneunitofdimensionlesstime.Duringthistime,
+random
+The idealized construction above reveals the key role of short eachinfectiveindividualcaninfecteachofits healthyneighbours
+cuts. It suggests that the small-world phenomenon might be with probability r. On subsequent time steps, the disease spreads
+common in sparse networks with many vertices, as even a tiny along the edges of the graph until it either infects the entire
+fraction of short cuts would suffice. To test this idea, we have population, or it dies out, having infected some fraction of the
+computedLandCforthecollaborationgraphofactorsinfeature populationintheprocess.
+films (generated from data available at http://us.imdb.com), the
+electrical powergrid of the westernUnited States, and the neural
+networkofthenematodewormC.elegans17.Allthreegraphsareof
+Table1Empiricalexamplesofsmall-worldnetworks
+scientificinterest.Thegraphoffilmactorsisasurrogateforasocial
+network18,withtheadvantageofbeingmuchmoreeasilyspecified. ................................................L ...a..c.t.u..a..l.........................L ...r.a.n..d..o..m..........................C ....a.c..t.u..a..l.........................C ....r.a..n.d..o..m...
+Itisalsoakintothegraphofmathematicalcollaborationscentred, Filmactors 3.65 2.99 0.79 0.00027
+traditionally, on P. Erdo¨s (partial data available at http:// Powergrid 18.7 12.4 0.080 0.005
+www.acs.oakland.edu/,grossman/erdoshp.html). The graph of .C .... ..e ...l .e ..g ...a ...n ..s ..............................2 ... .6 ...5 ...............................2 ... .2 ...5 ..............................0 .... .2 ..8 .............................0 ... .0 ...5 .........
+the power grid is relevant to the efficiency and robustness of CharacteristicpathlengthLandclusteringcoefficientCforthreerealnetworks,compared
+torandomgraphswiththesamenumberofvertices(n)andaveragenumberofedgesper
+powernetworks19.AndC.elegansisthesoleexampleofacompletely vertex(k).(Actors:n¼225;226,k¼61.Powergrid:n¼4;941,k¼2:67.C.elegans:n¼282,
+mappedneuralnetwork. k¼14.)Thegraphsaredefinedasfollows.Twoactorsarejoinedbyanedgeiftheyhave
+actedinafilmtogether.Werestrictattentiontothegiantconnectedcomponent16ofthis
+Table 1 shows that all three graphs are small-world networks. graph,whichincludes,90%ofallactorslistedintheInternetMovieDatabase(availableat
+Theseexampleswerenothand-picked;theywerechosenbecauseof http://us.imdb.com),asofApril1997.Forthepowergrid,verticesrepresentgenerators,
+transformers and substations, and edges represent high-voltage transmission lines
+theirinherentinterestandbecausecompletewiringdiagramswere betweenthem.ForC.elegans,anedgejoinstwoneuronsiftheyareconnectedbyeither
+available. Thus the small-world phenomenon is not merely a asynapseoragapjunction.Wetreatalledgesasundirectedandunweighted,andall
+verticesasidentical,recognizingthatthesearecrudeapproximations.Allthreenetworks
+curiosity of social networks13,14 nor an artefact of an idealized showthesmall-worldphenomenon:L)L butCqC .
+random random
+1
+Regular Small-world Random 0.8 C(p) / C(0)
+0.6
+0.4
+L(p) / L(0)
+0.2
+0
+p = 0 p = 1 0.0001 0.001 0.01 0.1 1
+Increasing randomness p
+Figure1Randomrewiringprocedureforinterpolatingbetweenaregularring Figure2CharacteristicpathlengthL(p)andclusteringcoefficientC(p)forthe
+latticeandarandomnetwork,withoutalteringthenumberofverticesoredgesin familyofrandomlyrewiredgraphsdescribedinFig.1.HereLisdefinedasthe
+thegraph.Westartwitharingofnvertices,eachconnectedtoitsknearest numberofedgesintheshortestpathbetweentwovertices,averagedoverall
+neighboursbyundirectededges.(Forclarity,n¼20andk¼4intheschematic pairsofvertices.TheclusteringcoefficientC(p)isdefinedasfollows.Suppose
+examplesshownhere,butmuchlargernandkareusedintherestofthisLetter.) that avertex v has kv neighbours; then at most k vðk v21Þ=2 edges can exist
+Wechooseavertexandtheedgethatconnectsittoitsnearestneighbourina betweenthem(thisoccurswheneveryneighbourofvisconnectedtoeveryother
+clockwisesense.Withprobabilityp,wereconnectthisedgetoavertexchosen neighbourofv).LetCvdenotethefractionoftheseallowableedgesthatactually
+uniformlyatrandomovertheentirering,withduplicateedgesforbidden;other- exist.DefineCastheaverageofCvoverallv.Forfriendshipnetworks,these
+wiseweleavetheedgeinplace.Werepeatthisprocessbymovingclockwise statisticshaveintuitivemeanings:Listheaveragenumberoffriendshipsinthe
+aroundthering,consideringeachvertexinturnuntilonelapiscompleted.Next, shortestchainconnectingtwopeople;Cvreflectstheextenttowhichfriendsofv
+weconsidertheedgesthatconnectverticestotheirsecond-nearestneighbours arealsofriendsofeachother;andthusCmeasuresthecliquishnessofatypical
+clockwise.Asbefore,werandomlyrewireeachoftheseedgeswithprobabilityp, friendshipcircle.Thedatashowninthefigureareaveragesover20random
+andcontinuethisprocess,circulatingaroundtheringandproceedingoutwardto realizationsoftherewiringprocessdescribedinFig.1,andhavebeennormalized
+moredistantneighboursaftereachlap,untileachedgeintheoriginallatticehas bythevaluesL(0),C(0)foraregularlattice.Allthegraphshaven¼1;000vertices
+beenconsideredonce.(Astherearenk/2edgesintheentiregraph,therewiring andanaveragedegreeofk¼10edgespervertex.Wenotethatalogarithmic
+processstopsafterk/2laps.)Threerealizationsofthisprocessareshown,for horizontalscalehasbeenusedtoresolvetherapiddropinL(p),correspondingto
+differentvaluesofp.Forp¼0,theoriginalringisunchanged;aspincreases,the theonsetofthesmall-worldphenomenon.Duringthisdrop,C(p)remainsalmost
+graphbecomes increasinglydisordered untilforp¼1,alledgesarerewired constantatitsvaluefortheregularlattice,indicatingthatthetransitiontoasmall
+randomly.Oneofourmainresultsisthatforintermediatevaluesofp,thegraphis worldisalmostundetectableatthelocallevel.
+a small-world network: highly clustered like a regular graph, yet with small
+characteristicpathlength,likearandomgraph.(SeeFig.2.)
+NATURE|VOL393|4JUNE1998 Nature © Macmillan Publishers Ltd 1998 441
+letters to nature
+Tworesultsemerge.First,thecriticalinfectiousnessr ,atwhich changes in the number of concurrent partners are obvious to an
+half
+thediseaseinfectshalfthepopulation,decreasesrapidlyforsmallp individual,whereastransitionsleadingtoasmallerworldarenot.
+(Fig.3a).Second,foradiseasethatissufficientlyinfectioustoinfect Wehavealsoexaminedtheeffectofsmall-worldconnectivityon
+the entire population regardless of its structure, the time T(p) three other dynamical systems. In each case, the elements were
+required for global infection resembles the L(p) curve (Fig. 3b). coupledaccordingtothefamilyofgraphsdescribedinFig.1.(1)For
+Thus,infectiousdiseasesarepredictedtospreadmuchmoreeasily cellularautomata charged with thecomputational task of density
+andquicklyinasmallworld;thealarmingandlessobviouspointis classification25,wefindthat asimple‘majority-rule’runningona8
+howfewshortcutsareneededtomaketheworldsmall. small-worldgraph canoutperform all knownhuman and genetic
+Ourmodeldiffersinsomesignificantwaysfromothernetwork algorithm-generated rules running on a ring lattice. (2) For the
+modelsof diseasespreading20–24.Allthemodelsindicatethat net- iterated,multi-player‘Prisoner’sdilemma’11playedonagraph,we
+workstructureinfluencesthespeedandextentofdiseasetransmis- findthatasthefractionofshortcutsincreases,cooperationisless
+sion,butourmodelilluminatesthedynamicsasanexplicitfunction likelytoemergeinapopulationofplayersusingageneralized‘tit-
+ofstructure(Fig.3),ratherthanforafewparticulartopologies,such for-tat’26strategy.Thelikelihoodofcooperativestrategiesevolving
+asrandomgraphs,starsandchains20–23.Intheworkclosesttoours, out of an initial cooperative/non-cooperative mix also decreases
+KretschmarandMorris24haveshownthatincreasesinthenumber with increasing p. (3) Small-world networks of coupled phase
+ofconcurrentpartnershipscansignificantlyacceleratethepropaga- oscillators synchronize almost as readily as in the mean-field
+tionofasexually-transmitteddiseasethatspreadsalongtheedgesof model2, despite having orders of magnitude fewer edges. This
+a graph. All their graphs are disconnected because they fix the result may be relevant to the observed synchronization of widely
+averagenumberofpartnersperpersonatk¼1.Anincreaseinthe separated neuronsinthevisual cortex27if,asseemsplausible,the
+number of concurrent partnerships causes faster spreading by brainhasasmall-worldarchitecture.
+increasingthenumberofverticesinthegraph’slargestconnected We hope that our work will stimulate further studies of small-
+component. In contrast, all our graphs are connected; hence the world networks. Their distinctive combination of high clustering
+predictedchangesinthespreadingdynamicsareduetomoresubtle with short characteristic path length cannot be captured by
+structural features than changes in connectedness. Moreover, traditional approximationssuchasthosebasedonregularlattices
+or random graphs. Although small-world architecture has not
+receivedmuchattention,wesuggestthatitwillprobablyturnout
+tobewidespreadinbiological,socialandman-madesystems,often
+withimportantdynamicalconsequences. M
+a
+Received27November1997;accepted6April1998.
+0.35
+1. Winfree,A.T.TheGeometryofBiologicalTime(Springer,NewYork,1980).
+2. Kuramoto,Y.ChemicalOscillations,Waves,andTurbulence(Springer,Berlin,1984).
+3. Strogatz,S.H.&Stewart,I.Coupledoscillatorsandbiologicalsynchronization.Sci.Am.269(6),102–
+0.3
+109(1993).
+4. Bressloff,P.C.,Coombes,S.&DeSouza,B.Dynamicsofaringofpulse-coupledoscillators:agroup
+theoreticapproach.Phys.Rev.Lett.79,2791–2794(1997).
+r 0.25 5. Braiman,Y.,Lindner,J.F.&Ditto,W.L.Tamingspatiotemporalchaoswithdisorder.Nature378,
+half 465–467(1995).
+6. Wiesenfeld,K.Newresultsonfrequency-lockingdynamicsofdisorderedJosephsonarrays.PhysicaB
+222,315–319(1996).
+0.2 7. Gerhardt,M.,Schuster,H.&Tyson,J.J.Acellularautomatonmodelofexcitablemediaincluding
+curvatureanddispersion.Science247,1563–1566(1990).
+8. Collins,J.J.,Chow,C.C.&Imhoff,T.T.Stochasticresonancewithouttuning.Nature376,236–238
+0.15 (1995).
+0.0001 0.001 0.01 0.1 1 9. Hopfield,J.J.&Herz,A.V.M.Rapidlocalsynchronizationofactionpotentials:Towardcomputation
+p withcoupledintegrate-and-fireneurons.Proc.NatlAcad.Sci.USA92,6655–6662(1995).
+10.Abbott,L.F.&vanVreeswijk,C.Asynchronousstatesinneuralnetworksofpulse-coupledoscillators.
+Phys.Rev.E48(2),1483–1490(1993).
+11.Nowak,M.A.&May,R.M.Evolutionarygamesandspatialchaos.Nature359,826–829(1992).
+b
+12.Kauffman,S.A.Metabolicstabilityandepigenesisinrandomlyconstructedgeneticnets.J.Theor.Biol.
+1 22,437–467(1969).
+13.Milgram,S.Thesmallworldproblem.Psychol.Today2,60–67(1967).
+T(p) /T(0)
+14.Kochen,M.(ed.)TheSmallWorld(Ablex,Norwood,NJ,1989).
+0.8 L(p) /L(0) 15.Guare,J.SixDegreesofSeparation:APlay(VintageBooks,NewYork,1990).
+16.Bollaba´s,B.RandomGraphs(Academic,London,1985).
+17.Achacoso,T.B.&Yamamoto,W.S.AY’sNeuroanatomyofC.elegansforComputation(CRCPress,Boca
+0.6 Raton,FL,1992).
+18.Wasserman,S.&Faust,K.SocialNetworkAnalysis:MethodsandApplications(CambridgeUniv.Press,
+1994).
+0.4 19.Phadke,A.G.&Thorp,J.S.ComputerRelayingforPowerSystems(Wiley,NewYork,1988).
+20.Sattenspiel,L.&Simon,C.P.Thespreadandpersistenceofinfectiousdiseasesinstructured
+populations.Math.Biosci.90,341–366(1988).
+0.2 21.Longini,I.M.JrAmathematicalmodelforpredictingthegeographicspreadofnewinfectiousagents.
+Math.Biosci.90,367–383(1988).
+22.Hess,G.Diseaseinmetapopulationmodels:implicationsforconservation.Ecology77,1617–1632
+0 (1996).
+0.0001 0.001 0.01 0.1 1 23.Blythe,S.P.,Castillo-Chavez,C.&Palmer,J.S.Towardaunifiedtheoryofsexualmixingandpair
+formation.Math.Biosci.107,379–405(1991).
+p 24.Kretschmar,M.&Morris,M.Measuresofconcurrencyinnetworksandthespreadofinfectious
+disease.Math.Biosci.133,165–195(1996).
+25.Das,R.,Mitchell,M.&Crutchfield,J.P.inParallelProblemSolvingfromNature(edsDavido,Y.,
+Figure 3 Simulation results for a simple model of disease spreading. The Schwefel,H.-P.&Ma¨nner,R.)344–353(LectureNotesinComputerScience866,Springer,Berlin,
+1994).
+communitystructureisgivenbyonerealizationofthefamilyofrandomlyrewired 26.Axelrod,R.TheEvolutionofCooperation(BasicBooks,NewYork,1984).
+graphsusedinFig.1.a,Criticalinfectiousnessrhalf,atwhichthediseaseinfects 27.Gray,C.M.,Ko¨nig,P.,Engel,A.K.&Singer,W.Oscillatoryresponsesincatvisualcortexexhibitinter-
+columnarsynchronizationwhichreflectsglobalstimulusproperties.Nature338,334–337(1989).
+halfthepopulation,decreaseswithp.b,ThetimeT(p)requiredforamaximally
+infectiousdisease(r¼1)tospreadthroughouttheentirepopulationhasessen- Acknowledgements.WethankB.Tjadenforprovidingthefilmactordata,andJ.ThorpandK.Baeforthe
+tiallythesamefunctionalformasthecharacteristicpathlengthL(p).Evenifonlya WesternStatesPowerGriddata.ThisworkwassupportedbytheUSNationalScienceFoundation
+(DivisionofMathematicalSciences).
+fewpercentoftheedgesintheoriginallatticearerandomlyrewired,thetimeto
+globalinfectionisnearlyasshortasforarandomgraph. CorrespondenceandrequestsformaterialsshouldbeaddressedtoD.J.W.(e-mail:djw24@columbia.edu).
+442 Nature © Macmillan Publishers Ltd 1998 NATURE|VOL393|4JUNE1998
+

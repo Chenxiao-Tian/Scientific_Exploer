@@ -1,0 +1,63 @@
+Extracted Keywords:
+degree, degree distribution, BTER, GRAPH MODEL, BTER model, GRAPH, nodes, SIAM, SIAM license, graphs
+
+Main Topics:
+ 
+   
+ 
+     
+ 
+     
+ 
+     
+ 
+     
+ 
+     
+ 
+     
+ 
+     
+ 
+     
+ 
+     
+ 
+     
+ 
+    
+Copyright ©, Unauthorized reproduction, this article, SIAM J. S CI.COMPUT, c/circlecopyrt2014 Society, Applied Mathematics
+Vol, C452
+A SCALABLE GENERATIVE GRAPH MODEL, TAMARA G. KOLDA†, ALI PINAR†, TODD PLANTENGA†,ANDC, Network data, realistic generative network, The recently proposed block two-level Erd˝ os–
+R´enyi (BTER) model, two fundamental properties, degree distribution, clustering coeﬃcients, social networks, this paper, other scalable models, a better ﬁt, real data, a scalable implementation, onlyO(d
+max) storage, a single node, The generator, a Hadoop MapReduce implementation, a
+real-world Web graph, over 4.6 billion edges, the BTER model, a
+graph generator, idealized degree distributions, clusteringcoeﬃcient proﬁles, user speciﬁcations, Key words, graph generator, network data, two-lev
+
+Methodologies:
+The generator is
+trivially parallelizable, and we show results for a Hadoop MapReduce implementation for modeling a
+real-world Web graph with over 4.6 billion edges. A major obstacle to working in theﬁeld of network science is that access to d ata is restricted due to a combination of
+security and privacy concerns; yet models , algorithms, software, and hardware are
+struggling to keep pace with increasing demands for scalability and relevance. Since our approach generates all edges independently, it can be easilyparallelized. We alsocompareBTERto competing methods
+on a pair of smaller graphs.
+ However, we hav e recently proposed a sampling method that
+scales to very large graphs [ 47,25].
+ Unfortunately, SKG has some
+drawbacks: (1) It can be extremely expensive to ﬁt to real data (using KronFit, the
+SKG parameter ﬁtting algorithm proposed by the SKG inventors), and even then the
+ﬁt is im
+
+Research Outcomes:
+The generator is
+trivially parallelizable, and we show results for a Hadoop MapReduce implementation for modeling a
+real-world Web graph with over 4.6 billion edges. A major obstacle to working in theﬁeld of network science is that access to d ata is restricted due to a combination of
+security and privacy concerns; yet models , algorithms, software, and hardware are
+struggling to keep pace with increasing demands for scalability and relevance. Since our approach generates all edges independently, it can be easilyparallelized. We alsocompareBTERto competing methods
+on a pair of smaller graphs.
+ However, we hav e recently proposed a sampling method that
+scales to very large graphs [ 47,25].
+ Unfortunately, SKG has some
+drawbacks: (1) It can be extremely expensive to ﬁt to real data (using KronFit, the
+SKG parameter ﬁtting algorithm proposed by the SKG inventors), and even then the
+ﬁt is im

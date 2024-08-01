@@ -1,0 +1,123 @@
+References:
+
+Annexes/Appendices:
+
+Body Text:
+SATC_readme1
+We provide the pedestrian and vehicular data tables used in Hillier
+and Iida (2005), which was originally used as part of Penn et al.
+(1998), as the Standard Area Test Cases. Four areas have been chosen in
+central London, and the pedestrian and vehicular movement data as well
+as some physical characteristics of the streets have been collected.
+The areas are: - Barnsbury area in Islington - Clerkenwell area
+around Calthorpe Street - Knightsbridge area around Brompton Road -
+South Kensington museum sites
+The pedestrian movement data and the vehicular movement data are
+provided in separate tables. Each table contains 19 columns and each row
+in the table represents the 'gate' in which the observation took place.
+The description of each column is as follows:
+ID:
+The ID of the record
+Area_Name:
+The name of the area (Barnsbury, Calthorpe, Brompton or SKM)
+Gate_No:
+The unique identifier of the gate
+Axial_Map:
+the name of the axial map the data is related (Barnsbury,
+Clerkenwell or Kensington)
+Line ID:
+The ID of the corresponding axial line in the map on which
+the gate is plotted
+X:
+x-coordinate of the gate on the map
+Y:
+Page 1
+SATC_readme1
+y-coordinate of the gate on the map
+mov_ad_ph:
+Movement rate of adult pedestrians per hour
+mov_veh_ph:
+Movement rate of vehicles per hour
+landuse:
+The predominant ground-level land use of the street segment
+trafmanage:
+The state of the traffic management of the street
+segment. Either 'twoway' (two-way through traffic), 'oneway' (one-way
+through traffic), 'pedestrian' (pedestrian only), 'vehculdesac'
+(cul-de-sac for vehicular traffic) and 'restricted' (restricted access).
+streettype:
+The type of street segment indicating the hierarchy
+within the street network. Either 'primary', 'secondary' or 'local'.
+avebuildheight:
+Average building height (in stories) in the street segment.
+maxbuildheight:
+Maximum building height (in stories) in the street segment.
+diff_max_avbheight:
+maxbuildheight - avebuildheight
+street_width:
+The width of the street (in metres).
+pavement_width:
+The width of the pedestrian pavement (in metres), if it exists.
+gross_veh_road_width:
+street_width - pavement_width, indicating the gross width of the street
+provided for vehicles.
+parking_width:
+The width of the area in the street segment which can
+be used for parking vehicles.
+Page 2
+SATC_readme1
+effective_road_width:
+gross_veh_road_width - parking_width,
+indicating the width of the street segment provided for vehicles in
+effect.
+The gate number of each area is taken directly from the ID of the
+original gate map of the observation carried out and used for 1998
+paper. However, some gates have been omitted from the standard data.
+This is due to:
+- No data was collected on the gate, or at least we did not have any
+data for the gate when we compiled the standard data (Barnsbury: 4, 5,
+27, 33, 34, 35, 46, 54, 55, 56, 57, 60, 86, 87, 97, 98, 110, 115, 116,
+121. South Kensington: 67).
+- The gate is located on the cul-de-sac, therefore not generating
+any 'through' movement (Barnsbury: 36, 89, 90, 93, 113, 123).
+- The street segment on which the gate exists cannot be considered
+as carrying normal flow, such as a back street (South Kensington: 39),
+mews (Brompton: 129, 144), steps leading up to a property (South
+Kensington: 55), streets inside the estate (Calthorpe: 6, 31, 32, 34) or
+streets inside the college campus (South Kensington: 59, 60, 61, 62, 63,
+68, 69, 70, 71, 72, 73, 74, 75, 76, 77).
+- The gate is on the pedestrian path in the park for which the
+segment does not exist in the map (South Kensington: 43, 44).
+- The gate is considered to be on the 'affected' street segment
+where linearly continued adjacent street segments have such traffic
+restriction that the segment is thought to be severely deprived of its
+Page 3
+SATC_readme1
+major source of movement (Barnsbury: 20. Calthorpe: 7, 15, 17. South
+Kensington: 8. Brompton: 178).
+Each gate is assigned to a corresponding segment in the map; no
+segment has more than one gates assigned, and no gate is assigned to
+more than one segment, except gate 42 in Barnsbury where two axial lines
+intersect in the section including the gate. When more than one segments
+are available for the gate, the segment which has the maximum value of
+integration is always chosen.
+The data tables are provided as plain text files (.txt) in CSV
+(comma-separated value) format. Pedestrian movement data and vehicular
+movement data are provided separately. The map data for the gates is
+also included in the same archive. They are provided in three format:
+text table (.txt), DXF (.dxf) and MapInfo MIF (.mif).
+We also provide three axial maps of areas of London -- Barnsbury,
+Clerkenwell and South Kensington. The data is provided in four different
+formats: two plain text tables, DXF and MapInfo MIF. MIF and the text
+table in 'Tables' folder contain some results of space syntax axial
+analysis, whereas DXF and the text table in 'TXT' only contain x,
+y-coordinates of the lines. The default projection system in MIF is 'Non
+Earth'.
+For any enquiries regarding this data set, please contact Shinichi
+Iida <s.iida@ucl.ac.uk>.
+Page 4
+SATC_readme1
+We hope this data set helps your research.
+Shinichi Iida The Bartlett, UCL
+Page 5
+

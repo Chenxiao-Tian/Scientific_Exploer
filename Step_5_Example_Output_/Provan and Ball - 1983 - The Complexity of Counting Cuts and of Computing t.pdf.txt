@@ -1,0 +1,47 @@
+Extracted Keywords:
+cardinality, VERTEX COVER, vertex, cut, P-complete, problems, cardinality network, ofminimum cardinality, reliability, network
+
+Main Topics:
+Vol.12,No.4,November 1983983Society forIndustrial andApplied Mathematics, 01.25/0
+THECOMPLEXITY OFCOUNTING, THE
+PROBABILITY THATAGRAPH ISCONNECTED, ANDMICHAEL O.BALLS
+Abstract, Several enumeration andreliability problems, tobeP-complete, andhence, leastashardasNP-complete problems, areimportant problems innetwork reliability analysis, computing theprobability, thenumber ofminimum cardinality, network cuts, Alsoshown tobeP-complete arecounting vertex, inabipartite
+graph, antichains inapartial order, thatagraph isconnected
+andtheprobability thatapairofvertices, network reliability
+1.Introduction, Theinherent intractability ofcertain counting andreliability
+problems, complete classofcounting problems, inthisclassareatleastashardasNP-complete problems, toshowthatseveral important counting andreliability problems, perfect matchings, theproba-
+bilitythattwogivennodes inaprobabilistic graph, Th
+
+Methodologies:
+The"hardest"
+problems inNParecalled NP-complete; itisgenerally considered unlikely that
+polynomial algorithms existforsolving problems inthisclass. Toillustrate thispoint,
+notethatapolynomial algorithm todetermine thenumber ofHamiltonian circuits in
+agraph would immediately giveapolynomial algorithm todetermine ifagraph
+contained atleastoneHamiltonian circuit. Toillustrate thispoint,
+notethatapolynomial algorithm todetermine thenumber ofHamiltonian circuits in
+agraph would immediately giveapolynomial algorithm todetermine ifagraph
+contained atleastoneHamiltonian circuit. PROVAN ANDMICHAEL O.BALL
+10.(s,t)CONNECTEDNESS RELIABILITY e-APPROXIMATION
+Input: graphGV,E),s,tV,e>O,rational p,0<-p<-1
+Output: rational rwithr-e<f(G,s, t;p)<r+e;
+Before goingontotheproof ofthetheorem, weillustrate howourresults fitin
+withprevious results concerning reliability andimportant related counting problems.
+ T
+
+Research Outcomes:
+The"hardest"
+problems inNParecalled NP-complete; itisgenerally considered unlikely that
+polynomial algorithms existforsolving problems inthisclass. Toillustrate thispoint,
+notethatapolynomial algorithm todetermine thenumber ofHamiltonian circuits in
+agraph would immediately giveapolynomial algorithm todetermine ifagraph
+contained atleastoneHamiltonian circuit. Toillustrate thispoint,
+notethatapolynomial algorithm todetermine thenumber ofHamiltonian circuits in
+agraph would immediately giveapolynomial algorithm todetermine ifagraph
+contained atleastoneHamiltonian circuit. PROVAN ANDMICHAEL O.BALL
+10.(s,t)CONNECTEDNESS RELIABILITY e-APPROXIMATION
+Input: graphGV,E),s,tV,e>O,rational p,0<-p<-1
+Output: rational rwithr-e<f(G,s, t;p)<r+e;
+Before goingontotheproof ofthetheorem, weillustrate howourresults fitin
+withprevious results concerning reliability andimportant related counting problems.
+ T

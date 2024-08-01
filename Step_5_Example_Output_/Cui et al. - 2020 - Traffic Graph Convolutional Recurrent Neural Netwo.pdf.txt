@@ -1,0 +1,35 @@
+Extracted Keywords:
+graph convolution, Trafﬁc Graph, trafﬁc network, Trafﬁc, Graph, Trafﬁc forecasting, convolution, Graph Convolutional, Network, trafﬁc states
+
+Main Topics:
+IEEE TRANSACTIONS, INTELLIGENT TRANSPORTAT ION SYSTEMS, Trafﬁc Graph Convolutional Recurrent Neural
+Network, A Deep Learning Framework, Network-Scale Trafﬁc Learning, Forecasting
+Zhiyong Cui, Student Member, Kristian Henrickson, R u, Student Member, Yinhai Wang, Senior Member, IEEE
+Abstract, Trafﬁc forecasting, a particularly challenging
+application, spatiotemporal forecasting, the time-varyingtrafﬁc patterns, the complicated spatial dependencies, this challenge, the trafﬁc, a graph, a novel deep learning framework, the interactions, roadways inthe trafﬁc network, the network-wide trafﬁc state, the trafﬁc graph convolution, the physicalnetwork topology, The relationship, the proposed trafﬁcgraph convolution, the spectral graph convolution, An L1-norm, graph convolution weights, graph convolution features, the model’sloss function, the interpretability, the proposedmodel, Experimental res
+
+Methodologies:
+Experimental results show that the proposed modeloutperforms baseline methods on two real-world trafﬁc statedatasets. Experimental results show that the proposed modeloutperforms baseline methods on two real-world trafﬁc statedatasets. Since the volume and variety
+of trafﬁc data has been increasing in recent years, data-driven
+trafﬁc forecasting methods have shown considerable promisein their ability to outperform conventional and simulation-
+based methods [1].
+ Since the volume and variety
+of trafﬁc data has been increasing in recent years, data-driven
+trafﬁc forecasting methods have shown considerable promisein their ability to outperform conventional and simulation-
+based methods [1].
+ Since the volume and variety
+of trafﬁc data has been increasing in recent years, data-driven
+trafﬁc forecasting methods have shown considerable promisein their ability to outperform conventional and sim
+
+Research Outcomes:
+Experimental results show that the proposed modeloutperforms baseline methods on two real-world trafﬁc statedatasets. Experimental results show that the proposed modeloutperforms baseline methods on two real-world trafﬁc statedatasets. Since the volume and variety
+of trafﬁc data has been increasing in recent years, data-driven
+trafﬁc forecasting methods have shown considerable promisein their ability to outperform conventional and simulation-
+based methods [1].
+ Since the volume and variety
+of trafﬁc data has been increasing in recent years, data-driven
+trafﬁc forecasting methods have shown considerable promisein their ability to outperform conventional and simulation-
+based methods [1].
+ Since the volume and variety
+of trafﬁc data has been increasing in recent years, data-driven
+trafﬁc forecasting methods have shown considerable promisein their ability to outperform conventional and sim

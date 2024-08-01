@@ -1,0 +1,28 @@
+Extracted Keywords:
+street segment, South Kensington, gate, Street, data, segment, width, Kensington, Barnsbury, South
+
+Main Topics:
+the pedestrian and vehicular data tables, Penn et al, the Standard Area Test Cases, Four areas, central London, the pedestrian and vehicular movement data, some physical characteristics, the streets, The areas, Barnsbury area, Islington - Clerkenwell area, Calthorpe Street - Knightsbridge area, Brompton Road -
+South Kensington museum sites, The pedestrian movement data, the vehicular movement data, separate tables, Each table, 19 columns, each row, the table, the 'gate, the observation, The description, each column, The ID, the record, The name, the area, The unique identifier, the gate
+Axial_Map, the name, the axial map, the data, (Barnsbury,
+Clerkenwell, Line ID, The ID, the corresponding axial line, the map, the gate, the gate, the map, the gate, the map, Movement rate, adult pedestrians, hour
+mov_veh_ph, Movement rate, hour
+landuse, The predominant ground-level land use, the street s
+
+Methodologies:
+SATC_readme1
+We provide the pedestrian and vehicular data tables used in Hillier
+and Iida (2005), which was originally used as part of Penn et al.
+(1998), as the Standard Area Test Cases. MIF and the text
+table in 'Tables' folder contain some results of space syntax axial
+analysis, whereas DXF and the text table in 'TXT' only contain x,
+y-coordinates of the lines.
+
+Research Outcomes:
+SATC_readme1
+We provide the pedestrian and vehicular data tables used in Hillier
+and Iida (2005), which was originally used as part of Penn et al.
+(1998), as the Standard Area Test Cases. MIF and the text
+table in 'Tables' folder contain some results of space syntax axial
+analysis, whereas DXF and the text table in 'TXT' only contain x,
+y-coordinates of the lines.

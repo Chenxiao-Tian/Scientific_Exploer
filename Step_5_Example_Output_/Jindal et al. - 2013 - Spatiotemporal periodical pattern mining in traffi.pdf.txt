@@ -1,0 +1,56 @@
+Extracted Keywords:
+Data, Traffic Data, stations, speed data, station, Traffic, road network, periods, road, time series
+
+Main Topics:
+Spatiotemporal Periodical Pattern Mining, Traffic Data 
+Tanvi Jindal, Prasanna Giridhar, Lu-An Tang, Jun Li, Jiawei Han 
+Department, Computer Science 
+University, The widespread use, road sensors, huge 
+amount, traffic data, various 
+different uses, frequent trajectories, the road 
+network, a big city, the way, the traffic 
+behaves, the city, city planning, traffic routing mechanisms, the best 
+routes, the region, the frequent patterns, even 
+the events, heavy snowfall, other extreme weather conditions, long 
+traffic jams, a periodic 
+occurrence, This problem, the frequent patterns, road traffic data, previous works, the context knowledge, the 
+road network, the city, this paper, a 
+method, spatiotemporal periodic patterns, the traffic 
+data, these periodic behaviors, the huge 
+road network, The first step, periodic patterns, the 
+speed data, individual road sensor stations, their 
+perio
+
+Methodologies:
+In this paper, we have developed a 
+method to mine spatiotemporal periodic patterns in the traffic 
+data and use these periodic behaviors to summarize the huge 
+road network. In addition to the basic route 
+discovery, we can even use this knowledge to develop 
+comprehensive methods that take into account the frequently 
+traveled roads, the weather conditions, the traffic conditions, and 
+so on. There are many challenges in being able to extract such 
+information from the raw data. We have modified the period 
+detection approach from the KDD’10 paper to fit the needs of our 
+dataset, to find the multiple periods in the traffic data.  
+ Apart from periodicity finding methods, there have been efforts 
+to develop much more comprehensive systems to summarize 
+traffic data and use them for various applications. Apart from periodicity finding methods, there have been efforts 
+to develop much mo
+
+Research Outcomes:
+In this paper, we have developed a 
+method to mine spatiotemporal periodic patterns in the traffic 
+data and use these periodic behaviors to summarize the huge 
+road network. In addition to the basic route 
+discovery, we can even use this knowledge to develop 
+comprehensive methods that take into account the frequently 
+traveled roads, the weather conditions, the traffic conditions, and 
+so on. There are many challenges in being able to extract such 
+information from the raw data. We have modified the period 
+detection approach from the KDD’10 paper to fit the needs of our 
+dataset, to find the multiple periods in the traffic data.  
+ Apart from periodicity finding methods, there have been efforts 
+to develop much more comprehensive systems to summarize 
+traffic data and use them for various applications. Apart from periodicity finding methods, there have been efforts 
+to develop much mo

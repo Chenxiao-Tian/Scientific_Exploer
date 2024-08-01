@@ -1,0 +1,719 @@
+References:
+Sustainability2020,12,628 12of13
+attributeddata,suchastheclassofroadorthefeaturesofthenodes,fromthee-map;thismayreduce
+accuracywhenanalyzingtheconnectivityoflocalroads,especiallyfortopologicalanalysis.
+Secondly, this study also partly neglected road link attributes, street function,
+accessibility,andotherfactorsthatmayfurtherreflectthestructureofthestreetnetworkinsomeway.
+Ontheotherhand,addingmoreindicatorswouldverylikelyincreasethedifficultyoftheresearchand
+theuncertaintyoftheresults.
+Additionally, it is found that when different observation scales are used, the indicator value
+maychange,owingtodatafilteringorboundaryeffects. Thisisofgreatsignificanceforthefractal
+characteristics of the network, which are another important method of judging the hierarchy and
+self-similarityofthestreetsystem.
+Onthewhole,atree-likenetworkreflectsthebasiccharacteristicsofatransportationnetwork
+betterthanagrid-likenetwork. Indeed,agrid-likeroadnetworkcanbetransformedintoatree-like
+onebyrestrictingthedirectionoftrafficflow.
+Subsequentresearchontheroadnetworkformshouldnotbelimitedtogeometricparameters;
+thespatiallayoutofthetrafficflowlinesshouldalsobeconsidered. Havingdistinguishedthedifferent
+typesofnetworks,thenextstepistoanalyzethedifferencesintrafficandlandusebenefitsbetween
+different micropatterns. This research will promote technological compatibility and coordination
+betweenstreetnetworkandotherlanduse.
+AuthorContributions: Conceptualization, B.H.; methodology, B.H.andD.S.; software, L.D.; validation, X.Y.
+and D.S.; formal analysis, X.Y. and D.S.; investigation, W.S. and L.D.; resources, L.D.; data curation, W.S.;
+writing—originaldraftpreparation,X.Y.andW.S.;writing—reviewandediting,B.H.andD.S.Allauthorshave
+readandagreedtothepublishedversionofthemanuscript.
+Funding: This research was funded by the Science and Technology Project of the Ministry of Housing and
+Construction (MHC) of China, grant number (2017-k2-008, to Han BR) and The APC was funded by China
+ScholarshipCouncil(CSC)funding,grantnumber(201808320054,toHanBR).
+Acknowledgments: WethankZhouYuforthetechnicalassistancewithsoftwareanalysis. HeLLcollectedthe
+examplesofdocumentaries.
+ConflictsofInterest: Theauthorsdeclarenoconflictofinterest. Thefundershadnoroleinthedesignofthe
+study;inthecollection,analyses,orinterpretationofdata;inthewritingofthemanuscript,orinthedecisionto
+publishtheresults.
+References
+1. Boeing,G.Amulti-scaleanalysisof27,000urbanstreetnetworks: EveryUScity,town,urbanizedarea,
+andZillowneighborhood. Environ. Plan. BUrbanAnal. CitySci. 2018,8,1–19. [CrossRef]
+2. Brindle,R.E.RoadHierarchyandFunctionalClassification. Spec. Rep. 1996,53,99–109.
+3. Ye,P.Y.;Chen,X.H.ReviewsofRadburnIdea’sRoadandTrafficPlanning. UrbanPlan. Int. 2009,24,69–73.
+4. Southworth,M.;Eran,B.J.StreetsandtheShapingofTownsandCities,2nded.;IslandPress: Washington,DC,
+USA,2003;ISBN1-55963-916-4.
+5. Strano, E.; Luciano da Fontoura Costa, M.V.; Cardillo, A.; Porta, S.; Latora, V. Urban street networks,
+acomparativeanalysisoftenEuropeancities. Environ. Plan. BPlan. Des. 2013,40,1071–1086. [CrossRef]
+6. Von,V.;Jaber,S.UrbanStreets: TowardsSustainableMobilityinArabicCities;UniversityatStuttgart: Stuttgart,
+Germany,2013. [CrossRef]
+7. Cai, J. Urban Road Network System Planning; China Construction Industry Press: Beijing, China, 2013;
+ISBN978-7-112-15824-9.
+8. Jiang,B.StreetHierarchies: AMinorityofStreetsAccountforaMajorityofTrafficFlow. Int. J.Geogr. Inf. Sci.
+2009,23,1033–1048. [CrossRef]
+9. Buhl,J.;Gautrais,J.;Reeves,N.;Sole,R.V.;Valverde,S.;Kuntz,P.;Theraulaz,G.TopologicalPatternsinStreet
+NetworksofSelf-OrganizedUrbanSettlements. Eur. Phys. J.2006,49,513–522. [CrossRef]
+10. Marshall,S.Streets&Patterns,1sted.;ChinaArchitecture&BuildingPress: Beijing,China,2011;pp.35–37.
+ISBN978-7-112-12724-5.
+11. Xie,F.;Levinson,D.Measuringthestructureofroadnetworks. Geogr. Anal. 2007,39,336–356. [CrossRef]
+
+Annexes/Appendices:
+
+Body Text:
+sustainability
+Article
+Classification of Urban Street Networks Based on
+Tree-Like Network Features
+BaoruiHan1 ,DazhiSun2,*,XiaomeiYu1,WanluSong1andLishaDing1
+1 DepartmentofTrafficEngineering,CollegeofAutomobileandTrafficEngineering,NanjingForestry
+University,Nanjing210037,China;hanbaorui@sina.com(B.H.);YuXiaoMei3527@163.com(X.Y.);
+songwanlu2019@163.com(W.S.);13770715092@163.com(L.D.)
+2 DepartmentofCivilandArchitecturalEngineering,TexasA&MUniversity-Kingsville,Kingsville,
+TX78363,USA
+* Correspondence: dazhi.sun@tamuk.edu
+(cid:1)(cid:2)(cid:3)(cid:1)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:1)
+(cid:1)(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)
+Received: 16December2019;Accepted: 10January2020;Published: 15January2020
+Abstract: Urbanstreetnetworksderivetheircomplexitynotonlyfromtheirhierarchicalstructure,
+but also from their tendency to simultaneously exhibit properties of both grid-like and tree-like
+networks. Using topological indicators based on planning parameters, we develop a method of
+networkdivisionthatmakesclassificationofsuchintermediatenetworkspossible. Toquantitatively
+describethedifferencesbetweenstreetnetworkpatterns,wefirstcarefullydefineatree-likenetwork
+structureaccordingtotopologicalprinciples. Basedontherequirementsofroadplanning,webroaden
+thisdefinitionandalsoconsiderthreeothertypesofstreetnetworkswithdifferentmicrostructures.
+Wesystematically compare the structure variables (connectivity, hierarchy, and accessibility) of
+selectedstreetnetworksaroundtheworldandfindseveralexplanatoryparameters(includingthe
+relativeincidenceofthroughstreets, cul-de-sacs, andT-typeintersections), whichrelatenetwork
+functionandfeaturestonetworktype. Wefindthatbymeasuringanetwork’sdegreeofsimilarity
+toatree-likenetwork,wecanrefinetheclassificationsystemtomorethanfourclasses,aswellas
+easilydistinguishbetweentheextremecasesofpuregrid-likeandtree-likenetworks. Eachindicator
+has different distinguishing capabilities and is adapted to a different range, thereby permitting
+networkstobegroupedintocorrespondingtypeswhentheindicatorsareevaluatedinacertainorder.
+Thisresearchcanfurtherimprovethetheoryofinteractionbetweentransportationandlanduse.
+Keywords: planningparameters;streetnetwork;networkdivision;tree-likenetwork
+1. Introduction
+Thegeometricstructureofthestreetnetworkisdeterminedbythefunctionsthenetworkservers
+foraswellasthephysicalgeographicalcontext. Inmostcases, theroadnetworkhasafixedform
+because of the nature of the area that it serves; the density and pattern of a network of street
+blocksareusuallydeterminedbylocationandhistory. Boeinganalyzed27,000U.S.streetnetworks,
+including metropolitan, municipal, and residential areas, and discussed the types of connection
+(T-intersectionratio,X-intersectionratio,andcul-de-sacratio)fordifferenttypesofstreetnetworks.
+This is aremarkable feature of the network form between the city center and the suburbs; that is,
+thenetwork located in a center usually has a grid-type structure, while those located in suburbs
+commonlyhaveabranchingshape,likethatofatreeorariver[1].Otherstreetnetworksaresometimes
+classedasbelongingtooneortheotherofthesetwopatterns,buttheyoftenhaveaspectsofboth;at
+smallscales,thereseemstonoclearborderbetweengrid-likeandtree-likepatternsdistinguishableby
+conventionaltrafficplanningindicators,suchasdensityandroadinterval.
+Sustainability2020,12,628;doi:10.3390/su12020628 www.mdpi.com/journal/sustainability
+Sustainability2020,12,628 2of13
+Sustainability 2020, 12, x FOR PEER REVIEW 2 of 13
+FFiigguurree 11 sshhoowwss hhooww ssttrreeeett nneettwwoorrkkss ttyyppiiccaallllyy cchhaannggee wwiitthh llooccaattiioonn,, aappppaarreennttllyy eevvoollvviinngg ffrroomm
+ggrriidd--lliikkee ttoo ttrreeee--lliikkee.. TThhee iinntteerrmmeeddiiaattee ssttaaggeess rraaiissee sseevveerraall qquueessttiioonnss.. HHooww mmuucchh ddooeess tthhee aaccttuuaall
+ssttrreeeett nneettwwoorrkk aatt aa ggiivveenn ssttaaggee vvaarryy ffrroomm aann iiddeeaall ggrriidd?? DDoo tthheessee iirrrreegguullaarr--llooookkiinngg nneettwwoorrkkss iinn ffaacctt
+ccoonnffoorrmm ttoo sseevveerraall bbaassiicc ttyyppeess?? IIff ssoo,, wwhhaatt iinnddiiccaattoorrss ccaann bbee aaddoopptteedd ffoorr ffuurrtthheerr ddiivviissiioonn?? FFrroomm
+FFiigguurree 11,, tthhee eexxiisstteennccee ooff rreepprreesseennttaattiivvee ssttrreeeett nneettwwoorrkk ttyyppeess iinn ddiifff feerreenntt rreeggiioonnss ooff cciittiieess mmaayy bbee
+iinnffeerrrreedd,, tthheerreebbyy ssuuggggeessttiinngg ppootteennttiiaall llaawwss ggoovveerrnniinngg uurrbbaann nneettwwoorrkk ppaatttteerrnnss..
+FFiigguurree 11.. FFoouurr rreepprreesseennttaattiivvee ssttrreeeett nneettwwoorrkk ttyyppeess iinn ddiiffffeerreenntt rreeggiioonnss ooff aa cciittyy..
+BBrriinnddllee pprrooppoosseeddt htahtatth tehreeraer eaoren loyntwlyo tmwaoj omrtayjopre styopfsetsr eoeft nsterteweot rnkesttwruocrtku rsetsr:utchteurgersid: tnheet wgorirdk
+nanetdwtohrekt raenedn ethtwe otrreke, dniesttwinogruki,s hdeisdtibnyguthisehdeedg rbeye tohfec odnengereceti voift ycoonfntheectriovaitdys o[2f ]t.hTeh riosavdiesw [2p]o. iTnhtiiss
+valiseowtphoeinstt airst ainlsgop tohien sttoafrttihneg pproeisnetn otfp tahpe epr.reHseonwt epvaepre,rt.h Hisotwheeovreyr,d toheiss tnhoetoaryd ddroeesss nthoet aqdudersetisosn thoef
+qhuowesteioxanc otlfy htohwer eexstacotflyin ttheerm reesdti oatfe innteetrwmoerdkisaatere ndeitff weorreknst .aDreu deitfofeirtesnstt.r iDctuhei etora irtcsh sitcraiclta hnideriasorclahtiicnagl
+achnadr aiscotelaritsintigcs ,chaatrraecet-elirkisetincest, wao rtrkeeis-ltihkoe ungehttwtoorgku iasr atnhtoeuegphet dteos tgriuaanrasanfteetey paenddersetrdiuance suanfewtya natnedd
+rthedrouucge hutnrawffi anc.teAdl ththoruoguhghit htraasffbice.e nAaltphpoluiegdh init uhrabsa nbpeelann napinpglipedra cinti cuerbbyanp lapnlanninnginpgi opnreaecrtsicsei nbcye
+pthlaen1n9i3n0gs p[3io,4n],eethrse rseinisces ttihllen 1o93cl0esa [r3t,h4]e,o trheetricea ilsa sntislwl neor. clear theoretical answer.
+IInn tthhee aassppeecctt ooff uurrbbaann ggeeoommeettrryy,, SSttrraannoo eett aall.. [[55]] ddiivviiddeedd tthhee EEuurrooppeeaann uurrbbaann rrooaadd nneettwwoorrkk iinnttoo
+ddiifff feerreenntt ggrroouuppss bbyy pprriinncciippaall ccoommppoonneenntt aannaallyyssiiss.. HHoowweevveerr,, bbeeccaauussee tthhee rreesseeaarrcchh iiss bbaasseedd oonn tthhee
+ssttaattiissttiiccaall aannaallyyssiiss ooff tthhee mmaaccrroo uurrbbaann ssttrruuccttuurree,, tthhee rreessuullttss ccaannnnoott hhaavvee aann iimmppaacctt oonn ssmmaallll rreeggiioonnaall
+llaanndd ppllaannnniinngg.. VVoonn aanndd JJaabbeerr ssyysstteemmaattiiccaallllyy aannaallyyzzeedd tthhee rreellaattiioonnsshhiipp bbeettwweeeenn tthhee ssttrruuccttuurree aanndd
+tteexxttuurree ooffu rubrabnanro arodande tnweotwrkoarnkd acnudlt ucrualltuchraalr acchtearriasctitcesriisntitchse iMn idthdele MEaidstd,laen dEadsits,c uasnsded dmisecaussusreeds
+mtoeiamsuprreosv etot himeptrraodvieti othnea ltrAadraibtiornoaadl Anreatwb roorakdc onmetbwinoerkd cwoimthbWineesdt ewrnithid Weaess[t6e]r.n ideas [6].
+DDeevveellooppiinngg aa mmeetthhoodd ttoo ddeessccrriibbeet thhees strtruucctuturraalld diff ifefreernencecseso fonf entewtworokrskbs ybyp lpalnanninnignign idnidcaictoartosriss
+iasl saolsao da idffi ifcfuiclutlits sisuseu.eT. Trardaditiitoinonalallyl,yt,h theei ninddiciacatotorsrsa addooppteteddi nins sttrreeeett--nneettwwoorrkk ppllaannnniinngg hhaavvee uussuuaallllyy
+bbeeeenn rreellaatteedd ttoot htheeg egoemometertyryo fotfh ethnee tnwetowrko:rkd:i sdtaisntcaen,cdee, ndseitnys,iatyre, aa,reetac,. eHtco.w Hevoewr,etvheer,v tahlue evsaolfutehse osef
+tihnedsiec aitnodrsicfaotrotrhs efotwr othkei ntdwsoo fkninedtws oorfk nsemtwayorskosm metaimy essombeevtiemryesc lboes ev,eervye nclwoshee, nehvueng ewdhiff eenr ehnucgees
+dexififsetriennpceast teexrnisst ainn dpafuttnercntiso nans.d functions.
+IInn rreecceenntt yyeeaarrss,, rreesseeaarrcchh oonn ssttrreeeett nneettwwoorrkk ssttrruuccttuurree hhaass mmaaiinnllyy ffooccuusseedd oonn tthhrreeee aassppeeccttss::
+hhiieerraarrcchhiiccaall sstrtruucctuturree,,c ocnonnencetciotinonst rsutcrtuucrteu,raen, danlady oluatysoturut cstutrruec[t7u]r.eH [i7e]r.a rHchieicraalrcshtriucactl usrteruiscutusruea lliys
+uresluaatelldy troetlhateeidn tteor nthale cionmteprnoasilt icoonmopfothsietinoent wofo rthke, wnheticwhohrkas, wanhiimchp hoartsa nant imimppaocrttoanntt himedpiascttr iobnu ttiohne
+dofisttrraibffi uctiflono wo.f tJriaanffgic[ f8l]oawn.d JiBanugh l[8e]t aanl.d[ 9B]uhhalv eet palr.o [v9i]d headvne epwroevvidideedn nceewas etvoidheonwcea acsi ttyo nheotww oar ckitiys
+nseeltfw-oorrgka niisz esdelffo-roragvaaniliazbelde mfoorb ialivtyaiblayblues inmgogbeiloitgyr apbyh icuisnifnogr mgaetoiognra.pMhaicr shinaflolrdmesactrioibne. dMneatrwshoarlkl
+dfoersmcrsibwedhi cnhetfwunodrka mfoernmtasl wimhpicahc tfeudntdraamveelnbteahl aimviopra,cdteisdt rtirbauvteiol nbeohfahvoimore, sdaisntdribwuotrioknp laocf ehso,mlanesd aunsde,
+wanodrkuprlbaacens,f olramnd[ 1u0s]e., Xanieda nudrbaLne vfionrsmon [p10ro].p oXsiee danthdr eLeenveinwsomn epasroupreoss,eidn ctlhurdeien gnehwet emroegaesnuereitsy,
+i(nenclturodpinyg), hceotnenroegcteinoenitpya (tetenrtnro,payn)d, ccoonnntiencutiiotyn, pspaettceirfinc,a allnyde xcoamntiinniunigty,t hsepesctrifuiccatullrye eoxfaumribnainngr otahde
+sntertuwctourrkes o[f1 1u]r.bBana rrtohaedle nmeytwaonrdksF l[a1m1]m.Bainrtihhealevmeysh aonwdn Filnamthmeiinris htuadvye sohfoswtrene itnn tehtewiro srtkusdtyh aotf isntrteheet
+nabetswenocrekso ftahagtl oibna ltdhees iagbnsesntrcaet egoyf ,ath egldoebvael lodpemsigennt sotframteagnyy, dtihff ee rdenevtetrlaonpsmpeonrtta toiof nmnaentwy odrkifsfedroenest
+tfroallnoswpoartsaimtiopnl en,egtewnoerrkals mdoeecsh afonlilsomw [a1 2s]i.mple, general mechanism [12].
+The search for a relationship between street network structure and urban land use has become a
+major research trend [13]. Researching hierarchical and functional structure, Southworth and
+Ben-Joseph applied spatial syntax theory to analyze the connection and accessibility of street
+Sustainability2020,12,628 3of13
+The search for a relationship between street network structure and urban land use has
+becomeamajorresearchtrend[13]. Researchinghierarchicalandfunctionalstructure,Southworth
+and Ben-Joseph applied spatial syntax theory to analyze the connection and accessibility of
+street networks [4]. This research was partly successful in interpreting how common people
+understand the spacious structure of a street network by their experiences. Marshall et al. [14],
+Southworthetal.[15],andLovegroveetal.[16]usednetworkdensity,connectivity,andpresenceof
+cul-de-sacs, respectively,asessential indicators for analyzing the connection effect and topological
+relationshipsofthenetwork. Theseresultsshowthatstreetnetworkcharacteristicsdoplayarolein
+roadsafetyoutcomes. Derribleobservedthenetworkcomplexityandrobustnessof33metrosystems
+aroundtheworld[17],andtestifiedthatthestructureofstreetnetworks,therefore,isaresultofthe
+interplaybetweentravelcostminimizationandefficientlanduse.
+Marshall,Giletal. usedalargeamountofdataandavarietyofanalysismethodstostudythe
+streetnetwork,proposedanetworkmodelingmethod,andoutlinedthemainstreetnetworkmodel
+features and the complex relationship between different network models [18]. Boeing(cid:48) s research
+on the structure of street networks, which calculates the structural indicators of street networks
+aroundtheworldandclassifiesthemintoclusters,helpedtorevealthescopeandnuancesofstreet
+networks[19]. ShiandWangbelievedthatthestreetnetworkstructureisnotsimplyahierarchical,
+connection,orlayoutstructure,butanorganiccombinationofthethree[20]. Portaetal. analyzedthe
+structureandfunctionofurbanroadnetworkwithspatialsyntax,whichshowedthatspatialsyntax
+cananalyzethein-depthconnotationandinternalorganizationofurbanroadnetwork[21].
+In addition, the spatial structure analysis of complex networks has also made important
+breakthroughs. For example, Mocnik’s research into polynomial volume law verified that the
+spatialdimensionofurbanroadnetworksisverystable,buttheconcentrationisquitedifferent[22,23].
+Thesestudieshaveanimportantreferenceforlaternetworktypeidentificationandnetworkattribute
+functionanalysis.
+Theseresearchresultsnotonlyshowthattheroadnetworkstructurehasmanyvariations,butalso
+indicatethatthetopologicalparametersoftheroadnetworkcanexplainthesechanges.
+2. Methodology
+Inthispaper,weattemptedtoredefinethetree-likestreetnetworkandanalyzeitsbasictopological
+features. Baseduponseveralreasonablepropertieswhichastreetnetworkshouldpossess,wethen
+constructedseveralbasicnetworkpatterns,andshowedreal-worldexamplesofthesepatternsfrom
+variousrealcitiesinChinaandelsewhere. Bycalculatingthetopologicalparametersofeachnetwork,
+acomparativeanalysiswascarriedout.
+2.1. TheTopologicalFeaturesoftheTree-LikeStreetNetwork
+In topology, a pure tree-like pattern is called a standard tree graph. By definition, a tree
+graphisaconnectedgraphthatisacyclic(i.e.,nosub-graphofthenetworkincludesacirclegraph).
+Additionaltopologicalcharacteristicsofatreegraphareasfollows: (1)Itsdegree(numberofvertices)
+VisexactlyonegreaterthanthenumberofitsedgesE;(2)thereexistsonlyonepathconnectingany
+two separate nodes; and (3) all connected sub-graphs are also tree graphs [24]. In the real world,
+however,therearealmostnotree-shapednetworksinthepuretopologicalsense.
+In a physical street network, traffic characteristics as well as topology should be taken into
+account. Therearethreedistinctfeaturesthatcanbeusedtodistinguishbetweenatreenetworkand
+agrid-likenetwork:
+(1) Asisusuallyobviousbyinspection,tree-likestreetnetworkshaveaclearerandmoredefined
+hierarchicalstructurethangrids. Thisconditionisnecessaryforanetworktobetree-like; in
+trafficengineeringterms,thearteryroadrunsthroughtheentirearea,whilethebranchroad
+clearlyservesasmallerone. Aroadisonlyallowedtoconnectwithroadsofthesamegradeor
+Sustainability2020,12,628 4of13
+nextgraderoads. Forexample,expresswaycouldconnectwithanotherexpresswayoranartery
+street,butnotalocalbranch.
+(2) There exist only a few route switches of different length between any two interior points of
+atree-likenetwork. Thisisanessentialdifferencefromthegridstreetnetwork;itisanecessary
+Sustainaanbidlitsy u20ffi 20c,i 1e2n, tx cFoOnRd PiEtiEoRn RfEoVrIaEWn etworktobeatreenetwork. Inmostcases,fewerlooprout4e soaf r1e3
+foundintree-likestreetnetworks. Thescarcityofcyclesalone,however,isnotenoughtojudge
+netwworhke tish etrreaen-leiktwe.o Irtk isis atlrseoe -nliekcee.sIstairsya ltsoo cnoencfeirsmsa riyf ttohecsoen ficyrmcleisf tchaens epcryocvliedsec amnupltriopvaitdhe lmikue ltai pgartihd
+netwloirkke. agridnetwork.
+(3) (T3h) eTrehearere arme omreorTe- tyTp-teypien tienrtseercsteioctniosnsa nadndb rborkoeknenr oraodasds inin ththee ttrreeee--lliikkee ssttrreeeett ssyysstteemm..
+UndoUunbdteodulbyt, etdhleys,et hTe-steypTe-t yinpteerisnetcetrisoencst iaonnds banrodkebnro rkoeandsr oraeddsucree daultceernaaltteivren aptaivthesp faotrh tsrafoffrict rfaloffiwc,
+but thfleoyw p,rbouvtidthee ay mproorvei dseecaurme oernevsierocunrmeeenntv airnodn tmhee ntytpanicdalt hapeptyeparicaanlcaep cpheaarraacntecreiscthicasr aocft ae rtirseteic-slikoef
+road anetrteweo-lrikk.e roadnetwork.
+22..22.. AAbbssttrraacctteedd EExxpprreessssiioonn ooff TTrreeee--LLiikkee SSttrruuccttuurree iinn tthhee SSttrreeeettN Neettwwoorrkk
+TThhiiss ppaappeerr iiss bbaasesded ono nthteh celacslsaisfiscifiatciaotnio onf sotfresettr eneettwneotrwkso rpkrsopporsoepdo bseyd CbhyanC eht aanl. e[2t5a].l .T[h2e5i]r.
+Trehseeiarrrcehs eraerscuhltrse dsuivltidseddiv ai dsepdecaifsicp reocaifidc nreotawdonrekt mwoordkelm inotdoe floiunrt obafosuicr sbtyalseics ostfy slterseeotf nsetrteweotrnke twwhoirckh
+warhei clahidar oeulati idno FuitgiunrFe i2g u[2re6]2. [T2h6e].seT hpeasteteprnatst,e wrnhsi,cwh hciocnhfcoornmfo trom thtoe trheealr-ewaol-rwldo rdldesdigensi grenqrueqirueimreemntesn otsf
+oaf satrseterte ententwetowrko,r kca,nca onftoefnte bneb oebosbersverevde idn icnitcieitsi.e s.
+FFiigguurree 22.. AAbbssttrraacctt ssttrruuccttuurreess ooff ffoouurr kkiinnddss ooff uurrbbaann ssttrreeeett nneettwwoorrkkss..
+(1) (P1u) rPeutrreee t-rliekee-lnikeetw noertkwpoarktt eprantt(eFringu (rFeig2ua)r.eT 2hae)r. eTahreeroe bavrieo uosbvbiaocuksb obnaeckrobaodnse trhoraodusg hthtrhoeurgehg itohne,
+regiown,h wilehTil-et yTp-etycproes scraonsds eanndd- reonadd-sroaraedas lsaoreo fatelsno aodfotepnte dad,fooprtmedin, gfoarlmowin-gc oan nloewcte-cdolnenveecltneedt wleovrekl
+netwsotrrku csttururec.tuTrhei.s Ttyhpise toyfpsetr oeef tsntreetewt onrektwheolrpks thoelpprso tteoc tptrhoetepcrti vthaecy porfivthaceyr eosfi dthene trseasniddetnhtes satnabdi ltihtye
+stabiloitfyt hoef tthraeffi trcabffuict bmuaty mbaeyl ebses lreosbs ursotbtuhsatn ththane oththee ortsh.ers.
+(2) (T2h) eTchuel -cduel--sdaec-ssancest wnoertwkporaktt eprantt(eFring u(rFeig2ubr)e. T2hbe).r eTahreeres eavreer asletvreurnakl strpuansksisn gpathssrionugg htharorueggiho na
+regiown iwthitmh amnayneyn edn-dro-raodasd.sT. Thhisist ytyppeeo offn neetwtwoorkrkh haassg goooodd aacccceessssiibbiilliittyy,, bbuutt mmiigghhtt bbee wweeaakkeerr oonn
+interiionrt ecroinornecoctnivnietcyt itvhiatyn tthhaen otthheerost. hers.
+(3) (T3-)t yTp-etynpeet wnoertkwpoarktt eprantt(eFrignu (rFeig2cu)r.eT 2hcis). sTtrheiest nsterteweto rnkeitswsoimrki laisr tsoimaiplaurr etog rai dp-suhraep gerdidn-esthwaoprekd,
+netwbourkt,t hbeutT -tthyep eTi-ntytepres eicnttieornsse,cwtiohnilse, pwohssilibe lyporessdiubclyin rgetdhueccinong ntehcet ivcoitny,nmecatyiviimtyp, rmovaey tihmeperffi ocviee nthcye
+efficieonfctryu onfk trturannks ptroarntasptioornt.ation.
+(4) (P4u) rPeugrreid g-lriikde-lnikeetw noertkwpoarktt eprant(tFerignu (rFeig2du)r.e T2hde).c oTnhnee ccotinvniteycwtivitihtyin wthitihsinne ttwhios rnkeitswhoigrkh eirs thhiagnhienr
+than tihne tohteh eortsh;ehrosw; heovwer,edveure, tdouteh etoe xtchees seivxecensusimveb enruomfibnetre rosef citniotenrsseacntdiotnhse asnhdor tthdeis stahnocret bdeistwtaenecne
+betwetheenm th,etrman, tsrpaonrstpatoirotnateioffinc eiefnficcyieinscuys ius aullsyualollwy elro.wer.
+The street network system is generally broken into three to five functional classes. The
+Thestreetnetworksystemisgenerallybrokenintothreetofivefunctionalclasses. Theconnection
+connection between different classes ensures the orderly running of traffic; thus, for example, an
+betweendifferentclassesensurestheorderlyrunningoftraffic;thus,forexample,anarterialroadcan
+arterial road can only can join directly to a sub-arterial street or an expressway, not to local lanes.
+onlycanjoindirectlytoasub-arterialstreetoranexpressway,nottolocallanes.
+Figure 3 shows a street network constructed according to orderly connecting rules, resulting in
+Figure3showsastreetnetworkconstructedaccordingtoorderlyconnectingrules,resultingin
+a tree-like appearance. This kind of network can often reduce unnecessary through-traffic, guarantee
+atree-likeappearance. Thiskindofnetworkcanoftenreduceunnecessarythrough-traffic,guarantee
+the security of entries and exits of local branches, and even improve the environmental quality and
+thesecurityofentriesandexitsoflocalbranches,andevenimprovetheenvironmentalqualityand
+safety situation of the region.
+safetysituationoftheregion.
+Sustainability2020,12,628 5of13
+SSuussttaaiinnaabbiilliittyy 2 2002200, ,1 122, ,x x F FOORR P PEEEERR R REEVVIIEEWW 55 ooff 1133
+FFFiiiggguuurrreee 3 33... TTTyyypppiiicccaaalll t ttrrreeeeee---llilikikkeee s sstttrrreeeeeettt n nneeettwtwwooorrrkkk s ssttrtrruuucccttutuurreree...
+F FFi iig ggu uur rre ee 4 44r rre eep ppr rre ees sse eennntttsss a aan nno oottthhheeerrr s sspppeeeccciiiaaalll fffooorrrmmm o oof ff s sst ttr rre eee eet tt n nne eet ttw wwo oor rrk kk,,, c cco oon nnsssiiissstttiiinnnggg ooofff d ddi iiff ffffe eer rre een nnttt r rre eec cct tta aan nngggllleeesss...
+A AAl ltltth hho oou uug gghhh t tth hhi iis ss n nne eet ttw wwo oor rrkkk l llo ooo ook kksss g ggr rri iid dd---llliiikkkeee,,, iiittt i iis ss i ininn g gge een nne eer rra aal ll d ddi iffi ifffficiccu uul llt tt t tto oo fi ffininnd dd m mmu uul ltltitipippl lle ee r rro ooa aad dds ss w wwi itiththh s ssi imimmi ililalaar rr
+l lle een nng ggt tthhhsss b bbe eet ttw wweeeeeennn a aan nny yy t ttw wwo oo p ppo ooi ininnt tts ss w wwi ititth hhi iin nn t ththhe ee n nne eet twtwwo oor rrk kk. .. AAAsss w wwe ee h hha aav vve ee a aal lrlrre eea aad ddy yy m mme een nnt tti iio oon nne eeddd,,, t tth hhi iisss k kki iin nnd dd o oof ff
+m mmo oon nno oo- --p ppa aat tth hh i isiss a aa n nne eec cce ees sss ssa aar rry yy a aan nnd dd s ssu uuffi fffficicci ieieen nnt tt c cco oon nnd ddi itititioioon nn f fofoor rr a aa n nne eet twtwwo oor rrk kk t totoo b bbe ee t trtrereee ee- -l-lilikikke ee. .. T TTh hhe ee n nne eet ttw wwo oor rrk kk c cco oon nnf ffo oor rrm mms ss
+t tto oo t ththhe ee p ppr rri ininnc cci ipippl lelee o oof ff s seseeq qqu uue een nnt titiaiaal ll c cco oon nnn nne eec cct tti iio oon nn ( ((i ii. .e.ee. .., ,, e eev vve een nn t ththho oou uug ggh hh a aa c cci irircrccu uul lalaar rr s ssu uub bb- -n-nne eet ttw wwo oor rrk kk e eex xxi isisst tts ss w wwi ititth hhi iin nn t ththhe ee
+r rro ooa aad dd n nne eet ttw wwo oor rrk kk) )), ,, sssooo ttthhhaaattt wwwhhhiiillleee tttooopppooolllooogggiiiccc aaa lll lll yyy iii ttt iisiss nnn ooo tt t aaa ttrtrr eee eee ggg rraraa ppp hhh ,, , iitit t iisis s nnn eevevv eerertrthhth eeleleel sessss s aa a ttrrt eer eee e nnenetetwwtw oororkkr .k. .
+F FFi iig ggu uur rre ee 4 44. .. RRReeeccctttaaannngggllleee ssstttr rru uuc cct ttu uur rre ee f ffo oor rrm mmi iin nng gg a aa t ttr rre eee ee- --l lilikikke ee s sst trtrre eee eet tt n nne eet twtwwo oor rrk kk. ..
+2.3. DifferencesbetweentheBasicPatternsoftheRoadNetwork
+22..33.. DDiiffffeerreenncceess bbeettwweeeenn tthhee BBaassiicc PPaatttteerrnnss ooff tthhee RRooaadd NNeettwwoorrkk
+The traditional indicators for describing the rationality of a road network, such as density,
+TThhee ttrraaddiittiioonnaall iinnddiiccaattoorrss ffoorr ddeessccrriibbiinngg tthhee rraattiioonnaalliittyy ooff aa rrooaadd nneettwwoorrkk,, ssuucchh aass ddeennssiittyy,,
+grade,andlength, are largely concerned with size and appearance. However, they do not well
+rgg err flaa edd cee t,,
+t
+a han endd
+d
+ilffleen en rgg ett nhh c,,
+e
+aa brre ee
+t
+l wlaar erg ege nelly ty
+h
+c ecoo in nnc tce eer rrn nne aed ld
+r
+eww laiit tth ih
+o
+nssi sizz hee
+i p
+aa snn add
+n
+a dapp tp hpe eeaa crr oaan mncc pee. o. sHH ito io oww nee ovv feer tr, h, etthh se tey ry
+e
+edd too
+n
+enn too wtt
+o
+ww rkee slll .l
+Arree cff clle oec rct dt t it nhh gee d td oiiff tff heer eree rnn ec sce ee a bb ree ctt hww oee feen Mn tt ahh ree s h iin ant lte le ,rrn tn haa ell r Tree -l tla yat ptiio eonn rss ahh ti iip opss c a aan nndd e ff tth ehe ce t c ic voo emm lyppo dos isi sit ttii ioo nnn g uoof if s t hthhe te h ss ettrr pee ueet rt e nne te rtt eww eo -o lr irk kks es..
+sAA trcc ecc eoo trr ndd eiin tn wgg
+o
+tt roo
+k
+tth fh re oe
+m
+rrees osee ta har ercc rhh
+k
+o io nff
+d
+MM sa [a 1rrs 0sh ]h ,aa blll ul,, ttth th hee
+e
+TT p--t rty oyp bpe le
+e
+r mraatt oiio fo dcca ia vnn
+i d
+ee iff nffe gecct mtiivv ie xel elyy
+d
+dd nii ess ttt wiinn ogg ruu kii sssh ih
+n
+t tth ohee
+d
+p ip ffuu err ree
+e
+t ntrr tee tee y--l pliik ek see
+osst ntrre aeee stt
+p
+nn ee cet ttw rw uoo mrrkk
+f
+rf ofrro momm
+p
+uoo rtth ehe ter rr
+e
+k eki -in ln id kd ess t[[ o110 p0]] u,, rbb euu gtt
+r
+t ith dhe -e
+l
+ip kpr eroo rbb el mleemm
+ai n
+oo sff
+d
+dd iiffiivvi cidd uii lnn tg .g mmiixxeedd nneettwwoorrkkss iinnttoo ddiiffffeerreenntt
+ttyyppees Is
+n
+oon Fn
+i
+a ga
+u
+ssp rp eeec 2ctt ,rru tu hmm
+e
+mffrro aom im
+n
+p dpu iu ffrre ee
+r
+tt err neee ce- e-lli bikk eee
+t
+t wtoo
+e
+pp eu nurr (ee
+a
+g )gr arii ndd d--llii (kk bee
+)
+r ire semm waa hiin en tss
+h
+d edi rifff tfi hicc euu rll ett..
+a remultiplemajorroads
+runniII nnn
+g
+FF ti higg ruu or uree
+g
+2 h2,, ttt hhh eee
+r
+m em gaa ii oinn
+n
+d .di Tifff hfee erre menn occe se
+t
+bb se ie gttw nw ie fieee cnn
+a n
+((a ta) d) a ia ffnn edd
+r e
+((b nb) c)
+e
+iiss
+b
+w ew th whee ett ehh neerr
+( b
+tth )he aer nree
+d
+aa (r cree
+)
+m im su wullt htii epp tl hlee
+e
+m rm taa hjjo eo rrr
+e
+rr eoo xaa idd ss ts
+erru nu dnnn -n ri oinn agg
+d
+t sth .hrr Too huu eggh dh
+i
+tffthh eee
+r e
+rr nee cgg eiioo bnn e..
+t
+wTTh ehe ee
+n
+mm (o co )sst at nssi diggn (n diif )fiic ica sann wtt
+h
+dd eii tff hffee err reen tn hcc eee
+r
+ebbe eet xtww isee tee Tnn
+- t
+( y(bb p))
+e
+aa inn ndd
+te
+( r(c sc) e) ciis ts
+i
+oww nhh se .ett Bhh aee srr
+e
+t dthhe oer nree
+eexxiisstt eenndd--rrooaaddss.. TThhee ddiiffffeerreennccee bbeettwweeeenn ((cc)) aanndd ((dd)) iiss wwhheetthheerr tthheerree eexxiisstt TT--ttyyppee iinntteerrsseeccttiioonnss.. BBaasseedd
+thisanalysis,itshouldbefeasibletodeterminethetypeofstreetnetworkbyconsideringtherelative
+oonn tthhiiss aannaallyyssiiss,, iitt sshhoouulldd bbee ffeeaassiibbllee ttoo ddeetteerrmmiinnee tthhee ttyyppee ooff ssttrreeeett nneettwwoorrkk bbyy ccoonnssiiddeerriinngg tthhee
+prevalenceofthroughroads,cul-de-sacs,andT-typeintersections. Combinedwithpreviousresearch
+rreellaattiivvee pprreevvaalleennccee ooff tthhrroouugghh rrooaaddss,, ccuull--ddee--ssaaccss,, aanndd TT--ttyyppee iinntteerrsseeccttiioonnss.. CCoommbbiinneedd wwiitthh pprreevviioouuss
+results[2,4],thepenetratingstreetratio,cellratio,andT-typeratioareintroducedfornetworkdivision.
+rreesseeaarrcchh rreessuullttss [[22,,44]],, tthhee ppeenneettrraattiinngg ssttrreeeett rraattiioo,, cceellll rraattiioo,, aanndd TT--ttyyppee rraattiioo aarree iinnttrroodduucceedd ffoorr
+nneettwwoorrkk ddiivviissiioonn..
+Sustainability2020,12,628 6of13
+3. ParametersDescribingtheNetworkPattern
+3.1. T-TypeandX-TypeIntersectionRatios
+TheT-typeandX-typeratiosaretheratiosofthenumberofT-typeandfour-legintersections,
+respectively,toallintersectionsinagivenarea. IfT-typeandX-typeintersectionsaretheonlyones
+thatappearinaregion,theT-typeandX-typeratiosofthestreetnetworkaddupto1. Theseratioscan
+veryeasilybefoundbysimplecounting.
+3.2. PenetratingStreetRatio
+A penetrating street (run-through road) is one that completely crosses an area of interest.
+Thepenetratingstreetratioistheratioofthenumberofrun-throughroadstothetotalnumberofroads
+inaspecificarea. Thisindexdirectlyreflectsthenumberandproportionoftrunkroadsinthenetwork,
+andtheopeningleveloftheregion. Asthevalueofthisindicatorbecomeslower,thestreetnetwork
+comesclosertohavingatree-likestructure.
+3.3. Cul-De-SacandCellRatios
+Therearetwotypesofroadsegmentsinastreetnetwork: cul-de-sacs(endstreets)andordinary
+roadsegments(cells,i.e.,stretchesofroadbetweenintersections). Thecul-de-sacandcellratiosof
+astreetnetworkaretheratiosofthenumberofendroadsandcells,respectively,tothesumofallroad
+sectionsinaregion. Ingeneral,thesumofthecellratioandthecul-de-sacratioinasinglenetworkis1.
+Inapuregrid-likestreetnetwork,therearenoendroads,sothecul-de-sacratiois0andthecellratiois
+1. Inarealstreetnetworklayout,thecul-de-sacandcellratiosofthestreetnetworkbothliebetween0
+and1.
+4. SampleAnalysis
+Toanalyzewhetherstreetnetworktypesindifferentregionshaveanyidentifiabledifferences,
+this study selected 15 urban street networks from around the world, having different shapes and
+characteristics,assamples.
+Thenumberof15samplesseemstobesmall,butconsideringthefollowingreasons,thisstudy
+considersthatthesesamplesshowthereliabilityoftheresearchobjectivesandresults. Althoughthe
+appearance of the city varies greatly, according to the analysis of Section 2.2., the main pattern
+differences of the urban road network lie in the form of intersections and the density of the road
+network. Asaclassificationstudy,itisonlynecessarytofindoutthecharacteristicsofthereference
+pointorthereferencenetwork,anditisnotnecessarytoidentifyallthenetworksonebyone. Infact,
+relyingtoomuchonlarge-scalestatisticaldatamaynotbeabletoaccuratelyidentifyroadnetwork
+features, because some features may be submerged in the massive statistical values. In addition,
+about30roadnetworksampleswerepreliminarilyselectedinthisstudy. Inordertoexpresstheroad
+networkboundaryanddatadistributionclearly,thecitysampleswithsimilarorrepeatedpatternsand
+parameterswereremoved.
+By extracting the values of basic attributes from map, such as road-section length,
+grade,type,andrankofintersections,severalindexesoftopologicalstructurewereevaluated,andthen
+analyzedbyArcGISsoftwaretocomparewitheachother.
+4.1. PrinciplesofSampleSelection
+(1) MostofthestreetnetworksamplescomefromhistoricChinesecities,suchasNanjingandSuzhou.
+Othersweretakenfromaclassicscholarlyworkonstreetsandpatterns[2].
+(2) Thesamplesrepresentdifferentpartsofurbanareas: newdevelopmentzones,coresofdowntown
+districts,ringareasaroundthecity,andoutersuburbanresidentialareas.
+Sustainability2020,12,628 7of13
+(3) For convenience of comparison, each sample’s area was limited to four square kilometers
+Sustainability 2020, 12, x FOR PEER REVIEW 7 of 13
+(2km×2km). Consideringtheinfluenceofgroundfacilitiesorterrainfeatures,suchasrailways
+andrivers,anirregularboundarywasalsoacceptablewhenthesamplehadanobviousshape
+rivers, an irregular boundary was also acceptable when the sample had an obvious shape feature.
+feature. Figure5showstwodifferentexamplesofurbanareasfromthesampleset.
+Figure 5Su ssthaionwabisli tytw 20o20 d, 1i2f,f xe FrOenR tP EeExRa mREpVIlEeWs of urban areas from the sample set. 7 of 13
+rivers, an irregular boundary was also acceptable when the sample had an obvious shape feature.
+Figure 5 shows two different examples of urban areas from the sample set.
+(a) (b)
+(a) (b)
+Figure5. Typicalstreetnetworksamples. (a)Typicalgirdnetwork(Nanjing);(b)Typicaltree0like
+network(LondonThames).
+Figure 5. Typical street network samples. (a) Typical gird network (Nanjing); (b) Typical tree0like
+networkF i(gLuorne d5o. nT yTphicaaml setsr)e.e t network samples. (a) Typical gird network (Nanjing); (b) Typical tree0like
+4.2. DataConlleetcwtioornk (aLnodndAonn aTlhyasmises).
+4.2. Data Collection and Analysis
+The data source collection in this paper mainly used OpenStreetMap and ArcGIS to screen,
+4.2. Data Collection and Analysis
+extraTcth,ec odnasttar uscotu,crcoer recoctl,leacntiaolynz ien, atnhdis apbastprearc tmstarieneltyn eutswedo rkOpmeanpSstrieneutMrbaapn aconrde aArrecaGs,ISu rtboa nscarreeeans,,
+The data source collection in this paper mainly used OpenStreetMap and ArcGIS to screen,
+eaxntdraccot,m cmonusntriuticets, .cOorpreenctS, tareneatlMyzaep, aisnad galbosbtaralccto lsltarbeoetr anteivtwemorakp mpianpgs pinro ujercbtatnh actocraen apreraosv,i udrebiatsns apraetaiasl,
+extract, construct, correct, analyze, and abstract street network maps in urban core areas, urban areas,
+adnadta ctohmromuguhnivtiaersi.o OuspAenPSItsre(eAtMppalpic aisti oan gPlorobgarl acmolmlaibnograIntitveer fmacaep:pairnegs opmroejepcrt etdheafit nceadn fupnrocvtiiodnes ittos
+and communities. OpenStreetMap is a global collaborative mapping project that can provide its
+spproatviiadl edapatpal ictahtrioounsghan dvadreiovuelso pAerPsIsw i(tAhpthpeliacbaitliiotyn toParoccgersasmamseintogf rIonutetirnfaecseb: asaerde osnocmeret apinresdofetfwinaerde
+spatial data through various APIs (Application Programming Interface: are some predefined
+fournhcatirodnfwusn atcrote i,opnbrsou vttoiNd peor oanvpeidpeedli catapotpiaolicnccaset isaosnntdsh aednesdov dueelrovcpeeleocrposed wres iowthri tuhthn tedh eea rbasibtliailtinytyd t ottoh aaecccdceeesstssa iaal s sseoettf o tofh fr eorouinutitnteiernsne basa lbsweadso erodkn i onng
+cmeretcahina ncsieosrfmttawi)n.a srToehf toiwsr ahdreaa rtodarbw haaasrredew,r ebasuroetu, Nbrcuoet nNiseoev dnee rteyod rateocl ciaeacsbcsel ests.hT tehh seeo smuoruecrtech eco cododdwee oaorsr uusinnmddeperrlsysttaatnondd ct ohtehll eed cedttaeaitlnasi dlosf s otchfr eet hene
+isntrteeerntanlie ntwtweoronrrakkli newgxo armmkiepnclgeh sam,neeixcshmtraan).ci stTmsht)r.i esTe thdinaste adtbwaatoasrbeka srseea smroeusporluceesrc feirs o ismv evOreyrpy e rnreelSliiatarbbelleeet..MTThhaeep m,meexethtphooodrd tw Owapsa essn imSstipmrelyep tltMyo atop
+cfiolellse,ctu saceonldGle cesto carCneedon ns vcsreterreetnee trs tnsroeeefttwtw noaertrkwe oetroxka cmeoxnpavlmeespr,l teestx,h teerxmatcrtat costt ErsetSreeRte Itn Snehtewtawpooerrkfik l essasa,mmmpploleedss i fffryroomtmh eO OpweprneoSnntSrgeterpteMeattaMhps,a ipn,
+eAxrpcoGrItS Oesx pop efotnrwt S O tarrp eeee,n tMaSntr ade pe tofM ibleatasp ,i nf uil setehs, e Gurs eeeo l GeCve ooan nC vto ean rtv tteerrri tbseuor fts teo wsft aworfa er ee tao tc ohc ocro non vav ede rr tt s tet hhgeemmme t tno ot E EiSnSR RtIh IS eSh hasp aae pmf eilpfe ils lee, smn, oemdtwoif dyo irfky.
+Wtheh ewnrpot nrh oe gc w epsr aso tin hng sg p itnha t eAhs rr oci an Gd A ISnr c esG towI fS tow s ro kaf r,t ew th, a ear ne e, dd a gn oed bp to aab itnt ha i ton hf et eh are ec lr hee vl ge aev noa tmn t a ea tttt rrt yr ibib wuu tat ee sss b oo uf fff e eea arc ceh hd r rbo oa yad 0d s . 1e sg ekm gmmen ient ni on t r idt nh e e rt htoe
+sample network. When processing the road network, the edge path of each geometry was buffered by
+scaomllepcltet nheetw“noordke. Wtyhpeens” parnocde“sspiantgh sth”ei nrotahde nroeatwdonrekt,w thoerk e.dge path of each geometry was buffered by
+0.1 km in order to collect the “node types” and “paths” in the road network.
+0.1 kmTh ien 1o5rdsterre teot cnoeltlwecotr tkhesa “mnopdlees tmypaeys”b eansede “npianthFsig”u inre th6.e Trohaeds anmetpwleosrkc.a nbedividedintothefour
+The 15 street network samples may be seen in Figure 6. The samples can be divided into the
+basicTphaet t1e5r nsttryepeet snmetewnotirokn seadmpprleevsi omuasyly b(e2 .s2e):enst ainn dFaigrdurree c6t.a Tnghue lsaarmgrpilde,s Tc-atynp bee, cduilv-iddee-dsa icnbtoa stehde,
+four basic pattern types mentioned previously (2.2): standard rectangular grid, T-type, cul-de-sac
+faonudr pbuarbseaicst erpdeae, t-atlniekdren p (utsyreepe teTrsea ebm-llieekne1 t)(i.soene eTda bpler e1v).i ously (2.2): standard rectangular grid, T-type, cul-de-sac
+based, and pure tree-like (see Table 1).
+JianyeNewDistrict (Nanjing) New Town (Shanghai) Blythewood (US)
+Figure6. Cont.
+JianyeNewDistrict (Nanjing) New Town (Shanghai) Blythewood (US)
+Sustainability2020,12,628 8of13
+Sustainability 2020, 12, x FOR PEER REVIEW 8 of 13
+Gaomiao road area (Nanjing) Sipailouarea (Nanjing) Acropolis (Athens)
+Gulou District (Nanjing) Bayswater (London) Old Town (Suzhou)
+Laguna West (UK) Xuzhuang Software (Nanjing) Thames Meade (London)
+Daming road area (Nanjing) East Finchley (London) Jiangbei New District (Nanjing)
+Figure 6. Street network diagram of 15 samples.
+Figure6. Streetnetworkdiagramof15samples.
+Table 1. Parameter values of sample cities.
+Thefoursampleindicators(X-typeratio, T-typeratio, cul-de-sacratio, andpenetratingstreet
+ratio)werecalculated,andarealsomarkedinTable1. ItcanbeseenthatthPeeXne-ttryaptienagn dTTy-ptyeps eratios
+Serial X-Type T-Type Cul-de-Sac
+werewellcorrelatedNweittwhoprakt tLeorcnattiyopne . However,thepenetratingstreetratioSwtreaest looselyocf orrelated
+Number Ratio Ratio Ratio
+withtheX-typeandT-typeratios. Therefore,theX-typeandT-typeratiowReraetios electeIdmaagset hefirst
+JianyeNewDistrict
+factortoid1e ntifythetree-likeattributesofthe0r.9o5a dnet0w.0o5r k. 0 0.92 A
+(Nanjing)
+Thecul-de-sacratio,ontheotherhand,didnotcorrelatewellwiththepatterntype. Figure7
+2 New Town (Shanghai) 0.83 0.17 0.07 0.84 A
+showstherelationshipofT-typeratioandcul-de-sacratioforallthesamples.
+3 Blythewood (US) 0.71 0.29 0.06 0.67 A
+FromFigure7,theT-typeratioisseentobehigherthan0.65inmostsamplecities. Thisindicates
+4 Gaomiao area (Nanjing) 0.52 0.48 0 0.50 B
+that most urban street networks contained a large number of T-intersections. On the other hand,
+5 Sipailouarea (Nanjing) 0.33 0.67 0.03 0.28 B
+thecul-de-6sa cratiooAfmcroopstolsias m(Apthleesnws) aslowe0r.3t1h an0.30..69 0.04 0.22 B
+7 GulouDistrict (Nanjing) 0.30 0.70 0.2 0.26 B
+8 Bayswater (London) 0.26 0.74 0.16 0.30 B
+9 Old Town (Suzhou) 0.23 0.77 0.22 0.22 B
+10 Laguna West (UK) 0.22 0.78 0.44 0.04 C
+11 XuzhuangSoftware 0.19 0.81 0.33 0.17 C
+Sustainability2020,12,628 9of13
+Table1. Parametervaluesofsamplecities.
+Penetrating
+Serial X-Type Cul-de-Sac Typesof
+NetworkLocation T-TypeRatio Street
+Number Ratio Ratio Image
+Ratio
+JianyeNewDistrict
+1 0.95 0.05 0 0.92 A
+(Nanjing)
+2 NewTown(Shanghai) 0.83 0.17 0.07 0.84 A
+3 Blythewood(US) 0.71 0.29 0.06 0.67 A
+Gaomiaoarea
+4 0.52 0.48 0 0.50 B
+(Nanjing)
+Sipailouarea
+5 0.33 0.67 0.03 0.28 B
+(Nanjing)
+6SustainabilityA 2c0r2o0,p 1o2,l xis FO(AR tPhEeEnRs R)EVIEW 0.31 0.69 0.04 0.22 9 of 13 B
+GulouDistrict
+7 (Nanjin(gN)anjing) 0.30 0.70 0.2 0.26 B
+8 12 BayswTahtaemre(Ls oMnedaodne) (London0). 26 0.09 00.7.941 0.908. 16 0.030 .30 C/D B
+9 OldTowDna(mSuinzgh oroua)d area 0.23 0.77 0.22 0.22 B
+13 0.08 0.92 0.45 0.21 D
+10 LagunaWes(tN(aUnKjin)g) 0.22 0.78 0.44 0.04 C
+14 XuzhuEaanstg FSionfcthwleayre (London) 0.08 0.92 0.67 0.09 D
+11 0.19 0.81 0.33 0.17 C
+(NJiaannjginbgei) New District
+15 0.07 0.93 0.24 0.20 D
+12
+ThamesM(eNaadnejing)
+0.09 0.91 0.98 0.03 C/D
+Notes: The( rLooandd noentw)ork instances in the table are sorted by type. The types are (A) Pure grid-like
+netwoDrka pmaitntegrnr,o (aBd) Ta-rtyepae network pattern, (C) cul-de-sac network pattern and (D) pure tree-like
+13 0.08 0.92 0.45 0.21 D
+network pa(tNtearnn.j ing)
+EastFinchley
+14 The four sample indicators (X-typ0.e0 8ratio, T-type0 .r9a2tio, cul-de-s0ac.6 r7atio, and pe0n.0e9trating street D
+(London)
+ratio) were calculated, and are also marked in Table 1. It can be seen that the X-type and T-type ratios
+JiangbeiNewDistrict
+15were well correlated with pattern type0. .H07owever, the0 p.9e3netrating str0e.e2t4 ratio was lo0o.s2e0ly correlated D
+(Nanjing)
+with the X-type and T-type ratios. Therefore, the X-type and T-type ratio were selected as the first
+Notes:Theroadnetworkinstancesinthetablearesortedbytype.Thetypesare(A)Puregrid-likenetworkpattern,
+factor to identify the tree-like attributes of the road network.
+(B)T-typenetworkpattern,(C)cul-de-sacnetworkpatternand(D)puretree-likenetworkpattern.
+The cul-de-sac ratio, on the other hand, did not correlate well with the pattern type. Figure 7
+shows the relationship of T-type ratio and cul-de-sac ratio for all the samples.
+FigureFi7g.uDrei 7s.t rDibisutrtiibountioonf otof ptooploolgogicicaall iinnddeexxeess oof fdidffieffreenret nrotardo naedtwnoertkw soarmkpsleasm. ples.
+From Figure 7, the T-type ratio is seen to be higher than 0.65 in most sample cities. This
+indicates that most urban street networks contained a large number of T-intersections. On the other
+hand, the cul-de-sac ratio of most samples was lower than 0.3.
+4.3. Data Analysis and Interpretation
+The above results shown that the variations of the indicators (the penetrating street, T-type,
+X-type, and cul-de-sac ratios) could be used to judge a given street network’s structural subtype.
+Sustainability2020,12,628 10of13
+4.3. DataAnalysisandInterpretation
+The above results shown that the variations of the indicators (the penetrating street,
+T-type,X-type,andcul-de-sacratios)couldbeusedtojudgeagivenstreetnetwork’sstructuralsubtype.
+Sustainability 2020, 12, x FOR PEER REVIEW 10 of 13
+•• FF rr oo mm F Fi ig gu ur re
+e
+8 8a a, ,i t ii ts o isb v oi bo vu is ot uh sa t t, hw ath
+,
+e wnt hh ee ns a thm ep l se as ma pre leli ss t ae rd
+e
+in liso tr ed de r inof om ro dn eo
+r
+to on
+f
+i mca oll ny oin toc nre ica as li ln yg
+iT n- ct ry ep ae sinra gt i To -, tyth pr ee re atd iois
+,
+t ti hn rc et er e dg isim tine cs
+t
+e rem ge imrg ee s, en mam ere gl ey
+,
+nT a-t myp ele
+y
+r Ta -t ti yo p∈
+e
+r[ a0 t,0 io.3 )∈, [ 0 [. 03 ,, 00 .. 39 )) ,, [0[0 .3.9 ,0,1 .9.0 ),] .
+Thesethreepartsrespectivelycorrespondtoapuregrid-likenetwork,atransitionalstatenetwork,
+[0.9,1.0]. These three parts respectively correspond to a pure grid-like network, a transitional
+andapuretree-likenetwork. Thismethodcanclearlydefinetheboundarybetweenpuretree-
+state network, and a pure tree-like network. This method can clearly define the boundary
+andpuregrid-likeroadnetworks. However,becausetheindicatorvaluesinthetransitionalregion
+between pure tree- and pure grid-like road networks. However, because the indicator values in
+areveryclosetogether,itishardtodistinguishanyfinerdivisionsinthatregime.
+the transitional region are very close together, it is hard to distinguish any finer divisions in
+• tIhtacta rnegbiemsee. en from Figure 8b that the penetrating street ratio and the X-type ratio are highly
+• Ict ociannci dbeen steaennd fhroamve Failgmuorset 8thbe tshaamt ethgee npeernaeltrteantidnegn sctireeseitn rtahteiofi agnudre t.hWe hXe-ntytphee rvaatliuoe aorfe ehitihgehrlyis
+cmoionrceidtheannt a0n.3d, ihtacvane ablemuossetd thtoe dsaismtine ggueinsehraalp tuenredgernicdierso aind tnheet wfigourkref.r oWmhaenr etchtea nvgaululaer o-tfy epiethsetrre iest
+mneotrwe othrka.nH 0o.3w, eitv cear,nw bhee nustehde vtoa lduiestiisnlgeussisthh aan p0u.3r,ea gpriudr erotraede -nliektewroorakd fnroetmw oar kreacntadngauTl-asrh-tayppeed
+srtoreaedt nneettwwoorrkk.c aHnonwotevbeera, cwcuhreant etlhyei dveanlutiefi iesd lefrsosm thtahne s0e.3i,n ad ipcautroer straeleo-nliek.e road network and a
+• TF-rsohmapFedig ruoraed8 nbe,ttwheortrke cnadnnooftt hbee cauccl-udrea-tsealyc irdaetinotisfeieedm fsrotmob tehenseea irnlydiocaptpoorss iatelotnhea. toftheX-type
+• Frraotimo, Fbiugtuirtem 8big, hthteb etrmenodr eofa cthtiev ecu(il.-ed.,e-hsaavce ramtioor esedeimscsr itmo ibnea ntienagrlpyo owpepro)switeh ethnaitt oisf cthloes eX-ttoytphee
+raarteioa, obfutth iet tmreieg-hlitk been metowreo rakctpivaett e(ir.ne.., Whahveen mthoerec udli-sdcrei-msaicnaratitniog ∈ po[0w,0e.r3)) ,wthheenn eitt wiso crlkosceo tuol dthbee
+aprreead oicft ethdet otrebee-leiikthe enregtwridor-skh papatetderonr. TW-thyepne .thWe hceunl-dthee-scaucl -rdaeti-os a∈cr a[t0io,0.∈ 3)[,0 t.3h,e0 .n5e),twthoernke ctowuolrdk
+bceo uplrdedbeicotefdth teoc uble- deei-tshaecrs gtyripde-.shFianpaeldly ,owr hTe-ntytphee.c uWl-hdeen-s athcse rcautilo-d∈ e-[0sa.5c, 1r.a0t]i,oth ∈en e[t0w.3o,0r.k5)m, itghhet
+nbeetwpuorrekl ycotrueled- lbikee .of the cul-de-sacs type. Finally, when the cul-de-sacs ratio ∈ [0.5,1.0], the
+• nTehtweporekn emtriagthint gbes tpreuerterlya ttiroeies-laiknei.m portantandeffectiveindicatorforobjectivelymeasuringthe
+• Tshime iplaerniteytroaftinagg esntreereatl rnaettiow oisr kanto imaptroeret-alinkte annedt wefofrekc.tivIteh iansdnicoattorer cfeoirv eodbjeenctoivueglhy amtteeanstuiorninign
+tphree vsiimouilsaarintyal yosf eas .general network to a tree-like network. It has not received enough attention
+in previous analyses.
+(a)
+Figure8. Cont.
+Sustainability2020,12,628 11of13
+Sustainability 2020, 12, x FOR PEER REVIEW 11 of 13
+(b)
+FFiigguurree 88.. RReelalatitoionnssb ebtewtweeeneunr buarnbasntr esettrneeettw noertkwtoyrpke staynpdesin adnicda toinrds.ic(aa)toCrist.i e(saa) rrCaintigeesd abryrainncgreeda sibnyg
+iTn-ctryepaesirnagti oT.-t(ybp)eT rhaetivoa. r(iba)t iTohneo vfaXr-iatytipoenr oaft iXo,-tcyupl-ed rea-tsiaoc, cruatli-od,ea-snadc praetnieot,r aantidn gpesntreetertartiantigo swtrieteht srtarteieot
+wneitthw sotrrkeetty npeetsw. ork types.
+55.. CCoonncclluussiioonnss aanndd FFuurrtthheerr RReesseeaarrcchh
+TThhiiss ppaappeerr ttrriieess ttoo aannsswweerr tthhee mmoosstt bbaassiicc qquueessttiioonn aabboouutt tthhee ggeeoommeettrriicc ssttrruuccttuurree ooff uurrbbaann rrooaadd
+nneettwwoorrkkss:: hhooww ttoo ddiissttiinngguuiisshh bbeettwweeeenn rrooaadd nneettwwoorrkkss wwiitthh ddiifff feerreenntt ggeeoommeettrriicc ffoorrmmss..
+FFrroomm aa ttooppoollooggiiccaall ppeerrssppeeccttiivvee, ,bbootthh iinn tteerrmmss ooff hhiieerraarrcchhiiccaall ccoonnnneeccttiioonnss aanndd ppaatttteerrnn ffeeaattuurreess, ,
+tthhee ttrreeee--lliikkee cchhaarraacctteerriissttiiccss ccoonncceeaaleleddi nina ar oraodadn entwetowrokrcka ncanno wnobwe rbeec orgecnoizgendiz,eodp,e noipnegnainngo tahneortwheary
+wtoauy ntod eurnstdaenrdsttahnedr tohaed rsoyasdte smysbteemsid beessitdheest rtahde ittrioadnaitliognriadl gprairda dpiagrmad.igm.
+((11)) ThTeh emmaainin ppooiinntt oofft hthisisp appaepreirs tios rteoc orgencoizgentihzaet athllaut rablal nurrobaadnn reotwado rnkes,twinostrekasd, oinfsbteeiandg colfa sbseifiinegd
+claasssgifriiedds oars trgereids,s moary tbreeeasr, ramngayed boen aarrsapnegcterdu monb eatw sepenectthruemse ebxettrwemeeens . tShuesbed iveixdtrinemgtehse.
+Sugbedoimviedtrinicgs tthruec gtueroemoeftrtihce srtoruadctunreet woof rtkhef urrotahde rnceatnwboerke fffuerctthiveer fcoarn rbesee eafrfcehctaivned feonrg rienseeearricnhg
+antedc hennogloingeye,riimngp rotevcehmneonlotsgyin, liamndpruosvee,mroeandtss aifne tyl,aanndd tursaen, sprooartda tisoanfeetffiy, ciaenndcy tirnatnhsepofurttautrieo.n
+(2) efTfihcireonucgyh inst athties tfiuctaulraen. alysisofroadsamplesindifferentcitiesorregions,ithasbeenfoundthat
+(2) Tthhreoduigffhe rsetnatciesstiicnalg aenoamlyestirsi coaf nrodatdo psaomlopgilceas licnh dairfafectreernits tciictsiebse otwr reeegniothnes,n ite thwaos rbkesemn faoinulnydc othmate
+thfreo mdiftfheerennucmesb ienr gaenodmtheteritcy paendo ftoinptoelrosegcictiaoln csh,athraecdteernisstiitcys abnedtwheieerna rtchhei cnaeltwstrourcktsu mreaoinfltyh ecoromaed
+frnoemtw tohrek sn,uthmebperr oapnodr titohne otyfpber ookfe inntreorasdecst,ioannds, tthhee nduemnsbiteyr aanndd phrieorpaorrcthioicnalo sfttrhurcotuurgeh -orfo athdes .
+rToahder enfoertwe,oarkrso,a dthnee twproorpkocratinonb eocfl asbsriofikeedn acrcooarddsi,n gantod hothwe cnlousmelbyeirt raensedm pblreospaorttrieoen- liokfe
+thnreotwugohrk-rionadtesr.m Tshoefrethfoersee, vaa riroouasdp anreatmweotrekr s.can be classified according to how closely it
+resembles a tree-like network in terms of these various parameters.
+(3) This study initially divides road networks into four types (pure tree-like networks,
+(3) This study initially divides road networks into four types (pure tree-like networks, cul-de-sac
+cul-de-sacnetworks,T-shapednetworks,andgrid-shapednetworks)basedonpropertiessuchas
+n ne otw n-o cr irk cs u, laT r-s trh aaffipe c,d
+n
+un met bw eo rr ok fs e, na dn rd
+o
+ag dr si ,d a- nsh da np ue md bn ee rt ow fo ar ltk es r)
+n
+ab ta ivse ed
+p
+ao thn
+s
+.properties such as
+(4) n To hn e-c ri er sc eu al ra cr h tr pa rf ofi vc e, sn tu hm atb ie tr i sof p e on ssd i br lo ea td os u, a send d inffu em renb ter in o df ia calt te or rn sa it niv ae cp ea rtt ah is n. order(X-type/T-type
+(4) T rh ae ti or ,e cs uea l-r dc eh - sp acro rv ae tis o ,th aa nt d i pt ei ns e tp rao ts is ni gbl se t rt eo e tu rs ae ti od )i tf ofer ce lan st s ii fn yd ri oca at dor ns e ti wn oa rk sc .er Fta oi un r o sprd ee cir fi c( ,
+X-type/T-type ratio, cul-de-sac ratio, and penetrating street ratio) to classify road networks.
+quantitative,well-definedindicatorsforclassifyingthesmall-scalestructureofstreetnetworks
+Four specific, quantitative, well-defined indicators for classifying the small-scale structure of
+areproposed.
+street networks are proposed.
+Although the study has found some evidence of pattern differences between networks,
+Although the study has found some evidence of pattern differences between networks, some
+somedefects existed in the research procedure. The largest problem is that it is difficult to collect
+defects existed in the research procedure. The largest problem is that it is difficult to collect
+attributed data, such as the class of road or the features of the nodes, from the e-map; this may
+reduce accuracy when analyzing the connectivity of local roads, especially for topological analysis.
+Sustainability2020,12,628 13of13
+12. Barthelemy,M.;Flammini,A.ModelingUrbanStreetPatterns. Phys. Rev. Lett. 2008,4,1–4. [CrossRef]
+[PubMed]
+13. Sreelekha,M.G.;Krishnamurthy,K.;Anjaneyulu,M.V.L.R.C.InteractionbetweenRoadNetworkConnectivity
+andSpatialPattern. ProcediaTechnol. 2016,24,131–139. [CrossRef]
+14. Marshall,W.E.;Lennard,H.L.StreetNetworkTypesandRoadSafety: AStudyof24CaliforniaCities. Urban
+Des. Int. 2010,15,133–147. [CrossRef]
+15. Southworth,M.;Ben-Joseph,E.ReconsideringtheCul-de-sac. ACCESSMag. 2004,1,28–33.
+16. Lovegrove,G.R.; Sun,J.UsingCommunity-BasedMacrolevelCollisionPredictionModelstoEvaluate
+SafetyLevelofNeighborhoodRoadNetworkPatterns. InProceedingsofthe89thAnnualMeetingofthe
+TransportationResearchBoard,Washington,DC,USA,10–14January2010.
+17. Derrible,S.;Kennedy,C.TheComplexityandRobustnessofMetroNetworks. Phys. A-Stat. Mech. ItsAppl.
+2010,389,3678–3691. [CrossRef]
+18. Marshall,S.;Gil,J.;Kropf,K.;Tomko,M.;Figueiredo,L.StreetNetworkStudies: FromNetworkstoModels
+andtheirRepresentations. Netw. Spat. Econ. 2018,18,735–749. [CrossRef]
+19. Boeing,G.Urbanspatialorder: Streetnetworkorientation,configuration,andentropy. BoeingAppl. Netw.
+Sci. 2019,4,67. [CrossRef]
+20. Shi,F.;Wang,W.UrbanRoadNetworkStructureAnalysis. CityPlan. Rev. 2007,31,68–73.
+21. Porta,S.;Crucitti,P.Thenetworkanalysisofurbanstreets: Aprimalapproach. Environ. Plan. BPlan. Des.
+2006,33,705–725. [CrossRef]
+22. Mocnik, F.B. The Polynomial Volume Law of Complex Networks in the Context of Local and Global
+Optimization. Sci. Rep. 2018. [CrossRef][PubMed]
+23. Mocnik,F.B.DimensionasanInvariantofStreetNetworks.InProceedingsofthe7thInternationalConference
+onComplexNetworksandTheirApplications,Cambridge,UK,11–13December2018;pp.455–457.
+24. Tian,F.;Zhang,Y.Q.Graph. andNetworkFlowTheory,2nded.;SciencePress: Beijing,China,2015;pp.47–50.
+ISBN978-7-03-042688-8.
+25. Chan,S.H.Y.;Donner,R.V.;Lämmer,S.Urbanroadnetworks-spatialnetworkswithuniversalgeometric
+features? Eur. Phys. J.B2011,84,563–578. [CrossRef]
+26. Lima,M.TheBookofTrees: VisualizingBranchesofKnowledge;ChinaMachinePress: Beijing,China,2015;
+pp.5–9. ISBN978-7-111-51518-0.
+©2020bytheauthors. LicenseeMDPI,Basel,Switzerland. Thisarticleisanopenaccess
+articledistributedunderthetermsandconditionsoftheCreativeCommonsAttribution
+(CCBY)license(http://creativecommons.org/licenses/by/4.0/).
+

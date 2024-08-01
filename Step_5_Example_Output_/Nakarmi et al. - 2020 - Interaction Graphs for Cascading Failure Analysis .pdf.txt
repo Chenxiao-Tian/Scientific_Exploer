@@ -1,0 +1,34 @@
+Extracted Keywords:
+Interaction Graphs, Power Grids, Power, cascading failures, Interaction, Graphs, graph, IEEE Trans, failures, IEEE Power
+
+Main Topics:
+Review
+Interaction Graphs, Failure Analysis, Power Grids, A Survey
+Upama Nakarmi, Mahshid Rahnamay Naeini, Md Jakir Hossain†and Md Abul, Hasnat†
+Department, Electrical Engineering, South Florida, unakarmi@usf.edu
+†, These authors, this work, 17 April, gid00043/gid00031/gid00028/gid00047/gid00032/gid00046
+Abstract, cascading failures, power grids, the focus, many researchers, the complex interactions, the large number, these systems, their contributions, cascading failures, various techniques, the
+underlying interactions, the components, the power grid, Such methods, the essential information, power system physical models, the inﬂuences, the
+components, the system, the physics, the power, ﬂow dynamics, other functional and cyber dependencies, the components, the system, such interactions, data-driven approaches, the physics, graph-based models, the components, the power grid, this survey,
+
+Methodologies:
+Therefore, various techniques have been developed and used to model and analyze the
+underlying interactions among the components of the power grid with respect to cascading failures.
+ Such methods are important to reveal the essential information that may not be readily available from
+power system physical models and topologies. To infer and capture such interactions, data-driven approaches or
+techniques based on the physics of electricity have been used to develop graph-based models of
+interactions among the components of the power grid. To infer and capture such interactions, data-driven approaches or
+techniques based on the physics of electricity have been used to develop graph-based models of
+interactions among the components of the power grid. To infer and capture such interactions, data-driven approaches or
+techniques based on the physics of electricity have been used to develop gr
+
+Research Outcomes:
+Therefore, various techniques have been developed and used to model and analyze the
+underlying interactions among the components of the power grid with respect to cascading failures.
+ Such methods are important to reveal the essential information that may not be readily available from
+power system physical models and topologies. To infer and capture such interactions, data-driven approaches or
+techniques based on the physics of electricity have been used to develop graph-based models of
+interactions among the components of the power grid. To infer and capture such interactions, data-driven approaches or
+techniques based on the physics of electricity have been used to develop graph-based models of
+interactions among the components of the power grid. To infer and capture such interactions, data-driven approaches or
+techniques based on the physics of electricity have been used to develop gr

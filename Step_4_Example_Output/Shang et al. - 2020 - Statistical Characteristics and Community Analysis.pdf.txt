@@ -1,0 +1,1758 @@
+References:
+Complexity 19
+despite the fact that these URNs are directional. In thosenetworks[33,41,60,61],andthisfeaturecanbeused
+addition, the distributions of in-degree and out- for the assessment of robustness and resilience combining
+degree for these URNs follow the power law, sug- the operational data of URNs, such as the traffic flow and
+gestingthatmostofthenodeshavesmallin-degree road capacity.
+and out-degree, which means the URNs overall are DuetothefactthatthedatasourcesrelatedtoURNsare
+less well connected. Philadelphia is overall less well very limited, in this study, the URNs are mainly located in
+connected than the other URNs. EuropeandNorthAmerica,suchasChicago,Austin,Berlin,
+and Barcelona.In thefuture, with data sourcedfrom other
+(2) Theclusteringcoefficients(CC)oftheURNsarevery
+parts of the world, in particular from less developed
+low, showing the URNs are less compact in local
+countries or regions, it will be possible to expand our
+areas. The average CC of these URNs is smaller
+comparisons to a wider context. In particular, it is hy-
+compared to other transport networks.
+pothesized that the diversity in social, economic, cultural,
+(3) Most of the weighted closeness of these URNs also
+andgeographicalcharacteristicscouldmanifestitselfinthe
+follows an exponential distribution, and Anaheim
+formation of URNs and thus may be reflected in the to-
+andBerlinaretheURNsinwhichmostofthenodes
+pological features of these URNs. Future work along these
+have worse accessibility to other nodes.
+lines may uncover qualitatively and quantitatively different
+(4) The weighted betweenness centrality (WBC) of all topological or operational features of URNs from a geo-
+URNs follows a power-law distribution well, and graphically representative set of networks. In addition, re-
+parameterλ(P(BC≥x)∝x− λ)forthedistributions
+cently, we have noticed that OpenStreetMap (OSM) may
+is between 0.4 and 0.8. provide abundant raw data for many city networks, which
+(5) APLanddiametersareproportionalwiththesizeof include all types of roads and require to be processed to
+the URNs, and efficiency measures are consistent satisfy specific study requirements. In the future, we may
+withAPL.TheresultsshowthatBerlinhastheworst utilize OSM data to analyse the common topological
+efficiency, while Anaheim has the best efficiency in characteristicsandcommunitystructureofURNsacrossthe
+terms of APL. world.
+(6) Unlike other networked systems, such as metabolic
+networks and transport networks, these URNs do Data Availability
+not have significant small-world properties.
+Thedataofurbanroadnetworksusedtosupportthisstudy
+TheseresultsrevealthatURNshavedistinctivestatistical
+areavailablefromthedatabasewebsitehttp://www.bgu.ac.il/
+characteristics compared to other transport networks, such
+∼bargera/tntp/.
+as the Chinese airport network [36], the Italian airport
+network[11],theworldwideairtransportationnetwork[10],
+Conflicts of Interest
+and the Boston subway network [37]; particularly, these
+URNs do not have significant small-worldness, which may
+The authors declare that there are no conflicts of interest
+be caused by the unique spatial properties of urban roads.
+regarding the publication of this paper.
+Based on this, the relationships among in-degree, out-
+degree, WBC,and CC have been examined, and the results
+Acknowledgments
+reveal that the correlations between degree, WBC, and CC
+arenotsignificant;neitherhighlypositiverelationshipsnor
+ThisworkwassupportedinpartbytheChineseScholarship
+anomalies exist in these URNs.
+Council (Grant no.201308060082)and Key SpecialProject
+Following this, community detections for the URNs
+of Beijing City (Grant no. Z18110000391801).
+wereconductedusingtheOSLOM,andtheresultsshowthat
+the larger the URNs were, the more communities and hi-
+References
+erarchical layers they had. In addition to this, the distri-
+butions of communities at the lowest hierarchical layer for
+[1] W. L. Shang, “Robustness and resilience analysis of urban
+theURNstendtofitanormaldistributionbetteriftheURNs
+road networks,” Ph.D. Thesis, Imperial College London,
+are larger. These findings are compatible with common
+London, UK, 2017.
+phenomena in natural and social science [59]. The com- [2] S.Goh,M.Y.Choi,K.Lee,andK.-m.Kim,“Howcomplexity
+munity detection of the URNs will facilitate the detector emerges in urban systems: theory of urban morphology,”
+installation, data collection, and identification of critical PhysicalReviewE,vol. 93,no.052309, pp.1–12,2016.
+parts of cities. [3] D.J.WattsandS.H.Strogatz,“Collectivedynamicsof“small-
+Thepurposeofthisstudyhasbeentoexploretheunique world” networks,” Nature, vol. 393, no. 6684, pp. 440–442,
+characteristicsoftheURNs.Thisworkalsohelpstoprepare 1998.
+[4] A.-L. Baraba´si and R. Albert, “Emergence of scaling in ran-
+thegroundforfurtherstudyofotherimportantpropertiesof
+domnetworks,”Science,vol.286,no.5439,pp.509–512,1999.
+URNs, such as robustness and resilience. The topological
+[5] C. Ducruet and L. Beauguitte, “Spatial science and network
+indices shown in this study are usually related to the ro-
+science: review and outcomes of a complex relationship,”
+bustness of networks due to the fact that some of these
+NetworksandSpatialEconomics,vol.14,no.3-4,pp.297–316,
+measuresareabletoreflecttheefficiencyandfunctionalityof
+2014.
+
+Annexes/Appendices:
+
+Body Text:
+Hindawi
+Complexity
+Volume 2020, Article ID 6025821, 21 pages
+https://doi.org/10.1155/2020/6025821
+Research Article
+Statistical Characteristics and Community Analysis of Urban
+Road Networks
+Wen-Long Shang ,1 Yanyan Chen,1 Huibo Bi ,1 Haoran Zhang,2 Changxi Ma ,3
+and Washington Y. Ochieng4
+1BeijingKeyLaboratoryofTrafficEngineering,CollegeofMetropolitanTransportation,Beijing Universityof Technology,
+Beijing100124,China
+2CentreforSpatial InformationScience,TheUniversityof Tokyo,Tokyo277-8563,Japan
+3SchoolofTrafficandTransportation, LanzhouJiaotongUniversity,Lanzhou730070,China
+4CentreforTransportStudies, ImperialCollegeLondon,LondonSW72AZ,UK
+CorrespondenceshouldbeaddressedtoHuiboBi;huibobi@bjut.edu.cn
+Received 13 March 2020; Revised 9 August 2020; Accepted 25 August 2020; Published 9 September 2020
+AcademicEditor:JosManuelGaln
+Copyright©2020Wen-LongShangetal.ThisisanopenaccessarticledistributedundertheCreativeCommonsAttribution
+License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is
+properlycited.
+Urban road networks are typical complex systems, which are crucial to our society and economy. In this study, topological
+characteristicsofanumberofurbanroadnetworkspurelybasedonphysicalroadsratherthanroutesofvehiclesorbusesare
+investigated in order to discover underlying unique structural features, particularly compared to other types of transport
+networks. Based on these topological indices, correlations between topological indices and small-worldness of urban road
+networksarealsoexplored.Thefindingshows thatthereisnosignificantsmall-worldnessforurbanroadnetworks,whichis
+apparentlydifferentfromothertransportnetworks.Followingthis,communitydetectionofurbanroadnetworksisconducted.
+The resultsrevealthatcommunitiesand hierarchyofurban roadnetworkstendtofollow ageneral naturerule.
+1.Introduction [6–9],airtransport [10, 11],railwaytransport [12,13],and
+marine transport [14, 15]. Sienkiewicz and Hołyst [16] ex-
+Urbanroadnetworks(URNs)arevitalinunderpinningour plored the public transport network (PTN) systems of 22
+society and economy [1]. Particularly, nowadays with the cities in Poland, and the results show that topological
+growingpopularityoftechnologiesrelatedtosmartcityand characteristics of these cities, such as degree and degree
+cooperative vehicle infrastructure systems (CVIS), physical distribution, average path length, and cluster coefficients,
+roadsandtheirconstituentURNsactuallycarryingmostof tend to follow power-law distribution and exponential
+urban traffics are increasingly receiving attention. Mean- distribution, and these PTNs also demonstrate significant
+while,URNscanbedescribedastypicalcomplexnetworked small-worldness. Following this, Xu et al. [17] investigated
+systems[2]astherearelargenumbersofspatialcomponents thetopologicalpropertiesofthreebus-transportnetworksin
+with complex structures and interactions between different Beijing, Shanghai, and Nanjing. The degree distribution in
+components.SinceWattsandStrogats[3]andBarabasiand thethreecitiesshowspowerlawsinspaceL(nodesreferto
+Albert [4] proposed “small-world” networks and scale-free stations, and links denote that at least one route exists be-
+networks, respectively, complex network theory has been tween two consecutive stations), while in space P (nodes
+consideredasagoodtooltoobserveandanalysetopological denote stations, while links exist when two stations are
+and structural features of networked systems [5]. shared by at least one route), the cumulative degree dis-
+Infact,complexnetworktheoryhasbeenappliedtothe tributionfollowsanexponentialdistribution.Similarly,Von
+studyofvarioustransportnetworks,suchaspublictransport Ferber et al. [6] explored the public transport networks
+2 Complexity
+(PTNs) in 14 cities, and the results show that these PTNs The rest of this paper is organized as follows. Section 2
+have high clustering coefficients and relatively low average introducesthewidelyusedtopologicalindicesinthefieldof
+shortestpaths,whicharetypicalsmall-worldcharacteristics. networkscience.Section3presentsthestatisticalanalysisof
+A directed and weighted bus-transport network in Beijing theurbanroadnetworks,andthesmall-worldanalysisisalso
+alsosuggeststhatthisbusnetworkisasmall-worldnetwork conducted. Following this, correlation analysis between
+[18].Inordertoexaminetherelationshipbetweencitysize sometopologicalindicesisinvestigatedinSection4.Section
+and network centrality, Derrible [19] investigated be- 5 explores community detections of the urban road net-
+tweenness centrality of 28 metro systems across the world. works, and finally, we draw conclusions in Section 6. The
+Dimitrov and Ceder [7] examined the structure and topo- structure of our study is logically organized, and previous
+logicalcharacteristicsofthebusnetworkinAuckland,New sections can support the subsequent ones. For example,
+Zealand,basedonthebusroutes.Aswellasthis,Sunetal. Sections 4 and 5 are both based on statistical analysis of
+[20] analysed topological characteristics of the Beijing rail topological indices of the URNs.
+transit network (BRTN), and vulnerable stations and cas-
+cading failures of the BRTN were studied under different
+2.Background and Database
+intentional attacks based on degree, betweenness, and
+strengthindices.DeRegtetal.[21]analysedthetopological
+In this paper, complex network theory is employed to ex-
+and spatial characteristics of PTNs in the UK, and PTNs
+plore topological characteristics of urban road networks
+such as London, Manchester, West Midlands, and national
+(URNs) as it is a good tool to study very complex systems.
+rail were investigated to discriminate their stability. Par-
+Data associated with the URNs used in this study are ob-
+ticularly, they found the universal load dynamics of these
+tainedfromawebsite(http://www.bgu.ac.il/∼bargera/tntp/),
+systems, which is useful for the efficiency of the PTN.
+whichisfrequentlyusedfortransportationproblems.Unlike
+In addition to public transport networks, statistical
+typical space L and space P representations [29] and dual
+characteristicsofairnetworks[10,11,22],railwaynetworks
+informationrepresentation[30],thenodesofanurbanroad
+[12, 13], and cargo ship networks [14, 15] have also been
+networkrefertotheintersectionsofurbanstreetsorroads,
+explored based on complex network theory. Although
+while the links represent the street or road segments con-
+complexnetworktheoryhasbeenfrequentlyusedtostudy
+necting nodes. It is worth noting that the construction of
+many types of transport networks, complex network re-
+URNs is not our focus, and we directly use the URN data
+searchrelatedtourbanroadnetworks(URNs)consistingof
+from the website (http://www.bgu.ac.il/∼bargera/tntp/) de-
+roadsegmentsandjunctions,whichdirectlycarrymostof
+velopedbythescholarsinthefieldoftransportation.Dueto
+urbantraffics,isverylimited.Jiangetal.[23]attemptedto
+thelackoftrafficdata,wedonottakeintoaccounttrafficon
+characterize the topology structure of six urban street
+the roads. In addition, all URNs used in the study are
+networks from the perspective of degree correlation, and
+connected. Urban road networks can be divided into
+they found that the reshuffled networks from six street
+weightedorunweightedbasedonwhetherlinksarelabelled
+networks tend to deviate the small-world properties
+withaweight,whichcanbethelengthoflinksortrafficflow
+comparedtotheoriginalnetworks.Followingthis,Kirkley
+onsuchlinks,andsoon[31].Theweightoflinksdependson
+etal.[24]mainlyfocusedonthebetweennesscentralityof
+the purpose of research.
+97 cities worldwide to demonstrate the invariance of its
+The URNs used in this paper mainly represent cities in
+statistical distribution for planar networks. In addition,
+EuropeandNorthAmericabecauseofthelimitedscopeof
+otherprevious studieseitherinvestigatedcertaincityroad
+data sources. Specifically, these URNs are Austin, Chicago,
+networks in dual representation (nodes refer to the set of
+Philadelphia, Anaheim, Winnipeg, Central Berlin, Barce-
+edges sharing common attributes) so as to observe the
+lona,Terrassa,andHessen,andthesizeoftheURNsvaries,
+growth of the city or model the congestion [25, 26] or
+rangingfrom416nodesto13,389nodes.Suchinformation
+focused on the robustness and response of road networks
+including the number of links is presented in Table 1.
+underdifferentattackstrategies[27,28].However,several
+Table 2 summarises six topological indices used in this
+questions related to URNs are still unclear: for instance,
+paper: degree, clustering coefficient, average path length
+compared with other transport networks, what are the
+(APL), closeness centrality, betweenness centrality, and ef-
+common statistical characteristics of URNs in different
+ficiency.Inordertodistinguishglobalandlocalindices[34],
+countries? How are the small-worldness and underlying
+efficiency and APL are presented at the last two rows, and
+relationships between the statistical characteristics? How
+these two indices may present the global performance of
+are the community and hierarchy features of URNs and
+URNs from different perspectives. Here, we use these six
+whatkindofrulestheymayfollow?Thisstudyisconducted
+indices to analyse topological properties of URNs.
+and organized based on these questions, and answering
+thesequestionsisthecentralmessagethatwearetryingto
+deliver. To answer these questions, this paper investigates 3.Statistical Analysis of the Urban
+thetopologicalcharacteristicsofurbanroadnetworksfrom Road Networks
+anumberofcitiesinEuropeandNorthAmericainorderto
+exploresubstantialstructurefeaturesofthesenetworks.In Duetothefactthatthecomplexityofurbanroadnetworksis
+addition, small-world analysis and community detection partially arising from the topological characteristics and
+are also conducted. underlyingstructurefeatures,statisticalanalysisplaysavital
+Complexity 3
+Table1: Urbanroadnetworkswithdifferentscales.
+City Nodes Links Locations
+Austin 7388 18,961 America
+Chicago 12,982 39,018 America
+Philadelphia 13,389 40,003 America
+Anaheim 416 914 America
+Winnipeg 1052 2836 America
+Berlin 12,981 28,376 Europe
+Barcelona 1020 2522 Europe
+Terrassa 1609 3264 Europe
+Hessen 4660 6674 Europe
+Table 2: Sixindices used foranalysing urban roadnetworks.
+Indices Equations Interpretation
+α istheconnectionbetweennodeiandnodej;ifiandjareconnected,a is1;
+ij ij
+otherwise,itis0.Themeandegreeofanetwork,denotedask,istheaverageofthe
+Degree k �􏽐 α degreeofallitsnodes[32].ThedegreedistributionofthenetworkP(k)isaratioof
+i j ij
+thenumberofnodeswithdegreektothenumberofallnodesandrepresentsthe
+cumulativedegree distribution.
+A istheactualnumberofedgesamongtheneighboursofnodei(nodesconnected
+Clustering i
+Cc(i)�(A/((k(k − 1))/2)) withnodeiarecalleditsneighbours);k isthenumberoftheneighboursofnodei,
+coefficient i i i i
+namelydegree ofnode i[3].
+Visthesetofnodes,V�􏽮v : j�1,2,...,n􏽯,andnisthenumberofnodes.d is
+j ij
+thelengthoftheshortestpathbetweeniandj.Forunweightednetworks(i.e.,every
+Closeness
+C �((n− 1)/􏽐 d ) linkhas anequallength of1),d isthe numberoflinksofthe shortestpath
+centrality i v j∈V,i≠j ij ij
+betweeniandj,whileforweightednetworks,assumingthattheweightissimply
+physicaldistance,d isthephysicaldistanceoftheshortestpathfromnodeitoj.
+ij
+σ isthetotalnumberofshortestpathsbetweennodesv andv ,andσ (i)isthe
+Betweenness zj z j zj
+B �􏽐 (σ (i)/σ ) numberofshortestpathspassingthroughnodei.Weightedbetweennesscentrality
+centrality i z≠j≠i∈V zj zj
+(WBC)takesthe actualdistanceofthe linkasthe edge weight.
+d isthelengthoftheshortestpathbetweeniandj.Forunweightednetworks(i.e.,
+Average path ij
+L�(1/n(n− 1))􏽐 d everylinkhasanequallengthof1),d isthenumberoflinksoftheshortestpath
+length i>j ij ij
+betweeniandj.
+ThisindexwasfirstproposedbyCrucittietal.[33]toexploretheglobalefficiency
+Efficiency E(G)�(1/n(n− 1))􏽐 (1/d ) ofcomplexnetworksandlookedverysimilartoAPL;inthisstudy,actualdistance
+i≠j∈G ij
+is assignedto the weightofalink.The greaterE,the betterthe efficiency.
+role in understanding such complexity and explores sub- is divided into in-degree (the number of links leading to a
+stantial mechanisms of urban road networks. given node) and out-degree (the number of links leading
+In this study, in order to capture more realistic topo- away from a given node). The average in-degree and out-
+logical characteristics of URNs, we regard these URNs as degreeofnineURNshavebeensummarisedinTable3,and
+directednetworks,androadsorstreetsonlyforpedestrians thedegreedistributionsofnineURNsinthelog-linearscale
+are not taken into account. According to the background are illustrated in Figure 1.
+providedinSection2,topologicalindicesoftheseURNsare In Figure 1, the y-axis represents logarithm of the
+calculatedinordertoexploretopologicalcharacteristicsand complementary cumulative probability P(K≥k), which is
+discover the underlying properties of the urban road net- the probability that a randomly chosen URN node has in-
+works (URNs) under consideration. degree/out-degree which equals to or larger than k. Given
+that the degree denotes the number of streets connecting
+with junctions of roads, it is expected that the range of in-
+3.1.DegreeCentrality. Degreeisaseeminglysimpleyetvery degreeandout-degreefor theseURNsisnottoolarge. For
+importantindexsinceitreflectsthenode’sconnectivityand example,althoughthePhiladelphiaroadnetworkhas13,389
+itsimportanceinitsvicinity.Therefore,thisindexisusedto nodes and 40,003 links, the maximum in-degree and out-
+measure the local centrality of the networks. The degree degree are both 4. Among the nine URNs, Barcelona and
+centrality k of a node i in an undirected network (i.e., the Hessen have, respectively, the largest and second-largest
+linksarenondirectional)isthenumberoflinksconnecting rangesofdegree,despitetheirsmallersizes.Theslopeofthe
+to this node [4]. In realistic URNs, each intersection of distributioncurvesinFigure1describesthespeedofdescent
+streets/roadsisregardedasanode,whilethelinkrepresents of the in-degree and out-degree distribution curves, which
+the street/road segments between the nodes. Here, nine reflects whether the majority of nodes of URNs is less
+URNsusedinthisstudyaredirectional;therefore,thedegree connected.Forexample,Hessenshowsthesteepestslopeof
+Table 3:Indices ofnineurban roadnetworks.
+Average in- Average out- Average Clustering
+City Closeness APL Diameter Efficiency
+degree degree betweenness coefficient
+Austin 2.5658 2.5658 0.0099 0.0393 0.0010 48.58 118 0.0284
+Chicago 3.0062 3.0062 0.0053 0.0273 0.0017 44.71 111 0.0297
+Philadelphia 2.9878 2.9878 0.0059 0.0446 0.0007 43.17 98 0.0290
+Anaheim 2.1971 2.1971 0.0316 0.00003 0.0157 11.87 31 0.1098
+Winnipeg 2.7269 2.7269 0.0253 0.0897 0.0007 18.85 40 0.069
+Berlin 2.1855 2.1855 0.0075 0.0001 0.0017 50.09 116 0.0242
+Barcelona 2.7118 2.7118 0.0203 0.1853 0.0009 14.00 31 0.0765
+Terrassa 2.0362 2.0362 0.0181 0.3441 0.0009 25.09 64 0.0533
+Hessen 1.4322 1.4322 0.0160 0.0516 0.0003 45.60 137 0.0282
+0
+–1
+–2
+–3
+–4
+–5
+0 2 4 6 8 10 12 14
+In-degree
+the distribution curve, which suggests that compared to that most of nodes in these nine URNs are connected
+otherURNs,theproportionofnodesofHessenwithlowin- throughafewnodesandthatthedistributionsofin-degree
+degree/out-degree is the largest, so overall, Hessen is less and out-degree are qualitatively similar,which suggest that
+connected than other URNs. In this study, the statistical most of street/road segments in these nine URNs are bi-
+significance of degree distribution is not very significant, directional. We also plot the degree distributions of the
+given that the range of in- and out-degree is limited. Here, URNsinthelog-logscaleinFigure2,anditshowsthatthe
+the degree distribution is mainly used to present the pro- degree distribution is very similar with that in Figure 1.
+portionofeachvalueofin-andout-degreesoastoexplore ThesecondandthethirdcolumnsinTable4showthat
+the structural properties of the URNs. most of the in-degree and out-degree distributions follow
+UnliketherestoftheURNs,thein-degree/out-degreeof thepowerlawwell.Thisresultisconsistentwiththeprevious
+Barcelonahassignificantportionsthatarelargerthan9,and work relating to public transport networks [6, 16, 35],
+the curves for Barcelona consist of two segments: the first worldwidemaritimetransportationnetworksrepresentedin
+one decreasing quickly, while the second decreases slowly. spaceL[14],andtheChinesebus-transportnetwork[17].It
+Theexplanationisthattheproportionofnodeswithhigher is worth noting that the in-degree/out-degree distributions
+in-andout-degree(largerthan9)forBarcelonaisrelatively ofsomeURNsalsofollowotherdistributionsverywell,for
+higherthanotherURNs,whichimpliesthatthenodesofthe example, Anaheim, Berlin, and Austin can also obey
+Barcelona network are more likely to connect with more Gaussian distribution: P(k≥x)∝e− (x− b1/c1)2 , and the
+roadscomparedtootherURNs.However,giventhelackof goodness for in-degree is 0.98, 0.95, and 0.96, respectively,
+coordinatedataandgeographicalinformation,itisdifficult evensoitisstillenoughtoillustratethedecayingtendencyof
+for us to know how exactly the junctions in Barcelona in-degree/out-degree. In addition, the distributions of in-
+connect with other roads by visualization. Figure 1 shows degreeandout-degreefortheseURNsshowsimilarity,and
+ytilibaborp
+evitalumuc
+goL
+0
+–1
+–2
+–3
+–4
+–5
+–6
+–7
+–8
+–9
+0 2 4 6 8 10 12 14
+Out-degree
+Anaheim Berlin Hessen
+Austin Winnipeg Philadelphia
+Barcelona Chicago Terrassa
+(a)
+ytilibaborp
+evitalumuc
+goL
+4 Complexity
+–6
+–7
+–8
+–9
+Anaheim Berlin Hessen
+Austin Winnipeg Philadelphia
+Barcelona Chicago Terrassa
+(b)
+Figure1: In-degreeandout-degree distributionsofurban roadnetworksin thelog-linearscale.
+0
+–1
+–2
+–3
+–4
+–5
+–0.5 0 0.5 1 1.5 2 2.5 3
+Log in-degree
+thisconfirmsthatmostofthelinkswithinthenineURNsare hasbeensummarisedinTable3,whichisnormalizedbythe
+once again bidirectional. All node degree distributions are number of nodes and also proves the viewpoint observed
+showntofollowthepowerlawwell,P(k≥x)∝x− μ,except from Figure 3. The average CC of these URNs is smaller
+thatBarcelonafollowsatwo-regimepowerlaw,andμisthe compared to the Chinese airport network [36], the Italian
+slope of the fitted curve (in the logarithmic coordinates), airport network [11], the worldwide air transportation
+whichdepictsthespeedofdescentofthein-degreeandout- network[10],andtheBostonsubwaynetwork[37],possibly
+degreedistributioncurves.Adistributioncurvewithasteep becausetheneighbouringnodesofagivennodeintheURNs
+slopesuggeststhatthemajorityofnodeshassmallervalues arelesslikelytobeconnectedtoeachother.Thisindexisalso
+of in-degree/out-degree given that it is in the logarithmic able to be used to judge whether the network has small-
+coordinates; in other words, the URN overall is less well world properties [3], and it will be depicted in detail later.
+connected. Philadelphia, with the steepest slope among the
+nine URNs, is overall less well connected than the other
+3.3. Weighted Closeness Centrality (WCC). As previously
+URNs.
+introduced in Table 2, closeness centrality [38] of node i is
+the inverse of the sum of the shortest path distance from
+3.2.ClusteringCoefficient. Theclusteringcoefficient(CC)is node i to other nodes, and it measures the accessibility of
+used to measure the local compactness of a network and networks.Inthisstudy,theactualdistancesoflinksaretaken
+presents the clustering effect and local features of the net- asthelinkweights.AccordingtothefunctioninTable2,the
+work.AlargerCCofagivennodemeanstheneighboursof WCC for nine URNs is calculated. The cumulative distri-
+thenodearemorelikelytoattracteachothersothatthelocal butions of WCC for these nine URNs are presented in
+area of the network is more compact. According to the Figure4inalogarithmicscale.Giventhedifferencesinthe
+definitionofCCinTable2,theCCforallURNsiscalculated. size of these URNs, weighted closeness centrality is also
+Figure 3 presents the logarithmic complementary cumula- normalized.
+tive distribution, P(Cc≥x), of CC. AscanbeseenfromFigure4,allnodesofAnaheimand
+AscanbeseenfromFigure3,thedistributionforHessen BerlinhaverelativelysmallerWCC,whichdemonstratesthat
+has the steepest absolute slope, which means the road these two URNs are less accessible from a given node to
+network of Hessen is the loosest compared to other eight othernodes,whileTerrassa,Barcelona,andWinnipeghave
+cities due to the fact that most of its nodes have smaller relativelylargeWCC.Thisconclusionisconsistentwiththe
+values of CC followed by Winnipeg and Philadelphia. The result based on the average weighted closeness shown in
+URN of Terrassa is looser than Barcelona, Chicago, Berlin, Table 3.
+andAustin,andthenodesofAnaheimtendtoattracteach The WCC distribution is fitted for the nine URNs, as
+otherwithinthelocalrangemorethantheotherurbanroad presentedinTable4.Asobservedfromthefourthcolumnin
+networks in this study. The average CC for the nine URNs Table 3, most URNs follow an exponential distribution,
+ytilibaborp
+evitalumuc
+goL
+0
+–1
+–2
+–3
+–4
+–5
+–6
+–7
+–8
+–9
+–10
+–0.5 0 0.5 1 1.5 2 2.5 3
+Log out-degree
+Anaheim Berlin Hessen
+Austin Winnipeg Philadelphia
+Barcelona Chicago Terrassa
+(a)
+ytilibaborp
+evitalummuc
+goL
+Complexity 5
+–6
+–7
+–8
+–9
+–10
+Anaheim Berlin Hessen
+Austin Winnipeg Philadelphia
+Barcelona Chicago Terrassa
+(b)
+Figure2: In-degreeandout-degree distributionsofurban roadnetworksinthe log-logscale.
+.sNRUeninrof
+secidnixisnonoisserger
+foyrammuS
+:4elbaT
+noitubirtsid
+ssenneewtebdethgieW
+noitubirtsidssenesolc
+dethgieW
+noitubirtsideerged-tuO
+noitubirtsid
+eerged-nI
+secidnI
+walrewoP
+,laitnenopxE
+,wal
+rewoP
+,wal
+rewoP
+,wal
+rewoP
+,laitnenopxE
+,walrewoP
+,walrewoP
+noitcnuF
+λ
+−x∝)x≥B(P
+xce
+∝)x≥C(P
+β
+−x∝)x≥
+k(P
+α
+−x∝)x≥
+k(P
+λ
+−x∝)x≥B(P
+xce∝)x≥C(P
+β
+−x∝)x≥
+k(P
+α
+−x∝)x≥
+k(P
+epyt
+tuo
+ni
+tuo
+ni
+2R
+λ
+2R
+c
+2R
+β
+2R
+α
+sretemaraP
+ytiC
+89.0
+3656.0
+88.0
+1.531
+−
+99.0
+55.2
+99.0
+945.2
+nitsuA
+99.0
+5916.0
+29.0
+262
+−
+99.0
+452.3
+99.0
+352.3
+ogacihC
+99.0
+1095.0
+88.0
+9.811
+−
+99.0
+200.7
+99.0
+189.6
+aihpledalihP
+99.0
+6947.0
+99.0
+003761
+−
+99.0
+123.2
+99.0
+513.2
+miehanA
+89.0
+1187.0
+09.0
+39.84
+−
+99.0
+935.4
+99.0
+955.4
+gepinniW
+99.0
+5464.0
+69.0
+08027
+−
+79.0
+78.2
+79.0
+978.2
+nilreB
+99.0
+174.2
+89.0
+730.2
+99.0
+5537.0
+59.0
+30.43
+−
+∗anolecraB
+19.0
+3912.0
+98.0
+7912.0
+99.0
+6537.0
+99.0
+72.02
+−
+89.0
+677.1
+89.0
+200.2
+assarreT
+89.0
+4717.0
+99.0
+7.211
+−
+99.0
+8999.0
+99.0
+4799.0
+nesseH
+.walrewopemiger-owtawollofanolecraBfosnoitubirtsideerged-tuodnaeerged-nieTh∗
+6 Complexity
+generallythoughtasbeinglocatedinthegeographiccentre
+of the city since these nodes are easier to access than the
+other nodes.
+3.4.WeightedBetweennessCentrality(WBC). Betweennessisa
+veryimportanttopologicalindexinthatitindicatesthathow
+frequently a given node is passed through by the shortest
+pathsbetweenallnodepairs.Inthisstudy,thelengthoflinks
+isusedastheedgeweight,andWBCiscalculatedaccording
+to the function in Table 2. The logarithmic complementary
+cumulative distribution of WBC for the nine URNs is
+presented in Figure 5. In order to mitigate the effect of the
+size of different networks to betweenness, the weighted
+betweennessisnormalized bydividingn(n− 1), wheren is
+thenodenumberofthenetwork.Figure5exhibitsthatmost
+ofthenodesforthenineURNshavesmallWBC,andamong
+all URNs, by intuition, Chicago overall shows the fastest
+decaying behaviour followed by Philadelphia and Austin,
+while Anaheim presents a relatively flat decaying tendency
+followed by Winnipeg and Barcelona. As discussed, the
+largerbetweennesscentralityofagivennodemeansthenode
+ismoreimportantduetothefactthatmoreoftheshortest
+paths in the URN pass through this node. Betweenness
+0
+centrality can be related to the robustness. In the trans-
+portationfield,thenodeswithhighBCtendtoberegarded
+–1
+asveryimportantonessincethesenodesaremostlikelytobe
+–2 usedbytravellersortobeallocatedcrucialresources,andthe
+travel time and congestion would increase greatly if such
+–3
+nodes are subject to malfunctions caused by disruptions.
+–4 Therefore, these nodes are most vulnerable parts of the
+whole network system. According to Sun et al. [39], a
+–5 networkislessrobustiftheproportionofnodeswithlarge
+betweennesscentralityishigher.Theslopesofthecurvesin
+–6
+Figure 5 show this proportion statistically; in other words,
+–7 the steeper the slope is, the more robust the URN is.
+Thelogarithmiccomplementarycumulativedistribution
+–8 of WBC can also be fitted by a power-law function,
+P(B≥x)∝x− λ,whichisidenticaltoKirkleyetal.’sfinding
+–9
+[24], and the results for this are summarised in Table 4. In
+thiscase,normalizedB∈(0,1);thus,thelargerλ,theslower
+the rate of decay.
+Comparing all λ, Berlin exhibits the quickest decaying
+characteristic of the WBC distribution followed by Phila-
+delphia, Chicago, and Austin, which is against the intuitive
+observation.Thereasoncouldbethatthedistributionstendto
+overestimate or underestimate the decaying tendency of the
+curves in this case. The average weighted betweenness cen-
+trality(AWBC)oftheseURNs,however,whichispresented
+i.e.,P(C≥x)∝ ecx,yetAustin,Philadelphia,andWinnipeg inTable3,showsthatChicagohasthesmallestvaluefollowed
+do not fit this exponential distribution as well as other byPhiladelphia,Berlin,andAustinandthatAnaheimhasthe
+networks. From this distribution, it can be seen that Ana- largest value followed by Winnipeg and Barcelona. Statisti-
+heimandBerlinhavethelargestcparametervalues,which cally,thelowertheAWBCthenetworkhas,themorerobust
+suggests that most of the nodes in these two URNs have thenetworkis[39].Theconclusionrelatedtotherobustness
+smallerWCCfollowedbyChicago,Austin,Philadelphia,and of these networks based on AWBC is therefore roughly
+Hessen,andTerrassaandBarcelonahaveasmallerα-value. consistent with that of observations from Figure 5.
+This is consistent with what Figure 4 describes. WBCdepictshowagivennodeofthenetworkispassed
+The average closeness centrality for nine URNs is bytheshortestpaths,andthisinformationmaybeusedfor
+summarisedinTable3.ThenodeswiththelargestWCCare the allocation of important resources. Hence, this index is
+ytilibaborp
+evitalumuc
+goL
+0
+–1
+–2
+–3
+–4
+–5
+–6
+–7
+–8
+–9
+–16 –14 –12 –10 –8 –6 –4 –2
+Weighted closeness
+Anaheim Berlin Hessen
+Austin Winnipeg Philiadelphia
+Barcelona Chicago Terrassa
+Figure4: WeightedclosenesscentralityofURNs.
+ytilibaborp
+evitalumuc
+goL
+Complexity 7
+0 0.05 0.1 0.15 0.2 0.25
+Clustering coefficient
+Anaheim Berlin Hessen
+Austin Winnipeg Philadelphia
+Barcelona Chicago Terrassa
+Figure3: Clusteringcoefficientof URNs.
+0 varygreatlyamongthemandarelargerthanotherindices.
+Anaheim has the smallest APL, which means the nodes of
+–1 this network can be more efficiently connected by paths.
+ThisisfollowedbyBarcelonaandWinnipeg,whilethethree
+–2
+networks with the largest APL are Austin, Hessen, and
+–3 Berlin. The diameter and the APL of the nine URNs are
+stronglycorrelatedwiththecoefficient0.9714accordingto
+–4 aPearsoncorrelation.Insomecases,APLandthediameter
+of networks are used to assess network performance
+–5
+[33,40,41].Thecorrelationsbetweenthesizeofnetworks,
+APL, and diameter are shown in Figure 6.
+AscanbeseenfromFigure6,thePearsoncorrelations
+between APL, diameter, and the size of networks are
+0.8358 and 0.7223, respectively. This demonstrates that
+these two indices are positively proportional to the
+number of nodes to some extent. Here, we need to em-
+phasizethatitisexpectedthatthelargercityismorelikely
+0 0.05 0.1 0.15 0.2
+to have larger APL and diameter, and our correlation
+Weighted betweenness
+analysishasalsoprovedthispoint.Accuratelyquantifying
+the correlation coefficients between APL, diameter, and
+the size of the URNs is also very important for the to-
+pological analysis of URNs.
+Inthisstudy,APLiscalculatedbasedonthefunctionin
+Table 2. If a network suffers from severe destruction, which
+maybegeneratedbyinternalorexternaldisruptionssothat
+sometimesusedtoassesstherobustnessandvulnerabilityof the network is disconnected, an extremely large value is
+the network [39]. assignedtothedisconnectedlinksforthecalculationofAPL.
+However,thisapproachhasnoeffectontherankingoflink
+importance, and comparing the absolute value of APL does
+3.5. Average Path Length (APL), Diameter, and Efficiency. notmakesense.Inordertobettermeasuretheperformance
+APL, also called the characteristic path length, can be ofunconnectednetworks[33],anefficiencymeasurebasedon
+employed to quantify the structural characteristics of net- theinverseoftheshortestpathlengthisproposedinorderto
+works[3].Thediameter(D)ofthenetworkisthemaximum better observe the variations in the efficiency of different
+d for all node pairs. Here, APL can be categorized as networks. According to the efficiency function presented in
+ij
+weighted and unweighted. The weighted APL tends to Table 2, the results of efficiency for the nine URNs are cal-
+measurethedistancetravelledfromagivennodetoanother culatedandalsosummarisedinTable3.Ascanbeseen,the
+node, while the unweighted APL assesses how many links resultsareconsistentwiththeAPL;forexample,Anaheimhas
+needtobetraversedfromagivennodetoanother.Bothare thesmallestAPL(11.87),and,correspondently,itsefficiency
+able to assess the degree of accessibility of the URN. This measureisthelargestamongallnineURNs,whileBerlinhas
+studyanalysesunweightedAPLtoexplorethestructureof thelargestAPL(50.09)andthesmallestefficiency.Ingeneral,
+theseURNssincetherearenounitsforthedistancedatafor efficiency is able to be used to measure the performance of
+the nine urban road networks, which means that com- networks when suffering from disturbances.
+parisonsofabsolutevaluesofAPLbetweendifferentURNs In this study, we mainly utilize commonly used topo-
+are meaningless. Here, we need to point out that, unlike logical indices to explore the statistical characteristics of
+APL, the distribution analysis of WBC and WCC for the selected nine URNs, which are located in America and
+URNs is not impacted by the distance data without units Europe.AscanbeseenfromTable4,thereseemstobesome
+sincetheircalculationsarebasedonthenormalizationfor differences between American and European cities, that is,
+statistical distribution analysis. Furthermore, geodesic parameterαofthein-degreedistributionforEuropeancities
+distance, namely, the number of links connecting a node issmallerthanthatforAmericancities,exceptfortheBerlin
+pair, is more focused in this study because of the ho- network.However,duetothelimitednumberoftheURNs,
+mogenous characteristics of the physical links of each in- wecannotconfirmthispoint.Basedonourintuition,some
+dividual network. Accordingly, the APL and the diameter different characteristics of URNs in different countries/
+for the nine URNs have been summarised in Table 3. As continentsprobablyexistowingtodifferenthistory,culture,
+shown in Table 3, compared to other indices, we do not levels of economic development, and so on, but a large
+normalizeAPLanddiameterandjustpresenttheabsolute number of sample data are really needed to support. Here,
+valuesofthemsoastodirectlytoshowhowmanylinkscan we cannot conclude the differences between American and
+be passed averagely by shortest paths between any node European cities due to limited data sources.
+pairsoftheURNsandwhatthemaximumshortestpathfor In order to further understand the topological charac-
+all node pairs is. Therefore, APL and diameter seemingly teristicsoftheURNs,wecalculatethetopologicalindicesof
+ytilibaborp
+evitalumuc
+goL
+8 Complexity
+–6
+–7
+–8
+–9
+Anaheim Berlin Hessen
+Austin Winnipeg Philadelphia
+Barcelona Chicago Terrassa
+Figure5: Weightedbetweenness centralityofnineURNs.
+55
+50
+45
+40
+35
+30
+25
+20
+15
+10
+ER graphs corresponding to the URNs with the same size, 3.6. Small-Worldness of Urban Road Networks. Small-world
+which are presented in Table 5. These ER graphs are gen- effect was first mentioned by Karkubthy [42] and mathe-
+eratedbyPajekbasedontheG(n,m)model,wherendenotes matically presented by Pool and Kochen [43]. The famous
+thenumberofnodesandmrepresentsthenumberofedges, experiment related to small-worldness, “six degrees of
+andedgesarepickeduniformlyatrandom.Wecanseefrom separation,”wasconductedbyStanleyMilgraminthe1960s
+Table 5 that the average degree of ER graphs is larger than [44].WattsandStrogatz[3]constructednetworkswhichlie
+average in- and out-degree of the corresponding URNs in between regular and random networks and named these
+Table 3, which is expected since the ER graphs are undi- “small-world” networks by analogy with Milgram’s exper-
+rected. In addition, average betweenness of most of the ER iment. Small-world networks have APL as small as APL-
+graphs is larger than that of the corresponding URNs, and , yet CC≫CC compared to random networks
+random random
+diameter of ER graphs is smaller than that of the URNs in with the same number of nodes and edges, and a general
+Table 3. These phenomena are probably caused by the feature of many complex networks is their small-world
+random nature and weak connections of the ER graphs, property[3],meaningthattwonodesinthenetworkcanbe
+which are more likely to form disconnected component connectedwithshorterpaths.Followingthis,Newman[45]
+clusters.Here,closenesscentralitycannotbeobtaineddueto claimedthatthevalueoftheaverageshortestpathforsmall-
+weakly connected ER graphs. Based on the comparisons of world networks scales logarithmically or less with network
+APLandCCbetweentheURNsinTable3andtheERgraphs size for a fixed mean degree. In order to explore whether
+inTable5,theseURNscannotshowsignificantsmall-world theseURNshavesignificantsmall-worldproperties,random
+properties. The detailed analyses and discussions will be networks which have the same number of nodes and the
+presented in the following section. same average degree as these networks are generated using
+LPA
+140
+Berlin
+Austin
+120
+Hessen Chicago
+Philadelphia
+100
+80
+Terrassa 60
+Winnipeg
+Correlation: 0.8358 40
+Barcelona
+Anaheim
+20
+0 2000 4000 6000 8000 10000 12000 14000 0 2000 4000 6000 8000 10000 12000 14000
+Node number Node number
+(a)
+retemaiD
+Complexity 9
+Hessen
+Austin Berlin
+Chicago
+Philadelphia
+Terrassa
+Winnipeg
+Correlation: 0.7223
+Anaheim
+Barcelona
+(b)
+Figure6:Correlations between APL,diameter,andthe size ofnineURNs.
+Table 5:Indicesof ERgraphs correspondingtothe URNs.
+City Average degree Average betweenness Clusteringcoefficient APL Diameter
+ER_Austin 4.9349 0.0103 0.0002 9.15 23
+ER_Chicago 5.9954 0.0039 0.0002 8.57 21
+ER_Philadelphia 5.5131 0.0038 0.0002 8.62 20
+ER_Anaheim 3.8213 0.0640 0.0032 7.28 16
+ER_Winnipeg 4.8133 0.0184 0.0018 6.78 18
+ER_Berlin 4.8148 0.0066 0.0001 11.52 28
+ER_Barcelona 4.5363 0.0327 0.0013 7.35 18
+ER_Terrassa 5.9789 0.0537 0.0007 9.29 22
+ER_Hessen 4.0696 0.0379 0.0003 18.85 57
+10 Complexity
+Pajek software so as to calculate their average path length 4.1. Degree-Betweenness Correlation. The nodes with large
+(APL )andclusteringcoefficient(CC ).Here,itis degree are most connected, and the nodes with large be-
+random random
+worth noting that different formulas to approximate APL tweennessaremostcentralinthenetwork.Nodeswithlarge/
+and CC have been developed by many scholars, such as small betweenness and small/large degree are regarded as
+Newman et al. [46], Boccaletti et al. [47], and Albert and anomalies[10].Infact,itiseasytodesignnetworksinwhich
+Baraba´si [48]. We also adopt commonly used formulas nodes have large betweenness and small degree. For ex-
+(log(n)/log(〈k〉)) and 〈k〉/n to approximate APL and CC, ample, if there are two communities connected by a single
+respectively. The comparisons between Pajek and these node with just two links, the node must have large be-
+approximation formulas can be shown in Figure 7, which tweenness due to the fact that it is frequently passed by
+demonstratesthatAPLandCCbasedonthesetwomethods routes which are going to one community from the other.
+are very similar and are of the same order of magnitude, Thisnodeplaysanimportantroleinsuchanetworksystem.
+although differences exist owing to randomness of ER Inordertocheckwhethernodeswithlargedegreehavelarge
+graphs. betweenness for these URNs, this section calculates corre-
+The comparisons between the generated random net- lations between betweenness and in-degree and plots them
+works and the corresponding urban road networks are as shown in Figure 8.
+shown in Table 6. Many complex networks, such as the internet network
+AscanbeseenfromTable6,theAPLoftheninereal- [50], show that nodes with large betweenness also have a
+lifeurbanroadnetworks(URNs)ismuchlargerthanthat large degree,while theworldwide airport network presents
+oftherandomnetworkswiththesamesize.Althoughthe anomalous behaviour in this regard [10]. As can be seen
+APLofAnaheimistheclosesttothatofthecorresponding fromFigure8,thecorrelationsbetweenbetweennessandin-
+randomnetwork,itstilltakes4.5more.Inthemeantime, degree are weak, with neither presenting highly positive
+mostoftheCCsforthesenineURNsarelargerthanthose relationshipsnorshowinganomalousbehaviour,butinstead
+forthecorrespondingrandomnetworks,buttheyarestill exhibiting more complex relationships. Anaheim has the
+inthesamemagnitudelevel,exceptforBerlin.TheCCsof highest correlation, 0.62, which means most of the city’s
+the URNs for Berlin and Winnipeg, meanwhile, are nodes are well connected as well as central. Such relation-
+smaller than those for the corresponding random net- shipsarealmostnonexistentforAustin,Barcelona,Hessen,
+works. In addition, the last column shows that APL does andPhiladelphia,however,asshownbythelowcorrelations
+not scale logarithmically with the network size, Ln(N), (0.01, 0.16, 0.09, and 0.11, respectively). Such correlations
+where N is the number of nodes. The above observations maybecausedbythedistinctcommunitycharacteristicsof
+show that the small-world property is not significant URNs.Inaddition,thecorrelationsbetweenout-degreeand
+among these nine URNs. In many studies of realistic betweenness are identical to those between in-degree and
+networks, however, such as metabolic networks [49], the betweenness, as shown in Figure 9.
+Chineseairportnetwork[36],theItalianairportnetwork
+[11], the worldwide air transportation network [10], the
+Boston subway network [37], the worldwide maritime 4.2. Degree-Clustering Coefficient Correlation. In order to
+transportation network [14], and public transport net- examine whether the well-connected nodes in these URNs
+works [16], small-world properties are evident. This may stillhavealargeclusteringcoefficient(CC),thecorrelations
+beduetothefactthattheseURNsarespatialandthatall between CC and in-degree are calculated and plotted, as
+links are directional, which may increase the average showninFigure10.Itisnotsurprisingthatthecorrelations
+geodesicdistance betweenany nodepairs andreducethe betweenthemareverylow,infact,alllowerthan0.25,since
+clusteringeffectinanygivenlocalarea.Thisfindingshows this is identical to the analyses of CC. For these URNs, the
+that these URNs are different from other networked neighbouringnodesarelessconnectedwitheachother.The
+transport systems in the real world, and this may imply correlations in the following confirm this viewpoint.
+more profound impacts of other characteristics of these ThecorrelationsbetweenCCandout-degreearesimilar
+networks. tothosebetweenCCandin-degree(asshowninFigure11)
+andagainstconsistentlyverypoorandlowerthan0.25.The
+reasonwhyurbanroadnetworkswithmanylinkshavesuch
+4.Correlation Analysis
+poorcorrelationsisthatthesenetworksaredirectionaland
+ManytopologicalindicesforthenineselectedURNshave that the nodes in urban road networks tend to constitute
+beencalculatedandanalysedinSection3.Basedonthis,a quadrangles rather than triangles, which implies the
+correlation between these topological indices can be neighbouring nodes of a given node are less likely to be
+conductedinordertoexploretherelationshipbetweenthe connected with each other. This also explains why the
+topological indices and the underlying structural prop- clustering coefficients in these URNs are not very high.
+erties of these URNs. In addition, many interesting in-
+tuitive questions in the field of network science can be 5.Communities of Urban Road Networks
+answered by correlation analyses of topological indices,
+forexample,whetherthemostconnectednodesaremost The previous sections have performed topological analysis,
+central ones or those that are most compact at the local small-worldness, and correlation analysis between some
+level [10]. topological indices. Building on these analyses, this section
+24
+22
+20
+18
+16
+14
+12
+10
+8
+6
+on similar interests and geographical distance in order to
+provide better service [54], discovering communities of
+relationship networks between customers and online re-
+tailerssoastoprovideefficientpurchaserecommendations
+andmarketinganalyses[55],andidentifyingclustersinlarge
+networksfordatastorage[56].Inaddition,thecommunity
+structureofanetworkalsooffersabetterwaytounderstand
+networkedsystemsmorecompletelyinthatitisapowerful
+visualizationtooltopresenttherepresentationofnetworks
+rather than simply showing all the nodes and links of the
+network. In the transport field, in order to make clear the
+roleofhumancollectivebehaviourphenomenaacrosstime
+andspaceinLondontransport,intertwinedcommunitiesof
+trafficacrossthewholecitywereinvestigatedbyPetrietal.
+detects and analyses community structures within these [57]toprovethatthishumanspatialsystemisabletoreacha
+networksin order toexplore the topologicalcharacteristics self-organized critical state. Community detection has
+of the URNs further. therefore been a hot topic in modern science of complex
+Thedetectionandanalysisofthecommunitystructures systems [51].
+withinlarge-scalenetworkshavebeenafocusofresearchin Many methods and algorithms can be applied to the
+recent years. The quantitative definitions of communities detection of communities in graphs, such as graph parti-
+within networks are diverse. Fortunato [51] defined a tioning,hierarchicalclustering,andspectralclustering[51],
+communityasgroupsofnodeswhichplayasimilarroleor buttheyallhavelimitationsinhandlingedgeweights,edge
+share common features or properties within those groups. directions,oroverlappingcommunities.Inthisstudy,Order
+Lancichinetti et al. [52] regarded “highly cohesive sub- Statistics Local Optimization Method (OSLOM), which is
+graphs”ofnetworksascommunities,clusters,ormodules.In calculated based on the connectivity of networks and op-
+biologicalandsocialnetworks[51],communitystructureisa timizeslocallythestatisticalsignificanceofclusters,isused
+common feature, and it is thought of as a division of net- todetectthecommunitystructureoftheseURNs.Thiswas
+worksintodenselyconnectedsubgroups[53].Lancichinetti firstproposedbyLancichinettietal.[52],anditiscapableof
+etal.[52]proposedthatacommunityisonepatternofnode handling directed and weighted networks, overlapping
+connections in realistic networks. community structure, hierarchical structure, pseudo-com-
+Detecting communities has many important applica- munities,andsoon,duetothefactthatOSLOMfocuseson
+tions in reality, such as identifying clusters of clients based optimizing locally the statistical significance of clusters. In
+LPA
+nitsuA ogacihC aihpledalihP miehanA gepinniW nilreB anolecraB assarreT nesseH
+×10–3
+6
+5
+4
+3
+2
+1
+0
+URNs
+log (n)/log<k>
+Pajek
+(a)
+nitsuA ogacihC aihpledalihP miehanA gepinniW nilreB anolecraB assarreT nesseH
+URNs
+<k>/n
+Pajek
+CC
+Complexity 11
+(b)
+Figure7: Comparisonsbetween using Pajekandotherapproximationformulas.
+Table 6: APL and CC comparisons between nine URNs and the
+correspondingrandomnetworksofthe samesize.
+City APL CC APL CC Ln(N)
+random random
+Austin 48.58 0.0010 9.2 0.0002 8.8940
+Chicago 44.71 0.0017 8.6 0.0002 9.4713
+Philadelphia 43.17 0.0007 8.6 0.0002 9.5022
+Anaheim 11.87 0.0157 7.3 0.0032 6.0307
+Winnipeg 18.85 0.0007 6.9 0.0018 6.9584
+Berlin 50.09 0.0017 12 0.0001 9.4712
+Barcelona 14.00 0.0008 7.4 0.0013 6.9276
+Terrassa 25.09 0.0009 9.3 0.0007 7.3834
+Hessen 45.60 0.0003 18.9 0.0003 8.4468
+0.015
+0.01
+0.005
+ordertobetterunderstandhowOSLOMworksfordetection analysestheresultingsetofclusterstochecktheirinternal
+of communities and hierarchies, we present the core algo- structureandpossibleunions.Toanalysethehierarchical
+rithminequation(1).SupposeφisagraphwithNnodesand structure, we need to build a supernetwork, where nodes
+S links andϑ is a subgraph of graph φ generated by the refer to clusters and links exist if the clusters are con-
+configurationmodel,whichcanbereferredtoLancichinetti nected; then, OSLOM is employed for this supernetwork
+et al. [58]. The probability of node i with kin neighbors in so as to obtain the second hierarchical layer, which can
+i
+subgraph ϑ can be written as also be regarded as a new supernetwork, and the above
+procedure is repeated until no clusters can be generated.
+p􏼒kin􏼌􏼌􏼌􏼌􏼌i,ϑ,φ􏼓�A 2− ki in
+, (1) More details concerning the detection of communities
+i kout!kin!􏼐mout− kin􏼑!(cid:0)M∗/2􏼁! and hierarchical structure are referred to Lancichinetti
+i i c i
+et al.’s work [52].
+wheremo cutistheout-degreeofthesubgraphϑ,ki inandko iut Asalifelineinfrastructure,URNscanberegardedasone
+arein-andout-degreeofnodei,respectively,M∗denotes type of self-organized system, which means that they are
+theinternaldegreeoftherestofnodesφ/[ϑ∪{i}],andAis similartoothersystemsinnaturetosomeextent.Inorderto
+anormalizationfactor. Thisequation may enumeratethe examine this natural property, community detection and
+possible configurations of the network with ki in between analysesareconductedbasedontheOSLOM,andtheresults
+node i and ϑ. Based on this equation, OSLOM is able to are shown in Figure 12.
+findexternalsignificantverticesandincludethemintoϑ, The communities of all nine URNs are presented in
+and it repeats this procedure to look for significant Figure12.Thefirstimpressionofthesecommunitiesisthat
+clusters until convergence; following this, OSLOM the bigger the URNs, the more the complex community
+eerged-nI
+1
+Correlation = 0.01031
+0.8
+0.6
+0.4
+Correlation = 0.62171 0.2
+0
+0 0.05 0.1 0.15 0.2 0.25
+Betweenness
+(a)
+eerged-nI
+×10–3
+0.02
+0.015
+Correlation = 0.16056
+0.01
+0.005
+0
+0 0.02 0.04 0.06 0.08 0.1 0.12
+Betweenness
+(b)
+eerged-nI
+0
+0 0.05 0.1 0.15 0.2 0.25
+Betweenness
+(c)
+eerged-nI
+×10–4
+6
+5
+4
+3
+2
+1 Correlation = 0.34691 Correlation = 0.28566
+0
+0 0.05 0.1 0.15 0.2 0.25
+Betweenness
+(d)
+eerged-nI
+×10–4
+6
+5
+4
+3
+2
+1
+0
+0 0.02 0.04 0.06 0.08 0.1
+Betweenness
+(e)
+eerged-nI
+×10–3
+2.5
+2
+1.5
+Correlation = 0.09424
+1
+0.5
+0
+0 0.05 0.1 0.25
+Betweenness
+(f)
+eerged-nI
+×10–4
+3
+2.5
+2
+1.5
+1
+Correlation = 0.30568
+Correlation = 0.11249
+0.5
+0 0.05 0.1 0.15 0.2
+Betweenness
+(g)
+eerged-nI
+×10–3
+4
+3
+2
+1 Correlation = 0.22642
+0
+0 0.05 0.1 0.15 0.2
+Betweenness
+(h)
+eerged-nI
+12 Complexity
+×10–3
+5
+4
+3
+2
+1
+0
+0 0.05 0.1 0.15 0.2
+Betweenness
+(i)
+Figure8:Thecorrelationbetweennormalizedin-degreeandbetweenness:(a)Anaheim;(b)Austin;(c)Barcelona;(d)Berlin;(e)Chicago;
+(f)Hessen;(g)Philadelphia;(h) Terrassa;(i) Winnipeg.
+0.015
+0.01
+0.005
+0
+structure they have. For example, Austin, Berlin, Chicago, In this study, the community detection is mainly based
+andPhiladelphiaarethelargernetworks,andthenumberof on the estimation of the statistical significance of clusters
+communitiesfortheseURNsisapparentlymorethanthatin andconnectivityofthenetwork.Althoughitseemsthatthe
+thesmallernetworks.Inaddition,itseemsthatthesebigger size of communities is likely to be correlated with other
+URNs have a significanthierarchical structure, namely, the communitiesoftheURNsduetothefixednumberofnodes
+bigger clusters consist of several smaller ones. The smaller and links, the quantitative correlations between commu-
+networks, such as Anaheim, Terrassa, and Winnipeg, nities of the URNs are unclear. As the developers of the
+meanwhile, present a clearer community structure. In ad- OSLOM,Lancichinettietal.[52]didnotclaimtheexistence
+dition, some nodes which look like not belonging to any of such correlations either, but we may explore it for the
+communities in these URNs are overlapping ones, which future study. Here, we are only able to confirm that the
+suggeststhatthesenodesaresharedbyseveralcommunities, communities within a given URN can be connected with
+and the nodes may assist the mutual communications for other ones of the URN by the overlapping nodes or some
+these communities; thus, these “sharing nodes” may have nodes within these communities, which further highlights
+great impact on the robustness and vulnerability of the the importance of such nodes in communication between
+whole network. communities.
+eerged-tuO
+1
+0.8
+0.6
+Correlation = 0.61786 0.4
+0.2
+0
+0 0.05 0.1 0.15 0.2 0.25
+Betweenness
+(a)
+eerged-tuO
+×10–3
+0.02
+0.015
+Correlation = 0.012157 0.01
+0.005
+0
+0 0.02 0.04 0.06 0.08 0.1 0.12
+Betweenness
+(b)
+eerged-tuO
+Correlation = 0.16166
+0 0.05 0.1 0.15 0.2 0.25
+Betweenness
+(c)
+6
+5
+4
+3
+2
+1
+0
+eerged-tuO
+×10–4
+6
+5
+4
+Correlation = 0.34963
+3
+2
+1
+0
+0 0.05 0.1 0.15 0.2 0.25
+Betweenness
+(d)
+eerged-tuO
+×10–4
+2.5
+2
+1.5
+Correlation = 0.28546
+1
+0.5
+0
+0 0.02 0.04 0.06 0.08 0.1
+Betweenness
+(e)
+eerged-tuO
+×10–3
+Correlation = 0.089808
+0 0.02 0.04 0.06 0.08 0.1 0.12 0.14
+Betweenness
+(f)
+3
+2.5
+2
+1.5
+1
+0.5
+eerged-tuO
+×10–4
+5
+4
+3
+Correlation = 0.1132
+2
+1
+0
+0 0.05 0.1 0.15 0.2
+Betweenness
+(g)
+eerged-tuO
+×10–3
+5
+4
+3
+Correlation = 0.31484
+2
+1
+0
+0 0.05 0.1 0.15 0.2
+Betweenness
+(h)
+eerged-tuO
+Complexity 13
+×10–3
+Correlation = 0.21287
+0 0.05 0.1 0.15 0.2
+Betweenness
+(i)
+Figure9:Thecorrelationbetweennormalizedout-degreeandbetweenness:(a)Anaheim;(b)Austin;(c)Barcelona;(d)Berlin;(e)Chicago;
+(f)Hessen;(g)Philadelphia;(h) Terrassa;(i) Winnipeg.
+0.08
+0.06
+0.04
+0.02
+0
+Inaddition,weneedtoemphasizethatexplorationofthe layers, respectively, and the number of communities in the
+relationshipbetweenthecommunitystructureofURNsand lowest layers is 343, 457, and 266, respectively. Anaheim,
+theirspatialdistributionishighlyimportant.However,since with just 416 nodes, however, has just two hierarchical
+the data source used in this study lacks data related to the layers,andthenumberofcommunitiesatthelowestlayeris
+geographicinformation,suchasthenodecoordinationand just11.Duetothefactthatthedetectionofthehierarchical
+locationsofurbanfunctionalareas,thestudyconcerningthe structure is mainly based on repeatedly using the OSLOM
+spatial distribution of communities is very difficult to be fortheconstructionofsupernetworks,wherenodesreferto
+conducted,andwealsocannotdistinguishtheareasinreal clustersandlinksexistiftheclustersareconnected,wemay
+citiesbasedonthecommunitiesinsidehierarchicallayersof say that the number of hierarchical layers represents the
+the URNs without realistic geographic information data. depth of the network structure, and lowest and highest
+The number of hierarchical layers and the number of hierarchical layers indicate the microcommunities and the
+communitiesineachhierarchicallayerarepresentedinTable7. macrocommunities,respectively.Forexample,Lancichinetti
+Identifying the modules and structure of the hierarchy et al. [52] utilized the OSLOM for the UK commuting
+using thetopology information encoded inthe networksis network; three hierarchical layers are detected, and the
+themainpurposeofdetectingcommunities[51].Ascanbe highest hierarchical layer represents the four recognizable
+seenfromTable7,largerURNsaremorelikelytohavemore countries:England,Wales,Scotland,andNorthernIreland.
+communities and hierarchical layers. For example, Phila- Here, due to the limitation of the data source, we only
+delphia, Berlin, and Chicago have 6, 5, and 5 hierarchy conductthespatialanalysisfortheAnaheimnetwork.Based
+tneiciffeoc
+gniretsulC Correlation = 0.23481
+2 4 6 8 10 12 14 16
+In-degree ×10–3
+(a)
+tneiciffeoc
+gniretsulC
+0.3
+0.25
+0.2
+0.15 Correlation = 0.041115
+0.1
+0.05
+0
+0 0.2 0.4 0.6 0.8 1
+In-degree ×10–3
+(b)
+tneiciffeoc
+gniretsulC
+0.05
+0.04
+0.03
+0.02 Correlation = 0.024993
+0.01
+0
+0 0.005 0.01 0.015 0.02
+In-degree
+(c)
+0.2
+0.15
+0.1
+Correlation = 0.10688
+0.05
+0
+0 1 2 3 4 5 6
+tneiciffeoc
+gniretsulC
+0.2
+0.15
+Correlation = 0.11368
+0.1
+0.05
+0
+In-degree ×10–4
+(d)
+tneiciffeoc
+gniretsulC
+Correlation = 0.20966
+0 1 2 3 4 5 6
+In-degree ×10–4
+(e)
+tneiciffeoc
+gniretsulC
+0.04
+0.03
+0.02
+0.01
+0
+0 0.5 1 1.5 2 2.5
+In-degree ×10–3
+(f)
+Correlation = 0.080445
+In-degree ×10–4
+tneiciffeoc
+gniretsulC
+0.12
+0.1
+Correlation = 0.12828
+0.08
+0.06
+0.04
+0.02
+0
+0.5 1 1.5 2 2.5 3 0.5 1 1.5 2 2.5 3 3.5 4
+In-degree ×10–3
+(g)
+tneiciffeoc
+gniretsulC
+0.08
+0.06 Correlation = 0.0041995
+0.04
+0.02
+0
+0 1 2 3 4 5
+In-degree ×10–3
+(h)
+tneiciffeoc
+gniretsulC
+14 Complexity
+0.25
+0.2
+0.15
+0.1
+0.05
+0
+(i)
+Figure10:Thecorrelationbetweennormalizedin-degreeandclusteringcoefficient:(a)Anaheim;(b)Austin;(c)Barcelona;(d)Berlin;(e)
+Chicago; (f)Hessen;(g)Philadelphia;(h) Terrassa;(i)Winnipeg.
+0.08
+0.06
+0.04
+0.02
+0
+on the coordinate information, we plot the network with topology of URNs and realistic geographical information,
+QGIS, which is presented as follows. suchascorrelationsbetweentopologicalcharacteristicsand
+As can be seen from Figure 13, the distribution of pointsofinterests(POI),connectionsbetweencommunity,
+communities at different layers is closely related to the lo- hierarchy structure, and distinguished areas within cities.
+cationsofnodesoftheAnaheimnetwork.Forexample,the Inordertomoreclearlypresentthespatialdistribution
+nodes (green) at the northeast corner tend to form com- ofcommunities,wealsouseMATLABtoplottheAnaheim
+munity1atlayer1;inaddition,fromabroaderperspective, network, as shown in Figure 14.
+the nodes (diamond) across the entire northeastern region SincealltheseURNsconsistofmanycommunities,with
+constitute community 2 at layer 2. Here, layers 1 and 2 each community consisting of many individual nodes, the
+represent the depth of the network structure. Because the size of communities varies. To some extent, these com-
+algorithm used for community detection is based on the munitiesmayfollowacertaindistributionrule.Inorderto
+connectivity,thecloserelationshipbetweenthedistribution identify this point, histograms can be plotted, as shown in
+ofcommunitiesandhierarchiesandthelocationofnodesis Figure 15.
+expected. However, we still do not know whether these AscanbeseenfromFigure15,thelargerURNs,suchas
+communities are related to the layout of urban distin- Austin, Berlin, and Chicago, tend to follow a normal dis-
+guished/functional areas due to the lack of realistic geo- tribution. Among these URNs, the left side of figures re-
+graphical information data, such as locations of hospitals, gardingAustin,Berlin,andChicagodoesnotfitwellwiththe
+schools, and commercial centers. In the future, Open- normal distribution compared to their right side. The red
+StreetMap (OSM) and Geographic Information System lines in the graphs are the normal distribution fitting lines
+(GIS)canbeutilizedtoexploretherelationshipbetweenthe and clearly identify this point. R2, meanwhile, which is
+tneiciffeoc
+gniretsulC
+2 4 6 8 10 12 14 16
+Out-degree ×10–3
+(a)
+tneiciffeoc
+gniretsulC
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+0
+0 0.2 0.4 0.6 0.8 1
+Out-degree ×10–3
+(b)
+tneiciffeoc
+gniretsulC
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+0 0.005 0.01 0.015 0.02
+Out-degree
+(c)
+0.2
+0.15
+0.1
+0.05
+0
+0 1 2 3 4 5 6
+tneiciffeoc
+gniretsulC
+0.2
+0.15
+0.1
+0.05
+0
+Out-degree ×10–4
+(d)
+tneiciffeoc
+gniretsulC
+0 1 2 3 4 5 6
+Out-degree ×10–4
+(e)
+tneiciffeoc
+gniretsulC
+0.04
+0.03
+0.02
+0.01
+0
+0 0.5 1 1.5 2 2.5
+Out-degree ×10–3
+(f)
+Out-degree ×10–4
+tneiciffeoc
+gniretsulC
+0.12
+0.1
+0.08
+0.06
+0.04
+0.02
+0
+0.5 1 1.5 2 2.5 3 0 1 2 3 4 5
+Out-degree ×10–3
+(g)
+tneiciffeoc
+gniretsulC
+0.08
+0.06
+0.04
+0.02
+0
+0 1 2 3 4 5
+Out-degree ×10–3
+(h)
+tneiciffeoc
+gniretsulC
+Complexity 15
+0.25
+0.2
+0.15
+0.1
+0.05
+0
+(i)
+Figure11:Thecorrelationbetweennormalizedout-degreeandclusteringcoefficient:(a)Anaheim;(b)Austin;(c)Barcelona;(d)Berlin;(e)
+Chicago; (f)Hessen;(g)Philadelphia;(h) Terrassa;(i)Winnipeg.
+16 Complexity
+(a) (b) (c)
+(d) (e) (f)
+(g) (h) (i)
+Figure12:Schematicgraphsofcommunitiesfornineurbanroadnetworks:(a)Anaheim;(b)Austin;(c)Barcelona;(d)Berlin;(e)Chicago;
+(f)Hessen;(g)Philadelphia;(h) Terrassa;(i) Winnipeg.
+Table7: Structure ofhierarchyandcommunitiesin each hierarchicallayer fornineURNs.
+City Nodes Hierarchylayers Communitiesin eachhierarchy (fromlow tohigh)
+Austin 7388 5 151; 46; 13;7; 5
+Chicago 12,982 5 266;81; 22;7; 2
+Philadelphia 13,389 6 343; 100; 29;11; 6;3
+Anaheim 416 2 11;2
+Winnipeg 1052 3 30; 8; 7
+Berlin 12,981 5 457;112; 34;14; 5
+Barcelona 1020 3 20; 6; 4
+Terrassa 1609 3 27; 5; 3
+Hessen 4660 4 104; 25;8; 5
+calculated based on the maximum likelihood method, repre- size apparently have worse normal distribution, and it seems
+sentsthegoodnessofthecommunitiesoftheURNsfollowing that Anaheim and Winnipeg do not follow any distribution
+normal distribution. Conversely, those URNs with a smaller rules due to the fact that these URNs are relatively small, so
+33.88
+33.86
+33.84
+33.82
+33.8
+33.78
+33.76
+33.74
+there are not too many hierarchical layers and communities. transport within urban areas. For example, installing de-
+Through the above analysis, a rough conclusion is able to be tectors,sensors,oranyotherelectronicfacilitiesbasedonthe
+summarised; that is, the larger the URNs are, the better the distributionofcommunitiesmayefficientlycollectdatasuch
+normal distribution fitting they have. as traffic flows, vehicle speed, and traffic incidents to im-
+The detection of communities for URNs may provide prove network safety or mitigate traffic congestion. In ad-
+insightful views for the management and planning of dition, identification of “sharing nodes” is helpful for
+Y
+Complexity 17
+Figure13: Communitiesandhierarchies ofthe Anaheimnetwork plottedby QGIS.
+–118.05 –118 –117.95 –117.9 –117.85 –117.8
+X
+Roads C5 at layer 1 C10 at layer 1
+C1 at layer 1 C6 at layer 1 C11 at layer 1
+C2 at layer 1 C7 at layer 1 C1 at layer 2
+C3 at layer 1 C8 at layer 1 C2 at layer 2
+C4 at layer 1 C9 at layer 1
+Figure14:Communitiesand hierarchiesofthe Anaheim networkplotted byMATLAB.
+4
+3
+2
+1
+0
+protecting critical parts of the systems and maintaining hasinvestigatedthetopologicalcharacteristicsofanumber
+robustness of URNs. Furthermore, through the detection ofURNsforthefirsttimeintermsofpurelyphysicalroads.
+and analysis of communities and hierarchies of URNs, we Widely used topology indices based on complex network
+may say that the URNs also tend to follow general nature theorywereutilizedinthispapertoexplorethetopological
+rulesinnaturalsystems[59],suchasahierarchicalstructure characteristics of the nine URNs, small-world analysis and
+and a normal distribution. correlation analysis between some topological indices are
+conducted, and relatively new notions such as community
+detection were also applied to supplement the under-
+6.Conclusions
+standing of these topological networks. The results can be
+summarised as follows:
+Astechnologiesrelatedtosmartcityandcooperativevehicle
+infrastructure systems (CVIS) are increasingly prevailing, (1) The average in-degree and average out-degree of
+urban roads and their constituent urban road networks these URNs are exactly the same, and the distribu-
+receivemoreandmoreattention.Inthiscontext,thispaper tions of in-degree and out-degree are very similar,
+ycneuqerF
+R2 = 0.1178
+20 40 60 80 100
+Community size
+(a)
+ycneuqerF
+20
+R2 = 0.9862
+15
+10
+5
+0
+0 50 100 150
+Community size
+(b)
+ycneuqerF
+5
+R2 = 0.6495
+4
+3
+2
+1
+0
+–20 0 20 40 60 80 100 120
+Community size
+(c)
+80
+60
+40
+20
+0
+ycneuqerF
+R2 = 0.9877
+–20 0 20 40 60 80 100
+Community size
+(d)
+ycneuqerF
+60
+50 R2 = 0.9088
+40
+30
+20
+10
+0
+–50 0 50 100 150 200
+Community size
+(e)
+ycneuqerF
+R2 = 0.9016 30
+20
+10
+0
+–50 0 50 100 150 200
+Community size
+(f)
+100
+80
+60
+40
+20
+0
+–20 0 20 40 60 80 100 120
+Community size
+ycneuqerF
+R2 = 0.9468
+20 40 60 80 100 120
+Community size
+(g)
+ycneuqerF
+5
+R2 = R2 = 0.6835
+0.1724
+4
+3
+2
+1
+0
+–20 0 20 40 60 80 100
+Community size
+(h)
+ycneuqerF
+18 Complexity
+6
+5
+4
+3
+2
+1
+0
+(i)
+Figure15:HistogramsfornineURNs:(a)Anaheim;(b)Austin;(c)Barcelona;(d)Berlin;(e)Chicago;(f)Hessen;(g)Philadelphia;(h)
+Terrassa;(i)Winnipeg.
+20 Complexity
+[6] C.VonFerber,T.Holovatch,Y.Holovatch,andV.Palchykov, degreecorrelations,”EnvironmentandPlanningB:Planning
+“Publictransportnetworks:empiricalanalysisandmodeling,” and Design,vol. 41, no.5, pp.813–828,2014.
+TheEuropeanPhysicalJournalB,vol.68,no.2,pp.261–275, [24] A. Kirkley, H. Barbosa, M. Barthelemy, and G. Ghoshal,
+2009. “From the betweenness centrality in street networks to
+[7] S. D. Dimitrov and A. Ceder, “A method of examining the structural invariants in random planar graphs,” Nature
+structure and topological properties of public-transport Communications, vol.9, p. 2051, 2018.
+networks,” Physica A: Statistical Mechanics and Its Applica- [25] A. P. Masucci, K. Stanilov, and M. Batty, “Exploring the
+tions,vol. 451, pp. 373–387,2016. evolution of London’s street network in the information
+[8] Y. Korduba, Y. Holovatch, and R. De Regt, “Physicist’s ap- space:adualapproach,”PhysicalReviewE,vol.89,no.012805,
+proach to public transportation networks: between data pp.1–7,2014.
+processing and statistical physics,” Annales Universitatis [26] X.ZhanandS.V.Ukkusuri,“Dynamicsoffunctionalfailures
+Mariae Curie-Sklodowska, Sectio A—Mathematica, vol. 73, andrecoveryincomplexroadnetworks,”PhysicalReviewE,
+no.2,pp. 69–89, 2020. vol. 96, no.052301, pp.1–16,2017.
+[9] C.VonFerber,Y.Holovatch,andV.Palchykov,“Scalingin [27] Y. Duan and F. Lu, “Robustness of city road networks at
+publictransportnetworks,”CondensedMatterPhysics,vol.8, different granularities,” Physica A: Statistical Mechanics and
+no.1,pp. 225–234,2005. Its Applications,vol. 411,pp. 21–34,2014.
+[10] R.Guimera,S.Mossa,A.Turtschi,andL.A.N.Amaral,“The [28] M. Bellingeri, D. Bevacqua, F. Scotognella, Z.-M. Lu, and
+worldwideairtransportationnetwork:anomalouscentrality, D.Cassi,“EfficacyoflocalattackstrategiesontheBeijingroad
+communitystructure,andcities’globalroles,”Proceedingsof complexweightednetwork,”PhysicaA:StatisticalMechanics
+the National Academy of Sciences, vol. 102, no. 22, and Its Applications,vol. 510, pp.316–328, 2018.
+pp.7794–7799, 2005. [29] C.VonFerber,T.Holovatch,Y.Holovatch,andV.Palchykov,
+[11] M. Guida and F. Maria, “Topology of the Italian airport “Network harness: metropolis public transport,” Physica A:
+network: a scale-free small-world network with a fractal StatisticalMechanicsandItsApplications,vol.380,pp.585–
+structure?” Chaos, Solitons & Fractals, vol. 31, no. 3, 591, 2007.
+pp.527–536, 2007. [30] M. Rosvall, A. Trusina, P. Minnhagen, and K. Sneppen,
+[12] W.LiandX.Cai,“Empiricalanalysisofascale-freerailway “Networks and cities: an information perspective,” Physical
+network in China,” Physica A: Statistical Mechanics and Its ReviewLetters, vol.94, no.2, 2005.
+Applications,vol. 382, no.2, pp. 693–703,2007. [31] M.Barthe´lemy,“Spatialnetworks,”PhysicsReports,vol.499,
+[13] L. Guo and X. Cai, “Degree and weighted properties of the no.1–3,pp.1–101, 2011.
+directed China railway network,” International Journal of [32] W.-L. Shang, Y. Chen, C. Song, and W. Y. Ochieng, “Ro-
+ModernPhysicsC, vol.19, no.12, pp.1909–1918, 2008. bustness analysis of urban road networks from topological
+[14] Y. Hu and D. Zhu, “Empirical analysis of the worldwide and operational perspectives,” Mathematical Problems in
+maritime transportation network,” Physica A: Statistical Engineering,vol. 2020, ArticleID5875803,12 pages,2020.
+Mechanics and Its Applications, vol. 388, no. 10, pp. 2061– [33] P. Crucitti, V. Latora, M. Marchiori, and A. Rapisarda, “Ef-
+2071, 2009. ficiency of scale-free networks: error and attack tolerance,”
+[15] P. Kaluza, A. Ko¨lzsch, M. T. Gastner, and B. Blasius, “The PhysicaA:StatisticalMechanicsandItsApplications,vol.320,
+complexnetworkofglobalcargoshipmovements,”Journalof pp. 622–642,2003.
+TheRoyal SocietyInterface, vol.7, pp. 093–103, 2010. [34] J.Wang,H.Mo,F.Wang,andF.Jin,“Exploringthenetwork
+[16] J.SienkiewiczandJ.Hołyst,“Statisticalanalysisof22public structure and nodal centrality of China’s air transport net-
+transport networks in Poland,” Physical Review E, vol. 72, work: a complex network approach,” Journal of Transport
+no.4,2005. Geography, vol.19, no.4,pp. 712–721, 2011.
+[17] X.Xu,J.Hu,F.Liu,andL.Liu,“Scalingandcorrelationsin [35] B. Berche, C. V. Ferber, T. Holovatch, and Y. Holovatch,
+threebus-transportnetworksofChina,”PhysicaA:Statistical “Transportationnetworkstability:acasestudyofcitytransit,”
+Mechanicsand ItsApplications, vol. 374,no.1,pp. 441–448, AdvancesinComplexSystems,vol.15,no.supp01,ArticleID
+2007. 1250063,2012.
+[18] X. Zheng, J. Chen, and J. Shao, “Analysis on topological [36] W. Li and X. Cai, “Statistical analysis of airport network of
+properties of Beijing urban public transit based oncomplex China,”PhysicalReviewE,vol. 69,2004.
+network theory,” Acta Physica Sinica, vol. 61, Article ID [37] V.LatoraandM.Marchiori,“IstheBostonsubwayasmall-
+190510, 2012. world network?” Physica A: Statistical Mechanics and Its
+[19] S.Derrible,“Networkcentralityofmetrosystems,”PLoSOne, Applications, vol.314, no.1–4,pp.109–113, 2002.
+vol. 7,Article IDe40575,2012. [38] G.Sabidussi,“Thecentralityindexofagraph,”Psychometrika,
+[20] L. Sun, Y. Huang, Y. Chen, and L. Yao, “Vulnerability as- vol. 31,no.4, pp.581–603, 1966.
+sessmentofurbanrailtransitbasedonmulti-staticweighted [39] X.Sun,S.Wandelt,andF.Linke,“Topologicalpropertiesof
+method in Beijing, China,” Transportation Research Part A: the air navigation route system using complex network
+Policyand Practice, vol.108, pp.12–24, 2018. theory,”inProceedingsofthe6thInternationalConferenceon
+[21] R. De Regt, C. von Ferber, Y. Holovatch, and M. Lebovka, Research in Air Transportation (ICRAT2014), Istanbu Tech-
+“PublictransportationinGreatBritainviewedasacomplex nicalUniversity, Istanbul,Turkey,May 2014.
+network,” Transportmetrica A: Transport Science, vol. 15, [40] P. Crucitti, V. Latora, and M. Marchiori, “A topological
+no.2,pp. 722–748, 2018. analysis of the Italian electric power grid,” Physica A: Sta-
+[22] R.GuimeraandL.A.N.Amaral,“Modelingtheworld-wide tistical Mechanics and Its Applications, vol. 338, no. 1-2,
+airport network,” The European Physical Journal pp. 92–97,2004.
+B—CondensedMatter,vol. 38,pp. 381–385, 2004. [41] R. Albert, H. Jeong, and A.-L. Baraba´si, “Error and attack
+[23] B.Jiang,Y.Duan,F.Lu,T.Yang,andJ.Zhao,“Topological tolerance of complex networks,” Nature, vol. 406, no. 6794,
+structure of urban street networks from the perspective of pp. 378–382,2000.
+Complexity 21
+[42] F.Karkubthy,“Chains,ineverythingisdifferent,”https://djjr-
+courses.wdfiles.com/local--files/soc180%3Akarinthy-chain-
+links/Karinthy-Chain-Links_1929.pdf,1929.
+[43] I. d. S. Pool and M. Kochen, Contacts and Influence, Social
+Network,Menlopark,CA,USA, 1978.
+[44] S. Milgram, “The small world problem,” Psychology Today,
+vol. 2,pp. 60–67,1967.
+[45] M. E. J. Newman, “The structure and function of complex
+networks,”SIAMReview,vol. 45, no.2,pp.167–256, 2003.
+[46] M.E.J.Newman,S.H.Strogatz,andD.J.Watts,“Random
+graphs with arbitrary degree distributions and their appli-
+cations,”PhysicalReviewE,vol.64,ArticleID026118,2001.
+[47] S. Boccaletti, V. Latora, Y. Moreno, M. Chavez, and
+D. Hwang, “Complex networks: structure and dynamics,”
+PhysicsReports, vol.424, no.4-5,pp.175–308, 2006.
+[48] R. Albert and A.-L. Baraba´si, “Statistical mechanics of
+complexnetworks,”ReviewsofModernPhysics,vol.74,no.1,
+pp.47–97, 2002.
+[49] R. Guimera`, M. Sales-Pardo, and L. A. N. Amaral, “A net-
+work-based method for target selection in metabolic net-
+works,”Bioinformatics, vol.23,no.13,pp.1616–1622,2007.
+[50] A. Va´zquez, R. Pastor-Satorras, and A. Vespignani, “Large-
+scale topological and dynamical properties of the Internet,”
+PhysicalReviewE, vol.65, no.6, 2002.
+[51] S. Fortunato, “Community detection in graphs,” Physics
+Reports, vol.486, no.3–5,pp.75–174,2010.
+[52] A.Lancichinetti,F.Radicchi,J.J.Ramasco,andS.Fortunato,
+“Finding statistically significant communities in networks,”
+PLoSOne,vol. 6,no.4, ArticleIDe18961,2011.
+[53] M. E. J. Newman and T. P. Peixoto, “Generalized commu-
+nitiesinnetworks,”PhysicalReviewLetters,vol.115,pp.1–5,
+2015.
+[54] B. Krishnamurthy and J. Wang, “On network-aware clus-
+tering of Web clients,” ACM SIGCOMM Computer Com-
+municationReview,vol.30, no.4, pp.97–110,2000.
+[55] K.P.Reddy,M.Kitsuregawa,P.Sreekanth,andS. Srinivasa
+Rao, “A graph based approach to extract a neighborhood
+customer community for collaborative filtering,” in Pro-
+ceedingsoftheSecondInternationalWorkshoponDatabasesin
+Networked Information Systems, pp.188–200, Springer-Ver-
+lag,Aizu,Japan,December2002.
+[56] F.WuandB.A.Huberman,“Findingcommunitiesinlinear
+time: a physics approach,” The European Physical Journal
+B—CondensedMatter,vol. 38,no.2, pp. 331–338,2004.
+[57] G.Petri,P.Expert,H.J.Jensen,andJ.W.Polak,“Entangled
+communitiesandspatialsynchronizationleadtocriticalityin
+urban traffic,”ScientificReports, vol.3, pp.1–8,2013.
+[58] A. Lancichinetti, F. Radicchi, and J. J. Ramasco, “Statistical
+significanceofcommunitiesinnetworks,”PhysicalReviewE,
+vol. 81, ArticleID046110,2010.
+[59] G. Casella and R. L. Berger, Statistical Inference, Duxbury
+ThomsonLearning, Belmont,CA,USA, 2ndedition, 2001.
+[60] P. Holme, B. J. Kim, C. N. Yoon, and S. K. Han, “Attack
+vulnerabilityofcomplexnetworks,”PhysicalReviewE,vol.65,
+no.5,2002.
+[61] P.Crucitti,V.Latora,M.Marchiori,andA.Rapisarda,“Error
+and attack tolerance of complex networks,” Physica A: Sta-
+tistical Mechanics and Its Applications, vol. 340, no. 1–3,
+pp.388–394, 2004.
+

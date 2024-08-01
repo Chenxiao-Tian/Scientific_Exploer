@@ -1,0 +1,538 @@
+References:
+network reliability while managing the new and degrading edges. For further complexity,
+we can include inspections, maintenance, and repairs of links among the set of actions. We
+are optimistic that DRL agents can handle this type of maintenance problem and be
+competitive in comparison with traditional process control methods.
+Acknowledgements
+This research was sponsored in part by the Test Resources Management Center (TRMC)
+Science of Test Consortium.
+References
+1. History.com Editors (2009) Blackout hits Northeast United States. Retrieved from:
+https://www.history.com/this-day-in-history/blackout-hits-northeast-united-states.
+2. Pruitt, S. (2020) How Levee Failures Made Hurricane Katrina a Bigger Disaster.
+Retrieved from https://www.history.com/news/hurricane-katrina-levee-failures.
+3. Ball, M. O., Colbourn, C. J. and Provan, J. S. (1995) Network Reliability. Handbooks in
+Operations Research and Management Science, vol. 7, pp. 673-762.
+4. Gaur, V., Yadav, O. P., Soni, G. and Rathore, A. P. (2021) A Literature Review on
+Network Reliability Analysis and Its Engineering Applications. Journal of Risk and
+Reliability, vol. 235(2), pp. 167-181.
+5. Karger, D. R. (1999) A Randomized Fully Polynomial Time Approximation Scheme for
+the All-terminal Network Reliability Problem. SIAM Journal on Computing, vol. 29(2),
+pp. 492-514.
+6. Cardoso, J. B., de Almeida, J. R., Dias, J. M. and Coelho, P. G. (2008) Structural
+Reliability Analysis using Monte Carlo Simulation and Neural Networks. Advances in
+Engineering Software, vol. 39(6), pp. 505-513.
+7. Srivaree-ratana, C., Konak, A. and Smith, A. E. (2002) Estimation of All-terminal
+Network Reliability using an Artificial Neural Network. Computers & Operations
+Research, vol. 29(7), pp. 849-868
+8. Chartrand, G. (1977) Introductory Graph Theory. Courier Corporation.
+9. Provan, J. S. and Ball, M. O. (1983) The Complexity of Counting Cuts and of Computing
+the Probability that a Graph is Connected. SIAM Journal on Computing, vol. 12(4), pp.
+777-788.
+10. Godsil, C. and Royle, G. (2001) Algebraic Graph Theory. New York: Springer-Verlag,
+pp. 354-358.
+11. Biggs, N. L. (1993) "The Tutte Polynomial." Ch. 13 in Algebraic Graph Theory, 2nd ed.
+Cambridge, England: Cambridge University Press, pp. 97-105.
+12. Dougherty, R. (2016) Reliability Polynomial Calculation. Retrieved from:
+https://codereview.stackexchange.com/questions/131709/reliability-polynomial-
+calculation
+13. MongoDB, Inc. (2022). How to Use MongoDB in Python. Retrieved from
+https://www.mongodb.com/languages/python
+14. MongoDB, Inc. (2021). MongoDB Manual: GridFS. Retrieved from:
+https://www.mongodb.com/docs/manual/core/gridfs
+15. Arulkumaran, K., Deisenroth, M. P., Brundage, M., & Bharath, A. A. (2017). Deep
+reinforcement learning: A brief survey. IEEE Signal Processing Magazine, 34(6), 26-38.
+16. Brockman, G., Cheung, V., Pettersson, L., Schneider, J., Schulman, J., Tang, J., &
+Zaremba, W. (2016). Openai gym. arXiv preprint arXiv:1606.01540.
+54
+
+Annexes/Appendices:
+
+Body Text:
+ISSN 1831-9424
+Advances in Modelling to Improve
+Network Resilience:
+Proceedings of the 60th ESReDA
+Seminar
+Hosted by the University
+Grenoble Alpes, Grenoble,
+France, 4-5 May 2022.
+Remenytė-Prescott, R., Sanderson, K.,
+Kopustinskas, V., Simola, K.
+2022
+EUR 31164 EN
+Applying deep reinforcement learning to improve the
+reliability of an infrastructure network
+Jose Carlos Hernandez Azucena, Henley Wells, Haitao Liao, Kelly Sullivan and Edward A.
+Pohl, Department of Industrial Engineering, University of Arkansas, epohl@uark.edu
+Abstract
+Maximizing connectivity is one of the most critical requirements in constructing an
+infrastructure network. In practice, the goal could only be achieved after completing a
+sequence of possible actions. This work examines an infrastructure network needing
+reliability improvement concerning all-terminal reliability. Given the initial structure, the
+objective is to maximize the network's all-terminal reliability by adding edges under several
+practical constraints, such as the total budget and available types of edges for each step.
+To solve the complex optimization problem, the potential of using Deep Reinforcement
+Learning (DRL) is investigated in this work. To allow for quick testing and prototyping of
+the DRL method, a computational environment is developed by integrating OpenAI-Gym
+and Stable Baselines. Specifically, a Proximal Policy Optimization (PPO) agent capable of
+sequentially deciding the addition of new edges in a connected network is created first,
+and the network structure evolves as appropriate edges are added subject to the total
+budget that constrains the number and types of available edges at each decision-making
+epoch. Technically, the proposed computational environment recurrently formulates and
+evaluates the network’s all-terminal reliability by computing the corresponding reliability
+polynomial. To facilitate the implementation of DRL in solving such problems, different
+methods are explored with the help of a permanent database that stores previously
+observed network states without recalculating their polynomials. Numerical examples for
+given initial structures are provided to illustrate the potential of using DRL in achieving
+reliability improvements for infrastructure networks.
+1 Introduction
+Infrastructure networks, such as highways, communication networks, power networks, and
+water networks, play an essential role in our daily activities. Unfortunately, natural
+disasters and malicious attacks pose serious threats to these infrastructure networks.
+Historically, many failures in infrastructure networks occurred which have caused issues
+for many people. One well-known example is the 2003 Northeast blackout that affected
+fifty million people in the United States and Canada [1]. Another failure in infrastructure
+networks include the levee failure in Louisiana during Hurricane Katrina [2]. The levees in
+Louisiana were not adequately prepared to handle the water from Hurricane Katrina, thus,
+they breeched due to the pressure and caused much of New Orleans to flood. Clearly, these
+examples show how essential it is to ensure infrastructure networks are reliable.
+To quantify the reliability of an infrastructure network, one essential task is to investigate
+the connectivity of components in the network. Mathematically, the problem can be
+formulated as an all-terminal network reliability problem. In practice, quite a few
+infrastructure networks can be modelled as an all-terminal network, such as highways,
+communication networks, power networks and water networks. To calculate all-terminal
+network reliability, numerous methods have been used. These methods provide either an
+exact value or an estimate of the reliability. Ball et al. [3] summarizes exact methods for
+calculating network reliability such as exponential time exact algorithms for general
+networks and polynomial time exact algorithms for restricted classes of networks, as well
+as other methods such as bounds on network reliability, and Monte Carlo simulation. Gaur
+et al. [4] also detailed many different network reliability methods including state
+enumeration, minimal cut, and neural networks, and they discussed the limitations of each
+method. Technically, cut enumeration entails enumerating the minimal subsets of links
+whose failure causes the network to fail. This method is an exact method and very useful
+for small networks, but it reaches its computational limitations very quickly. Monte Carlo
+46
+simulation (MCS) methods choose a random sample of states to explore and estimate the
+network reliability as the proportion of sampled states in which the network is functioning
+properly. Karger [5] found one of the flaws of the MCS approach is that it is very slow
+when the probability of failure is very low. Cardoso et al. [6] studied Monte Carlo simulation
+in conjunction with neural networks to investigate the structural reliability of different
+structures. MCS only allows one network structure to be calculated at a time, so it can be
+very time consuming to calculate the reliability. As a solution, they combined neural
+networks with MCS which allowed them to save computational time and obtain more
+precise reliability measurements.
+Srivaree-ratana et al. [7] used an Artificial Neural Network (ANN) to estimate network
+reliability. In their study, they trained the ANN using a set of network topologies and link
+reliabilities. They then used the ANN to estimate the network reliability based on the link
+reliabilities and the topology in finding the optimal network topology by simulated
+annealing. They demonstrate that their approach performs well empirically through
+comparisons to an exact approach as well as to an upper bound derived from a polynomial
+time algorithm. However, the disadvantages of their method are that the training of ANN
+needs to be performed first for a topology of a fixed number of nodes and optimal network
+design can be carried out only for this topology. It would be more useful to develop a
+method that finds the optimal network via reliability evaluation and learning without such
+limitations.
+In this paper, a new method based on Deep Reinforcement Learning (DRL) along with the
+use of a reliability polynomial is proposed for maximizing the all-terminal reliability of a
+network under the constraints on total budget and available types of edges for each step.
+To demonstrate the use of the proposed method, the initial structures of example networks
+are in the form of all nodes being connected in series. It is worth pointing out that although
+this paper focusses on maximizing the all-terminal reliability of a network by adding
+additional links, the proposed method can be extended to solve network design problems
+with the flexibility of adding additional nodes.
+The remainder of this paper is organized as follows. Section 2 describes the reliability model
+for an infrastructure network and the method of calculating all-terminal reliability using a
+reliability polynomial. Section 3 introduces the proposed DRL method for network reliability
+improvement and elaborates on several important computational issues. Section 4
+provides numerical examples to illustrate the use of the proposed method in improving
+infrastructure network reliability. Finally, we summarize our results and draw conclusions
+in Section 5.
+2 Reliability model for an infrastructure network
+An infrastructure network can be described by a network model, which in its simplest form
+is a collection of nodes connected by edges. Chartrand [8] formally defines a general
+network using the notation N = (V, E, w), where V is the set of nodes (e.g., v , v , …, v )
+1 2 n
+and E is the set of edges (e.g., e , …, e , …, e ) with the corresponding weights given
+1,2 i,j n-1,n
+in w. In this paper, the weights of the edges are the corresponding reliability values.
+Moreover, networks can either be directed or undirected. In this work, an infrastructure
+network is modelled as an undirected network, and reliability improvement decisions are
+made with respect to the network’s all-terminal reliability.
+2.1 All-terminal reliability of a network
+The probability that a network is performing its intended function at a given point in time
+is known as its reliability. Specially, the two-terminal reliability of a network is the
+probability of having at least one operational path between the source and end nodes.
+Consider the simple undirected network shown in Figure 1. The network has four nodes
+and five links with corresponding reliability values. If node 1 and node 4 are the source
+and end nodes, respectively, and the nodes are perfectly reliable, the two-terminal
+47
+reliability of the network can be calculated by considering three possible paths: for path 1-
+3-4, the reliability is 𝑅 = 0.85(0.8) = 0.68; for path 1-4, the reliability is 𝑅 = 0.95; for path
+1 2
+1-2-4, the reliability is 𝑅 =0.9(0.75)=0.675. Since the three paths are in parallel, the two-
+3
+terminal reliability of the network is simply 𝑅 =1 – (1−𝑅 )(1−𝑅 )(1−𝑅 )=0.9948.
+1 2 3
+Figure 1. An example of simple series-parallel network.
+Unlike two-terminal reliability problems, all-terminal reliability problems are interested in
+that every node in the network is connected to every other node, and the reliability is
+defined as the probability that the network is fully connected. Consider an n-node network
+(V, E, w) with edge topology 𝑋 =[𝑥 ,…,𝑥 ,…,𝑥 ] with 𝑥 = {1, if edge e is present; 0,
+1,2 𝑖,𝑗 𝑛−1,𝑛 𝑖,𝑗 i,j
+otherwise}. Let 𝑝(𝑥 ) be the reliability of edge e . Then, the all-terminal reliability of the
+𝑖,𝑗 i,j
+network can be expressed as [7]:
+𝑅 =∑
+𝑋′∈
+Ω[∏ (𝑖,𝑗)∈𝑋′𝑝(𝑥 𝑖,𝑗)][∏ (𝑘,𝑙)∈(𝑋\𝑋′)(1−𝑝(𝑥 𝑘,𝑙)) ] (1)
+where Ω consists of all operational states (i.e., edge subsets 𝑋′ ⊆𝐸 that connect all nodes
+in the network). For example, to calculate the all-terminal reliability of the network in
+Figure 1, we can simply calculate the probabilities of all network configurations where all
+nodes remain connected even if one or more edges fail. Then, after adding all the
+probabilities together, we obtain the all-terminal network reliability to be 0.9414. Clearly,
+it becomes more difficult to calculate all-terminal reliability for complex networks with more
+nodes and edges [9].
+2.2 Reliability polynomial for all-terminal reliability evaluation
+The all-terminal reliability of a network can be expressed as a function of the edge
+reliabilities. This expression is a property arising from the network topology, and it is often
+known as the reliability polynomial of the network. For a network N, when all edges have
+identical and constant reliability of r, the all-terminal reliability is equivalent to [10]:
+𝑅𝑃(𝑟)=𝑟𝑛−𝑐(1−𝑟)𝑚−𝑛+𝑐𝑇(1,(1−𝑟)−1) (2)
+where n is the number of nodes, m is the number of edges, and c is the number of
+connected components. T is the Tutte Polynomial of the network, a property arising from
+the network topology, defined as [11]:
+𝑇(𝑥,𝑦)=∑𝑡 𝑥𝑖𝑦𝑗 (3)
+𝑖,𝑗
+where 𝑡 represents the number of spanning trees of the network whose internal activity
+𝑖,𝑗
+is i and external activity is j. The summation is over all the subgraphs in the network [11].
+48
+2.2.1 Basic method
+While this polynomial can be computed using Equation (2) for the identical reliability case,
+our algorithmic procedure keeps track of the individual link reliabilities. The resulting
+expression of the all-terminal reliability is an equation that takes the link reliabilities as
+arguments.
+Using an algorithmic procedure to create a symbolic representation of this polynomial, we
+can automate the algebraic expression for any arbitrary network N. This allows for
+computing the polynomial once per every network configuration. It is enough for any
+specific edge reliability values to replace the appropriate variables in the reliability
+polynomial to calculate the all-terminal reliability. As computing time grows with the
+number of edges, in our experiments, we limit our networks to at most 10 nodes and 20
+edges with no parallel edges between any two nodes.
+For the network topology presented in Figure 1, the reliability polynomial that represents
+the all-terminal reliability if all the identical links are identical is:
+𝑅𝑃(𝑟)=4𝑟5−11𝑟4+8𝑟3 (4)
+For a more general case with nonidentical links, the reliability polynomial is:
+𝑅𝑃({𝑟 ,𝑟 ,𝑟 ,𝑟 ,𝑟 })=4𝑟 𝑟 𝑟 𝑟 𝑟 −2𝑟 𝑟 𝑟 𝑟 −2𝑟 𝑟 𝑟 𝑟
+12 13 14 24 34 12 13 14 24 3,4 12 13 14 24 12 13 14 34
++𝑟 𝑟 𝑟 −3𝑟 𝑟 𝑟 𝑟 +𝑟 𝑟 𝑟
+12 13 14 12 13 24 34 12 13 24
++𝑟 𝑟 𝑟 −2𝑟 𝑟 𝑟 𝑟 +𝑟 𝑟 𝑟
+12 13 34 12 14 24 34 12 14 34
++𝑟 𝑟 𝑟 −2𝑟 𝑟 𝑟 𝑟 +𝑟 𝑟 𝑟
+12 24 34 13 14 24 34 13 14 24
++𝑟 𝑟 𝑟 +𝑟 𝑟 𝑟 (5)
+13 24 34 14 24 34
+By substituting the link reliability values as shown in Figure 1 into this equation, we arrive
+at the same network reliability value of 0.9414 as we obtained earlier.
+2.2.2 Computational Algorithm
+Algorithm 1. Recursion-based Reliability Polynomial
+RecursiveReliabilityPolynomial(𝑁) :
+1 : Input ← 𝑁 ={V = {1,2,3,…,n}, E = {𝑒 }, R = {𝑟 =𝑝(𝑥 )}}
+𝑖𝑗 𝑖𝑗 𝑖𝑗
+2 : If 𝑁 is not connected:
+3 : Set Output ← 0
+4 : Else If |V| > 0 :
+5 : Set 𝑒 ← First element in E
+𝑘𝑙
+6 : Set 𝑁 ← 𝑁 with 𝑒 contracted
+𝑐𝑜𝑛𝑡𝑟𝑎𝑐𝑡𝑒𝑑 𝑘𝑙
+7 : Set 𝑁 ← 𝑁 with 𝑒 removed
+𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑘𝑙
+8 : Set 𝑅𝑃 ←RecursiveReliabilityPolynomial(𝑁 )
+𝑐𝑜𝑛𝑡𝑟𝑎𝑐𝑡𝑒𝑑 𝑐𝑜𝑛𝑡𝑟𝑎𝑐𝑡𝑒𝑑
+9 : Set 𝑅𝑃 ←RecursiveReliabilityPolynomial(𝑁 )
+𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑐𝑜𝑛𝑡𝑟𝑎𝑐𝑡𝑒𝑑
+10 : Set RP ← 𝑟 ∗ 𝑅𝑃 +(1−𝑟 )∗𝑅𝑃
+𝑁 𝑘𝑙 𝑐𝑜𝑛𝑡𝑟𝑎𝑐𝑡𝑒𝑑 𝑘𝑙 𝑑𝑒𝑙𝑒𝑡𝑒𝑑
+11 : Set Output ←𝑅𝑃
+𝑁
+12 : Else :
+13 : Set Output ← 1
+14 : end
+23 : Return Output
+We have tested computing the polynomial using recursive and enumerative methods. The
+recursive methods rely on finding the subgraphs by contracting or removing edges in the
+network and applying the same procedure to each substructure until reaching disconnected
+or fully connected states while keeping track of the symbolic multiplications. The
+49
+enumerative methods list all the possible states on which the edges can be configured,
+remove the ones that result in a disconnected network, and apply the appropriate
+operations on the reliability variables to obtain the polynomial.
+Algorithm 2. Enumeration-based Reliability Polynomial
+1 : Input ← 𝑁 = {V={1,2,3,…,n}, E ={𝑒 }, R = {𝑟 =𝑝(𝑥 )}}
+𝑖𝑗 𝑖𝑗 𝑖𝑗
+2 : Set 𝑛 ← |V|
+𝑛𝑜𝑑𝑒𝑠
+3 : Set 𝑛 ← |E|
+𝑒𝑑𝑔𝑒𝑠
+4 : Set PossibleStates ←
+∏𝑛𝑒𝑑𝑔𝑒𝑠{0,1}
+={0,1} ×{0,1} ×…×{0,1}
+𝑖=1 i 1 2 nedges
+5 : Set FeasibleStates ←{Combination ∈ PossibleStates such that ∑𝐶𝑜𝑚𝑏𝑖𝑛𝑎𝑡𝑖𝑜𝑛 ≥(𝑛 −1)}
+𝑛𝑜𝑑𝑒𝑠
+6 : Set Terms ← {Empty Set}
+7 : For each Combination in FeasibleStates :
+8 : 𝑁 ← N ={V = {1,2,3,…,n}, E={𝑒 if 𝑆 is 1}, R ={𝑟 =𝑝(𝑥 )}
+𝑡𝑒𝑚𝑝 𝑖𝑗 𝑖𝑗 𝑖𝑗 𝑖𝑗
+9 : If 𝑁 is connected :
+𝑡𝑒𝑚𝑝
+10 : Set Result ← 1
+11 : For each 𝑆 in Combination :
+𝑖𝑗
+12 : If 𝑆 is 1 :
+𝑖𝑗
+13 : Result ← 𝑟 *Result
+𝑖𝑗
+14 : Else If State is 0 :
+15 : Result ← (1-𝑟 )*Result
+𝑖𝑗
+16 : end
+17 : end
+18 : Else :
+19 : Set Result ← 0
+20 : end
+21 : Append Result to Terms
+22 : end
+23 : Set Output<-∑𝑇𝑒𝑟𝑚𝑠
+In Algorithm 2, the PossibleStates are composed of arrays of zeros and ones that denote
+if the corresponding edges present or not. Each of these arrays is considered a Combination
+and each combination is composed of states 𝑆 that represent if the edge is included in the
+𝑖𝑗
+configuration or not. As a connected network needs at least 𝑛 −1 edges, we filter those
+𝑛𝑜𝑑𝑒𝑠
+combinations that are guaranteed to lead to disconnected configurations before evaluation.
+The recursive algorithm is based on a similar approach designed for the case with identical
+links [12]. We have modified this procedure to account for the individual edge reliability
+values. The final algorithm keeps track of the individual edges. We use the enumeration-
+based version to validate our results. To further exploit reusing these polynomials, we use
+a NoSQL database based on MongoDB [13] to store the precomputed representations. To
+account for the potentially large equations, we also use GridFS for a distributed storage of
+files [14].
+3 Reliability improvement using deep reinforcement learning
+ANNs are based on the biological neural networks within the human body. Just like the
+brain, the components of ANNs work together in parallel and series to learn based on
+experiences. This learning occurs using a training set which is a set of inputs with known,
+target outputs.
+In sequential decision-making, ANN can be used to create functional maps from system
+states or observations to the best action among a finite set of possible actions. In general,
+when the decision system is trained in a loop that assigns rewards to any of the actions
+taken, and the system learns the mapping from actions and observations to rewards, this
+is known as Reinforcement Learning (RL). When the function mapping the relationship
+between actions, observations, and rewards is an ANN, it is known as Deep Reinforcement
+Learning (DRL) [15].
+50
+3.1 Problem Formulation
+For reliability improvement, this takes the form of deciding the best next edge to add to
+an infrastructure network to maximize the all-terminal reliability. When it is also possible
+to choose the quality of the new edges, the decision space grows. By considering cost
+constraints on the decision problem, the edge quality affects the reliability value and the
+added cost of the decision. Then, a finite sequence of edge decisions that will maximize
+the all-terminal reliability exists. Mathematically, the problem can formulated as follows:
+maxℛ =𝐿𝑜𝑔(𝑅 )−𝐿𝑜𝑔(1−𝑅 )+𝜆ℛ (6)
+𝑡 𝑛𝑒𝑡𝑤𝑜𝑟𝑘,𝑡 𝑛𝑒𝑡𝑤𝑜𝑟𝑘,𝑡 𝑡−1
+𝑨𝒕|𝑶𝒕
+𝑨 =[𝑥 ,𝑞 ] (7)
+𝒕 𝑖𝑗 𝑖𝑗
+𝑶 =[𝑥 ,𝑐 ,𝐶 ] (8)
+𝒕 𝒊𝒋 𝑖𝑗 𝑡−1
+𝑟 =𝑝(𝑥 ,𝑞 ) (9)
+𝑖𝑗 𝑖𝑗 𝑖𝑗
+𝒔.𝒕.∑ ∑ 𝑐 𝑥 =𝐶 ≤𝐵 (10)
+𝑖 𝑗 𝑖𝑗 𝑖𝑗 𝑡
+On each decision step 𝑡, the agent decides which set of actions 𝑨 will maximize the reward
+𝒕
+ℛ given the observations from the environment 𝑶 . The reward is a function of the current
+𝑡 𝒕
+all-terminal reliability and the value on the previous time step, discounted by a factor 𝜆.
+The actions include the new edge to add, 𝑥 , and its quality level 𝑞 . Observations include
+𝑖𝑗 𝑖𝑗
+the edges already in the network, the cost associated with each edge in the network, 𝑐 ,
+𝑖𝑗
+and the total cost of the network at the previous time step 𝐶 . The budget constraint
+𝑡−1
+keeps the current cost of the network 𝐶 within the the budget, 𝐵.
+𝑡
+The current implementation uses the log-odds of the system being connected for the
+reward function: a transformation of the all-terminal reliability. It is worth pointing out that
+our initial experiments used the all-terminal reliability. We found more consistent
+performance using the negative log of the unreliability, and after further experiments, this
+led to using the log-odds of the system being connected. For actions, the options are the
+links not yet in the network and the quality level, with discrete options defining the edge
+reliability value. For the observations, the states, we propose the network topology, the
+cost of each link in the network, and the total cost of the current configuration. A cost
+constraint defines the budget for the added links limiting the number and quality of the
+added edges.
+3.2 Implementation Framework
+For the implementation, we base our training environment on the OpenAI-Gym framework
+[16]. This provides the basic elements to train and test DRL models. As there is a common
+interface for the models to train on, this allows for quick prototyping and testing.
+Stable Baselines [17] is a set of DRL models that can be tested using the OpenAI-Gym
+interface. This grants access to a collection of algorithms that can be explored using an
+appropriate training environment. Each model is a different agent that can learn from the
+tuples of observations, actions, and rewards: striving to maximize the defined rewards
+while adjusting to the conditions posed by the environment, such as conditions for stopping
+and feasible actions.
+3.2.1 Training Environment
+An environment requires four basic elements: observations, rewards, actions, and a way
+to evolve. The current environment starts with a path network with n nodes, and the n-1
+links all have a reliability value of 𝑟 , this makes the initial all-terminal reliability 𝑟 𝑛−1. Then,
+0 0
+the possible actions are (𝑛2−𝑛)/2−(𝑛−1) link options to add, with 𝑞 = 1,2… 𝑚, 𝑚 is the
+𝑖𝑗
+number of quality levels, with 𝑟 =1−(1−𝑟 )𝑞𝑖𝑗, which is equivalent to considering each
+𝑖𝑗 0
+51
+quality level to having 𝑞 basic links in parallel. This translates into each link cost as 𝑐 =
+𝑖𝑗 𝑖𝑗
+𝑞 .
+𝑖𝑗
+On each decision step, a DRL agent observes the state of the network, the connected links,
+the cost of each link, and the total cost. Then, it can choose one of the links to add, and
+one of the quality levels, if it is within budget. After adding the link, the reliability is
+computed from the corresponding polynomial and the different edge probabilities and the
+agent receives the associated reward. If the budget has not been exhausted, and there are
+feasible edges that can be added, the next decision step proceeds; otherwise, the episode
+stops.
+3.3 Selected model
+For our experiments, we work with a variant of Proximal Policy Optimization (PPO) [18].
+PPO is a DRL model that explores decision policies in sets of actions that tries to balance
+the exploration of new decision policies with the optimization of a surrogate objective
+function. Specificly, it is a Policy Gradient method that limits itself to exploring points in a
+neighboring policy space by taking small incremental steps when the actions lead to an
+advantageous increase in rewards but is clipped, restricted to a neighboring range, when
+a disadvantageous direction is found [18]. This is designed to avoid stalling the decision in
+regions difficult to escape.
+The variant used is a Maskable Proximal Policy Optimization (M-PPO) [19], an algorithm
+that considers the feasibility constraints posed by the training environment. For the
+formulated problem, this is equivalent to restricting the action space only to those links
+that are not yet in the network and are within budget. The M-PPO model uses a validity
+mask, a vector that keeps track of the valid actions, and operates it with the probability of
+taking a given action before updating the weights on each training step. This is useful to
+ensure the agent only learns to take feasible action and, for our problem of interest,
+guarantees that the network reliability increases on every decision step.
+4 Numerical examples
+Experiments for different network configurations are conducted in this section. The results
+presented correspond to networks with n=7 and n=10 nodes. 𝑟 =0.8, and there are m=3
+0
+levels of edge reliability: 0.8, 0.96, and 0.992. The budget is set on B=5, so at most five
+links can be added.
+Figure 2. Results for the 7-node network with B=5.
+(a) (b) (c)
+Figure 2 shows the results for n=7. The first network (a) is the original configuration. The
+black edges represent the original n-1 edges in the path network. The red edges represent
+those with 𝑞 =1. For this case, the DRL agent only chose to add red links: it chose to
+𝑖𝑗
+maximize connectivity versus edge quality. The second network (b) is the configuration
+after one decision step and the third network (c) is the configuration at the final step. The
+52
+all-terminal reliabilities are 0.26, 0.58, and 0.88 respectively. With the current approach,
+training the DRL agents while evaluating the reliabilities with no precomputed polynomials
+takes around 1.35 hours for 6144 training episodes of this experiment. This leads to an
+average of 0.8 seconds per training episode. The number of episodes was an arbitrary
+choice and further experiments are needed to decide the appropriate number of training
+steps, as well as to quantify the learning progress on the model. Further comparisons with
+baselines, such as total enumeration, are required to identify the optimality gap of the
+current approach.
+Figure 3. Results for the 10-node network with B=5.
+(a) (b) (c)
+Figure 3 shows the results for n=10. The first network (a) is the original configuration.
+Again, for this case, the DRL agent only chose as many low-quality links as possible:
+maximizing connectivity. The second network (b) is the configuration after one decision
+step, and the third network (c) is the configuration at the final step, exhausting the budget.
+The all-terminal reliabilities are 0.1342, 0.3490, and 0.6722 respectively. With the current
+approach, training the DRL agents while evaluating the reliabilities with no precomputed
+polynomials takes around 4.36 hours for 6144 training episodes of this experiment. This
+leads to an average of 2.56 seconds per training episode. Similar to the previous
+experiment, more informed decisions about the number of episodes and procedures to
+performance are required.
+5 Conclusions
+The DRL method proposed in this paper enables reliability improvements of infrastructure
+networks. As a promising alternative to total enumeration and evolutionary optimization
+methods, the proposed method along with the use of reliability polynomial take advantage
+of machine learning capability in finding the best design of a general network with respect
+to all-terminal reliability. The polynomial computation is exact and challenging to scale,
+but as it only has to be computed once per network topology, it can be reused for different
+edge reliability values. This, combined with the permanent NoSQL database, allows for
+faster training of the DRL agents. The M-PPO model for network reliability improvement is
+a data-driven approach that learns to solve the sequential decisions for the network
+topology while considering constraints on the feasible actions. For the experiments
+considered, it learns to optimize the choice of edges, maximizing connectivity, and quickly
+improving the all-terminal reliability of the networks of interest.
+For future research directions, the computed polynomial can be used to generate datasets
+mapping network topologies and individual edge reliabilities to all-terminal network
+reliability. These datasets can then be used to train surrogate models capable of
+approximately estimating the network reliability. The DRL agents can also be used to
+sequentially improve the network reliability in scenarios where each link can degrade over
+time and eventually fail and become disconnected. The objective is now to maximize the
+53
+17. Raffin, A., Hill, A., Ernestus, M., Gleave, A., Kanervisto, A., & Dormann, N. (2019).
+Stable baselines3. Retrieved from: https://github.com/Stable-Baselines-Team/stable-
+baselines3-contrib
+18. Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017). Proximal policy
+optimization algorithms. arXiv preprint arXiv:1707.06347.
+19. Huang, S., & Ontañón, S. (2020). A closer look at invalid action masking in policy
+gradient algorithms. arXiv preprint arXiv:2006.14171.
+List of abbreviations and definitions
+ANN Artificial Neural Network
+DRL Deep Reinforcement Learning
+M-PPO Maskable Proximal Policy Optimization
+NoSQL Not Only Structured Query Language
+RL Reinforcement Learning
+PPO Proximal Policy Optimization
+55
+Seminar Organization
+The Seminar is jointly organised by ESReDA and University Grenoble
+Alpes
+Location
+Grenoble, GreEn-ER building
+Chairperson of the Seminar
+REMENYTE-PRESCOTT Rasa (University of Nottingham, UK)
+Technical Programme Committee (TPC)
+ANDREWS John (University of Nottingham, UK)
+BAROTH Julien (Université Grenoble Alpes, 3SR, France)
+BASTEN Rob (Eindhoven University of Technology, Netherlands)
+BERENGUER Christophe (Université Grenoble Alpes, GIPSA-lab, France)
+DUNNETT Sarah (Loughborough University, UK)
+EID Mohamed (ESReDA President, Consultant at RiskLyse, France)
+FECAROTTI Claudia (Eindhoven University of Technology, Netherlands)
+JACKSON Lisa (Loughborough University, UK)
+JUDEK Clement (IMDR, France)
+KOPUSTINSKAS Vytis (European Commission, Joint Research Centre –
+Ispra, Italy)
+LANNOY Andre (IMDR, France)
+LIU Yiliu (Norwegian University of Science and Technology,
+Norway)
+OTTENBURGER Sadeeb Simon (Karlsruhe Institute of Technology - KIT, Germany)
+POHL Ed (University of Arkansas, USA)
+SARUNIENE Inga (Lithuanian Energy Institute, LEI)
+SCHAUER Stefan (Center for Digital Safety & Security, Austrian Institute
+of Technology, Austria)
+TACNET Jean Marc (Université Grenoble Alpes, INRAE, ETNA, France)
+TUBIS Agnieszka (Wroclaw University of Science and Technology,
+Poland)
+UTANS Andrejs (Riga Technical University, Latvia)
+VAN HOUTUM Geert-Jan (Eindhoven University of Technology, Netherlands)
+YUSTA Jose Maria (University of Zaragoza, Spain)
+Opening of the Seminar: 4th May 2022
+Closing of the Seminar: 5th May 2022
+Local Organization Committee:
+BAROTH Julien (UGA) – Local Organizing Committee chairperson
+BERENGUER Christophe (GINP)
+CHAHROUR Nour (INRAE)
+TACNET Jean-Marc (INRAE)
+PERRIER Sylvie (UGA)
+170
+
